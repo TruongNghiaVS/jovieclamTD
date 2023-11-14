@@ -34,6 +34,12 @@
 
 <!-- our_customer  start-->
 @include('templates.employers.includes.our_customer')
+
+<!-- our_customer  end-->
+
+<!-- our_customer  start-->
+@include('templates.employers.includes.about_us')
+
 <!-- our_customer  end-->
 
 

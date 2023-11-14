@@ -243,6 +243,17 @@ ul.list-unstyled.components.sidebar-bottom__item li{
     height: 50px;
 }
 
+
+.about_us_content__text {
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: 400;
+}
+.about_us_content__img {
+    max-height: 700px;
+    width: 100%;
+}
+
 @media only screen and (max-width: 767px) {
     #company-default-nav {
         display: none;
