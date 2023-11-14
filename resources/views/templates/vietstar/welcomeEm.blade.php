@@ -37,11 +37,15 @@
 
 <!-- our_customer  end-->
 
-<!-- our_customer  start-->
+<!-- about_us  start-->
 @include('templates.employers.includes.about_us')
 
-<!-- our_customer  end-->
+<!-- about_us  end-->
 
+
+<!-- about_us  start-->
+@include('templates.employers.includes.support')
+<!-- about_us  end-->
 
 @include('templates.employers.includes.footer')
 @endsection

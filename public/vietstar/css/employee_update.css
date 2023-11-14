@@ -245,9 +245,10 @@ ul.list-unstyled.components.sidebar-bottom__item li{
 
 
 .about_us_content__text {
-    font-size: 16px;
     line-height: 36px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
+   
 }
 .about_us_content__img {
     max-height: 700px;
