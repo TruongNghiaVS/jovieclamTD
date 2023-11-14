@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?v13oy2');
+  src:  url('fonts/icomoon.eot?v13oy2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?v13oy2') format('truetype'),
+    url('fonts/icomoon.woff?v13oy2') format('woff'),
+    url('fonts/icomoon.svg?v13oy2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-flag:before {
+  content: "\e936";
+}
+.icon-icons8-dropbox:before {
+  content: "\e934";
+  color: #1e88e5;
+}
+.icon-downloads:before {
+  content: "\e933";
+  color: #981b1e;
+}
+.icon-money-database:before {
+  content: "\e931";
+  color: #696974;
+}
+.icon-p-prev:before {
+  content: "\e92f";
+  color: #3b4358;
+}
+.icon-p-next:before {
+  content: "\e930";
+  color: #3b4358;
+}
+.icon-list:before {
+  content: "\e935";
+  color: #9b9b9f;
+}
+.icon-recruiter-dashboard:before {
+  content: "\e92a";
+  color: #981b1e;
+}
+.icon-recruiter-chat:before {
+  content: "\e92b";
+  color: #696974;
+}
+.icon-recruiter-withdrawal:before {
+  content: "\e92c";
+  color: #696974;
+}
+.icon-recruiter-portfolio:before {
+  content: "\e92d";
+  color: #696974;
+}
+.icon-recruiter-profile-2:before {
+  content: "\e92e";
+  color: #696974;
+}
+.icon-trash:before {
+  content: "\e932";
+  color: #696974;
+}
+.icon-recruiter-search:before {
+  content: "\e913";
+  color: #fff;
+}
+.icon-recruiter-close:before {
+  content: "\e914";
+  color: #696974;
+}
+.icon-recruiter-calenda:before {
+  content: "\e915";
+  color: #696974;
+}
+.icon-recruiter-dots:before {
+  content: "\e916";
+  color: #696974;
+}
+.icon-recruiter-uncheck:before {
+  content: "\e917";
+  color: #696974;
+}
+.icon-recruiter-check:before {
+  content: "\e918";
+  color: #696974;
+}
+.icon-recruiter-profile:before {
+  content: "\e919";
+
+}
+.icon-recruiter-attach_money:before {
+  content: "\e91a";
+  color: #696974;
+}
+.icon-recruiter-location:before {
+  content: "\e91b";
+  color: #981b1e;
+}
+.icon-recruiter-user:before {
+  content: "\e91c";
+  color: #981b1e;
+}
+.icon-recruiter-suitcase:before {
+  content: "\e91d";
+  color: #981b1e;
+}
+.icon-recruiter-calendar:before {
+  content: "\e91e";
+  color: #981b1e;
+}
+.icon-recruiter-total-employee:before {
+  content: "\e91f";
+  color: #981b1e;
+}
+.icon-recruiter-salary:before {
+  content: "\e920";
+  color: #981b1e;
+}
+.icon-recruiter-heart:before {
+  content: "\e921";
+  color: #981b1e;
+}
+.icon-recruiter-youtube:before {
+  content: "\e922";
+  color: #696974;
+}
+.icon-recruiter-twitter:before {
+  content: "\e923";
+  color: #696974;
+}
+.icon-recruiter-linkedIn:before {
+  content: "\e924";
+  color: #696974;
+}
+.icon-recruiter-instagram:before {
+  content: "\e925";
+  color: #696974;
+}
+.icon-recruiter-facebook:before {
+  content: "\e926";
+  color: #696974;
+}
+.icon-recruiter-website:before {
+  content: "\e927";
+  color: #981b1e;
+}
+.icon-recruiter-email:before {
+  content: "\e928";
+  color: #fff;
+}
+.icon-recruiter-phone-call:before {
+  content: "\e929";
+  color: #981b1e;
+}
+.icon-topup-icon:before {
+  content: "\e912";
+}
+.icon-withdraw-icon:before {
+  content: "\e910";
+}
+.icon-calendar-icon1:before {
+  content: "\e911";
+}
+.icon-bell-icon:before {
+  content: "\e900";
+}
+.icon-calendar-icon:before {
+  content: "\e901";
+}
+.icon-dashboard-icon:before {
+  content: "\e902";
+}
+.icon-doc-check-icon:before {
+  content: "\e903";
+}
+.icon-edit-icon:before {
+  content: "\e904";
+}
+.icon-eye-icon:before {
+  content: "\e905";
+}
+.icon-gender-icon:before {
+  content: "\e906";
+}
+.icon-heart-icon:before {
+  content: "\e907";
+}
+.icon-level-icon:before {
+  content: "\e908";
+}
+.icon-logout-icon:before {
+  content: "\e909";
+}
+.icon-message-icon:before {
+  content: "\e90a";
+}
+.icon-office-building-icon:before {
+  content: "\e90b";
+}
+.icon-salary-icon:before {
+  content: "\e90c";
+}
+.icon-suitcase-icon:before {
+  content: "\e90d";
+}
+.icon-team-icon:before {
+  content: "\e90e";
+}
+.icon-user-1-icon:before {
+  content: "\e90f";
+}

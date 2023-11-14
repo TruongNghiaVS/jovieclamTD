@@ -1,0 +1,153 @@
+/************************************************
+           == Loginbox css==
+*************************************************/
+/* login-img-swapper */
+
+.login-swapper {
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	overflow: hidden;
+	height: 750px;
+}
+
+
+.login-img-swapper {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.login-img-swapper__img {
+	background-image: url('http://t1.gstatic.com/images?q=tbn:ANd9GcQTU8uN-ZlysgtFbal9iensUeNMQ3QHjcgz4rgI_8v_ewnSWx93');
+	background-color: #cccccc;
+	/* Used if the image is unavailable */
+	height: 750px;
+	width: 100%;
+	/* You must set a specified height */
+	background-position: center;
+	/* Center the image */
+	background-repeat: no-repeat;
+	/* Do not repeat the image */
+	background-size: cover;
+}
+
+
+.group-button .nav-link{
+	cursor: pointer;
+	color: var(--bs-primary);
+}
+
+
+
+.login-form {
+	padding: 50px 0;
+}
+
+
+
+
+.userloginbox {
+	background: url(../images/login-bg.jpg) no-repeat center;
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 40px 0 120px 0;
+	text-align: center;
+}
+
+.userloginbox .viewallbtn {
+	margin-top: 30px;
+}
+
+.userloginbox .viewallbtn a {
+	background: #a84040;
+}
+
+.userloginbox .viewallbtn a:hover {
+	background: #333;
+}
+
+.userloginbox p {
+	max-width: 770px;
+	margin: 0 auto;
+}
+
+
+.emploginbox {
+	background: url(../images/login-bg2.jpg) no-repeat center;
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.emploginbox .viewallbtn {
+	margin-top: 30px;
+}
+
+.emploginbox .viewallbtn a {
+	background: #a84040;
+}
+
+.emploginbox .viewallbtn a:hover {
+	background: #fff;
+	color: #a84040
+}
+
+.emploginbox p {
+	max-width: 770px;
+	margin: 0 auto;
+}
+
+.userccount-register {
+    border: 1px solid #cccc;
+    padding: 33px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+#user_login_Modal .modal-body ,#user_logup_Modal .modal-body {
+	padding: 2rem;
+}
+
+
+
+#user_login_Modal h3
+,#user_logup_Modal h3 
+,.useraccountwrap h3 {
+	margin-bottom: 30px;
+}
+
+#employer_login_Modal .modal-body ,#employer_logup_Modal .modal-body {
+	padding: 2rem;
+}
+
+
+
+#employer_login_Modal h3
+,#employer_logup_Modal h3 
+,.useraccountwrap h3 {
+    margin-bottom: 30px;
+}
+
+
+@media only screen and (max-width: 767px) {
+	#user_login_Modal .modal-body ,#user_logup_Modal .modal-body{
+		padding: 1rem;
+	}
+	.g-recaptcha {
+		width: 100% !important;
+	}
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	.g-recaptcha {
+		width: 100% !important;
+	}
+}
+
+
+@media only screen and (min-width: 992px) {
+
+}

@@ -1,0 +1,42 @@
+@media screen and (max-width: 767px) {
+  .user-account-section {
+    padding: 40px 40px;
+  }
+
+  .list-condensed {
+    margin-bottom: 15px;
+    .item {
+      .con-skill {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+          width: 100%;
+        }
+      }
+    }
+  }
+  #projects_div {
+    .project {
+      margin-bottom: 16px;
+    }
+  }
+}
+@media screen and (max-width: 390px) {
+  .user-account-section {
+    padding: 40px 16px;
+  }
+  .list-condensed {
+    margin-bottom: 15px;
+    .item {
+      .con-skill {
+        flex-direction: column;
+        span {
+          width: 100%;
+          display: block;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}

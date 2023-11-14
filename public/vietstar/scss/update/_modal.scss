@@ -1,0 +1,47 @@
+.modal{
+    .close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 5px;
+        background-color: #f8f8f8;
+        border-width: 0;
+        width: 36px;
+        text-align: center;
+    }
+    .modal-body{
+        .btn2s{
+            padding-left: 0;
+        }
+    }
+}
+
+.modal-review-application {
+    .btn-cv-application {
+        color: #212529;
+        background-color: #f3f4f5;
+        border-color: #f3f4f5;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 8px 16px;
+        &.active {
+            background: #981b1e;
+            border: 1px solid #981b1e;
+            color: #ffffff;
+        }
+    }
+    .link-anonymous{
+        margin-right: 10px;
+    }
+         .btn-copy{
+            min-width: 150px;
+            height: 39px;
+         }
+    .link-anonymous, .btn-copy{
+        padding: 8px 16px;
+        border-radius: 4px;
+        font-size: 14px;
+            font-weight: 400;
+            padding: 8px 16px;
+    }
+}

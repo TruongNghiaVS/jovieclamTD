@@ -1,0 +1,69 @@
+/** css chosen dropdown select **/
+div#country_id_chosen, div#industry_id_chosen, div#state_id_chosen, div#city_id_chosen, div#no_of_offices_chosen, div#no_of_employees_chosen, div#functional_area_id_chosen, div#job_experience_id_chosen, div#nationality_id_chosen {
+    background-color: #ffffff;
+    border: 1px solid #d9dbe9;
+    border-radius: 8px;
+    padding: 11px 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    -webkit-box-shadow: unset !important;
+    box-shadow: unset !important;
+}
+
+div#country_id_chosen {
+    background-color: #ffffff;
+    border: 1px solid #d9dbe9;
+    border-radius: 8px;
+    padding: 11px 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    -webkit-box-shadow: unset !important;
+    box-shadow: unset !important;
+}
+
+.chosen-container-single .chosen-single {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0 0 0 8px;
+    height: 25px;
+    border: none;
+    border-radius: none;
+    background-color: none;
+    background: none;
+    background: none;
+    background-clip: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #444;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 24px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+    border: none;
+    border-bottom-right-radius: none;
+    border-bottom-left-radius: none;
+    background-image: none;
+    background-image: none;
+    -webkit-box-shadow: none;
+}
+
+.chosen-container.chosen-with-drop .chosen-drop {
+    margin: 0px -15px;
+    border: 1px solid #d9dbe9;
+    font-style: normal;
+    border-radius: 7px;
+
+}
+
+.chosen-container .chosen-results li.active-result {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}

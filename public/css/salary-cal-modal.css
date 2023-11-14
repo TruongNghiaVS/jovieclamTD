@@ -1,0 +1,1287 @@
+
+    /*salary-grossnet.css*/
+    .widget {
+        background: #fff;
+    }
+    .widget .widget-head h3 {
+        margin-bottom: 15px;
+        color: #172642;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    @media (min-width: 1025px) {
+        .widget .widget-head h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+    }
+    .salary-calculator-modal {
+        padding: 0 !important;
+        overflow: hidden;
+        border-radius: 5px;
+        background: #ffffff;
+        width: 100%;
+        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+    }
+    .salary-calculator-modal .modal-title {
+        padding: 5px 10px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .salary-calculator-modal .modal-title h3 {
+        color: #172642;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    @media (min-width: 1025px) {
+        .salary-calculator-modal .modal-title {
+            padding: 10px 40px;
+        }
+        .salary-calculator-modal .modal-title h3 {
+            font-size: 22px;
+        }
+    }
+    @media (min-width: 1200px) {
+        .salary-calculator-modal .modal-title h3 {
+            font-size: 24px;
+        }
+    }
+    .salary-calculator-modal .modal-body {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .salary-calculator-modal .modal-body .row {
+        margin: 0 -15px;
+    }
+    .salary-calculator-modal .modal-body .row > * {
+        margin-bottom: 0;
+    }
+    .salary-calculator-modal .modal-body .row + .row {
+        margin: 0 -15px;
+    }
+    .salary-calculator-modal .modal-body .form-calculate {
+        border-bottom: 1px solid #e5e5e5;
+    }
+    @media (min-width: 1025px) {
+        .salary-calculator-modal .modal-body {
+            padding: 30px;
+        }
+    }
+    @media (min-width: 1200px) {
+        .salary-calculator-modal .modal-body {
+            padding: 30px 40px;
+        }
+    }
+    .salary-calculator-modal .modal-body .form-group {
+        margin-bottom: 20px !important;
+    }
+    .salary-calculator-modal .modal-body .form-group label {
+        margin-bottom: 5px;
+        color: #5d677a;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .salary-calculator-modal .modal-body .form-group input {
+        width: 100%;
+        height: 40px;
+        padding: 5px 20px;
+        padding-right: 55px;
+        border: none;
+        border-bottom: 1px solid #ececec;
+        background: #f7f7f7;
+        color: #999999;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .salary-calculator-modal .modal-body .form-group input#fullwageOther {
+        margin-top: 25px;
+    }
+    .salary-calculator-modal .modal-body .form-group select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 40px;
+        padding: 5px 20px;
+        border: none;
+        border-bottom: 1px solid #93bcdc;
+        color: #172642;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .salary-calculator-modal .modal-body .form-group .input-group {
+        position: relative;
+    }
+    .salary-calculator-modal .modal-body .form-group .input-group-addon {
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        color: #999999;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .salary-calculator-modal .modal-body .form-group .radio-group {
+        -ms-flex-wrap: wrap;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px;
+    }
+    .salary-calculator-modal .modal-body .form-group .radio-group .frm-radio {
+        /* -webkit-box-flex: 0; */
+        -ms-flex: 0 0 100%;
+        /* flex: 0 0 100%; */
+        /* max-width: 100%; */
+        /* padding: 0 5px; */
+        /* margin-bottom: 5px; */
+    }
+    .salary-calculator-modal .modal-body .form-group.currency .radio-group .frm-radio {
+        /* -webkit-box-flex: 0; */
+        -ms-flex: 0 0 50%;
+        /* flex: 0 0 50%; */
+        /* max-width: 50%; */
+    }
+    .salary-calculator-modal .modal-body .form-group .radio-group .frm-radio label {
+        position: relative;
+        padding-left: 20px;
+        color: #172642;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .salary-calculator-modal .modal-body .form-group .radio-group .frm-radio label:after {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        color: #5d677a;
+        font: normal normal normal 24px/1 Material Design Icons;
+        font-size: 18px;
+        content: "\f43d";
+    }
+    .salary-calculator-modal .modal-body .form-group .radio-group .frm-radio input {
+        display: none;
+    }
+    .salary-calculator-modal .modal-body .form-group .radio-group .frm-radio input:checked {
+        background: black;
+    }
+    .salary-calculator-modal .modal-body .form-group .radio-group .frm-radio input:checked ~ label:after {
+        color: #5d677a;
+        content: "\f43e";
+    }
+    .salary-calculator-modal .modal-body .form-group .check-box-group label {
+        position: relative;
+        padding-left: 25px;
+    }
+    .salary-calculator-modal .modal-body .form-group .check-box-group label:after {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        color: #5d677a;
+        font: normal normal normal 24px/1 Material Design Icons;
+        font-size: 18px;
+        content: "\f131";
+    }
+    .salary-calculator-modal .modal-body .form-group .check-box-group input {
+        display: none;
+    }
+    .salary-calculator-modal .modal-body .form-group .check-box-group input:checked {
+        background: black;
+    }
+    .salary-calculator-modal .modal-body .form-group .check-box-group input:checked ~ label:after {
+        color: #5d677a;
+        content: "\f132";
+    }
+    .salary-calculator-modal .modal-body .form-group.form-title h4 {
+        color: #287ab9;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .salary-calculator-modal .modal-body .form-group.salary-total .input-group input {
+        background: none;
+    }
+    .salary-calculator-modal .modal-body .form-group.form-button .button-group {
+        -ms-flex-wrap: wrap;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+    .salary-calculator-modal .modal-body .form-group.form-button .button-group .calculate,
+    .salary-calculator-modal .modal-body .form-group.form-button .button-group .cancel {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 10px;
+    }
+    .salary-calculator-modal .modal-body .form-group.form-button .button-group .btn-gradient {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        padding: 5px 20px;
+        border-radius: 5px;
+        background-image: -webkit-gradient(linear, right top, left top, from(#169b74), color-stop(#86cb49), to(#169b74));
+        background-image: -o-linear-gradient(right, #169b74, #86cb49, #169b74);
+        background-image: linear-gradient(270deg, #169b74, #86cb49, #169b74);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .salary-calculator-modal .modal-body .form-group.form-button .button-group .btn-cancel {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        padding: 5px 20px;
+        border-radius: 5px;
+        background: #ebebeb;
+        color: #182642;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .salary-calculator-modal .modal-foot {
+        padding: 10px;
+        padding-top: 0;
+    }
+    .salary-calculator-modal .modal-foot p,
+    .salary-calculator-modal .modal-foot li {
+        margin-bottom: 5px;
+        color: #5d677a;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .salary-calculator-modal .modal-foot .red {
+        color: #ff0000;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .salary-calculator-modal .modal-foot li {
+        position: relative;
+        margin-bottom: 0;
+        padding-left: 15px;
+    }
+    .salary-calculator-modal .modal-foot li:before {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #999999;
+        content: "";
+    }
+    .salary-calculator-modal .modal-foot li span.red {
+        font-size: 14px;
+    }
+    @media (min-width: 1025px) {
+        .salary-calculator-modal .modal-foot {
+            padding: 30px;
+            padding-top: 0;
+        }
+    }
+    @media (min-width: 1200px) {
+        .salary-calculator-modal .modal-foot {
+            padding: 30px 40px;
+            padding-top: 0;
+        }
+    }
+    @media (max-width: 540px) {
+        .feedback-btn {
+            display: none !important;
+        }
+    }
+    .career-advice-share-social {
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        z-index: 950;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .career-advice-share-social ul {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .career-advice-share-social ul li {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        margin: 5px 0;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .career-advice-share-social ul li:first-child {
+        margin-left: 0;
+    }
+    .career-advice-share-social ul li a em {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 24px;
+    }
+    .career-advice-share-social ul li.facebook {
+        background: #3b5998;
+    }
+    .career-advice-share-social ul li.linkedin {
+        background: #0077b5;
+    }
+    .career-advice-share-social ul li.email {
+        background: #848484;
+    }
+    .career-advice-share-social ul li.gmail {
+        background: #db4437;
+    }
+    .career-advice-share-social ul li.zalo {
+        background: #0180c7;
+    }
+    .career-advice-share-social ul li.zalo .zalo-share-button {
+        width: 100%;
+        height: 100%;
+    }
+    .career-advice-share-social ul li.zalo .zalo-share-button:before {
+        top: 13px;
+        height: 16px;
+        content: url("https://static.careerbuilder.vn/themes/careerbuilder/img/i-zalo-w.png");
+    }
+    @media (max-width: 1024px) {
+        .career-advice-share-social {
+            -webkit-transform: initial;
+            -ms-transform: initial;
+            top: initial;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            transform: initial;
+        }
+        .career-advice-share-social ul {
+            -webkit-box-orient: initial;
+            -webkit-box-direction: initial;
+            -ms-flex-direction: initial;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            flex-direction: initial;
+            justify-content: space-between;
+        }
+        .career-advice-share-social ul li {
+            width: 100%;
+            height: 40px;
+            margin: 0;
+            border-radius: 0;
+        }
+    }
+    @media (max-width: 1024px) {
+        .chat-with-us {
+            bottom: 50px;
+        }
+    }
+    .cb-top-trends {
+        background: #e3e3e3;
+    }
+    .cb-top-trends .title {
+        margin-bottom: 20px;
+        color: #172642;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .cb-top-trends ul li + li {
+        margin-bottom: 5px;
+    }
+    .cb-top-trends ul li a {
+        color: #5d677a;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    @media (min-width: 576px) {
+        .cb-top-trends ul {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+        }
+    }
+    @media (min-width: 1025px) {
+        .cb-top-trends .title {
+            font-size: 14px;
+        }
+        .cb-top-trends ul {
+            -webkit-column-count: 1;
+            -moz-column-count: 1;
+            padding-right: 30px;
+            column-count: 1;
+        }
+        .cb-top-trends ul li a {
+            font-size: 14px;
+        }
+        .cb-top-trends .col-xl-cus-4-5 {
+            position: relative;
+        }
+        .cb-top-trends .col-xl-cus-4-5:before {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            width: 1px;
+            height: 100%;
+            background: #cccccc;
+            content: "";
+        }
+    }
+    @media (min-width: 1200px) {
+        .cb-top-trends .col-xl-cus-4-5 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 37.5%;
+            flex: 0 0 37.5%;
+            max-width: 37.5%;
+            padding: 0 15px;
+        }
+        .cb-top-trends .col-xl-cus-4-5 ul {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+        }
+    }
+    .salary-grossnet {
+        background: #fafafa;
+    }
+    .salary-grossnet .box-news .head-box {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+    }
+    .salary-grossnet .box-news .head-box .view-all {
+        min-width: 90px;
+        padding-top: 10px;
+    }
+    .salary-grossnet .view-all a {
+        color: #287ab9;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .salary-grossnet .view-all a em {
+        padding-left: 5px;
+        color: #287ab9;
+        font-size: 16px;
+    }
+    .salary-grossnet .cb-title h2 {
+        margin-bottom: 20px;
+    }
+    .salary-grossnet .box-news {
+        margin-top: 0;
+    }
+    .salary-grossnet .box-news .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .salary-grossnet .box-news .row > * {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .salary-grossnet .box-news .figure {
+        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+    .salary-grossnet .box-news .figure .image {
+        position: relative;
+        width: 100%;
+        height: 140px;
+        overflow: hidden;
+    }
+    .salary-grossnet .box-news .figure .image img {
+        -o-object-fit: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .salary-grossnet .box-news .figure .figcaption {
+        min-height: 200px;
+        padding: 15px;
+        background: #ffffff;
+    }
+    .salary-grossnet .box-news .figure .figcaption h5 {
+        -o-text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        height: 46.8px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        color: #182642;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.3;
+        text-overflow: ellipsis;
+    }
+    .salary-grossnet .box-news .figure .figcaption .title a:hover {
+        text-decoration: none;
+    }
+    .salary-grossnet .box-news .figure .figcaption .title.toollips {
+        z-index: 11;
+    }
+    .salary-grossnet .box-news .figure .figcaption .title.toollips .toolip {
+        width: 100%;
+        max-width: 100%;
+    }
+    .salary-grossnet .box-news .figure .figcaption .content {
+        -o-text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        height: 72px;
+        overflow: hidden;
+        color: #5d677a;
+        font-size: 16px;
+        font-weight: 400;
+        text-overflow: ellipsis;
+    }
+    .salary-grossnet .box-news .figure .figcaption .view-more {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        margin-top: 15px;
+    }
+    @media (min-width: 1025px) {
+        .salary-grossnet .box-news .figure .figcaption {
+            padding: 15px 25px;
+            padding-bottom: 25px;
+        }
+    }
+    .salary-grossnet .banner {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .salary-grossnet .widget {
+        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        background: #ffffff;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+    .salary-grossnet .widget .widget-head {
+        padding: 7px 15px;
+        background: #d9e6ed;
+    }
+    @media (min-width: 1025px) {
+        .salary-grossnet .widget .widget-head {
+            padding: 11.5px 30px;
+        }
+    }
+    .salary-grossnet .widget .widget-head h3 {
+        margin-bottom: 0;
+        color: #172642;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    @media (min-width: 1025px) {
+        .salary-grossnet .widget .widget-head h3 {
+            font-size: 18px;
+        }
+    }
+    .salary-grossnet .widget .widget-body {
+        padding: 15px;
+    }
+    @media (min-width: 1025px) {
+        .salary-grossnet .widget .widget-body {
+            padding: 25px 30px;
+        }
+    }
+    .salary-grossnet .widget.widget-7 {
+        margin-bottom: 30px;
+    }
+    .salary-grossnet .widget.widget-7 a {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-transition: 0.4s ease-in-out all;
+        -o-transition: 0.4s ease-in-out all;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        padding: 7px 15px;
+        border: 2px solid #287ab9;
+        border-radius: 5px;
+        color: #287ab9;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: 0.4s ease-in-out all;
+    }
+    .salary-grossnet .widget.widget-7 a:hover {
+        background: #287ab9;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .job-item {
+        position: relative;
+    }
+    .job-item a {
+        text-decoration: none;
+    }
+    .job-item .figure {
+        -ms-flex-wrap: wrap;
+        -webkit-transition: 0.4s ease-in-out all;
+        -o-transition: 0.4s ease-in-out all;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        padding: 15px 10px;
+        overflow: hidden;
+        border-top: 1px solid #e5e5e5;
+        border-right: 1px solid #e5e5e5;
+        border-radius: 5px;
+        border-top-left-radius: 4px;
+        transition: 0.4s ease-in-out all;
+    }
+    .job-item .figure .image {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 79px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex: 0 0 79px;
+        align-items: center;
+        justify-content: center;
+        max-width: 79px;
+        height: 79px;
+        padding: 5px;
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+    }
+    .job-item .figure .image img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .job-item .figure .figcaption {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        max-width: calc(100% - 79px);
+        padding-left: 15px;
+    }
+    .job-item .figure .title {
+        margin-bottom: 3px;
+    }
+    .job-item .figure .title p,
+    .job-item .figure .title a {
+        -o-text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+        color: #172642;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-overflow: ellipsis;
+    }
+    .job-item .figure .title.is-orange p,
+    .job-item .figure .title.is-orange a {
+        color: #fb9104;
+    }
+    .job-item .figure .title.is-red p,
+    .job-item .figure .title.is-red a {
+        color: #fc0821;
+    }
+    @media (max-width: 576px) {
+        .job-item .figure .title p,
+        .job-item .figure .title a {
+            -webkit-line-clamp: initial;
+        }
+    }
+    .job-item .figure .caption {
+        color: #5d677a;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .job-item .figure .caption .salary {
+        color: #008563;
+    }
+    .job-item .figure .caption .company-name {
+        -o-text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+        color: #5d677a;
+        text-overflow: ellipsis;
+    }
+    @media (max-width: 576px) {
+        .job-item .figure .caption .company-name {
+            -webkit-line-clamp: initial;
+        }
+    }
+    .job-item .figure .caption .location p {
+        -webkit-box-orient: vertical;
+        -o-text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        height: 21px;
+        padding-left: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .job-item .figure .caption .location p + p {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .job-item .figure .caption .location p + p:before {
+        margin: 0;
+        margin-right: 8px;
+        content: "|";
+    }
+    .job-item .figure .caption .location ul {
+        -ms-flex-wrap: wrap;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .job-item .figure .caption .location ul li {
+        padding-left: 0;
+    }
+    .job-item .figure .caption .location ul li + li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .job-item .figure .caption .location ul li + li:before {
+        margin: 0;
+        margin-right: 8px;
+        margin-left: 8px;
+        content: "|";
+    }
+    .job-item .figure .top-icon {
+        display: none;
+        z-index: 11;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .job-item .figure .top-icon span {
+        margin-bottom: 2px;
+    }
+    .job-item .figure .top-icon .top {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 16px;
+        padding: 1.5px 4.5px;
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        background: #f7a334;
+        color: #ffffff;
+        font-size: 12px;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+    .job-item .figure .top-icon .new {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 16px;
+        padding: 1.5px 4.5px;
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        background: none;
+        color: #ff0000;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+    @media (max-width: 1200px) {
+        .job-item .figure .top-icon {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            top: 2px;
+        }
+        .job-item .figure .top-icon span {
+            margin-bottom: 0;
+            margin-left: 2px;
+        }
+    }
+    .job-item .figure .premium-icon {
+        position: absolute;
+        top: -15px;
+        right: -15px;
+    }
+    .job-item .figure .timeago {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .job-item .figure .timeago span {
+        color: red;
+    }
+    .job-item.has-background {
+        margin-bottom: 10px;
+        background: #ebf8ff;
+    }
+    .job-item.has-background .figure {
+        border-top: 0;
+    }
+    .job-item.active {
+        border: 1px solid #009b74;
+    }
+    @media (min-width: 1025px) {
+        .job-item .figure:hover {
+            -webkit-box-shadow: 0 0 15px rgba(46, 46, 46, 0.3);
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            box-shadow: 0 0 15px rgba(46, 46, 46, 0.3);
+        }
+    }
+    @media (max-width: 576px) {
+        .job-item .figure {
+            padding: 20px 15px 10px 15px;
+        }
+    }
+    .jobs-side-list {
+        max-height: calc(100vh - 210px);
+        padding-right: 10px;
+        overflow-y: auto;
+    }
+    .jobs-side-list::-webkit-scrollbar {
+        width: 6px;
+        background: #eaeaea;
+    }
+    .jobs-side-list::-webkit-scrollbar-thumb {
+        background: #7fcb42;
+    }
+    .jobs-side-list .job-item .figure {
+        border-right: 0;
+        border-radius: 0;
+    }
+    .jobs-side-list .jobs-list .job-item:first-child .figure {
+        padding-top: 10px;
+        border-top: 0;
+    }
+    .jobs-side-list .load-more a {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-transition: 0.3s all;
+        -o-transition: 0.3s all;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        max-width: 18.875rem;
+        height: 46px;
+        margin: 30px auto;
+        border: 2px solid #287ab9;
+        border-radius: 5px;
+        color: #287ab9;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.3s all;
+    }
+    .jobs-side-list .load-more a span {
+        margin-left: 8px;
+    }
+    .jobs-side-list .load-more a:hover {
+        background: #287ab9;
+        color: #fff;
+    }
+    @media screen and (max-width: 1023px) {
+        .jobs-side-list {
+            max-height: none;
+            overflow-y: visible;
+        }
+    }
+    @media (max-width: 576px) {
+        .salary-grossnet .side-wrapper .similar-jobs,
+        .salary-grossnet .side-wrapper .jobs-side-list {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    .salary-grossnet .job-item .figure .image {
+        padding: 0;
+    }
+    .salary-grossnet .job-item .figure .image a {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+    }
+    .salary-grossnet .job-item .figure .bottom-right-icon {
+        right: 10px;
+    }
+    .salary-grossnet .job-item .figure .figcaption .caption .location {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .salary-grossnet .job-item .figure .figcaption .caption .location em {
+        padding-right: 2px;
+        line-height: 1.5;
+    }
+    .salary-grossnet .similar-jobs {
+        margin-bottom: 10px;
+    }
+    .salary-grossnet .similar-jobs p {
+        color: #5d677a;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    @media (min-width: 1025px) {
+        .salary-grossnet .similar-jobs p {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+    .salary-grossnet .jobs-side-list {
+        max-height: 100%;
+        padding-right: 0;
+        overflow-y: hidden;
+    }
+    .salary-grossnet .jobs-side-list .job-item .figure:hover {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .salary-grossnet .jobs-side-list .job-item .figure:hover .title a {
+        color: #f7a334;
+    }
+    @media (min-width: 1025px) {
+        .salary-grossnet .job-item .figure:hover .title a {
+            display: block;
+        }
+        .salary-grossnet .job-item .figure:hover .caption .company-name {
+            display: block;
+        }
+    }
+    .is-browser-IE .job-item .figure .image img {
+        width: 100%;
+    }
+    .feedback-modal {
+        width: 560px;
+    }
+    .feedback-modal .logo {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .feedback-modal .text {
+        margin-bottom: 20px;
+    }
+    .feedback-modal .text p {
+        font-size: 14px;
+    }
+    .feedback-modal .text p + p {
+        margin-top: 10px;
+    }
+    .feedback-modal .text p strong {
+        font-size: 18px;
+    }
+    .feedback-modal .form-group + .form-group {
+        margin-top: 15px;
+    }
+    .feedback-modal .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .feedback-modal .form-group input[type="text"],
+    .feedback-modal .form-group textarea {
+        width: 100%;
+    }
+    .feedback-modal .form-group input[type="text"] {
+        height: 40px;
+        padding: 0 15px;
+    }
+    .feedback-modal .form-group textarea {
+        height: 120px;
+        padding: 5px 15px;
+    }
+    .feedback-modal .form-group span {
+        color: red;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 400;
+    }
+    .feedback-modal .form-group .note {
+        font-size: 12px;
+    }
+    .feedback-modal .form-group.form-submit {
+        margin-top: 30px;
+        text-align: center;
+    }
+    .feedback-modal .form-group.form-submit input {
+        -webkit-transition: 0.3s all;
+        -o-transition: 0.3s all;
+        width: 80px;
+        height: 36px;
+        border: 0;
+        background: #f79d25;
+        color: #fff;
+        font-size: 14px;
+        transition: 0.3s all;
+    }
+    .feedback-modal .form-group.form-submit input:hover {
+        background: #e18408;
+    }
+    .feedback-modal .fancybox-close-small {
+        background: #f7a334;
+        opacity: 1;
+    }
+    .feedback-modal .fancybox-close-small svg path {
+        fill: #fff;
+    }
+    @media (min-width: 1280px) {
+        .career-advice-page .container {
+            padding: 0 100px;
+        }
+    }
+    @media (min-width: 1440px) {
+        .career-advice-page .container {
+            padding: 0 15px;
+        }
+    }
+    @media (min-width: 1280px) {
+        .salary-grossnet-page .container {
+            padding: 0 100px;
+        }
+    }
+    @media (min-width: 1440px) {
+        .salary-grossnet-page .container {
+            padding: 0 15px;
+        }
+    }
+    .blur-dropdown {
+        z-index: 1;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        opacity: 1;
+        pointer-events: none;
+    }
+    .blur-dropdown.active {
+        pointer-events: auto;
+    }
+    @media (min-width: 1200px) {
+        .blur-dropdown {
+            top: 120px;
+        }
+    }
+    @media (min-width: 1200px) {
+        .salary-grossnet .list-widget .widget:first-child {
+            margin-top: 75px;
+        }
+    }
+    @media (max-width: 576px) {
+        .salary-grossnet .list-widget {
+            -ms-flex-wrap: wrap;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .salary-grossnet .list-widget > * {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .salary-grossnet .list-widget .banner {
+            -webkit-box-ordinal-group: 6;
+            -ms-flex-order: 5;
+            order: 5;
+            text-align: center;
+        }
+    }
+    @media (min-width: 720px) {
+        .salary-grossnet-page .list-career-right {
+            -ms-flex-wrap: wrap;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -5px;
+        }
+        .salary-grossnet-page .list-career-right .item-career-right {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0 5px;
+        }
+        .salary-grossnet-page .list-career-right .item-career-right:nth-child(3) {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+        .salary-grossnet-page .list-career-right .item-career-right:nth-child(4) {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+    }
+    @media (min-width: 801px) {
+        .salary-grossnet-page .list-career-right .item-career-right:nth-child(3),
+        .salary-grossnet-page .list-career-right .item-career-right:nth-child(4) {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    @media (min-width: 1200px) {
+        .salary-grossnet-page .list-career-right .item-career-right .widget:last-child {
+            margin-top: 0;
+        }
+    }
+    @media (max-width: 800px) {
+        .salary-grossnet-page .skybanner {
+            display: none !important;
+        }
+    }
+    .salary-grossnet-page .col-lg-3-custom {
+        width: 100%;
+        padding: 0 15px;
+    }
+    @media (min-width: 1024px) {
+        .salary-grossnet-page .col-lg-3-custom {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 340px;
+            flex: 0 0 340px;
+            max-width: 340px;
+        }
+    }
+    .salary-grossnet-page .col-lg-9-custom {
+        width: 100%;
+        padding: 0 15px;
+    }
+    @media (min-width: 1024px) {
+        .salary-grossnet-page .col-lg-9-custom {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 calc(100% - 340px);
+            flex: 0 0 calc(100% - 340px);
+            max-width: calc(100% - 340px);
+        }
+    }
+    @media (min-width: 1024px) {
+        .salary-grossnet-page .list-career-right {
+            margin: 0;
+        }
+        .salary-grossnet-page .list-career-right .item-career-right {
+            padding: 0;
+        }
+    }
+    #SalaryResult .container {
+        padding: 0;
+    }
+    .zalo-share-button {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .zalo-share-button:before {
+        content: url("https://static.careerbuilder.vn/themes/careerbuilder/img/i-zalo-w.png") !important;
+    }
+    .zalo-share-button:hover:before {
+        content: url("https://static.careerbuilder.vn/themes/careerbuilder/img/i-zalo-w.png") !important;
+    }
+

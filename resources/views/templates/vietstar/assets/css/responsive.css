@@ -1,0 +1,298 @@
+@media (max-width:575px) {}
+
+@media (max-width:710px) {
+  .job-detail-content .share-detail {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .partner .partner-item__img img {
+    object-fit: none;
+  }
+}
+
+@media (max-width:830px) {
+  .header-bar .header-bar__title {
+    width: unset;
+  }
+}
+
+@media (min-width:576px) and (max-width: 970px) {
+  .blogs-slider .__row .card-list {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+@media (min-width:360px) and (max-width: 992px) {
+
+  .about-us,
+  .about-us .about-us-bg {
+    aspect-ratio: 400/225;
+    height: auto;
+    min-height: 380px;
+  }
+}
+
+@media (max-width:992px) {
+  .d-md-none {
+    display: block !important;
+    height: 54px;
+  }
+
+  .navbar .navbar-brand {
+    width: 120px !important;
+    height: 54px !important;
+    overflow: unset;
+  }
+
+  .navbar .navbar-brand img {
+    height: 48px !important;
+    width: initial;
+  }
+
+  .company-job-detail .job-detail-banner {
+    flex-direction: row-reverse;
+  }
+
+  .company-job-detail .job-detail-banner .job-detail-banner__icon {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  .job-detail-banner .job-detail-banner__group {
+    flex-direction: column;
+  }
+
+  .job-detail-banner .job-detail-banner__actions {
+    display: flex;
+    flex-direction: row !important;
+    gap: 16px;
+    margin-top: 16px;
+  }
+}
+
+@media (min-width:360px) {
+  .navbar .navbar-brand {
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  .navbar .navbar-brand img {
+    height: 32px;
+    width: initial;
+  }
+
+  .about-us {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .about-us::before {
+    width: 100%;
+    height: auto;
+    min-height: 440px;
+    aspect-ratio: 400/225;
+    background-color: rgba(136, 2, 5, .6);
+  }
+
+  .about-us .about-us-bg {
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+
+  .about-us .content {
+    width: 100%;
+    margin-left: unset;
+    padding: 16px;
+  }
+}
+
+@media (min-width:576px) {
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .content {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .header-bar .content {
+    padding: 64px;
+  }
+
+  .navbar .navbar-brand {
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  .navbar .navbar-brand img {
+    height: 32px;
+    width: initial;
+  }
+
+  .blogs-slider .__row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .about-us::before {
+    min-height: 416px;
+  }
+
+  .about-us .content {
+    padding: 40px;
+  }
+}
+
+@media (min-width:768px) {
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .header-bar .header-bar-recruiter {
+    opacity: 1;
+  }
+}
+
+@media (min-width:992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .header-bar .content {
+    padding: 136px 116px;
+  }
+
+  .about-us,
+  .about-us::before {
+    aspect-ratio: unset;
+  }
+
+  .about-us::before {
+    width: 60%;
+    height: inherit;
+    background-color: rgba(136, 2, 5, .9);
+  }
+
+  .about-us .content {
+    width: 60%;
+    margin-left: 40%;
+    padding-top: 44px;
+    padding-left: 40px;
+  }
+
+  .about-us .about-us-bg {
+    background-position-x: -60px;
+    background-position-y: 0;
+  }
+
+  /* .blogs-slider::after {
+    width: 50%;
+  }
+
+  .blogs-slider .__row .card-list {
+    width: 930px;
+  }
+} */
+
+  @media (min-width:1200px) {
+    .container {
+      max-width: 1140px;
+    }
+
+    .container.nav {
+      max-width: 95%;
+    }
+
+    .content {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    .navbar .navbar-brand {
+      overflow: unset;
+    }
+
+    .navbar .navbar-brand img {
+      height: 32px;
+      width: initial;
+    }
+
+    .related-jobs .related-jobs__jobs {
+      flex-direction: row;
+    }
+
+    .about-us .about-us-bg {
+      background-position-x: -72px;
+      background-position-y: -72px;
+    }
+  }
+
+  @media (min-width:1440px) {
+    .container {
+      max-width: 1440px;
+    }
+
+    .content {
+      padding-left: 135px;
+      padding-right: 135px;
+    }
+
+    .navbar .navbar-brand {
+      width: 130px;
+      height: 53px;
+      overflow: hidden;
+    }
+
+    .navbar .navbar-brand img {
+      width: 130px;
+      height: 53px;
+    }
+
+    .header-bar .header-bar-recruiter {
+      right: 250px;
+    }
+
+    .about-us::before {
+      width: 48%;
+    }
+
+    .about-us .content {
+      width: 50%;
+      margin-left: 50%;
+      padding-top: 64px;
+      padding-left: 96px;
+    }
+
+    /* .blogs-slider::after {
+    width: 63%;
+  } */
+
+    .blogs-slider .__row {
+      flex-direction: row;
+    }
+
+    .related-jobs .related-jobs__jobs {
+      flex-direction: column;
+    }
+  }

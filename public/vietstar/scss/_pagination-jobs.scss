@@ -1,0 +1,30 @@
+.pagination-jobs {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+  .pagination {
+    background-color: transparent;
+    .page-item {
+      .page-link {
+        padding: 4px 11px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        background-color: transparent;
+        border-width: 0;
+        color: var(--sub-text);
+        vertical-align: middle;
+        span{
+            font-size: 12px;
+            line-height: 22px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &.active, &:hover, &:focus {
+            color: #981B1E;
+        }
+      }
+    }
+  }
+}

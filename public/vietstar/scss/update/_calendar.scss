@@ -1,0 +1,439 @@
+.nav-change-schedule {
+    display: flex;
+    border-bottom-width: 0;
+
+    .nav-item {
+        background-color: #F8F8FA !important;
+        border: 1px solid #D9DBE9;
+        overflow: hidden;
+
+        .nav-link {
+            padding: 10px 15px;
+            line-height: 24px;
+            width: 54px;
+            height: 44px;
+            position: relative;
+
+            .iconmoon {
+                font-size: 24px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &.active {
+                background-color: #F8F8FA !important;
+                border-bottom-width: 0;
+
+                .iconmoon {
+                    color: var(--bs-primary);
+
+                    &::before {
+                        color: var(--bs-primary);
+                    }
+                }
+            }
+        }
+
+        &:first-child {
+            border-right-width: 0;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+    }
+}
+
+.card-body-schedule-interview {
+    padding: 30px;
+    position: relative;
+
+    .tab-content {
+        .tab-pane {
+            position: relative;
+
+            .title-schedule-interview {
+                position: absolute;
+                margin-bottom: 0;
+                top: 10px;
+                left: 0;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+                color: var(--sub-1);
+            }
+        }
+    }
+}
+
+
+
+.btn-schedule-interview {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+#calendar {
+    .fc-toolbar {
+        &.fc-header-toolbar {
+            padding: 0;
+
+            .fc-button-group {}
+
+            .fc-button {
+                &.fc-listMonth-button {
+                    border: 1px solid #D9DBE9;
+                    background-color: #F8F8FA;
+                    padding: 0;
+                    text-indent: -999999px;
+                    position: relative;
+                    width: 55px;
+                    height: 44px;
+
+                    &::before {
+                        content: "\e935";
+                        text-indent: 0px !important;
+                        position: absolute;
+                        text-indent: 0;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-family: 'icomoon' !important;
+                        font-size: 24px;
+                        color: #9B9B9F;
+                    }
+
+                    &.fc-button-active {
+                        background-color: #F8F8FA !important;
+
+                        &::before {
+                            color: var(--bs-primary) !important;
+                        }
+
+                    }
+                }
+
+                &.fc-dayGridMonth-button {
+                    border: 1px solid #D9DBE9;
+                    background-color: #F8F8FA;
+                    padding: 0;
+                    text-indent: -999999px;
+                    position: relative;
+                    width: 55px;
+                    height: 44px;
+
+                    &::before {
+                        content: "\e911";
+                        text-indent: 0px !important;
+                        position: absolute;
+                        text-indent: 0;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-family: 'icomoon' !important;
+                        font-size: 24px;
+                        color: #9B9B9F;
+                    }
+
+                    &.fc-button-active {
+                        background-color: #F8F8FA !important;
+
+                        &::before {
+                            color: var(--bs-primary) !important;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .fc-toolbar-chunk {
+
+            .fc-prev-button,
+            .fc-next-button {
+                background-color: transparent;
+                border-width: 0;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .fc-toolbar-title {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 33px;
+                color: var(--text-main);
+                display: inline-block;
+                vertical-align: middle;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    &.fc {
+        .fc-scrollgrid {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            overflow: hidden;
+        }
+
+        .fc-scrollgrid-sync-inner {
+            text-align: left;
+            padding: 12px;
+        }
+
+        .fc-col-header-cell-cushion {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: left;
+            color: #969696;
+        }
+
+        .fc-daygrid-day-number {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 21px;
+            line-height: 25px;
+            color: #969696;
+            padding: 0;
+        }
+
+        .fc-daygrid-day-frame {
+            min-height: 158px;
+        }
+    }
+
+    .fc-theme-standard {
+
+        .fc-day {}
+    }
+}
+
+.header-list-schedule-interview {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .title-list-schedule-interview {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--sub-1);
+        width: 100%;
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+
+    .group-filter-schedule-interview {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex: 0 0 55%;
+        max-width: 55%;
+
+        .form-group {
+            width: 100%;
+            flex: 0 0 calc(50% - 5px);
+            max-width: calc(50% - 5px);
+        }
+
+        .form-group-datepicker {
+            position: relative;
+
+        }
+    }
+}
+
+.body-list-schedule-interview {
+    .content-list-schedule-interview {
+        margin-bottom: 20px;
+
+        .table-schedule-interview {
+            width: 100%;
+
+            thead {
+                tr {
+                    th {
+                        padding: 14px 20px;
+                        border-top: 1px solid #D9DBE9;
+                        border-bottom: 1px solid #D9DBE9;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 19px;
+                        color: var(--sub-text);
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        padding: 20px 20px;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 19px;
+                        color: #171725;
+
+                        a {
+                            color: #171725;
+
+                            &:hover,
+                            &:focus {
+                                color: var(--bs-primary);
+                            }
+                        }
+
+                        .cv-status {
+                            padding: 3px 5px;
+                            border-radius: 25rem;
+                            font-size: 11px;
+
+                            &.cv-status-1 {
+                                background-color: #f4f4f5;
+                                color: #6c757d;
+                            }
+
+                            &.cv-status-2 {
+                                background-color: #faf3e8;
+                                color: #ff9f0a;
+                            }
+
+                            &.cv-status-3 {
+                                background-color: #f9f6ed;
+                                color: #f4b400;
+                            }
+
+                            &.cv-status-4 {
+                                background-color: #f0f4f9;
+                                color: #4285f4;
+                            }
+
+                            &.cv-status-5 {
+                                background-color: #e5f7ee;
+                                color: #28a745;
+                            }
+
+                            &.cv-status-6 {
+                                background-color: #f8f1f0;
+                                color: #de4637;
+                            }
+                        }
+
+                        .badge {
+                            padding: 3px;
+                            border-radius: 3px;
+
+                            &.badge-secondary {
+                                background-color: rgba($color: #6c757d, $alpha: 0.6);
+                                color: #ffffff !important;
+                            }
+                        }
+
+                        .dropdown-menu {
+                            a {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(even) {
+                        background-color: #F8F8FA;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-list-schedule-interview {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.pagination {
+    .page-link {
+        background-color: transparent;
+    }
+
+    .page-item.disabled .page-link {
+        background-color: transparent;
+        border-width: 0;
+    }
+}
+
+.datetimepicker {
+    .switch {
+        display: table-cell;
+    }
+}
+
+.form-control {
+    &.bs-datetimepicker {
+        background-image: url('../imgs/icons/recruiter-calenda.svg');
+        background-size: 20px 20px;
+        background-position: calc(100% - 10px) center;
+        background-repeat: no-repeat;
+    }
+
+    &.daterange {
+        background-image: url('../imgs/icons/recruiter-calenda.svg');
+        background-size: 20px 20px;
+        background-position: calc(100% - 10px) center;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header-list-schedule-interview {
+
+        .title-list-schedule-interview,
+        .group-filter-schedule-interview {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+    }
+
+    .btn-schedule-interview {
+        position: relative;
+        top: 00px;
+        right: 0px;
+        left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-body-schedule-interview .tab-content .tab-pane .title-schedule-interview {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 10px;
+    }
+
+    .fc-toolbar-chunk {
+        text-align-last: left;
+
+        .fc-toolbar-title {
+            font-size: 16px;
+            line-height: 1.2;
+        }
+    }
+
+    #calendar .fc-toolbar .fc-toolbar-chunk .fc-toolbar-title {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+}

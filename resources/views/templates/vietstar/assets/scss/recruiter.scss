@@ -1,0 +1,17 @@
+:root {
+  --sub-1: #1d3461;
+  --sub-3: #3361ff;
+  --sub-text: #696974;
+  --text-main: #3B4358;
+  --placeholder: #9B9B9F;
+}
+.blue {
+  color: var(--sub-3) !important;
+}
+@import "./dashboard";
+@import "./form";
+@import "./button";
+@import "./view_public_profile";
+@import "./posted-job";
+@import "./modal";
+@import "./sidebar-filter";

@@ -1,0 +1,265 @@
+.hero-banner-company-profile{
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.section-company-profile {
+  background: #f4f5f8;
+  padding: 30px;
+  margin-bottom: 40px;
+  .company-profile {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .box-logo {
+    flex: 0 0 150px;
+    max-width: 150px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .box-content {
+    flex: 0 0 calc(100% - 150px);
+    max-width: calc(100% - 150px);
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    .company-name {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 38px;
+      color: var(--sub-1);
+      margin-bottom: 4px;
+    }
+    .company-position {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 27px;
+      color: var(--text-main);
+      margin-bottom: 20px;
+    }
+    .company-info {
+      margin-bottom: 36px;
+    }
+  }
+  .company-info {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+    li {
+      position: relative;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 27px;
+      color: var(--text-main);
+      padding-left: 32px;
+      margin-bottom: 15px;
+      .iconmoon {
+        font-size: 24px;
+        color: #981b1e;
+        position: absolute;
+        top: 0;
+        left: 0;
+        &::before {
+          color: #981b1e;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .socials {
+    .social {
+      font-size: 18px;
+      text-decoration: none;
+      margin-right: 20px;
+      color: var(--sub-text);
+      &:hover {
+        .iconmoon {
+          &::before {
+            color: #981b1e;
+          }
+        }
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.section-company-profile-detail {
+ 
+  .company-size {
+    background: rgba(167, 0, 4, 0.05);
+    border: 1px solid rgba(152, 27, 30, 0.3);
+    border-radius: 10px;
+    padding: 20px 30px 0 30px;
+     margin-bottom: 30px;
+    .item-size {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 20px;
+      .size-icon {
+        background: #ffffff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: block;
+        position: relative;
+        .iconmoon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 30px;
+        }
+      }
+      .size-content {
+        padding-left: 15px;
+        p {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 26px;
+          color: var(--text-main);
+        }
+        h4 {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 26px;
+          color: var(--text-main);
+        }
+      }
+    }
+  }
+}
+
+.widget-public-profile {
+  margin-bottom: 30px;
+  h4.title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--sub-1);
+    margin-bottom: 20px;
+  }
+  .jobs {
+    .job {
+      background: #ffffff;
+      padding: 16px;
+      border: 1px solid #d9dbe9;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .box-logo {
+        max-width: 40px;
+        flex: 0 0 40px;
+        width: 100%;
+        .logo {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .widget-content {
+        max-width: calc(100% - 40px);
+        flex: 0 0 calc(100% - 40px);
+        width: 100%;
+        padding-left: 15px;
+        .job-title {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 19px;
+          color: var(--text-main);
+          margin-bottom: 4px;
+        }
+        .job-name {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 18px;
+          color: var(--sub-text);
+          margin-bottom: 12px;
+        }
+        .group-control {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .tags {
+            .tag {
+              padding: 2px 8px;
+              background: rgba(152, 27, 30, 0.1);
+              border-radius: 30px;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 11px;
+              line-height: 15px;
+              &.location {
+                background: rgba(152, 27, 30, 0.1);
+                color: #981b1e;
+              }
+              &.time {
+                background-color: #e5e9fd;
+                color: #8082f1;
+              }
+            }
+          }
+          .salary {
+            span {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 13px;
+              line-height: 18px;
+              color: #981b1e;
+            }
+            .iconmoon {
+              font-size: 20px;
+              color: #696974;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .map{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 75%;
+    iframe{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

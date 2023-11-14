@@ -1,0 +1,33 @@
+.form-group {
+    box-shadow: unset;
+    margin-bottom: 30px;
+  label {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--sub-text);
+    margin-bottom: 8px;
+  }
+  .form-control {
+    background: #ffffff;
+    border: 1px solid #d9dbe9;
+    border-radius: 8px;
+    padding: 11px 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    box-shadow: unset!important;
+  }
+}
+
+.form-check{
+  margin-bottom: 30px;
+  box-shadow: unset;
+  .form-check-input{
+    width: 20px!important;
+    height: 20px!important;
+    margin-top: 1px!important;
+  }
+}

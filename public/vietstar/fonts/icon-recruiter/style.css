@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?v4f6su');
+  src:  url('fonts/icomoon.eot?v4f6su#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?v4f6su') format('truetype'),
+    url('fonts/icomoon.woff?v4f6su') format('woff'),
+    url('fonts/icomoon.svg?v4f6su#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e916";
+  color: #fff;
+}
+.icon-calenda:before {
+  content: "\e914";
+  color: #696974;
+}
+.icon-uncheck:before {
+  content: "\e910";
+  color: #696974;
+}
+.icon-check:before {
+  content: "\e911";
+  color: #696974;
+}
+.icon-profile:before {
+  content: "\e912";
+  color: #696974;
+}
+.icon-attach_money:before {
+  content: "\e90f";
+  color: #696974;
+}
+.icon-close:before {
+  content: "\e915";
+  color: #696974;
+}
+.icon-location:before {
+  content: "\e90d";
+  color: #981b1e;
+}
+.icon-user:before {
+  content: "\e90e";
+  color: #981b1e;
+}
+.icon-suitcase:before {
+  content: "\e900";
+  color: #981b1e;
+}
+.icon-calendar:before {
+  content: "\e901";
+  color: #981b1e;
+}
+.icon-total-employee:before {
+  content: "\e902";
+  color: #981b1e;
+}
+.icon-salary:before {
+  content: "\e903";
+  color: #981b1e;
+}
+.icon-dots:before {
+  content: "\e913";
+  color: #696974;
+}
+.icon-heart:before {
+  content: "\e904";
+  color: #981b1e;
+}
+.icon-youtube:before {
+  content: "\e905";
+  color: #696974;
+}
+.icon-twitter:before {
+  content: "\e906";
+  color: #696974;
+}
+.icon-linkedIn:before {
+  content: "\e907";
+  color: #696974;
+}
+.icon-instagram:before {
+  content: "\e908";
+  color: #696974;
+}
+.icon-facebook:before {
+  content: "\e909";
+  color: #696974;
+}
+.icon-website:before {
+  content: "\e90a";
+  color: #981b1e;
+}
+.icon-email:before {
+  content: "\e90b";
+  color: #fff;
+}
+.icon-phone-call:before {
+  content: "\e90c";
+  color: #981b1e;
+}

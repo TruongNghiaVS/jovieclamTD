@@ -1,0 +1,145 @@
+.social-button {
+  display: inline-grid;
+  position: fixed;
+  right: 15px;
+  bottom: 25px;
+  min-width: 45px;
+  text-align: center;
+  z-index: 18;
+}
+
+.icon-button {
+  background-color: #981b1e;
+  border-radius: 45px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  height: 45px;
+  line-height: 45px;
+  margin: 8px 0 0 0;
+  position: relative;
+  bottom: 25px;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 45px;
+}
+
+.icon-button span {
+  border-radius: 0;
+  display: block;
+  height: 0;
+  left: 50%;
+  margin: 0 0 0 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 0;
+}
+
+.lanmak-zalo {
+  background-image: url('../imgs/zalo-logo.png');
+  background-color: #981b1e;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 40px 40px;
+  background-position: center center;
+  width: 45px;
+  height: 45px;
+}
+
+.icon-button:hover span {
+  width: 15rem;
+  height: 45px;
+  border-radius: 45px;
+  margin: -1.8rem 0 0 -16.8rem;
+}
+
+.lanmak-phone span {
+  background-color: #981b1e;
+  font-family: "Barlow", sans-serif;
+}
+
+.lanmak-facebook span {
+  background-color: #981b1e;
+  font-family: "Barlow", sans-serif;
+}
+
+.lanmak-zalo span {
+  background-color: #981b1e;
+  font-family: "Barlow", sans-serif;
+}
+
+span a {
+  display: inline;
+}
+
+.icon-button i {
+  background: none;
+  color: #ffffff;
+  height: 45px;
+  left: 0;
+  line-height: 45px;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 18px;
+  z-index: 10;
+}
+
+.img-thumbnail {
+  display: none;
+}
+
+.social-button {
+  .real-lanmak {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    color: #ffffff;
+  }
+}
+
+footer {
+  .socials {
+    .social {
+
+      &:hover,
+      &:focus {
+        color: var(--bs-primary);
+
+        i {
+          color: var(--bs-primary);
+        }
+      }
+    }
+  }
+
+  .term-link {
+    a {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      color: #2F80ED;
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        color: var(--bs-primary);
+
+        i {
+          color: var(--bs-primary);
+        }
+      }
+    }
+  }
+}

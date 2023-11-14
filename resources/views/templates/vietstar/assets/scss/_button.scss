@@ -1,0 +1,21 @@
+.btn {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  &.btn-primary {
+    background: #981b1e;
+    border: 1px solid #981b1e;
+  }
+  &.btn-light {
+    background: #ffffff;
+    border: 1px solid #981b1e;
+    color: #981B1E;
+  }
+  &.btn-secondary {
+    background: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    color: #171725;
+  }
+}

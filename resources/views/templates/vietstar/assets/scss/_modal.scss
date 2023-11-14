@@ -1,0 +1,69 @@
+#modalScheduleInterview {
+  .btn-close {
+    padding: 0;
+    background: transparent;
+    .iconmoon {
+      font-size: 24px;
+    }
+  }
+  .modal-dialog {
+    min-width: 570px;
+  }
+  .modal-content {
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+  }
+  .modal-header {
+    padding: 30px 30px 20px 30px;
+    border-bottom: 0px solid #000;
+  }
+  .modal-body {
+    padding: 20px 30px 30px 30px;
+    .group-button {
+      justify-content: center;
+      display: flex;
+    }
+    .form-group-submit {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.section-search-seekers {
+  background: #ffffff;
+  padding: 18px 0;
+  .form-search-seekers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -6px;
+    margin-right: -6px;
+    .form-group {
+      padding-left: 6px;
+      padding-right: 6px;
+      margin-bottom: 0;
+    }
+    .form-group-text {
+      flex: 0 0 calc(32% - 52px);
+      max-width: calc(32% - 52px);
+      width: 100%;
+    }
+    .form-group-selected {
+      flex: 0 0 17%;
+      max-width: 17%;
+      width: 100%;
+    }
+    .form-group-btn-search {
+      flex: 0 0 52px;
+      max-width: 52px;
+      width: 100%;
+      .btn {
+        padding: 12px 15px;
+      }
+      .iconmoon {
+        font-size: 20px;
+      }
+    }
+  }
+}
