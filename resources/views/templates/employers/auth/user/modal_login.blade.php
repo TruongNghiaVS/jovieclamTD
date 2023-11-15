@@ -63,7 +63,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+                        
                      </div>
 					
                     <div class="modal-body">
@@ -251,11 +251,10 @@ $(document).ready(function() {
                     $("#login_em_success").addClass("show")
                     $("#employer_login_Modal").css("display:none")
                     $("#employer_login_Modal").removeClass("show")
-                    
-                    $("#login_em_success button").click(function(){
+                    setTimeout(function() { 
                         $("#login_em_success").removeClass("show")
                         window.location.href =  "/company-home";
-                    });
+                    }, 2000);
                 })
                 .fail(function(jqXHR, textStatus){
                     

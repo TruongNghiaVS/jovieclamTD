@@ -18,9 +18,7 @@
                         <a class="nav-link  {{ Request::url() == route('employerIndex') ? 'header-active' : 'text-main-color' }}" href="{{url('/employers')}}" style="{{ Request::url() == route('employerIndex')  ? 'color:#981B1E;' : '' }}">{{__('Home')}}</a>
                     </li>
                     
-                    <li>
-                        <a class="nav-link " href="#" style="">{{__('News')}}</a>
-                    </li>
+                    
 
 
                     @if(Auth::guard('company')->check())
@@ -75,6 +73,15 @@
                         </ul>
                     </li>
                     @endif
+
+                    
+                    <!-- NEW STAR -->
+                    <li>
+                        <a class="nav-link " href="#" style="">{{__('News')}}</a>
+                    </li>
+                    <!-- NEW END -->
+
+
                     {{--<li class="has-child">
                         <a href="{{route('company.listing')}}" class="nav-link">{{__('Company')}}</a>
                     </li> --}}
