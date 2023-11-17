@@ -232,7 +232,7 @@
                 
 
 
-                <a class="btn_for_user" href="http://127.0.0.1:8000">
+                <a class="btn_for_user" href="http://jobvieclam.com/">
                 <div  class="btn_for_user__head">
                     Dành cho
                 </div> 
