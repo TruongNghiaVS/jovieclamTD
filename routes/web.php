@@ -26,7 +26,7 @@ $real_path = realpath(__DIR__) . DIRECTORY_SEPARATOR . 'front_routes' . DIRECTOR
 
 /* * ******** IndexController ************ */
 
-Route::get('/', 'IndexController@index')->name('index');
+Route::get('/', 'EmployerController@index')->name('index');
 
 Route::get('/employers', 'EmployerController@index')->name('employerIndex');
 Route::get('/about-us', 'IndexController@aboutUs')->name('about_us');
