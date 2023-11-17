@@ -15,7 +15,7 @@
             <div class="navbar-nav flex-grow-1 justify-content-end">
                 <ul class="navbar-nav main-menu-static ml-auto">
                     <li>
-                        <a class="nav-link  {{ Request::url() == route('employerIndex') ? 'header-active' : 'text-main-color' }}" href="{{url('/employers')}}" style="{{ Request::url() == route('employerIndex')  ? 'color:#981B1E;' : '' }}">{{__('Home')}}</a>
+                        <a class="nav-link  {{ Request::url() == route('index') ? 'header-active' : 'text-main-color' }}" href="{{url('/')}}"  style="{{ Request::url() == route('index')  ? 'color:#981B1E;' : '' }}">{{__('Home')}}</a>
                     </li>
                     
                     

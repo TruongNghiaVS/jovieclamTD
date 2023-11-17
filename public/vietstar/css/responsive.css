@@ -499,6 +499,15 @@
   .message-inbox .list-wrap {
     height: 200px;
   }
+  .banner-form {
+    padding: 0 !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+
+  }
+  .banner-form__wrapper{
+    display: none;
+  }
 }
 
 
