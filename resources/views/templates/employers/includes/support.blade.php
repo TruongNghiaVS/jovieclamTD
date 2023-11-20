@@ -53,7 +53,7 @@
 @push('styles')
 <style type="text/css">
     .banner-form{
-        background-image: url(https://www.nicepng.com/png/full/188-1882425_hd-light-plain-blue-background.png);
+        background-image: linear-gradient(to right, #d4240b, #981b1e);
         background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
