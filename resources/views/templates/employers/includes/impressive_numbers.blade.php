@@ -1,4 +1,4 @@
-<section class="employer-number">
+<section class="employer-number-impressive">
     <div class="container" bis_skin_checked="1">
         <ul class="list-number">
             <li>
@@ -30,12 +30,12 @@
 </section>
 @push('styles')
 <style type="text/css">
-        .employer-number{
+        .employer-number-impressive{
             margin: 10px 0;
             border-top: 1px solid #e8e8e8;
             border-bottom: 1px solid #e8e8e8;
         }
-        .employer-number .list-number {
+        .employer-number-impressive .list-number {
             ms-flex-wrap: wrap;
             display: -webkit-box;
             display: -ms-flexbox;
@@ -47,7 +47,7 @@
 
             list-style-type: none;
         }
-        .employer-number .list-number li {
+        .employer-number-impressive .list-number li {
             -webkit-box-flex: 0;
             -ms-flex: 0 0 50%;
             position: relative;
@@ -58,7 +58,7 @@
             -webkit-box-flex: 0;
 
         }
-        .employer-number .list-number li:before {
+        .employer-number-impressive .list-number li:before {
             position: absolute;
             top: 0;
             right: -0.5px;
@@ -67,10 +67,10 @@
             background: #e8e8e8;
             content: "";
         }
-        .employer-number .list-number li:last-child:before {
+        .employer-number-impressive .list-number li:last-child:before {
             display: none;
         }
-        .employer-number .list-number li .number {
+        .employer-number-impressive .list-number li .number {
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             -webkit-box-align: center;
@@ -84,12 +84,12 @@
             text-align: center;
         }
 
-        .employer-number .list-number li .number span, .employer-number .list-number li .number p{
+        .employer-number-impressive .list-number li .number span, .employer-number-impressive .list-number li .number p{
             font-size: 32px;
             color: var(--bs-primary);
             font-weight: 600;
         }
-        .employer-number .list-number li .title {
+        .employer-number-impressive .list-number li .title {
             max-width: 195px;
             margin: 0 auto;
             color: #172642;
@@ -124,10 +124,10 @@
     // Call the function with the target number (e.g., 100) and duration (e.g., 10000 milliseconds or 10 seconds)
     
     
-    animateNumber(100, 1000, 'productCount1');
-    animateNumber(200, 1000, 'productCount2');
-    animateNumber(300, 1000, 'productCount3');
-    animateNumber(400, 1000, 'productCount4');
+    animateNumber(100, 2000, 'productCount1');
+    animateNumber(200, 2000, 'productCount2');
+    animateNumber(300, 2000, 'productCount3');
+    animateNumber(400, 2000, 'productCount4');
 
 </script>
 @endpush
