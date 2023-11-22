@@ -1,13 +1,21 @@
 <!-- Blogs slider -->
 <section class="blogs-slider section-static">
     <div class="container">
+
         <div class="section-title-block">
             <div class="sectionBlock__title">Cẩm nang nghề nghiệp</div>
-        </div> 
-        <div class="swiper sectionBlock__swiper">
-            <div class="swiper-wrapper">
+        </div>
+
+
+                 
+        <div class="blog-home-content">
+            <div class="blog-content__wrapper row px-4">
+
+
+
+
                 <!-- Start Render data of  Blog here -->
-                            <div class="swiper-slide">
+                <!-- <div class="swiper-slide">
                                 <div class="cardBlock">
                                     <a class="cardBlock_img" href="#">
                                         <img src="https://www.vietnamworks.com//hrinsider//wp-content/uploads/2023/09/Thiet-ke-chua-co-ten-72-300x225.jpg" alt="">
@@ -107,15 +115,67 @@
                                     </div>
                                 </div>
                             </div>
-                       
-                     <!-- End Render data of  Blog here --> 
+                        -->
+                <!-- End Render data of  Blog here -->
             </div>
         </div>
         <div class="show-more">
-                <a href="#" class="btn btn-secondary show-more-btn bg-white ">Xem thêm</a>
+            <a href="{{ url('/') }}/blog/category/cm-nang-ngh-nghip" class="btn btn-secondary show-more-btn">Xem thêm</a>
         </div>
     </div>
 </section>
 
 
 
+@push('scripts')
+<script type="text/javascript">
+    $(document).ready(function() {
+        var html = ''
+        var image = '';
+        var slug = '';
+        var cate= []
+
+        $.ajax({
+            url: '{{url('/')}}/blog/get-allcareer', // Replace with your API endpoint
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                // Process the data
+                console.log(data);
+    
+
+                html = data.blogs.data.map((item, id) => {
+                    image = `{{url('/')}}/uploads/blogs/${item.image}`;
+                    slug = `{{url('/')}}/blog/${item.slug}`;
+                    if (item) {
+                        return `  <div class="col-6 col-md-4">
+                               
+                                <div class="cardBlock">
+                               
+                                    <div class="figure" bis_skin_checked="1">
+                                        <a href="${slug}" class="figure-images"><img src="${image}" alt="${item.heading}"></a>
+                                        <div class="figcaption" bis_skin_checked="1">
+
+                                            <h3 class="figcaption__category-name"><a href="#"></a></h3>
+                                        
+                                            <div class="figcaption__title" bis_skin_checked="1"><a href="${slug}">${item.heading}</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                    `
+                    }
+
+                })
+
+                $(".blog-home-content .blog-content__wrapper").append(html.join(" "))
+            },
+            error: function(xhr, status, error) {
+                // Handle errors
+                console.error('Error:', error);
+            }
+        });
+    });
+</script>
+@endpush

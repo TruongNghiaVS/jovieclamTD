@@ -28,7 +28,7 @@
 
 
 <!-- introduce  start-->
-@include('templates.employers.includes.introduce')
+{{--@include('templates.employers.includes.introduce')--}}
 <!-- introduce  end-->
 
 
@@ -46,6 +46,11 @@
 <!-- about_us  start-->
 @include('templates.employers.includes.support')
 <!-- about_us  end-->
+
+<!-- home_blogs start-->
+@include('templates.employers.includes.home_blogs')
+
+<!-- home_blogs  end-->
 
 @include('templates.employers.includes.footer')
 @endsection
