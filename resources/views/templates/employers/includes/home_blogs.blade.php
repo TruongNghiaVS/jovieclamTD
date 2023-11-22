@@ -3,7 +3,7 @@
     <div class="container">
 
         <div class="section-title-block">
-            <div class="sectionBlock__title">Cẩm nang nghề nghiệp</div>
+            <div class="sectionBlock__title">Cẩm nang tuyển dụng</div>
         </div>
 
 
