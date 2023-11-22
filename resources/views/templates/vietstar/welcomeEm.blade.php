@@ -16,7 +16,9 @@
 @include('templates.employers.includes.search') 
 <!-- Search End -->
 
-
+<!-- Impressive_numbers start-->
+@include('templates.employers.includes.impressive_numbers')
+<!-- Impressive_numbers  end-->
 
 <!-- Product and service  start-->
 @include('templates.employers.includes.all_product_service')
@@ -65,6 +67,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 <script>
 $(document).ready(function($) {
+
+
+   
+
+    // Call the function with the target number (e.g., 100) and duration (e.g., 10000 milliseconds or 10 seconds)
+    
+
+
+
+
     @if(Session::has('success'))
     toastr.success(`{{ Session::get('success')}}`);
     @endif
