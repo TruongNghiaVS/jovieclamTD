@@ -2,17 +2,11 @@
 @section('content')
 <!-- Header start -->
 
+@include('templates.vietstar.includes.header')
 
-    @if(Auth::guard('company')->check())
-    <!-- Header start -->
-    @include('templates.employers.includes.header')
-    <!-- Header end -->
-    @else
-    @include('templates.vietstar.includes.header')
-    @endif
 <!-- Header end -->
 <!-- Inner Page Title start -->
-@include('templates.vietstar.includes.inner_page_title', ['page_title'=>__('Contact')])
+
 <!-- Inner Page Title end -->
 <div class="inner-page">
     <!-- About -->

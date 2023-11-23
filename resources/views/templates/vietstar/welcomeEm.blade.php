@@ -24,9 +24,15 @@
 @include('templates.employers.includes.all_product_service')
 <!-- Product and service  end-->
 
-<!-- Product and service  start-->
+<!-- employer_choose  start-->
+@include('templates.employers.includes.employer_choose')
+<!-- employer_choose  end-->
+
+<!-- post_now  start-->
 @include('templates.employers.includes.post_now')
-<!-- Product and service  end-->
+<!-- post_now end-->
+
+
 
 
 <!-- introduce  start-->
