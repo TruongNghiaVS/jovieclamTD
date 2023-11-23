@@ -97,7 +97,7 @@
     .thank-you-pop{
 	width:100%;
  	padding:20px;
-	text-align:center;
+	
 }
 .thank-you-pop img{
 	width:76px;
@@ -114,7 +114,7 @@
 }
 .thank-you-pop p{
 	font-size: 20px;
-    margin-bottom: 27px;
+   
  	color:#5C5C5C;
 }
 .thank-you-pop h3.cupon-pop{
@@ -247,14 +247,9 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
-                  
-                    $("#login_em_success").addClass("show")
-                    $("#employer_login_Modal").css("display:none")
-                    $("#employer_login_Modal").removeClass("show")
-                    setTimeout(function() { 
-                        $("#login_em_success").removeClass("show")
-                        window.location.href =  "/company-home";
-                    }, 2000);
+                    $("#employer_login_Modal").css("display:none");
+                    $("#employer_login_Modal").removeClass("show");
+                    window.location.href =  "/company-home";
                 })
                 .fail(function(jqXHR, textStatus){
                     
