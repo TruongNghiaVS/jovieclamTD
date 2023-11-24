@@ -182,6 +182,13 @@ $(document).ready(function() {
     $('#contactform').submit(function(event) {
       
         var isValid = true;
+      
+        var email_valid = true;
+        var phone_valid = true;
+
+        var text_valid = true;
+
+
         event.preventDefault()
 
         $('#contactform  input').each(function() {
@@ -196,30 +203,30 @@ $(document).ready(function() {
 
     // Simple email validation using a regular expression
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+    
     if (emailRegex.test(email)) {
+        email_valid = true;
         // Email is valid
         $('#contactform #email').removeClass('is-invalid');
         $(' #contactform  #email').addClass('is-valid');
         $('#contactform #email').removeClass("has-error")
         
     } else {
+        email_valid = false;
         // Email is invalid
         $('#contactform #email').addClass("has-error")
-
         $('#contactform  #email').removeClass('is-valid');
         $('#contactform  #email').addClass('is-invalid');
         $('.email-error').text('{{__('The email must be a valid email address')}}')
     }
-    $('#phoneId').on('input', function () {
-        validatePhoneNumber($(this).val()) 
-    });
+
   
     var phone = $('#phoneId').val();
 
     var telregex = /^[0-9-]{9,}$/;
 
     if (telregex.test(phone)) {
+        phone_valid = true;
         // Valid phone number
         $('.phone-error').hide();
         $('#phoneId').removeClass("is-invalid")
@@ -227,32 +234,44 @@ $(document).ready(function() {
         $('#phoneId').addClass("is-valid")
     
     } else {
+        phone_valid = false;
         // Invalid phone number
         $('.phone-error').empty();
-        
         $('.phone-error').text("Số điện thoại không hợp lệ");
         $('.phone-error').show();
         $('#phoneId').removeClass("is-valid")
         $('#phoneId').addClass("is-invalid")
         $('#phoneId').addClass("has-error")
-
     }
 
     var textarea = $('#message_txt');
     var invalidFeedback = textarea.next('.message_txt-error');
-    console.log(textarea);
     var text = textarea.val();
 
     if (text.trim() !== '') {
-                // Valid content
+        text_valid = true;
+       
+        // Valid content
         textarea.removeClass('is-invalid');
         invalidFeedback.hide();
     } else {
-                // Invalid content
+        text_valid = false;
+        // Invalid content
         textarea.addClass('is-invalid');
         invalidFeedback.show();
     }
-    if (isValid) { 
+    console.log("isValid",isValid);
+    console.log("email_valid",email_valid);
+    console.log("phone_valid",phone_valid);
+    console.log("text_valid",text_valid);
+
+
+    
+    if ( isValid && email_valid && phone_valid && text_valid ) { 
+        console.log("isValid",isValid);
+        console.log("email_valid",email_valid);
+        console.log("phone_valid",phone_valid);
+        console.log("text_valid",text_valid);
             var name = $('#contactform #name').val();
             var email = $('#contactform #email').val();
             var phone = $('#contactform #phoneId').val();
@@ -312,64 +331,7 @@ $(document).ready(function() {
     }
     
 
-    if (isValid) { 
-            var name = $('#contactform #name').val();
-            var email = $('#contactform #email').val();
-            var phone = $('#contactform #phoneId').val();
-            var token =  $('#contactform #token').val();
-            var subject =  $('#contactform #subject').val();
-            var text =  $('#contactform #message_txt').val();
-            
-            $.ajax({
-            type: "POST",
-            url:  `{{ route('contact-request') }}`,
-            datatype:"JSON",
-            data: {
-                phone:phone,
-                title:subject,
-                message:text,
-                email:email,
-                fullName:name
-            },
-            statusCode: {
-                202 :  function(responseObject, textStatus, jqXHR) {
-                    console.log(responseObject.error);
-        
-                },
-                401: function(responseObject, textStatus, jqXHR) {
-                    // No content found (404)
-                    console.log(responseObject.responseJSON);
-                    
-                    // This code will be executed if the server returns a 404 response
-                },
-                503: function(responseObject, textStatus, errorThrown) {
-                    // Service Unavailable (503)
-                    console.log(responseObject.error);
-
-                    // This code will be executed if the server returns a 503 response
-                }           
-                }
-                })
-                .done(function(data){
-                    $('#contact_success').modal('show');
-                    $('#contactform')[0].reset();
-
-                    $('#contactform input').removeClass('is-valid');
-                    $('#contactform input').removeClass('has-error');
-                    
-                
-                    setTimeout(()=>{
-                        $('#contact_success').modal('hide');
-                    },3000)
-                })
-                .fail(function(jqXHR, textStatus){
-                    
-                })
-                .always(function(jqXHR, textStatus) {
-                
-                });
-           
-    }
+   
       
     // Remove validation class on input change
     
