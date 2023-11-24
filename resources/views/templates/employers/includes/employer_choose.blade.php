@@ -5,11 +5,11 @@
         </div>
     </div>
     <div class="box-content" bis_skin_checked="1">
-        <h2 class="cb-title animation fade-right active">Chọn CareerBuilder.vn</h2>
+        <h2 class="cb-title animation fade-right active">Chọn Jobvieclam</h2>
         <div class="box-content__content animation fade-right active" bis_skin_checked="1">
-            <p>Tại Việt Nam, CareerBuilder.vn đã và đang là lựa chọn của hơn 17.000 doanh nghiệp hàng đầu với các ưu thế:</p>
+            <p>Tại Việt Nam, Jobvieclam.com đã và đang là lựa chọn của hơn 17.000 doanh nghiệp hàng đầu với các ưu thế:</p>
             <ul>
-                <li><i class="bi bi-arrow-right mx-2 text-white"></i> Tiếp cận hiệu quả nhiều nguồn ứng viên tiềm năng hơn bất cứ trang tuyển dụng nào ở Việt Nam. Thông tin tuyển dụng được đăng tải rộng rãi trên các trang web lớn: CareerBuilder.vn, Talentnetwork.vn, VieclamIT.vn, VietnamSalary.vn</li>
+                <li><i class="bi bi-arrow-right mx-2 text-white"></i> Tiếp cận hiệu quả nhiều nguồn ứng viên tiềm năng hơn bất cứ trang tuyển dụng nào ở Việt Nam. Thông tin tuyển dụng được đăng tải rộng rãi trên các trang web lớn: Talentnetwork.vn, VieclamIT.vn, VietnamSalary.vn</li>
                 <li><i class="bi bi-arrow-right mx-2 text-white"></i>Hàng trăm ngàn hồ sơ ứng viên hoàn chỉnh và được cập nhật mới thường xuyên.</li>
                 <li><i class="bi bi-arrow-right mx-2 text-white"></i>Thu hút ứng viên với các sự kiện quảng bá thương hiệu tuyển dụng.</li>
                 <li><i class="bi bi-arrow-right mx-2 text-white"></i>Giải pháp kết nối, tuyển dụng và quản lý nhân tài Talent Solution - 200+ khách hàng</li>

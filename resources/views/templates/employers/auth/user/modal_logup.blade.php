@@ -96,6 +96,10 @@
 
                     </form>
 
+
+                    <div class="newuser">{{__('Do you already have an account ?')}}
+                        <a href="#" data-toggle="modal" data-target="#employer_login_Modal" data-dismiss="modal" aria-label="Close">{{__('Login')}}</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,9 +129,9 @@
                             Nếu cần tư vấn và hỗ trợ: vui lòng liên hệ:
                             suport@jobvieclam.com
                             </p>
-                            <a href="{{url('/')}}/company-home" class="btn btn-primary my-2">{{__('Login')}}</a>
+                            <a href="#" data-toggle="modal" data-target="#employer_login_Modal" class="btn btn-primary my-2" data-dismiss="modal">{{__('Login')}}</a>
 
- 						
+ 					
                         </div>
 
                     </div>
@@ -240,6 +244,7 @@
     })()
 
 $(document).ready(function() {
+    
     $('#fromEmployerRegister').submit(function(event) {
         var passwordValue = $('#company_passId').val();
         var confirmPasswordValue = $('#company_comfirmId').val();
@@ -329,7 +334,7 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
-                    if(data){
+                    if(data.success){
                         $('#logup_em_success').modal('show');
                         
                     
@@ -370,8 +375,7 @@ $(document).ready(function() {
         $(this).removeClass('is-invalid');
         $(this).removeClass('has-error');
     });
-  
-    
+
 });
     
 

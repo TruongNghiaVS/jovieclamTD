@@ -259,6 +259,8 @@
     "National ID card# required": "Số CMND là bắt buộc",
     "Nationality": "Quốc tịch",
     "New User": "Bạn chưa có tài khoản",
+    "Do you already have an account ?": "Bạn đã có tài khoản ?",
+
     "No": "No",
     "No Preference": "Không ưu tiên",
     "Number of employees required": "Số nhân viên là bắt buộc",
@@ -336,6 +338,8 @@
     "Recieving Company details missing": "Thông tin công ty nhận bị thiếu",
     "Register": "Đăng ký",
     "Register Here": "Đăng ký tại đây",
+    "Login Here": "Đăng nhập tại đây",
+
     "Related Jobs": "Công việc liên quan",
     "Report": "Báo cáo",
     "Report Abuse": "Báo cáo vi phạm",
@@ -1131,6 +1135,9 @@
     "Agreement of use": "Thoả thuận sử dụng",
     "Partners": "Đối tác",
     "For applicants": "Dành cho ứng viên",
+    "For": "Dành cho",
+    "For": "Dành cho",
+
     "Recruiter": "Nhà tuyển dụng",
     "Recruitment News": "Tin tức tuyển dụng",
     "Create CV": "Tạo mới CV",

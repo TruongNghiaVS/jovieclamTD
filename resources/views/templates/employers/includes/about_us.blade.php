@@ -1,6 +1,6 @@
 <section class="our_customer cb-section ">
     <div class="container">
-        <h4 class="text-center mb-5 text-uppercase text-primary">
+        <h4 class="text-center  text-uppercase text-primary">
             {{__('About Us')}}
         </h4>
         <div class="about_us_content animation fade-top active" bis_skin_checked="1">
@@ -19,7 +19,7 @@
                     </p>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12">
-                        <img class="about_us_content__img" src="https://tuyendung.topcv.vn/images/about/about-desktop.png" alt="about us">
+                        <img class="about_us_content__img" src="https://tuyendung.topcv.vn/images/banner_form_center.png" alt="about us">
                 </div>
             </div>
 

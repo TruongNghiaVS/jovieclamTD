@@ -234,10 +234,11 @@
 
                 <a class="btn_for_user" href="http://jobvieclam.com/">
                 <div  class="btn_for_user__head">
-                    Dành cho
+                {{__('For')}}
                 </div> 
                 <div  class="btn_for_user__body">
-                    Người tìm việc
+                {{__('Job Seekers')}}
+                 
                 </div>    
                 </a>
             
