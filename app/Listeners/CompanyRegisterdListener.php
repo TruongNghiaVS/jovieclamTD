@@ -37,7 +37,7 @@ class CompanyRegisterdListener implements ShouldQueue
         $codeActive->code = $codegenerate;
         $codeActive->userId = $event->id;
         $codeActive->save();
-        $response = Http::post('http://localhost:8080/pushMailNOtification', [
+        $response = Http::post('http://localhost:8082/pushMailNOtification', [
             'emailTo' => $CompanyRegistered->email,
             'code' =>  $codeActive,
         ]);

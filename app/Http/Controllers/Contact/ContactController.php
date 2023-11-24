@@ -33,6 +33,7 @@ class ContactController extends Controller
         $phone = $request->input("phone");
         $title = $request->input("title");
         $messages = $request->input("message");
+
         $email = $request->input("email");
         $fullName = $request->input("fullName");
         if($fullName =="" )
@@ -61,7 +62,7 @@ class ContactController extends Controller
            
         }
 
-        if($message =="" )
+        if($messages =="" )
         {
             $itemError = new stdClass();
             $itemError->key ="message";
