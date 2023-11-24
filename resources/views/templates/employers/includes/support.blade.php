@@ -17,12 +17,13 @@
                     <div class="formpanel">
 
                         <div class="form-main__title py-3 text-primary">Đăng ký nhận tư vấn</div>
-                        <form id ="support_form"  class="form-horizontal needs-validation" novalidate>
+                        <form id="support_form"  class="form-horizontal needs-validation" novalidate>
+                            <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
                             <div class="form-group">
                                     <label for="email">{{__('Name')}}</label>
                                 <div class="formrow{{ $errors->has('name') ? ' has-error' : '' }}">
         
-                                <input type="text" name="name" class="form-control" required="required" placeholder="{{__('Name')}}" value="{{old('name')}}">
+                                <input id="name" type="text" name="name" class="form-control" required="required" placeholder="{{__('Name')}}" value="{{old('name')}}">
                                     <div class="invalid-feedback name-error">
                                         {{__('Name is required')}}
                                     </div>
@@ -33,7 +34,7 @@
                             <div class="form-group">
                                 <label for="email">{{__('Email')}}</label>
                                 <div class="formrow{{ $errors->has('email') ? ' has-error' : '' }}">
-                                    <input  type="email" name="email" class="form-control" required="required" placeholder="{{__('Email')}}" value="{{old('email')}}">
+                                    <input id="email"  type="email" name="email" class="form-control" required="required" placeholder="{{__('Email')}}" value="{{old('email')}}">
             
                                     <div class="invalid-feedback email-error">
                                         {{__('Email is required')}}
@@ -156,74 +157,116 @@
 $(document).ready(function() {
     $('#support_form').submit(function(event) {
       
-        var isValid = true;
-        event.preventDefault()
+            var isValid = true;
+            event.preventDefault()
 
-        $('#support_form input').each(function() {
-            if (!$(this).val()) {
-                isValid = false;
-                $(this).addClass('is-invalid');
-              
-            }
-        });
-     
-    var email = $('#support_form #email').val();
-
-    // Simple email validation using a regular expression
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (emailRegex.test(email)) {
-        // Email is valid
-        $('#support_form#email').removeClass('is-invalid');
-        $(' #support_form #email').addClass('is-valid');
-
-
-    } else {
-        // Email is invalid
-
-        $('#support_form #email').removeClass('is-valid');
-        $('#support_form #email').addClass('is-invalid');
-        $('.email-error').text('{{__('The email must be a valid email address')}}')
-    }
-    $('#phoneId').on('input', function () {
-        validatePhoneNumber($(this).val()) 
-    });
-  
-    var phone = $('#phoneId').val();
-
-    var telregex = /^[0-9-]{9,}$/;
-
-    if (telregex.test(phone)) {
-        // Valid phone number
-        $('.phone-error').hide();
-        $('#phoneId').removeClass("is-invalid")
-        $('#phoneId').removeClass("has-error")
-        $('#phoneId').addClass("is-valid")
-    
-    } else {
-        // Invalid phone number
-        $('.phone-error').empty();
+            $('#support_form input').each(function() {
+                if (!$(this).val()) {
+                    isValid = false;
+                    $(this).addClass('is-invalid');
+                
+                }
+            });
         
-        $('.phone-error').text("Số điện thoại không hợp lệ");
-        $('.phone-error').show();
-        $('#phoneId').removeClass("is-valid")
-        $('#phoneId').addClass("is-invalid")
-        $('#phoneId').addClass("has-error")
+        var email = $('#support_form #email').val();
 
-    }
+        // Simple email validation using a regular expression
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailRegex.test(email)) {
+            // Email is valid
+            $('#support_form#email').removeClass('is-invalid');
+            $(' #support_form #email').addClass('is-valid');
 
 
+        } else {
+            // Email is invalid
 
-
-      
-    // Remove validation class on input change
-    $('#support_form input').on('input', function() {
-        $(this).removeClass('is-invalid');
-        $(this).removeClass('has-error');
-    });
-  
+            $('#support_form #email').removeClass('is-valid');
+            $('#support_form #email').addClass('is-invalid');
+            $('.email-error').text('{{__('The email must be a valid email address')}}')
+        }
+        $('#phoneId').on('input', function () {
+            validatePhoneNumber($(this).val()) 
+        });
     
+        var phone = $('#phoneId').val();
+
+        var telregex = /^[0-9-]{9,}$/;
+
+        if (telregex.test(phone)) {
+            // Valid phone number
+            $('.phone-error').hide();
+            $('#phoneId').removeClass("is-invalid")
+            $('#phoneId').removeClass("has-error")
+            $('#phoneId').addClass("is-valid")
+        
+        } else {
+            // Invalid phone number
+            $('.phone-error').empty();
+            
+            $('.phone-error').text("Số điện thoại không hợp lệ");
+            $('.phone-error').show();
+            $('#phoneId').removeClass("is-valid")
+            $('#phoneId').addClass("is-invalid")
+            $('#phoneId').addClass("has-error")
+        }
+
+        if (isValid) { 
+            var name = $('#support_form #name').val();
+            var email = $('#support_form #email').val();
+            var phone = $('#support_form #phoneId').val();
+            var token =  $('#support_form #token').val();
+           
+            
+            $.ajax({
+            type: "POST",
+            url:  `{{ route('contact-advice') }}`,
+            datatype:"JSON",
+            data: {
+                "_token": token,
+                fullName:name,
+                phone:phone,
+                citys:48666,
+                email:email,
+            },
+            statusCode: {
+                202 :  function(responseObject, textStatus, jqXHR) {
+                    console.log(responseObject.error);
+        
+                },
+                401: function(responseObject, textStatus, jqXHR) {
+                    // No content found (404)
+                    console.log(responseObject.responseJSON);
+                    
+                    // This code will be executed if the server returns a 404 response
+                },
+                503: function(responseObject, textStatus, errorThrown) {
+                    // Service Unavailable (503)
+                    console.log(responseObject.error);
+
+                    // This code will be executed if the server returns a 503 response
+                }           
+                }
+                })
+                .done(function(data){
+                 
+                })
+                .fail(function(jqXHR, textStatus){
+                    
+                })
+                .always(function(jqXHR, textStatus) {
+                
+                });
+        }
+        
+    });
+    // Remove validation class on input change
+$('#support_form input').on('input', function() {
+    $(this).removeClass('is-invalid');
+    $(this).removeClass('has-error');
 });
+
 })
 
 </script>
