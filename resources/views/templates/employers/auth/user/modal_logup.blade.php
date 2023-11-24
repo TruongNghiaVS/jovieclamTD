@@ -105,16 +105,31 @@
 <div class="modal fade" id="logup_em_success" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                      
-                     </div>
-					
+                    <div class="modal-header">  
+                    </div>	
                     <div class="modal-body">
-                     
                         <div class="thank-you-pop">
-							<img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
-							<h3>{{__('Sign Up Success')}}</h3>		
- 						</div>
+                            <h2>
+                                {{__('Congratulations, you have successfully registered')}}
+    
+                            </h2>
+                            <p>Bạn có thể sử dụng mật khẩu mới để đăng nhập vào hệ thống</p>
+                            <p>Vui lòng kiểm tra email để kích hoạt tài khoản</p>
+                            
+                            <p>Bạn vui lòng  kiểm tra trong các mục InBox/ Hộp thư đến/(Primary, Social, .....) và Spam. Hoặc sử dụng công cụ tìm kiếm với tên mail: suport@jobvieclam.com
+                     
+                            </p>
+
+                              
+                            <p>
+                            Nếu cần tư vấn và hỗ trợ: vui lòng liên hệ:
+                            suport@jobvieclam.com
+                            </p>
+                            <a href="{{url('/')}}/company-home" class="btn btn-primary my-2">{{__('Login')}}</a>
+
+ 						
+                        </div>
+
                     </div>
 					
         </div>
@@ -136,59 +151,69 @@
         height: 100%;
     }
     .thank-you-pop{
-	width:100%;
- 	padding:20px;
-	text-align:center;
-}
-.thank-you-pop img{
-	width:76px;
-	height:auto;
-	margin:0 auto;
-	display:block;
-	margin-bottom:25px;
-}
+        width:100%;
+        padding:20px;
+    }
+    .thank-you-pop h2 {
+        margin-bottom: 30px;
+    }
+    .thank-you-pop img{
+        width:76px;
+        height:auto;
+        margin:0 auto;
+        display:block;
+        margin-bottom:25px;
+    }
 
-.thank-you-pop h1{
-	font-size: 42px;
-    margin-bottom: 25px;
-	color:#5C5C5C;
-}
-.thank-you-pop p{
-	font-size: 20px;
-    margin-bottom: 27px;
- 	color:#5C5C5C;
-}
-.thank-you-pop h3.cupon-pop{
-	font-size: 25px;
-    margin-bottom: 40px;
-	color:#222;
-	display:inline-block;
-	text-align:center;
-	padding:10px 20px;
-	border:2px dashed #222;
-	clear:both;
-	font-weight:normal;
-}
-.thank-you-pop h3.cupon-pop span{
-	color:#03A9F4;
-}
-.thank-you-pop a{
-	display: inline-block;
-    margin: 0 auto;
-    padding: 9px 20px;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 14px;
-    background-color: #8BC34A;
-    border-radius: 17px;
-}
-.thank-you-pop a i{
-	margin-right:5px;
-	color:#fff;
-}
-#logup_em_success .modal-header{
-    border:0px;
-}
+    .thank-you-pop h1{
+        font-size: 42px;
+        margin-bottom: 25px;
+        color:#5C5C5C;
+    }
+    .thank-you-pop p{
+        font-size: 20px;
+        margin-bottom: 30px;
+        color:#5C5C5C;
+    }
+    .thank-you-pop h3.cupon-pop{
+        font-size: 25px;
+        margin-bottom: 40px;
+        color:#222;
+        display:inline-block;
+        text-align:center;
+        padding:10px 20px;
+        border:2px dashed #222;
+        clear:both;
+        font-weight:normal;
+    }
+    .thank-you-pop h3.cupon-pop span{
+        color:#03A9F4;
+    }
+    .thank-you-pop a{
+        display: inline-block;
+        margin: 0 auto;
+        padding: 9px 20px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        background-color: #8BC34A;
+        border-radius: 17px;
+    }
+    .thank-you-pop a i{
+        margin-right:5px;
+        color:#fff;
+    }
+    #logup_em_success .modal-header{
+        border:0px;
+    }
+    #logup_em_success .modal-dialog{
+        max-width:530px;
+        height: 90%;
+    }
+    #logup_em_success .modal-dialog
+    .modal-content {
+        height: 100%;
+    }
 
 </style>
 @endpush
@@ -304,12 +329,32 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
-                    $("#logup_em_success").addClass("show")
-                    $("#employer_logup_Modal").css("display:none")
-                    setTimeout(function() { 
-                        $("#logup_em_success").removeClass("show")
-                        window.location.href =  "/company-home";
-                    }, 2000);    
+                    if(data){
+                        $('#logup_em_success').modal('show');
+                        
+                    
+                        $("#employer_logup_Modal").modal("hide")
+                        $('#logup_em_success').click(function () {
+                            // Redirect to the dashboard page
+                            window.location.href = '/company-home';  // Replace with the actual URL
+                        });
+                    }
+                                
+                    // $("#logup_em_success").addClass("show")
+                    // $("#thank-you-pop button").on("click",function(){
+                    //     $("#logup_em_success").removeClass("show")
+                        
+                    //     window.location.href =  "/company-home";
+                    // });
+                    // $("#logup_em_success .modal-dialog").on("click",function(){
+                    //     console.log(1231412);
+                    //     // $("#logup_em_success").removeClass("show")
+                        
+                    //     // window.location.href =  "/company-home";
+                    // });
+
+               
+                     
                 })
                 .fail(function(jqXHR, textStatus){
                     
@@ -325,7 +370,7 @@ $(document).ready(function() {
         $(this).removeClass('is-invalid');
         $(this).removeClass('has-error');
     });
-    
+  
     
 });
     

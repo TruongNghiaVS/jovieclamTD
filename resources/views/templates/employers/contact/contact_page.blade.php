@@ -1,10 +1,11 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 @section('content')
 <!-- Header start -->
 
-    <!-- Header start -->
-    @include('templates.employers.includes.header')
-    <!-- Header end -->
+
+<!-- Header start -->
+@include('templates.employers.includes.header')
+<!-- Header end -->
 
 <!-- Header end -->
 <!-- Inner Page Title start -->

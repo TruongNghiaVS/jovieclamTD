@@ -3,7 +3,7 @@
         <h4 class="text-center mb-5 text-uppercase text-primary">
             {{__('About Us')}}
         </h4>
-        <div class="about_us_content fade-top active" bis_skin_checked="1">
+        <div class="about_us_content animation fade-top active" bis_skin_checked="1">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 font-weight-normal d-flex align-items-center  justify-content-center flex-column ">
                     <p class="about_us_content__text py-2 ">
