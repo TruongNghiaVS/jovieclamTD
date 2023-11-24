@@ -260,18 +260,12 @@ $(document).ready(function() {
         textarea.addClass('is-invalid');
         invalidFeedback.show();
     }
-    console.log("isValid",isValid);
-    console.log("email_valid",email_valid);
-    console.log("phone_valid",phone_valid);
-    console.log("text_valid",text_valid);
-
-
-    
+       // console.log("isValid",isValid);
+        // console.log("email_valid",email_valid);
+        // console.log("phone_valid",phone_valid);
+        // console.log("text_valid",text_valid);
     if ( isValid && email_valid && phone_valid && text_valid ) { 
-        console.log("isValid",isValid);
-        console.log("email_valid",email_valid);
-        console.log("phone_valid",phone_valid);
-        console.log("text_valid",text_valid);
+   
             var name = $('#contactform #name').val();
             var email = $('#contactform #email').val();
             var phone = $('#contactform #phoneId').val();
