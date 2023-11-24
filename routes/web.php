@@ -36,7 +36,7 @@ Route::post('contact/CreateRequest', 'ContactController@ContactRequest')->name('
 Route::post('contact/Addadvice', 'ContactController@AdviceRequest')->name('contact-advice');
 Route::post('contact/addEmailNotification', 'ContactController@NoficationEmail')->name('contact-email');
 
->>>>>>> employer_24/11
+
 Route::get('/employers', 'EmployerController@index')->name('employerIndex');
 Route::get('/about-us', 'IndexController@aboutUs')->name('about_us');
 Route::get('/check-time', 'IndexController@checkTime')->name('check-time');
