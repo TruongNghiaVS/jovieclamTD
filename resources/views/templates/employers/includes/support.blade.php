@@ -189,6 +189,10 @@ $(document).ready(function() {
     $('#support_form').submit(function(event) {
       
             var isValid = true;
+            var email_valid = true;
+            var phone_valid = true;
+          
+
             event.preventDefault()
 
             $('#support_form input').each(function() {
@@ -206,13 +210,14 @@ $(document).ready(function() {
 
         if (emailRegex.test(email)) {
             // Email is valid
+            email_valid = true;
             $('#support_form#email').removeClass('is-invalid');
             $(' #support_form #email').addClass('is-valid');
 
 
         } else {
             // Email is invalid
-
+            email_valid = false;
             $('#support_form #email').removeClass('is-valid');
             $('#support_form #email').addClass('is-invalid');
             $('.email-error').text('{{__('The email must be a valid email address')}}')
@@ -227,12 +232,14 @@ $(document).ready(function() {
 
         if (telregex.test(phone)) {
             // Valid phone number
+            phone_valid = true
             $('.phone-error').hide();
             $('#phoneId').removeClass("is-invalid")
             $('#phoneId').removeClass("has-error")
             $('#phoneId').addClass("is-valid")
         
         } else {
+            phone_valid =  false
             // Invalid phone number
             $('.phone-error').empty();
             
@@ -243,7 +250,7 @@ $(document).ready(function() {
             $('#phoneId').addClass("has-error")
         }
 
-        if (isValid) { 
+        if (isValid && phone_valid && email_valid) { 
             var name = $('#support_form #name').val();
             var email = $('#support_form #email').val();
             var phone = $('#support_form #phoneId').val();
@@ -288,6 +295,7 @@ $(document).ready(function() {
                     if(data.sucess){
                         $("#support_request_success").modal("show")
                         $("#support_form")[0].reset();
+                        $("#support_form").removeClass("was-validated");
                         $('#support_form input').removeClass('is-valid');
                         $('#support_form input').removeClass('has-error');
                         setTimeout(()=>{

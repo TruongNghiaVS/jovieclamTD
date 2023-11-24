@@ -306,7 +306,7 @@ $(document).ready(function() {
                 .done(function(data){
                     $('#contact_success').modal('show');
                     $('#contactform')[0].reset();
-
+                    $('#contactform').removeClass("was-validated");
                     $('#contactform input').removeClass('is-valid');
                     $('#contactform input').removeClass('has-error');
                     
