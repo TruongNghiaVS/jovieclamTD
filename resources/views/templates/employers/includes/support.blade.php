@@ -103,7 +103,7 @@
 @push('styles')
 <style type="text/css">
     .banner-form{
-        background-image: linear-gradient(to right, #d4240b, #981b1e);
+      
         background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
