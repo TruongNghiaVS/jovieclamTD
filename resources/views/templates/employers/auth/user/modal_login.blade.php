@@ -257,7 +257,7 @@ $(document).ready(function() {
                 .always(function(jqXHR, textStatus) {
                 
                 });
-            }
+        }
     });
 
     // Remove validation class on input change
