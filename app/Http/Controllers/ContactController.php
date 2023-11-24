@@ -37,7 +37,7 @@ class ContactController extends Controller
     public function index()
     {
         $seo = SEO::where('seo.page_title', 'like', 'contact')->first();
-        return view(config('app.THEME_PATH').'.contact.contact_page')->with('seo', $seo);
+        return view('templates.employers.contact.contact_page')->with('seo', $seo);
     }
 
     public function postContact(ContactFormRequest $request)
