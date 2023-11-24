@@ -19,6 +19,9 @@ class VerifyCsrfToken extends Middleware
         'upload-front-project-temp-image',
         'ajax_upload_file',
         'ajax_remove_file',
+        'contact/CreateRequest',
+        'contact/Addadvice',
+        'contact/addEmailNotification'
     ];
 
 }

@@ -1,15 +1,18 @@
 <?php
-namespace App\Http\Controllers;
-use Redirect;
 
-use App\Models\ContactRequest;
+namespace App\Http\Controllers\Contact;
+use App\Http\Controllers;
+use Redirect;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\ContactInfo;
 use App\Models\Advise;
 use App\Models\MailNotification;
 
 class ContactController extends Controller
 {
   
-     use Lang;
+
     /**
      * Create a new controller instance.
      *
@@ -29,7 +32,7 @@ class ContactController extends Controller
         $error = array();
         $phone = $request->input("phone");
         $title = $request->input("title");
-        $message = $request->input("message");
+        $messages = $request->input("message");
         $email = $request->input("email");
         $fullName = $request->input("fullName");
         if($fullName =="" )
@@ -72,7 +75,7 @@ class ContactController extends Controller
                'sucess'=>false,
                'error'=> $error ], 202);
        }
-        $itemInsert = new ContactRequest();
+        $itemInsert = new ContactInfo();
         $itemInsert->title = $title;
         $itemInsert->email = $email;
         $itemInsert->fullName = $fullName;
@@ -117,11 +120,11 @@ class ContactController extends Controller
                'sucess'=>false,
                'error'=> $error ], 202);
        }
-        $itemInsert = new ContactRequest();
-        $itemInsert->title = $title;
+        $itemInsert = new Advise();
+     
         $itemInsert->email = $email;
         $itemInsert->fullName = $fullName;
-        $itemInsert->messages = $messages;
+        $itemInsert->citys = $citys;
         $itemInsert->phoneNumber = $phone;
         $itemInsert->save();
 

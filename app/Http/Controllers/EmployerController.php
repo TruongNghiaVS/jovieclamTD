@@ -26,6 +26,7 @@ use App\Helpers\DataArrayHelper;
 use Artisan;
 use App\CoverLetter;
 use App\Cms;
+use App\CodeActive;
 
 class EmployerController extends Controller
 {
@@ -139,7 +140,42 @@ class EmployerController extends Controller
         }
 
     }
+    public function Active(Request $request)
+    {
+        $code = $request->input('code');
 
+        $itemCodeActive = CodeActive::where("code",$code)->firstOrFail();
+
+ 
+        if($itemCodeActive)
+       {
+            $companyActive = Company::where("id", $itemCodeActive->userId)->firstOrFail();
+            if($companyActive)
+            {  
+                $companyActive->verified = 1;
+                $companyActive->is_active = 1;
+                $companyActive->cvs_package_id = 9;
+                $companyActive->cvs_package_start_date =\Carbon\Carbon::now() ;
+                $companyActive->cvs_package_end_date =\Carbon\Carbon::now()->addMonths(1) ;
+                $save = $companyActive->save();
+                return view("templates.vietstar.info.successActive");
+            }
+            else 
+            {
+
+                
+                return view("templates.vietstar.errors.404");
+            }
+           
+        }
+        else 
+        {
+            
+            return view("templates.vietstar.errors.404");
+        }
+        
+     
+    }
 
     public function params(Request $request)
     {
