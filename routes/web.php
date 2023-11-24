@@ -32,9 +32,6 @@ Route::post('contact/CreateRequest', 'Contact\ContactController@ContactRequest')
 Route::post('contact/Addadvice', 'Contact\ContactController@AdviceRequest')->name('contact-advice');
 Route::post('contact/addEmailNotification', 'Contact\ContactController@NoficationEmail')->name('contact-email');
 
-Route::post('contact/CreateRequest', 'ContactController@ContactRequest')->name('contact-request');
-Route::post('contact/Addadvice', 'ContactController@AdviceRequest')->name('contact-advice');
-Route::post('contact/addEmailNotification', 'ContactController@NoficationEmail')->name('contact-email');
 
 
 Route::get('/employers', 'EmployerController@index')->name('employerIndex');
