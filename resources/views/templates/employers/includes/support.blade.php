@@ -58,7 +58,7 @@
                             <div class="form-group">
                                 <label for="support_city">{{__('City')}}</label>
                                 <select class="form-control" id="support_city">
-                                <option value="" selected="selected">Chọn địa điểm</option><option value="3">Port Blair</option><option value="48666">Lào Cai</option><option value="48667">Yên Bái</option><option value="48668">Lai Châu</option><option value="48669">Điện Biên</option><option value="48670">Sơn La</option><option value="48671">Hòa Bình</option><option value="48672">Hà Giang</option><option value="48673">Tuyên Quang</option><option value="48674">Phú Thọ</option><option value="48675">Thái Nguyên</option><option value="48676">Bắc Kạn</option><option value="48677">Cao Bằng</option><option value="48678">Lạng Sơn</option><option value="48679">Bắc Giang</option><option value="48680">Quảng Ninh</option><option value="48681">Tp. Hà Nội</option><option value="48682">Tp. Hải Phòng</option><option value="48683">Vĩnh Phúc</option><option value="48684">Bắc Ninh</option><option value="48685">Hưng Yên</option><option value="48686">Hải Dương</option><option value="48687">Thái Bình</option><option value="48688">Nam Định</option><option value="48689">Ninh Bình</option><option value="48690">Hà Nam</option><option value="48691">Thanh Hóa</option><option value="48692">Nghệ An</option><option value="48693">Hà Tĩnh</option><option value="48694">Quảng Bình</option><option value="48695">Quảng Trị</option><option value="48696">Thừa Thiên Huế</option><option value="48697">Tp. Đà Nẵng</option><option value="48698">Quảng Nam</option><option value="48699">Quảng Ngãi</option><option value="48700">Bình Định</option><option value="48701">Phú Yên</option><option value="48702">Khánh Hòa</option><option value="48703">Ninh Thuận</option><option value="48704">Bình Thuận</option><option value="48705">Kon Tum</option><option value="48706">Gia Lai</option><option value="48707">Đắk Lắk</option><option value="48708">Đắk Nông</option><option value="48709">Lâm Đồng</option><option value="48710">TP. Hồ Chí Minh</option><option value="48711">Đồng Nai</option><option value="48712">Bà Rịa-Vũng Tàu</option><option value="48713">Bình Dương</option><option value="48714">Bình Phước</option><option value="48715">Tây Ninh</option><option value="48716">Tp. Cần Thơ</option><option value="48717">Long An</option><option value="48718">Tiền Giang</option><option value="48719">Bến Tre</option><option value="48720">Vĩnh Long</option><option value="48721">Trà Vinh</option><option value="48722">Đồng Tháp</option><option value="48723">An Giang</option><option value="48724">Kiên Giang</option><option value="48725">Hậu Giang</option><option value="48726">Sóc Trăng</option><option value="48727">Bạc Liêu</option><option value="48728">Cà Mau</option>
+                                    <option value="" selected="selected">Chọn địa điểm</option><option value="3">Port Blair</option><option value="48666">Lào Cai</option><option value="48667">Yên Bái</option><option value="48668">Lai Châu</option><option value="48669">Điện Biên</option><option value="48670">Sơn La</option><option value="48671">Hòa Bình</option><option value="48672">Hà Giang</option><option value="48673">Tuyên Quang</option><option value="48674">Phú Thọ</option><option value="48675">Thái Nguyên</option><option value="48676">Bắc Kạn</option><option value="48677">Cao Bằng</option><option value="48678">Lạng Sơn</option><option value="48679">Bắc Giang</option><option value="48680">Quảng Ninh</option><option value="48681">Tp. Hà Nội</option><option value="48682">Tp. Hải Phòng</option><option value="48683">Vĩnh Phúc</option><option value="48684">Bắc Ninh</option><option value="48685">Hưng Yên</option><option value="48686">Hải Dương</option><option value="48687">Thái Bình</option><option value="48688">Nam Định</option><option value="48689">Ninh Bình</option><option value="48690">Hà Nam</option><option value="48691">Thanh Hóa</option><option value="48692">Nghệ An</option><option value="48693">Hà Tĩnh</option><option value="48694">Quảng Bình</option><option value="48695">Quảng Trị</option><option value="48696">Thừa Thiên Huế</option><option value="48697">Tp. Đà Nẵng</option><option value="48698">Quảng Nam</option><option value="48699">Quảng Ngãi</option><option value="48700">Bình Định</option><option value="48701">Phú Yên</option><option value="48702">Khánh Hòa</option><option value="48703">Ninh Thuận</option><option value="48704">Bình Thuận</option><option value="48705">Kon Tum</option><option value="48706">Gia Lai</option><option value="48707">Đắk Lắk</option><option value="48708">Đắk Nông</option><option value="48709">Lâm Đồng</option><option value="48710">TP. Hồ Chí Minh</option><option value="48711">Đồng Nai</option><option value="48712">Bà Rịa-Vũng Tàu</option><option value="48713">Bình Dương</option><option value="48714">Bình Phước</option><option value="48715">Tây Ninh</option><option value="48716">Tp. Cần Thơ</option><option value="48717">Long An</option><option value="48718">Tiền Giang</option><option value="48719">Bến Tre</option><option value="48720">Vĩnh Long</option><option value="48721">Trà Vinh</option><option value="48722">Đồng Tháp</option><option value="48723">An Giang</option><option value="48724">Kiên Giang</option><option value="48725">Hậu Giang</option><option value="48726">Sóc Trăng</option><option value="48727">Bạc Liêu</option><option value="48728">Cà Mau</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary">{{__('Send require')}}</button>
@@ -72,6 +72,33 @@
         </div>
     </div>
 </section>
+
+<div class="modal fade" id="support_request_success" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary d-flex justify-content-center">
+                        <h5 class="m-0 text-white">{{__('Alert')}}</h5>
+                     </div>
+					
+                    <div class="modal-body">
+                     
+                        <div class="thank-you-pop">
+							<img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+                            <p class="text-center">
+                                Cảm ơn bạn đã liên hệ với chúng tôi.
+                            </p>
+                            <p class="text-center">
+                                Chúng tôi đã nhận được thư và sẽ liên hệ bạn trong thời gian sớm nhất
+                            </p>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">{{__('Close')}}</button>
+                            </div>
+ 						</div>
+                    </div>
+                  
+        </div>
+    </div>
+</div>
 
 @push('styles')
 <style type="text/css">
@@ -127,6 +154,9 @@
         font-size: 20px;
         font-weight: 700;
     }
+    .modal {
+        background-color: rgba(0,0,0,0.6);
+    }
 
 </style>
 @endpush
@@ -134,6 +164,7 @@
 
 @push('scripts')
 <script type="text/javascript">
+  
     (function () {
     'use strict'
 
@@ -216,6 +247,9 @@ $(document).ready(function() {
             var name = $('#support_form #name').val();
             var email = $('#support_form #email').val();
             var phone = $('#support_form #phoneId').val();
+            var city = $('#support_form #support_city').val();
+
+        
             var token =  $('#support_form #token').val();
            
             
@@ -224,11 +258,12 @@ $(document).ready(function() {
             url:  `{{ route('contact-advice') }}`,
             datatype:"JSON",
             data: {
-                "_token": token,
+                
                 fullName:name,
                 phone:phone,
-                citys:48666,
+                citys:city,
                 email:email,
+                citys:city,
             },
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
@@ -250,7 +285,15 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
-                 
+                    if(data.sucess){
+                        $("#support_request_success").modal("show")
+                        $("#support_form")[0].reset();
+                        $('#support_form input').removeClass('is-valid');
+                        $('#support_form input').removeClass('has-error');
+                        setTimeout(()=>{
+                            $('#support_request_success').modal('hide');
+                        },3000)
+                    }
                 })
                 .fail(function(jqXHR, textStatus){
                     

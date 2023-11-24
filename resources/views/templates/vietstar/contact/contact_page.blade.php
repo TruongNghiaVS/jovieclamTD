@@ -297,9 +297,6 @@ $(document).ready(function() {
                     $('#contact_success').modal('show');
                     $('#contactform')[0].reset();
 
-              
-
-               
                     $('#contactform input').removeClass('is-valid');
                     $('#contactform input').removeClass('has-error');
                     
