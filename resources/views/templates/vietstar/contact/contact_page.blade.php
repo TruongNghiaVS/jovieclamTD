@@ -1,4 +1,4 @@
-@extends('templates.employers.layouts.app')
+@extends('templates.vietstar.layouts.app')
 @section('content')
 <!-- Header start -->
 
@@ -154,7 +154,7 @@
         </div>
     </div>
 </div>
-@include('templates.employers.includes.footer')
+@include('templates.vietstar.includes.footer')
 @endsection
 
 @push('scripts')

@@ -9,7 +9,7 @@
 
 <!-- Header end -->
 <!-- Inner Page Title start -->
-@include('templates.employers.includes.inner_page_title', ['page_title'=>__('Contact')])
+
 <!-- Inner Page Title end -->
 <div class="inner-page">
     <!-- About -->
