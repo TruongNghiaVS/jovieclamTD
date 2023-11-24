@@ -9,7 +9,6 @@
 
 <!-- Header end -->
 <!-- Inner Page Title start -->
-@include('templates.employers.includes.inner_page_title', ['page_title'=>__('Contact')])
 <!-- Inner Page Title end -->
 <div class="inner-page">
     <!-- About -->
@@ -125,6 +124,36 @@
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" id="contact_success" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary d-flex justify-content-center">
+                        <h5 class="m-0 text-white">{{__('Alert')}}</h5>
+                     </div>
+					
+                    <div class="modal-body">
+                     
+                        <div class="thank-you-pop">
+							<img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+                            <p class="text-center">
+                                Cảm ơn bạn đã liên hệ với chúng tôi.
+                            </p>
+                            <p class="text-center">
+                                Chúng tôi sẽ trả lời thắc mắc của bạn sau 02 ngày làm việc
+                            </p>
+                            <p class="text-center">
+                                Nếu không nhận được phải hồi vui lòng liên hệ 
+                            </p>
+                            <p class="text-center">
+                                Cảm ơn bạn đã chọn Jobvieclam
+                            </p>
+ 						</div>
+                    </div>
+        </div>
+    </div>
+</div>
 @include('templates.employers.includes.footer')
 @endsection
 
@@ -151,6 +180,7 @@
     })()
 
 $(document).ready(function() {
+   
     $('#contactform').submit(function(event) {
       
         var isValid = true;
@@ -238,7 +268,6 @@ $(document).ready(function() {
             url:  `{{ route('contact-request') }}`,
             datatype:"JSON",
             data: {
-                _token:token,
                 phone:phone,
                 title:subject,
                 message:text,
@@ -265,7 +294,19 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
-                 
+                    $('#contact_success').modal('show');
+                    $('#contactform')[0].reset();
+
+              
+
+               
+                    $('#contactform input').removeClass('is-valid');
+                    $('#contactform input').removeClass('has-error');
+                    
+                
+                    setTimeout(()=>{
+                        $('#contact_success').modal('hide');
+                    },3000)
                 })
                 .fail(function(jqXHR, textStatus){
                     
