@@ -31,15 +31,16 @@ class CompanyRegisterdListener implements ShouldQueue
      */
     public function handle(CompanyRegistered $event)
     {
+        $data = $event->company;
         $codegenerate =  Str::random(30);
-        $email = $event->email;
+        $email = $data->email;
         $codeActive = new CodeActive();
         $codeActive->code = $codegenerate;
-        $codeActive->userId = $event->id;
+        $codeActive->userId = $data->id;
         $codeActive->save();
         $response = Http::post('http://localhost:8082/pushMailNOtification', [
-            'emailTo' => $CompanyRegistered->email,
-            'code' =>  $codeActive,
+            'emailTo' => $data->email,
+            'code' =>  $codeActive->code
         ]);
     }
 
