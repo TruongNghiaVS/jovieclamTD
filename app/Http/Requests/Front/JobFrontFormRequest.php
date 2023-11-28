@@ -30,16 +30,16 @@ class JobFrontFormRequest extends Request
                     $id = (int) $this->input('id', 0);
 
                     return [
-                        "title" => "required|max:180",
-                        "description" => "required",
-                        "city_id" => "required",
-                        "functional_area_id" => "required",
-                        "job_type_id" => "required",
-                        "expiry_date" => "required",
-                        "job_experience_id" => "required",
+                        // "title" => "required|max:180",
+                        // "description" => "required",
+                        // "city_id" => "required",
+                        // "functional_area_id" => "required",
+                        // "job_type_id" => "required",
+                        // "expiry_date" => "required",
+                        // "job_experience_id" => "required",
                         // "skills" => "required",
                         // "is_freelance" => "required",
-                        "career_level_id" => "required",
+                        // "career_level_id" => "required",
                         //"salary_from" => "required|max:11",
                         // "salary_to" => "required|max:11",
                         // "salary_currency" => "required|max:5",
@@ -47,7 +47,7 @@ class JobFrontFormRequest extends Request
                         // "hide_salary" => "required",
                         // "job_shift_id" => "required",
                         // "num_of_positions" => "required",
-                        "gender_id" => "required",
+                        // "gender_id" => "required",
                         // "degree_level_id" => "required",
                     ];
                 }

@@ -75,6 +75,8 @@ class CompanyController extends Controller
     {
         $jobs = Auth::guard('company')->user()->jobs()->orderBy('jobs.created_at', 'desc')->pluck('jobs.id')->toArray();
         $userApply = JobApply::with('user', 'job')->whereIn('job_apply.job_id', $jobs);
+        $from_to = $request->from;
+        $from_to2 = $request->to;
         
         if($request->name) {
             $userApply = $userApply->whereHas('user', function($query) use ($request) {
@@ -91,10 +93,26 @@ class CompanyController extends Controller
             $userApply = $userApply->where('job_apply.seen', $seen);
         }
 
+    if(isset($from_to) )
+        {
+            
+            $from_to = Carbon::parse($from_to);
+            $userApply = $userApply->where('created_at','>=', $from_to);
+            
+        }
+        if(isset($from_to2) )
+        {
+            $from_to2 = Carbon::parse($from_to2);
+            $form_to2 = $from_to2->endOfDay();
+            
+            $userApply = $userApply->where('created_at','<=', $from_to2);
+        }
+
         $userApply = $userApply->orderByDesc('id')->paginate(6);
 
         $data = [
             'userApply' => $userApply,
+            'request' => $request->all(),
             'log_seen' => $request->log_seen ? $request->log_seen : null,
         ];
         
@@ -467,6 +485,9 @@ class CompanyController extends Controller
     {
         $company = Auth::guard('company')->user();
         $jobs = Job::where('company_id', $company->id);
+        $find_day = $request->find_day;
+        $from_to = $request->from;
+        $from_to2 = $request->to;
 
         if($request->title) {
             $jobs = $jobs->where('title', 'like', '%'.$request->title.'%');
@@ -477,6 +498,42 @@ class CompanyController extends Controller
         if($request->city_id) {
             $jobs = $jobs->where('city_id', $request->city_id);
         }
+        if( $find_day ==0 )
+        {  
+            if(isset($from_to) )
+            {
+              
+                $from_to = Carbon::parse($from_to);
+                $jobs = $jobs->where('created_at','>=', $from_to);
+                
+            }
+            if(isset($from_to2) )
+            {
+                $from_to2 = Carbon::parse($from_to2);
+                $form_to2 = $from_to2->endOfDay();
+              
+                $jobs = $jobs->where('created_at','<=', $from_to2);
+            }
+       }
+     
+       if( $find_day ==1 )
+       {  
+           if(isset($from_to) )
+           {  $from_to = Carbon::parse($from_to);
+               $jobs = $jobs->where('expiry_date','>=', $from_to);
+              
+           }
+           if(isset($from_to2) )
+           { 
+               $from_to2 = Carbon::parse($from_to2);
+              
+               $form_to2 = $from_to2->endOfDay();
+              
+               $jobs = $jobs->where('expiry_date','<=', $form_to2);
+           }
+        }
+ 
+      
         if(isset($request->expired) && $request->expired == 'true') {
             $jobs = $jobs->whereDate('expiry_date', '<', Carbon::now()->format('Y-m-d'));
         }
@@ -491,7 +548,7 @@ class CompanyController extends Controller
             'request' => $request->all(),
             'cities' => City::where('lang', 'vi')->active()->pluck('city', 'id')->toArray()
         ];
-
+        
         return view(config('app.THEME_PATH').'.job.company_posted_jobs', $data);
     }
 

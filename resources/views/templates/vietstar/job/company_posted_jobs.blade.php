@@ -1,5 +1,8 @@
+
 @extends('templates.vietstar.layouts.app')
 @inject('carbon', 'Carbon\Carbon')
+
+
 @section('content')
 
     @if(Auth::guard('company')->check())
@@ -25,7 +28,7 @@
                             </div>
                             <form action="{{ route('posted.jobs') }}" method="get" class="form-search pt-2">
                                 <div class="row filter-job">
-                                    <div class="col-md-5 col-lg-5 col-sm-12">
+                                    <div class="col-md-5 col-lg-3 col-sm-12">
                                         <div class="form-group">
                                             <label for="">Từ khóa</label>
                                             <input type="text" name="title" placeholder="{{ __('Research Jobs') }}"
@@ -46,39 +49,36 @@
                                             </select>
                                         </div>
                                     </div> --}}
-                                    <!-- <div class="col-md-4 col-lg-4 col-sm-12">
-                                        <div class="form-group">
-                                            <select name="city_id" class="form-select" name="" id="city_id">
-                                                <option value="">{{ __('Select cities') }}</option>
-                                                @foreach ($cities as $key => $value)
-                                                    <option
-                                                        {{ isset($request['city_id']) && $request['city_id'] == $key ? 'selected' : '' }}
-                                                        value="{{ $key }}">{{ $value }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div> -->
+                                 
                                     <div class="col-md-3 col-lg-3 col-sm-12">
                                         <div class="form-group">
                                             <label for="find_day">Tìm theo ngày</label>
-                                                <select class="form-select" id="find_day">
-                                                    <option>Ngày đăng</option>
-                                                    <option>Ngày hết hạn</option>
+                                                <select name ="find_day" value="{{ isset($request['find_day']) ? $request['find_day'] : '0' }}" class="form-select" id="find_day">
+                                                    <option value="0">Ngày đăng</option>
+                                                    <option value="1">Ngày hết hạn</option>
                                                 
                                                 </select>
                                             </div>
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-sm-12">
-                                        <div class="form-group form-group-datepicker input-daterange"  style="max-width: 100%; margin-bottom: 10px;">
-                                            <label for="from_to">Từ - đến</label>
-                                            <input type="text" class="daterange form-control " name="date_range" id="from_to"
+                                        <div class="form-group form-group-datepicker " >
+                                            <label for="from_to">Từ</label>
+                                            <input type="date" value="{{ isset($request['from']) ? $request['from'] : '' }}"  class=" form-control " name="from" id="from_to"
+                                                placeholder="{{ __('Start date-End date') }}" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-lg-3 col-sm-12">
+                                        <div class="form-group form-group-datepicker "  >
+                                            <label for="from_to2">Đến</label>
+                                            <input type="date" class=" form-control " value="{{ isset($request['to']) ? $request['to'] : '' }}"  name="to" id="from_to2"
                                                 placeholder="{{ __('Start date-End date') }}" />
                                         </div>
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-sm-12">
                                         <div class="form-group">
                                         <label for="city_id">{{ __('City') }}</label>
-                                            <select name="city_id" class="form-select" name="" id="city_id">
+                                            <select name="city_id" class="form-select" name="" id="city_id" value="{{ isset($request['city_id']) ? $request['city_id'] : '' }}" >
                                                 <option value="">{{ __('Select cities') }}</option>
                                                 @foreach ($cities as $key => $value)
                                                     <option
@@ -88,15 +88,22 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-lg-3 col-sm-12 d-flex">
+
+                                    <div class="col-md-3 col-lg-3 col-sm-12">
                                       
-                                        <button type="submit" class="btn btn-primary"><i class="bi bi-search text-white m-2"></i>{{ __('Search') }}</button>
+                                     
+                                     
+                                     </div>
+                                    <div class="col-md-5 col-lg-5 col-sm-12 ">
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary"><i class="bi bi-search text-white m-2"></i>{{ __('Search') }}</button>
+                                            <button type="button" onclick ="exportFile()" class="btn btn-primary"><i class="bi bi-download text-white m-2"></i>{{ __('Export file') }}</button>       
+                                        </div>  
                                     </div>
-                                    <div class="col-md-3 col-lg-3 col-sm-12 d-flex">
-                                      
-                                      <button type="button" class="btn btn-primary"><i class="bi bi-download text-white m-2"></i>{{ __('Export file') }}</button>
-                                  </div>
+                                
+                                 
                                 </div>
+                              
                             </form>
                             <div class="row justify-content-center">
                                 <a href="{{ route('posted.jobs', ['status' => '1']) }}" class="px-auto btn btn-outline-primary {{ Request::get('status') == 1 ? 'type-active' : '' }}">{{ __('Active job') }}</a>
@@ -213,7 +220,8 @@
                                         <tr>
                                             <th class="font-weight-bold p-2 fx-16px" colspan="2">{{ __('Positions') }}</th>
                                             <!-- <th class="font-weight-bold"></th> -->
-                                            <th class="font-weight-bold p-2 fx-16px">{{ __('Timeline') }}</th>
+                                            <th class="font-weight-bold p-2 fx-16px">Ngày đăng</th>
+                                            <th class="font-weight-bold p-2 fx-16px">Ngày hết hạn</th>
                                             <th class="font-weight-bold p-2 fx-16px">{{ __('Status') }}</th>
 
                                             <th class="font-weight-bold p-2 fx-16px">{{ __('Location') }}</th>
@@ -241,6 +249,16 @@
                                             </td>
                                             <td>
                                                 <div class="d-flex align-items-center h-100 fs-18px">
+                                                        {{ $job->created_at }}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center h-100 fs-18px">
+                                                        {{ $job->expiry_date }}
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center h-100 fs-18px">
                                                 @if(Carbon\Carbon::parse($job->expiry_date)->format('Y-m-d') > Carbon\Carbon::now()->format('Y-m-d'))
                                                     {{ __(\App\Job::getListStatusJob()[$job->status]) }}
                                                 @else
@@ -248,11 +266,7 @@
                                                 @endif
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div class="d-flex align-items-center h-100 fs-18px">
-                                                    Trạng thái
-                                                </div>
-                                            </td>
+                                        
                                             <td>
                                                 <div class="tags h-100">
                                                     <span class="tag location fs-18px">{{ $job->getCity('city') }} </span>
@@ -412,6 +426,9 @@
 
         function refreshPage() {
             location.reload(true);
+        }
+        function exportFile() {
+
         }
     </script>
 @endpush

@@ -106,10 +106,13 @@ class JobPublishController extends Controller
 
     public function storeFrontJob(JobFrontFormRequest $request)
     {
+
+   
         $company = Auth::guard('company')->user();
         $job = new Job();
         $job->company_id = $company->id;
         $job = $this->assignJobValues($job, $request);
+        $job->status =1;
         $job->save();
         /*         * ******************************* */
         $job->slug = Str::slug($job->title, '-') . '-' . $job->id;

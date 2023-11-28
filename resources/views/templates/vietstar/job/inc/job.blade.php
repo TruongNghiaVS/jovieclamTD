@@ -1,4 +1,6 @@
-<h5 class="fs-3">{{__('Job Details')}}</h5>
+<h5 class="fs-3">ĐĂNG TUYỂN DỤNG</h5>
+
+
 @if(isset($job))
 {!! Form::model($job, array('method' => 'put', 'route' => array('update.front.job', $job->id), 'class' => 'form')) !!}
 {!! Form::hidden('id', $job->id) !!}
@@ -15,8 +17,8 @@
                     <form action="" methods="POST">
                         @csrf
                         <div class="section-infomation account-infomation">
-                            <div class="row">
-                                <div class="row">
+    
+                         <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="Job_title" class="font-weight-bold fs-18px">{{__('Job title')}} <span class="required">*</span></label>
@@ -28,28 +30,12 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="expiry_date" class="font-weight-bold fs-18px">{{__('Deadline')}} <span class="required">*</span></label>
-                                            <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="Deadline" value="{{ $edit && isset($job) ? \Carbon\Carbon::parse($job->expiry_date)->format('d-m-Y') : \Carbon\Carbon::parse(old('expiry_date'))->format('d-m-Y') }}">
+                                            <label for="industry_id" class="font-weight-bold fs-18px">{{__('Industry')}} <span class="required">*</span></label>
+                                            {!! Form::select('industry_id', ['' => __('Select Industry')] + $industries, null, array('class'=>'form-control form-select chosen', 'id'=>'industry_id')) !!}
+                                            {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!}
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="WFH"  class="font-weight-bold fs-18px">{{__('WFH')}} <span class="required">*</span></label>
-                                            
-                                            <label class="switch">
-                                                <input type="checkbox" name="WFH" id="WFH">
-                                                <span class="slider"></span>
-                                            </label> 
-                                
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
 
                                 <div class="row">
                                     <div class="col-md-12">
@@ -73,9 +59,25 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group" id="city_dd">
+                                            <label for="City" class="font-weight-bold fs-18px">{{__('City')}} <span class="required">*</span></label>
+                                            {!! Form::select('city_id', ['' => __('Select City')] + $cities, Request::get('city_id', null), array('class'=>'form-control form-select shadow-sm chosen', 'id'=>'city_id')) !!}
+                                            {!! APFrmErrHelp::showErrors($errors, 'city_id') !!}
+                                        </div>
+                                    </div>
+                                </div>
 
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="num_of_positions" class="font-weight-bold fs-18px">{{__('Number of positions')}} <span class="required">*</span></label>&nbsp;&nbsp;&nbsp;<span class="text-danger" id="num_of_positions_error" class="error danger"></span>
+                                            <input type="text" class="form-control" id="num_of_positions" name="num_of_positions" placeholder="{{__('Number of positions')}}" value="{{ $edit && isset($job) ? $job->num_of_positions : old('num_of_positions') }}">
 
-
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
@@ -85,7 +87,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
@@ -105,7 +106,34 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group form-group-custom-chosen">
+                                            <label for="Job Type" class="font-weight-bold fs-18px">Hình thức làm việc <span class="required">*</span></label>
+                                            {!! Form::select('job_type_id', ['' => __('Select Job Type')]+$jobTypes, null, array('class'=>'form-control form-select chosen', 'id'=>'job_type_id')) !!}
+                                            {!! APFrmErrHelp::showErrors($errors, 'job_type_id') !!}
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="expiry_date" class="font-weight-bold fs-18px">Hạn nộp hồ sơ <span class="required">*</span></label>
+                                            <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="Deadline" value="{{ $edit && isset($job) ? \Carbon\Carbon::parse($job->expiry_date)->format('d-m-Y') : \Carbon\Carbon::parse(old('expiry_date'))->format('d-m-Y') }}">
+                                        </div>
+                                    </div>
+                                </div>
 
+
+
+                               
+
+
+
+                            
+
+                               
                                 <div class="row">
                                     <div class="col-md-6" id="salary_dd">
                                         <div class="row">
@@ -152,35 +180,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group form-group-custom-chosen">
-                                            <label for="Job Type" class="font-weight-bold fs-18px">{{__('Job Type')}} <span class="required">*</span></label>
-                                            {!! Form::select('job_type_id', ['' => __('Select Job Type')]+$jobTypes, null, array('class'=>'form-control form-select chosen', 'id'=>'job_type_id')) !!}
-                                            {!! APFrmErrHelp::showErrors($errors, 'job_type_id') !!}
-                                        </div>
-                                    </div>
-                                </div>
+                             
+                              
 
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group form-group-custom-chosen">
-                                            <label for="Level" class="font-weight-bold fs-18px">{{__('Career Level')}} <span class="required">*</span></label>
-                                            {!! Form::select('career_level_id', ['' => __('Select Career Level')] + $careerLevels, null, array('class'=>'form-control form-select chosen', 'id'=>'career_level_id')) !!}
-                                            {!! APFrmErrHelp::showErrors($errors, 'career_level_id') !!}
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="industry_id" class="font-weight-bold fs-18px">{{__('Industry')}} <span class="required">*</span></label>
-                                            {!! Form::select('industry_id', ['' => __('Select Industry')] + $industries, null, array('class'=>'form-control form-select chosen', 'id'=>'industry_id')) !!}
-                                            {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!}
-                                        </div>
-                                    </div>
-                                </div>
+
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
@@ -209,7 +214,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -219,26 +223,22 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group" id="city_dd">
-                                            <label for="City" class="font-weight-bold fs-18px">{{__('City')}} <span class="required">*</span></label>
-                                            {!! Form::select('city_id', ['' => __('Select City')] + $cities, Request::get('city_id', null), array('class'=>'form-control form-select shadow-sm chosen', 'id'=>'city_id')) !!}
-                                            {!! APFrmErrHelp::showErrors($errors, 'city_id') !!}
+                                        <div class="form-group form-group-custom-chosen">
+                                            <label for="Level" class="font-weight-bold fs-18px">{{__('Career Level')}} <span class="required">*</span></label>
+                                            {!! Form::select('career_level_id', ['' => __('Select Career Level')] + $careerLevels, null, array('class'=>'form-control form-select chosen', 'id'=>'career_level_id')) !!}
+                                            {!! APFrmErrHelp::showErrors($errors, 'career_level_id') !!}
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="num_of_positions" class="font-weight-bold fs-18px">{{__('Number of positions')}} <span class="required">*</span></label>&nbsp;&nbsp;&nbsp;<span class="text-danger" id="num_of_positions_error" class="error danger"></span>
-                                            <input type="text" class="form-control" id="num_of_positions" name="num_of_positions" placeholder="{{__('Number of positions')}}" value="{{ $edit && isset($job) ? $job->num_of_positions : old('num_of_positions') }}">
+                             
+                                
 
-                                        </div>
-                                    </div>
-                                </div>
+                               
+
+                                
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group form-group-custom-multiselect" id="skill_id_dd">
@@ -273,7 +273,6 @@
                                         <button class="btn btn-primary" type="submit">{{__('Post Job')}} </button>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </form>
                 </div>

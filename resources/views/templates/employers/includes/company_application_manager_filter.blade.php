@@ -5,18 +5,28 @@
                 <div class="col-sm-12 col-md-4 col-lg-5">
                     <div class="form-group">
                         <label for="from_to">Từ Khóa</label>
-                        <input type="text" name="name" placeholder="{{ __('Search name, email, phone number') }}" class="form-control">
+                        <input type="text" name="name" 
+                        value="{{ isset($request['name']) ? $request['name'] : '' }}"
+                         placeholder="{{ __('Search name, email, phone number') }}" class="form-control">
                         
                     </div>
                 </div>
                
-                <div class="col-md-3 col-lg-5 col-sm-12">
-                    <div class="form-group form-group-datepicker input-daterange"  style="max-width: 100%; margin-bottom: 10px;">
-                        <label for="from_to">Từ - đến</label>
-                        <input type="text" class="daterange form-control " name="date_range" id="from_to"
+                <div class="col-md-3 col-lg-3 col-sm-12">
+                                        <div class="form-group form-group-datepicker " >
+                                            <label for="from_to">Từ</label>
+                                            <input type="date" value="{{ isset($request['from']) ? $request['from'] : '' }}"  class=" form-control " name="from" id="from_to"
                                                 placeholder="{{ __('Start date-End date') }}" />
-                    </div>
-                </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-lg-3 col-sm-12">
+                                        <div class="form-group form-group-datepicker "  >
+                                            <label for="from_to2">Đến</label>
+                                            <input type="date" class=" form-control " value="{{ isset($request['to']) ? $request['to'] : '' }}"  name="to" id="from_to2"
+                                                placeholder="{{ __('Start date-End date') }}" />
+                                        </div>
+                                    </div>
                 {{-- <div class="col-md-6 col-lg-4">
                     <div class="form-group">
                         <select name="status" class="form-select" name="" id="">
@@ -31,7 +41,7 @@
                     </div>
                 </div> --}}
                  <div class="col-sm-6  col-md-2 col-lg-2 d-flex">
-                    <button type="submit" class="btn btn-primary"><i class="bi bi-search text-white"></i></button>
+                    <button type="submit" class="btn btn-primary"><i class="bi bi-search text-white"></i>Tìm kiếm</button>
                 </div>
             </div>
         </form>

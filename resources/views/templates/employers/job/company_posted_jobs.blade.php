@@ -239,6 +239,11 @@
                                             </td>
                                             <td>
                                                 <div class="d-flex align-items-center h-100 fs-18px">
+                                                    Trạng thái 
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center h-100 fs-18px">
                                                 @if(Carbon\Carbon::parse($job->expiry_date)->format('Y-m-d') > Carbon\Carbon::now()->format('Y-m-d'))
                                                     {{ __(\App\Job::getListStatusJob()[$job->status]) }}
                                                 @else
@@ -246,11 +251,7 @@
                                                 @endif
                                                 </div>
                                             </td>
-                                            <td>
-                                                <div class="d-flex align-items-center h-100 fs-18px">
-                                                    Trạng thái
-                                                </div>
-                                            </td>
+                                          
                                             <td>
                                                 <div class="tags h-100">
                                                     <span class="tag location fs-18px">{{ $job->getCity('city') }} </span>

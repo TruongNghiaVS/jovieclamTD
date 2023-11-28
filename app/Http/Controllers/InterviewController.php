@@ -143,7 +143,8 @@ class InterviewController extends Controller
 
     public function getInterviewList(Request $request, $company_id)
     {
-        $query = Interview::with('job', 'applicant:id,name', 'company:id,name')->where('company_id', $company_id);
+        $query = Interview::with('job', 'applicant:id,name', 'company:id,name')
+                    ->where('company_id', $company_id);
 
         // $query->where(function($q){
         //     $q->where('interview_plan_date', '>=', \Carbon\Carbon::now());
