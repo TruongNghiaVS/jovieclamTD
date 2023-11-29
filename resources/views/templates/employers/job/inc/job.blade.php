@@ -284,7 +284,7 @@
 
 <div class="row">
     <div class="col-md-12 d-flex justify-content-center">
-        <button   id="clearBtn" class="btn btn-croll-top m-2" type="button" >{{__('Review recruitment information')}} </button>
+        <button   id="clearBtn" class="btn btn-outline m-2" type="button" >{{__('Review recruitment information')}} </button>
 
         <button   id="scrollBtn" class="btn btn-croll-top m-2" type="button" >{{__('Review recruitment information')}} </button>
         <button class="btn btn-lg btn-primary m-2" type="submit">{{__('Post Job')}} </button>
