@@ -244,6 +244,7 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
     'THEME_PATH' => env('THEME_PATH', ''),
+    'THEME_PATH_employer'=>'templates.employers',
     'LANGUAGE_RANKS' => [
        1 => 'Bậc 1',
        2 => 'Bậc 2',

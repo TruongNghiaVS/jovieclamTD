@@ -85,7 +85,7 @@ class JobPublishController extends Controller
         $cities = City::where('lang', 'vi')->active()->pluck('city', 'id')->toArray();
         $industries = DataArrayHelper::langIndustriesArray();
         $jobSkillIds = array();
-        return view(config('app.THEME_PATH').'.job.add_edit_job')
+        return view(config('app.THEME_PATH_employer').'.job.add_edit_job')
                         // ->with('countries', $countries)
                         ->with('company', $company)
                         ->with('currencies', array_unique($currencies))

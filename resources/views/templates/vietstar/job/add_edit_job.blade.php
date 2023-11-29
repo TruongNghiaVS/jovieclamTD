@@ -16,7 +16,7 @@
             <div class="company-content container addjob"> 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="userccount">
+                        <div class="">
                             <div class="formpanel-recuiter"> @include('flash::message')
                                 @include('templates.vietstar.job.inc.job')
                             </div>

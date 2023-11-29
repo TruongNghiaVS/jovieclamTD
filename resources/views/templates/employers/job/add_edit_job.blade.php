@@ -1,4 +1,4 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 @section('content') 
 <!-- Header start --> 
     <!-- Header start -->
@@ -13,7 +13,7 @@
             <div class="company-content container addjob"> 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="userccount">
+                        <div class="">
                             <div class="formpanel-recuiter"> @include('flash::message')
                                 @include('templates.employers.job.inc.job')
                             </div>
