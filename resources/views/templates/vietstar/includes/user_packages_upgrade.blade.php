@@ -2,7 +2,9 @@
 <div class="paypackages"> 
     <!---four-paln-->
     <div class="four-plan">
-        <h3>{{__('Upgrade Package')}}</h3>
+<div class="posted-manager-header" bis_skin_checked="1">
+        <h1 class="title-manage">{{__('Upgrade Package')}}</h1>
+    </div>
         <div class="row">
             @foreach($packages as $package)
             <div class="col-md-4 col-sm-6 col-xs-12">

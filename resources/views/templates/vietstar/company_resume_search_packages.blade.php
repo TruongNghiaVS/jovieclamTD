@@ -133,8 +133,8 @@
 
                 @include('templates.employers.includes.company_package_msg')
                 @include('templates.employers.includes.company_packages_upgrade')
-
-            <?php }elseif(null !== $packages){ ?>
+                
+                <?php }elseif(null !== $packages){ ?>
 
                 @include('templates.employers.includes.company_packages_new')
 

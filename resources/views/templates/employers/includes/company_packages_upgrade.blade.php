@@ -4,8 +4,10 @@
 		<div class="paypackages"> 
 			<!---four-paln-->
 			<div class="four-plan">
-				<h3 class="title text-left">{{__('Upgrade Package')}}</h3>
-				{{--<div class="our-packages">
+				<div class="posted-manager-header" bis_skin_checked="1">
+					<h1 class="title-manage">{{__('Upgrade Package')}}</h1>
+				</div>
+				<div class="our-packages mt-4">
 					@php
 						$language = \App::getLocale();
                         $currency = \App\Country::where('lang', $language)->first()->currency ?? 'vnd';
@@ -59,29 +61,8 @@
 						</div>
 						@endforeach 
 					</div>
-				</div>--}}
+				</div>
 
-
-				{{--
-				<?php
-
-				if((bool)config('company.is_company_package_active')){        
-
-				$packages = App\Package::where('package_for', 'like', 'employer')->get();
-
-				$package = Auth::guard('company')->user()->getPackage();
-				?>
-				<?php if(null !== $package){ ?>
-
-				@include('templates.employers.includes.company_package_msg')
-
-				@include('templates.employers.includes.company_packages_upgrade')
-
-				<?php }elseif(null !== $packages){ ?>
-
-				@include('templates.employers.includes.company_packages_new')
-
-				<?php }} ?>--}}
 			</div>
 			<!---end four-paln--> 
 		</div>
