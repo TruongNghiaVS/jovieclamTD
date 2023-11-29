@@ -20,11 +20,9 @@
             @include('templates.employers.includes.mobile_dashboard_menu')
 
             <div class="container company-content">
-
-                @include('templates.employers.includes.company_application_manager_filter')
-                
-                @include('templates.employers.includes.company_application_manager')
                
+                @include('templates.employers.includes.company_application_manager_filter')
+            
             </div>
 </div>
 @include('templates.employers.includes.company_application_manager_modal')

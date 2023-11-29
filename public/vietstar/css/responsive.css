@@ -96,6 +96,7 @@
     left: 0;
   }
 
+
   /************************************************
 
            ==advertising-banner==
@@ -540,6 +541,9 @@
     .employer-choose .box-content .box-content__content ul li {
       padding-left:0px !important
     }
+    .w-10 {
+      width: 100% !important;
+    }
 
 }
 
@@ -547,6 +551,9 @@
 
 /* Medium devices (landscape tablets, 600px and up) */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+  .w-10 {
+    width: 30% !important;
+  }
   .content {
     padding-left: 8px;
     padding-right: 8px;

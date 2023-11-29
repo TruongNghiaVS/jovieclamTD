@@ -434,6 +434,30 @@
                     </a>
                 </li>
 
+                <li class="sidebar-item ">
+                    <a href="#" class="list-group-item list-group-item-action ">
+
+                        <div class="d-flex w-100">
+                            <i class="bi bi-card-list fs-24px me-2"></i>
+                            <span class="side-bar-content"> {{__('New')}}</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-item ">
+                    <a href="{{ route('contact.us') }}" class="list-group-item list-group-item-action {{ Request::url() == route('contact.us') ? 'active' : '' }}">
+
+                        <div class="d-flex w-100">
+                            <i class="bi bi-card-list fs-24px me-2"></i>
+                            <span class="side-bar-content"> {{__('Contact')}}</span>
+                        </div>
+                    </a>
+                </li>
+
+
+          
+
+                
+
                 @if(Auth::user())
 
                 <li>

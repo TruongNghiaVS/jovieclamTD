@@ -441,8 +441,8 @@
                 </li>
 
                 @if(Auth::guard('company')->check())
-                <li class="sidebar-item {{ Request::url() == route('company.home') ? 'active' : '' }}">
-                    <a href="{{route('company.home')}}" class="list-group-item list-group-item-action {{ Request::url() == route('company.home') ? 'active' : '' }}">
+                <li class="sidebar-item {{ Request::url() == route('company.home') || Request::url() == route('posted.jobs') ||  Request::url() == route('application.manager') || Request::url() == route('company.packages') || Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) || Request::url() == route('company.profile') || Request::url() == route('post.job')  ? 'active' : '' }}">
+                    <a href="{{route('company.home')}}" class="list-group-item list-group-item-action{{ Request::url() == route('company.home') || Request::url() == route('posted.jobs') ||  Request::url() == route('application.manager') || Request::url() == route('company.packages') || Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) || Request::url() == route('company.profile') || Request::url() == route('post.job')  ? 'active' : '' }}}">
                         <div class="d-flex w-100">
                             <i class="bi bi-archive fs-24px me-2 "></i>
                             <span class="side-bar-content">HR Center</span>
@@ -450,8 +450,8 @@
                     </a>
                 </li>
                 @else
-                <li class="sidebar-item {{ Request::url() == route('company.home') ? 'active' : '' }}">
-                    <a href="{{route('company.login')}}" class="list-group-item list-group-item-action {{ Request::url() == route('company.home') ? 'active' : '' }}">
+                <li class="sidebar-item {{ Request::url() == route('company.home') || Request::url() == route('posted.jobs') ||  Request::url() == route('application.manager') || Request::url() == route('company.packages') || Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) || Request::url() == route('company.profile') || Request::url() == route('post.job')  ? 'active' : '' }}">
+                    <a href="{{route('company.login')}}" class="list-group-item list-group-item-action {{ Request::url() == route('company.home') || Request::url() == route('posted.jobs') ||  Request::url() == route('application.manager') || Request::url() == route('company.packages') || Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) || Request::url() == route('company.profile') || Request::url() == route('post.job')  ? 'active' : '' }}">
                         <div class="d-flex w-100">
                             <i class="bi bi-archive fs-24px me-2 "></i>
                             <span class="side-bar-content"> HR Center</span>
@@ -459,8 +459,24 @@
                     </a>
                 </li>
                 @endif
+                <li class="sidebar-item ">
+                    <a href="#" class="list-group-item list-group-item-action ">
 
-          
+                        <div class="d-flex w-100">
+                            <i class="bi bi-newspaper fs-24px me-2"></i>
+                            <span class="side-bar-content"> {{__('News')}}</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="sidebar-item ">
+                    <a href="{{ route('contact.us') }}" class="list-group-item list-group-item-action {{ Request::url() == route('contact.us') ? 'active' : '' }}">
+
+                        <div class="d-flex w-100">
+                            <i class="bi bi-person-lines-fill fs-24px me-2"></i>
+                            <span class="side-bar-content"> {{__('Contact')}}</span>
+                        </div>
+                    </a>
+                </li>
 
             </ul>
             <!-- user nav -->

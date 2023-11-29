@@ -1,8 +1,11 @@
 <div class="card mb-2">
     <div class="card-body">
+        <div class="posted-manager-header">
+            <h1 class="title-manage">    {{__('Candidate Management')}}</h1>
+        </div>
         <form action="{{ route('application.manager') }}" method="get" class="form-search">
             <div class="row filter-cv" style="margin-bottom: 00px">
-                <div class="col-sm-12 col-md-4 col-lg-5">
+                <div class="col-sm-12 col-md-4 col-lg-6">
                     <div class="form-group">
                         <label for="from_to">Từ Khóa</label>
                         <input type="text" name="name" 
@@ -40,45 +43,57 @@
                         </select>
                     </div>
                 </div> --}}
-                 <div class="col-sm-6  col-md-2 col-lg-2 d-flex">
-                    <button type="submit" class="btn btn-primary"><i class="bi bi-search text-white"></i>Tìm kiếm</button>
-                </div>
             </div>
+            <div class="d-flex justify-content-end">
+                <div class="">
+                <button type="submit" class="btn btn-primary"><i class="bi bi-search text-white"></i>Tìm kiếm</button>
+                </div>
+           </div>
         </form>
-        <div class=" group-button-applycation">
-            <a href="{{ route('application.manager', ['status' => '1']) }}"
-                class="px-auto btn btn-outline-primary {{ Request::get('status') == 1 ? 'type-active' : '' }}">{{ __('CV Receive')
+ 
+
+
+
+        
+        <ul class="tabslet-tab d-flex justify-content-start ">
+            <li>
+                <a href="{{ route('application.manager', ['status' => '1']) }}"
+                class="{{ Request::get('status') == 1 ? 'type-active' : '' }}">{{ __('CV Receive')
                 }}</a>
-                <a href="{{ route('application.manager', ['status' => '2']) }}"
-                    class="px-auto btn btn-outline-primary {{ Request::get('status') == 2 ? 'type-active' : '' }}">{{ __('Review')
+            </li>
+            <li>
+            <a href="{{ route('application.manager', ['status' => '2']) }}"
+                    class="{{ Request::get('status') == 2 ? 'type-active' : '' }}">{{ __('Review')
              }}</a>
-              <a href="{{ route('application.manager', ['status' => '3']) }}" class="px-auto btn btn-outline-primary {{ Request::get('status') == 3 ? 'type-active' : '' }}">{{ __('Interview') }}</a>
-            <a href="{{ route('application.manager', ['status' => '4']) }}" class="px-auto btn btn-outline-primary {{ Request::get('status') == 4 ? 'type-active' : '' }}">{{ __('Suggest') }}</a>
+            </li>
+
+
+            <li>
+            <a href="{{ route('application.manager', ['status' => '3']) }}" class="{{ Request::get('status') == 3 ? 'type-active' : '' }}">{{ __('Interview') }}</a>
+            </li>
+            <li>
+                <a href="{{ route('application.manager', ['status' => '4']) }}" class="{{ Request::get('status') == 4 ? 'type-active' : '' }}">{{ __('Suggest') }}</a>
+            </li>
+            <li>
             <a href="{{ route('application.manager', ['status' => '5']) }}"
-                    class="px-auto btn btn-outline-primary {{ Request::get('status') == 5 ? 'type-active' : '' }}">{{ __('Confirm')
+                    class="{{ Request::get('status') == 5 ? 'type-active' : '' }}">{{ __('Confirm')
                     }}</a>
-           <a      href="{{ route('application.manager', ['status' => '6']) }}"
-                class="px-auto btn btn-outline-primary {{ Request::get('status') == 6 ? 'type-active' : '' }}">{{ __('Reject')
+            </li>
+            <li>
+            <a      href="{{ route('application.manager', ['status' => '6']) }}"
+                class="{{ Request::get('status') == 6 ? 'type-active' : '' }}">{{ __('Reject')
                 }}</a>
-        </div>
-    </div>
+            </li>
+            
+        </ul>
+        
+   
+    @include('templates.employers.includes.company_application_manager')
 </div>
 
-<div class="mb-2 d-flex justify-content-between">
-    <div class="text-muted">
-        {{ __('Found') }} <span  class="font-weight-bold text-primary">{{ $userApply->count('id') }}</span> {{ __('Candidates') }}
-    </div>
-    <div class="d-flex justify-content-between">
-        <div class="custom-control custom-radio custom-control-inline mr-2">
-            <input type="radio" id="quick-filter-1" name="quick-filter" class="custom-control-input" {{ $log_seen != 'unseen' ? 'checked' : '' }}>
-            <label class="custom-control-label" for="quick-filter-1">{{ __('Show all CV') }}</label>
-        </div>
-        <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="quick-filter-2" name="quick-filter" class="custom-control-input" {{ $log_seen == 'unseen' ? 'checked' : '' }}>
-            <label class="custom-control-label" for="quick-filter-2">{{ __('Show only unread CV') }}</label>
-        </div>
-    </div>
-</div>
+
+
+
 @push('styles')
 <style type="text/css">
     a.px-auto.btn.btn-outline-primary {

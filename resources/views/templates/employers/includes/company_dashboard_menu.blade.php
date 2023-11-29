@@ -73,9 +73,7 @@
                     </li>
                     <li class="nav-item {{ Request::url() == route('post.job') ? 'active' : '' }}">
                             <a href="{{route('post.job')}}" class="nav-link list-group-item-action {{ Request::url() == route('post.job') ? 'active' : '' }}">
-                              
                                     {{__('Post Jobs')}}
-                              
                             </a>
                     </li>
             </ul>

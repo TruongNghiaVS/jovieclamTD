@@ -120,7 +120,7 @@
 }
 .title-manage {
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .section_postnow {
@@ -253,6 +253,71 @@ ul.list-unstyled.components.sidebar-bottom__item li{
 .about_us_content__img {
     max-height: 700px;
     width: 100%;
+}
+.tabslet-tab {
+    padding-left: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0rem 0rem;
+    margin: 0;
+}
+
+.tabslet-tab li {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.tabslet-tab li a {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-transition: 0.2s ease-in-out all;
+    -o-transition: 0.2s ease-in-out all;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 8px 25px;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    border-radius: none;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    background: #eeeeee;
+    color: var(--text-main);
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.2s ease-in-out all;
+}
+
+.tabslet-tab li a.type-active,
+.tabslet-tab li:hover a {
+    background: var(--bs-primary);
+    color: white;
+}
+.table-content {
+    border: 1px solid #e0e0e0;
 }
 
 @media only screen and (max-width: 767px) {

@@ -1,6 +1,21 @@
-<div class="card">
+<div class="table-content">
+    <div class="p-3 mt-2 d-flex justify-content-between ">
+            <div class="text-muted">
+                {{ __('Found') }} <span  class="font-weight-bold text-primary">{{ $userApply->count('id') }}</span> {{ __('Candidates') }}
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="custom-control custom-radio custom-control-inline mr-2">
+                    <input type="radio" id="quick-filter-1" name="quick-filter" class="custom-control-input" {{ $log_seen != 'unseen' ? 'checked' : '' }}>
+                    <label class="custom-control-label" for="quick-filter-1">{{ __('Show all CV') }}</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="quick-filter-2" name="quick-filter" class="custom-control-input" {{ $log_seen == 'unseen' ? 'checked' : '' }}>
+                    <label class="custom-control-label" for="quick-filter-2">{{ __('Show only unread CV') }}</label>
+                </div>
+            </div>
+        </div>
     <div class="card-body">
-        <div class="table-responsive">
+        <div class="table-responsive ">
             <table class="table table-applican-manager table-hover mb-0 border-0">
                 <thead>
                     <tr>
@@ -100,7 +115,7 @@
             </table>
             <!-- Pagination -->
             <div class="pagiWrap">
-                <nav aria-label="Page navigation example">
+                <nav aria-label="Page navigation example " class=" d-flex justify-content-center">
                     @if(isset($userApply) && count($userApply))
                     {{ $userApply->appends(request()->query())->links() }} @endif
                 </nav>
