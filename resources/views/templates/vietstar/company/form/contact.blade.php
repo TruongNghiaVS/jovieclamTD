@@ -10,45 +10,45 @@
       <div class="modal-body">
         <form id="contact_info_edit" class="needs-validation" novalidate>
           <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-12 col-md-12 col-lg-6">
               <div class="form-group">
                 <label for="Website_URL">Website URL</label>
                 <em class="important">*</em>
                 <input type="text" class="form-control" required id="website" name="website" value="{{ isset($company->website) ? $company->website : old('website')}}" placeholder="Website URL">
               </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-12 col-md-12 col-lg-6">
               <div class="form-group">
                 <label for="Fax">{{__('Fax')}}</label>
                 <input type="text" class="form-control" id="fax" placeholder="{{__('Fax')}}" name="fax" value="{{ isset($company->fax) ? $company->fax : old('fax')}}">
               </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-12 col-md-12 col-lg-6">
               <div class="form-group">
                 <label for="Phone_number">{{__('Phone number')}}</label>
                 <em class="important">*</em>
                 <input type="text" class="form-control" required id="phone" name="phone" value="{{ isset($company->phone) ? $company->phone : old('phone')}}" placeholder="{{__('Phone number')}}">
               </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-12 col-md-12 col-lg-6">
               <div class="form-group">
                 <label for="Facebook">Facebook</label>
                 <input type="text" class="form-control" id="facebook" name="facebook" value="{{ isset($company->facebook) ? $company->facebook : old('facebook')}}" placeholder="Facebook">
               </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-12 col-md-12 col-lg-6">
               <div class="form-group">
                 <label for="Twitter">Twitter</label>
                 <input type="text" class="form-control" id="twitter" name="twitter" value="{{ isset($company->twitter) ? $company->twitter : old('twitter')}}" placeholder="Twitter">
               </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-12 col-md-12 col-lg-6">
               <div class="form-group">
                 <label for="LinkedIn">LinkedIn</label>
                 <input type="text" class="form-control" id="linkedin" name="linkedin" value="{{ isset($company->linkedin) ? $company->linkedin : old('linkedin')}}" placeholder="LinkedIn">
               </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-12 col-md-12 col-lg-6">
               <div class="form-group">
                 <label for="Google_Plus">Google Plus</label>
                 <input type="text" class="form-control" id="google_plus" name="google_plus" value="{{ isset($company->google_plus) ? $company->google_plus : old('google_plus')}}" placeholder="Google Plus">
@@ -92,7 +92,7 @@
 
                 success: function(response) {
                     // Handle successful response
-                    alert(' successful!'); // Example: You can show a success message
+                    location.reload();
                 },
                 error: function(xhr, status, error) {
                     // Handle errors

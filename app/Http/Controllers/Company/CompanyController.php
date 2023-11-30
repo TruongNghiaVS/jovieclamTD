@@ -419,7 +419,7 @@ class CompanyController extends Controller
 		// }
 
         
-        // flash(__('Company has been updated'))->success();
+        flash(__('Company info has been updated'))->success();
         return  $company->update();
     }
 
@@ -462,9 +462,33 @@ class CompanyController extends Controller
 		// }
 
         
-        // flash(__('Company has been updated'))->success();
+        flash(__('Contact information has been updated!'))->success();
         return  $company->update();
     }
+
+    public function updatePassword(Request $request)
+    {
+
+        $company = Company::findOrFail(Auth::guard('company')->user()->id);
+      
+       
+        if (!empty($request->input('password'))) {
+
+            $company->password = Hash::make($request->input('password'));
+        }
+        
+        $company->save();
+		
+        return response()->json([
+            'sucess'=>true,
+           
+            'message' => 'Đổi mật khẩu thành công'], 200);
+    }
+
+
+
+
+
 
     public function addToFavouriteApplicant(Request $request, $application_id, $user_id, $job_id, $company_id)
     {

@@ -44,36 +44,7 @@
                         <a href="{{ route('vietnam-salary') }}" class="nav-link {{ Request::url() == route('vietnam-salary')  ? 'header-active' : 'text-main-color' }}"
                         style="{{ Request::url() == route('vietnam-salary')  ? 'color:#981B1E;' : '' }}">{{__('Vietnam Salary')}}</a>
                     </li> -->
-                    @if(Auth::user())
-                    <li class="has-child">
-                        <a href="{{ route('my.profile') }}" class="nav-link nav-link-parent">{{__('Profiles and CVs')}}</a>
-                        <button type="button" class="btn-show-sub-menu" data-ref="findJob" data-target="false"><span class="iconmoon icon-p-next"></span></button>
-                        <ul class="sub-menu" data-ref="findJob" data-target="false">
-                            @php
-                            $pointer = Auth::check()==true ? '' : 'style=pointer-events:none;';
-                            @endphp
-                            <li><a class="sub-item" href="{{route('change.template')}}" {{$pointer}}><span class="iconmoon icon-recruiter-portfolio"></span>
-                                    {{__('CV Templates')}}
-                                </a>
-                            </li>
-                            @php
-                            $pointerCom = Auth::guard('company')->check()==true ? '': 'style=pointer-events:none;';
-                            @endphp
-                            <li>
-                                <a class="sub-item" href="{{route('application.manager')}}" {{$pointerCom}}><span class="iconmoon icon-recruiter-portfolio"></span>
-                                    {{__('Candidate Management')}}
-                                </a>
-                            </li>
-                            <li>
-                                <a class="sub-item" href="{{route('cover-letter')}}" {{$pointer}}><span class="iconmoon icon-recruiter-portfolio"></span>
-                                    {{__('Cover Letter')}}
-                                </a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    @endif
-
+                 
                     
                     <!-- NEW STAR -->
                     <li>

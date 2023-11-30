@@ -94,7 +94,7 @@
                   {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}
                 </div>
               </div>
-              <div class="col-md-6">
+              <!-- <div class="col-md-6">
                 <div class="form-group">
                   <label for="State">{{__('State')}}</label>
                   <em class="important">*</em>
@@ -103,19 +103,17 @@
                       <option value="">{{ __('Select one') }}</option>
                     </select>
                   </span>
-                  {!! APFrmErrHelp::showErrors($errors, 'state_id') !!}
+               
                 </div>
-              </div>
+              </div> -->
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="City">{{__('City')}}</label>
                   <em class="important">*</em>
                   <span id="default_city_dd">
-                    <select required class="form-control form-select" id="city_id" name="city_id" name_table="{{__('City')}}">
-                      <option value="">{{ __('Select one') }}</option>
-                    </select>
+                        <select class="form-control form-select shadow-sm" id="city_id" name="city_id"><option value="" selected="selected">Chọn địa điểm</option><option value="3">Port Blair</option><option value="48666">Lào Cai</option><option value="48667">Yên Bái</option><option value="48668">Lai Châu</option><option value="48669">Điện Biên</option><option value="48670">Sơn La</option><option value="48671">Hòa Bình</option><option value="48672">Hà Giang</option><option value="48673">Tuyên Quang</option><option value="48674">Phú Thọ</option><option value="48675">Thái Nguyên</option><option value="48676">Bắc Kạn</option><option value="48677">Cao Bằng</option><option value="48678">Lạng Sơn</option><option value="48679">Bắc Giang</option><option value="48680">Quảng Ninh</option><option value="48681">Tp. Hà Nội</option><option value="48682">Tp. Hải Phòng</option><option value="48683">Vĩnh Phúc</option><option value="48684">Bắc Ninh</option><option value="48685">Hưng Yên</option><option value="48686">Hải Dương</option><option value="48687">Thái Bình</option><option value="48688">Nam Định</option><option value="48689">Ninh Bình</option><option value="48690">Hà Nam</option><option value="48691">Thanh Hóa</option><option value="48692">Nghệ An</option><option value="48693">Hà Tĩnh</option><option value="48694">Quảng Bình</option><option value="48695">Quảng Trị</option><option value="48696">Thừa Thiên Huế</option><option value="48697">Tp. Đà Nẵng</option><option value="48698">Quảng Nam</option><option value="48699">Quảng Ngãi</option><option value="48700">Bình Định</option><option value="48701">Phú Yên</option><option value="48702">Khánh Hòa</option><option value="48703">Ninh Thuận</option><option value="48704">Bình Thuận</option><option value="48705">Kon Tum</option><option value="48706">Gia Lai</option><option value="48707">Đắk Lắk</option><option value="48708">Đắk Nông</option><option value="48709">Lâm Đồng</option><option value="48710">TP. Hồ Chí Minh</option><option value="48711">Đồng Nai</option><option value="48712">Bà Rịa-Vũng Tàu</option><option value="48713">Bình Dương</option><option value="48714">Bình Phước</option><option value="48715">Tây Ninh</option><option value="48716">Tp. Cần Thơ</option><option value="48717">Long An</option><option value="48718">Tiền Giang</option><option value="48719">Bến Tre</option><option value="48720">Vĩnh Long</option><option value="48721">Trà Vinh</option><option value="48722">Đồng Tháp</option><option value="48723">An Giang</option><option value="48724">Kiên Giang</option><option value="48725">Hậu Giang</option><option value="48726">Sóc Trăng</option><option value="48727">Bạc Liêu</option><option value="48728">Cà Mau</option></select>
                   </span>
-                  {!! APFrmErrHelp::showErrors($errors, 'city_id') !!}
+                
                 </div>
               </div>
               <div class="col-md-6">
@@ -187,7 +185,7 @@
                 </div>
 
 
-            <button class="btn btn-primary btn-block" id="activate">{{__('Submit')}}</button>
+            <button class="btn btn-primary w-100" id="submit_company_info">{{__('Submit')}}</button>
           </div>
         </div>
 
@@ -284,24 +282,30 @@
             $('#dataTable tbody').append(newRow);
         }
         console.log(formData);
-        if(formData){
-          $.ajaxSetup({
-              headers: {
-              'X-CSRF-TOKEN': '{{ csrf_token() }}'
-              }
-          });
-          $.ajax({
-              url: `{{ route('update.company.profile') }}`,
-              type: 'post',
-              data: formData,
-              success: function(response) {
-                  // Handle success
-              },
-              error: function(xhr, status, error) {
-                  // Handle error
-              }
-          });
-        }
+
+
+        $("#submit_company_info").click(()=>{
+
+          if(formData){
+            $.ajaxSetup({
+                headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            });
+            $.ajax({
+                url: `{{ route('update.company.profile') }}`,
+                type: 'post',
+                data: formData,
+                success: function(response) {
+                    // Handle success
+                    location.reload();
+                },
+                error: function(xhr, status, error) {
+                    // Handle error
+                }
+            });
+          }
+        })
 
         
       }

@@ -9,6 +9,7 @@ Route::get('    ', 'Company\CompaniesController@loadMoreData')->name('company.ge
 Route::get('company-profile', 'Company\CompanyController@companyProfile')->name('company.profile');
 Route::post('update-company-profile', 'Company\CompanyController@updateCompanyProfile2')->name('update.company.profile');
 Route::post('update-company-info-contact', 'Company\CompanyController@updateInfoContact')->name('update.company.contact');
+Route::post('company/updatePassword', 'Company\CompanyController@updatePassword')->name('update.company.updatePassword');
 Route::post('update_avatar_company', 'Company\CompanyController@updateAvatar')->name('update.company.avatar');
 Route::get('posted-jobs', 'Company\CompanyController@postedJobs')->name('posted.jobs');
 Route::get('company/{slug}', 'Company\CompanyController@companyDetail')->name('company.detail');

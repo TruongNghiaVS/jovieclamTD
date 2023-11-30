@@ -9,11 +9,7 @@
             </div>
             <div class="modal-body">
                 <form id="myForm1" class="needs-validation" novalidate>
-                    <div class="form-group">
-                        <label for="Company_Name">Email</label>
-                            <input type="text" class="form-control" name="email" id="Company_Name" value="{{ old('email') ? old('email') : $company->email }}"
-                            placeholder="{{__('Company Email')}}">
-                    </div>
+                    
                     <div class="form-group">
                         <label for="CEO_Name">{{__('Password')}}</label>
                         <input type="password" id="pwdId" class="form-control pwds"  required>
@@ -27,7 +23,7 @@
                         <div id="cPwdInvalid" class="invalid-feedback"></div>
                     </div>
                     <div class="form-group">
-                        <button id="reset_submitBtn" type="submit" class="btn btn-primary submit-button" disabled>Submit</button>
+                        <button id="reset_submitBtn" type="button" class="btn btn-primary submit-button" disabled>Submit</button>
                     </div>
                 </form>
             </div>
@@ -79,6 +75,38 @@
           });
         });
       });
+
+
+      $('#reset_submitBtn').on('click',()=>{
+          console.log(12314);
+                if ($('#pwdId').val()) {
+                    // Simulating an AJAX POST request
+                    $.ajax({
+                        url:  `{{ route('update.company.updatePassword') }}`,
+                        type: 'post',
+                        data:  {
+                            _token: '{{ csrf_token() }}',
+                            password:$('#pwdId').val(),
+                        },
+                    
+                        success: function (response) {
+                            if(response){
+                                location.reload();
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            // Handle error
+                            console.error('Error uploading avatar:', error);
+                        }
+                    });
+                } else {
+                    alert('Please select an image before uploading.');
+                }
+  
+    })
+    
+
+
 </script>
 @endpush
 
