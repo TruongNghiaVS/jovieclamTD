@@ -283,20 +283,26 @@
             newRow += '</tr>';
             $('#dataTable tbody').append(newRow);
         }
+        console.log(formData);
+        if(formData){
+          $.ajaxSetup({
+              headers: {
+              'X-CSRF-TOKEN': '{{ csrf_token() }}'
+              }
+          });
+          $.ajax({
+              url: `{{ route('update.company.profile') }}`,
+              type: 'post',
+              data: formData,
+              success: function(response) {
+                  // Handle success
+              },
+              error: function(xhr, status, error) {
+                  // Handle error
+              }
+          });
+        }
 
-
-
-        // $.ajax({
-        //     url: 'YOUR_SERVER_ENDPOINT',
-        //     type: 'POST',
-        //     data: formData,
-        //     success: function(response) {
-        //         // Handle success
-        //     },
-        //     error: function(xhr, status, error) {
-        //         // Handle error
-        //     }
-        // });
         
       }
 

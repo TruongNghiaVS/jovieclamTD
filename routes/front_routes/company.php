@@ -7,7 +7,9 @@ Route::get('company-home', 'Company\CompanyController@index')->name('company.hom
 Route::get('companies', 'Company\CompaniesController@company_listing')->name('company.listing');
 Route::get('    ', 'Company\CompaniesController@loadMoreData')->name('company.getData');
 Route::get('company-profile', 'Company\CompanyController@companyProfile')->name('company.profile');
-Route::put('update-company-profile', 'Company\CompanyController@updateCompanyProfile')->name('update.company.profile');
+Route::post('update-company-profile', 'Company\CompanyController@updateCompanyProfile2')->name('update.company.profile');
+Route::post('update-company-info-contact', 'Company\CompanyController@updateInfoContact')->name('update.company.contact');
+Route::post('update_avatar_company', 'Company\CompanyController@updateAvatar')->name('update.company.avatar');
 Route::get('posted-jobs', 'Company\CompanyController@postedJobs')->name('posted.jobs');
 Route::get('company/{slug}', 'Company\CompanyController@companyDetail')->name('company.detail');
 Route::post('contact-company-message-send', 'Company\CompanyController@sendContactForm')->name('contact.company.message.send');

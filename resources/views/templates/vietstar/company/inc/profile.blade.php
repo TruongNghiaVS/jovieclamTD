@@ -786,9 +786,9 @@
             var formData = new FormData();
             var avatarFile = $('#company_fileInput')[0].files[0];
             
-            
+            console.log(avatarFile);
             if (avatarFile) {
-                    formData.append('image', avatarFile);
+                    formData.append('logo', avatarFile);
                  
                     // Simulating an AJAX POST request
                     
@@ -798,7 +798,7 @@
                         }
                         });
                     $.ajax({
-                        url: ``,
+                        url: `{{route('update.company.avatar')}}`,
                         type: 'POST',
                         data: formData,
                         contentType: false,

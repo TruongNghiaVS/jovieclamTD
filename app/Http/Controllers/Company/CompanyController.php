@@ -243,7 +243,7 @@ class CompanyController extends Controller
     {
 
 
-        
+        dd("3");
         $company = Company::findOrFail(Auth::guard('company')->user()->id);
 
         /*         * **************************************** */
@@ -315,6 +315,155 @@ class CompanyController extends Controller
         
         flash(__('Company has been updated'))->success();
         return \Redirect::route('company.profile');
+    }
+    public function updateAvatar(Request $request)
+    {
+        $company = Company::findOrFail(Auth::guard('company')->user()->id);
+
+        /*         * **************************************** */
+        if ($request->hasFile('logo')) {
+            $is_deleted = $this->deleteCompanyLogo($company->id);
+            $image = $request->file('logo');
+            $fileName = ImgUploader::UploadImage('company_logos', $image, $request->input('logo'), 300, 300, false);
+            $company->logo = $fileName;
+        }
+        /*         * ************************************** */
+
+        /*         * **************************************** */
+        if ($request->hasFile('cover_logo')) {
+            $image = $request->file('cover_logo');
+            $fileName = ImgUploader::UploadImage('company_logos', $image, $request->input('cover_logo'), 300, 300, false);
+            $company->cover_logo = $fileName;
+        }
+        
+        $company->update();
+
+        flash(__('Company Logo has been updated'))->success();
+        return true;
+    
+    }
+    public function updateCompanyProfile2(Request $request)
+    {
+
+        $company = Company::findOrFail(Auth::guard('company')->user()->id);
+      
+
+        /*         * **************************************** */
+        if ($request->hasFile('logo')) {
+            $is_deleted = $this->deleteCompanyLogo($company->id);
+            $image = $request->file('logo');
+            $fileName = ImgUploader::UploadImage('company_logos', $image, $request->input('logo'), 300, 300, false);
+            $company->logo = $fileName;
+        }
+        /*         * ************************************** */
+
+        /*         * **************************************** */
+        if ($request->hasFile('cover_logo')) {
+            $image = $request->file('cover_logo');
+            $fileName = ImgUploader::UploadImage('company_logos', $image, $request->input('cover_logo'), 300, 300, false);
+            $company->cover_logo = $fileName;
+        }
+        /*         * ************************************** */
+
+        $company->name = $request->input('name');
+        $company->ceo = $request->input('ceo');
+        
+        $company->industry_id = $request->input('industry_id');
+        $company->ownership_type_id = $request->input('ownership_type_id');
+        $company->description = $request->input('description');
+        $company->location = $request->input('location');
+        $company->map = $request->input('map');
+        $company->no_of_offices = $request->input('no_of_offices');
+       
+        $company->no_of_employees = $request->input('no_of_employees');
+      
+   
+        $company->established_in = $request->input('established_in');
+   
+
+       
+        $company->country_id = $request->input('country_id');
+        $company->state_id = $request->input('state_id');
+        $company->city_id = $request->input('city_id');
+
+        // $company->fax = $request->input('fax');
+        // $company->phone = $request->input('phone');
+        // $company->facebook = $request->input('facebook');
+        // $company->twitter = $request->input('twitter');
+        // $company->linkedin = $request->input('linkedin');
+        // $company->google_plus = $request->input('google_plus');
+        // $company->pinterest = $request->input('pinterest');
+//    $website = $request->input('website');
+//         $company->website = (false === strpos($website, 'http')) ? 'http://' . $website : $website;
+		// $company->is_subscribed = isset($request->is_subscribed) ? 1 : null;
+		
+        // $company->slug = Str::slug($company->name, '-') . '-' . $company->id;
+        $company->update();
+		/*************************/
+		// Subscription::where('email', 'like', $company->email)->delete();
+		// if((bool)$company->is_subscribed)
+		// {			
+		// 	$subscription = new Subscription();
+		// 	$subscription->email = $company->email;
+		// 	$subscription->name = $company->name;
+		// 	$subscription->save();
+		// 	/*************************/
+		// 	Newsletter::subscribeOrUpdate($subscription->email, ['FNAME'=>$subscription->name]);
+		// 	/*************************/
+		// }
+		// else
+		// {
+		// 	/*************************/
+		// 	Newsletter::unsubscribe($company->email);
+		// 	/*************************/
+		// }
+
+        
+        // flash(__('Company has been updated'))->success();
+        return  $company->update();
+    }
+
+    public function updateInfoContact(Request $request)
+    {
+
+        $company = Company::findOrFail(Auth::guard('company')->user()->id);
+      
+       
+        $company->fax = $request->input('fax');
+        $company->phone = $request->input('phone');
+        $company->facebook = $request->input('facebook');
+        $company->twitter = $request->input('twitter');
+        $company->linkedin = $request->input('linkedin');
+        $company->google_plus = $request->input('google_plus');
+        // $company->pinterest = $request->input('pinterest');
+         $website = $request->input('website');
+        // $company->website = (false === strpos($website, 'http')) ? 'http://' . $website : $website;
+		// $company->is_subscribed = isset($request->is_subscribed) ? 1 : null;
+		
+        // $company->slug = Str::slug($company->name, '-') . '-' . $company->id;
+        $company->update();
+		/*************************/
+		// Subscription::where('email', 'like', $company->email)->delete();
+		// if((bool)$company->is_subscribed)
+		// {			
+		// 	$subscription = new Subscription();
+		// 	$subscription->email = $company->email;
+		// 	$subscription->name = $company->name;
+		// 	$subscription->save();
+		// 	/*************************/
+		// 	Newsletter::subscribeOrUpdate($subscription->email, ['FNAME'=>$subscription->name]);
+		// 	/*************************/
+		// }
+		// else
+		// {
+		// 	/*************************/
+		// 	Newsletter::unsubscribe($company->email);
+		// 	/*************************/
+		// }
+
+        
+        // flash(__('Company has been updated'))->success();
+        return  $company->update();
     }
 
     public function addToFavouriteApplicant(Request $request, $application_id, $user_id, $job_id, $company_id)
