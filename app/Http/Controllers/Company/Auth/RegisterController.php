@@ -15,6 +15,7 @@ use App\Http\Requests\Front\CompanyFrontRegisterFormRequest;
 use Illuminate\Auth\Events\Registered;
 use App\Events\CompanyRegistered;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 use Jrean\UserVerification\Facades\UserVerification as UserVerificationFacade;
 use \stdClass;
 class RegisterController extends Controller
@@ -105,7 +106,7 @@ use RegistersUsers;
         }
         $company->name = $request->input('name');
         $company->email = $request->input('email');
-        $company->password = bcrypt($request->input('password'));
+        $company->password = Hash::make($request->input('password'));
         $company->is_active = 0;
         $company->verified = 0;
         $company->save();

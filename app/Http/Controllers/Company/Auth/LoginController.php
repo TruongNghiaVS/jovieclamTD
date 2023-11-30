@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use \stdClass;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -85,7 +86,8 @@ use AuthenticatesUsers;
     public function login(Request $request)
 
     {
-        $passwordInput = bcrypt($request->input('password'));
+
+        $passwordInput = $request->input('password');
         $request->validate([
             'email' => 'required',
             'password' => 'required',
@@ -96,19 +98,7 @@ use AuthenticatesUsers;
                       ->first();  
         $error = array();
 
-    
-      
-        if($exitMemeber)
-        {
-            Auth::guard('company')->login($exitMemeber, true);
-            return response()->json([
-                'sucess'=>true,
-                'urlRedirect'=> "/company-home",
-                "error"=> $error,
-                'message' => 'Đăng nhập thành công'], 200);
-          
-        }
-        else 
+        if(!$exitMemeber)
         {
             $itemError = new stdClass();
             $itemError->key ="email";
@@ -118,6 +108,26 @@ use AuthenticatesUsers;
                 'sucess'=>false,
                 'error'=> $error ], 401);
         }
+        $loginSuccess = Hash::check($passwordInput, $exitMemeber->password);
+        if(!$loginSuccess)
+        {
+            $itemError = new stdClass();
+            $itemError->key ="password";
+            $itemError->textError = "Mật khẩu không chính xác";
+            array_push($error, $itemError);
+            return response()->json([
+                'sucess'=>false,
+                'error'=> $error ], 401);
+          
+        }
+        Auth::guard('company')->login($exitMemeber, true);
+        return response()->json([
+            'sucess'=>true,
+            'urlRedirect'=> "/company-home",
+            "error"=> $error,
+            'message' => 'Đăng nhập thành công'], 200);
+      
+      
     }
 
     /**
