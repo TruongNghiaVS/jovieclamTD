@@ -637,6 +637,10 @@
                             </tr>
                         </tbody>
                     </table>
+                    <h6>Map</h6>
+                    <div class="gmap">
+                        {!!$company->map!!}
+                    </div>
                 </div>
             </div>
         </div>
@@ -753,10 +757,7 @@
                         </tbody>
                     </table>
                 </div>
-                <h6>Map</h6>
-                <div class="gmap">
-                    {!!$company->map!!}
-                </div>
+              
             </div>
         </div>
     </div>
