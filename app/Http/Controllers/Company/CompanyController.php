@@ -242,6 +242,8 @@ class CompanyController extends Controller
     public function updateCompanyProfile(CompanyFormRequest $request)
     {
 
+
+        
         $company = Company::findOrFail(Auth::guard('company')->user()->id);
 
         /*         * **************************************** */

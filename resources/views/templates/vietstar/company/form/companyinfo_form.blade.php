@@ -30,22 +30,22 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="Company_Name">{{__('Company Name')}}</label>
+                  <label for="name">{{__('Company Name')}}</label>
                   <em class="important">*</em>
-                  <input type="text" class="form-control" required name="name" id="Company_Name" value="{{ isset($company->name) ? $company->name : old('name') }}" placeholder="{{__('Company Name')}}">
+                  <input type="text" class="form-control" required name="name" name_table="{{__('Company Name')}}" id="name" value="{{ isset($company->name) ? $company->name : old('name') }}" placeholder="{{__('Company Name')}}">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label for="CEO_Name">{{__('CEO Name')}}</label>
-                  <input type="text" class="form-control" id="CEO_Name" name="ceo" value="{{ isset($company->ceo) ? $company->ceo : old('ceo') }}" placeholder="{{__('CEO Name')}}">
+                  <label for="ceo">{{__('CEO Name')}}</label>
+                  <input type="text" class="form-control" id="ceo" name="ceo" name_table="{{__('CEO Name')}}" value="{{ isset($company->ceo) ? $company->ceo : old('ceo') }}" placeholder="{{__('CEO Name')}}">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="Industry">{{__('Industry')}}</label>
                   <em class="important">*</em>
-                  <select required class="form-control form-select" id="industry_id" name="industry_id">
+                  <select required class="form-control form-select" id="industry_id" name="industry_id" name_table="{{__('Industry')}}">
                     <option value="">{{ __('Select one') }}</option>
                     @if(count($industries) > 0)
                     @foreach($industries as $key => $value)
@@ -60,7 +60,7 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="Ownership">{{__('Ownership')}}</label>
-                  {!! Form::select('ownership_type_id', ['' => __('Select Ownership type')]+$ownershipTypes, null, array('class'=>'form-control form-select', 'id'=>'ownership_type_id')) !!}
+                  {!! Form::select('ownership_type_id', ['' => __('Select Ownership type')]+$ownershipTypes, null, array('class'=>'form-control form-select', 'id'=>'ownership_type_id','name_table'=>__('Ownership')  )) !!}
                   {!! APFrmErrHelp::showErrors($errors, 'ownership_type_id') !!}
                 </div>
               </div>
@@ -72,7 +72,7 @@
               <div class="form-group">
                 <label for="Description">{{__('Description')}}</label>
                 <em class="important">*</em>
-                <textarea class="form-control" id="description" required name="description" rows="4">{{ isset($company->description) ? $company->description : old('description') }}</textarea>
+                <textarea class="form-control" id="description" required name="description" name_table="{{__('Description')}}" rows="4">{{ isset($company->description) ? $company->description : old('description') }}</textarea>
               </div>
             </div>
             <button class="btn btn-secondary" id="adsContinue">Continue</button>
@@ -83,7 +83,7 @@
                 <div class="form-group">
                   <label for="Country">{{__('Country')}}</label>
                   <em class="important">*</em>
-                  <select required class="form-control form-select" id="country_id" name="country_id">
+                  <select required class="form-control form-select" id="country_id" name="country_id" name_table="{{__('Country')}}">
                     <option value="">{{ __('Select one') }}</option>
                     @if(count($countries) > 0)
                     @foreach($countries as $key => $value)
@@ -99,7 +99,7 @@
                   <label for="State">{{__('State')}}</label>
                   <em class="important">*</em>
                   <span id="default_state_dd">
-                    <select required class="form-control form-select" id="state_id" name="state_id">
+                    <select required class="form-control form-select" id="state_id" name="state_id" name_table="{{__('State')}}">
                       <option value="">{{ __('Select one') }}</option>
                     </select>
                   </span>
@@ -111,7 +111,7 @@
                   <label for="City">{{__('City')}}</label>
                   <em class="important">*</em>
                   <span id="default_city_dd">
-                    <select required class="form-control form-select" id="city_id" name="city_id">
+                    <select required class="form-control form-select" id="city_id" name="city_id" name_table="{{__('City')}}">
                       <option value="">{{ __('Select one') }}</option>
                     </select>
                   </span>
@@ -122,13 +122,13 @@
                 <div class="form-group">
                   <label for="Address">{{__('Address')}}</label>
                   <em class="important">*</em>
-                  <input type="text" class="form-control" required id="Address" placeholder="{{__('Address')}}" name="location" value="{{ isset($company->location) ? $company->location : old('location') }}">
+                  <input type="text" class="form-control" required id="location" placeholder="{{__('Address')}}" name_table="{{__('Address')}}" name="location" value="{{ isset($company->location) ? $company->location : old('location') }}">
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="form-group">
                   <label for="Google_Map_Iframe">{{__('Google Map Iframe')}}</label>
-                  <textarea class="form-control" id="Google_Map_Iframe" name="map" rows="4">{{ isset($company->map) ? $company->map : old('map') }}</textarea>
+                  <textarea class="form-control" id="map" name="map" name_table="{{__('Google Map Iframe')}}" rows="4">{{ isset($company->map) ? $company->map : old('map') }}</textarea>
                 </div>
               </div>
             </div>
@@ -140,7 +140,7 @@
                 <div class="form-group">
                   <label for="no-offices">{{__('No of Office')}}</label>
                   <em class="important">*</em>
-                  <select required class="form-control form-select" id="no_of_offices" name="no_of_offices">
+                  <select required class="form-control form-select" id="no_of_offices" name="no_of_offices" name_table="{{__('No of Office')}}">
                     <option value="">{{ __('Select one') }}</option>
                     @if(count(MiscHelper::getNumOffices()) > 0)
                     @foreach(MiscHelper::getNumOffices() as $key => $value)
@@ -155,7 +155,7 @@
                 <div class="form-group">
                   <label for="employee-number">{{__('No of Employees')}}</label>
                   <em class="important">*</em>
-                  <select required class="form-control form-select" id="no_of_employees" name="no_of_employees">
+                  <select required class="form-control form-select" id="no_of_employees" name="no_of_employees" name_table="{{__('No of Employees')}}">
                     <option value="">{{ __('Select one') }}</option>
                     @if(count(MiscHelper::getNumEmployees()) > 0)
                     @foreach(MiscHelper::getNumEmployees() as $key => $value)
@@ -170,15 +170,14 @@
                 <div class="form-group">
                   <label for="Established_In">{{__('Established In')}}</label>
                   <em class="important">*</em>
-                  <input type="text" class="form-control" id="Established_In" name="established_in" value="{{ isset($company->established_in) ? $company->established_in : old('established_in')}}" placeholder="Established In">
+                  <input type="text" class="form-control" id="established_in" name="established_in" name_table="{{__('Established In')}}" value="{{ isset($company->established_in) ? $company->established_in : old('established_in')}}" placeholder="Established In">
                 </div>
               </div>
             </div>
             <button class="btn btn-secondary" id="detailContinue">Continue</button>
           </div>
           <div class="tab-pane fade" id="review" role="tabpanel">
-            <h4>{{__('Review the form')}}</h4>
-            
+            <h4>{{__('Review the form')}}</h4>  
             <div class="table-responsive" bis_skin_checked="1">
                     <table class="table table-responsive table-user-information"  id="dataTable">
                         <tbody>
@@ -252,39 +251,53 @@
           // Initialize an empty array to store input values
           var inputValues = [];
           var formData = {};
-          var formText = {};
+          var tableData = {};
+         
           // Iterate through input fields and select elements in the first two tab-panes
           $('#infoPanel, #ads, #placementPanel ,#detail').find('input, select,textarea').each(function() {
-              var elementName = $(this).attr('name');
-              var elementValue = $(this).val();
-              var elementText = $(this).text();
-              console.log(elementText);
+              var elementName = $(this).attr('name_table');
+              var elementValue,value_submit;
+              var elementId = $(this).attr('id');
+              value_submit =  $(this).val();
+          
+              if ($(this).is('select')) {
+                elementValue = $(this).find('option:selected').text();
+              } else {
+                  // For other elements, get the value directly
+                  elementValue = $(this).val();
+              }
+              console.log(value_submit,elementId);
               if(elementName && elementValue){
-                inputValues.push(elementValue);
-                formData[elementName] = elementValue;
-                formText[elementName] = elementText;
+            
+                tableData[elementName] = elementValue;
+                formData[elementId] = value_submit;
               }
           });
-          console.log(formText);
-          // Add a new row to the table with the values
-          var headerRow = '<tr>';
-        for (var key in formData) {
-            headerRow += '<th>' + key + '</th>';
-        }
-        headerRow += '</tr>';
-        $('#dataTable thead').empty().append(headerRow);
-
-        // Add a new row to the table with the values
-        $('#dataTable tbody').empty();
+  
 
         // Add rows to the table with the values
-        for (var key in formData) {
+        for (var key in tableData) {
             var newRow = '<tr>';
-            newRow += '<th>' + key + '</th>';
-            newRow += '<td>' + formData[key] + '</td>';
+            newRow += '<th colspan="4">' + key + '</th>';
+            newRow += '<td>' + tableData[key] + '</td>';
             newRow += '</tr>';
             $('#dataTable tbody').append(newRow);
         }
+
+
+
+        // $.ajax({
+        //     url: 'YOUR_SERVER_ENDPOINT',
+        //     type: 'POST',
+        //     data: formData,
+        //     success: function(response) {
+        //         // Handle success
+        //     },
+        //     error: function(xhr, status, error) {
+        //         // Handle error
+        //     }
+        // });
+        
       }
 
   })
