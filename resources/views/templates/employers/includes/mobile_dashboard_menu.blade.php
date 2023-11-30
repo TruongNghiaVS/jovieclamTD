@@ -407,7 +407,7 @@
         @if(Auth::guard('company')->user())
         <div class="profile" bis_skin_checked="1">
             <div class="avatar" bis_skin_checked="1"><a href="#">
-                {{Auth::guard('company')->user()->printCompanyImage()}}      
+                   
             </div>
             <div class="username" bis_skin_checked="1">
                 <p><a href="#">{{Auth::guard('company')->user()->name}}</a></p>
@@ -450,8 +450,8 @@
                     </a>
                 </li>
                 @else
-                <li class="sidebar-item {{ Request::url() == route('company.home') || Request::url() == route('posted.jobs') ||  Request::url() == route('application.manager') || Request::url() == route('company.packages') || Request::url() == route('company.profile') || Request::url() == route('post.job')  ? 'active' : '' }}">
-                    <a href="{{route('company.login')}}" class="list-group-item list-group-item-action {{ Request::url() == route('company.home') || Request::url() == route('posted.jobs') ||  Request::url() == route('application.manager') || Request::url() == route('company.packages') || Request::url() == route('company.profile') || Request::url() == route('post.job')  ? 'active' : '' }}">
+                <li class="sidebar-item">
+                    <a href="#" class="list-group-item list-group-item-action" data-target="#employer_login_Modal" data-toggle="modal" >
                         <div class="d-flex w-100">
                             <i class="bi bi-archive fs-24px me-2 "></i>
                             <span class="side-bar-content"> HR Center</span>
