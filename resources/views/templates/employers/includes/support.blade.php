@@ -1,19 +1,19 @@
 <section class="form_support cb-section">
     <div class="container">
         <div class="banner-form ">
-            <h3 class="banner-form__title text-white text-center">Đâu là giải pháp phù hợp cho doanh nghiệp của bạn?</h3>
-            <div class="banner-form__subtitle">
+            <h3 class="banner-form__title text-primary text-center">Đâu là giải pháp phù hợp cho doanh nghiệp của bạn?</h3>
+            <div class="banner-form__subtitle  text-primary">
                 Hãy để lại thông tin và các chuyên viên tư vấn tuyển dụng của VietStar sẽ liên hệ ngay với bạn
             </div>
             <div class="row px-4 g-0">
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="banner-form__wrapper">
                         <div class="banner-form__img">
-    
+
                         </div>
                     </div>
                 </div>
-                <div class="banner-form-main col-lg-6 col-md-12 col-sm-12 bg-white">
+                <div class="banner-form-main col-lg-6 col-md-12 col-sm-12 bg-white border">
                     <div class="formpanel">
 
                         <div class="form-main__title py-3 text-primary">Đăng ký nhận tư vấn</div>

@@ -176,7 +176,7 @@
             </div>
             <button class="btn btn-secondary" id="detailContinue">Continue</button>
           </div>
-          <div class="tab-pane fade" id="reviewPanel" role="tabpanel">
+          <div class="tab-pane fade" id="review" role="tabpanel">
             <h4>Review</h4>
             <button class="btn btn-primary btn-block" id="activate">{{__('Submit')}}</button>
           </div>

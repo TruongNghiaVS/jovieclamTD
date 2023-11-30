@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs" id="tab_company_info" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#infoPanel" role="tab">Công ty</a>
           <li>
@@ -22,7 +22,7 @@
             <a class="nav-link" data-toggle="tab" href="#detail" role="tab">Chi tiết</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#review" role="tab">Năm thành lập</a>
+            <a class="nav-link" data-toggle="tab" href="#review" role="tab">Review</a>
           <li>
         </ul>
         <div class="tab-content mt-2">
@@ -45,7 +45,7 @@
                 <div class="form-group">
                   <label for="Industry">{{__('Industry')}}</label>
                   <em class="important">*</em>
-                  <select required class="form-control form-select chosen" id="industry_id" name="industry_id">
+                  <select required class="form-control form-select" id="industry_id" name="industry_id">
                     <option value="">{{ __('Select one') }}</option>
                     @if(count($industries) > 0)
                     @foreach($industries as $key => $value)
@@ -83,7 +83,7 @@
                 <div class="form-group">
                   <label for="Country">{{__('Country')}}</label>
                   <em class="important">*</em>
-                  <select required class="form-control form-select chosen" id="country_id" name="country_id">
+                  <select required class="form-control form-select" id="country_id" name="country_id">
                     <option value="">{{ __('Select one') }}</option>
                     @if(count($countries) > 0)
                     @foreach($countries as $key => $value)
@@ -99,7 +99,7 @@
                   <label for="State">{{__('State')}}</label>
                   <em class="important">*</em>
                   <span id="default_state_dd">
-                    <select required class="form-control form-select chosen" id="state_id" name="state_id">
+                    <select required class="form-control form-select" id="state_id" name="state_id">
                       <option value="">{{ __('Select one') }}</option>
                     </select>
                   </span>
@@ -111,7 +111,7 @@
                   <label for="City">{{__('City')}}</label>
                   <em class="important">*</em>
                   <span id="default_city_dd">
-                    <select required class="form-control form-select chosen" id="city_id" name="city_id">
+                    <select required class="form-control form-select" id="city_id" name="city_id">
                       <option value="">{{ __('Select one') }}</option>
                     </select>
                   </span>
@@ -140,7 +140,7 @@
                 <div class="form-group">
                   <label for="no-offices">{{__('No of Office')}}</label>
                   <em class="important">*</em>
-                  <select required class="form-control form-select chosen" id="no_of_offices" name="no_of_offices">
+                  <select required class="form-control form-select" id="no_of_offices" name="no_of_offices">
                     <option value="">{{ __('Select one') }}</option>
                     @if(count(MiscHelper::getNumOffices()) > 0)
                     @foreach(MiscHelper::getNumOffices() as $key => $value)
@@ -155,7 +155,7 @@
                 <div class="form-group">
                   <label for="employee-number">{{__('No of Employees')}}</label>
                   <em class="important">*</em>
-                  <select required class="form-control form-select chosen" id="no_of_employees" name="no_of_employees">
+                  <select required class="form-control form-select" id="no_of_employees" name="no_of_employees">
                     <option value="">{{ __('Select one') }}</option>
                     @if(count(MiscHelper::getNumEmployees()) > 0)
                     @foreach(MiscHelper::getNumEmployees() as $key => $value)
@@ -176,17 +176,24 @@
             </div>
             <button class="btn btn-secondary" id="detailContinue">Continue</button>
           </div>
-          <div class="tab-pane fade" id="reviewPanel" role="tabpanel">
-            <h4>Review</h4>
+          <div class="tab-pane fade" id="review" role="tabpanel">
+            <h4>{{__('Review the form')}}</h4>
+            
+            <div class="table-responsive" bis_skin_checked="1">
+                    <table class="table table-responsive table-user-information"  id="dataTable">
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+
             <button class="btn btn-primary btn-block" id="activate">{{__('Submit')}}</button>
           </div>
         </div>
 
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-primary">Save for later</button>
-      </div>
+     
     </div>
   </div>
 </div>
@@ -204,37 +211,85 @@
       e.preventDefault();
       $('.progress-bar').css('width', '40%');
       $('.progress-bar').html('Step 2 of 5');
-      $('#myTab a[href="#ads"]').tab('show');
+      $('#tab_company_info a[href="#ads"]').tab('show');
     });
 
     $('#adsContinue').click(function(e) {
       e.preventDefault();
       $('.progress-bar').css('width', '60%');
       $('.progress-bar').html('Step 3 of 5');
-      $('#myTab a[href="#placementPanel"]').tab('show');
+      $('#tab_company_info a[href="#placementPanel"]').tab('show');
     });
 
     $('#placementContinue').click(function(e) {
       e.preventDefault();
       $('.progress-bar').css('width', '80%');
       $('.progress-bar').html('Step 4 of 5');
-      $('#myTab a[href="#detail"]').tab('show');
+      $('#tab_company_info a[href="#detail"]').tab('show');
     });
 
     $('#detailContinue').click(function(e) {
       e.preventDefault();
       $('.progress-bar').css('width', '100%');
       $('.progress-bar').html('Step 5 of 5');
-      $('#myTab a[href="#reviewPanel"]').tab('show');
+      $('#tab_company_info a[href="#reviewPanel"]').tab('show');
     });
 
-    $('#activate').click(function(e) {
-      e.preventDefault();
-      var formData = {
+    $(document).ready(function() {
+        // Handle tab change event
+        $('#tab_company_info').on('click', 'a[data-toggle="tab"]', function(e) {
+      
+            // Get the target tab-pane
+            var targetTab = $($(this).attr("href"));
+        
+            // If the target tab-pane is the last one, update the table
+            if (targetTab.is('#review')) {
+                updateTable();
+            }
+        });
+    });
+      function updateTable() {
+          // Initialize an empty array to store input values
+          var inputValues = [];
+          var formData = {};
+          var formText = {};
+          // Iterate through input fields and select elements in the first two tab-panes
+          $('#infoPanel, #ads, #placementPanel ,#detail').find('input, select,textarea').each(function() {
+              var elementName = $(this).attr('name');
+              var elementValue = $(this).val();
+              var elementText = $(this).text();
+              console.log(elementText);
+              if(elementName && elementValue){
+                inputValues.push(elementValue);
+                formData[elementName] = elementValue;
+                formText[elementName] = elementText;
+              }
+          });
+          console.log(formText);
+          // Add a new row to the table with the values
+          var headerRow = '<tr>';
+        for (var key in formData) {
+            headerRow += '<th>' + key + '</th>';
+        }
+        headerRow += '</tr>';
+        $('#dataTable thead').empty().append(headerRow);
+
+        // Add a new row to the table with the values
+        $('#dataTable tbody').empty();
+
+        // Add rows to the table with the values
+        for (var key in formData) {
+            var newRow = '<tr>';
+            newRow += '<th>' + key + '</th>';
+            newRow += '<td>' + formData[key] + '</td>';
+            newRow += '</tr>';
+            $('#dataTable tbody').append(newRow);
+        }
       }
-      alert(JSON.stringify(formData));
-    })
+
   })
+
+
 </script>
 @endpush
 
