@@ -404,9 +404,9 @@
                                     <div class="img-avatar__wrapper">
                                         {{$company->printCompanyImage()}}
                                     </div>
-                                    <input type="file" name="image" id="fileInput" style="display: none;">
+                                    <input type="file" name="image" id="company_fileInput" style="display: none;">
 
-                                    <a class="uploadImage_btn" href="javascript:void(0);" onclick="$('#fileInput').click()"><i class="bi bi-camera-fill"></i></a>
+                                    <a class="uploadImage_btn" href="javascript:void(0);" onclick="$('#company_fileInput').click()"><i class="bi bi-camera-fill"></i></a>
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                 </div>
@@ -466,17 +466,7 @@
                                     {{ old('email') ? old('email') : $company->email }}
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        <i class="bi bi-lock"></i> Password
-                                    </strong>
-                                </td>
-                                <td class="text-primary table_value">
-
-                                    <!-- <i class="toggle-password fa fa-fw fa-eye-slash"></i> -->
-                                </td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -540,7 +530,7 @@
                                     </strong>
                                 </td>
                                 <td class="table_value">
-                                    {{ !empty($company->industry)?$company->industry->industry : 'NA' }}
+                                    {{ !empty($company->industry)?$company->industry->industry : '' }}
                                 </td>
                             </tr>
 
@@ -576,20 +566,18 @@
                                     </strong>
                                 </td>
                                 <td class="table_value">
-                                    Viet Nam
+                                   
+                                 
+
+                                    @foreach ($countries as $key => $countrie)
+                                        @if($key ==   $company->country_id)
+                                        {{$countrie}}
+                                        @endif
+                                    @endforeach
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        {{__('State')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-
-                                </td>
-                            </tr>
+                           
 
                             <tr>
                                 <td class="table_title">
@@ -637,6 +625,10 @@
                             </tr>
                         </tbody>
                     </table>
+                    <h6>Map</h6>
+                    <div class="gmap">
+                        {!!$company->map!!}
+                    </div>
                 </div>
             </div>
         </div>
@@ -753,10 +745,7 @@
                         </tbody>
                     </table>
                 </div>
-                <h6>Map</h6>
-                <div class="gmap">
-                    {!!$company->map!!}
-                </div>
+              
             </div>
         </div>
     </div>
@@ -773,18 +762,53 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 @include('templates.vietstar.includes.tinyMCEFront')
 <script type="text/javascript">
+    
+
     function readURL(input) {
-        console.log("input", input);
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             reader.onload = function(e) {
                 $('.img-avatar img').attr('src', e.target.result);
             }
             reader.readAsDataURL(input.files[0]);
+            var formData = new FormData();
+            var avatarFile = $('#company_fileInput')[0].files[0];
+            
+            console.log(avatarFile);
+            if (avatarFile) {
+                    formData.append('logo', avatarFile);
+                 
+                    // Simulating an AJAX POST request
+                    
+                        $.ajaxSetup({
+                        headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        }
+                        });
+                    $.ajax({
+                        url: `{{route('update.company.avatar')}}`,
+                        type: 'POST',
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                     
+                        success: function (response) {
+                            // Handle success response
+                            location.reload();
+                        },
+                        error: function (xhr, status, error) {
+                            // Handle error
+                            console.error('Error uploading avatar:', error);
+                        }
+                    });
+                } else {
+                    alert('Please select an image before uploading.');
+                }
+
         }
     }
 
-    $('#fileInput').change(function() {
+    $('#company_fileInput').change(function() {
         readURL(this);
     });
 
@@ -796,76 +820,76 @@
     // js chosen dropdown select
     $(".chosen").chosen();
 
-    function filterDefaultStates(state_id) {
-        var country_id = $('#country_id').val();
-        if (country_id != '') {
-            $.post("{{ route('filter.default.states.dropdown') }}", {
-                    country_id: country_id,
-                    state_id: state_id,
-                    _method: 'POST',
-                    _token: '{{ csrf_token() }}'
-                })
-                .done(function(response) {
-                    $('#default_state_dd').html(response);
-                    filterDefaultCities(<?php echo old('city_id', (isset($company)) ? $company->city_id : 0); ?>);
-                });
-        }
-    }
+    // function filterDefaultStates(state_id) {
+    //     var country_id = $('#country_id').val();
+    //     if (country_id != '') {
+    //         $.post("{{ route('filter.default.states.dropdown') }}", {
+    //                 country_id: country_id,
+    //                 state_id: state_id,
+    //                 _method: 'POST',
+    //                 _token: '{{ csrf_token() }}'
+    //             })
+    //             .done(function(response) {
+    //                 $('#default_state_dd').html(response);
+    //                 filterDefaultCities(<?php echo old('city_id', (isset($company)) ? $company->city_id : 0); ?>);
+    //             });
+    //     }
+    // }
 
-    function filterDefaultCities(city_id) {
-        var state_id = $('#state_id').val();
-        if (state_id != '') {
-            $.post("{{ route('filter.default.cities.dropdown') }}", {
-                    state_id: state_id,
-                    city_id: city_id,
-                    _method: 'POST',
-                    _token: '{{ csrf_token() }}'
-                })
-                .done(function(response) {
-                    $('#default_city_dd').html(response);
-                });
-        }
-    }
+    // function filterDefaultCities(city_id) {
+    //     var state_id = $('#state_id').val();
+    //     if (state_id != '') {
+    //         $.post("{{ route('filter.default.cities.dropdown') }}", {
+    //                 state_id: state_id,
+    //                 city_id: city_id,
+    //                 _method: 'POST',
+    //                 _token: '{{ csrf_token() }}'
+    //             })
+    //             .done(function(response) {
+    //                 $('#default_city_dd').html(response);
+    //             });
+    //     }
+    // }
 
-    $(document).ready(function() {
-        $('#country_id').on('change', function(e) {
-            e.preventDefault();
-            filterDefaultStates(0);
-        });
-        $(document).on('change', '#state_id', function(e) {
-            e.preventDefault();
-            filterDefaultCities(0);
-        });
-        filterDefaultStates(<?php echo old('state_id', (isset($company)) ? $company->state_id : 0); ?>);
+    // $(document).ready(function() {
+    //     $('#country_id').on('change', function(e) {
+    //         e.preventDefault();
+    //         filterDefaultStates(0);
+    //     });
+    //     $(document).on('change', '#state_id', function(e) {
+    //         e.preventDefault();
+    //         filterDefaultCities(0);
+    //     });
+    //     filterDefaultStates(<?php echo old('state_id', (isset($company)) ? $company->state_id : 0); ?>);
 
-        $(".toggle-password").click(function() {
+    //     $(".toggle-password").click(function() {
 
-            $(this).toggleClass("fa-eye fa-eye-slash");
-            var input = $($(this).attr("toggle"));
-            if (input.attr("type") == "password") {
-                input.attr("type", "text");
-            } else {
-                input.attr("type", "password");
-            }
-        });
+    //         $(this).toggleClass("fa-eye fa-eye-slash");
+    //         var input = $($(this).attr("toggle"));
+    //         if (input.attr("type") == "password") {
+    //             input.attr("type", "text");
+    //         } else {
+    //             input.attr("type", "password");
+    //         }
+    //     });
 
-        $('#country_id').on('change', function(e) {
-            e.preventDefault();
-            filterLangStates(0);
-        });
-        $(document).on('change', '#state_id', function(e) {
-            e.preventDefault();
-            filterLangCities(0);
-        });
-        filterLangStates(<?php echo old('state_id', (isset($company)) ? $company->state_id : 0); ?>);
+    //     $('#country_id').on('change', function(e) {
+    //         e.preventDefault();
+    //         filterLangStates(0);
+    //     });
+    //     $(document).on('change', '#state_id', function(e) {
+    //         e.preventDefault();
+    //         filterLangCities(0);
+    //     });
+    //     filterLangStates(<?php echo old('state_id', (isset($company)) ? $company->state_id : 0); ?>);
 
-        /*******************************/
-        // var fileInput = document.getElementById("logo");
-        // fileInput.addEventListener("change", function (e) {
-        //     var files = this.files
-        //     showThumbnail(files)
-        // }, false)
-    });
+    //     /*******************************/
+    //     // var fileInput = document.getElementById("logo");
+    //     // fileInput.addEventListener("change", function (e) {
+    //     //     var files = this.files
+    //     //     showThumbnail(files)
+    //     // }, false)
+    // });
 
     var fileInput = document.getElementById("image");
     if (fileInput) {
@@ -942,5 +966,7 @@
         }
 
     }
+
+
 </script>
 @endpush
