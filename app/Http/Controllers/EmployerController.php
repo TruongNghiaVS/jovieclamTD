@@ -154,7 +154,9 @@ class EmployerController extends Controller
             {  
                 $companyActive->verified = 1;
                 $companyActive->is_active = 1;
+                $companyActive->jobs_quota = 30;
                 $companyActive->cvs_package_id = 9;
+                $companyActive->availed_jobs_quota = 30;
                 $companyActive->cvs_package_start_date =\Carbon\Carbon::now() ;
                 $companyActive->cvs_package_end_date =\Carbon\Carbon::now()->addMonths(1) ;
                 $save = $companyActive->save();
