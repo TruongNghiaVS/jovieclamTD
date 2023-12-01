@@ -319,6 +319,9 @@ ul.list-unstyled.components.sidebar-bottom__item li{
 .table-content {
     border: 1px solid #e0e0e0;
 }
+h2.title {
+    font-weight: 400;
+}
 
 @media only screen and (max-width: 767px) {
     #company-default-nav {

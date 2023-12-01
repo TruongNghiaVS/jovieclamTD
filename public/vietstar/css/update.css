@@ -7820,7 +7820,8 @@ span.iconmoon.icon-eye-icon {
 }
 
 .table-applican-manager {
-    min-width: 950px
+    min-width: 950px;
+    
 }
 
 .table-applican-manager tbody tr td {

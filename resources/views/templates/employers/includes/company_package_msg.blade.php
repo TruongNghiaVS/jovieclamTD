@@ -40,14 +40,14 @@ $formatDate = $language == 'vi' ? 'd-m-Y' : 'd M, Y';
     <table class="table table-applican-manager table-hover mb-0 border-0">
         <thead class="table-light">
             <tr>
-                <th class="font-weight-bold p-2 fx-21px p-3" colspan="3">{{ __('Package Name') }}</th>
+                <th class="font-weight-bold p-2 fx-16px p-3" colspan="3">{{ __('Package Name') }}</th>
                 <!-- <th class="font-weight-bold"></th> -->
-                <th class="font-weight-bold p-2 fx-21px p-3">{{ __('Posting limit') }}</th>
-                <th class="font-weight-bold p-2 fx-21px p-3">{{ __('Availed quota') }}</th>
-                <th class="font-weight-bold p-2 fx-21px p-3">{{ __('Activation start date') }}</th>
+                <th class="font-weight-bold p-2 fx-16px p-3">{{ __('Posting limit') }}</th>
+                <th class="font-weight-bold p-2 fx-16px p-3">{{ __('Availed quota') }}</th>
+                <th class="font-weight-bold p-2 fx-16px p-3">{{ __('Activation start date') }}</th>
 
-                <th class="font-weight-bold p-2 fx-21px p-3">{{ __('Activatione expriration date') }}</th>
-                <th class="font-weight-bold p-2 fx-21px p-3">{{ __('Package Price') }}</th>
+                <th class="font-weight-bold p-2 fx-16px p-3">{{ __('Activatione expriration date') }}</th>
+                <th class="font-weight-bold p-2 fx-16px p-3">{{ __('Package Price') }}</th>
 
             </tr>
         </thead>
