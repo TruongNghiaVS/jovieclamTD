@@ -37,4 +37,9 @@ use ResetsPasswords;
         $this->middleware('guest');
     }
 
+    public function ResetPasswordMember()
+    {
+        return view('auth.passwords.memberResetPassword');
+    }
+
 }
