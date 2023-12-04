@@ -310,7 +310,7 @@
                 data: formData,
                 success: function(response) {
                     // Handle success
-                    // location.reload();
+                    location.reload();
                 },
                 error: function(xhr, status, error) {
                     // Handle error
