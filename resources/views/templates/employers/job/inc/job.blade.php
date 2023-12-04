@@ -1,4 +1,4 @@
-<h1 class="fs-1">{{__('Recruitment Posting')}}</h1>
+<h1 class="fs-2 text-primary">{{__('Recruitment Posting')}}</h1>
 @if(isset($job))
 {!! Form::model($job, array('method' => 'put', 'route' => array('update.front.job', $job->id), 'class' => 'form')) !!}
 {!! Form::hidden('id', $job->id) !!}
@@ -9,7 +9,7 @@
 
 
 <div class="card card-edit-profile">
-    <h2 class="fs-3 card-edit-profile__section">Thông tin tuyển dụng</h2>
+    <h2 class="fs-4 card-edit-profile__section">Thông tin tuyển dụng</h2>
     <div class="card-body">
         <div class="section-infomation account-infomation">
             <div class="row">
@@ -223,7 +223,7 @@
 </div>
 
 <div class="card card-edit-profile my-3">
-    <h2 class="fs-3 card-edit-profile__section">YÊU CẦU CHUNG</h2>
+    <h2 class="fs-4 card-edit-profile__section">Yêu cầu chung</h2>
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
