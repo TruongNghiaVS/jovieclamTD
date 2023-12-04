@@ -216,12 +216,15 @@ $(document).ready(function() {
         }
 
 
-        isValid = this.checkValidity();
 
 
+     
         if (!isValid) {
             event.preventDefault(); // Prevent the form from submitting
         }
+        console.log((this).serialize());
+
+        
         if (isValid) { 
             $.ajax({
             type: "POST",

@@ -124,22 +124,22 @@
             </div>
               
             </div>
-            <table class="table table-applican-manager table-hover mb-0 border-0">
+            <table class="table table-applican-manager table-hover mb-0 border-0 ">
                 <thead>
                     <tr>
-                        <th class="font-weight-bold p-2 fx-16px" colspan="2">{{ __('Positions') }}</th>
+                        <th class="font-weight-bold p-2" >{{ __('Positions') }}</th>
                         <!-- <th class="font-weight-bold"></th> -->
-                        <th class="font-weight-bold p-2 fx-16px">Ngày đăng</th>
-                        <th class="font-weight-bold p-2 fx-16px">Ngày hết hạn</th>
-                        <th class="font-weight-bold p-2 fx-16px">{{ __('Status') }}</th>
+                        <th class="font-weight-bold p-2"  >Ngày đăng</th>
+                        <th class="font-weight-bold p-2"  >Ngày hết hạn</th>
+                        <th class="font-weight-bold p-2"  >{{ __('Status') }}</th>
 
-                        <th class="font-weight-bold p-2 fx-16px">{{ __('Location') }}</th>
-                        <th class="font-weight-bold p-2 fx-16px">{{ __('Salary') }}</th>
+                        <th class="font-weight-bold p-2"  >{{ __('Location') }}</th>
+                        <th class="font-weight-bold p-2"  >{{ __('Salary') }}</th>
 
-                        <th class="font-weight-bold p-2 fx-16px">{{ __('List of Candidates') }}</th>
-                        <th class="font-weight-bold p-2 fx-16px">{{ __('Interview Candidates') }}</th>
-                        <th class="font-weight-bold p-2 fx-16px">{{ __('List of Hired Candidates') }}</th>
-                        <th class="font-weight-bold p-2 fx-16px">{{ __('List of Rejected Candidates') }}</th>
+                        <th class="font-weight-bold p-2" >Lượt nộp</th>
+                        <th class="font-weight-bold p-2"  >{{ __('Interview Candidates') }}</th>
+                        <th class="font-weight-bold p-2"  >{{ __('List of Hired Candidates') }}</th>
+                        <th class="font-weight-bold p-2"  >{{ __('List of Rejected Candidates') }}</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -149,7 +149,7 @@
 
                     <tr class="posted-manager_tb_row">
 
-                        <td colspan="2">
+                        <td>
                             <div class="d-flex align-items-center h-100">
                                 <div class="fs-18px font-weight-bold text-primary">
                                     {{ $job->title }}
@@ -202,7 +202,7 @@
                         </td>
                         <td>
                             <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                {{ $job->appliedUsers->count() }}
+                                {{ $job->appliedUsers->count() }} 
                             </div>
                         </td>
 
@@ -283,6 +283,7 @@
     .w-10 {
         width: 10%;
     }
+    
 
   
 </style>

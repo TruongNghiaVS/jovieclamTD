@@ -41,12 +41,7 @@
         padding: 0;
     }
 
-    select:invalid {
-        height: 0px !important;
-        opacity: 0 !important;
-        position: absolute !important;
-        display: flex !important;
-    }
+    
 
     select:invalid[multiple] {
         margin-top: 15px !important;
@@ -419,7 +414,9 @@
                         </div>
 
                         <div class="user__infomation" bis_skin_checked="1">
-                            <h5 id="">Freelandcer</h5>
+                       
+
+                            <h5 id="">{{ $company->industry_id ?  $company->industry_id: " "}}</h5>
                         </div>
 
                         <div class="user__complete_section" bis_skin_checked="1">
@@ -751,11 +748,11 @@
     </div>
 </form>
 
-@include('templates.vietstar.company.form.resetpassword')
+@include('templates.employers.company.form.resetpassword')
 
-@include('templates.vietstar.company.form.companyinfo_form')
+@include('templates.employers.company.form.companyinfo_form')
 
-@include('templates.vietstar.company.form.contact')
+@include('templates.employers.company.form.contact')
 
 
 @push('scripts')

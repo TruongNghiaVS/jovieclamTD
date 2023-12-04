@@ -4058,7 +4058,7 @@ div#industry_id_chosen {
 }
 
 .user-badge {
-    background: #f8f8fa;
+ 
     border-radius: 6px;
     padding: 4px 8px;
     position: relative
@@ -7820,7 +7820,8 @@ span.iconmoon.icon-eye-icon {
 }
 
 .table-applican-manager {
-    min-width: 950px
+    min-width: 950px;
+    
 }
 
 .table-applican-manager tbody tr td {
