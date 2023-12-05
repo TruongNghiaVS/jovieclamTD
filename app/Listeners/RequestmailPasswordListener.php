@@ -3,14 +3,14 @@
 namespace App\Listeners;
 
 use Mail;
-use App\Events\CompanyRegistered;
+use App\Events\RequestPasswordLink;
 use App\Mail\CompanyRegisteredMailable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use App\CodeActive;
+use App\ResetPassword;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Http;
-class CompanyRegisterdListener implements ShouldQueue
+class RequestmailPasswordListener implements ShouldQueue
 {
 
     /**
@@ -29,17 +29,18 @@ class CompanyRegisterdListener implements ShouldQueue
      * @param  CompanyRegistered  $event
      * @return void
      */
-public function handle(CompanyRegistered $event)
+    public function handle(RequestPasswordLink $event)
     {
- 
         $data = $event->company;
         $codegenerate =  Str::random(30);
         $email = $data->email;
-        $codeActive = new CodeActive();
+        $codeActive = new ResetPassword();
         $codeActive->code = $codegenerate;
+        $codeActive->type ="1";
+        $codeActive->isMember ="0";
         $codeActive->userId = $data->id;
         $codeActive->save();
-        $response = Http::post('http://localhost:8082/pushMailNOtification', [
+        $response = Http::post('http://localhost:8082/pushMailResetPassword', [
             'emailTo' => $data->email,
             'code' =>  $codeActive->code
         ]);

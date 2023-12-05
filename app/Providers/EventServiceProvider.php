@@ -14,6 +14,9 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
+        'App\Events\CompanyResetPasswordMail' => [
+            'App\Listeners\CompanyResetPasswordMailListener',
+        ],
         'App\Events\UserRegistered' => [
             'App\Listeners\UserRegisterdListener',
         ],
@@ -27,6 +30,7 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\JobAppliedJobSeekerListener',
             'App\Listeners\JobAppliedCompanyListener',
         ],
+        
     ];
 
     /**

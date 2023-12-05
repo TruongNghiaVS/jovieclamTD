@@ -173,6 +173,8 @@ use AuthenticatesUsers;
         
 
         Auth::login($exitMemeber, true);
+
+       
         return response()->json([
             'sucess'=>true,
             'urlRedirect'=> "/home",

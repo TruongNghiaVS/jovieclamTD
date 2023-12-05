@@ -21,7 +21,8 @@ class VerifyCsrfToken extends Middleware
         'ajax_remove_file',
         'contact/CreateRequest',
         'contact/Addadvice',
-        'contact/addEmailNotification'
+        'contact/addEmailNotification',
+        'recruiter/requestResetPassword'
     ];
 
 }
