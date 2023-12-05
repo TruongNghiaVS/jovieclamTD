@@ -11,6 +11,7 @@
 <div class="company-wrapper">     
              
             <div class="company-content container addjob"> 
+                @include('flash::message') 
                 <div class="row">
                     <div class="col-md-12">
                         <div class="">

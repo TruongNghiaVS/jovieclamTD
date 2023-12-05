@@ -9,10 +9,10 @@
 <?php $company = Auth::guard('company')->user(); ?>
 <div class="company-wrapper">
             
-        @include('flash::message')
-        
-        @include('templates.employers.includes.mobile_dashboard_menu')
-            <div class="container company-content">
+    
+    @include('templates.employers.includes.mobile_dashboard_menu')
+    <div class="container company-content">
+                @include('flash::message')
                 @if(null!==($success_package) && !empty($success_package))
                     @php
                         $language = \App::getLocale();

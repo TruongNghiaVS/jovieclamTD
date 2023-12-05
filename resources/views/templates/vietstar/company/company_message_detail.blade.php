@@ -11,6 +11,7 @@
          
         @include('templates.vietstar.includes.mobile_dashboard_menu')
             <div class="container company-content">
+            @include('flash::message') 
                 <div class="myads">
                     <h3>{{__('Company Messages')}}</h3>
                     <div class="panel-group"> 

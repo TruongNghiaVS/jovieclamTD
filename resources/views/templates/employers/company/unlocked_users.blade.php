@@ -18,7 +18,7 @@
         @include('templates.employers.includes.mobile_dashboard_menu')
 
             <div class="container company-content"> 
-
+            @include('flash::message') 
                 <div class="myads">
 
                     <h3>{{__('Unlocked Seekers')}}</h3>
