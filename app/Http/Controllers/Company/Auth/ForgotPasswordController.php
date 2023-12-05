@@ -10,6 +10,7 @@ use App\ResetPassword;
 use App\Events\CompanyResetPasswordMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use \stdClass;
 use Illuminate\Support\Facades\Http;
 class ForgotPasswordController extends Controller
 {

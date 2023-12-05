@@ -22,7 +22,8 @@ class VerifyCsrfToken extends Middleware
         'contact/CreateRequest',
         'contact/Addadvice',
         'contact/addEmailNotification',
-        'recruiter/requestResetPassword'
+        'recruiter/requestResetPassword',
+        'employer/changePassword'
     ];
 
 }

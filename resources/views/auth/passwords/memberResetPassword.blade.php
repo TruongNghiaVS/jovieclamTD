@@ -1,7 +1,7 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 @section('content')
 <!-- Header start -->
-@include('templates.vietstar.includes.header')
+@include('templates.employers.includes.header')
 <!-- Header end -->
 <div class="reset-password-section cb-section">
     <div class="container mt-5">
