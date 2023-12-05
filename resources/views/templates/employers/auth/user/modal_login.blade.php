@@ -190,7 +190,7 @@ $(document).ready(function() {
         $("#employers_login").find(":input").prop("disabled", false);
 
 
-        var email = $('#email').val();
+        var email = $('#employers_login #email').val();
         console.log(email);
 
         // Simple email validation using a regular expression
@@ -198,16 +198,16 @@ $(document).ready(function() {
 
         if (emailRegex.test(email)) {
             // Email is valid
-            $('#email').removeClass('is-invalid');
-            $('#email').addClass('is-valid');
+            $('#employers_login #email').removeClass('is-invalid');
+            $('#employers_login #email').addClass('is-valid');
             isValid = true;
            
         } else {
             // Email is invalid
             isValid = false;
-            $('#email').removeClass('is-valid');
-            $('#email').addClass('is-invalid');
-            $('.email-error').text('{{__('The email must be a valid email address')}}')
+            $(' #employers_login #email').removeClass('is-valid');
+            $('#employers_login #email').addClass('is-invalid');
+            $('#employers_login .email-error').text('{{__('The email must be a valid email address')}}')
         }
 
 

@@ -392,6 +392,15 @@
         position: relative;
         border-left: 1px solid #e8e8e8;
         padding: 3px 11px;
+        max-width: 200px;
+        height: 100%;
+    }
+
+    .user-badge__btn  span {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
     }
    .user_menu{
         display: none;
