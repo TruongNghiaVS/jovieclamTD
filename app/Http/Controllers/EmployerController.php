@@ -337,4 +337,14 @@ class EmployerController extends Controller
         ];
         return view(config('app.THEME_PATH').'.handbook', $data);
     }
+
+    public function loginPage(Request $request)
+    {
+        return view('templates.vietstar.auth.login');
+    }
+
+    public function resisterPage(Request $request)
+    {
+        return view('templates.vietstar.auth.register');
+    }
 }

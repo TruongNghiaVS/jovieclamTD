@@ -29,7 +29,8 @@ Route::get('/employer/forgotpassword', 'Auth\ResetPasswordController@ResetPasswo
 Route::post('/employer/changePassword', 'Auth\ResetPasswordController@ChangePassword')->name('member.ChangePassword');
 Route::get('/employers/active', 'EmployerController@Active')->name('employer.Active');
 Route::get('/', 'EmployerController@index')->name('index');
-
+Route::get('/employer/login', 'EmployerController@loginPage')->name('employerlogin');
+Route::get('/employer/register', 'EmployerController@resisterPage')->name('employerRegister');
 Route::post('contact/CreateRequest', 'Contact\ContactController@ContactRequest')->name('contact-request');
 Route::post('contact/Addadvice', 'Contact\ContactController@AdviceRequest')->name('contact-advice');
 Route::post('contact/addEmailNotification', 'Contact\ContactController@NoficationEmail')->name('contact-email');
