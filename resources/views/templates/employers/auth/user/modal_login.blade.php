@@ -216,7 +216,8 @@ $(document).ready(function() {
                     // No content found (404)
                     console.log(responseObject.responseJSON);
                     responseObject.responseJSON.error.forEach(err => {
-                        console.log(err);
+                        $(`#employers_login .invalid-feedback.${err.key}-error`).empty();
+                        
                         $(`#employers_login .invalid-feedback.${err.key}-error`).text(err.textError)
                         $(`#employers_login .invalid-feedback.${err.key}-error`).addClass('has-error')
                         $(`#employers_login input[name*='${err.key}']`).addClass('has-error')

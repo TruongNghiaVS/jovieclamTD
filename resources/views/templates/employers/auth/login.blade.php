@@ -312,6 +312,8 @@
                     // No content found (404)
                     console.log(responseObject.responseJSON);
                     responseObject.responseJSON.error.forEach(err => {
+                        $(`#company_login_tab .invalid-feedback.${err.key}-error`).empty();
+
                         $(`#company_login_tab .invalid-feedback.${err.key}-error`).text(err.textError)
                         $(`#company_login_tab .invalid-feedback.${err.key}-error`).addClass('has-error')
                         $(`#company_login_tab input[name*='${err.key}']`).addClass('has-error')

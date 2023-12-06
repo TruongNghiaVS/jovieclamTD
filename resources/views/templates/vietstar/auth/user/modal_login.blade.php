@@ -32,9 +32,14 @@
                             <input type="submit" onclick ="submitform()"  class="btn" value="{{__('Login')}}">
                         </div>
 
-                     
+                        <div class="text-center ml-1" style="margin: 15px 0;">
+                            <span>
+                                Hoặc đăng nhập bằng
+                            </span>
+                        </div>
+                        <!-- login form  end-->
                     </form>
-                    
+                   
                     <!-- sign up form -->
                     <div class="newuser">{{__('New User')}}?
                         <a href="#" data-toggle="modal" data-target="#user_logup_Modal" data-dismiss="modal" aria-label="Close">{{__('Register Here')}}</a>
@@ -69,6 +74,7 @@
 
 @push('styles')
 <style>
+ 
     .invalid-feedback {
         display: none;
     }
@@ -139,6 +145,7 @@
     border:0px;
 }
 
+ 
 </style>
 @endpush
 
@@ -225,6 +232,7 @@ $(document).ready(function() {
                     // No content found (404)
                     console.log(responseObject.responseJSON);
                     responseObject.responseJSON.error.forEach(err => {
+                        $(`#formLogin .invalid-feedback.${err.key}-error`).empty();
                         $(`#formLogin .invalid-feedback.${err.key}-error`).text(err.textError)
                         $(`#formLogin .invalid-feedback.${err.key}-error`).addClass('has-error')
                         $(`#formLogin input[name*='${err.key}']`).addClass('has-error')

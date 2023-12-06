@@ -1,115 +1,255 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 @section('content')
 <!-- Header start -->
-@include('templates.vietstar.includes.header')
+@include('templates.employers.includes.header')
 <!-- Header end -->
-<!-- Inner Page Title start -->
-@include('templates.vietstar.includes.mobile_dashboard_menu')
-@include('templates.vietstar.includes.inner_page_title', ['page_title'=>__('Login')])
-<!-- Inner Page Title end -->
-<div class="shadow">
+<div class="second-login-section cb-section">
     <div class="container">
-        @include('flash::message')
+        <div class="row justify-content-md-center">
 
-        <div class="useraccountwrap">
-            <div class="userccount">
-                <div class="userbtns">
-                    <ul class="nav nav-tabs">
-                        <?php
-                            $c_or_e = old('candidate_or_employer', 'candidate');
-                            ?>
-                        <li class="nav-item"><a class="nav-link {{($c_or_e == 'candidate')? 'active':''}}"
-                                data-toggle="tab" href="#candidate" aria-expanded="true">{{__('Candidate')}}</a></li>
-                        <li class="nav-item"><a class="nav-link {{($c_or_e == 'employer')? 'active':''}}"
-                                data-toggle="tab" href="#employer" aria-expanded="false">{{__('Employer')}}</a></li>
-                    </ul>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="box-img">
+                    <img src="https://ads.careerbuilder.vn/www/images/6804e96cfe23971714beafba912d8782.jpg" alt="">
                 </div>
-
-
-                <div class="tab-content">
-                    <div id="candidate" class="formpanel tab-pane {{($c_or_e == 'candidate')? 'active':''}}">
-                      
-                        <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                            {{ csrf_field() }}
-                            <input type="hidden" name="candidate_or_employer" value="candidate" />
-                            <div class="formpanel">
-                                <div class="formrow{{ $errors->has('email') ? ' has-error' : '' }}">
-                                    <input id="email" type="email" class="form-control" name="email"
-                                        value="{{ old('email') }}" required autofocus
-                                        placeholder="{{__('Email Address')}}">
-                                    @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                                <div class="formrow{{ $errors->has('password') ? ' has-error' : '' }}">
-                                    <input id="password" type="password" class="form-control" name="password" value=""
-                                        required placeholder="{{__('Password')}}">
-                                    @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                                <input type="submit" class="btn" value="{{__('Login')}}">
-                            </div>
-                            <!-- login form  end-->
-                        </form>
-                        <!-- sign up form -->
-                        <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i> {{__('New User')}}? <a
-                                href="{{route('register')}}">{{__('Register Here')}}</a></div>
-                        <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i>
-                            {{__('Forgot Your Password')}}? <a
-                                href="{{ route('password.request') }}">{{__('Click here')}}</a></div>
-                        <!-- sign up form end-->
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-12" bis_skin_checked="1">
+                <div class="box-info-signup forgot-password" id="login" bis_skin_checked="1">
+                    <div class="title" bis_skin_checked="1">
+                        <h2 class="text-primary">Quên Mật Khẩu</h2>
                     </div>
-                    <div id="employer" class="formpanel tab-pane fade {{($c_or_e == 'employer')? 'active':''}}">
-                      
-                        <form class="form-horizontal" method="POST" action="{{ route('company.login') }}">
+                    <div class="step-title d-flex align-center" bis_skin_checked="1">
+                        <div class="main-step-title" bis_skin_checked="1">
+                            <h3>THÔNG TIN ĐĂNG NHẬP</h3>
+                        </div>
+                    </div>
+                    <div class="main-form" bis_skin_checked="1">
+                        <form class="form-horizontal needs-validation" id="formLogin2" novalidate>
                             {{ csrf_field() }}
-                            <input type="hidden" name="candidate_or_employer" value="employer" />
-                            <div class="formpanel">
-                                <div class="formrow{{ $errors->has('email') ? ' has-error' : '' }}">
-                                    <input id="email" type="email" class="form-control" name="email"
-                                        value="{{ old('email') }}" required autofocus
-                                        placeholder="{{__('Email Address')}}">
-                                    @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                    @endif
+                            <div class="form-group d-flex" bis_skin_checked="1">
+                                <div class="form-info" bis_skin_checked="1">
+                                    <span>{{__(('Email'))}}</span>
                                 </div>
-                                <div class="formrow{{ $errors->has('password') ? ' has-error' : '' }}">
-                                    <input id="password" type="password" class="form-control" name="password" value=""
-                                        required placeholder="{{__('Password')}}">
-                                    @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                    @endif
+                                <div class="form-input " bis_skin_checked="1">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus placeholder="{{__('Email Address')}}">
+                                    <div class="invalid-feedback email-error">
+                                        {{__('Email is required')}}
                                 </div>
-                                <input type="submit" class="btn" value="{{__('Login')}}">
+                                </div>
                             </div>
-                            <!-- login form  end-->
+
+                            <div class="form-group d-flex" bis_skin_checked="1">
+                                <div class="form-info" bis_skin_checked="1">
+                                    <span>{{__(('Password'))}}</span>
+                                </div>
+                                <div class="form-input" bis_skin_checked="1">
+                                <input id="password" type="password" class="form-control" name="password" value="" required placeholder="{{__('Password')}}">
+                                    <div class="invalid-feedback password-error">
+                                            {{__('Password is required')}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user-action" bis_skin_checked="1">
+                                <div class="btn-area" bis_skin_checked="1">
+                                    <button type="submit" id="resetPasswordBtn_company" class="btn btn-primary" value="Gửi">Gửi</button>
+                                </div>
+                                <p> <a class="register" href="#" data-toggle="modal" data-target="#company_logup_Modal">Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
+
+                                <div class="text-help" bis_skin_checked="1">
+                                    <p>Nếu bạn cần sự trợ giúp, vui lòng liên hệ:</p>
+                                    <p>Email: <a href="#" target="_blank">support@jobvieclam.com</a></p>
+                                </div>
+                            </div>
                         </form>
-                        <!-- sign up form -->
-                        <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i> {{__('New User')}}? <a
-                                href="{{route('register')}}">{{__('Register Here')}}</a></div>
-                        <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i>
-                            {{__('Forgot Your Password')}}? <a
-                                href="{{ route('company.password.request') }}">{{__('Click here')}}</a></div>
-                        <!-- sign up form end-->
                     </div>
                 </div>
-                <!-- login form -->
-
-
-
             </div>
         </div>
-
     </div>
 </div>
-@include('templates.vietstar.includes.footer')
+@include('templates.employers.includes.footer')
 @endsection
+@push('styles')
+<style>
+    .second-login-section.cb-section {
+        padding: 60px 0;
+    }
+
+    .second-login-section.cb-section .container {
+        max-width: 1440px;
+    }
+
+    .box-img {
+        margin-right: -50px;
+        width: 100%;
+    }
+
+    .box-img img {
+        width: 100%;
+    }
+
+    .box-info-signup {
+        margin-left: 50px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .box-info-signup .title h2 {
+        margin-bottom: 20px;
+    }
+
+    .box-info-signup .main-step-title h3 {
+
+        font-weight: normal;
+        font-size: 17px;
+        color: #333;
+    }
+
+    .main-form .form-group .form-info {
+        -webkit-box-flex: 0;
+        flex: 0 0 150px;
+        max-width: 150px;
+    }
+
+    .main-form .form-group .form-info span {
+        width: 100%;
+        background: var(--bs-primary);
+        color: #fff;
+        text-transform: uppercase;
+        padding-left: 15px;
+        height: 45px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        border-radius: 6px 0 0 6px;
+    }
+
+    .main-form .form-group .form-input {
+        -ms-flex: 0 0 calc(100% - 150px);
+        -webkit-box-flex: 0;
+        flex: 0 0 calc(100% - 150px);
+        max-width: calc(100% - 150px);
+    }
+
+    .main-form .form-group .form-input.short {
+        -ms-flex: 0 0 200px;
+        -webkit-box-flex: 0;
+        flex: 0 0 200px;
+        max-width: 200px;
+    }
+
+    .user-action {}
+
+    .user-action>* {
+        margin-bottom: 20px;
+    }
+
+    .btn-area {
+        text-align: right;
+    }
+</style>
+@endpush
+
+@push('scripts')
+<script type="text/javascript">
+    
+     $('#formLogin2').submit(function(event) {
+        var isValid = true;
+        event.preventDefault()
+        
+        // Check each input field for emptiness
+        $('#formLogin2 input').each(function() {
+            if (!$(this).val()) {
+                isValid = false;
+                $(this).addClass('is-invalid');
+              
+            }
+        });
+
+        $("#formLogin2").find(":input").prop("disabled", false);
+
+
+        var email = $('#email').val();
+
+        // Simple email validation using a regular expression
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailRegex.test(email)) {
+            // Email is valid
+            $('#email').removeClass('is-invalid');
+            $('#email').addClass('is-valid');
+
+           
+        } else {
+            // Email is invalid
+           
+            $('#email').removeClass('is-valid');
+            $('#email').addClass('is-invalid');
+            $('.email-error').text('{{__('The email must be a valid email address')}}')
+        }
+
+
+      
+
+     
+        if (!isValid) {
+            event.preventDefault(); // Prevent the form from submitting
+        }
+      
+
+        
+        if (isValid) { 
+            $.ajax({
+            type: "POST",
+            url:  `{{route('company.login')}}`,
+            data: $(this).serialize(),
+            statusCode: {
+                202 :  function(responseObject, textStatus, jqXHR) {
+                    console.log(responseObject.error);
+        
+                },
+                401: function(responseObject, textStatus, jqXHR) {
+                    // No content found (404)
+                    console.log(responseObject.responseJSON);
+                    responseObject.responseJSON.error.forEach(err => {
+                        $(`#formLogin2 .invalid-feedback.${err.key}-error`).empty();
+                        $(`#formLogin2 .invalid-feedback.${err.key}-error`).text(err.textError)
+                        $(`#formLogin2 .invalid-feedback.${err.key}-error`).addClass('has-error')
+                        $(`#formLogin2 input[name*='${err.key}']`).addClass('has-error')
+                    })
+                    // This code will be executed if the server returns a 404 response
+                },
+                503: function(responseObject, textStatus, errorThrown) {
+                    // Service Unavailable (503)
+                    console.log(responseObject.error);
+
+                    // This code will be executed if the server returns a 503 response
+                }           
+                }
+                })
+                .done(function(data){
+                    // setTimeout(function() { 
+                    //     alert(data.message)
+                    // }, 2000);
+                    if(data.sucess == true){
+                        window.location.href = data.urlRedirect;
+                    }
+                
+                })
+                .fail(function(jqXHR, textStatus){
+                    
+                })
+                .always(function(jqXHR, textStatus) {
+                
+                });
+                }
+    });
+
+    // Remove validation class on input change
+    $('#formLogin2 input').on('input', function() {
+        $(this).removeClass('is-invalid');
+    });
+</script>
+@endpush
