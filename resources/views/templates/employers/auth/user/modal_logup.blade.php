@@ -307,7 +307,7 @@ $(document).ready(function() {
         if (isValid) { 
             $.ajax({
             type: "POST",
-            url:  '{{ route('company.register') }}',
+            url:  `{{ route('company.register') }}`,
             data: $(this).serialize(),
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
@@ -334,7 +334,7 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
-                    if(data.success){
+                    if (data.sucess == true ) {
                         $('#logup_em_success').modal('show');
                         
                     
@@ -344,6 +344,7 @@ $(document).ready(function() {
                             window.location.href = '/company-home';  // Replace with the actual URL
                         });
                     }
+                   
                                 
                     // $("#logup_em_success").addClass("show")
                     // $("#thank-you-pop button").on("click",function(){
