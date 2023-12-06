@@ -14,6 +14,7 @@
         @include('templates.employers.includes.mobile_dashboard_menu')
 
             <div class="container company-content"> 
+                @include('flash::message') 
                 <div class="myads">
                     <h3>{{__('Company Followers')}}</h3>
                     <div class="searchList jobs-apply-list">

@@ -15,11 +15,11 @@
 <!-- Inner Page Title end -->
 <div class="company-wrapper">
 
-            @include('flash::message')
-             
-            @include('templates.employers.includes.mobile_dashboard_menu')
-
+    
+    @include('templates.employers.includes.mobile_dashboard_menu')
+    
             <div class="container company-content">
+                @include('flash::message')
                
                 @include('templates.employers.includes.company_application_manager_filter')
             

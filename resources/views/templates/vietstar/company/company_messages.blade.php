@@ -17,6 +17,7 @@
              
         @include('templates.vietstar.includes.mobile_dashboard_menu')
             <div class="container company-content">
+            @include('flash::message') 
                 <div class="card card-bio">
                     <h3>{{__('Company Messages')}}</h3>
                     <ul class="searchList">
