@@ -28,7 +28,7 @@
 
                 <div class="tab-content">
                     <div id="candidate" class="formpanel tab-pane {{($c_or_e == 'candidate')? 'active':''}}">
-                       
+                        
                         <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                             {{ csrf_field() }}
                             <input type="hidden" name="candidate_or_employer" value="candidate" />
@@ -65,7 +65,7 @@
                         <!-- sign up form end-->
                     </div>
                     <div id="employer" class="formpanel tab-pane fade {{($c_or_e == 'employer')? 'active':''}}">
-                       
+                      
                         <form class="form-horizontal" method="POST" action="{{ route('company.login') }}">
                             {{ csrf_field() }}
                             <input type="hidden" name="candidate_or_employer" value="employer" />

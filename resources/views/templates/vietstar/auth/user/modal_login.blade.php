@@ -32,23 +32,9 @@
                             <input type="submit" onclick ="submitform()"  class="btn" value="{{__('Login')}}">
                         </div>
 
-                        <div class="text-center ml-1" style="margin: 15px 0;">
-                            <span>
-                                Hoặc đăng nhập bằng
-                            </span>
-                        </div>
-                        <!-- login form  end-->
+                     
                     </form>
-                    <div class="socialLogin">
-                        <a href="{{ url('login/jobseeker/facebook')}}" class="fb">
-                            <i class="fab fa-facebook-f"></i>
-                            <span>Facebook</span>
-                        </a>
-                        <a href="{{ url('login/jobseeker/google')}}" class="gp"><i class="fab fa-google"></i>
-                            <span>Google</span>
-                        </a>
-                        {{--<a href="{{ url('login/jobseeker/twitter')}}" class="tw"><i class="fab fa-twitter"></i> <span>Twitter</span></a>--}}
-                    </div>
+                    
                     <!-- sign up form -->
                     <div class="newuser">{{__('New User')}}?
                         <a href="#" data-toggle="modal" data-target="#user_logup_Modal" data-dismiss="modal" aria-label="Close">{{__('Register Here')}}</a>
