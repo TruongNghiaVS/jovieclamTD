@@ -247,7 +247,7 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
-                    if (data.sucess == true && !data.error) { 
+                    if (data.sucess == true) { 
                         $("#employer_login_Modal").css("display:none");
                         $("#employer_login_Modal").removeClass("show");
                         window.location.href =  "/company-home";

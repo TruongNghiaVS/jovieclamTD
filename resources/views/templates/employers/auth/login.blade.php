@@ -443,7 +443,7 @@
                 }
                 })
                 .done(function(data){
-                    if (data.sucess == true && !data.error) {
+                    if (data.sucess == true) {
                         window.location.href = '/company-home';
                     }
                 })

@@ -200,8 +200,10 @@
                 }
                 })
                 .done(function(data){
-                   
+                
+                    if(data.sucess){
                         window.location.href = "{{route('company.login')}}";
+                    }
                 })
                 .fail(function(jqXHR, textStatus){
                     

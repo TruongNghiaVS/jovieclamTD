@@ -334,7 +334,7 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
-                    if (data.sucess == true && !data.error) {
+                    if (data.sucess == true ) {
                         $('#logup_em_success').modal('show');
                         
                     
