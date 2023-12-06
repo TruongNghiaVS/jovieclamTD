@@ -27,6 +27,7 @@ use Artisan;
 use App\CoverLetter;
 use App\Cms;
 use App\CodeActive;
+use Illuminate\Support\Facades\Http;
 
 class EmployerController extends Controller
 {
@@ -142,11 +143,13 @@ class EmployerController extends Controller
     }
     public function Active(Request $request)
     {
-        $code = $request->input('code');
-
-        $itemCodeActive = CodeActive::where("code",$code)->firstOrFail();
-
- 
+        $code = $request->input('code'); 
+        if($code =="")
+        {
+            return view("templates.vietstar.errors.404");
+        }   
+      
+        $itemCodeActive = CodeActive::where("code",$code)->where("status","1")->firstOrFail();
         if($itemCodeActive)
        {
             $companyActive = Company::where("id", $itemCodeActive->userId)->firstOrFail();
@@ -160,13 +163,21 @@ class EmployerController extends Controller
                 $companyActive->cvs_package_start_date =\Carbon\Carbon::now() ;
                 $companyActive->cvs_package_end_date =\Carbon\Carbon::now()->addMonths(1) ;
                 $save = $companyActive->save();
-                return view("templates.vietstar.info.successActive");
+                $itemCodeActive->status ="0";
+                $itemCodeActive->updated_at = \Carbon\Carbon::now() ;
+                $itemCodeActive->save();
+                $response = Http::post('http://localhost:8082/sendMailActiveTD', [
+                    'emailTo' => $companyActive->email,
+                    'fullName' =>  $companyActive->name
+                ]);
+                
+                return redirect('/login');
             }
             else 
             {
 
                 
-                return view("templates.vietstar.errors.404");
+                return view("templates.employers.errors.404");
             }
            
         }

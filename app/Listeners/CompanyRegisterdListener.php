@@ -39,7 +39,7 @@ public function handle(CompanyRegistered $event)
         $codeActive->code = $codegenerate;
         $codeActive->userId = $data->id;
         $codeActive->save();
-        $response = Http::post('http://localhost:8082/pushMailNOtification', [
+        $response = Http::post('http://localhost:8082/sendMailRegisterTD', [
             'emailTo' => $data->email,
             'code' =>  $codeActive->code
         ]);

@@ -22,7 +22,7 @@ class CodeActive extends Model
 
     protected $fillable = [
 
-        'userId', 'code', 'created_at',
+        'userId', 'code', 'status', 'created_at',
 
     ];
 
