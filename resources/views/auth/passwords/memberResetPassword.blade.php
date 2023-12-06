@@ -79,12 +79,13 @@
                                 </div>
 
                                 <div class="form-check mb-3">
-                                    <input class="form-check-input" type="checkbox" id="showPasswords">
+                                    
                                     <label class="form-check-label" for="showPasswords">{{__(('Show Password'))}}</label>
                                    
                                 </div>
-
-                                <button type="submit" class="btn btn-primary w-100">{{__(('Submit'))}}</button>
+                                <input type="text" class="form-control" id="forgotpassword" style="display: none;" required value="{{$resetPassword}}">
+                                
+                                <button type="button" id="passwordForm_btn" class="btn btn-primary w-100">{{__(('Submit'))}}</button>
                             </form>
                             <div class="need-help my-4" bis_skin_checked="1">
                                 <p>Nếu cần giúp đỡ, hãy liên hệ với chúng tôi
@@ -141,7 +142,7 @@
             input.attr('type', type);
         }
 
-        $('#passwordForm').submit(function(event) {
+        $('#passwordForm_btn').click(function(event) {
             var newPassword = $('#newPassword').val();
             var confirmPassword = $('#confirmPassword').val();
 
@@ -167,10 +168,48 @@
                 ismatch =true
                 $('#confirmPassword').removeClass('is-invalid');
             }
+        
+            var key =  $('#forgotpassword').val();
+            key = JSON.parse(key);
+            
+            if(ismatch && isvalid && key){
+                $.ajax({
+            type: "POST",
+            url:  `{{ route('member.ChangePassword') }}`,
+            data: {
+                password:$('#newPassword').val() ?$('#newPassword').val() :"",
+                code:key.code ? key.code :"",
+            },
+            statusCode: {
+                202 :  function(responseObject, textStatus, jqXHR) {
+                    console.log(responseObject.error);
+        
+                },
+                400: function(responseObject, textStatus, jqXHR) {
+                    // No content found (400)
+                    console.log(responseObject.responseJSON);
+                
+                    // This code will be executed if the server returns a 404 response
+                },
+                503: function(responseObject, textStatus, errorThrown) {
+                    // Service Unavailable (503)
+                    console.log(responseObject.error);
 
-            if(ismatch && isvalid){
-                // console.log("callapi");
-                // AJAX
+                    // This code will be executed if the server returns a 503 response
+                }           
+                }
+                })
+                .done(function(data){
+                   
+                        window.location.href = "{{route('company.login')}}";
+                })
+                .fail(function(jqXHR, textStatus){
+                    
+                })
+                .always(function(jqXHR, textStatus) {
+                
+                });
+
             }
         });
     });

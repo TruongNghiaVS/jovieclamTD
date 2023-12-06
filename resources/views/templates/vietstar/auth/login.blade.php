@@ -324,8 +324,11 @@
                 .done(function(data){
                     // setTimeout(function() { 
                     //     alert(data.message)
-                    //     window.location.href = data.urlRedirect;
                     // }, 2000);
+                        
+                    window.location.href = data.urlRedirect;
+                    
+
                     
                 })
                 .fail(function(jqXHR, textStatus){
@@ -382,7 +385,7 @@
         if (isValid) { 
             $.ajax({
             type: "POST",
-            url:  '{{ route('register') }}',
+            url:  `{{ route('register') }}`,
             data: $(this).serialize(),
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
@@ -409,11 +412,7 @@
                 }
                 })
                 .done(function(data){
-                    // console.log(data);
-                    // setTimeout(function() { 
-                    //     alert("Đang")
-                    //     window.location.href = ;
-                    // }, 2000);
+                    console.log(data);
                     
                 })
                 .fail(function(jqXHR, textStatus){

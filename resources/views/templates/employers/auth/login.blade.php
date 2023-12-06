@@ -157,7 +157,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group col-12 col-sm-12 col-md-10 text-center mx-auto mobile-padding-no {{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                                        <div class="form-group col-12 col-sm-12 col-md-10 text-center mx-auto mobile-padding-no  {{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
                                             {!! app('captcha')->display() !!}
                                             @if ($errors->has('g-recaptcha-response')) <span class="help-block">
                                                 <strong>{{ $errors->first('g-recaptcha-response') }}</strong> </span> @endif
@@ -225,7 +225,7 @@
                         </div>
                         --}}
 
-
+                       
 
                         <!-- login form -->
                     </div>
@@ -327,7 +327,7 @@
         if (isValid) { 
             $.ajax({
             type: "POST",
-            url:  '{{ route('company.login') }}',
+            url:  `{{route('company.login')}}`,
             data: $(this).serialize(),
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
@@ -355,9 +355,11 @@
                 .done(function(data){
                     // setTimeout(function() { 
                     //     alert(data.message)
-                    //     window.location.href = data.urlRedirect;
                     // }, 2000);
-                    
+                    if(data.sucess == true){
+                        window.location.href = data.urlRedirect;
+                    }
+                
                 })
                 .fail(function(jqXHR, textStatus){
                     
@@ -413,8 +415,9 @@
         if (isValid) { 
             $.ajax({
             type: "POST",
-            url:  '{{ route('company.register') }}',
+            url:  `{{ route('company.register') }}`,
             data: $(this).serialize(),
+            
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
                     console.log(responseObject.error);
@@ -440,12 +443,9 @@
                 }
                 })
                 .done(function(data){
-                    // console.log(data);
-                    // setTimeout(function() { 
-                    //     alert("Đang")
-                    //     window.location.href = ;
-                    // }, 2000);
-                    
+                    if (data.sucess == true && !data.error) {
+                        window.location.href = '/company-home';
+                    }
                 })
                 .fail(function(jqXHR, textStatus){
                     

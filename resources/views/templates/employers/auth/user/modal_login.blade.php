@@ -247,9 +247,11 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
-                    $("#employer_login_Modal").css("display:none");
-                    $("#employer_login_Modal").removeClass("show");
-                    window.location.href =  "/company-home";
+                    if (data.sucess == true && !data.error) { 
+                        $("#employer_login_Modal").css("display:none");
+                        $("#employer_login_Modal").removeClass("show");
+                        window.location.href =  "/company-home";
+                    }
                 })
                 .fail(function(jqXHR, textStatus){
                     
