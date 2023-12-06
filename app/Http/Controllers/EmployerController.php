@@ -340,11 +340,11 @@ class EmployerController extends Controller
 
     public function loginPage(Request $request)
     {
-        return view('templates.vietstar.auth.login');
+        return view('templates.vietstar.auth.login2');
     }
 
     public function resisterPage(Request $request)
     {
-        return view('templates.vietstar.auth.register');
+        return view('templates.vietstar.auth.register2');
     }
 }
