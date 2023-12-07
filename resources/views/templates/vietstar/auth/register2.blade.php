@@ -10,7 +10,7 @@
 
 <!-- Inner Page Title start --> 
 @include('templates.vietstar.includes.mobile_dashboard_menu')
-@include('templates.vietstar.includes.inner_page_title', ['page_title'=>__('Đăng ký')])
+
 
 <!-- Inner Page Title end -->
 
