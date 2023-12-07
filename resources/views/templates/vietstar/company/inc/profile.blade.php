@@ -41,7 +41,7 @@
         padding: 0;
     }
 
-    
+
 
     select:invalid[multiple] {
         margin-top: 15px !important;
@@ -104,6 +104,21 @@
         color: #6c7eb7;
         font-size: 20px;
     }
+    .pic.img-thumnail {
+     
+
+        position: relative;
+    }
+    .img-thumnail .img-thumnail__wrapper {
+       
+        overflow: hidden;
+       
+    }
+
+
+
+
+
 </style>
 @endpush
 <!-- <section class="main-content my-5">
@@ -391,8 +406,11 @@
             </div>
 
             <div class="section-body">
+           
                 <div class="row">
-                    <div class="col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-center">
+                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-center">
+                        <h6>Logo</h6>
+                        
                         <div class="formrow formrow-photo">
                             <div id="thumbnail">
                                 <div class="pic img-avatar">
@@ -406,24 +424,29 @@
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                 </div>
                             </div>
+                        
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-8">
-                        <div class="user__name" bis_skin_checked="1">
-                            <h4 id="">{{ $company->name }}</h4>
-                        </div>
 
-                        <div class="user__infomation" bis_skin_checked="1">
-                       
+                    <div class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center">
+                        <div class="formrow formrow-photo">
+                        <h6>Hình nền</h6>
+                            <div id="thumbnail">
+                                <div class="pic img-thumnail">
+                                    <div class="img-thumnail__wrapper">
+                                    {{ ImgUploader::print_image("company_logos/$company->cover_logo") }}
+                                    </div>
+                                    <input type="file" name="image" id="company_thumnail_input" style="display: none;">
 
-                            <h5 id="">{{ $company->industry_id ?  $company->industry_id: " "}}</h5>
-                        </div>
-
-                        <div class="user__complete_section" bis_skin_checked="1">
-
+                                    <a class="uploadImage_btn" href="javascript:void(0);" onclick="$('#company_thumnail_input').click()"><i class="bi bi-camera-fill"></i></a>
+                                    {!! APFrmErrHelp::showErrors($errors, 'image') !!}
+                                    {!! APFrmErrHelp::showErrors($errors, 'image') !!}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+               
             </div>
         </div>
     </div>
@@ -463,7 +486,7 @@
                                     {{ old('email') ? old('email') : $company->email }}
                                 </td>
                             </tr>
-                            
+
                         </tbody>
                     </table>
                 </div>
@@ -563,18 +586,18 @@
                                     </strong>
                                 </td>
                                 <td class="table_value">
-                                   
-                                 
+
+
 
                                     @foreach ($countries as $key => $countrie)
-                                        @if($key ==   $company->country_id)
-                                        {{$countrie}}
-                                        @endif
+                                    @if($key == $company->country_id)
+                                    {{$countrie}}
+                                    @endif
                                     @endforeach
                                 </td>
                             </tr>
 
-                           
+
 
                             <tr>
                                 <td class="table_title">
@@ -742,7 +765,7 @@
                         </tbody>
                     </table>
                 </div>
-              
+
             </div>
         </div>
     </div>
@@ -759,8 +782,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 @include('templates.vietstar.includes.tinyMCEFront')
 <script type="text/javascript">
-    
-
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
@@ -770,42 +791,92 @@
             reader.readAsDataURL(input.files[0]);
             var formData = new FormData();
             var avatarFile = $('#company_fileInput')[0].files[0];
-            
+
             console.log(avatarFile);
             if (avatarFile) {
-                    formData.append('logo', avatarFile);
-                 
-                    // Simulating an AJAX POST request
-                    
-                        $.ajaxSetup({
-                        headers: {
+                formData.append('logo', avatarFile);
+
+                // Simulating an AJAX POST request
+
+                $.ajaxSetup({
+                    headers: {
                         'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                        }
-                        });
-                    $.ajax({
-                        url: `{{route('update.company.avatar')}}`,
-                        type: 'POST',
-                        data: formData,
-                        contentType: false,
-                        processData: false,
-                     
-                        success: function (response) {
-                            // Handle success response
-                            location.reload();
-                        },
-                        error: function (xhr, status, error) {
-                            // Handle error
-                            console.error('Error uploading avatar:', error);
-                        }
-                    });
-                } else {
-                    alert('Please select an image before uploading.');
-                }
+                    }
+                });
+                $.ajax({
+                    url: `{{route('update.company.avatar')}}`,
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+
+                    success: function(response) {
+                        // Handle success response
+                        location.reload();
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle error
+                        console.error('Error uploading avatar:', error);
+                    }
+                });
+            } else {
+                alert('Please select an image before uploading.');
+            }
 
         }
     }
 
     $('#company_fileInput').change(function() {
+        readURL(this);
+    });
+
+
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('.img-thumnail img').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+            var formData = new FormData();
+            var avatarFile = $('#company_thumnail_input')[0].files[0];
+
+            console.log(avatarFile);
+            if (avatarFile) {
+                formData.append('cover_logo', avatarFile);
+
+                // Simulating an AJAX POST request
+
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                });
+                $.ajax({
+                    url: `{{route('update.company.avatar')}}`,
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+
+                    success: function(response) {
+                        // Handle success response
+                        location.reload();
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle error
+                        console.error('Error uploading avatar:', error);
+                    }
+                });
+            } else {
+                alert('Please select an image before uploading.');
+            }
+
+        }
+    }
+
+    $('#company_thumnail_input').change(function() {
         readURL(this);
     });
 
@@ -888,81 +959,7 @@
     //     // }, false)
     // });
 
-    var fileInput = document.getElementById("image");
-    if (fileInput) {
-        
-        fileInput.addEventListener("change", function(e) {
-            var files = this.files
-            showThumbnail(files)
-        }, false)
-    
-        var fileInput_cover_image = document.getElementById("cover_image");
-    
-        fileInput_cover_image.addEventListener("change", function(e) {
-    
-            var files_cover_image = this.files
-    
-            showThumbnail_cover_image(files_cover_image)
-    
-        }, false)
-    }
 
-
-    function showThumbnail(files) {
-        $('#logo').html('');
-        for (var i = 0; i < files.length; i++) {
-            var file = files[i]
-            var imageType = /image.*/
-            if (!file.type.match(imageType)) {
-                console.log("Not an Image");
-                continue;
-            }
-            var reader = new FileReader()
-            reader.onload = (function(theFile) {
-                return function(e) {
-                    $('#logo').append('<div class="fileattached"><img height="100px" src="' + e.target.result + '" > <div>' + theFile.name + '</div><div class="clearfix"></div></div>');
-                };
-            }(file))
-            var ret = reader.readAsDataURL(file);
-        }
-    }
-
-
-    function showThumbnail_cover_image(files) {
-
-        $('#thumbnail_logo').html('');
-
-        for (var i = 0; i < files.length; i++) {
-
-            var file = files[i]
-
-            var imageType = /image.*/
-
-            if (!file.type.match(imageType)) {
-
-                console.log("Not an Image");
-
-                continue;
-
-            }
-
-            var reader = new FileReader()
-
-            reader.onload = (function(theFile) {
-
-                return function(e) {
-
-                    $('#thumbnail_logo').append('<div class="fileattached"><img height="100px" src="' + e.target.result + '" > <div>' + theFile.name + '</div><div class="clearfix"></div></div>');
-
-                };
-
-            }(file))
-
-            var ret = reader.readAsDataURL(file);
-
-        }
-
-    }
 
 
 </script>
