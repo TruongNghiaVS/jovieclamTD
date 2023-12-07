@@ -69,7 +69,7 @@
 
                             <div class="form-group d-flex" bis_skin_checked="1">
                                 <div class="form-info" bis_skin_checked="1">
-                                    <span>{{__('Password Incorrect')}}</span>
+                                    <span>{{__('Password Confirmation')}}</span>
                                 </div>
                                 <div class="form-input" bis_skin_checked="1">
                                 <input  id="company_comfirmId2" type="password" name="password_confirmation" class="form-control" required="required" placeholder="{{__('Password Confirmation')}}" value="">
