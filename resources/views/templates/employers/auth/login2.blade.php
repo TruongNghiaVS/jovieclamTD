@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
 
-            <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="col-lg-6 col-md-4 col-sm-12">
                 <div class="box-img">
                     <img src="https://ads.careerbuilder.vn/www/images/6804e96cfe23971714beafba912d8782.jpg" alt="">
                 </div>
@@ -15,7 +15,7 @@
             <div class="col-lg-6 col-md-8 col-sm-12" bis_skin_checked="1">
                 <div class="box-info-signup forgot-password" id="login" bis_skin_checked="1">
                     <div class="title" bis_skin_checked="1">
-                        <h2 class="text-primary">Quên Mật Khẩu</h2>
+                        <h2 class="text-primary"> {{__('Login')}}</h2>
                     </div>
                     <div class="step-title d-flex align-center" bis_skin_checked="1">
                         <div class="main-step-title" bis_skin_checked="1">
