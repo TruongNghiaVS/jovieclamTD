@@ -12,7 +12,9 @@
 @include('templates.vietstar.includes.header')
 @endif
 
-
+{{--<?php
+dd($jobs);
+?>--}} 
 @include('templates.employers.includes.company_dashboard_menu')
 
 <div class="company-wrapper main-content">
@@ -151,9 +153,9 @@
 
                         <td>
                             <div class="d-flex align-items-center h-100">
-                                <div class="fs-18px font-weight-bold text-primary">
+                                <a class="fs-18px font-weight-bold text-primary" href="{{url('/')}}/edit-front-job/{{$job->id}}" target="_blank">
                                     {{ $job->title }}
-                                </div>
+                                 </a>
                             </div>
                         </td>
                         <td>

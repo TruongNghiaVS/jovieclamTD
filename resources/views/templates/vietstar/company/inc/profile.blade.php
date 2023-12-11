@@ -690,7 +690,7 @@
                                 </td>
                                 <td class="table_value">
                                     <a href="{{ isset($company->website) ? $company->website : old('website')}}">
-                                        {{ isset($company->website) ? $company->website : old('website')}}
+                                        {{ $company->website ? $company->website : old('website')}}
                                     </a>
                                 </td>
                             </tr>
@@ -782,7 +782,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 @include('templates.vietstar.includes.tinyMCEFront')
 <script type="text/javascript">
-    function readURL(input) {
+    function readURLAvatar(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             reader.onload = function(e) {
@@ -827,7 +827,7 @@
     }
 
     $('#company_fileInput').change(function() {
-        readURL(this);
+        readURLAvatar(this);
     });
 
 

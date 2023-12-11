@@ -212,16 +212,13 @@
 
 
 
-                <div class="row">
-                    <div class="col-md-12 d-flex justify-content-end">
-                        <button class="btn btn-primary" type="submit">{{__('Post Job')}} </button>
-                    </div>
-                </div>
             </div>
         </div>
-
     </div>
+    
 </div>
+</div>
+
 
 <div class="card card-edit-profile my-3">
     <div class="card-body">
@@ -282,11 +279,19 @@
 </div>
 
 
+<div class="row">
+<div class="col-md-12 d-flex justify-content-center">
+<button   id="clearBtn" class="btn btn-outline m-2" type="button" >{{__('Reset form')}} </button>
+
+<button  id="scrollBtn" class="btn btn-croll-top m-2" type="button" >{{__('Review recruitment information')}} </button>
+<button class="btn btn-lg btn-primary m-2" type="submit">{{__('Post Job')}} </button>
+</div>
+
 
 
 <input type="file" name="image" id="image" style="display:none;" accept="image/*" />
 {!! Form::close() !!}
-<hr>
+
 @push('styles')
 <style type="text/css">
     .datepicker>div {
@@ -356,6 +361,82 @@
 
     .switch.flat input:checked+.slider {
         background: limeGreen;
+    }
+
+    .datepicker>div {
+        display: block;
+    }
+
+    .switch input {
+        display: none;
+    }
+
+    .switch {
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+        margin: 8px;
+        transform: translateY(50%);
+        position: relative;
+    }
+
+    /* Style Wired */
+    .slider {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 30px;
+        box-shadow: 0 0 0 2px #777, 0 0 4px #777;
+        cursor: pointer;
+        border: 4px solid transparent;
+        overflow: hidden;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--bs-primary);
+        border-radius: 30px;
+        transform: translateX(-30px);
+        transition: .4s;
+    }
+
+    input:checked+.slider:before {
+        transform: translateX(30px);
+        background: var(--bs-primary);
+    }
+
+    input:checked+.slider {
+        box-shadow: 0 0 0 2px var(--bs-primary), 0 0 2px var(--bs-primary);
+    }
+
+    /* Style Flat */
+    .switch.flat .slider {
+        box-shadow: none;
+    }
+
+    .switch.flat .slider:before {
+        background: #FFF;
+    }
+
+    .switch.flat input:checked+.slider:before {
+        background: white;
+    }
+
+    .switch.flat input:checked+.slider {
+        background: limeGreen;
+    }
+    .btn-croll-top {
+        background-color: #17a2b8;
+        color: #ffff;
+    } 
+    .btn-croll-top:hover {
+        opacity: 0.7;
     }
 </style>
 @endpush

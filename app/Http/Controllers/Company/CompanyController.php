@@ -436,7 +436,7 @@ class CompanyController extends Controller
         $company->linkedin = $request->input('linkedin');
         $company->google_plus = $request->input('google_plus');
         // $company->pinterest = $request->input('pinterest');
-         $website = $request->input('website');
+        $company->website= $request->input('website');
         // $company->website = (false === strpos($website, 'http')) ? 'http://' . $website : $website;
 		// $company->is_subscribed = isset($request->is_subscribed) ? 1 : null;
 		

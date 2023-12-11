@@ -678,7 +678,11 @@
                                 </td>
                                 <td class="table_value">
                                     <a href="{{ isset($company->website) ? $company->website : old('website')}}">
-                                        {{ isset($company->website) ? $company->website : old('website')}}
+                                    <?php
+// PHP code goes here
+dd($company->website);
+?>
+                                        {{ $company->website ? $company->website : old('website')}}
                                     </a>
                                 </td>
                             </tr>

@@ -86,9 +86,9 @@
             }
             });
             $.ajax({
-                url: '/update-company-info-contact', // Replace with your server endpoint
+                url: '{{url('/')}}/update-company-info-contact', // Replace with your server endpoint
                 type: 'POST',
-                data: {    "_token": "{{ csrf_token() }}", ...formDataObject },
+                data: {"_token": "{{ csrf_token() }}", ...formDataObject},
 
                 success: function(response) {
                     // Handle successful response
