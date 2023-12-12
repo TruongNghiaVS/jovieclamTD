@@ -44,9 +44,9 @@
                     </div>
                 </div> --}}
             </div>
-            <div class="d-flex justify-content-end">
-                <div class="">
-                <button type="submit" class="btn btn-primary"><i class="bi bi-search text-white"></i>Tìm kiếm</button>
+            <div class="row  d-flex justify-content-end">
+                <div class="col-sm-12  col-md-2 col-lg-2 my-2">
+                    <button type="submit" class="btn btn-primary w-100"><i class="bi bi-search text-white"></i>Tìm kiếm</button>
                 </div>
            </div>
         </form>
