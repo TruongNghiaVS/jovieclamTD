@@ -19,7 +19,7 @@ class RedirectIfCompanyNotAuthenticated
     public function handle($request, Closure $next, $guard = 'company')
     {
         if (!Auth::guard($guard)->check()) {
-            return redirect('/login');
+            return redirect('/employer/login');
         }
         return $next($request);
     }

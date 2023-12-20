@@ -11,11 +11,11 @@ class ContactInfo extends Model
     protected $table = 'contact_infos';
     public $timestamps = true;
     protected $guarded = ['id'];
-    //protected $dateFormat = 'U';
+
     protected $dates = ['created_at', 'updated_at'];
     protected $fillable = [
-
-        'fullName', 'email', 'phoneNumber', 'title','messages', 'created_at'
+        'fullName', 'email', 'phoneNumber',
+         'title', 'messages', 'created_at'
 
     ];
 }
