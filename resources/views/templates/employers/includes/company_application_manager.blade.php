@@ -38,7 +38,7 @@
                                 <div class="rounded-circle avatar "
                                     style="width: 40px; height: 40px; flex: 0 0 40px; background-image: url();">
                                     @php
-                                        $candidate_image = $value->user->image;
+                                        $candidate_image = $value->user->image ? $value->user->image :"no-image.png";
                                     @endphp
                                     <div class="image-candidate">
                                     {{ ImgUploader::print_image("user_images/$candidate_image") }}
@@ -68,14 +68,18 @@
                         </td>
                         <td class="align-top text-gray">
                             <div class="insights">
+                                @if($value->user->email)
                                 <div class="text-nowrap text-truncate" style="max-width: 250px;">
                                     <i class="iconmoon icon-recruiter-email text-primary"></i>
                                     {{ $value->user->email }}
                                 </div>
+                                @endif
+                                @if($value->user->phone)
                                 <div class="text-nowrap text-truncate" style="max-width: 250px;">
                                     <i class="iconmoon icon-recruiter-phone-call text-primary"></i>
                                     {{ $value->user->phone }}
                                 </div>
+                                @endif
                             </div>
                         </td>
                         <td class="align-top text-gray">
@@ -180,6 +184,7 @@
             var user_id = $(this).attr('data-user');
             var job_id = $(this).attr('data-job');
             var user_name = $(this).attr('data-name');
+            
             if(user_id > 0){
                 var url = "{{ route('application.profile.candidate', [':user_id', ':job_id']) }}";
                 url = url.replace(':user_id',user_id).replace(':job_id',job_id);

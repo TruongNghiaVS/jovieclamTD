@@ -2,7 +2,9 @@
 <div class="card card-bio mb-5 w-100 shadow-sm">
         <div class="row g-0">
             <div class="col-md-2">
+                @if($user->logo)
                 <img src="{{ $user->avatar() }}" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="vietstar">
+                @endif
             </div>
             <div class="col-md-10">
                 <div class="card-body">
