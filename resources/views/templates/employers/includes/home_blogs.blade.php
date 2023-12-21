@@ -9,7 +9,7 @@
 
                  
         <div class="blog-home-content">
-            <div class="blog-content__wrapper row px-4">
+            <div class="blog-content__wrapper row">
 
 
 

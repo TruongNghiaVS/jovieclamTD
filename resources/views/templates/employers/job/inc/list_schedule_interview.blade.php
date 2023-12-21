@@ -279,6 +279,7 @@
                 var user_id = $(this).attr('data-user');
                 var job_id = $(this).attr('data-job');
                 var user_name = $(this).attr('data-name');
+            
                 if(user_id > 0){
                     var url = "{{ route('application.profile.candidate', [':user_id', ':job_id']) }}";
                     url = url.replace(':user_id',user_id).replace(':job_id',job_id);
