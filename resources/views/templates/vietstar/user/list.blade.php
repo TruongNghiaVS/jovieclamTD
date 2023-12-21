@@ -141,57 +141,10 @@
                     <!-- <div class=""><br />{!! $siteSetting->listing_page_horizontal_ad !!}</div> -->
 
                 </div>
-                <div class="col-lg-4">
-                    <!-- Sponsord By -->
-                    <div class="sidebar" bis_skin_checked="1">
-                        <div id="adbanner" class="carousel slide" data-ride="carousel" bis_skin_checked="1">
-
-                            <!-- Indicators -->
-
-                            <!-- The slideshow -->
-                            <div class="carousel-inner" bis_skin_checked="1">
-
-                                <div class="col" bis_skin_checked="1">
-                                    <div class="row" bis_skin_checked="1">
-                                        <div class="item" bis_skin_checked="1">
-                                            <div class="image loadAds" bis_skin_checked="1">
-                                                <a href="#">
-                                                    <img src="https://media.istockphoto.com/id/1312091473/vector/we-are-hiring-banner-with-megaphone-flat-illustration.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=03ytHwFjPHCCIIAxR-hplKCQQNFWgZSMUg2HDJ_xTZQ=" alt="#">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row" bis_skin_checked="1">
-                                        <div class="item" bis_skin_checked="1">
-                                            <div class="image loadAds" bis_skin_checked="1">
-                                                <a href="#">
-                                                    <img src="https://img.freepik.com/free-vector/man-search-hiring-job-online-from-laptop_1150-52728.jpg" alt="#">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row" bis_skin_checked="1">
-                                        <div class="item" bis_skin_checked="1">
-                                            <div class="image loadAds" bis_skin_checked="1">
-                                                <a href="#">
-                                                    <img src="https://media.istockphoto.com/id/1173054931/photo/jobs-text-on-wooden-blocks-over-keyboard.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=1d3E26tHR7Yf7AUuGomDISXZTQ_u8PxizqTvo3bvSTY=" alt="#">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row" bis_skin_checked="1">
-                                        <div class="item" bis_skin_checked="1">
-                                            <div class="image loadAds" bis_skin_checked="1">
-                                                <a href="#">
-                                                    <img src="https://elca.vietnamworks.com/assets/images/page/banner/cover.png?r=1689852315" alt="#">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Left and right controls -->
+                <div class="col-lg-4 col-sm-12 pull-right">
+                <!-- Sponsord By -->
+                    <div class="sidebar shadow">
+                        @include('templates.employers.job.inc.ads')
                     </div>
                 </div>
             </div>

@@ -397,7 +397,7 @@
     }
 
     .user-badge__btn  span {
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         display: -webkit-box;
         overflow: hidden;
