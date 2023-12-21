@@ -223,7 +223,8 @@ class User extends Authenticatable
     }
 
     public function avatar()
-    {
+    { 
+     
         return \ImgUploader::print_image_src("user_images/$this->image", '/admin_assets/no-image.png', $this->name);
     }
 

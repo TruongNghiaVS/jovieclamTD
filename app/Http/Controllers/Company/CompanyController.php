@@ -854,7 +854,7 @@ class CompanyController extends Controller
         $user->num_profile_views = $num_profile_views;
         $user->update();
         /*         * ********************************************** */
-        return view(config('app.THEME_PATH').'.user.applicant_profile')
+        return view(config('app.THEME_PATH').'.user.applicant_profilev2')
                         ->with('user', $user)
                         ->with('profileCv', $profileCv)
                         ->with('page_title', 'Job Seeker Profile')
