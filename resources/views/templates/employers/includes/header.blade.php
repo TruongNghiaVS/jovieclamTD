@@ -285,6 +285,49 @@
 @include('templates.employers.company.modal.modal_companyProfile')
 
 
+<div class="modal fade " id="customModal-success" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal_status">
+            <div class="modal-header">
+                <h5 class="modal-title" id="customModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+                 <h3 class="text-center"></h3>
+            </div>
+            <div class="modal-footer">
+           
+                <a id="modalLink" class="btn btn-secondary" href="#">Đóng</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade modal_status" id="customModal-fail" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal_status">
+            <div class="modal-header">
+                <h5 class="modal-title" id="customModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+                 <h3 class="text-center"></h3>
+            </div>
+            <div class="modal-footer">
+           
+                <a id="modalLink" class="btn btn-secondary" href="#">Đóng</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 @push('styles')
 <style>

@@ -31,10 +31,6 @@
 <!-- post_now  start-->
 @include('templates.employers.includes.post_now')
 <!-- post_now end-->
-
-
-
-
 <!-- introduce  start-->
 {{--@include('templates.employers.includes.introduce')--}}
 <!-- introduce  end-->
@@ -59,6 +55,9 @@
 @include('templates.employers.includes.home_blogs')
 
 <!-- home_blogs  end-->
+
+
+
 
 @include('templates.employers.includes.footer')
 @endsection
