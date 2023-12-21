@@ -210,6 +210,10 @@ Route::get('{slug}', 'ArticleController@GetArticle')->name('lang.switch');
 Route::get('job-email-alert', 'JobAlertController@Register')->name('job-email-alert');
 Route::get('job-email-alert/{token}/confirm', 'JobAlertController@verify')->name('job-email-alert-confirm');
 
+Route::post('/AdvertisementBannerCandi/createOrUpdate', 'AdvertisementBannerCandiController@create')->name('admin.advertisementBannerJob.create');
+    Route::get('/AdvertisementBannerCandi/getAll', 'AdvertisementBannerCandiController@getAll')->name('admin.advertisementBannerJob.getAll');
+    Route::post('/AdvertisementBannerCandi/delete', 'AdvertisementBannerCandiController@delete')->name('admin.advertisementBannerJob.delete');
+
 
 
 

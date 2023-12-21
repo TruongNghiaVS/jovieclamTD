@@ -402,7 +402,7 @@
     <div class="user-account-section">
         <div class="formpanel mt0">
             <div class="section-head">
-                <h3 class="title-form">JobViecLam Profile</h3>
+                <h3 class="title-form">Chỉnh sửa thông tin tài kh</h3>
             </div>
 
             <div class="section-body">

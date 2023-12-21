@@ -75,6 +75,10 @@ class CompanyController extends Controller
     {
         $jobs = Auth::guard('company')->user()->jobs()->orderBy('jobs.created_at', 'desc')->pluck('jobs.id')->toArray();
         $userApply = JobApply::with('user', 'job')->whereIn('job_apply.job_id', $jobs);
+       
+     
+    
+    
         $from_to = $request->from;
         $from_to2 = $request->to;
         
@@ -93,7 +97,58 @@ class CompanyController extends Controller
             $userApply = $userApply->where('job_apply.seen', $seen);
         }
 
-    if(isset($from_to) )
+      if(isset($from_to) )
+        {
+            
+            $from_to = Carbon::parse($from_to);
+            $userApply = $userApply->where('created_at','>=', $from_to);
+            
+        }
+        if(isset($from_to2) )
+        {
+            $from_to2 = Carbon::parse($from_to2);
+            $form_to2 = $from_to2->endOfDay();
+            
+            $userApply = $userApply->where('created_at','<=', $from_to2);
+        }
+
+        $userApply = $userApply->orderByDesc('id')->paginate(6);
+
+        $data = [
+            'userApply' => $userApply,
+            'request' => $request->all(),
+            'log_seen' => $request->log_seen ? $request->log_seen : null,
+        ];
+        
+        return view(config('app.THEME_PATH').'.application_manager', $data);
+    }
+
+    public  function applicationManagerbk(Request $request)
+    {
+        $jobs = Auth::guard('company')->user()->jobs()->orderBy('jobs.created_at', 'desc')->pluck('jobs.id')->toArray();
+        $userApply = JobApply::with('user', 'job')->whereIn('job_apply.job_id', $jobs);
+
+    
+    
+        $from_to = $request->from;
+        $from_to2 = $request->to;
+        
+        if($request->name) {
+            $userApply = $userApply->whereHas('user', function($query) use ($request) {
+                $query->where('users.name', 'like', '%'.$request->name.'%')->orWhere('users.email', 'like', '%'.$request->name.'%');
+            });
+        }
+
+        if($request->status) {
+            $userApply = $userApply->where('job_apply.status', $request->status);
+        }
+
+        if($request->log_seen) {
+            $seen = $request->log_seen == 'seen' ? 1 : 0;
+            $userApply = $userApply->where('job_apply.seen', $seen);
+        }
+
+      if(isset($from_to) )
         {
             
             $from_to = Carbon::parse($from_to);
@@ -335,9 +390,8 @@ class CompanyController extends Controller
             $fileName = ImgUploader::UploadImage('company_logos', $image, $request->input('cover_logo'), 300, 300, false);
             $company->cover_logo = $fileName;
         }
-        
         $company->update();
-
+        
         flash(__('Company Logo has been updated'))->success();
         return true;
     

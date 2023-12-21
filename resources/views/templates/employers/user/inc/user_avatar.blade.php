@@ -28,7 +28,7 @@
 @endpush
 
 <div class="section-head">
-    <h3 class="title-form">JobViecLam Profile</h3>
+    <h3 class="title-form">Thông Tin Tài Khoản</h3>
 </div>
 
 <div class="section-body">
