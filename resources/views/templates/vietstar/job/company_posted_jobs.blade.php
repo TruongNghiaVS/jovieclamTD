@@ -134,6 +134,8 @@
 
                         <th class="font-weight-bold p-2"  >{{ __('Location') }}</th>
                         <th class="font-weight-bold p-2"  >{{ __('Salary') }}</th>
+                        <th class="font-weight-bold p-2"  >{{ __('Action') }}</th>
+
                         @else
                             <th class="font-weight-bold p-2" >{{ __('Positions') }}</th>
                             <!-- <th class="font-weight-bold"></th> -->
@@ -148,6 +150,7 @@
                             <th class="font-weight-bold p-2"  >{{ __('Interview Candidates') }}</th>
                             <th class="font-weight-bold p-2"  >{{ __('List of Hired Candidates') }}</th>
                             <th class="font-weight-bold p-2"  >{{ __('List of Rejected Candidates') }}</th>
+                            <th class="font-weight-bold p-2"  >{{ __('Action') }}</th>
 
                         @endif
                     </tr>
@@ -158,7 +161,7 @@
                     @if(Request::get('status') == 2)
                  
 
-                        <tr class="posted-manager_tb_row">
+                    <tr class="posted-manager_tb_row" id="job_li_{{$job->id}}">
 
                         <td>
                             <div class="d-flex align-items-center h-100">
@@ -207,12 +210,15 @@
                                 @endif
                             </div>
                         </td>
+                        <td>
+                        <i class="bi bi-x-lg"></i>
+                        </td>
 
 
 
-                        </tr>
+                    </tr>
                     @else
-                    <tr class="posted-manager_tb_row">
+                    <tr class="posted-manager_tb_row" id="job_li_{{$job->id}}">
                             <td>
                                 <div class="d-flex align-items-center h-100">
                                     <a class="fs-18px font-weight-bold text-primary" href="{{url('/')}}/edit-front-job/{{$job->id}}" target="_blank">
@@ -288,7 +294,17 @@
                                 </div>
                             </td>
 
-
+                            <td>
+                                <div class="d-flex">
+                                    <a href="{{url('/')}}/edit-front-job/{{$job->id}}">
+                                        <i class="bi bi-pencil-fill p-2 cursor-pointer"></i>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="deleteJob({{ $job->id }})">
+                                        <i class="bi bi-trash p-2 cursor-pointer "></i>
+                                    </a>
+                                  
+                                </div>
+                            </td>
                     </tr>
                     @endif
                     @endforeach
@@ -348,6 +364,9 @@
     .w-10 {
         width: 10%;
     }
+    .cursor-pointer {
+        cursor: pointer;
+    }
     
 
   
@@ -357,26 +376,27 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        $(".chosen").chosen();
-
-        function deleteJob(id) {
-            var msg = 'Are you sure?';
-            if (confirm(msg)) {
-                $.post("{{ route('delete.front.job') }}", {
-                        id: id,
-                        _method: 'DELETE',
-                        _token: '{{ csrf_token() }}'
-                    })
-                    .done(function(response) {
-                        if (response == 'ok') {
-                            $('#job_li_' + id).remove();
-                        } else {
-                            alert('Request Failed!');
-                        }
-                    });
-            }
+    function deleteJob(id) {
+        console.log(id);
+        var msg = 'Are you sure?';
+        if (confirm(msg)) {
+            $.post("{{ route('delete.front.job') }}", {
+                    id: id,
+                    _method: 'DELETE',
+                    _token: '{{ csrf_token() }}'
+                })
+                .done(function(response) {
+                    if (response == 'ok') {
+                        $('#job_li_' + id).remove();
+                    } else {
+                        alert('Request Failed!');
+                    }
+                });
         }
+    }
+    $(document).ready(function() {
+      
+
 
         $('.btn-refresh').on('click', function() {
             var id = $(this).data('id');
@@ -403,7 +423,7 @@
             });
         });
     });
-
+    
     function refreshPage() {
         location.reload(true);
     }
