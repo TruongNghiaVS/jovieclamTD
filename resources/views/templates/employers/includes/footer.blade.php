@@ -52,11 +52,9 @@
                         <div class="footer-widget">
                             <h4 class="widget-title">{{__('About Us')}}</h4>
                             <ul class="list-unstyled footer-links">
+                                <li><a href="/about-us">{{__('About Us')}}</a></li>
+                                <li><a href="{{ route('contact.us') }}">{{__('Contact')}}</a></li>
                                 <li><a href="#">{{__('About Us')}}</a></li>
-                                
-
-                       
-
                             </ul>
                         </div>
                     </div>
@@ -81,7 +79,7 @@
                                 <li><a href="#">{{__('Job search policy')}}</a></li>
                                 <li><a href="">{{__('Privacy Policy')}}</a></li>
                                 <li><a href="">{{__('Agreement of use')}}</a></li>
-                                <li><a href="{{ route('contact.us') }}">{{__('Contact')}}</a></li>
+                                
                                 <li>
                                     <a href="{{route('about_us')}}">
                                         {{__('About us')}}
