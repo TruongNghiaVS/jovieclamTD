@@ -12,9 +12,6 @@
 @include('templates.vietstar.includes.header')
 @endif
 
-{{--<?php
-dd($jobs);
-?>--}} 
 @include('templates.employers.includes.company_dashboard_menu')
 
 <div class="company-wrapper main-content">
@@ -129,40 +126,48 @@ dd($jobs);
             <table class="table table-applican-manager table-hover mb-0 border-0 ">
                 <thead>
                     <tr>
+                        @if(Request::get('status') == 2)
                         <th class="font-weight-bold p-2" >{{ __('Positions') }}</th>
                         <!-- <th class="font-weight-bold"></th> -->
-                        <th class="font-weight-bold p-2"  >Ngày đăng</th>
                         <th class="font-weight-bold p-2"  >Ngày hết hạn</th>
                         <th class="font-weight-bold p-2"  >{{ __('Status') }}</th>
 
                         <th class="font-weight-bold p-2"  >{{ __('Location') }}</th>
                         <th class="font-weight-bold p-2"  >{{ __('Salary') }}</th>
+                        @else
+                            <th class="font-weight-bold p-2" >{{ __('Positions') }}</th>
+                            <!-- <th class="font-weight-bold"></th> -->
+                            <th class="font-weight-bold p-2"  >Ngày đăng</th>
+                            <th class="font-weight-bold p-2"  >Ngày hết hạn</th>
+                            <th class="font-weight-bold p-2"  >{{ __('Status') }}</th>
 
-                        <th class="font-weight-bold p-2" >Lượt nộp</th>
-                        <th class="font-weight-bold p-2"  >{{ __('Interview Candidates') }}</th>
-                        <th class="font-weight-bold p-2"  >{{ __('List of Hired Candidates') }}</th>
-                        <th class="font-weight-bold p-2"  >{{ __('List of Rejected Candidates') }}</th>
-                        <th></th>
+                            <th class="font-weight-bold p-2"  >{{ __('Location') }}</th>
+                            <th class="font-weight-bold p-2"  >{{ __('Salary') }}</th>
+
+                            <th class="font-weight-bold p-2" >Lượt nộp</th>
+                            <th class="font-weight-bold p-2"  >{{ __('Interview Candidates') }}</th>
+                            <th class="font-weight-bold p-2"  >{{ __('List of Hired Candidates') }}</th>
+                            <th class="font-weight-bold p-2"  >{{ __('List of Rejected Candidates') }}</th>
+
+                        @endif
                     </tr>
                 </thead>
                 <tbody>
                     @if (isset($jobs) && count($jobs))
                     @foreach ($jobs as $job)
+                    @if(Request::get('status') == 2)
+                 
 
-                    <tr class="posted-manager_tb_row">
+                        <tr class="posted-manager_tb_row">
 
                         <td>
                             <div class="d-flex align-items-center h-100">
                                 <a class="fs-18px font-weight-bold text-primary" href="{{url('/')}}/edit-front-job/{{$job->id}}" target="_blank">
                                     {{ $job->title }}
-                                 </a>
+                                </a>
                             </div>
                         </td>
-                        <td>
-                            <div class="d-flex align-items-center h-100 fs-18px">
-                                {{ $job->created_at }}
-                            </div>
-                        </td>
+
                         <td>
                             <div class="d-flex align-items-center h-100 fs-18px">
                                 {{ $job->expiry_date }}
@@ -202,32 +207,90 @@ dd($jobs);
                                 @endif
                             </div>
                         </td>
-                        <td>
-                            <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                {{ $job->appliedUsers->count() }} 
-                            </div>
-                        </td>
 
-                        <td>
-                            <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                {{ $job->getStatusInterview()->count() }}
-                            </div>
-                        </td>
 
-                        <td>
-                            <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                {{ $job->getStatusInterview(3)->count() }}
-                            </div>
-                        </td>
 
-                        <td>
-                            <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                {{ $job->getStatusInterview(4)->count() }}
-                            </div>
-                        </td>
+                        </tr>
+                    @else
+                    <tr class="posted-manager_tb_row">
+                            <td>
+                                <div class="d-flex align-items-center h-100">
+                                    <a class="fs-18px font-weight-bold text-primary" href="{{url('/')}}/edit-front-job/{{$job->id}}" target="_blank">
+                                        {{ $job->title }}
+                                    </a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center h-100 fs-18px">
+                                    {{ $job->created_at }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center h-100 fs-18px">
+                                    {{ $job->expiry_date }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center h-100 fs-18px">
+                                    @if(Carbon\Carbon::parse($job->expiry_date)->format('Y-m-d') > Carbon\Carbon::now()->format('Y-m-d'))
+                                    {{ __(\App\Job::getListStatusJob()[$job->status]) }}
+                                    @else
+                                    {{ __('Job is expired') }}
+                                    @endif
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="tags h-100">
+                                    <span class="tag location fs-18px">{{ $job->getCity('city') }} </span>
+                                    <span class="tag time">{{ $job->getJobShift('job_shift') }}</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="d-flex align-items-center h-100 fs-18px">
+                                    @php($from = round($job->salary_from/1000000,0))
+                                    @php($to = round($job->salary_to/1000000,0))
+                                    @if($job->salary_type == \App\Job::SALARY_TYPE_FROM)
+                                    <span class="fas fa-dollar-sign mx-2"></span> {{__('From: ')}} {{$from}} {{__('million')}} ({{$job->salary_currency}})
+                                    @elseif($job->salary_type == \App\Job::SALARY_TYPE_TO)
+                                    <span class="fas fa-dollar-sign mx-2"></span> {{__('Up To: ')}} {{$to}} {{__('million')}} ({{$job->salary_currency}})
+                                    @elseif($job->salary_type == \App\Job::SALARY_TYPE_RANGE)
+                                    <span class="fas fa-dollar-sign mx-2"></span> {{$from}} - {{$to}} {{__('million')}} ({{$job->salary_currency}})
+                                    @elseif($job->salary_type == \App\Job::SALARY_TYPE_NEGOTIABLE)
+                                    <span class="fas fa-money-bill mx-2"></span> {{__('Negotiable')}}
+                                    @else
+                                    <span class="fas fa-dollar-sign mx-2"></span> {{__('Salary Not provided')}}
+                                    @endif
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
+                                    {{ $job->appliedUsers->count() }} 
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
+                                    {{ $job->getStatusInterview()->count() }}
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
+                                    {{ $job->getStatusInterview(3)->count() }}
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
+                                    {{ $job->getStatusInterview(4)->count() }}
+                                </div>
+                            </td>
 
 
                     </tr>
+                    @endif
                     @endforeach
                     @endif
                 </tbody>
