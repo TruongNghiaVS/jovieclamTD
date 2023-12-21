@@ -52,10 +52,17 @@
                         <div class="footer-widget">
                             <h4 class="widget-title">{{__('About Us')}}</h4>
                             <ul class="list-unstyled footer-links">
+<<<<<<< HEAD
                                 <li><a href="/about-us">{{__('About Us')}}</a></li>
                                 <li><a href="{{ route('contact.us') }}">{{__('Contact')}}</a></li>
 
                                
+=======
+                                <li><a href="#">{{__('About Us')}}</a></li>
+                                
+
+                       
+>>>>>>> 15c34766b3c839228a62748b6308a3f9c7b2c4c4
 
                             </ul>
                         </div>

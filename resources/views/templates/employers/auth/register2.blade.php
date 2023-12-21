@@ -115,11 +115,11 @@
                                 <div class="btn-area" bis_skin_checked="1">
                                     <button type="submit" id="resetPasswordBtn_company" class="btn btn-primary" value="Gửi">Gửi</button>
                                 </div>
-                                <p> <a class="register" href="#" data-toggle="modal" data-target="#company_logup_Modal">Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
+                                <p> <a class="register" href="/employer/register" target="_self" >Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
 
                                 <div class="text-help" bis_skin_checked="1">
                                     <p>Nếu bạn cần sự trợ giúp, vui lòng liên hệ:</p>
-                                    <p>Email: <a href="#" target="_blank">support@jobvieclam.com</a></p>
+                                    <p>Email: <a href="mailto:support@jobvieclam.com" target="_self">support@jobvieclam.com</a></p>
                                 </div>
                             </div>
                         </form>

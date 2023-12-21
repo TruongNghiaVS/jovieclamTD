@@ -50,10 +50,8 @@
                                     <h4 class="widget-title">{{__('About Us')}}</h4>
                                     <ul class="list-unstyled footer-links">
                                         <li><a href="#">{{__('About Us')}}</a></li>
-                                        <li><a href="#">Ban lãnh đạo</a></li>
-
-                                        <li><a href="#">Văn hóa</a></li>
-
+                                        
+                                       
                                     </ul>
                                 </div>
                             </div>

@@ -12,18 +12,24 @@
                         </div>
                         <div class="form-group form-select-chosen" id="functional_area_dd">
                             <select class="form-control form-select" name="functional_area_id" id="functional_area">
-                                <option value="">Chọn phòng ban</option>
-                                <option value="Nhân sự">Nhân sự</option>
+                            <option value="">Chọn phòng ban</option>
+                            @foreach($industryIds as $item )
+                             
+                                    <option value="{{$item->industry_id}}">{{$item->industry}}</option>
+                             @endforeach
+                               
+                                <!-- <option value="Nhân sự">Nhân sự</option>
                                 <option value="Hành chính">Hành chính</option>
-                                <option value="Kế toán">Kế toán</option>
+                                <option value="Kế toán">Kế toán</option> -->
                             </select>
                         </div>
                         <div class="form-group form-select-chosen" id="city_dd2">
                             <select class="form-control form-select" name="city_id" id="city">
                                 <option value="">Chọn địa điểm</option>
-                                <option value="3">HCM</option>
-                                <option value="5">Hà Nội</option>
-                                <option value="5">Đà Nẵng</option>
+                                @foreach($cities as $item )
+                             
+                             <option value="{{$item->city_id}}">{{$item->city}}</option>
+                                  @endforeach
                             </select>
                         </div>
                         <div class="form-group form-submit">
@@ -75,7 +81,7 @@
 </div>
 
 <!-- SEARCH ADVANDCE STICKY -->
-<div class="filters-job-wrapper job-detail">
+<!-- <div class="filters-job-wrapper job-detail">
     <div class="container">
         <div class="filters-wrapper">
             <form action="{{route('job.list')}}" method="get">
@@ -361,7 +367,7 @@
             </form>
         </div>
     </div>
-</div>
+</div> -->
 
 
 @push('scripts')

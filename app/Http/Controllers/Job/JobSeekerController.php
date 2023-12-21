@@ -109,12 +109,18 @@ class JobSeekerController extends Controller
 
         /*         * ************************************************** */
 
+
+        $cities  = \App\City::where('lang', \App::getLocale())->active()->get();
+      
+        $industryIds  = \App\Industry::where('lang', \App::getLocale())->active()->get();
+    
         $seo = (object) array(
                     'seo_title' => $seoArray['description'],
                     'seo_description' => $seoArray['description'],
                     'seo_keywords' => $seoArray['keywords'],
                     'seo_other' => ''
         );
+       
         return view(config('app.THEME_PATH').'.user.list')
                         ->with('functionalAreas', $this->functionalAreas)
                         ->with('countries', $this->countries)
@@ -129,6 +135,8 @@ class JobSeekerController extends Controller
                         ->with('careerLevelIdsArray', $careerLevelIdsArray)
                         ->with('genderIdsArray', $genderIdsArray)
                         ->with('jobExperienceIdsArray', $jobExperienceIdsArray)
+                        ->with('cities', $cities)
+                        ->with('industryIds', $industryIds)
                         ->with('seo', $seo);
     }
 

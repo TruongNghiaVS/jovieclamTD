@@ -87,7 +87,14 @@ trait FetchJobSeekers
     {
         $query->where('users.is_active', 1);
         if ($search != '') {
-            $query = $query->whereRaw("MATCH (`search`) AGAINST ('$search*' IN BOOLEAN MODE)");
+            
+            $query = $query->where(function($query) use ($search)
+            {
+                  $query->where('first_name', $search)
+                        ->orWhere('middle_name', $search)
+                        ->orWhere('last_name', $search);
+            });
+           
         }
         if (isset($industry_ids[0])) {
             $query->whereIn('users.industry_id', $industry_ids);

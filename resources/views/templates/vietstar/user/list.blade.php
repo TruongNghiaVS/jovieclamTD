@@ -87,10 +87,11 @@
 
 
 <div class="job-seekers-page listpgWraper">
-    @include('templates.vietstar.user.inc.filters_job_wrapper')
+  
     <div class="container Jobpage">
         <form action="{{route('job.seeker.list')}}" method="get">
-            <!-- Search Result and sidebar start -->
+        @include('templates.vietstar.user.inc.filters_job_wrapper')  
+        <!-- Search Result and sidebar start -->
             <div class="row">
                 <div class="col-lg-8">
                     <!-- Search List -->
