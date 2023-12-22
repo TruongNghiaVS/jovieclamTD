@@ -5,18 +5,16 @@
             <div class="card widget-dashboard mb-3 w-100 shadow-sm">
                 <div class="box-dasboard-top" bis_skin_checked="1">
                     <div class="head" bis_skin_checked="1">
-                        <h2 class="title-dashboard">Thông tin tài khoản</h2>
+                        <h2 class="title-dashboard">Thông tin tài khoản </h2>
                     </div>
                     <div class="body" bis_skin_checked="1">
                         <ul class="company-account-information">
+                            
                             <li>
-                                <p class="number intNumPostNoUse">0</p><a class="title" href="#">Vị trí chưa sử dụng</a>
+                                <p class="number orderNew">0</p><a class="title" href="/company-packages">Đơn hàng đang sử dụng</a>
                             </li>
                             <li>
-                                <p class="number orderNew">0</p><a class="title" href="#">Đơn hàng đang sử dụng</a>
-                            </li>
-                            <li>
-                                <p class="number JskNew">0</p><a class="title" href="#">Ứng viên ứng tuyển</a>
+                                <p class="number JskNew">0</p><a class="title" href="/application-manager">Ứng viên ứng tuyển</a>
                             </li>
                         </ul>
                     </div>
@@ -30,17 +28,7 @@
                         <h2 class="title-dashboard">TÌM KIẾM HỒ SƠ</h2>
                     </div>
                     <div class="body" bis_skin_checked="1">
-                        <ul class="company-account-information">
-                            <li>
-                                <p class="number intNumPostNoUse">0</p><a class="title" href="#">Vị trí chưa sử dụng</a>
-                            </li>
-                            <li>
-                                <p class="number orderNew">0</p><a class="title" href="#">Đơn hàng đang sử dụng</a>
-                            </li>
-                            <li>
-                                <p class="number JskNew">0</p><a class="title" href="#">Ứng viên ứng tuyển</a>
-                            </li>
-                        </ul>
+                          Chưa có điểm xem hồ sơ
                     </div>
                 </div>
             </div>
@@ -51,7 +39,7 @@
             <div class="card widget-dashboard mb-3 w-100 shadow-sm">
                 <div class="box-dasboard-top" bis_skin_checked="1">
                     <div class="head" bis_skin_checked="1">
-                        <h2 class="title-dashboard">Thông tin tài khoản</h2>
+                        <h2 class="title-dashboard">Quản lý đăng tuyển</h2>
                     </div>
                     <div class="body" bis_skin_checked="1">
                         <ul class="company-account-information">
@@ -87,17 +75,7 @@
                         <h2 class="title-dashboard">LỊCH SỬ HOẠT ĐỘNG</h2>
                     </div>
                     <div class="body" bis_skin_checked="1">
-                        <ul class="company-account-information">
-                            <li>
-                                <p class="number intNumPostNoUse">0</p><a class="title" href="#">Vị trí chưa sử dụng</a>
-                            </li>
-                            <li>
-                                <p class="number orderNew">0</p><a class="title" href="#">Đơn hàng đang sử dụng</a>
-                            </li>
-                            <li>
-                                <p class="number JskNew">0</p><a class="title" href="#">Ứng viên ứng tuyển</a>
-                            </li>
-                        </ul>
+                       <p>Chưa có dữ liệu</p>
                     </div>
                 </div>
             </div>

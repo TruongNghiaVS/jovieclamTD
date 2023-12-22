@@ -146,10 +146,6 @@ class InterviewController extends Controller
         $query = Interview::with('job', 'applicant:id,name', 'company:id,name')
                     ->where('company_id', $company_id);
 
-        // $query->where(function($q){
-        //     $q->where('interview_plan_date', '>=', \Carbon\Carbon::now());
-
-        // });
         $interviews = $query->get();
 
         return view(config('app.THEME_PATH').'.job.interview-calendar')

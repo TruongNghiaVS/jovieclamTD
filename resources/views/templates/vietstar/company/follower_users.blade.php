@@ -13,12 +13,12 @@
 <!-- Inner Page Title end -->
 <div class="company-wrapper">
 
-        @include('templates.employers.includes.mobile_dashboard_menu')
+           @include('templates.employers.includes.mobile_dashboard_menu')
 
             <div class="container company-content"> 
             @include('flash::message') 
                 <div class="myads">
-                    <h3>{{__('Company Followers')}}</h3>
+                    <h3>{{__('Company Followers')}} </h3>
                     <div class="searchList jobs-apply-list">
                         <!-- job start --> 
                         @if(isset($users) && count($users))

@@ -38,7 +38,7 @@ class ResetPasswordController extends Controller
     public function ResetPasswordMember(Request $request)
     {
 
-        $code = $request->input("forgetpasswordLink");
+        $code = $request->input("code");
        
         if($code == "")
         {
