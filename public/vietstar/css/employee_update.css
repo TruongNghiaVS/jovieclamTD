@@ -107,7 +107,7 @@
 .company-account-information li {
     display: flex;
     border-bottom: 1px solid #f5f5f5;
-    padding: 10px 20px;
+    padding: 20px 20px;
 }
 .company-account-information li p {
     margin-right: 10px;

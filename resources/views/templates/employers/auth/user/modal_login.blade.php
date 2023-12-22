@@ -237,7 +237,7 @@ $(document).ready(function() {
                         }, 3000);
                     }
                     else {
-                        showModal_Fail('Đăng nhập', `${data.message}`, '');
+                        showModal_Fail('Đăng nhập', `Đăng nhập thất bại`, '');
                     }
                 })
                 .fail(function(jqXHR, textStatus){
