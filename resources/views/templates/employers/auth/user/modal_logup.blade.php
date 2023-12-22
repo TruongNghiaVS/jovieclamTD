@@ -336,7 +336,7 @@ $(document).ready(function() {
                 .done(function(data){
                     if (data.sucess == true ) {
                         $("#employer_logup_Modal").modal("hide")
-                        showModal_Success('Đăng ký', `Đăng ký thành công`, '/company-home');
+                        //showModal_Success('Đăng ký', `Đăng ký thành công`, '/company-home');
                         setTimeout(function(){
                                   window.location.href =  "/company-home";
                         }, 3000);

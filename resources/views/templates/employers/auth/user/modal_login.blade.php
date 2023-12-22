@@ -227,7 +227,7 @@ $(document).ready(function() {
                         
                         // $("#exampleModal").modal("show")
                         $("#employer_login_Modal").modal("hide")
-                        showModal_Success('Đăng nhập', `${data.message}`, '/company-home');
+                        //showModal_Success('Đăng nhập', `${data.message}`, '/company-home');
                         // $("#login_success button").click(function(){
                         //     $("#login_success").removeClass("show")
                         //     window.location.href =  "/company-home";
