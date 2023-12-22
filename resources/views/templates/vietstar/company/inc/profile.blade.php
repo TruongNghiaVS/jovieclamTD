@@ -411,7 +411,7 @@
             <div class="section-body">
            
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-center">
+                    <div class="col-sm-12 col-md-12 col-lg-4 d-flex flex-column justify-content-center align-items-center">
                         <h6>Logo</h6>
                         
                         <div class="formrow formrow-photo">

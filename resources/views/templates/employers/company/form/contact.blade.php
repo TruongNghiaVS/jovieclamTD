@@ -88,9 +88,11 @@
             $.ajax({
                 url: '{{url('/')}}/update-company-info-contact', // Replace with your server endpoint
                 type: 'POST',
+                beforeSend:showSpinner(),
                 data: {"_token": "{{ csrf_token() }}", ...formDataObject},
 
                 success: function(response) {
+                    hideSpinner();
                     // Handle successful response
                     if(response){
                         $('#contact_info').modal("hide");

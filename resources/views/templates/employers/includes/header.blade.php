@@ -329,6 +329,16 @@
 </div>
 
 
+<div id="spinner-wrapper">
+    <div class="d-flex justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;"  role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    </div>
+</div>
+
+
+
 @push('styles')
 <style>
     .header-active {
@@ -477,6 +487,9 @@
         color: var(--bs-primary);
         background: #E9E9E9;
    }
+
+    
+
 </style>
 @endpush
 

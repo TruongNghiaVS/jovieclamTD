@@ -297,7 +297,7 @@
         }
 
         $("#submit_company_info").click(()=>{
-
+          showSpinner();
           if(formData){
             $.ajaxSetup({
                 headers: {
@@ -309,6 +309,7 @@
                 type: 'post',
                 data: formData,
                 success: function(response) {
+                    hideSpinner()
                     if (response) {
                     
                         $('#company_info').modal("hide");
@@ -319,7 +320,12 @@
                     }
                 },
                 error: function(xhr, status, error) {
+                  hideSpinner()
                     // Handle error
+                },
+                complete: function() {
+                    // Hide spinner after the request is complete
+                    hideSpinner();
                 }
             });
           }
