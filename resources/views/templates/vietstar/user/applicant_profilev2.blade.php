@@ -1,7 +1,7 @@
 @extends('templates.employers.layouts.app')
 <!-- Header end --> 
 <!-- Inner Page Title start --> 
-{{-- <?php $true = FALSE; ?>
+<?php $true = FALSE; ?>
 
 <?php 
 if(Auth::guard('company')->user()){
@@ -13,7 +13,7 @@ if(null!==($package)){
     }
 }
 }
-?> --}}
+?> 
 
 @section('content')
 @include('templates.employers.includes.header')
@@ -27,7 +27,11 @@ if(null!==($package)){
     <div class="card card-bio mb-5 w-100 shadow-sm">
       <div class="row g-0">
         <div class="col-md-2">
-          <img src="{{ $user->avatar() }}" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="vietstar">
+          @if($user->logo)
+            <img src="{{ $user->avatar() }}" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="vietstar">
+          @else
+          <img src="/admin_assets/no-image.png" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="vietstar">
+          @endif
         </div>
         <div class="col-md-10">
           <div class="card-body">
@@ -35,10 +39,10 @@ if(null!==($package)){
             <p class="card-text">{{ $user->getProfileSummary('summary') }}</p>
 
           </div>
-          <div class="card-body contact-bio d-flex flex-column flex-lg-row">
+          <div class="card-body contact-bio d-flex flex-column">
             <span class="me-4 mb-2"><i class="far fa-map-marker-alt fa__icon-black me-2"></i>{{ $user->getLocation() }}</span>
             @if (((bool)$user->verified))
-            <span class="me-4 mb-2 text-green-color"><i class="far fa-envelope fa__icon-black me-2"></i>{{ __('Email Verified') }}</span>
+            <span class="me-4 mb-2 text-green-color"><i class="far fa-envelope fa__icon-black me-2"></i>{{ $user->email }}</span>
             @endif
 
             @if((bool)$user->is_immediate_available)
