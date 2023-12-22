@@ -79,7 +79,7 @@
             });
       
 
-            console.log(formDataObject);
+            showSpinner();
             $.ajaxSetup({
                         headers: {
                         'X-CSRF-TOKEN': '{{ csrf_token() }}'
@@ -88,7 +88,7 @@
             $.ajax({
                 url: '{{url('/')}}/update-company-info-contact', // Replace with your server endpoint
                 type: 'POST',
-                beforeSend:showSpinner(),
+            
                 data: {"_token": "{{ csrf_token() }}", ...formDataObject},
 
                 success: function(response) {
@@ -105,6 +105,10 @@
                 error: function(xhr, status, error) {
                     // Handle errors
                     alert(' failed: ' + error); // Example: You can show an error message
+                },
+                complete: function() {
+                    // Hide spinner after the request is complete
+                    hideSpinner();
                 }
             });
   

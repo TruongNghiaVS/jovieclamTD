@@ -78,8 +78,8 @@
 
 
       $('#reset_submitBtn').on('click',()=>{
-          console.log(12314);
-                if ($('#pwdId').val()) {
+          if ($('#pwdId').val()) {
+                  showSpinner();
                     // Simulating an AJAX POST request
                     $.ajax({
                         url:  `{{ route('update.company.updatePassword') }}`,
@@ -103,6 +103,10 @@
                         error: function (xhr, status, error) {
                             // Handle error
                             console.error('Error uploading avatar:', error);
+                        },
+                        complete: function() {
+                    // Hide spinner after the request is complete
+                            hideSpinner();
                         }
                     });
                 } else {
