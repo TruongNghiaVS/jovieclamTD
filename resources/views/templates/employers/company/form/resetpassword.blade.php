@@ -93,7 +93,7 @@
                           
                             if (response.sucess) {
                               $("#user_info").modal("hide");
-                              showModal_Success('Đổi mật khẩu', `${response.message ? response.message : "Đổi mật khẩu thành công"}`, ``);
+                              showModal_Success('Thông báo', `${response.message ? response.message : "Đổi mật khẩu thành công"}`, ``);
                               setTimeout(function(){
                                   window.location.reload();
                               }, 3000);

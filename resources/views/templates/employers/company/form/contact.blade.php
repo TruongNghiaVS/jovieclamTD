@@ -96,7 +96,7 @@
                     // Handle successful response
                     if(response){
                         $('#contact_info').modal("hide");
-                        showModal_Success('Cập nhật thông tin liên hệ', `Cập nhật thông tin liên hệ thành công`, ``);
+                        showModal_Success('Thông báo', `Cập nhật thông tin liên hệ thành công`, ``);
                         setTimeout(function(){
                               window.location.reload();
                         }, 3000);
