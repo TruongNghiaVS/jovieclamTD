@@ -133,7 +133,8 @@
                         <th class="font-weight-bold p-2"  >{{ __('Status') }}</th>
 
                         <th class="font-weight-bold p-2"  >{{ __('Location') }}</th>
-                        <th class="font-weight-bold p-2"  >{{ __('Salary') }}</th>
+                        <th class="font-weight-bold p-2 text-center"  >{{ __('Post Job') }}</th>
+
                         <th class="font-weight-bold p-2"  >{{ __('Action') }}</th>
 
                         @else
@@ -144,12 +145,13 @@
                             <th class="font-weight-bold p-2"  >{{ __('Status') }}</th>
 
                             <th class="font-weight-bold p-2"  >{{ __('Location') }}</th>
-                            <th class="font-weight-bold p-2"  >{{ __('Salary') }}</th>
-
+                           
                             <th class="font-weight-bold p-2" >Lượt nộp</th>
                             <th class="font-weight-bold p-2"  >{{ __('Interview Candidates') }}</th>
                             <th class="font-weight-bold p-2"  >{{ __('List of Hired Candidates') }}</th>
                             <th class="font-weight-bold p-2"  >{{ __('List of Rejected Candidates') }}</th>
+                            <th class="font-weight-bold p-2 text-center"  >{{ __('Post Job') }}</th>
+                            
                             <th class="font-weight-bold p-2"  >{{ __('Action') }}</th>
 
                         @endif
@@ -194,24 +196,20 @@
                         </td>
 
                         <td>
-                            <div class="d-flex align-items-center h-100 fs-18px">
-                                @php($from = round($job->salary_from/1000000,0))
-                                @php($to = round($job->salary_to/1000000,0))
-                                @if($job->salary_type == \App\Job::SALARY_TYPE_FROM)
-                                <span class="fas fa-dollar-sign mx-2"></span> {{__('From: ')}} {{$from}} {{__('million')}} ({{$job->salary_currency}})
-                                @elseif($job->salary_type == \App\Job::SALARY_TYPE_TO)
-                                <span class="fas fa-dollar-sign mx-2"></span> {{__('Up To: ')}} {{$to}} {{__('million')}} ({{$job->salary_currency}})
-                                @elseif($job->salary_type == \App\Job::SALARY_TYPE_RANGE)
-                                <span class="fas fa-dollar-sign mx-2"></span> {{$from}} - {{$to}} {{__('million')}} ({{$job->salary_currency}})
-                                @elseif($job->salary_type == \App\Job::SALARY_TYPE_NEGOTIABLE)
-                                <span class="fas fa-money-bill mx-2"></span> {{__('Negotiable')}}
-                                @else
-                                <span class="fas fa-dollar-sign mx-2"></span> {{__('Salary Not provided')}}
-                                @endif
-                            </div>
-                        </td>
+                                <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
+                                    <i class="bi bi-upload"></i>
+                                </a>
+                            </td>
                         <td>
-                        <i class="bi bi-x-lg"></i>
+                            <div class="d-flex">
+                                    <a href="{{url('/')}}/edit-front-job/{{$job->id}}">
+                                        <i class="bi bi-pencil-fill p-2 cursor-pointer"></i>
+                                    </a>
+                                    <a href="javascript:void(0)" onclick="deleteJob({{ $job->id }})">
+                                        <i class="bi bi-trash p-2 cursor-pointer "></i>
+                                    </a>
+                                  
+                            </div>
                         </td>
 
 
@@ -253,23 +251,7 @@
                                 </div>
                             </td>
 
-                            <td>
-                                <div class="d-flex align-items-center h-100 fs-18px">
-                                    @php($from = round($job->salary_from/1000000,0))
-                                    @php($to = round($job->salary_to/1000000,0))
-                                    @if($job->salary_type == \App\Job::SALARY_TYPE_FROM)
-                                    <span class="fas fa-dollar-sign mx-2"></span> {{__('From: ')}} {{$from}} {{__('million')}} ({{$job->salary_currency}})
-                                    @elseif($job->salary_type == \App\Job::SALARY_TYPE_TO)
-                                    <span class="fas fa-dollar-sign mx-2"></span> {{__('Up To: ')}} {{$to}} {{__('million')}} ({{$job->salary_currency}})
-                                    @elseif($job->salary_type == \App\Job::SALARY_TYPE_RANGE)
-                                    <span class="fas fa-dollar-sign mx-2"></span> {{$from}} - {{$to}} {{__('million')}} ({{$job->salary_currency}})
-                                    @elseif($job->salary_type == \App\Job::SALARY_TYPE_NEGOTIABLE)
-                                    <span class="fas fa-money-bill mx-2"></span> {{__('Negotiable')}}
-                                    @else
-                                    <span class="fas fa-dollar-sign mx-2"></span> {{__('Salary Not provided')}}
-                                    @endif
-                                </div>
-                            </td>
+                            
                             <td>
                                 <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
                                     {{ $job->appliedUsers->count() }} 
@@ -292,6 +274,12 @@
                                 <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
                                     {{ $job->getStatusInterview(4)->count() }}
                                 </div>
+                            </td>
+
+                            <td>
+                                <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
+                                    <i class="bi bi-upload"></i>
+                                </a>
                             </td>
 
                             <td>
@@ -336,7 +324,25 @@
 </div>
 <!-- Pagination end -->
 </div>
-
+<div class="modal fade" id="comfirm_update" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">Đăng tuyển dụng</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+            Tin tuyển dụng của quý khách sẽ được kiểm duyệt trong vòng 2 ngày 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+        <button type="button" id="comfirm_update_btn" class="btn btn-primary">Đồng ý</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 </div>
@@ -393,6 +399,30 @@
                     }
                 });
         }
+    }
+
+
+    function updateJob(id) {
+        
+        $("#comfirm_update").modal("show");
+        $("#comfirm_update_btn").click(()=>{
+            showSpinner();
+            // $.post("{{ route('delete.front.job') }}", {
+            //         id: id,
+            //         _method: 'DELETE',
+            //         _token: '{{ csrf_token() }}'
+            //     })
+            //     .done(function(response) {
+            //         if (response == 'ok') {
+            //             $('#job_li_' + id).remove();
+            //         } else {
+            //             alert('Request Failed!');
+            //         }
+            //     });
+            hideSpinner()
+            $("#comfirm_update").modal("hide");
+        })
+      
     }
     $(document).ready(function() {
       
