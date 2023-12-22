@@ -90,10 +90,10 @@
                         },
                     
                         success: function (response) {
-                            if(response){
-                                location.reload();
+                          console.log(response);
+                            // if (response) {
                                 
-                            }
+                            // }
                         },
                         error: function (xhr, status, error) {
                             // Handle error

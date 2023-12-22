@@ -456,49 +456,7 @@
             </div>
         </div>
     </div>
-    <div class="user-account-section">
-        <div class="formpanel mt0">
-            <div class="section-head">
-                <div class="section-head__figure">
-                    <div class="figure__image"><img src="https://icons.veryicon.com/png/o/system/alongthink/ico-user-info.png" alt=""></div>
-                    <div class="figure__caption">
-                        <h5 class="">{{__('Account Information')}}</h5>
-                        <div class="status complete" bis_skin_checked="1">
-                            <p>Hoàn thành</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-head__right-action" bis_skin_checked="1">
-                    <div class="right-action__tips" bis_skin_checked="1">
-                        <i class="bi bi-lightbulb"></i>
-                        <p>Tips</p>
-                    </div>
-                    <div class="right-action__link-edit"><a data-toggle="modal" data-target="#user_info" href="#"><i class="bi bi-pen"></i>Chỉnh sửa</a></div>
-                    <div class="right-action__link-edit-mobile"><a data-toggle="modal" data-target="#user_info" href="#"><i class="bi bi-pen"></i></a></div>
-                </div>
-            </div>
-
-            <div class="section-body">
-                <div class="table-responsive">
-                    <table class="table table-responsive table-user-information">
-                        <tbody>
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        <i class="bi bi-envelope"></i>{{__('Email')}}
-                                    </strong>
-                                </td>
-                                <td class="text-primary table_value">
-                                    {{ old('email') ? old('email') : $company->email }}
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <div class="user-account-section">
         <div class="formpanel mt0">
             <div class="section-head">
@@ -818,7 +776,12 @@
 
                     success: function(response) {
                         // Handle success response
-                        location.reload();
+                        if(response){
+                            showModal_Success('Cập nhật avatar', `Cập nhật avatar thành công`, ``);
+                            setTimeout(function(){
+                                window.location.reload();
+                            }, 3000);
+                        }
                     },
                     error: function(xhr, status, error) {
                         // Handle error
@@ -868,7 +831,12 @@
 
                     success: function(response) {
                         // Handle success response
-                        location.reload();
+                        if(response){
+                        showModal_Success('Cập nhật background', `Cập nhật background thành công`, ``);
+                            setTimeout(function(){
+                                window.location.reload();
+                            }, 3000);
+                        }
                     },
                     error: function(xhr, status, error) {
                         // Handle error
