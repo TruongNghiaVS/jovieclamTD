@@ -297,8 +297,9 @@
                 type: 'post',
                 data: formData,
                 success: function(response) {
-                    // Handle success
-                    location.reload();
+                    if(response){
+                        console.log(response);
+                    }
                 },
                 error: function(xhr, status, error) {
                     // Handle error

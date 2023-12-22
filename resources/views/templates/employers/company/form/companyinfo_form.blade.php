@@ -185,7 +185,7 @@
                 </div>
 
 
-            <button class="btn btn-primary w-100" id="submit_company_info">{{__('Submit')}}</button>
+            <button class="btn btn-primary w-100" type="button" id="submit_company_info">{{__('Submit')}}</button>
           </div>
         </div>
 
@@ -297,7 +297,7 @@
         }
 
         $("#submit_company_info").click(()=>{
-
+          showSpinner();
           if(formData){
             $.ajaxSetup({
                 headers: {
@@ -309,11 +309,23 @@
                 type: 'post',
                 data: formData,
                 success: function(response) {
-                    // Handle success
-                    location.reload();
+                    hideSpinner()
+                    if (response) {
+                    
+                        $('#company_info').modal("hide");
+                        showModal_Success('Cập nhật thông tin công ty', `Cập nhật thông tin công ty thành công`, ``);
+                        setTimeout(function(){
+                              window.location.reload();
+                        }, 3000);
+                    }
                 },
                 error: function(xhr, status, error) {
+                  hideSpinner()
                     // Handle error
+                },
+                complete: function() {
+                    // Hide spinner after the request is complete
+                    hideSpinner();
                 }
             });
           }

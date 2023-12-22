@@ -40,6 +40,46 @@ function TabJob(evt, tabname) {
 }
 
 
+function showModal_Success(title, message, targetUrl) {
+    console.log(123123);
+    // Set the title
+    $('#customModal-success #customModalLabel').text(title);
+
+    // Set the message
+    $('#customModal-success .modal-body h3').text(message);
+
+    // Set the target URL
+    $('#customModal-success #modalLink').attr('href', targetUrl);
+
+    // Show the modal
+    $('#customModal-success').modal('show');
+}
+
+
+function showModal_Fail(title, message, targetUrl) {
+    // Set the title
+    $('#customModal-fail #customModalLabel').text(title);
+
+    // Set the message
+    $('#customModal-fail .modal-body h3').text(message);
+
+    // Set the target URL
+    $('#customModal-fail #modalLink').attr('href', targetUrl);
+
+    // Show the modal
+    $('#customModal-fail').modal('show');
+}
+
+
+function showSpinner() {
+    document.getElementById('spinner-wrapper').style.display = 'flex';
+}
+
+
+function hideSpinner() {
+    document.getElementById('spinner-wrapper').style.display = 'none';
+}
+
 
 
 

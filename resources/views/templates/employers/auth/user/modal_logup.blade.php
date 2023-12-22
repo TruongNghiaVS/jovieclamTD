@@ -335,14 +335,11 @@ $(document).ready(function() {
                 })
                 .done(function(data){
                     if (data.sucess == true ) {
-                        $('#logup_em_success').modal('show');
-                        
-                    
                         $("#employer_logup_Modal").modal("hide")
-                        $('#logup_em_success').click(function () {
-                            // Redirect to the dashboard page
-                            window.location.href = '/company-home';  // Replace with the actual URL
-                        });
+                        showModal_Success('Đăng ký', `Đăng ký thành công`, '/company-home');
+                        setTimeout(function(){
+                                  window.location.href =  "/company-home";
+                        }, 3000);
                     }
                    
                                 

@@ -333,7 +333,11 @@
                     //     alert(data.message)
                     // }, 2000);
                     if(data.sucess == true){
-                        window.location.href = data.urlRedirect;
+                    
+                        showModal_Success('Đăng nhập', `${data.message ? data.message :"Đăng nhập thành công"}`, `${ data.urlRedirect ?  data.urlRedirect : "/company-home"}`);
+                        setTimeout(function(){
+                              window.location.href =  "/company-home";
+                        }, 3000);
                     }
                 
                 })
@@ -420,7 +424,10 @@
                 })
                 .done(function(data){
                     if (data.sucess == true) {
-                        window.location.href = '/company-home';
+                        showModal_Success('Đăng nhập', `${data.message ? data.message :"Đăng ký thành công"}`, `${ data.urlRedirect ?  data.urlRedirect : "/company-home"}`);
+                        setTimeout(function(){
+                              window.location.href =  "/company-home";
+                        }, 3000);
                     }
                 })
                 .fail(function(jqXHR, textStatus){

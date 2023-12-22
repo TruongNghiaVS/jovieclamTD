@@ -44,24 +44,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="login_em_success" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        
-                     </div>
-					
-                    <div class="modal-body">
-                     
-                        <div class="thank-you-pop">
-							<img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
-							<h3>{{__('Sign In Success')}}</h3>		
- 						</div>
-                    </div>
-					
-        </div>
-    </div>
-</div>
+
 @push('styles')
 <style>
     .invalid-feedback {
@@ -233,10 +216,28 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
+                    // if (data.sucess == true) { 
+                    //     $("#employer_login_Modal").css("display:none");
+                    //     $("#employer_login_Modal").removeClass("show");
+                    //     window.location.href =  "/company-home";
+                    // }
+
                     if (data.sucess == true) { 
-                        $("#employer_login_Modal").css("display:none");
-                        $("#employer_login_Modal").removeClass("show");
-                        window.location.href =  "/company-home";
+                        // console.log(data);
+                        
+                        // $("#exampleModal").modal("show")
+                        $("#employer_login_Modal").modal("hide")
+                        showModal_Success('Đăng nhập', `${data.message}`, '/company-home');
+                        // $("#login_success button").click(function(){
+                        //     $("#login_success").removeClass("show")
+                        //     window.location.href =  "/company-home";
+                        // });
+                        setTimeout(function(){
+                              window.location.href =  "/company-home";
+                        }, 3000);
+                    }
+                    else {
+                        showModal_Fail('Đăng nhập', `Đăng nhập thất bại`, '');
                     }
                 })
                 .fail(function(jqXHR, textStatus){
