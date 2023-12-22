@@ -185,7 +185,7 @@
                 </div>
 
 
-            <button class="btn btn-primary w-100" id="submit_company_info">{{__('Submit')}}</button>
+            <button class="btn btn-primary w-100" type="button" id="submit_company_info">{{__('Submit')}}</button>
           </div>
         </div>
 
@@ -309,8 +309,14 @@
                 type: 'post',
                 data: formData,
                 success: function(response) {
-                    // Handle success
-                    location.reload();
+                    if (response) {
+                    
+                        $('#company_info').modal("hide");
+                        showModal_Success('Cập nhật thông tin công ty', `Cập nhật thông tin công ty thành công`, ``);
+                        setTimeout(function(){
+                              window.location.reload();
+                        }, 3000);
+                    }
                 },
                 error: function(xhr, status, error) {
                     // Handle error

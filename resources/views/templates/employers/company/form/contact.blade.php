@@ -92,7 +92,13 @@
 
                 success: function(response) {
                     // Handle successful response
-                    location.reload();
+                    if(response){
+                        $('#contact_info').modal("hide");
+                        showModal_Success('Cập nhật thông tin liên hệ', `Cập nhật thông tin liên hệ thành công`, ``);
+                        setTimeout(function(){
+                              window.location.reload();
+                        }, 3000);
+                    }
                 },
                 error: function(xhr, status, error) {
                     // Handle errors
