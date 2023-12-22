@@ -1,3 +1,4 @@
+
 <h1 class="fs-2 text-primary">{{__('Recruitment Posting')}}</h1>
 @if(isset($job))
 {!! Form::model($job, array('method' => 'put', 'route' => array('update.front.job', $job->id), 'class' => 'form')) !!}
@@ -6,6 +7,12 @@
 {!! Form::open(['route' => 'store.front.job', 'method' => 'POST', 'id' => 'new-job-form', 'class' => 'form', 'novalidate'] ) !!}
 @endif
 
+<style>
+.font-weight-bold {
+	font-weight: bold !important;
+ 
+}
+</style>
 
 
 <div class="card card-edit-profile">
@@ -22,31 +29,20 @@
                         </div>
                     </div>
                 </div>
+               
+
+
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="expiry_date" class="font-weight-bold fs-18px">{{__('Deadline')}} <span class="required">*</span></label>
-                            <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="Deadline" value="{{ $edit && isset($job) ? \Carbon\Carbon::parse($job->expiry_date)->format('d-m-Y') : \Carbon\Carbon::parse(old('expiry_date'))->format('d-m-Y') }}">
-                        </div>
+                    <div class="form-group">
+                    <label for="industry_id" class="font-weight-bold fs-18px">{{__('Industry')}} <span class="required">*</span></label>
+                    {!! Form::select('industry_id', ['' => __('Select Industry')] + $industries, null, array('class'=>'form-control form-select', 'id'=>'industry_id')) !!}
+                    {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!}
+                </div>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="WFH" class="font-weight-bold fs-18px">{{__('WFH')}} <span class="required">*</span></label>
-
-                            <label class="switch">
-                                <input type="checkbox" name="WFH" id="WFH">
-                                <span class="slider"></span>
-                            </label>
-
-
-                        </div>
-                    </div>
-                </div>
-
-
+      
 
                 <div class="row">
                     <div class="col-md-12">
@@ -67,6 +63,15 @@
                         <div class="form-group" id="pow_address" style="display:none;">
                             <label for="location" class="font-weight-bold fs-18px">{{__('Address')}} <span class="required">*</span></label>
                             <input type="text" class="form-control" id="location" name="location" placeholder="{{__('Location')}}" value="{{ $edit && isset($job) ? $job->location : old('location') }}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group" id="city_dd">
+                            <label for="City" class="font-weight-bold fs-18px">{{__('City')}} <span class="required">*</span></label>
+                            {!! Form::select('city_id', ['' => __('Select City')] + $cities, Request::get('city_id', null), array('class'=>'form-control form-select shadow-sm', 'id'=>'city_id')) !!}
+                            {!! APFrmErrHelp::showErrors($errors, 'city_id') !!}
                         </div>
                     </div>
                 </div>
@@ -158,31 +163,21 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group" id="city_dd">
-                            <label for="City" class="font-weight-bold fs-18px">{{__('City')}} <span class="required">*</span></label>
-                            {!! Form::select('city_id', ['' => __('Select City')] + $cities, Request::get('city_id', null), array('class'=>'form-control form-select shadow-sm', 'id'=>'city_id')) !!}
-                            {!! APFrmErrHelp::showErrors($errors, 'city_id') !!}
-                        </div>
-                    </div>
-                </div>
-
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="num_of_positions" class="font-weight-bold fs-18px">{{__('Number of positions')}} <span class="required">*</span></label>&nbsp;&nbsp;&nbsp;<span class="text-danger" id="num_of_positions_error" class="error danger"></span>
-                            <input type="text" class="form-control" id="num_of_positions" name="num_of_positions" placeholder="{{__('Number of positions')}}" value="{{ $edit && isset($job) ? $job->num_of_positions : old('num_of_positions') }}">
-
+                            <label for="expiry_date" class="font-weight-bold fs-18px">Hạn nhận hồ sơ <span class="required">*</span></label>
+                            <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="Deadline" value="{{ $edit && isset($job) ? \Carbon\Carbon::parse($job->expiry_date)->format('d-m-Y') : \Carbon\Carbon::parse(old('expiry_date'))->format('d-m-Y') }}">
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+              
+              
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group form-group-custom-multiselect" id="skill_id_dd">
@@ -196,7 +191,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-6">
                         <div class="form-group" id="status_dd">
                             <label for="status" class="font-weight-bold fs-18px">{{__('Job Status')}} <span class="required">*</span></label>
@@ -209,7 +204,7 @@
                             {!! APFrmErrHelp::showErrors($errors, 'status') !!}
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
 
@@ -269,18 +264,45 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-md-3 col-sm-12">
-                <div class="form-group">
-                    <label for="industry_id" class="font-weight-bold fs-18px">{{__('Industry')}} <span class="required">*</span></label>
-                    {!! Form::select('industry_id', ['' => __('Select Industry')] + $industries, null, array('class'=>'form-control form-select', 'id'=>'industry_id')) !!}
-                    {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!}
-                </div>
-            </div>
+            
         </div>
     </div>
 
 </div>
 
+
+<div class="card card-edit-profile my-3">
+    <h2 class="fs-4 card-edit-profile__section">THÔNG TIN KHÁC (KHÔNG BẮT BUỘC)</h2>
+    <div class="card-body">
+        <p>
+        Giới thiệu về môi trường làm việc, thời gian thử việc, cơ hội huấn luyện, đồng nghiệp
+        </p>
+        <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="num_of_positions" class="font-weight-bold fs-18px">{{__('Number of positions')}} </label>&nbsp;&nbsp;&nbsp;<span class="text-danger" id="num_of_positions_error" class="error danger"></span>
+                            <input type="text" class="form-control" id="num_of_positions" name="num_of_positions" placeholder="{{__('Number of positions')}}" value="{{ $edit && isset($job) ? $job->num_of_positions : old('num_of_positions') }}">
+
+                        </div>
+                    </div>
+                </div>
+        <div class="row">
+                  
+            <div class="form-group form-checkbox wfh-chek">
+                    <input type="checkbox" value="1" name="WFH" id="WFH" class="input_margin">
+                    <label for="workfromhome">Work from home</label>
+                    <br>
+                    <span> Tick chọn nếu vị trí tuyển dụng này cho phép ứng viên có thể chọn chế độ làm việc tại nhà trong thời điểm hiện tại (Work from home) mà không nhất thiết phải có mặt tại văn phòng công ty. Hệ thống sẽ phân loại và đánh dấu đăng tuyển này vào danh mục tìm kiếm loại công việc là “Work from Home”.</span>
+             </div>
+        
+           
+           
+
+                       
+         </div>
+    </div>
+
+</div>
 
 <div class="row">
     <div class="col-md-12 d-flex justify-content-center">
