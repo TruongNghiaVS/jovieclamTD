@@ -11,10 +11,10 @@
                         <ul class="company-account-information">
                             
                             <li>
-                                <p class="number orderNew">0</p><a class="title" href="/company-packages">Đơn hàng đang sử dụng</a>
+                                <p class="number orderNew">1</p><a class="title" href="/company-packages">Đơn hàng đang sử dụng</a>
                             </li>
                             <li>
-                                <p class="number JskNew">0</p><a class="title" href="/application-manager">Ứng viên ứng tuyển</a>
+                                <p class="number JskNew">{{ $dashboarOverview->candidateCount}}</p><a class="title" href="/application-manager">Ứng viên ứng tuyển</a>
                             </li>
                         </ul>
                     </div>
@@ -44,25 +44,21 @@
                     <div class="body" bis_skin_checked="1">
                         <ul class="company-account-information">
                             <li>
-                                <p class="number intNumPostNoUse">0</p><a class="title" href="#">Việc làm đang đăng</a>
+                                <p class="number intNumPostNoUse">{{$dashboarOverview->TotalJobPublish}}</p><a class="title" href="#">Việc làm đang đăng</a>
                             </li>
                             <li>
-                                <p class="number orderNew">0</p><a class="title" href="#">
+                                <p class="number orderNew">{{$dashboarOverview->TotalJobWatiting}}</p><a class="title" href="#">
                                     Việc làm chờ đăng</a>
                             </li>
                             <li>
-                                <p class="number JskNew">0</p><a class="title" href="#">
+                                <p class="number JskNew">{{$dashboarOverview->TotalJobPause}}</p><a class="title" href="#">
                                     Việc làm tạm dừng đăng</a>
                             </li>
                             <li>
-                                <p class="number JskNew">0</p><a class="title" href="#">
+                                <p class="number JskNew">{{$dashboarOverview->TotalJobExprise}}</p><a class="title" href="#">
                                     Việc làm hết hạn</a>
                             </li>
-                            <li>
-                                <p class="number JskNew">0</p><a class="title" href="#">
-
-                                    Followers</a>
-                            </li>
+                          
                         </ul>
                     </div>
                 </div>

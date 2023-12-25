@@ -13,6 +13,8 @@
                         $currency = \App\Country::where('lang', $language)->first()->currency ?? 'vnd';
 					@endphp
 					<div class="row"> @foreach($packages as $package)
+
+								
 							@php
                                 $curr = isset($package) ? $package->currency : $currency;
                                 $price = $curr == 'vnd' ? number_format($package->package_price, 0, ',', '.') : number_format($package->package_price, 2, '.', ',');

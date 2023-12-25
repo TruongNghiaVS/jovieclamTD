@@ -126,10 +126,8 @@ class Company extends Authenticatable
 
 
     public function countOpenJobs()
-
-    {
-
-        return $this->openJobs()->count();
+     {
+         return $this->openJobs()->count();
 
     }
 

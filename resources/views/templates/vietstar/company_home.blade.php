@@ -17,18 +17,19 @@
            
            <?php
          
-            if((bool)config('company.is_company_package_active')){        
-              
-            $packages = App\Package::where('package_for', 'like', 'employer')->get();
-           
-            $package = Auth::guard('company')->user()->getPackage();
-          
-            ?>
+            if((bool)config('company.is_company_package_active')){     
+                   
+                $package = Auth::guard('company')->user()->getPackage();
+                $packages = App\Package::where('package_for', 'like', 'employer')
+               ->whereNotIn('id', [$package->id])
+               ->get();
+              ?>
             <?php if(null !== $package){ ?>
 
             @include('templates.employers.includes.company_package_msg')
           
             @include('templates.employers.includes.company_packages_upgrade')
+            
           
             <?php }elseif(null !== $packages){ ?>
 

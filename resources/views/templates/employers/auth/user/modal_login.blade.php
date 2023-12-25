@@ -219,7 +219,7 @@ $(document).ready(function() {
                     // if (data.sucess == true) { 
                     //     $("#employer_login_Modal").css("display:none");
                     //     $("#employer_login_Modal").removeClass("show");
-                    //     window.location.href =  "/company-home";
+                    //     window.location.href =  "/dashboard";
                     // }
 
                     if (data.sucess == true) { 
@@ -227,13 +227,13 @@ $(document).ready(function() {
                         
                         // $("#exampleModal").modal("show")
                         $("#employer_login_Modal").modal("hide")
-                        //showModal_Success('Đăng nhập', `${data.message}`, '/company-home');
+                        //showModal_Success('Đăng nhập', `${data.message}`, '/dashboard');
                         // $("#login_success button").click(function(){
                         //     $("#login_success").removeClass("show")
-                        //     window.location.href =  "/company-home";
+                        //     window.location.href =  "/dashboard";
                         // });
                         setTimeout(function(){
-                              window.location.href =  "/company-home";
+                              window.location.href =  "/dashboard";
                         }, 3000);
                     }
                     else {
