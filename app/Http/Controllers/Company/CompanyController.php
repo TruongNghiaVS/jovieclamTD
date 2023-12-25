@@ -66,8 +66,30 @@ class CompanyController extends Controller
 
     public function index()
     {
-  
-        return view(config('app.THEME_PATH').'.company_home');
+        $companyActive =  Auth::guard('company')->user();
+        $jobs = Job::where("company_id",$companyActive->id);
+        
+        $coutJobComplete =    $jobs->where("status",1)->count();
+        $coutJobWatiting =    $jobs->where("status",2)->count();
+        $coutJobPause =    $jobs->where("status",3)->count();
+        $coutJobExprise =    $jobs->where("status",4)->count();
+    
+        $dashboarOverview = new \stdClass();
+        $dashboarOverview->TotalJobPublish =  $coutJobComplete;
+        $dashboarOverview->TotalJobWatiting =  $coutJobWatiting;
+        $dashboarOverview->TotalJobPause =  $coutJobPause;
+        $dashboarOverview->TotalJobExprise =  $coutJobExprise;
+        $countFavourite =  FavouriteCompany::where('company_slug', 'like', $companyActive->slug)->count();  
+        $jobs = Job::where("company_id",$companyActive->id)
+                    ->orderBy('jobs.created_at', 'desc')
+                    ->pluck('jobs.id')
+                    ->toArray();
+                
+        $candidateOverView = JobApply::with('user', 'job')->whereIn('job_apply.job_id', $jobs)->count();;
+         
+        $dashboarOverview->candidateCount =  $candidateOverView;
+        $dashboarOverview->countFavourite =  $countFavourite;
+        return view(config('app.THEME_PATH').'.company_home', compact("dashboarOverview",));
     }
 
 
@@ -75,13 +97,8 @@ class CompanyController extends Controller
     {
         $jobs = Auth::guard('company')->user()->jobs()->orderBy('jobs.created_at', 'desc')->pluck('jobs.id')->toArray();
         $userApply = JobApply::with('user', 'job')->whereIn('job_apply.job_id', $jobs);
-       
-     
-    
-    
         $from_to = $request->from;
         $from_to2 = $request->to;
-        
         if($request->name) {
             $userApply = $userApply->whereHas('user', function($query) use ($request) {
                 $query->where('users.name', 'like', '%'.$request->name.'%')->orWhere('users.email', 'like', '%'.$request->name.'%');
@@ -97,7 +114,7 @@ class CompanyController extends Controller
             $userApply = $userApply->where('job_apply.seen', $seen);
         }
 
-      if(isset($from_to) )
+       if(isset($from_to) )
         {
             
             $from_to = Carbon::parse($from_to);
@@ -119,7 +136,6 @@ class CompanyController extends Controller
             'request' => $request->all(),
             'log_seen' => $request->log_seen ? $request->log_seen : null,
         ];
-        
         return view(config('app.THEME_PATH').'.application_manager', $data);
     }
 

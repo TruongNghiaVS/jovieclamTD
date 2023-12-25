@@ -32,6 +32,8 @@
                 <tbody>
                     @if(count($userApply) > 0)
                     @foreach($userApply as $value)
+
+                    
                     <tr class="cv viewed">
                         <td>
                             <div class="d-flex align-items-center">

@@ -34,9 +34,10 @@
                         
                         <td>
                             <div class="fullname">
-                                <a href="#" role="button" class="font-weight-bold text-dark text-primary-hover text-capitalize public-profile"
+                                <a href="#" role="button" 
+                                   class="font-weight-bold text-dark text-primary-hover text-capitalize public-profile"
                                    data-user="{{$value->user->id}}" data-job="{{$value->job->id}}"
-                                   data-name="{{$value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name}}">
+                                   data-name="{{$value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name}}"   >
                                    {{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name }}
                                 </a>
                             </div>
@@ -46,8 +47,9 @@
                         </td>
                         <td>
                             <a class="text-gray text-truncate has-tooltip job-details"
-                                data-original-title="null" style="max-width: 150px;" data-job-slug="{{$value->job->slug}}"
-                               data-job-name="{{$value->job->title ??''}}">
+                                data-original-title="null" style="max-width: 150px;"
+                                 data-job-slug="{{$value->job->slug}}"
+                                data-job-name="{{$value->job->title ??''}}">
                                 {{ $value->job->title ??'' }}
                             </a>
                         </td>
@@ -69,10 +71,12 @@
                                     <span style="cursor: pointer;">
                                     <i class="iconmoon icon-recruiter-suitcase"></i>
                                         Ứng tuyển
-                                    </span></div>
+                                    </span>
+                                </div>
                                 <div>
                                     <span style="cursor: pointer;">
-                                        <i class="iconmoon icon-calendar-icon1"></i> {{ \Carbon\Carbon::parse($value->created_at)->format('Y-m-d H:i') }}
+                                        <i class="iconmoon icon-calendar-icon1"></i>
+                                         {{ \Carbon\Carbon::parse($value->created_at)->format('Y-m-d H:i') }}
                                     </span>
                                 </div>
                             

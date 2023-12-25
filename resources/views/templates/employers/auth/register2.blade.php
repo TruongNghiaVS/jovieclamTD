@@ -328,9 +328,9 @@ $(document).ready(function() {
                 })
                 .done(function(data){
                     if (data.sucess == true ) {
-                        showModal_Success('Đăng nhập', `${data.message ? data.message :"Đăng ký thành công"}`, `${ data.urlRedirect ?  data.urlRedirect : "/company-home"}`);
+                        showModal_Success('Đăng nhập', `${data.message ? data.message :"Đăng ký thành công"}`, `${ data.urlRedirect ?  data.urlRedirect : "/dashboard"}`);
                         setTimeout(function(){
-                              window.location.href =  "/company-home";
+                              window.location.href =  "/dashboard";
                         }, 3000);
                     }
                    
@@ -339,13 +339,13 @@ $(document).ready(function() {
                     // $("#thank-you-pop button").on("click",function(){
                     //     $("#logup_em_success").removeClass("show")
                         
-                    //     window.location.href =  "/company-home";
+                    //     window.location.href =  "/dashboard";
                     // });
                     // $("#logup_em_success .modal-dialog").on("click",function(){
                     //     console.log(1231412);
                     //     // $("#logup_em_success").removeClass("show")
                         
-                    //     // window.location.href =  "/company-home";
+                    //     // window.location.href =  "/dashboard";
                     // });
 
                

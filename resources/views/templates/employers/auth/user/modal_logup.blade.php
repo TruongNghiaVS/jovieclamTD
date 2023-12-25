@@ -336,9 +336,9 @@ $(document).ready(function() {
                 .done(function(data){
                     if (data.sucess == true ) {
                         $("#employer_logup_Modal").modal("hide")
-                        //showModal_Success('Đăng ký', `Đăng ký thành công`, '/company-home');
+                        //showModal_Success('Đăng ký', `Đăng ký thành công`, '/dashboard');
                         setTimeout(function(){
-                                  window.location.href =  "/company-home";
+                                  window.location.href =  "/dashboard";
                         }, 3000);
                     }
                    
@@ -347,7 +347,7 @@ $(document).ready(function() {
                     // $("#thank-you-pop button").on("click",function(){
                     //     $("#logup_em_success").removeClass("show")
                         
-                    //     window.location.href =  "/company-home";
+                    //     window.location.href =  "/dashboard";
                     // });
                     // $("#logup_em_success .modal-dialog").on("click",function(){
                     //     console.log(1231412);
