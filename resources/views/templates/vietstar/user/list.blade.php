@@ -82,44 +82,71 @@
 <!-- Dashboard menu end -->
 
 
-
-
 <div class="job-seekers-page listpgWraper">
-  
+
     <div class="container Jobpage">
         <form action="{{route('job.seeker.list')}}" method="get">
-        @include('templates.employers.user.inc.filters_job_wrapper')  
-        <!-- Search Result and sidebar start -->
+            @include('templates.employers.user.inc.filters_job_wrapper')
+            <!-- Search Result and sidebar start -->
             <div class="row">
                 <div class="col-lg-8">
-                    <!-- Search List -->
-                    <ul class="searchList">
-                        <!-- job start -->
+                    <div class="searchList jobs-side-list" bis_skin_checked="1">
                         @if(isset($jobSeekers) && count($jobSeekers))
                         @foreach($jobSeekers as $jobSeeker)
-                        <li>
-                            <div class="row">
-                                <div class="col-lg-8 col-md-8">
-                                    <div class="jobimg">{{$jobSeeker->printUserImage(100, 100)}}</div>
-                                    <div class="jobinfo">
-                                        <h3><a href="{{route('user.profile', $jobSeeker->id)}}">{{$jobSeeker->getName()}}</a>
-                                        </h3>
-                                        <div class="location"> {{$jobSeeker->getLocation()}}</div>
+                        <div  class="item-job mb-3" bis_skin_checked="1">
+                            <div class="logo-company" bis_skin_checked="1">
+                                <a href="/cong-ty/cong-ty-tnhh-buymed-145" title="CÔNG TY TNHH EDUPIA" class="pic">
+                                    {{$jobSeeker->printUserImage()}}
+                                </a>
+                            </div>
+                            <div class="jobinfo" bis_skin_checked="1">
+                                <div class="info" bis_skin_checked="1">
+                                    <!-- Title  Start-->
+                                    <div class="info-item job-title-box" bis_skin_checked="1">
+                                        <div class="job-title" bis_skin_checked="1">
+                                     
+                                            <h3 class="job-title-name m-0"><a href="{{route('user.profile', $jobSeeker->id)}}" title="{{$jobSeeker->getName()}}">{{$jobSeeker->getName()}}</a></h3>
+
+                                        </div>
+                                        <a class="btn-veiw-profile"  href="{{route('user.profile', $jobSeeker->id)}}">{{__('View Profile')}}</a>
+
+                                        
                                     </div>
-                                    <div class="clearfix"></div>
+                                    <!-- Title  End-->
+                                    <!-- companyName Start-->
+                                    <div class="info-item companyName" bis_skin_checked="1">{{$jobSeeker->email ?  $jobSeeker->email :" "}}</div>
+                                    <!-- companyName End-->
+                                    <!--rank-salary and place Start-->
+                                    <div class="info-item box-meta" bis_skin_checked="1">
+                                        <div class="meta-city" bis_skin_checked="1">
+                                            <!-- <i class="far fa-map-marker-alt"></i> -->
+                                            {{$jobSeeker->getLocation()}}
+                                        </div>
+                                    </div>
+                                    <!--Rank-salary and place End-->
+                                    <!--Day update and place Start-->
+                                    @if($jobSeeker->updated_at)
+                                    <div class="info-item day-update" bis_skin_checked="1">
+                                        Cập nhật:  {{ $jobSeeker->updated_at->format('j F, Y') }}
+                                    </div>
+                                    @endif
+                                    <!--Day update and place End-->
                                 </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="listbtn"><a href="{{route('user.profile', $jobSeeker->id)}}">{{__('View Profile')}}</a>
+                                <div class="caption" bis_skin_checked="1">
+                                    <div class="welfare" bis_skin_checked="1">
+                                        <div class="box-meta" bis_skin_checked="1">
+
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-                            <p>{{\Illuminate\Support\Str::limit(strip_tags($jobSeeker->getProfileSummary('summary')),150,'...')}}
-                            </p>
-                        </li>
-                        <!-- job end -->
+                        </div>
                         @endforeach
                         @endif
-                    </ul>
+                    </div>
+                    <!-- Search List -->
+                    
 
                     <!-- Pagination Start -->
                     <div class="pagiWrap">
@@ -142,7 +169,7 @@
 
                 </div>
                 <div class="col-lg-4 col-sm-12 pull-right">
-                <!-- Sponsord By -->
+                    <!-- Sponsord By -->
                     <div class="sidebar shadow">
                         @include('templates.employers.job.inc.ads')
                     </div>

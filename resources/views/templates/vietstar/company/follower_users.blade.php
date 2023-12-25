@@ -33,9 +33,9 @@
                                     <div class="card-news__content-footer card-news__content-footer-applied-jobs">
                                         <div class="applied-jobs-information">
                                             <h6 class="card-news__content-title"><a href="{{route('user.profile', $user->id)}}">{{$user->getName()}}</a></h6>
-                                                <p class="card-news__content-detail mb-1"><span class="iconmoon icon-recruiter-phone-call"></span> {{$user->phone}} </p>
-                                                <p class="card-news__content-detail mb-1"><span class="iconmoon icon-recruiter-email"></span> {{$user->email}}  </p>
-                                                <p class="card-news__content-detail mb-1"> <span class="iconmoon icon-recruiter-location"></span> {{$user->getLocation()}} - {{$user->street_address}}</p>
+                                                @if($user->phone)<p class="card-news__content-detail mb-1"><span class="iconmoon icon-recruiter-phone-call"></span> {{$user->phone}} </p>@endif
+                                                @if($user->email)<p class="card-news__content-detail mb-1"><span class="iconmoon icon-recruiter-email"></span> {{$user->email}}  </p>@endif
+                                                @if($user->getLocation()) <p class="card-news__content-detail mb-1"> <span class="iconmoon icon-recruiter-location"></span> {{$user->getLocation()}} @if($user->street_address)  - {{$user->street_address}}@endif</p>@endif
                                         </div>
                                         
                                         <div class="card-news__content-footer__salary">
