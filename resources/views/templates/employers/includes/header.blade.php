@@ -288,15 +288,15 @@
 <div class="modal fade " id="customModal-success" tabindex="-1" role="dialog" aria-labelledby="customModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content modal_status">
-            <div class="modal-header">
-                <h5 class="modal-title" id="customModalLabel">Modal title</h5>
+            <div class="modal-header ">
+                <h5 class="modal-title text-center fs-18px" id="customModalLabel">Modal title</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
-                 <h3 class="text-center"></h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Google_Material_Design_check.svg/1024px-Google_Material_Design_check.svg.png" alt="">
+                 <p class="text-center fs-18px"></p>
             </div>
             <div class="modal-footer">
            
@@ -486,6 +486,12 @@
    .user_menu .nav-link:hover ,.user_menu .nav-link:hover i {
         color: var(--bs-primary);
         background: #E9E9E9;
+   }
+   #customModal-success .modal-header {
+        justify-content: center !important;
+   }
+   #customModal-success .modal-footer {
+        justify-content: center !important;
    }
 
     

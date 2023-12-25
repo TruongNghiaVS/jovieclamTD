@@ -313,7 +313,7 @@
                     if (response) {
                     
                         $('#company_info').modal("hide");
-                        showModal_Success('Cập nhật thông tin công ty', `Cập nhật thông tin công ty thành công`, ``);
+                        showModal_Success('Thông báo', `Cập nhật thông tin công ty thành công`, ``);
                         setTimeout(function(){
                               window.location.reload();
                         }, 3000);

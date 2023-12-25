@@ -46,7 +46,7 @@ function showModal_Success(title, message, targetUrl) {
     $('#customModal-success #customModalLabel').text(title);
 
     // Set the message
-    $('#customModal-success .modal-body h3').text(message);
+    $('#customModal-success .modal-body p').text(message);
 
     // Set the target URL
     $('#customModal-success #modalLink').attr('href', targetUrl);
@@ -61,7 +61,7 @@ function showModal_Fail(title, message, targetUrl) {
     $('#customModal-fail #customModalLabel').text(title);
 
     // Set the message
-    $('#customModal-fail .modal-body h3').text(message);
+    $('#customModal-fail .modal-body p').text(message);
 
     // Set the target URL
     $('#customModal-fail #modalLink').attr('href', targetUrl);

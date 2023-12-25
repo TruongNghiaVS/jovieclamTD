@@ -777,7 +777,7 @@
                     success: function(response) {
                         // Handle success response
                         if(response){
-                            showModal_Success('Cập nhật avatar', `Cập nhật avatar thành công`, ``);
+                            showModal_Success('Thông báo', `Cập nhật avatar thành công`, ``);
                             setTimeout(function(){
                                 window.location.reload();
                             }, 3000);
@@ -832,7 +832,7 @@
                     success: function(response) {
                         // Handle success response
                         if(response){
-                        showModal_Success('Cập nhật background', `Cập nhật background thành công`, ``);
+                        showModal_Success('Thông báo', `Cập nhật background thành công`, ``);
                             setTimeout(function(){
                                 window.location.reload();
                             }, 3000);
