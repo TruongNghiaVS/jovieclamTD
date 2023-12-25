@@ -545,6 +545,14 @@
       width: 100% !important;
     }
 
+    .box-profile-view .job-information .information-list  li  {
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%;
+      padding-right: 10px;
+      display: flex;
+    }
+
 }
 
 
@@ -851,6 +859,13 @@
   .employer-choose .box-content .box-content__content p {
     padding-left: 20px;
   }
+  .box-profile-view .job-information .information-list  li  {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    padding-right: 10px;
+    display: flex;
+  }
 
 
 }
@@ -895,6 +910,7 @@
   #mobile-sidebar-main-nav {
     display: none;
   }
+
 
 
 
