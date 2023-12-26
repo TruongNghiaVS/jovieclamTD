@@ -27,7 +27,7 @@ if (Auth::guard('company')->user()) {
   @include('templates.employers.includes.mobile_dashboard_menu')
   <div class="container company-content">
     <div class="user-account-section">
-    <div class="action" bis_skin_checked="1">
+      <div class="action" bis_skin_checked="1">
           <ul class="action-list">
             <li> <a href="javascript:void(0);"><i class="bi bi-tag-fill"></i><span>Thêm Tag  </span></a></li>
           </ul>
@@ -98,7 +98,7 @@ if (Auth::guard('company')->user()) {
                 </li>
                 <li>
                   <p> <strong>{{__('Current salary')}}</strong></p>
-                  <p>{{ number_format($user->current_salary)}} {{$user->salary_currency}}</p>
+                  <p>{{ number_format($user->current_salary)}} </p>
                 </li>
                 <li>
                   <p> <strong>Mức lương mong muốn:</strong></p>
@@ -127,7 +127,7 @@ if (Auth::guard('company')->user()) {
               </ul>
 
             </div>
-            <p class="title-flip">NỘI DUNG HỒ SƠ</p>
+            <!-- <p class="title-flip">NỘI DUNG HỒ SƠ</p> -->
           </div>
 
         </div>
