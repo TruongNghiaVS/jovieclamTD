@@ -13,11 +13,11 @@
                     </div> -->
 
                             <!-- <div class="socials">
-                        <a href="#" class="social"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
-                        <a href="#" class="social"><i class="fab fa-twitter fa-lg me-3"></i></a>
-                        <a href="#" class="social"><i class="fab fa-instagram fa-lg me-3"></i></a>
-                        <a href="#" class="social"><i class="fab fa-linkedin-in fa-lg me-3"></i></a>
-                        <a href="#" class="social"><i class="fab fa-youtube fa-lg me-3"></i></a>
+                        <a href="#" class="social"><i class="fa-brands fa-facebook-f fa-lg me-3"></i></a>
+                        <a href="#" class="social"><i class="fa-brands fa-twitter fa-lg me-3"></i></a>
+                        <a href="#" class="social"><i class="fa-brands fa-instagram fa-lg me-3"></i></a>
+                        <a href="#" class="social"><i class="fa-brands fa-linkedin-in fa-lg me-3"></i></a>
+                        <a href="#" class="social"><i class="fa-brands fa-youtube fa-lg me-3"></i></a>
                         
                     </div> -->
                         </div>
@@ -90,11 +90,11 @@
                         <div class="footer-widget">
                             <h4 class="widget-title">Kết nối với Jobvieclam</h4>
                             <div class="socials">
-                                <a href="#" class="social"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
-                                <a href="#" class="social"><i class="fab fa-twitter fa-lg me-3"></i></a>
-                                <a href="#" class="social"><i class="fab fa-instagram fa-lg me-3"></i></a>
-                                <a href="#" class="social"><i class="fab fa-linkedin-in fa-lg me-3"></i></a>
-                                <a href="#" class="social"><i class="fab fa-youtube fa-lg me-3"></i></a>
+                                <a href="#" class="social"><i class="fa-brands fa-facebook-f fa-lg me-3"></i></a>
+                                <a href="#" class="social"><i class="fa-brands fa-twitter fa-lg me-3"></i></a>
+                                <a href="#" class="social"><i class="fa-brands fa-instagram fa-lg me-3"></i></a>
+                                <a href="#" class="social"><i class="fa-brands fa-linkedin-in fa-lg me-3"></i></a>
+                                <a href="#" class="social"><i class="fa-brands fa-youtube fa-lg me-3"></i></a>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                 <h5>CÔNG TY CỔ PHẦN TẬP ĐOÀN VIETSTAR</h5>
                 <ul class="contact-detail">
                     <li style="padding-left: 0">Tầng 2 GMA Building, 307/6 Đ. Nguyễn Văn Trỗi, Phường 1, Tân Bình, Thành phố Hồ Chí Minh</li>
-                    <li><i class="far fa-phone"></i>02871000 555</li>
+                    <li><i class="fa-solid fa-phone"></i>02871000 555</li>
                     <li><i class="far fa-envelope"></i>info@jobvieclam.com</li>
                 </ul>
             </div>

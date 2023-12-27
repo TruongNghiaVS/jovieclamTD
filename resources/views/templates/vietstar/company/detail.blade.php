@@ -38,7 +38,7 @@
                                 </p>
                                 <div class="company-info public">
                                     <div class="company-info__item">
-                                        <span class="iconmoon icon-recruiter-user"></span>
+                                        <i class="fa-regular fa-user mx-2"></i>
                                         {{ $company->no_of_employees }}
                                     </div>
                                 </div>

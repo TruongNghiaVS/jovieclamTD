@@ -139,7 +139,7 @@
             
                     <a class="dropdown_menu__link" href="{{route('company.home')}}">
                         <span >
-                        <i class="bi bi-person-circle fs-18px"></i>
+                        <i class="fa-solid fa-user fs-18px mx-2"></i>
                         {{ Auth::guard('company')->user()->name ? Auth::guard('company')->user()->name :"" }}
 
                       
@@ -148,25 +148,25 @@
                     <div class="user_menu ">
 
                         <ul class="">
-                            <li class="nav-item"><a href="{{route('company.home')}}" class="nav-link"><i class="jobicon fa fa-tachometer" aria-hidden="true"></i> <!-- {{__('Dashboard')}} -->
+                            <li class="nav-item"><a href="{{route('company.home')}}" class="nav-link"><i class="fa-solid fa-gauge mx-1"></i> <!-- {{__('Dashboard')}} -->
     
                                 Dashboard
     
                             </a>
                             </li>
                             <li class="nav-item"><a href="#" data-toggle="modal" data-target="#company_profile_modal" class="nav-link">
-                                    <i class="jobicon fa fa-user" aria-hidden="true"></i> {{__('View Public Profile')}}</a>
+                                    <i class="fa-solid fa-user m-1"></i> {{__('View Public Profile')}}</a>
                             </li>
     
     
                             <li class="nav-item"><a href="{{ route('company.followers') }}" class="nav-link">
-                                    <i class="jobicon bi bi-people-fill"></i>
+                                    <i class="fa-solid fa-users m-1"></i>
                                     {{__('Company Followers')}}
                                 </a>
                             </li>
-                            <li class="nav-item"><a href="{{route('company.messages')}}" class="nav-link"><i class="jobicon fa fa-envelope" aria-hidden="true"></i> {{__('Messages')}}</a>
+                            <li class="nav-item"><a href="{{route('company.messages')}}" class="nav-link"><i class="fa-regular fa-envelope mx-1"></i> {{__('Messages')}}</a>
                             </li>
-                            <li class="nav-item"><a href="{{ route('company.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form-header1').submit(); " class="nav-link"><i class="jobicon fa fa-sign-out" aria-hidden="true"></i>
+                            <li class="nav-item"><a href="{{ route('company.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form-header1').submit(); " class="nav-link"><i class="fa-solid fa-arrow-right-from-bracket mx-1"></i>
                                     {{__('Logout')}}</a></li>
                         </ul>
                     </div>

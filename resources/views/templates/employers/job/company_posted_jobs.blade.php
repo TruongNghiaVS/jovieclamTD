@@ -163,7 +163,7 @@
                                         <hr>
                                         <ul class="detail-jobs">
                                             <li>
-                                                <span class="iconmoon icon-recruiter-user"></span>
+                                                <i class="fa-regular fa-user mx-2"></i>
                                                 {{-- <a href="{{route('list.applied.users', [$job->id])}}">{{__('List of Candidates')}}</a> --}}
                                                 <a
                                                     href="{{ route('application.manager') }}">{{ __('List of Candidates') }}</a>

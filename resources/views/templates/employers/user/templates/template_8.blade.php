@@ -171,7 +171,7 @@
                                                 <li> <i class="fas fa-user"></i>{{ $references->ref_position }}</li>
                                                 <li> <i class="far fa-building"></i>{{ $references->ref_company }}</li>
                                                 <li> <i class="fas fa-phone-alt"></i>Số điện thoại: {{ $references->ref_phone }}</li>
-                                                <li> <i class="far fa-envelope"></i>Email: {{ $references->ref_email }}</li>
+                                                <i class="fa-regular fa-envelope"></i>Email: {{ $references->ref_email }}</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -357,7 +357,7 @@
                                                 <li> <i class="fas fa-user"></i>{{ $references->ref_position }}</li>
                                                 <li> <i class="far fa-building"></i>{{ $references->ref_company }}</li>
                                                 <li> <i class="fas fa-phone-alt"></i>Số điện thoại: {{ $references->ref_phone }}</li>
-                                                <li> <i class="far fa-envelope"></i>Email: {{ $references->ref_email }}</li>
+                                                <i class="fa-regular fa-envelope"></i>Email: {{ $references->ref_email }}</li>
                                             </ul>
                                         </div>
                                     </div>
