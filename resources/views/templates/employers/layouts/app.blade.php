@@ -22,7 +22,8 @@ if (!isset($seo)) {
 
     <!-- Custom Style -->
     <link href="{{ asset('/vietstar/css/style.css')}}" rel="stylesheet">
-
+   
+    <link href="{{ asset('/fontawesome-free-6.5.1-web/css/all.min.css')}}" rel="stylesheet">
     <link href="{{ asset('/vietstar/css/animation.css')}}" rel="stylesheet">
     <link href="{{ asset('/vietstar/fonts/icon-vietstart/style.css')}}" rel="stylesheet">
     <link href="{{ asset('/vietstar/css/recruiter.css')}}" rel="stylesheet">
@@ -58,6 +59,8 @@ if (!isset($seo)) {
     <script src="{{asset('/')}}vendor/bootstrap-date-time-picker/js/bootstrap-datetimepicker.min.js"
         type="text/javascript"></script>
     <!-- Owl carousel -->
+
+    
     <script src="{{asset('/')}}js/owl.carousel.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>

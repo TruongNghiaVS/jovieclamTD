@@ -12,6 +12,9 @@
 @include('templates.employers.includes.mobile_dashboard_menu')
 <!-- Dashboard menu end -->
 
+
+
+
 <!-- Search start -->
 @include('templates.employers.includes.search') 
 <!-- Search End -->

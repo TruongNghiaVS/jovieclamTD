@@ -129,22 +129,7 @@
             @if(Auth::guard('company')->check())
             <a href="{{route('post.job')}}" class="btn btn-primary btn-post-a-job">{{__('Post a job')}}</a>
             @endif
-            <div class="user-badge">
-                <ul class="navbar-nav navbar-lang navbar-lang-pc ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link navbar-lang__link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img src="{{ asset('/vietstar/imgs/flags/') }}/{{config('app.available_locales')[App::getLocale()]['flag-icon']}}.png" alt="vietstar">
-                        </a>
-                        <div class="dropdown__lang_menu" aria-labelledby="navbarDropdownMenuLink">
-                            @foreach (config('app.available_locales') as $lang => $language)
-                            @if ($lang != App::getLocale())
-                            <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"><span class="flag-icon flag-icon-{{$language['flag-icon']}}"><img src="{{ asset('/vietstar/imgs/flags/') }}/{{$language['flag-icon']}}.png" alt="vietstar"></span> {{$language['display']}}</a>
-                            @endif
-                            @endforeach
-
-                        </div>
-                    </li>
-            </ul>
+          
             @if(Auth::guard('company')->check())
 
             <!-- user-badge -->
@@ -443,7 +428,6 @@
     }
     .user-badge__btn {
         position: relative;
-        border-left: 1px solid #e8e8e8;
         padding: 3px 11px;
         max-width: 200px;
         height: 100%;

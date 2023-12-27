@@ -34,7 +34,7 @@ if (!isset($seo)) {
     type="text/css" />
     
     
-    
+    <link href="{{ asset('/fontawesome-free-6.5.1-web/css/all.min.css')}}" rel="stylesheet">
     <link href="{{ asset('/vietstar/css/animation.css')}}" rel="stylesheet">
     <link href="{{ asset('/vietstar/css/font-awsome.min.css')}}" rel="stylesheet">
     <link href="{{ asset('/vietstar/css/custom-chosen.css')}}" rel="stylesheet">
