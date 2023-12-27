@@ -14,7 +14,7 @@ if (!isset($seo)) {
     <meta name="Description" content="{!! $seo->seo_description !!}">
     <meta name="Keywords" content="{!! $seo->seo_keywords !!}">
     {!! $seo->seo_other !!}
-    <link rel="icon" type="image/x-icon" href="./../assets/imgs/logo-mini.svg">
+    <link rel="icon" type="image/x-icon" href="{{ asset('/vietstar/imgs/jobvieclam.png') }}">
 
     <!-- Here is the AOS CSS file  -->
     <link href="{{ asset('/vietstar/css/bootstrap.min.css') }}" rel="stylesheet">

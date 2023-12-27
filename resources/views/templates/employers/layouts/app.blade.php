@@ -15,7 +15,7 @@ if (!isset($seo)) {
     <meta name="Description" content="{!! $seo->seo_description !!}">
     <meta name="Keywords" content="{!! $seo->seo_keywords !!}">
     {!! $seo->seo_other !!}
-    <link rel="icon" type="image/x-icon" href="./../assets/imgs/logo-mini.svg">
+    <link rel="icon" type="image/x-icon" href="{{ asset('/vietstar/imgs/jobvieclam.png') }}">
 
     <link href="{{ asset('/vietstar/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/vietstar/css/swiper-bundle.min.css')}}" />
