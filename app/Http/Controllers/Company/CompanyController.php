@@ -728,6 +728,7 @@ class CompanyController extends Controller
 
     public function postedJobs(Request $request)
     {
+        
         $company = Auth::guard('company')->user();
         $jobs = Job::where('company_id', $company->id);
         $find_day = $request->find_day;

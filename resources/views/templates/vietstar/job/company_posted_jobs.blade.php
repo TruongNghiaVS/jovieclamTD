@@ -4,16 +4,13 @@
 
 @section('content')
 
-@if(Auth::guard('company')->check())
+
 <!-- Header start -->
 @include('templates.employers.includes.header')
 <!-- Header end -->
-@else
-@include('templates.vietstar.includes.header')
-@endif
+
 
 @include('templates.employers.includes.company_dashboard_menu')
-
 <div class="company-wrapper main-content">
 
     @include('templates.employers.includes.mobile_dashboard_menu')
@@ -150,7 +147,7 @@
                             <th class="font-weight-bold p-2"  >{{ __('Interview Candidates') }}</th>
                             <th class="font-weight-bold p-2"  >{{ __('List of Hired Candidates') }}</th>
                             <th class="font-weight-bold p-2"  >{{ __('List of Rejected Candidates') }}</th>
-                            <th class="font-weight-bold p-2 text-center"  >{{ __('Post Job') }}</th>
+                           
                             
                             <th class="font-weight-bold p-2"  >{{ __('Action') }}</th>
 
@@ -276,11 +273,13 @@
                                 </div>
                             </td>
 
+                            @if($job->status == 2)
                             <td>
                                 <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
                                     <i class="fa-solid fa-upload p-2"></i>
                                 </a>
                             </td>
+                            @endif
 
                             <td>
                                 <div class="d-flex">
