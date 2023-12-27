@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-12 col-md-2 col-lg-2 col-xl-1" >
                         <div class="form-group" style="max-width: 100%; margin-bottom: 10px;">
-                            <button type="submit" class="btn btn-primary btn-search form-control"><i class="bi bi-search text-white"></i></button>
+                            <button type="submit" class="btn btn-primary btn-search form-control"><i class="fa-solid fa-magnifying-glass text-white mx-1"></i></button>
                         </div>
                     </div>
                 </div>

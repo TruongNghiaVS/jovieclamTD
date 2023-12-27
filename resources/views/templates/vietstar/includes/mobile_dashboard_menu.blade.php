@@ -419,7 +419,7 @@
                 <li class="sidebar-item {{ Request::url() == route('index') ? 'active' : '' }}">
                     <a href="{{url('/')}}" class="list-group-item list-group-item-action {{ Request::url() == route('index') ? 'active' : '' }}">
                         <div class="d-flex w-100">
-                            <i class="bi bi-house fs-24px me-2"></i>
+                            <i class="fa-solid fa-house fs-24px me-2"></i>
                             <span class="side-bar-content"> {{__('Home')}}</span>
                         </div>
                     </a>
@@ -548,7 +548,7 @@
                 <li class="has-child">
                     <a href="#blog_sub_list" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <div class="d-flex w-100">
-                            <i class="bi bi-newspaper fs-24px me-2"></i>
+                            <i class="fa-regular fa-newspaper fs-24px me-2"></i> 
                             <span class="side-bar-content">{{__('Blog')}}</span>
                         </div>
                     </a>
@@ -726,26 +726,6 @@
 
         
             @endif
-
-            <li>
-                <ul class="navbar-nav navbar-lang ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link navbar-lang__link" href="#" >
-
-                            <img src="{{ asset('/vietstar/imgs/flags/') }}/{{config('app.available_locales')[App::getLocale()]['flag-icon']}}.png" alt="vietstar">
-                        </a>
-                        <div class="dropdown__lang_menu">
-                            @foreach (config('app.available_locales') as $lang => $language)
-                            @if ($lang != App::getLocale())
-                            <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"><span class="flag-icon flag-icon-{{$language['flag-icon']}}"><img src="{{ asset('/vietstar/imgs/flags/') }}/{{$language['flag-icon']}}.png" alt="vietstar"></span> {{$language['display']}}</a>
-                            @endif
-                            @endforeach
-
-                        </div>
-                    </li>
-                </ul>
-            </li>
-
 
             
         </ul>

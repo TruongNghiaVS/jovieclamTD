@@ -88,11 +88,11 @@
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-sm-12 d-flex">
                                       
-                                        <button type="submit" class="btn btn-primary"><i class="bi bi-search text-white m-2"></i>{{ __('Search') }}</button>
+                                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass text-white m-2"></i>{{ __('Search') }}</button>
                                     </div>
                                     <div class="col-md-3 col-lg-3 col-sm-12 d-flex">
                                       
-                                      <button type="button" class="btn btn-primary"><i class="bi bi-download text-white m-2"></i>{{ __('Export file') }}</button>
+                                      <button type="button" class="btn btn-primary"><i class="fa-solid fa-download text-white m-2"></i>{{ __('Export file') }}</button>
                                   </div>
                                 </div>
                             </form>

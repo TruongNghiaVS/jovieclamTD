@@ -34,7 +34,7 @@ dd($funclAreas)
             </div>
             <div class="mobile-filter toollips">
                 <button type="button" class="btn btn-filter" id="atcFilters" title="Lọc">
-                    <i class="far fa-filter"></i> Lọc
+                    <i class="fa-solid fa-filter"></i> Lọc
                 </button>
             </div>
         </div>
@@ -58,10 +58,10 @@ dd($funclAreas)
             </div>
             <div class="mobile-filter toollips">
                 <button type="button" class="btn btn-filter" id="#atcFilters-mobile" title="Lọc" onclick="openFilterJob_mobile()">
-                    <i class="far fa-filter"></i> {{__('Filter')}}
+                    <i class="fa-solid fa-filter"></i> {{__('Filter')}}
                 </button>
                 <button class="btn btn-primary" type="submit">
-                    <i class="bi bi-search text-white"></i>
+                    <i class="fa-solid fa-magnifying-glass text-white mx-1"></i>
                 </button>
             </div>
         </div>

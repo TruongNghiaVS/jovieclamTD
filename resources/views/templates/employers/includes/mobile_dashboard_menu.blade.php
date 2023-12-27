@@ -434,7 +434,7 @@
                 <li class="sidebar-item {{ Request::url() == route('index') ? 'active' : '' }}">
                     <a href="Request::url() == route('index')" class="list-group-item list-group-item-action {{ Request::url() == route('index')  ? 'active' : '' }}">
                         <div class="d-flex w-100">
-                            <i class="bi bi-house fs-24px me-2"></i>
+                            <i class="fa-solid fa-house fs-24px me-2"></i>
                             <span class="side-bar-content"> {{__('Home')}}</span>
                         </div>
                     </a>
@@ -444,7 +444,7 @@
                 <li class="sidebar-item {{ Request::url() == route('company.home') || Request::url() == route('posted.jobs') ||  Request::url() == route('application.manager') || Request::url() == route('company.packages') || Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) || Request::url() == route('company.profile') || Request::url() == route('post.job')  ? 'active' : '' }}">
                     <a href="{{route('company.home')}}" class="list-group-item list-group-item-action{{ Request::url() == route('company.home') || Request::url() == route('posted.jobs') ||  Request::url() == route('application.manager') || Request::url() == route('company.packages') || Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) || Request::url() == route('company.profile') || Request::url() == route('post.job')  ? 'active' : '' }}}">
                         <div class="d-flex w-100">
-                            <i class="bi bi-archive fs-24px me-2 "></i>
+                            <i class="fa-solid fa-box-archive fs-24px me-2"></i>
                             <span class="side-bar-content">HR Center</span>
                         </div>
                     </a>
@@ -453,7 +453,7 @@
                 <li class="sidebar-item">
                     <a href="#" class="list-group-item list-group-item-action" data-target="#employer_login_Modal" data-toggle="modal" >
                         <div class="d-flex w-100">
-                            <i class="bi bi-archive fs-24px me-2 "></i>
+                            <i class="fa-solid fa-box-archive fs-24px me-2"></i>
                             <span class="side-bar-content"> HR Center</span>
                         </div>
                     </a>
@@ -463,7 +463,7 @@
                     <a href="#" class="list-group-item list-group-item-action ">
 
                         <div class="d-flex w-100">
-                            <i class="bi bi-newspaper fs-24px me-2"></i>
+                            <i class="fa-regular fa-newspaper fs-24px me-2"></i> 
                             <span class="side-bar-content"> {{__('News')}}</span>
                         </div>
                     </a>
@@ -472,7 +472,7 @@
                     <a href="{{ route('contact.us') }}" class="list-group-item list-group-item-action {{ Request::url() == route('contact.us') ? 'active' : '' }}">
 
                         <div class="d-flex w-100">
-                            <i class="bi bi-person-lines-fill fs-24px me-2"></i>
+                            <i class="fa-regular fa-address-book fs-24px me-2"></i>
                             <span class="side-bar-content"> {{__('Contact')}}</span>
                         </div>
                     </a>
@@ -487,7 +487,7 @@
                 <li class="sidebar-item {{ Request::url() == route('company.home') ? 'active' : '' }}">
                     <a href="{{ route('company.home') }}" class="list-group-item list-group-item-action ">
                         <div class="d-flex w-100">
-                            <span class="iconmoon icon-dashboard-icon fs-24px me-2"></span>
+                            <i class="fa-solid fa-gauge fs-24px me-2"></i>
                             <span class="side-bar-content"><!-- {{__('Dashboard')}} -->
                                 Dashboard
                             </span>
@@ -500,7 +500,7 @@
                 <li class="sidebar-item {{ Request::url() == route('posted.jobs') ? 'active' : '' }}">
                     <a href="{{route('posted.jobs')}}" class="list-group-item list-group-item-action ">
                         <div class="d-flex w-100">
-                            <span class="iconmoon icon-suitcase-icon fs-24px me-2"></span>
+                            <i class="fa-solid fa-suitcase  fs-24px me-2"></i>
                             <span class="side-bar-content">{{__('Company\'s Posted Jobs')}}</span>
                         </div>
                     </a>
@@ -510,7 +510,7 @@
                     <a href="{{ route('application.manager') }}" class="list-group-item list-group-item-action">
 
                         <div class="d-flex w-100">
-                        <span class="iconmoon icon-recruiter-profile fs-24px me-2"></span>
+                        <i class="fa-solid fa-list-check fs-24px me-2"></i>
                             <span class="side-bar-content">{{__('Candidate Management')}}</span>
                         </div>
                     </a>
@@ -519,7 +519,7 @@
                 <li class="sidebar-item {{ Request::url() == route('company.packages') ? 'active' : '' }}">
                     <a href="{{ route('company.packages') }}" class="list-group-item list-group-item-action ">
                         <div class="d-flex w-100">
-                            <i class="bi bi-search fs-24px me-2"></i>
+                            <i class="fa-solid fa-magnifying-glass fs-24px me-2"></i>
                             <span class="side-bar-content">{{__('CV Search Packages')}}</span>
                         </div>
                     </a>
@@ -531,7 +531,7 @@
                 <li class="sidebar-item  {{ Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) ? 'active' : '' }}">
                     <a href="{{route('interview.schedule.calendar',['company_id'=> Auth::guard('company')->user()->id])}}" class="list-group-item list-group-item-action">
                         <div class="d-flex w-100">
-                            <span class="iconmoon icon-calendar-icon1 fs-24px me-2"></span>
+                            <i class="fa-regular fa-calendar fs-24px me-2"></i>
                             <span class="side-bar-content">{{__('Interview Schedule')}}</span>
                         </div>
                     </a>
@@ -541,7 +541,7 @@
                 <li class="sidebar-item {{ Request::url() == route('company.profile') ? 'active' : '' }}">
                     <a href="{{route('company.profile') }}" class="list-group-item list-group-item-action ">
                         <div class="d-flex w-100">
-                            <span class="iconmoon icon-edit-icon fs-24px me-2"></span>
+                            <i class="fa-regular fa-pen-to-square fs-24px me-2"></i>
                             <span class="side-bar-content">{{__('Edit Account')}}</span>
                         </div>
                     </a>
@@ -552,7 +552,7 @@
                 <li class="sidebar-item {{ Request::url() == route('company.detail', Auth::guard('company')->user()->slug) ? 'active' : '' }}" >
                     <a href="#" class="list-group-item list-group-item-action " data-toggle="modal" data-target="#company_profile_modal">
                         <div class="d-flex w-100">
-                            <span class="iconmoon icon-eye-icon fs-24px me-2"></span>
+                            <i class="fa-solid fa-eye fs-24px me-2"></i>
                             <span class="side-bar-content">{{__('View Public Profile')}}</span>
                         </div>
                     </a>
@@ -561,7 +561,7 @@
                 <li class="sidebar-item {{ Request::url() == route('post.job') ? 'active' : '' }}">
                     <a href="{{route('post.job')}}" class="list-group-item list-group-item-action {{ Request::url() == route('post.job') ? 'active' : '' }}">
                         <div class="d-flex w-100">
-                            <i class="bi bi-plus-circle-fill fs-24px me-2"></i>
+                            <i class="fa-solid fa-cart-plus fs-24px me-2"></i>
                             <span class="side-bar-content">{{__('Post Jobs')}}</span>
                         </div>
                     </a>
@@ -575,9 +575,9 @@
                 <li class="sidebar-item {{ Request::url() == route('company.messages') ? 'active' : '' }}">
                 <a href="{{ route('company.messages')}}" class="list-group-item list-group-item-action ">
                         <div class="d-flex w-100">
-                            <span class="iconmoon icon-message-icon fs-24px me-2 box-message-icon">
+                            <i class="fa-regular fa-message fs-24px me-2 box-message-icon">
                                 <span class="badge">{{\App\CompanyMessage::where('company_id', Auth::guard('company')->user()->id)->where('status','unviewed')->where('type','message')->count()}}</span>
-                            </span>
+                            </i>
                             <span class="side-bar-content">{{__('Company Messages')}}</span>
                         </div>
                     </a>
@@ -587,7 +587,7 @@
                 <li class="sidebar-item {{ Request::url() == route('company.followers') ? 'active' : '' }}">
                 <a href="{{ route('company.followers') }}" class="list-group-item list-group-item-action ">
                         <div class="d-flex w-100">
-                        <span class="iconmoon icon-team-icon fs-24px me-2"></span>
+                        <i class="fa-solid fa-people-group fs-24px me-2"></i>
                             <span class="side-bar-content">{{__('Company Followers')}}</span>
                         </div>
                     </a>
@@ -596,7 +596,7 @@
                 <li class="sidebar-item {{ Request::url() == route('company.logout') ? 'active' : '' }}">
                     <a href="{{ route('company.logout') }}" class="list-group-item list-group-item-action ">
                         <div class="d-flex w-100">
-                            <span class="iconmoon icon-logout-icon fs-24px me-2"></span>
+                            <i class="fa-solid fa-arrow-right-from-bracket  fs-24px me-2"></i>
                             <span class="side-bar-content">{{__('Logout')}}</span>
                         </div>
                     </a>
@@ -664,7 +664,7 @@
                 </li>
             @endif
 
-            <li>
+        {{--    <li>
                 <ul class="navbar-nav navbar-lang ml-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link navbar-lang__link" href="#" >
@@ -681,7 +681,7 @@
                         </div>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </nav>

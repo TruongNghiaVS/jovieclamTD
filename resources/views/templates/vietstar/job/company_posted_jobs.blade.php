@@ -22,7 +22,7 @@
             <div class="card-body">
                 <div class="posted-manager-header">
                     <h1 class="title-manage">{{__('Company\'s Posted Jobs')}}</h1>
-                    <a href="{{route('post.job')}}" class="btn btn-primary text-white"><i class="bi bi-pen text-white m-1"></i>{{ __('Create a Recruitment Form') }}</a>
+                    <a href="{{route('post.job')}}" class="btn btn-primary text-white"><i class="fa-regular fa-pen-to-square text-white m-1"></i>{{ __('Create a Recruitment Form') }}</a>
                 </div>
                 <form action="{{ route('posted.jobs') }}" method="get" class="form-search pt-2">
                     <div class="row filter-job">
@@ -85,7 +85,7 @@
 
             <div class="d-flex justify-content-end">
              <div class="w-10">
-                 <button type="submit" class="btn btn-primary w-100"><i class="bi bi-search text-white m-2 "></i>{{ __('Search') }}</button>
+                 <button type="submit" class="btn btn-primary w-100"><i class="fa-solid fa-magnifying-glass m-1 text-white"></i> {{ __('Search') }}</button>
              </div>
             </div>
 
@@ -110,7 +110,7 @@
     </ul>
         <div class="table-responsive table-content">
             <div class="d-flex justify-content-end p-2">
-                <button type="button" onclick="exportFile()" class="btn btn-sm btn-primary"><i class="bi bi-download text-white m-2"></i>{{ __('Export file') }}</button>
+                <button type="button" onclick="exportFile()" class="btn btn-sm btn-primary"><i class="fa-solid fa-download text-white m-2"></i>{{ __('Export file') }}</button>
                 <label for="show-table" class="py-1 px-2">{{__('Show')}}</label>
                 <div class="form-group m-0">
                 <select class="form-control-sm " id="show-table">
@@ -197,16 +197,16 @@
 
                         <td>
                                 <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
-                                    <i class="bi bi-upload"></i>
+                                    <i class="fa-solid fa-upload p-2"></i>
                                 </a>
                             </td>
                         <td>
                             <div class="d-flex">
                                     <a href="{{url('/')}}/edit-front-job/{{$job->id}}">
-                                        <i class="bi bi-pencil-fill p-2 cursor-pointer"></i>
+                                        <i class="fa-regular fa-pen-to-square p-2 cursor-pointer"></i>
                                     </a>
                                     <a href="javascript:void(0)" onclick="deleteJob({{ $job->id }})">
-                                        <i class="bi bi-trash p-2 cursor-pointer "></i>
+                                        <i class="fa-solid fa-trash p-2 cursor-pointer"></i>
                                     </a>
                                   
                             </div>
@@ -278,17 +278,17 @@
 
                             <td>
                                 <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
-                                    <i class="bi bi-upload"></i>
+                                    <i class="fa-solid fa-upload p-2"></i>
                                 </a>
                             </td>
 
                             <td>
                                 <div class="d-flex">
                                     <a href="{{url('/')}}/edit-front-job/{{$job->id}}">
-                                        <i class="bi bi-pencil-fill p-2 cursor-pointer"></i>
+                                        <i class="fa-regular fa-pen-to-square p-2 cursor-pointer"></i>
                                     </a>
                                     <a href="javascript:void(0)" onclick="deleteJob({{ $job->id }})">
-                                        <i class="bi bi-trash p-2 cursor-pointer "></i>
+                                        <i class="fa-solid fa-trash p-2 cursor-pointer"></i>
                                     </a>
                                   
                                 </div>

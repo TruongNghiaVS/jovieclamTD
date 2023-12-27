@@ -43,7 +43,7 @@
             </div>
             <div class="mobile-filter toollips">
                 <button type="button" class="btn btn-filter" id="atcFilters" title="Lọc">
-                    <i class="far fa-filter"></i> Lọc
+                    <i class="fa-solid fa-filter"></i> Lọc
                 </button>
             </div>
         </div>
@@ -73,7 +73,7 @@
             <div class="mobile-filter toollips">
                 <button type="button" class="btn btn-filter" id="#atcFilters-mobile" title="Lọc"
                     onclick="openFilterJob_mobile()">
-                    <i class="far fa-filter"></i> Lọc
+                    <i class="fa-solid fa-filter"></i> Lọc
                 </button>
             </div>
         </div>

@@ -39,7 +39,7 @@
 								<div class="modal-content">
 									<div class="modal-body">
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											<i class="fa fa-times"></i>
+											<i class="fa-solid fa-x"></i>
 										</button>
 										<div class="invitereval">
 											<h3>{{__('Please Choose Your Payment Method to Pay')}}</h3>

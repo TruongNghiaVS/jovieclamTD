@@ -1,6 +1,8 @@
 /* Extra small devices (phones, 767px and down) */
 @media only screen and (max-width: 767px) {
-  
+  .navbar .group-button {
+    display: none;
+  }
   .listpgWraper.Jobpage {
     margin-top: 140px;
   }
@@ -553,7 +555,10 @@
       display: flex;
     }
 
-}
+    .btn_for_em, .btn_for_user {
+      display: none !important;
+    }
+  }
 
 
 
@@ -562,6 +567,7 @@
   .w-10 {
     width: 30% !important;
   }
+  
   .content {
     padding-left: 8px;
     padding-right: 8px;
@@ -868,6 +874,10 @@
   }
 
 
+
+  .btn_for_em, .btn_for_user {
+    display: none !important;
+  }
 }
 
 

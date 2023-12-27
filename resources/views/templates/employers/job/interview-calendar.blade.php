@@ -21,12 +21,12 @@
                                 <ul class="nav nav-change-schedule tabs nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link active" id="list-view-tab" data-toggle="tab" data-target="#list-view" type="button" role="tab" aria-controls="list-view" aria-selected="true">
-                                            <span class="iconmoon icon-list"></span>
+                                            <i class="fa-solid fa-list iconmoon"></i>
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link " id="month-view-tab" data-toggle="tab" data-target="#month-view" type="button" role="tab" aria-controls="month-view" aria-selected="false">
-                                            <span class="iconmoon icon-calendar-icon1"></span>
+                                            <i class="fa-regular fa-calendar-days iconmoon"></i>
                                         </button>
                                     </li>
                                 </ul>
