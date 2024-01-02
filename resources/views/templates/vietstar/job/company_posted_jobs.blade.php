@@ -131,7 +131,6 @@
 
                         <th class="font-weight-bold p-2"  >{{ __('Location') }}</th>
                         <th class="font-weight-bold p-2 text-center"  >{{ __('Post Job') }}</th>
-
                         <th class="font-weight-bold p-2"  >{{ __('Action') }}</th>
 
                         @else
@@ -148,6 +147,7 @@
                             <th class="font-weight-bold p-2"  >{{ __('List of Hired Candidates') }}</th>
                             <th class="font-weight-bold p-2"  >{{ __('List of Rejected Candidates') }}</th>
                            
+                            <th class="font-weight-bold p-2 text-center"  >{{ __('Post Job') }}</th>
                             
                             <th class="font-weight-bold p-2"  >{{ __('Action') }}</th>
 
@@ -272,13 +272,15 @@
                                     {{ $job->getStatusInterview(4)->count() }}
                                 </div>
                             </td>
-
+                         
                             @if($job->status == 2)
                             <td>
                                 <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
                                     <i class="fa-solid fa-upload p-2"></i>
                                 </a>
                             </td>
+                            @else
+                            <td></td> 
                             @endif
 
                             <td>
