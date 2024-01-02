@@ -107,7 +107,7 @@ class JobPublishController extends Controller
     public function storeFrontJob(JobFrontFormRequest $request)
     {
 
-   
+        
         $company = Auth::guard('company')->user();
         $job = new Job();
         $job->company_id = $company->id;
@@ -156,7 +156,7 @@ class JobPublishController extends Controller
             function($v) use(&$desiredSkills) {return $desiredSkills[$v] = ['selected' => true];}
         );
         $industries = DataArrayHelper::langIndustriesArray();
-        return view(config('app.THEME_PATH').'.job.add_edit_job')
+        return view(config('app.THEME_PATH_employer').'.job.add_edit_job')
                         ->with('countries', $countries)
                         ->with('currencies', array_unique($currencies))
                         ->with('careerLevels', $careerLevels)

@@ -131,7 +131,7 @@
                 <article class="article">
                     <div class="article-title">
                         <h6><a href="#">KỸ NĂNG CÔNG SỞ</a></h6>
-                        <h2>{{$blog->heading}}</h2>
+                        <h1>{{$blog->heading}}</h1>
                         <div class="media">
                             
                             <div class="media-body">

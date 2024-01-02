@@ -6,8 +6,6 @@
 {!! Form::open(['route' => 'store.front.job', 'method' => 'POST', 'id' => 'new-job-form', 'class' => 'form', 'novalidate'] ) !!}
 @endif
 
-
-
 <div class="card card-edit-profile">
     <h2 class="fs-4 card-edit-profile__section">Thông tin tuyển dụng</h2>
     <div class="card-body">
@@ -40,8 +38,6 @@
                                 <input type="checkbox" name="WFH" id="WFH">
                                 <span class="slider"></span>
                             </label>
-
-
                         </div>
                     </div>
                 </div>
