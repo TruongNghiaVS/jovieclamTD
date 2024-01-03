@@ -32,7 +32,7 @@
     margin-bottom: 0;
     position: relative;
     top: 0;
-    height: 500px !important;
+    height: 400px !important;
   }
 
   .header-bar .header-bar-bg {
@@ -610,11 +610,11 @@
   
 
   .header-bar {
-    height: 500px;
+    height: 400px;
   }
 
   .header-bar .header-bar-content-search {
-    height: 500px;
+    height: 400px;
     position: absolute;
     top: 550px;
     left: 0;

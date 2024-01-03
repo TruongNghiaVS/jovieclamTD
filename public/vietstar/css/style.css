@@ -707,7 +707,7 @@ section.company-job-detail.job-detail-title .job-detail-banner {
 /* Header Bar */
 .header-bar {
 	position: relative;
-	height: 600px;
+	height: 400px;
 	width: 100%;
 }
 .navbar .group-button {
@@ -1122,7 +1122,7 @@ h4.tablinks:hover {
 	border-radius: 5px;
 	overflow: hidden;
 	transition: 0.5s all;
-	height: 310px;
+
 }
 
 
@@ -2178,7 +2178,7 @@ h3.seekertxt span {
 .figure {
 	width: 100%;
 	background: #ffffff;
-	height: 330px;
+	height: 300px;
 	overflow: hidden;
 }
 

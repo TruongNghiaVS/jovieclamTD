@@ -4,7 +4,7 @@
             <div class="" bis_skin_checked="1">
                 <div class="d-flex justify-content-center align-items-center flex-column" bis_skin_checked="1">
                     <div>
-                        <h4 class="text-center mb-3 text-uppercase text-primary">Trải nghiệm dịch vụ đăng tin tại JobViecLam</h4>
+                        <h2 class="section-title  text-center text-primary">Trải nghiệm dịch vụ đăng tin tại JobViecLam</h2>
                     </div>    
                         
                     <div>

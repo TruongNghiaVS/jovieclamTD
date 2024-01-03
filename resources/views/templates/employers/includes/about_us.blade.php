@@ -1,8 +1,8 @@
 <section class="our_customer cb-section ">
     <div class="container">
-        <h4 class="text-center  text-uppercase text-primary">
+        <h2 class="section-title  text-center text-primary">
             {{__('About Us')}}
-        </h4>
+        </h2>
         <div class="about_us_content animation fade-top active" bis_skin_checked="1">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 font-weight-normal d-flex align-items-center  justify-content-center flex-column ">

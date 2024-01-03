@@ -1659,7 +1659,9 @@ button:focus {
 }
 
 h2.section-title {
-    text-transform: uppercase
+   
+        text-transform: uppercase;
+        font-size: 1.6rem;
 }
 
 .blogs-slider .card-list-item .card-list-item__title a {
@@ -3824,7 +3826,7 @@ div#industry_id_chosen {
 @media (min-width: 992px) {
     .header-bar {
         position: relative;
-        height: 500px
+        height: 400px
     }
 
     .header-bar .header-bar__title {

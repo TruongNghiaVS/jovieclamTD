@@ -1,7 +1,7 @@
 <section class="all-product-service cb-section ">
     <div class="container">
-        <h4 class="text-center mb-5 text-uppercase text-primary">Chúng tôi mang đến trải nghiệm toàn diện<br/>trong lĩnh vực cung ứng nhân sự, cung ứng
-            việc làm</h4>
+    <h2 class="section-title  text-center text-primary">Chúng tôi mang đến trải nghiệm toàn diện<br/>trong lĩnh vực cung ứng nhân sự, cung ứng
+            việc làm</h2>
 
         <div class="list-service">
             <div class="row">

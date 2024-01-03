@@ -1,7 +1,7 @@
 <section class="form_support cb-section">
     <div class="container">
         <div class="banner-form ">
-            <h3 class="banner-form__title text-primary text-center">Đâu là giải pháp phù hợp cho doanh nghiệp của bạn?</h3>
+            <h2 class="section-title  text-center text-primary">Đâu là giải pháp phù hợp cho doanh nghiệp của bạn?</h2>
             <div class="banner-form__subtitle  text-primary">
                 Hãy để lại thông tin và các chuyên viên tư vấn tuyển dụng của VietStar sẽ liên hệ ngay với bạn
             </div>
