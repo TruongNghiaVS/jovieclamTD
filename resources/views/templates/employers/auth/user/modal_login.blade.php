@@ -221,7 +221,7 @@ $(document).ready(function() {
                     //     $("#employer_login_Modal").removeClass("show");
                     //     window.location.href =  "/dashboard";
                     // }
-
+                    console.log(data);
                     if (data.sucess == true) { 
                         // console.log(data);
                         

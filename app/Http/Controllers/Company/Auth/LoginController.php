@@ -86,6 +86,8 @@ use AuthenticatesUsers;
     public function login(Request $request)
 
     {
+    
+      
 
         $passwordInput = $request->input('password');
         $request->validate([

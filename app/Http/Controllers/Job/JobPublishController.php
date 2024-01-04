@@ -110,9 +110,13 @@ class JobPublishController extends Controller
         
         $company = Auth::guard('company')->user();
         $job = new Job();
+     
         $job->company_id = $company->id;
         $job = $this->assignJobValues($job, $request);
         $job->status =1;
+
+    
+
         $job->save();
         /*         * ******************************* */
         $job->slug = Str::slug($job->title, '-') . '-' . $job->id;
@@ -184,7 +188,9 @@ class JobPublishController extends Controller
         $job->slug = Str::slug($job->title, '-') . '-' . $job->id;
         /*         * ******************************* */
         /*         * ************************************ */
+        $job->status =1;
         $job->update();
+      
         /*         * ************************************ */
         $this->storeJobSkills($request, $job->id);
         /*         * ************************************ */
