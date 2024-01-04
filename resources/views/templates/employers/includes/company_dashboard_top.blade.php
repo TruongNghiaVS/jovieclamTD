@@ -28,7 +28,11 @@
                         <h2 class="title-dashboard">TÌM KIẾM HỒ SƠ</h2>
                     </div>
                     <div class="body" bis_skin_checked="1">
-                          Chưa có điểm xem hồ sơ
+                        <ul class="company-account-information">
+                            <li>
+                                Chưa có điểm xem hồ sơ
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -71,7 +75,12 @@
                         <h2 class="title-dashboard">LỊCH SỬ HOẠT ĐỘNG</h2>
                     </div>
                     <div class="body" bis_skin_checked="1">
-                       <p>Chưa có dữ liệu</p>
+                        <ul class="company-account-information">
+                            <li>
+                                Chưa có dữ liệu
+                            </li>
+                        </ul>
+                  
                     </div>
                 </div>
             </div>

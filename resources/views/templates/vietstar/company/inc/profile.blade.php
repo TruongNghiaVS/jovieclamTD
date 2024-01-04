@@ -405,7 +405,7 @@
     <div class="user-account-section">
         <div class="formpanel mt0">
             <div class="section-head">
-                <h3 class="title-form">Chỉnh sửa thông tin tài khoản</h3>
+                <h1 class="title-form">Chỉnh sửa thông tin tài khoản</h1>
             </div>
 
             <div class="section-body">
