@@ -49,8 +49,10 @@ if (!isset($seo)) {
 
 </head>
 
-<body class="default-page" style="padding-top:76px;">
-    @yield('content')
+<body class="default-page">
+    <main style="padding-top: 76px;">
+        @yield('content')
+    </main>
   
     <script src="{{asset('/')}}js/popper.js"></script>
     <script src="{{asset('/')}}js/bootstrap.min.js"></script>

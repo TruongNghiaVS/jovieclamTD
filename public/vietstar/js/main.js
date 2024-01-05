@@ -41,7 +41,7 @@ $(document).ready(function () {
     applyCVLangue(cvLang);
     viewMoreFilter();
     swiperSlider();
-    setPaddingBody();
+    // setPaddingBody();
     multiSelect();
     activeCoverCV();
     formCVTemplate();
@@ -62,7 +62,7 @@ $(document).ready(function () {
     });
 });
 $(window).resize(function () {
-    setPaddingBody();
+    // setPaddingBody();
 });
 
 function jobExperienceChange() {
@@ -191,7 +191,7 @@ function multiSelect() {
 
 function setPaddingBody() {
     var h = $('#main-nav').height();
-    $('body.default-page').css('padding-top', '76px')
+    $('body.default-page main').css('padding-top', '76px')
 }
 
 function viewMoreFilter() {
