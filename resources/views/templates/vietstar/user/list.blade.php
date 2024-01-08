@@ -80,100 +80,124 @@
 <!-- Dashboard menu start -->
 
 <!-- Dashboard menu end -->
-
-
+@include('templates.employers.user.inc.filters_job_wrapper')
 <div class="job-seekers-page listpgWraper">
 
     <div class="container Jobpage">
         <form action="{{route('job.seeker.list')}}" method="get">
-            @include('templates.employers.user.inc.filters_job_wrapper')
+            
             <!-- Search Result and sidebar start -->
             <div class="row">
-                <div class="col-lg-8">
-                    <div class="searchList jobs-side-list" bis_skin_checked="1">
-                        @if(isset($jobSeekers) && count($jobSeekers))
-                        @foreach($jobSeekers as $jobSeeker)
-                        <div  class="item-job mb-3" bis_skin_checked="1">
-                            <div class="logo-company" bis_skin_checked="1">
-                                <a href="/cong-ty/cong-ty-tnhh-buymed-145" title="CÔNG TY TNHH EDUPIA" class="pic">
-                                    {{$jobSeeker->printUserImage()}}
-                                </a>
-                            </div>
-                            <div class="jobinfo" bis_skin_checked="1">
-                                <div class="info" bis_skin_checked="1">
-                                    <!-- Title  Start-->
-                                    <div class="info-item job-title-box" bis_skin_checked="1">
-                                        <div class="job-title" bis_skin_checked="1">
-                                     
-                                            <h3 class="job-title-name m-0"><a href="{{route('user.profile', $jobSeeker->id)}}" title="{{$jobSeeker->getName()}}">{{$jobSeeker->getName()}}</a></h3>
-
-                                        </div>
-                                        <a class="btn-veiw-profile"  href="{{route('user.profile', $jobSeeker->id)}}">{{__('View Profile')}}</a>
-
-                                        
-                                    </div>
-                                    <!-- Title  End-->
-                                    <!-- companyName Start-->
-                                    <div class="info-item companyName" bis_skin_checked="1">{{$jobSeeker->email ?  $jobSeeker->email :" "}}</div>
-                                    <!-- companyName End-->
-                                    <!--rank-salary and place Start-->
-                                    <div class="info-item box-meta" bis_skin_checked="1">
-                                        <div class="meta-city" bis_skin_checked="1">
-                                            <!-- <i class="far fa-map-marker-alt"></i> -->
-                                            {{$jobSeeker->getLocation()}}
-                                        </div>
-                                    </div>
-                                    <!--Rank-salary and place End-->
-                                    <!--Day update and place Start-->
-                                    @if($jobSeeker->updated_at)
-                                    <div class="info-item day-update" bis_skin_checked="1">
-                                        Cập nhật:  {{ $jobSeeker->updated_at->format('j F, Y') }}
-                                    </div>
-                                    @endif
-                                    <!--Day update and place End-->
-                                </div>
-                                <div class="caption" bis_skin_checked="1">
-                                    <div class="welfare" bis_skin_checked="1">
-                                        <div class="box-meta" bis_skin_checked="1">
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                        @endif
-                    </div>
-                    <!-- Search List -->
-                    
-
-                    <!-- Pagination Start -->
-                    <div class="pagiWrap">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <div class="showreslt">
-                                    {{__('Showing Pages')}} : {{ $jobSeekers->firstItem() }} -
-                                    {{ $jobSeekers->lastItem() }} {{__('Total')}} {{ $jobSeekers->total() }}
-                                </div>
-                            </div>
-                            <div class="col-md-7 text-right">
-                                @if(isset($jobSeekers) && count($jobSeekers))
-                                {{ $jobSeekers->appends(request()->query())->links() }}
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Pagination end -->
-                    <!-- <div class=""><br />{!! $siteSetting->listing_page_horizontal_ad !!}</div> -->
-
-                </div>
-                <div class="col-lg-4 col-sm-12 pull-right">
+                    <div class="col-lg-4 col-md-2 col-sm-12">
                     <!-- Sponsord By -->
-                    <div class="sidebar shadow">
-                        @include('templates.employers.job.inc.ads')
+                        <div class="sidebar shadow">
+                            @include('templates.employers.job.inc.advanced_filtering')
+                        </div>
                     </div>
-                </div>
+                    <div class="col-lg-8 col-md-10 col-sm-12 ">
+                        <div class="searchList jobs-side-list" bis_skin_checked="1">
+                            @if(isset($jobSeekers) && count($jobSeekers))
+                            @foreach($jobSeekers as $jobSeeker)
+                            <div  class="item-job-search mb-3" bis_skin_checked="1">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                            <div class="row">
+                                                <div class="d-flex justify-content-start">
+                                                    <strong class="item-job-search__name">
+                                                        Nguyen Thanh Minh 
+                                                    </strong>   
+                                                    <span>
+                                                        (29 tuổi)
+                                                    </span>
+                                                </div>
+                                            </div>
+                                           
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="d-flex  justify-content-end">
+                                            <a href="#" class="btn btn-outline btn-sm  mx-1"><i class="fa-regular fa-heart"></i></a>
+                                            <a href="#" class="btn btn-secondary btn-sm">Xem</a>
+
+                                        </div>
+                                     
+                                    </div>
+
+                                </div>
+                                <div class="row my-2">
+                                    <div class="col-lg-8">
+                                            
+                                            <div class="row">
+                                                <span class="item-job-search__industry">
+                                                    Nhân Viên Kinh Doanh
+                                                </span>
+                                            </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                       
+                                        <div class="d-flex justify-content-end align-items-center h-100">
+                                            Thời gian cập nhật: 05/01/2024
+                                        </div>
+                                       
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                            <div class="d-flex">
+                                                <div>
+
+                                                    <i class="fa-solid fa-circle-dollar-to-slot mx-1"></i> 7 triệu
+                                                </div>
+                                                <div class="mx-3">
+
+                                                    <i class="fa-solid fa-briefcase mx-1"></i>Dưới 1 năm
+                                                </div>
+
+                                                <div>
+
+                                                    <i class="fa-solid fa-map-location-dot mx-1"></i> Hà Nội
+                                                </div>
+
+                                            </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                      
+                                        <div class="d-flex justify-content-end">
+                                            NTD quan tâm : 36
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            @endforeach
+                            @endif
+                        </div>
+                        <!-- Search List -->
+                        
+    
+                        <!-- Pagination Start -->
+                        <div class="pagiWrap">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="showreslt">
+                                        {{__('Showing Pages')}} : {{ $jobSeekers->firstItem() }} -
+                                        {{ $jobSeekers->lastItem() }} {{__('Total')}} {{ $jobSeekers->total() }}
+                                    </div>
+                                </div>
+                                <div class="col-md-7 text-right">
+                                    @if(isset($jobSeekers) && count($jobSeekers))
+                                    {{ $jobSeekers->appends(request()->query())->links() }}
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pagination end -->
+                        <!-- <div class=""><br />{!! $siteSetting->listing_page_horizontal_ad !!}</div> -->
+    
+                    </div>
+             </div>
+
+                
             </div>
         </form>
     </div>
@@ -183,6 +207,9 @@
 @endsection
 @push('styles')
 <style type="text/css">
+    .job-seekers-page {
+        padding-top: 76px;
+    }
     .searchList li .jobimg {
         min-height: 80px;
     }
@@ -199,6 +226,27 @@
     .view_more {
         cursor: pointer;
     }
+    .jobs-side-list .item-job-search {
+        background-color: #FFFFFF;
+        padding: 20px;
+        margin-bottom: 2 0px;
+        border-radius: 10px;
+       
+    }
+    .item-job-search__name{
+        margin-right: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--bs-primary);
+    }
+    .item-job-search__industry {
+        font-size: 16px;
+        margin: 7px 0;
+        font-weight: 600;
+    }
+
+
+
 </style>
 @endpush
 @push('scripts')
