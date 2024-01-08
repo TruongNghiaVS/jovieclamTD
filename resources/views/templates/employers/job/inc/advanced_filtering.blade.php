@@ -44,13 +44,86 @@
   <div class="accordion-single-item js-acc-item">
     <h3 class="accordion-single-title js-acc-single-trigger">Hình thức làm việc</h3>
     <div class="accordion-single-content">
-      <p>This is an Answer 2</p>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="jobtype">
+            <label class="form-check-label" for="jobtype">
+                Toàn thời gian cố định
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="jobtype">
+            <label class="form-check-label" for="jobtype">
+            Toàn thời gian tạm thời
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="jobtype">
+            <label class="form-check-label" for="jobtype">
+                Bán thời gian tạm thời
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="jobtype">
+            <label class="form-check-label" for="jobtype">
+                Thực tập
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="jobtype">
+            <label class="form-check-label" for="jobtype">
+                Khác
+            </label>
+        </div>
     </div>
   </div>
   <div class="accordion-single-item js-acc-item">
     <h3 class="accordion-single-title js-acc-single-trigger">Địa điểm</h3>
     <div class="accordion-single-content">
-      <p>This is an Answer 3</p>
+        <div class="form-group form-select-chosen" id="city_dd2">
+            <select class="form-control form-select" name="city_id" id="city">
+                <option value="">Chọn địa điểm</option>
+                <option value="3">HCM</option>
+                <option value="5">Hà Nội</option>
+                <option value="5">Đà Nẵng</option>
+            </select>
+        </div>
+    </div>
+  </div>
+  <div class="accordion-single-item js-acc-item">
+    <h3 class="accordion-single-title js-acc-single-trigger">Bằng cấp</h3>
+    <div class="accordion-single-content">
+       
+    </div>
+  </div>
+  <div class="accordion-single-item js-acc-item">
+    <h3 class="accordion-single-title js-acc-single-trigger">Kinh nghiệm</h3>
+    <div class="accordion-single-content">
+       
+    </div>
+  </div>
+  <div class="accordion-single-item js-acc-item">
+    <h3 class="accordion-single-title js-acc-single-trigger">Mức lương</h3>
+    <div class="accordion-single-content">
+       
+    </div>
+  </div>
+  <div class="accordion-single-item js-acc-item">
+    <h3 class="accordion-single-title js-acc-single-trigger">Giới tinh</h3>
+    <div class="accordion-single-content">
+       
+    </div>
+  </div>
+  <div class="accordion-single-item js-acc-item">
+    <h3 class="accordion-single-title js-acc-single-trigger">Ngoại ngữ</h3>
+    <div class="accordion-single-content">
+       
+    </div>
+  </div>
+  <div class="accordion-single-item js-acc-item">
+    <h3 class="accordion-single-title js-acc-single-trigger">Loại hồ sơ</h3>
+    <div class="accordion-single-content">
+       
     </div>
   </div>
 </div>

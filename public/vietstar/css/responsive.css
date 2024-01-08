@@ -558,6 +558,13 @@
     .btn_for_em, .btn_for_user {
       display: none !important;
     }
+  
+    .job-seekers-page{
+      padding-top: 0 !important;
+    }
+    .justify-content-end-rp{
+      justify-content: start !important;
+    }
   }
 
 
@@ -844,7 +851,7 @@
     padding-right: 10px !important;
   }
   .sidebar {
-    margin-top: 30px;
+ 
   }
   #secondary-blog-content {
     padding:  0 10px;

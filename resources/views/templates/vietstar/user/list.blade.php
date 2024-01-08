@@ -88,33 +88,30 @@
             
             <!-- Search Result and sidebar start -->
             <div class="row">
-                    <div class="col-lg-4 col-md-2 col-sm-12">
+                    <div class="col-lg-3 col-md-4 col-sm-12">
                     <!-- Sponsord By -->
                         <div class="sidebar shadow">
                             @include('templates.employers.job.inc.advanced_filtering')
                         </div>
                     </div>
-                    <div class="col-lg-8 col-md-10 col-sm-12 ">
+                    <div class="col-lg-9 col-md-8 col-sm-12 ">
                         <div class="searchList jobs-side-list" bis_skin_checked="1">
                             @if(isset($jobSeekers) && count($jobSeekers))
                             @foreach($jobSeekers as $jobSeeker)
                             <div  class="item-job-search mb-3" bis_skin_checked="1">
                                 <div class="row">
-                                    <div class="col-lg-8">
-                                            <div class="row">
-                                                <div class="d-flex justify-content-start">
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
                                                     <strong class="item-job-search__name">
                                                         Nguyen Thanh Minh 
                                                     </strong>   
                                                     <span>
                                                         (29 tuổi)
                                                     </span>
-                                                </div>
-                                            </div>
+
                                            
                                     </div>
-                                    <div class="col-lg-4">
-                                        <div class="d-flex  justify-content-end">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <div class="d-flex  justify-content-end-rp">
                                             <a href="#" class="btn btn-outline btn-sm  mx-1"><i class="fa-regular fa-heart"></i></a>
                                             <a href="#" class="btn btn-secondary btn-sm">Xem</a>
 
@@ -124,17 +121,17 @@
 
                                 </div>
                                 <div class="row my-2">
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
                                             
-                                            <div class="row">
+                                           
                                                 <span class="item-job-search__industry">
                                                     Nhân Viên Kinh Doanh
                                                 </span>
-                                            </div>
+                                            
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
                                        
-                                        <div class="d-flex justify-content-end align-items-center h-100">
+                                        <div class="d-flex justify-content-end-rp align-items-center h-100">
                                             Thời gian cập nhật: 05/01/2024
                                         </div>
                                        
@@ -142,7 +139,7 @@
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-8 col-md-8 col-sm-8">
                                             <div class="d-flex">
                                                 <div>
 
@@ -160,9 +157,9 @@
 
                                             </div>
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
                                       
-                                        <div class="d-flex justify-content-end">
+                                        <div class="d-flex justify-content-end-rp">
                                             NTD quan tâm : 36
                                         </div>
                                     </div>
@@ -244,6 +241,11 @@
         margin: 7px 0;
         font-weight: 600;
     }
+    .justify-content-end-rp{
+        justify-content: end;
+        text-align: end;
+    }
+
 
 
 
