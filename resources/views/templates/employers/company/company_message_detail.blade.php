@@ -1,4 +1,4 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 @section('content') 
 <!-- Header start --> 
 @include('templates.employers.includes.header') 

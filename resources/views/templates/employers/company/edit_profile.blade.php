@@ -1,4 +1,4 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 @section('content') 
 
     <!-- Header start -->
@@ -9,7 +9,6 @@
 @include('templates.employers.includes.company_dashboard_menu') 
 <!-- Inner Page Title end -->
 <div class="company-wrapper">
-             
             @include('templates.employers.includes.mobile_dashboard_menu')
             <div class="container company-content">
                

@@ -1,4 +1,4 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 
 @section('content') 
 
@@ -47,7 +47,7 @@
 
 @push('scripts')
 
-@include('templates.vietstar.includes.immediate_available_btn')
+@include('templates.employers.includes.immediate_available_btn')
 
 @endpush
 

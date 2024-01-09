@@ -1,4 +1,4 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 
 @section('content')
 
@@ -43,9 +43,9 @@ if (Auth::guard('company')->user()) {
                 <div class="info" bis_skin_checked="1">
                   <div class="image" bis_skin_checked="1">
                     @if($user->logo)
-                    <img src="{{ $user->avatar() }}" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="vietstar">
+                    <img src="{{ $user->avatar() }}" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="employers">
                     @else
-                    <img src="/admin_assets/no-image.png" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="vietstar">
+                    <img src="/admin_assets/no-image.png" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="employers">
                     @endif
                   </div>
                   <ul class="info-list">
@@ -183,7 +183,7 @@ if (Auth::guard('company')->user()) {
 <!-- Public profile cover -->
 <section class="public-profile-cover">
     <div>
-      <img src="{{ asset('vietstar/imgs/company-cover.jpg') }}" alt="vietstar - company">
+      <img src="{{ asset('employers/imgs/company-cover.jpg') }}" alt="employers - company">
 </div>
 </section>
 <section class="container public-profile">
@@ -191,9 +191,9 @@ if (Auth::guard('company')->user()) {
     <div class="row g-0">
       <div class="col-md-2">
         @if($user->logo)
-        <img src="{{ $user->avatar() }}" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="vietstar">
+        <img src="{{ $user->avatar() }}" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="employers">
         @else
-        <img src="/admin_assets/no-image.png" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="vietstar">
+        <img src="/admin_assets/no-image.png" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="employers">
         @endif
       </div>
       <div class="col-md-10">

@@ -1,4 +1,4 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 @inject('carbon', 'Carbon\Carbon')
 @section('content')
 

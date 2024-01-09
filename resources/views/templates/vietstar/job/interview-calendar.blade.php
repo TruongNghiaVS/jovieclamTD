@@ -1,12 +1,10 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 @section('content')
-    @if(Auth::guard('company')->check())
+
     <!-- Header start -->
     @include('templates.employers.includes.header')
     <!-- Header end -->
-    @else
-    @include('templates.vietstar.includes.header')
-    @endif
+
     <!-- Inner Page Title start -->
     @include('templates.employers.includes.company_dashboard_menu') 
   
@@ -36,7 +34,7 @@
                             </div>
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade active" id="list-view" role="tabpanel" aria-labelledby="list-view-tab">
-                                    @include('templates.vietstar.job/inc/list_schedule_interview')
+                                    @include('templates.employers.job/inc/list_schedule_interview')
                                 </div>
                                 <div class="tab-pane fade show active" id="month-view" role="tabpanel" aria-labelledby="month-view-tab">
                                     <h3 class="title-schedule-interview">{{ __('My Interview Schedule') }}</h3>
@@ -103,10 +101,10 @@
     
     </div>
 
-    @include('templates.vietstar.includes.footer')
+    @include('templates.employers.includes.footer')
 @endsection
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('vietstar/fullCalendar/main.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('employers/fullCalendar/main.min.css') }}">
     <style>
 
         .fc-widget-header{
@@ -127,8 +125,8 @@
     </style>
 @endpush
 @push('scripts')
-    <script type="text/javascript" src="{{ asset('vietstar/fullCalendar/main.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('vietstar/fullCalendar/locales-all.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('employers/fullCalendar/main.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('employers/fullCalendar/locales-all.js') }}"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var initialLocaleCode = "{{ App::getLocale() }}";

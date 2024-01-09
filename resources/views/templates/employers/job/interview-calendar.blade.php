@@ -1,4 +1,4 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 @section('content')
  
     <!-- Header start -->
@@ -104,7 +104,7 @@
     @include('templates.employers.includes.footer')
 @endsection
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('vietstar/fullCalendar/main.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('employers/fullCalendar/main.min.css') }}">
     <style>
 
         .fc-widget-header{
@@ -125,8 +125,8 @@
     </style>
 @endpush
 @push('scripts')
-    <script type="text/javascript" src="{{ asset('vietstar/fullCalendar/main.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('vietstar/fullCalendar/locales-all.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('employers/fullCalendar/main.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('employers/fullCalendar/locales-all.js') }}"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var initialLocaleCode = "{{ App::getLocale() }}";

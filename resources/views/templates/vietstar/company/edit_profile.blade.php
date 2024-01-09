@@ -1,12 +1,10 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 @section('content') 
-    @if(Auth::guard('company')->check())
+
     <!-- Header start -->
     @include('templates.employers.includes.header')
     <!-- Header end -->
-    @else
-    @include('templates.vietstar.includes.header')
-    @endif
+
 <!-- Inner Page Title start --> 
 @include('templates.employers.includes.company_dashboard_menu') 
 <!-- Inner Page Title end -->
@@ -21,7 +19,7 @@
             </div>
  
 </div>
-@include('templates.vietstar.includes.footer')
+@include('templates.employers.includes.footer')
 @endsection
 @push('styles')
 <style type="text/css">

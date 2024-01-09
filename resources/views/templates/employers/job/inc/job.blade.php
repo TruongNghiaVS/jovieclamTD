@@ -35,8 +35,8 @@
                 <div class="row">
                     <div lass="col-md-6 col-lg-6 col-sm-12">
                             
-
-                            <label for="City" class="font-weight-bold fs-18px my-2">{{__('Workplace')}}<span class="required">*</span></label>
+            
+                            <label for="City" class="font-weight-bold fs-18px my-2">{{__('Workplace')}} <span class="required">*</span> </label>
                     
                   
                             <div class="d-flex justify-content-start  align-items-center">
@@ -146,7 +146,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="Ownership" class="font-weight-bold fs-18px">{{__('Functional Area')}} </label>
+                            <label for="Ownership" class="font-weight-bold fs-18px">{{__('Functional Area')}}  <span class="required">*</span>  </label>
                             <select required class="form-control form-select" id="functional_area_id" name="functional_area_id">
                                 <option value="">{{ __('Select one') }}</option>
 
@@ -466,14 +466,14 @@
                             <div class="col-md-12" id="salary_from_dd" style="display:none;">
                                 <div class="form-group">
                                     <label for="salary_from" class="font-weight-bold fs-18px">{{__('Salary From')}} </label>
-                                    <input type="text" class="form-control currency-mask" id="salary_from" placeholder="{{__('Salary From')}}" value="{{ $edit ? __($job->salary_from) : old('salary_from') }}">
+                                    <input type="text" class="form-control currency-mask" id="salary_from" placeholder="{{__('Salary From')}}" value="{{ $edit ? __($job->salary_from) : old('salary_from') }}" required>
                                     {!! APFrmErrHelp::showErrors($errors, 'salary_from') !!}
                                 </div>
                             </div>
                             <div class="col-md-12" id="salary_to_dd" style="display:none;">
                                 <div class="form-group">
                                     <label for="salary_range" class="font-weight-bold fs-18px">{{__('Salary To')}} </label>
-                                    <input type="text" class="form-control currency-mask" id="salary_to" placeholder="{{__('Salary To')}}" value="{{ $edit ? __($job->salary_to) : old('salary_to') }}">
+                                    <input type="text" class="form-control currency-mask" id="salary_to" placeholder="{{__('Salary To')}}" value="{{ $edit ? __($job->salary_to) : old('salary_to') }}" required>
                                     {!! APFrmErrHelp::showErrors($errors, 'salary_to') !!}
                                 </div>
                             </div>
@@ -484,7 +484,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="Ownership" class="font-weight-bold fs-18px">{{__('Functional Area')}} </label>
+                            <label for="Ownership" class="font-weight-bold fs-18px">{{__('Functional Area')}} <span class="required">*</span> </label>
                             <select required class="form-control form-select" id="functional_area_id" name="functional_area_id">
                                 <option value="">{{ __('Select one') }}</option>
 
@@ -971,6 +971,7 @@ $('#salary_type').change(function () {
         $('#salary_from_dd').removeClass('col-md-12').addClass('col-md-6').css({'display':'inline-block', 'margin':'0px','padding':'10px'});
         $('#salary_from_dd').show();
         $('#salary_to_dd').hide();
+        $('#salary_to_dd input').removeAttr('required');
     } else if(salary_type == {{APP\Job::SALARY_TYPE_TO}}) {
         $('#salary_dd').removeClass('col-md-6').addClass('col-md-12');
         $('#salary_from').val('').removeAttr('name');
@@ -978,6 +979,8 @@ $('#salary_type').change(function () {
         $('#salary_type_dd').removeClass('col-md-12').addClass('col-md-6').css({'display':'inline-block', 'margin':'0px','padding':'10px'});
         $('#salary_to_dd').removeClass('col-md-12').addClass('col-md-6').css({'display':'inline-block', 'margin':'0px','padding':'10px'});
         $('#salary_from_dd').hide();
+        $('#salary_from_dd input').removeAttr('required');
+
         $('#salary_to_dd').show();
     } else {
         $('#salary_dd').removeClass('col-md-6').removeClass('col-md-4').addClass('col-md-12').css({'display':'inline-block', 'margin':'0px','padding':'10px'});;
@@ -985,6 +988,9 @@ $('#salary_type').change(function () {
         $('#salary_to').val('').removeAttr('name').attr('disabled', true);
         $('#salary_from_dd').hide();
         $('#salary_to_dd').hide();
+        $('#salary_from_dd input').removeAttr('required');
+        $('#salary_to_dd input').removeAttr('required');
+
     }
 
 });

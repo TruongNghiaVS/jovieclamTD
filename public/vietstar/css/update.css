@@ -3777,6 +3777,10 @@ footer .inner-copyright .copyright {
     color: var(--bs-red)
 }
 
+label .required {
+    color: var(--bs-red)
+}
+
 .searchform select.form-control {
     line-height: 1.5
 }

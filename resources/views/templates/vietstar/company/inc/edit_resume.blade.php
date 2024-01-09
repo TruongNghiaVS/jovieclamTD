@@ -236,7 +236,7 @@
 </style>
 @endpush
 @push('scripts')
-@include('templates.vietstar.includes.tinyMCEFront') 
+@include('templates.employers.includes.tinyMCEFront') 
 <script type="text/javascript">
     $(document).ready(function () {
         $('#country_id').on('change', function (e) {
