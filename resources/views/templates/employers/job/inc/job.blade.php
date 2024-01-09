@@ -805,11 +805,15 @@
             if (isChecked) {
                 $('#location').css("display","none");
                 $('#city_id').css("display","none");
+                $('#location').attr("required", false);
+                $('#city_id').attr("required", false);
 
             }
             else {
                 $('#location').css("display","block");
+                $('#location').attr("required", true);
                 $('#city_id').css("display","block");
+                $('#city_id').attr("required", true);
             }    
     });
 
@@ -849,11 +853,16 @@ $(document).on('change', '#same_add_yes', function () {
     if (isChecked) {
         $('#location').css("display","none");
         $('#city_id').css("display","none");
+        $('#location').prop('required',false);
+        $('#city_id').prop('required',false);
+
 
     }
     else {
         $('#location').css("display","block");
+        $('select#location').attr("required", true);
         $('#city_id').css("display","block");
+        $('select#city_id').attr("required", true);
     }
     // Disable or enable the input based on the checkbox
 

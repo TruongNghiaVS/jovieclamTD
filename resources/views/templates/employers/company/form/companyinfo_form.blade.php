@@ -65,7 +65,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-secondary" id="infoContinue">Continue</button>
+            <button class="btn btn-secondary" id="infoContinue">Tiếp tục</button>
           </div>
           <div class="tab-pane fade" id="ads" role="tabpanel">
             <div class="col-md-12">
@@ -75,7 +75,7 @@
                 <textarea class="form-control" id="description_text" required name="description"  name_table="description" rows="4">{{ isset($company->description) ? $company->description : old('description') }}</textarea>
               </div>
             </div>
-            <button class="btn btn-secondary" id="adsContinue">Continue</button>
+            <button class="btn btn-secondary" id="adsContinue">Tiếp tục</button>
           </div>
           <div class="tab-pane fade" id="placementPanel" role="tabpanel">
             <div class="row">
@@ -130,7 +130,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-secondary" id="placementContinue">Continue</button>
+            <button class="btn btn-secondary" id="placementContinue">Tiếp tục</button>
           </div>
           <div class="tab-pane fade" id="detail" role="tabpanel">
             <div class="row">
@@ -172,7 +172,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-secondary" id="detailContinue">Continue</button>
+            <button class="btn btn-secondary" id="detailContinue">Tiếp tục</button>
           </div>
           <div class="tab-pane fade" id="review" role="tabpanel">
             <h4>{{__('Review the form')}}</h4>  
@@ -256,7 +256,7 @@
           var formData = {};
           var tableData = {};
          
-        
+          $('#dataTable tbody').empty()
           // Iterate through input fields and select elements in the first two tab-panes
           $('#infoPanel, #ads, #placementPanel ,#detail').find('input, select,textarea').each(function() {
             var elementName = $(this).attr('name_table');

@@ -25,9 +25,13 @@
   /* Header Nav */
   .navbar>.container {
 
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-
+  .group-button .nav-link {
+    display: none;
+  }
   .header-bar {
     margin-bottom: 0;
     position: relative;
@@ -377,7 +381,7 @@
   button#mobile-sidebarCollapse {
     width: unset;
     position: absolute;
-    top: 0;
+    top: 11px;
     right: 10px;
     font-size: 24px;
     color: black;
@@ -565,6 +569,13 @@
     .justify-content-end-rp{
       justify-content: start !important;
     }
+  
+    .figure {
+      height: 340px;
+    }
+    .banner-form-main {
+      padding: 10px;
+    }
   }
 
 
@@ -608,12 +619,28 @@
   }
 
   /* Header Nav */
+  .navbar>.container {
 
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .group-button .nav-link {
+    display: none;
+  }
+  .figcaption {
+    padding: 10px;
+  }
+  .figcaption__title a {
+    margin: 5px;
+  }
 
   .useraccountwrap .nav-link.active {
     color: white !important;
   }
-
+  .figure {
+    height: 300px;
+  }
   
 
   .header-bar {

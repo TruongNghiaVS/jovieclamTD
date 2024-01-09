@@ -159,9 +159,9 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="Website_URL">Website URL</label>
+                                                    <label for="Website_URL">Trang Web</label>
                                                     <input type="text" class="form-control" id="Website_URL"
-                                                           placeholder="Website URL">
+                                                           placeholder="Trang Web">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

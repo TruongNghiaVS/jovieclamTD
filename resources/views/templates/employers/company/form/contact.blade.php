@@ -12,9 +12,9 @@
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6">
               <div class="form-group">
-                <label for="Website_URL">Website URL</label>
+                <label for="Website_URL">Trang Web</label>
                 <em class="important">*</em>
-                <input type="text" class="form-control" required id="website" name="website" value="{{ isset($company->website) ? $company->website : old('website')}}" placeholder="Website URL">
+                <input type="text" class="form-control" required id="website" name="website" value="{{ isset($company->website) ? $company->website : old('website')}}" placeholder="Trang Web">
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-6">
@@ -25,9 +25,9 @@
             </div>
             <div class="col-sm-12 col-md-12 col-lg-6">
               <div class="form-group">
-                <label for="Phone_number">{{__('Phone number')}}</label>
+                <label for="Phone_number">{{__('Mobile Number')}}</label>
                 <em class="important">*</em>
-                <input type="text" class="form-control" required id="phone" name="phone" value="{{ isset($company->phone) ? $company->phone : old('phone')}}" placeholder="{{__('Phone number')}}">
+                <input type="text" class="form-control" required id="phone" name="phone" value="{{ isset($company->phone) ? $company->phone : old('phone')}}" placeholder="{{__('Mobile Number')}}">
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-6">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="col-sm-12 col-md-12 col-lg-12">
-              <button class="btn btn-primary w-100" type="submit">{{__('Submit')}}</button>
+              <button class="btn btn-primary w-100" type="submit">{{__('Update')}}</button>
             </div>
           </div>
         </form>

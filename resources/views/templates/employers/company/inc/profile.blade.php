@@ -316,10 +316,10 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="Website_URL">Website URL</label>
+                                                    <label for="Website_URL">Trang Web</label>
                                                     <em class="important">*</em>
                                                     <input type="text" class="form-control" required id="Website_URL" name="website" value="{{ isset($company->website) ? $company->website : old('website')}}"
-                                                           placeholder="Website URL">
+                                                           placeholder="Trang Web">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -673,7 +673,7 @@
                             <tr>
                                 <td class="table_title">
                                     <strong>
-                                        <i class="fa fa-globe"></i> Website URL
+                                        <i class="fa fa-globe"></i> Trang Web
                                     </strong>
                                 </td>
                                 <td class="table_value">
@@ -701,7 +701,7 @@ dd($company->website);
                             <tr>
                                 <td class="table_title">
                                     <strong>
-                                        <i class="bi bi-telephone"></i> {{__('Phone number')}}
+                                        <i class="bi bi-telephone"></i> {{__('Mobile Number')}}
                                     </strong>
                                 </td>
                                 <td class="table_value">
