@@ -7998,11 +7998,7 @@ span.iconmoon.icon-eye-icon {
     color: var(--sub-1)
 }
 
-.btn-schedule-interview {
-    position: absolute;
-    top: 30px;
-    right: 30px
-}
+
 
 #calendar .fc-toolbar.fc-header-toolbar {
     padding: 0
@@ -8316,13 +8312,7 @@ span.iconmoon.icon-eye-icon {
         flex: 0 0 100%
     }
 
-    .btn-schedule-interview {
-        position: relative;
-        top: 00px;
-        right: 0px;
-        left: 0;
-        margin-bottom: 10px
-    }
+   
 }
 
 @media screen and (max-width: 768px) {

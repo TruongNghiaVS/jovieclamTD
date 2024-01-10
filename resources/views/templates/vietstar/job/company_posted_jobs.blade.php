@@ -19,7 +19,7 @@
             <div class="card-body">
                 <div class="posted-manager-header">
                     <h1 class="title-manage">{{__('Company\'s Posted Jobs')}}</h1>
-                    <a href="{{route('post.job')}}" class="btn btn-primary text-white"><i class="fa-regular fa-pen-to-square text-white m-1"></i>{{ __('Create a Recruitment Form') }}</a>
+                    <a href="{{route('post.job')}}" class="btn btn-primary text-white btn-sm"><i class="fa-regular fa-pen-to-square text-white m-1"></i>{{ __('Create a Recruitment Form') }}</a>
                 </div>
                 <form action="{{ route('posted.jobs') }}" method="get" class="form-search pt-2">
                     <div class="row filter-job">
@@ -41,179 +41,132 @@
                     </div>
             </div> --}}
 
-            <div class="col-md-3 col-lg-2 col-sm-12">
-                <div class="form-group">
-                    <label for="find_day">Tìm theo ngày</label>
-                    <select name="find_day" value="{{ isset($request['find_day']) ? $request['find_day'] : '0' }}" class="form-select" id="find_day">
-                        <option value="0">Ngày đăng</option>
-                        <option value="1">Ngày hết hạn</option>
+                <div class="col-md-3 col-lg-2 col-sm-12">
+                    <div class="form-group">
+                        <label for="find_day">Tìm theo ngày</label>
+                        <select name="find_day" value="{{ isset($request['find_day']) ? $request['find_day'] : '0' }}" class="form-select" id="find_day">
+                            <option value="0">Ngày đăng</option>
+                            <option value="1">Ngày hết hạn</option>
 
-                    </select>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-lg-2 col-sm-12">
-                <div class="form-group form-group-datepicker ">
-                    <label for="from_to">Từ</label>
-                    <input type="date" value="{{ isset($request['from']) ? $request['from'] : '' }}" class=" form-control " name="from" id="from_to" placeholder="{{ __('Start date-End date') }}" />
+                <div class="col-md-3 col-lg-2 col-sm-12">
+                    <div class="form-group form-group-datepicker ">
+                        <label for="from_to">Từ</label>
+                        <input type="date" value="{{ isset($request['from']) ? $request['from'] : '' }}" class=" form-control " name="from" id="from_to" placeholder="{{ __('Start date-End date') }}" />
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-3 col-lg-2 col-sm-12">
-                <div class="form-group form-group-datepicker ">
-                    <label for="from_to2">Đến</label>
-                    <input type="date" class=" form-control " value="{{ isset($request['to']) ? $request['to'] : '' }}" name="to" id="from_to2" placeholder="{{ __('Start date-End date') }}" />
+                <div class="col-md-3 col-lg-2 col-sm-12">
+                    <div class="form-group form-group-datepicker ">
+                        <label for="from_to2">Đến</label>
+                        <input type="date" class=" form-control " value="{{ isset($request['to']) ? $request['to'] : '' }}" name="to" id="from_to2" placeholder="{{ __('Start date-End date') }}" />
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-lg-3 col-sm-12">
-                <div class="form-group">
-                    <label for="city_id">{{ __('City') }}</label>
-                    <select name="city_id" class="form-select" name="" id="city_id" value="{{ isset($request['city_id']) ? $request['city_id'] : '' }}">
-                        <option value="">{{ __('Select cities') }}</option>
-                        @foreach ($cities as $key => $value)
-                        <option {{ isset($request['city_id']) && $request['city_id'] == $key ? 'selected' : '' }} value="{{ $key }}">{{ $value }}</option>
-                        @endforeach
-                    </select>
+                <div class="col-md-3 col-lg-3 col-sm-12">
+                    <div class="form-group">
+                        <label for="city_id">{{ __('City') }}</label>
+                        <select name="city_id" class="form-select" name="" id="city_id" value="{{ isset($request['city_id']) ? $request['city_id'] : '' }}">
+                            <option value="">{{ __('Select cities') }}</option>
+                            @foreach ($cities as $key => $value)
+                            <option {{ isset($request['city_id']) && $request['city_id'] == $key ? 'selected' : '' }} value="{{ $key }}">{{ $value }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
-            </div>
 
 
 
         </div>
 
-            <div class="d-flex justify-content-end">
-             <div class="w-10">
-                 <button type="submit" class="btn btn-primary w-100"><i class="fa-solid fa-magnifying-glass m-1 text-white"></i> {{ __('Search') }}</button>
-             </div>
-            </div>
+            <div class="row  d-flex justify-content-end">
+                <div class="col-sm-12  col-md-4 col-lg-2 my-2">
+                    <button type="submit" class="btn btn-primary w-100"><i class="fa-solid fa-magnifying-glass text-white mx-1"></i>Tìm kiếm</button>
+                </div>
+           </div>
 
         </form>
     </div>
 
     <div class="card-body pt-0">
-        
-        <ul class="tabslet-tab d-flex justify-content-start">
-        <li>
-            <a href="{{ route('posted.jobs', ['status' => '1']) }}" class=" {{ Request::get('status') == 1 ? 'type-active' : '' }}">{{ __('Active job') }}</a>
-        </li>
-        <li>
-            <a href="{{ route('posted.jobs', ['status' => '2']) }}" class="{{ Request::get('status') == 2 ? 'type-active' : '' }}">{{ __('Pending job') }}</a>
-        </li>
-        <li>
-            <a href="{{ route('posted.jobs', ['status' => '3']) }}" class=" {{ Request::get('status') == 3 ? 'type-active' : '' }}">{{ __('Inactive job') }}</a>
-        </li>
-        <li>
-            <a href="{{ route('posted.jobs', ['expired' => 'true']) }}" class=" {{ Request::get('expired') == 'true' ? 'type-active' : '' }}">{{ __('Job is expired') }}</a>
-        </li>
-    </ul>
-        <div class="table-responsive table-content">
-            <div class="d-flex justify-content-end p-2">
-                <button type="button" onclick="exportFile()" class="btn btn-sm btn-primary"><i class="fa-solid fa-download text-white m-2"></i>{{ __('Export file') }}</button>
-                <label for="show-table" class="py-1 px-2">{{__('Show')}}</label>
-                <div class="form-group m-0">
-                <select class="form-control-sm " id="show-table">
-                    <option>10</option>
-                    <option>20</option>
-                    <option>30</option>
-                    <option>40</option>
-                    <option>50</option>
-                </select>
-            </div>
-              
-            </div>
-            <table class="table table-applican-manager table-hover mb-0 border-0 ">
-                <thead>
-                    <tr>
-                        @if(Request::get('status') == 2)
-                        <th class="font-weight-bold p-2" >{{ __('Positions') }}</th>
-                        <!-- <th class="font-weight-bold"></th> -->
-                        <th class="font-weight-bold p-2"  >Ngày hết hạn</th>
-                        <th class="font-weight-bold p-2"  >{{ __('Status') }}</th>
+        <div class="border">
+            <ul class="tabslet-tab d-flex justify-content-start">
+                <li>
+                    <a href="{{ route('posted.jobs', ['status' => '1']) }}" class=" {{ Request::get('status') == 1 ? 'type-active' : '' }}">{{ __('Active job') }}</a>
+                </li>
+                <li>
+                    <a href="{{ route('posted.jobs', ['status' => '2']) }}" class="{{ Request::get('status') == 2 ? 'type-active' : '' }}">{{ __('Pending job') }}</a>
+                </li>
+                <li>
+                    <a href="{{ route('posted.jobs', ['status' => '3']) }}" class=" {{ Request::get('status') == 3 ? 'type-active' : '' }}">{{ __('Inactive job') }}</a>
+                </li>
+                <li>
+                    <a href="{{ route('posted.jobs', ['expired' => 'true']) }}" class=" {{ Request::get('expired') == 'true' ? 'type-active' : '' }}">{{ __('Job is expired') }}</a>
+                </li>
+            </ul>
+            <div class="p-2 action-posting">
+                <div class="left">
+                    <button type="button" onclick="exportFile()" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-download  m-2"></i>{{ __('Export file') }}</button>
+                </div>
+                <div class="right">
+                    <div class="form-group m-0">
+                            <label for="show-table">{{__('Show')}}</label>
+                        <select class="form-control-sm " id="show-table">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>30</option>
+                            <option>40</option>
+                            <option>50</option>
+                        </select>
+                    </div>
+                </div>
 
-                        <th class="font-weight-bold p-2"  >{{ __('Location') }}</th>
-                        <th class="font-weight-bold p-2 text-center"  >{{ __('Post Job') }}</th>
-                        <th class="font-weight-bold p-2"  >{{ __('Action') }}</th>
-
-                        @else
+            
+            </div>
+            <div class="table-responsive table-content">
+                <table class="table table-applican-manager table-hover mb-0 border-0 ">
+                    <thead>
+                        <tr>
+                            @if(Request::get('status') == 2)
                             <th class="font-weight-bold p-2" >{{ __('Positions') }}</th>
                             <!-- <th class="font-weight-bold"></th> -->
-                            <th class="font-weight-bold p-2"  >Ngày đăng</th>
                             <th class="font-weight-bold p-2"  >Ngày hết hạn</th>
                             <th class="font-weight-bold p-2"  >{{ __('Status') }}</th>
-
+    
                             <th class="font-weight-bold p-2"  >{{ __('Location') }}</th>
-                           
-                            <th class="font-weight-bold p-2" >Lượt nộp</th>
-                            <th class="font-weight-bold p-2"  >{{ __('Interview Candidates') }}</th>
-                            <th class="font-weight-bold p-2"  >{{ __('List of Hired Candidates') }}</th>
-                            <th class="font-weight-bold p-2"  >{{ __('List of Rejected Candidates') }}</th>
-                           
                             <th class="font-weight-bold p-2 text-center"  >{{ __('Post Job') }}</th>
-                            
                             <th class="font-weight-bold p-2"  >{{ __('Action') }}</th>
-
-                        @endif
-                    </tr>
-                </thead>
-                <tbody>
-                    @if (isset($jobs) && count($jobs))
-                    @foreach ($jobs as $job)
-                    @if(Request::get('status') == 2)
-                 
-
-                    <tr class="posted-manager_tb_row" id="job_li_{{$job->id}}">
-
-                        <td>
-                            <div class="d-flex align-items-center h-100">
-                                <a class="fs-18px font-weight-bold text-primary" href="{{url('/')}}/edit-front-job/{{$job->id}}" target="_blank">
-                                    {{ $job->title }}
-                                </a>
-                            </div>
-                        </td>
-
-                        <td>
-                            <div class="d-flex align-items-center h-100 fs-18px">
-                                {{ $job->expiry_date }}
-                            </div>
-                        </td>
-                        <td>
-                            <div class="d-flex align-items-center h-100 fs-18px">
-                                @if(Carbon\Carbon::parse($job->expiry_date)->format('Y-m-d') > Carbon\Carbon::now()->format('Y-m-d'))
-                                {{ __(\App\Job::getListStatusJob()[$job->status]) }}
-                                @else
-                                {{ __('Job is expired') }}
-                                @endif
-                            </div>
-                        </td>
-
-                        <td>
-                            <div class="tags h-100">
-                                <span class="tag location fs-18px">{{ $job->getCity('city') }} </span>
-                                <span class="tag time">{{ $job->getJobShift('job_shift') }}</span>
-                            </div>
-                        </td>
-
-                        <td>
-                                <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
-                                    <i class="fa-solid fa-upload p-2"></i>
-                                </a>
-                            </td>
-                        <td>
-                            <div class="d-flex">
-                                    <a href="{{url('/')}}/edit-front-job/{{$job->id}}">
-                                        <i class="fa-regular fa-pen-to-square p-2 cursor-pointer"></i>
-                                    </a>
-                                    <a href="javascript:void(0)" onclick="deleteJob({{ $job->id }})">
-                                        <i class="fa-solid fa-trash p-2 cursor-pointer"></i>
-                                    </a>
-                                  
-                            </div>
-                        </td>
-
-
-
-                    </tr>
-                    @else
-                    <tr class="posted-manager_tb_row" id="job_li_{{$job->id}}">
+    
+                            @else
+                                <th class="font-weight-bold p-2" >{{ __('Positions') }}</th>
+                                <!-- <th class="font-weight-bold"></th> -->
+                                <th class="font-weight-bold p-2"  >Ngày đăng</th>
+                                <th class="font-weight-bold p-2"  >Ngày hết hạn</th>
+                                <th class="font-weight-bold p-2"  >{{ __('Status') }}</th>
+    
+                                <th class="font-weight-bold p-2"  >{{ __('Location') }}</th>
+                               
+                                <th class="font-weight-bold p-2" >Lượt nộp</th>
+                                <th class="font-weight-bold p-2"  >{{ __('Interview Candidates') }}</th>
+                                <th class="font-weight-bold p-2"  >{{ __('List of Hired Candidates') }}</th>
+                                <th class="font-weight-bold p-2"  >{{ __('List of Rejected Candidates') }}</th>
+                               
+                                <th class="font-weight-bold p-2 text-center"  >{{ __('Post Job') }}</th>
+                                
+                                <th class="font-weight-bold p-2"  >{{ __('Action') }}</th>
+    
+                            @endif
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (isset($jobs) && count($jobs))
+                        @foreach ($jobs as $job)
+                        @if(Request::get('status') == 2)
+                     
+    
+                        <tr class="posted-manager_tb_row" id="job_li_{{$job->id}}">
+    
                             <td>
                                 <div class="d-flex align-items-center h-100">
                                     <a class="fs-18px font-weight-bold text-primary" href="{{url('/')}}/edit-front-job/{{$job->id}}" target="_blank">
@@ -221,11 +174,7 @@
                                     </a>
                                 </div>
                             </td>
-                            <td>
-                                <div class="d-flex align-items-center h-100 fs-18px">
-                                    {{ $job->created_at }}
-                                </div>
-                            </td>
+    
                             <td>
                                 <div class="d-flex align-items-center h-100 fs-18px">
                                     {{ $job->expiry_date }}
@@ -240,66 +189,123 @@
                                     @endif
                                 </div>
                             </td>
-
+    
                             <td>
                                 <div class="tags h-100">
                                     <span class="tag location fs-18px">{{ $job->getCity('city') }} </span>
                                     <span class="tag time">{{ $job->getJobShift('job_shift') }}</span>
                                 </div>
                             </td>
-
-                            
+    
                             <td>
-                                <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                    {{ $job->appliedUsers->count() }} 
-                                </div>
-                            </td>
-
-                            <td>
-                                <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                    {{ $job->getStatusInterview()->count() }}
-                                </div>
-                            </td>
-
-                            <td>
-                                <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                    {{ $job->getStatusInterview(3)->count() }}
-                                </div>
-                            </td>
-
-                            <td>
-                                <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                    {{ $job->getStatusInterview(4)->count() }}
-                                </div>
-                            </td>
-                         
-                            @if($job->status == 2)
-                            <td>
-                                <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
-                                    <i class="fa-solid fa-upload p-2"></i>
-                                </a>
-                            </td>
-                            @else
-                            <td></td> 
-                            @endif
-
+                                    <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
+                                        <i class="fa-solid fa-upload p-2"></i>
+                                    </a>
+                                </td>
                             <td>
                                 <div class="d-flex">
-                                    <a href="{{url('/')}}/edit-front-job/{{$job->id}}">
-                                        <i class="fa-regular fa-pen-to-square p-2 cursor-pointer"></i>
-                                    </a>
-                                    <a href="javascript:void(0)" onclick="deleteJob({{ $job->id }})">
-                                        <i class="fa-solid fa-trash p-2 cursor-pointer"></i>
-                                    </a>
-                                  
+                                        <a href="{{url('/')}}/edit-front-job/{{$job->id}}">
+                                            <i class="fa-regular fa-pen-to-square p-2 cursor-pointer"></i>
+                                        </a>
+                                        <a href="javascript:void(0)" onclick="deleteJob({{ $job->id }})">
+                                            <i class="fa-solid fa-trash p-2 cursor-pointer"></i>
+                                        </a>
+                                      
                                 </div>
                             </td>
-                    </tr>
-                    @endif
-                    @endforeach
-                    @endif
-                </tbody>
-            </table>
+    
+    
+    
+                        </tr>
+                        @else
+                        <tr class="posted-manager_tb_row" id="job_li_{{$job->id}}">
+                                <td>
+                                    <div class="d-flex align-items-center h-100">
+                                        <a class="fs-18px font-weight-bold text-primary" href="{{url('/')}}/edit-front-job/{{$job->id}}" target="_blank">
+                                            {{ $job->title }}
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center h-100 fs-18px">
+                                        {{ $job->created_at }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center h-100 fs-18px">
+                                        {{ $job->expiry_date }}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center h-100 fs-18px">
+                                        @if(Carbon\Carbon::parse($job->expiry_date)->format('Y-m-d') > Carbon\Carbon::now()->format('Y-m-d'))
+                                        {{ __(\App\Job::getListStatusJob()[$job->status]) }}
+                                        @else
+                                        {{ __('Job is expired') }}
+                                        @endif
+                                    </div>
+                                </td>
+    
+                                <td>
+                                    <div class="tags h-100">
+                                        <span class="tag location fs-18px">{{ $job->getCity('city') }} </span>
+                                        <span class="tag time">{{ $job->getJobShift('job_shift') }}</span>
+                                    </div>
+                                </td>
+    
+                                
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
+                                        {{ $job->appliedUsers->count() }} 
+                                    </div>
+                                </td>
+    
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
+                                        {{ $job->getStatusInterview()->count() }}
+                                    </div>
+                                </td>
+    
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
+                                        {{ $job->getStatusInterview(3)->count() }}
+                                    </div>
+                                </td>
+    
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
+                                        {{ $job->getStatusInterview(4)->count() }}
+                                    </div>
+                                </td>
+                             
+                                @if($job->status == 2)
+                                <td>
+                                    <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
+                                        <i class="fa-solid fa-upload p-2"></i>
+                                    </a>
+                                </td>
+                                @else
+                                <td></td> 
+                                @endif
+    
+                                <td>
+                                    <div class="d-flex">
+                                        <a href="{{url('/')}}/edit-front-job/{{$job->id}}">
+                                            <i class="fa-regular fa-pen-to-square p-2 cursor-pointer"></i>
+                                        </a>
+                                        <a href="javascript:void(0)" onclick="deleteJob({{ $job->id }})">
+                                            <i class="fa-solid fa-trash p-2 cursor-pointer"></i>
+                                        </a>
+                                      
+                                    </div>
+                                </td>
+                        </tr>
+                        @endif
+                        @endforeach
+                        @endif
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

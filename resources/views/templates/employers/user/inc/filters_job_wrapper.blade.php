@@ -10,16 +10,17 @@
                             <input type="search" class="keyword form-control" id="search" name="search"
                                 placeholder="{{__('Skills or Job Titles')}}" autocomplete="off">
                         </div>
-                        <div class="form-group form-select-chosen" id="functional_area_dd">
-                            <select class="form-control form-select" name="functional_area_id" id="functional_area">
+                        <div class="form-group" id="functional_area_dd">
+                            <select class="form-control" name="functional_area_id" id="functional_area">
                                 <option value="">Chọn phòng ban</option>
                                 <option value="Nhân sự">Nhân sự</option>
                                 <option value="Hành chính">Hành chính</option>
                                 <option value="Kế toán">Kế toán</option>
                             </select>
                         </div>
-                        <div class="form-group form-select-chosen" id="city_dd2">
-                            <select class="form-control form-select" name="city_id" id="city">
+                        
+                        <div class="form-group" id="city_dd2">
+                            <select class="form-control" name="city_id" id="city">
                                 <option value="">Chọn địa điểm</option>
                                 <option value="3">HCM</option>
                                 <option value="5">Hà Nội</option>

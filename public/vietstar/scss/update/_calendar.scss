@@ -74,11 +74,6 @@
 
 
 
-.btn-schedule-interview {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-}
 
 #calendar {
     .fc-toolbar {
@@ -406,13 +401,6 @@
         }
     }
 
-    .btn-schedule-interview {
-        position: relative;
-        top: 00px;
-        right: 0px;
-        left: 0;
-        margin-bottom: 10px;
-    }
 }
 
 @media screen and (max-width: 768px) {

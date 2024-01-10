@@ -1,3 +1,10 @@
+.container.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+}
 .company-wrapper{
     position: relative;
     top: 0px;
@@ -95,7 +102,7 @@
 }
 
 .head .title-dashboard {
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     color: white;
     
@@ -111,7 +118,7 @@
 }
 .company-account-information li p {
     margin-right: 10px;
-    font-size: 18px;
+    font-size: 17px;
     color: var(--bs-primary);
 }
 #spinner-wrapper {
@@ -129,17 +136,29 @@
     justify-content: center;
     align-items: center;
 }
+.card-body {
+    padding: 2rem 2rem;
+}
 
 .company-account-information li a {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--text-main);
 }
 .custom-control {
     margin: 0 10px ;
 }
 .title-manage {
-    font-size: 35px;
+    font-size: 28px;
     font-weight: 600;
+}
+.form-group.form-group-datepicker {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.card-body-schedule-interview__top {
+    display: flex;
+    justify-content: space-between;
 }
 
 .section_postnow {
@@ -286,6 +305,15 @@ ul.list-unstyled.components.sidebar-bottom__item li{
     overflow-y: hidden;
     padding: 0rem 0rem;
     margin: 0;
+}
+button#mobile-sidebarCollapse {
+    display: none;
+    width: unset;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 24px;
+    color: black;
 }
 
 .tabslet-tab li {
@@ -472,6 +500,11 @@ h2.title {
 }
 .user-account-section  .action  .action-list li:hover span{
     text-decoration: underline;
+}
+
+.action-posting {
+    display: flex;
+    justify-content: space-between;
 }
 
 

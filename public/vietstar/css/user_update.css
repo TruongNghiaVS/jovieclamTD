@@ -610,9 +610,7 @@ i.fas.fa-heart.iconoutline {
       .company-item-wrapper {
         width: 100% !important;
       }
-      .card-body-schedule-interview__top {
-        flex-direction: column;
-        }   
+     
         .body-list-schedule-interview .content-list-schedule-interview .table-schedule-interview thead tr th {
             padding: 14px 0px;
         }

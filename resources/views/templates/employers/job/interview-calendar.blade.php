@@ -17,7 +17,7 @@
                     @include('flash::message')
                     <div class="card">
                         <div class="card-body card-body-schedule-interview">
-                            <div id='top' class="card-body-schedule-interview__top d-flex justify-content-between">
+                            <div id='top' class="card-body-schedule-interview__top ">
                                 <ul class="nav nav-change-schedule tabs nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link active" id="list-view-tab" data-toggle="tab" data-target="#list-view" type="button" role="tab" aria-controls="list-view" aria-selected="true">

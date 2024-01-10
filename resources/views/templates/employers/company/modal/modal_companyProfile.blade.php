@@ -33,11 +33,18 @@ $company = Auth::guard('company')->user();
                                 <p class="company-position">
                                     {{ !empty($company->industry)?$company->industry->industry : '' }}</p>
                                     <div class="company-info public">   
-                                <div class="company-info__item" >
+                                    <div class="company-info__item" >
                                             <i class="fa-regular fa-user mx-2"></i>
                                             {{ $company->no_of_employees }}
                                     </div>
-                                </div>
+                                    @if($company->location)
+                                        <div class="company-info__item" >
+                                        <i class="fa-solid fa-location-dot mx-2"></i>
+                                                {{ $company->location }}
+                                        </div>
+                                
+                                    @endif
+                            </div>
                                 <div
                                     class="job-detail-banner__actions job-detail-banner_info_actions d-flex flex-row gap-16">
                                     <form
@@ -73,6 +80,14 @@ $company = Auth::guard('company')->user();
                                 @endif
                             </div>
                             <div class="company-info__item">
+                                <i class="fa-solid fa-fax"></i>
+                                @if($company->fax)
+                                <p>
+                                    {{ $company->fax }}
+                                </p>
+                                @endif
+                            </div>
+                            <div class="company-info__item">
                                 <i class="bi bi-envelope"></i>
                                 @if($company->email)
                                 <p>
@@ -92,10 +107,10 @@ $company = Auth::guard('company')->user();
                         </div>
 
                         <div class="socials">
-                            <a href="{{ $company->facebook }}" class="social" target="_blank"><i class="bi bi-facebook"></i></a>
-                            <a href="{{ $company->twitter }}" class="social" target="_blank"><i class="bi bi-twitter"></i></a>
-                            <a href="{{ $company->linkedin }}" class="social" target="_blank"><i class="bi bi-linkedin"></i></span></a>
-                            <a href="{{ $company->google_plus }}" class="social" target="_blank"><i class="bi bi-google"></i></a>
+                            <a href="{{ $company->facebook ? $company->facebook  : '#'  }}" class="social" target="_blank"><i class="bi bi-facebook"></i></a>
+                            <a href="{{ $company->twitter ? $company->twitter  : '#'  }}" class="social" target="_blank"><i class="bi bi-twitter"></i></a>
+                            <a href="{{ $company->linkedin ? $company->linkedin  : '#'  }}" class="social" target="_blank"><i class="bi bi-linkedin"></i></span></a>
+                            <a href="{{ $company->google_plus ? $company->google_plus  : '#'  }}" class="social" target="_blank"><i class="bi bi-google"></i></a>
                         </div>
                         
                     </div>

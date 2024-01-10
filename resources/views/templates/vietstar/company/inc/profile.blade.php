@@ -662,7 +662,7 @@
                             <tr>
                                 <td class="table_title">
                                     <strong>
-                                        <i class="bi bi-telephone"></i> {{__('Fax')}}
+                                    <i class="fa-solid fa-fax"></i> {{__('Fax')}}
                                     </strong>
                                 </td>
                                 <td class="table_value">

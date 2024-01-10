@@ -1,5 +1,13 @@
+
 /* Extra small devices (phones, 767px and down) */
 @media only screen and (max-width: 767px) {
+  .container.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: unset;
+  }
   .navbar .group-button {
     display: none;
   }
@@ -379,12 +387,8 @@
   }
 
   button#mobile-sidebarCollapse {
-    width: unset;
-    position: absolute;
-    top: 11px;
-    right: 10px;
-    font-size: 24px;
-    color: black;
+
+    display: block;
   }
 
   #mobile-sidebar ul li a {
@@ -576,14 +580,31 @@
     .banner-form-main {
       padding: 10px;
     }
+
+    .card-body-schedule-interview__top{
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      margin-bottom: 10px;
+    }
+    .card-body {
+      padding: 0.5rem;
+    }
   }
 
 
 
 /* Medium devices (landscape tablets, 600px and up) */
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .w-10 {
     width: 30% !important;
+  }
+  .container.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: unset;
   }
   
   .content {
@@ -610,12 +631,7 @@
   }
 
   button#mobile-sidebarCollapse {
-    width: unset;
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    font-size: 24px;
-    color: black;
+    display: block;
   }
 
   /* Header Nav */
@@ -912,11 +928,27 @@
   .btn_for_em, .btn_for_user {
     display: none !important;
   }
+  .action-posting {
+    display: flex;
+   flex-direction: column;
+  }
+  .action-posting .left {
+    margin-bottom: 10px;
+  }
+  .card-body-schedule-interview__top{
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 10px;
+  }
+  .card-body{
+    padding: 0.5rem;
+  }
 }
 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1239px) {
   .container {
     max-width: 960px;
   }
@@ -955,7 +987,10 @@
     display: none;
   }
 
-
+  .action-posting {
+    display: flex;
+    justify-content: space-between;
+  }
 
 
 }
@@ -971,7 +1006,9 @@
     padding-left: 135px;
     padding-right: 135px;
   }
-
+  .page-heading-tool.job-detail.mobile {
+    display: none;
+  }
   .navbar .navbar-brand {
     width: 130px;
     height: 53px;
@@ -1036,7 +1073,9 @@
     padding-left: 135px;
     padding-right: 135px;
   }
-
+  .page-heading-tool.job-detail.mobile {
+    display: none;
+  }
   .navbar .navbar-brand {
     width: 130px;
     height: 53px;
@@ -1093,6 +1132,10 @@
   } 
   .card-bio {
     padding: 30px;
+  }
+
+  .title-manage {
+    font-size: 28px;
   }
 
 
