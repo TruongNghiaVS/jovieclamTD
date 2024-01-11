@@ -1,3 +1,4 @@
+
 @extends('templates.employers.layouts.app')
 
 @section('content') 
@@ -15,15 +16,12 @@
             @include('templates.employers.includes.company_dashboard_top')
             @include('templates.employers.includes.company_dashboard_stats')
            
-           <?php
+                <?php
          
             if((bool)config('company.is_company_package_active')){     
                    
-                $package = Auth::guard('company')->user()->getPackage();
-                $packages = App\Package::where('package_for', 'like', 'employer')
-               ->whereNotIn('id', [$package->id])
-               ->get();
-              ?>
+             
+              ?> 
             <?php if(null !== $package){ ?>
 
             @include('templates.employers.includes.company_package_msg')
@@ -31,11 +29,14 @@
             @include('templates.employers.includes.company_packages_upgrade')
             
           
-            <?php }elseif(null !== $packages){ ?>
+            <?php }
+            elseif(null !== $packages){ ?>
 
             @include('templates.employers.includes.company_packages_new')
 
-            <?php }} ?>
+            <?php }} 
+            
+            ?>
            
         </div>
     

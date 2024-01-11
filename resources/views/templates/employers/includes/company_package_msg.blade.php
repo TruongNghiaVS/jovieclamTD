@@ -53,6 +53,7 @@
             </thead>
             <tbody>
 
+         
                 <tr class="posted-manager_tb_row">
 
                     <td colspan="3">
@@ -62,35 +63,40 @@
                             </div>
                         </div>
                     </td>
+                
                     <td>
                         <div class="h-100 fs-18px">
                             {{$package->package_num_listings}}
                         </div>
                     </td>
+
+                    
                     <td>
                         <div class="h-100 fs-18px">
                             {{Auth::guard('company')->user()->availed_jobs_quota}} / {{Auth::guard('company')->user()->jobs_quota}}
                         </div>
                     </td>
+                 
                     <td>
+
                         <div class="h-100 fs-18px">
-                            {{Auth::guard('company')->user()->package_start_date->format($formatDate) ? Auth::guard('company')->user()->package_start_date->format($formatDate) :" "}}
+                            {{Auth::guard('company')->user()->package_start_date }}
                         </div>
                     </td>
-
+                
                     <td>
                         <div class="h-100 fs-18px">
-                            {{Auth::guard('company')->user()->package_end_date->format($formatDate) ? Auth::guard('company')->user()->package_end_date->format($formatDate) :" "}}
+                            {{Auth::guard('company')->user()->package_end_date}}
                         </div>
                     </td>
-
+                
                     <td>
                         <div class="h-100 fs-18px">
                             {{$package->package_price ? $package->package_price :" "}}
                         </div>
                     </td>
 
-
+               
 
                 </tr>
 

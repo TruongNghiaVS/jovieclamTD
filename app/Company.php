@@ -354,7 +354,7 @@ class Company extends Authenticatable
 
     {
 
-        return $this->hasOne('App\Package', 'id', 'package_id');
+        return $this->hasOne('App\Package', 'id', 'cvs_package_id');
 
     }
 
@@ -366,19 +366,18 @@ class Company extends Authenticatable
 
         $package = $this->package()->first();
 
+  
         if (null !== $package) {
 
-            if (!empty($field)) {
-
+        if (!empty($field)) {
                 return $package->$field;
-
-            } else {
-
-                return $package;
-
             }
+        else {
+            return $package;
 
         }
+
+    }
 
     }
 

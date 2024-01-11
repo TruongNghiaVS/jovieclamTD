@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
 use App;
 use App\CmsContent;
 use App\Seo;
@@ -162,7 +162,12 @@ class EmployerController extends Controller
                 $companyActive->availed_jobs_quota = 30;
                 $companyActive->cvs_package_start_date =\Carbon\Carbon::now() ;
                 $companyActive->cvs_package_end_date =\Carbon\Carbon::now()->addMonths(1) ;
+
+                $companyActive->package_start_date   =\Carbon\Carbon::now() ;
+                $companyActive->package_end_date =\Carbon\Carbon::now()->addMonths(1) ;
+                $companyActive->package_id = 9;
                 $save = $companyActive->save();
+                
                 $itemCodeActive->status ="0";
                 $itemCodeActive->updated_at = \Carbon\Carbon::now() ;
                 $itemCodeActive->save();
@@ -340,6 +345,13 @@ class EmployerController extends Controller
 
     public function loginPage(Request $request)
     {
+        $user = Auth::guard('company');
+        if($user)
+        {
+            $user->logout();
+            $request->session()->invalidate();
+        }
+   
         return view('templates.employers.auth.login2');
     }
 

@@ -30,6 +30,7 @@ use App\Package;
 use App\FavouriteApplicant;
 use App\OwnershipType;
 use App\JobApply;
+
 use App\Job;
 use Carbon\Carbon;
 use App\Helpers\MiscHelper;
@@ -67,6 +68,20 @@ class CompanyController extends Controller
     public function index()
     {
         $companyActive =  Auth::guard('company')->user();
+        $package1 = $companyActive->getPackage();
+    
+        if($package1 == null)
+        {
+            return redirect()->to('employer/login');
+        }      
+     
+        $packages1 = Package::where('package_for', 'employer')
+        ->whereNotIn('id', [$package1->id])
+        ->get();
+
+
+        
+    
         $jobs = Job::where("company_id",$companyActive->id);
         
         $coutJobComplete =    $jobs->where("status",1)->count();
@@ -89,7 +104,21 @@ class CompanyController extends Controller
          
         $dashboarOverview->candidateCount =  $candidateOverView;
         $dashboarOverview->countFavourite =  $countFavourite;
-        return view(config('app.THEME_PATH').'.company_home', compact("dashboarOverview",));
+        
+        $package1 = $companyActive->getPackage();
+ 
+              
+     
+        $packages1 = Package::where('package_for', 'employer')
+        ->whereNotIn('id', [$package1->id])
+        ->get();
+
+
+      
+    return view(config('app.THEME_PATH').'.company_home')
+    ->with('dashboarOverview', $dashboarOverview)
+            ->with('package', $package1)
+            ->with('packages', $packages1);
     }
 
 
