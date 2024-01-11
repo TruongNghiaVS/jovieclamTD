@@ -343,7 +343,7 @@ class CompanyController extends Controller
     {
 
 
-        dd("3");
+
         $company = Company::findOrFail(Auth::guard('company')->user()->id);
 
         /*         * **************************************** */

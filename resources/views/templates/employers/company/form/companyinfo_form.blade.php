@@ -175,7 +175,7 @@
             <button class="btn btn-secondary" id="detailContinue">Tiếp tục</button>
           </div>
           <div class="tab-pane fade" id="review" role="tabpanel">
-            <h4>{{__('Review the form')}}</h4>  
+            <h4>{{__('Review the form')}} </h4>  
             <div class="table-responsive" bis_skin_checked="1">
                     <table class="table table-responsive table-user-information"  id="dataTable">
                         <tbody>
@@ -185,7 +185,7 @@
                 </div>
 
 
-            <button class="btn btn-primary w-100" type="button" id="submit_company_info">{{__('Submit')}}</button>
+            <button class="btn btn-primary w-100" type="button" id="submit_company_info">Cập nhật</button>
           </div>
         </div>
 

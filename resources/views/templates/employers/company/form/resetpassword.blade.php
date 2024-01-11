@@ -2,7 +2,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">{{__('Account Information')}}</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Đổi mật khẩu</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -11,19 +11,19 @@
                 <form id="myForm1" class="needs-validation" novalidate>
                    
                     <div class="form-group">
-                        <label for="CEO_Name">{{__('Password')}}</label>
+                        <label for="CEO_Name">Mật khẩu mới</label>
                         <input type="password" id="pwdId" class="form-control pwds"  required>
                         
-                        <div class="invalid-feedback">{{__('Password is required')}}</div>
+                        <div class="invalid-feedback">Nhập mật khẩu</div>
                     </div>
                     <div class="form-group">
-                        <label for="CEO_Name">{{__('Confirm Password')}}</label>
+                        <label for="CEO_Name">Nhập lại mật khẩu mới</label>
                         <input type="password" id="cPwdId" class="form-control pwds"  required>
-                        <div id="cPwdValid" class="valid-feedback">Valid</div>
+                        <div id="cPwdValid" class="valid-feedback"></div>
                         <div id="cPwdInvalid" class="invalid-feedback"></div>
                     </div>
                     <div class="form-group">
-                        <button id="reset_submitBtn" type="button" class="btn btn-primary submit-button" disabled>Submit</button>
+                        <button id="reset_submitBtn" type="button" class="btn btn-primary submit-button" disabled>Đổi mật khẩu</button>
                     </div>
                 </form>
             </div>
@@ -41,14 +41,14 @@
           $("#reset_submitBtn").attr("disabled",false);
           $('#cPwdValid').show();
           $('#cPwdInvalid').hide();
-          $('#cPwdValid').html('Valid').css('color', 'green');
+          $('#cPwdValid').html().css('color', 'green');
           $('.pwds').removeClass('is-invalid')
         } else {
           $("#reset_submitBtn").attr("disabled",true);
           $('#cPwdValid').hide();
           $('#cPwdInvalid').show();
-          $('#cPwdInvalid').html('Not Matching').css('color', 'red');
-          $('.pwds').addClass('is-invalid')
+          $('#cPwdInvalid').html('Không khớp mật khẩu').css('color', 'red');
+       
           }
       });
       let currForm1 = document.getElementById('myForm1');
