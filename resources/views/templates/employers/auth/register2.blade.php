@@ -302,6 +302,7 @@ $(document).ready(function() {
             type: "POST",
             url:  `{{ route('company.register') }}`,
             data: $(this).serialize(),
+            beforeSend:showSpinner(),
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
                     console.log(responseObject.error);
@@ -327,32 +328,18 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
+                    hideSpinner();
                     if (data.sucess == true ) {
                         showModal_Success('Đăng nhập', `${data.message ? data.message :"Đăng ký thành công"}`, `${ data.urlRedirect ?  data.urlRedirect : "/dashboard"}`);
                         setTimeout(function(){
                               window.location.href =  "/dashboard";
                         }, 3000);
                     }
-                   
-                                
-                    // $("#logup_em_success").addClass("show")
-                    // $("#thank-you-pop button").on("click",function(){
-                    //     $("#logup_em_success").removeClass("show")
-                        
-                    //     window.location.href =  "/dashboard";
-                    // });
-                    // $("#logup_em_success .modal-dialog").on("click",function(){
-                    //     console.log(1231412);
-                    //     // $("#logup_em_success").removeClass("show")
-                        
-                    //     // window.location.href =  "/dashboard";
-                    // });
-
-               
+                          
                      
                 })
                 .fail(function(jqXHR, textStatus){
-                    
+                    hideSpinner();
                 })
                 .always(function(jqXHR, textStatus) {
                 

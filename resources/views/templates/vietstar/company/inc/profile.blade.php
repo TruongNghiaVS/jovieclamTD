@@ -771,13 +771,16 @@
                     url: `{{route('update.company.avatar')}}`,
                     type: 'POST',
                     data: formData,
+                    beforeSend:showSpinner(),
                     contentType: false,
                     processData: false,
 
                     success: function(response) {
                         // Handle success response
+                        hideSpinner();
                         if(response){
                             showModal_Success('Thông báo', `Cập nhật avatar thành công`, ``);
+                            
                             setTimeout(function(){
                                 window.location.reload();
                             }, 3000);
@@ -785,10 +788,13 @@
                     },
                     error: function(xhr, status, error) {
                         // Handle error
+                        hideSpinner();
+
                         console.error('Error uploading avatar:', error);
                     }
                 });
             } else {
+                hideSpinner();
                 alert('Please select an image before uploading.');
             }
 
@@ -826,11 +832,13 @@
                     url: `{{route('update.company.avatar')}}`,
                     type: 'POST',
                     data: formData,
+                    beforeSend:showSpinner(),
                     contentType: false,
                     processData: false,
 
                     success: function(response) {
                         // Handle success response
+                        hideSpinner();
                         if(response){
                         showModal_Success('Thông báo', `Cập nhật background thành công`, ``);
                             setTimeout(function(){
@@ -840,6 +848,7 @@
                     },
                     error: function(xhr, status, error) {
                         // Handle error
+                        hideSpinner();
                         console.error('Error uploading avatar:', error);
                     }
                 });

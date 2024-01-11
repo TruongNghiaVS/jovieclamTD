@@ -23,7 +23,7 @@
                         <div id="cPwdInvalid" class="invalid-feedback"></div>
                     </div>
                     <div class="form-group">
-                        <button id="reset_submitBtn" type="button" class="btn btn-primary submit-button" disabled>Submit</button>
+                        <button id="reset_submitBtn" type="button" class="btn btn-primary submit-button" disabled>Gửi</button>
                     </div>
                 </form>
             </div>

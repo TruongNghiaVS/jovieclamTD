@@ -207,6 +207,7 @@
             type: "POST",
             url:  `{{route('company.login')}}`,
             data: $(this).serialize(),
+            beforeSend:showSpinner(),
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
                     console.log(responseObject.error);
@@ -235,16 +236,17 @@
                     // setTimeout(function() { 
                     //     alert(data.message)
                     // }, 2000);
+                    hideSpinner();
                     if(data.sucess == true){
                         showModal_Success('Đăng nhập', `${data.message ? data.message :"Đăng nhập thành công"}`, `${ data.urlRedirect ?  data.urlRedirect : "/dashboard"}`);
                         setTimeout(function(){
                               window.location.href =  "/dashboard";
-                        }, 3000);
+                        }, 2000);
                     }
                 
                 })
                 .fail(function(jqXHR, textStatus){
-                    
+                    hideSpinner();
                 })
                 .always(function(jqXHR, textStatus) {
                 
