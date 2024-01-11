@@ -28,7 +28,7 @@ use ResetsPasswords;
      *
      * @var string
      */
-    protected $redirectTo = '/company-home';
+    protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.

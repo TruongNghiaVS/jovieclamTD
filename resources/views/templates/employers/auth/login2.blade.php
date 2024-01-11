@@ -25,6 +25,7 @@
                     <div class="main-form" bis_skin_checked="1">
                         <form class="form-horizontal needs-validation" id="formLogin2" novalidate>
                             {{ csrf_field() }}
+
                             <div class="form-group d-flex" bis_skin_checked="1">
                                 <div class="form-info" bis_skin_checked="1">
                                     <span>{{__(('Email'))}}</span>
@@ -50,7 +51,7 @@
                             </div>
                             <div class="user-action" bis_skin_checked="1">
                                 <div class="btn-area" bis_skin_checked="1">
-                                    <button type="submit" id="resetPasswordBtn_company" class="btn btn-primary" value="Gửi">Gửi</button>
+                                    <button type="submit"  class="btn btn-primary" value="Gửi">Đăng nhập</button>
                                 </div>
                                 <p> <a class="register" href="#" data-toggle="modal" data-target="#company_logup_Modal">Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
 
@@ -171,23 +172,24 @@
         $("#formLogin2").find(":input").prop("disabled", false);
 
 
-        var email = $('#email').val();
+        var email = $('#formLogin2 #email').val();
 
         // Simple email validation using a regular expression
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+        console.log(email);
         if (emailRegex.test(email)) {
             // Email is valid
-            $('#email').removeClass('is-invalid');
-            $('#email').addClass('is-valid');
+            $('#formLogin2 #email').removeClass('is-invalid');
+            $('#formLogin2  #email').addClass('is-valid');
 
+            isValid = true;
            
         } else {
             // Email is invalid
            
-            $('#email').removeClass('is-valid');
-            $('#email').addClass('is-invalid');
-            $('.email-error').text('{{__('The email must be a valid email address')}}')
+            $('#formLogin2 #email').removeClass('is-valid');
+            $('#formLogin2 #email').addClass('is-invalid');
+            $('#formLogin2 .email-error').text('{{__('The email must be a valid email address')}}')
         }
 
 
@@ -198,9 +200,9 @@
             event.preventDefault(); // Prevent the form from submitting
         }
       
-
         
         if (isValid) { 
+         
             $.ajax({
             type: "POST",
             url:  `{{route('company.login')}}`,

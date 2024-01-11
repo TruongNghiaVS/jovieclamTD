@@ -19,7 +19,7 @@
                     </div>
                     <div class="step-title d-flex align-center" bis_skin_checked="1">
                         <div class="main-step-title" bis_skin_checked="1">
-                            <h3>THÔNG TIN ĐĂNG NHẬP</h3>
+                            <h3>THÔNG TIN TÀI KHOẢN</h3>
                         </div>
                     </div>
                     <div class="main-form" bis_skin_checked="1">
@@ -113,7 +113,7 @@
 
                             <div class="user-action" bis_skin_checked="1">
                                 <div class="btn-area" bis_skin_checked="1">
-                                    <button type="submit" id="resetPasswordBtn_company" class="btn btn-primary" value="Gửi">Gửi</button>
+                                    <button type="submit" id="" class="btn btn-primary" value="Gửi">Đăng ký</button>
                                 </div>
                                 <p> <a class="register" href="/employer/register" target="_self" >Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
 

@@ -176,7 +176,7 @@ class EmployerController extends Controller
                     'fullName' =>  $companyActive->name
                 ]);
                 
-                return redirect('/login');
+                return redirect('/employer/login');
             }
             else 
             {

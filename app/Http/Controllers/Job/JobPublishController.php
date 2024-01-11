@@ -53,7 +53,13 @@ class JobPublishController extends Controller
     }
 
     public function createFrontJob() {
+      
         $company = Auth::guard('company')->user();
+
+        dd(($company->package_end_date === null) || 
+        ($company->package_end_date->lt(Carbon::now())) ||
+        ($company->jobs_quota <= $company->availed_jobs_quota));
+
 		if ((bool)$company->is_active === false) {
             flash(__('Your account is inactive contact site admin to activate it'))->error();
             return \Redirect::route('company.home');
@@ -66,6 +72,7 @@ class JobPublishController extends Controller
 				($company->jobs_quota <= $company->availed_jobs_quota)
 				)
 			{
+                dd("333");
 				flash(__('Please subscribe to package first'))->error();
 				return \Redirect::route('company.home');
 				exit;

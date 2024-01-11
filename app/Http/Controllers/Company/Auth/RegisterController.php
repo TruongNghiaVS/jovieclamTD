@@ -68,6 +68,7 @@ use RegistersUsers;
 
     public function register(CompanyFrontRegisterFormRequest $request)
     {
+       
       
         $company = new Company();
         $error = array();

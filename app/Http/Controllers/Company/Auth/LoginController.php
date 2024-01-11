@@ -88,6 +88,7 @@ use AuthenticatesUsers;
     {
     
       
+    
 
         $passwordInput = $request->input('password');
         $request->validate([
@@ -125,7 +126,7 @@ use AuthenticatesUsers;
         Auth::guard('company')->login($exitMemeber, true);
         return response()->json([
             'sucess'=>true,
-            'urlRedirect'=> "/company-home",
+            'urlRedirect'=> "/dashboard",
             "error"=> $error,
             'message' => 'Đăng nhập thành công'], 200);
       
