@@ -80,7 +80,7 @@ class JobPublishController extends Controller
         $currencies = DataArrayHelper::currenciesArray();
         $careerLevels = DataArrayHelper::langCareerLevelsArray();
         $functionalAreas = DataArrayHelper::langFunctionalAreasArray();
-        $jobTypes = DataArrayHelper::langJobTypesArray();
+        $jobTypes = JobType::where("lang","vi")->get();
 
       
         $jobShifts = DataArrayHelper::langJobShiftsArray();
@@ -119,9 +119,11 @@ class JobPublishController extends Controller
     {
 
         
+        
         $company = Auth::guard('company')->user();
         $job = new Job();
-     
+
+  
         $job->company_id = $company->id;
 
         
@@ -130,9 +132,10 @@ class JobPublishController extends Controller
     
         $job->status =2;
 
-    
-
+        
+   
         $job->save();
+
         /*         * ******************************* */
         $job->slug = Str::slug($job->title, '-') . '-' . $job->id;
         /*         * ******************************* */
@@ -159,7 +162,7 @@ class JobPublishController extends Controller
         $careerLevels = DataArrayHelper::langCareerLevelsArray();
         $functionalAreas = DataArrayHelper::langFunctionalAreasArray();
         $jobTypes = JobType::where("lang","vi")->get();
-        dd($jobTypes);
+
         $jobShifts = DataArrayHelper::langJobShiftsArray();
         $genders = DataArrayHelper::langGendersArray();
         $jobExperiences = DataArrayHelper::langJobExperiencesArray();
@@ -236,6 +239,10 @@ class JobPublishController extends Controller
         $job->functional_area_id = $request->input('functional_area_id') ?? Null;
         $job->industry_id = $request->input('industry_id') ?? Null;
         $job->status = $request->input('status');
+        $job->job_type_id = $request->input('job_type_id');
+        $job->gender_id = $request->input('gender');
+
+    
         /**
          * salary
          */
@@ -265,10 +272,10 @@ class JobPublishController extends Controller
         $job->salary_currency = $request->input('salary_currency') ?? (\App::getLocale() =='vi' ? 'VND' : 'USD');
         $job->hide_salary = $request->input('hide_salary') ?? false;
         $job->functional_area_id = $request->input('functional_area_id');
-        $job->job_type_id = $request->input('job_type_id');
+
         $job->job_shift_id = $request->input('job_shift_id') ?? Null;
         $job->num_of_positions = $request->input('num_of_positions') ?? null;
-        $job->gender_id = $request->input('gender_id');
+     
         $job->expiry_date = \Carbon\Carbon::parse($request->input('expiry_date'))->format('Y-m-d');
         $job->degree_level_id = $request->input('degree_level_id') ?? Null;
         $job->job_experience_id = $request->input('job_experience_id');

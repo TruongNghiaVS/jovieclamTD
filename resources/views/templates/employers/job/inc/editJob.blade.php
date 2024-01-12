@@ -150,28 +150,25 @@
                     </div>
                 </div> -->
                 <div class="row">
-                    <div class="col-md-6">
+               
                         <div class="form-group form-group-custom-chosen">
                             <label for="Job Type" class="font-weight-bold fs-18px">{{__('Job Type')}} </label>
                             <div class="row">
-                            
-                                @foreach (array_chunk($jobTypes, 3) as $chunk)
-                                    <div class="col-md-4">
-
-                                       
-                                        @foreach ($chunk as $key => $jobType)
+                                     @foreach ($jobTypes as  $itemType)
+                                        <div class="col-md-2">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="job_type_id" value ="{{$key->id}}">
-                                                <label class="form-check-label" for="{{ $jobType }}">
-                                                    {{ $jobType }}
+                                                <input class="form-check-input" type="radio" name="job_type_id" value ="{{$itemType->id}}" id ="jobtype{{$itemType->id}}">
+                                                <label class="form-check-label" for="job_type_id">
+                                                    {{ $itemType->job_type }}
                                                 </label>
                                             </div>
-                                        @endforeach
-                                    </div>
-                                @endforeach
+                                        </div>
+            
+                                    @endforeach
+                                  
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -356,5 +353,6 @@
 
   window.addEventListener('DOMContentLoaded',function () {
     document.getElementById("gender{{$job->gender_id}}").checked = true;
+    document.getElementById("jobtype{{$job->job_type_id}}").checked = true;
 });
 </script>

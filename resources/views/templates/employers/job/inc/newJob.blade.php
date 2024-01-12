@@ -128,49 +128,28 @@
                     </div>
                 </div>
 
-                <!-- <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="Ownership" class="font-weight-bold fs-18px">{{__('Functional Area')}} <span class="required">*</span> </label>
-                            <select required class="form-control form-select" id="functional_area_id" name="functional_area_id">
-                                <option value="">{{ __('Select one') }}</option>
-
-                                @if(count($functionalAreas) > 0)
-                                @foreach($functionalAreas as $key => $value)
-                                <option {{ isset($job) && $job->functional_area_id == $key ? 'selected' : '' }} value="{{ $key }}">{{ $value }}</option>
-                                @endforeach
-                                @endif
-                            </select>
-                            {!! APFrmErrHelp::showErrors($errors, 'functional_area_id') !!}
-                        </div>
-                    </div>
-                </div> -->
+             
                 <div class="row">
-                    <div class="col-md-6 col-lg-12">
-                        <div class="form-group">
-                        
-
-                            <label for="Job Type" class="font-weight-bold fs-18px my-3">Hình thức  </label>
-                            <div class="row">
-                                @foreach (array_chunk($jobTypes, 3) as $chunk)
-                                    <div class="col-md-4">
-
-                                       
-                                        @foreach ($chunk as $key => $jobType)
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="job_type_id" value="{{ $key }}">
-                                                <label class="form-check-label" for="{{ $jobType }}">
-                                                    {{ $jobType }}
-                                                </label>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                @endforeach
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+               
+               <div class="form-group form-group-custom-chosen">
+                   <label for="Job Type" class="font-weight-bold fs-18px">{{__('Job Type')}} </label>
+                   <div class="row">
+                            @foreach ($jobTypes as  $itemType)
+                               <div class="col-md-2">
+                                   <div class="form-check">
+                                       <input class="form-check-input" type="radio" name="job_type_id" value ="{{$itemType->id}}" id ="jobtype{{$itemType->id}}">
+                                       <label class="form-check-label" for="job_type_id">
+                                           {{ $itemType->job_type }}
+                                       </label>
+                                   </div>
+                               </div>
+   
+                           @endforeach
+                         
+                   </div>
+               </div>
+           
+       </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -182,37 +161,6 @@
 
 
 
-
-
-              
-<!--               
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group form-group-custom-multiselect" id="skill_id_dd">
-                            <label for="skill_id" class="font-weight-bold fs-18px">{{__('Desired Skills')}} </label>
-                            {!! Form::select('skills[]', $jobSkills, null, ['class'=>'form-control form-select shadow-sm multiselect', 'id'=>'skill_id','multiple'=>true,"data-placeholder"=>"Month"], ) !!}
-                            {!! APFrmErrHelp::showErrors($errors, 'skill_id') !!}
-
-
-
-                        </div>
-                    </div>
-                </div> -->
-
-                <!-- <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group" id="status_dd">
-                            <label for="status" class="font-weight-bold fs-18px">{{__('Job Status')}} </label>
-                            <select required class="form-control form-select" id="status" name="status">
-                                <option value="">{{ __('Select status') }} </option>
-                                @foreach(\App\Job::getListStatusJob() as $key => $value)
-                                <option {{ isset($job) && $job->status == $key ? 'selected' : '' }} value="{{ $key }}">{{ $value }}</option>
-                                @endforeach
-                            </select>
-                            {!! APFrmErrHelp::showErrors($errors, 'status') !!}
-                        </div>
-                    </div>
-                </div> -->
 
 
 
