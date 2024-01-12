@@ -506,7 +506,7 @@
                                 </td>
                             </tr>
 
-
+                      
                             <tr>
                                 <td class="table_title">
                                     <strong>
@@ -581,7 +581,8 @@
                                     </strong>
                                 </td>
                                 <td class="table_value">
-                                    2
+                                {{ isset($company->no_of_offices) ? $company->no_of_offices : old('no_of_offices') }}
+
                                 </td>
                             </tr>
 
@@ -592,7 +593,7 @@
                                     </strong>
                                 </td>
                                 <td class="table_value">
-                                    50-100
+                                {{ isset($company->no_of_employees) ? $company->no_of_employees : old('no_of_employees') }}
                                 </td>
                             </tr>
 
