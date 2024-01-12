@@ -48,6 +48,7 @@ use App\Traits\Cron;
 use Illuminate\Support\Str;
 use App\Http\Requests\CompanyFormRequest;
 
+
 class CompanyController extends Controller
 {
 
@@ -332,8 +333,31 @@ class CompanyController extends Controller
         $industries = DataArrayHelper::defaultIndustriesArray();
         $ownershipTypes = DataArrayHelper::defaultOwnershipTypesArray();
         $company = Company::findOrFail(Auth::guard('company')->user()->id);
+        $city = City::where('lang',"vi")->get();
+
+        $nationNal = Country::where('lang',"vi")->get();
+       
+        $cityId = $company->city_id;
+   
+        $cityCompany = new \stdClass();
+
+        $cityCompany->city_id ="-1";
+        $cityCompany->city ="";
+
+
+        if($cityId>0)
+        {
+            $cityCompany  = City::where("city_id",$company->city_id)->first();
+        }
+
+       
+       
+
         return view(config('app.THEME_PATH').'.company.edit_profile')
                         ->with('company', $company)
+                        ->with('cityCompany',$cityCompany)
+                        ->with('city', $city)
+                        ->with('nationNal', $nationNal)
                         ->with('countries', $countries)
                         ->with('industries', $industries)
                         ->with('ownershipTypes', $ownershipTypes);
