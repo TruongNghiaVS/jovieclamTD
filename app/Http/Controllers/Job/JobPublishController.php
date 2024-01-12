@@ -81,6 +81,8 @@ class JobPublishController extends Controller
         $careerLevels = DataArrayHelper::langCareerLevelsArray();
         $functionalAreas = DataArrayHelper::langFunctionalAreasArray();
         $jobTypes = DataArrayHelper::langJobTypesArray();
+
+      
         $jobShifts = DataArrayHelper::langJobShiftsArray();
         $genders = DataArrayHelper::langGendersArray();
         $jobExperiences = DataArrayHelper::langJobExperiencesArray();
@@ -88,6 +90,9 @@ class JobPublishController extends Controller
         $degreeLevels = DataArrayHelper::langDegreeLevelsArray();
         $salaryPeriods = DataArrayHelper::langSalaryPeriodsArray();
         $cities = City::where('lang', 'vi')->active()->pluck('city', 'id')->toArray();
+
+        $degreeLevel = DegreeLevel::where('lang', 'vi')->where('is_active','1')->get();
+
         $industries = DataArrayHelper::langIndustriesArray();
         $jobSkillIds = array();
         return view(config('app.THEME_PATH_employer').'.job.add_edit_job')
@@ -103,6 +108,7 @@ class JobPublishController extends Controller
                         ->with('jobSkills', $jobSkills)
                         ->with('jobSkillIds', $jobSkillIds)
                         ->with('degreeLevels', $degreeLevels)
+                        ->with('degreeLevel', $degreeLevel)
                         ->with('cities', $cities)
                         ->with('salaryPeriods', $salaryPeriods)
                         ->with('industries', $industries)
@@ -117,8 +123,12 @@ class JobPublishController extends Controller
         $job = new Job();
      
         $job->company_id = $company->id;
+
+        
         $job = $this->assignJobValues($job, $request);
-        $job->status =1;
+        
+    
+        $job->status =2;
 
     
 
@@ -148,7 +158,8 @@ class JobPublishController extends Controller
         $currencies = DataArrayHelper::currenciesArray();
         $careerLevels = DataArrayHelper::langCareerLevelsArray();
         $functionalAreas = DataArrayHelper::langFunctionalAreasArray();
-        $jobTypes = DataArrayHelper::langJobTypesArray();
+        $jobTypes = JobType::where("lang","vi")->get();
+        dd($jobTypes);
         $jobShifts = DataArrayHelper::langJobShiftsArray();
         $genders = DataArrayHelper::langGendersArray();
         $jobExperiences = DataArrayHelper::langJobExperiencesArray();
@@ -160,11 +171,14 @@ class JobPublishController extends Controller
         $cities = \App\City::where('lang', \App::getLocale())->active()->pluck('city', 'id')->toArray();
         $selectedSkills = JobSkillManager::where('job_id', '=', $id)->pluck('job_skill_id')->toArray();
         $desiredSkills = [];
+        
         array_walk(
             $selectedSkills,
             function($v) use(&$desiredSkills) {return $desiredSkills[$v] = ['selected' => true];}
         );
         $industries = DataArrayHelper::langIndustriesArray();
+        $degreeLevel = DegreeLevel::where('lang', 'vi')->where('is_active','1')->get();
+       
         return view(config('app.THEME_PATH_employer').'.job.add_edit_job')
                         ->with('countries', $countries)
                         ->with('currencies', array_unique($currencies))
@@ -177,6 +191,7 @@ class JobPublishController extends Controller
                         ->with('jobSkills', $jobSkills)
                         ->with('jobSkillIds', $jobSkillIds)
                         ->with('degreeLevels', $degreeLevels)
+                        ->with('degreeLevel', $degreeLevel)
                         ->with('salaryPeriods', $salaryPeriods)
                         ->with('cities', $cities)
                         ->with('job', $job)
@@ -208,6 +223,8 @@ class JobPublishController extends Controller
     private function assignJobValues($job, $request)
     {
         $job->title = $request->input('title');
+
+        $job->address = $request->input('location');
         $job->description = $request->input('description');
         $job->requirement = $request->input('requirement');
         $job->benefits = $request->input('benefits');
@@ -256,9 +273,18 @@ class JobPublishController extends Controller
         $job->degree_level_id = $request->input('degree_level_id') ?? Null;
         $job->job_experience_id = $request->input('job_experience_id');
         $job->salary_period_id = $request->input('salary_period_id') ?? null;
-        $job->is_same_company_add= $request->input('pow');
+        $job->is_same_company_add=0;
         $job->location = $request->input('location') ?? null;
-
+        
+        $job->wfh = $request->input('wfh') ?? 0;
+        if($job->wfh =="on")
+        {
+            $job->wfh  = "1";
+        }
+        else 
+        {
+            $job->wfh  = "0";
+        }
         return $job;
     }
 }
