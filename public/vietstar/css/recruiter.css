@@ -65,7 +65,7 @@
 .widget-dashboard .our-packages .package .package-title {
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 33px;
     color: var(--sub-1);
     text-align: center;
@@ -74,7 +74,7 @@
 .widget-dashboard .our-packages .package .price {
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 49px;
     vertical-align: baseline;
     color: var(--sub-3);

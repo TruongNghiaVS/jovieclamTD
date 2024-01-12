@@ -90,21 +90,21 @@
     </div>
 
     <div class="card-body pt-0">
+        <ul class="tabslet-tab d-flex justify-content-start">
+            <li>
+                <a href="{{ route('posted.jobs', ['status' => '1']) }}" class=" {{ Request::get('status') == 1 ? 'type-active' : '' }}">{{ __('Active job') }}</a>
+            </li>
+            <li>
+                <a href="{{ route('posted.jobs', ['status' => '2']) }}" class="{{ Request::get('status') == 2 ? 'type-active' : '' }}">{{ __('Pending job') }}</a>
+            </li>
+            <li>
+                <a href="{{ route('posted.jobs', ['status' => '3']) }}" class=" {{ Request::get('status') == 3 ? 'type-active' : '' }}">{{ __('Inactive job') }}</a>
+            </li>
+            <li>
+                <a href="{{ route('posted.jobs', ['expired' => 'true']) }}" class=" {{ Request::get('expired') == 'true' ? 'type-active' : '' }}">{{ __('Job is expired') }}</a>
+            </li>
+        </ul>
         <div class="border">
-            <ul class="tabslet-tab d-flex justify-content-start">
-                <li>
-                    <a href="{{ route('posted.jobs', ['status' => '1']) }}" class=" {{ Request::get('status') == 1 ? 'type-active' : '' }}">{{ __('Active job') }}</a>
-                </li>
-                <li>
-                    <a href="{{ route('posted.jobs', ['status' => '2']) }}" class="{{ Request::get('status') == 2 ? 'type-active' : '' }}">{{ __('Pending job') }}</a>
-                </li>
-                <li>
-                    <a href="{{ route('posted.jobs', ['status' => '3']) }}" class=" {{ Request::get('status') == 3 ? 'type-active' : '' }}">{{ __('Inactive job') }}</a>
-                </li>
-                <li>
-                    <a href="{{ route('posted.jobs', ['expired' => 'true']) }}" class=" {{ Request::get('expired') == 'true' ? 'type-active' : '' }}">{{ __('Job is expired') }}</a>
-                </li>
-            </ul>
             <div class="p-2 action-posting">
                 <div class="left">
                     <button type="button" onclick="exportFile()" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-download  m-2"></i>{{ __('Export file') }}</button>
@@ -121,8 +121,6 @@
                         </select>
                     </div>
                 </div>
-
-            
             </div>
             <div class="table-responsive table-content">
                 <table class="table table-applican-manager table-hover mb-0 border-0 ">
@@ -163,25 +161,25 @@
                         @if (isset($jobs) && count($jobs))
                         @foreach ($jobs as $job)
                         @if(Request::get('status') == 2)
-                     
+
     
                         <tr class="posted-manager_tb_row" id="job_li_{{$job->id}}">
     
                             <td>
                                 <div class="d-flex align-items-center h-100">
-                                    <a class="fs-18px font-weight-bold text-primary" href="{{url('/')}}/edit-front-job/{{$job->id}}" target="_blank">
+                                    <a class="fs-16px font-weight-bold text-primary" href="{{url('/')}}/edit-front-job/{{$job->id}}" target="_blank">
                                         {{ $job->title }}
                                     </a>
                                 </div>
                             </td>
     
                             <td>
-                                <div class="d-flex align-items-center h-100 fs-18px">
+                                <div class="d-flex align-items-center h-100 fs-16px">
                                     {{ $job->expiry_date }}
                                 </div>
                             </td>
                             <td>
-                                <div class="d-flex align-items-center h-100 fs-18px">
+                                <div class="d-flex align-items-center h-100 fs-16px">
                                     @if(Carbon\Carbon::parse($job->expiry_date)->format('Y-m-d') > Carbon\Carbon::now()->format('Y-m-d'))
                                     {{ __(\App\Job::getListStatusJob()[$job->status]) }}
                                     @else
@@ -218,26 +216,28 @@
     
                         </tr>
                         @else
+
                         <tr class="posted-manager_tb_row" id="job_li_{{$job->id}}">
                                 <td>
                                     <div class="d-flex align-items-center h-100">
-                                        <a class="fs-18px font-weight-bold text-primary" href="{{url('/')}}/edit-front-job/{{$job->id}}" target="_blank">
+                                        <a class="fs-16px font-weight-bold text-primary" href="{{url('/')}}/edit-front-job/{{$job->id}}" target="_blank">
                                             {{ $job->title }}
                                         </a>
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="d-flex align-items-center h-100 fs-18px">
+                                    <div class="d-flex align-items-center h-100 fs-16px">
                                         {{ $job->created_at }}
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="d-flex align-items-center h-100 fs-18px">
+                                    <div class="d-flex align-items-center h-100 fs-16px">
                                         {{ $job->expiry_date }}
+
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="d-flex align-items-center h-100 fs-18px">
+                                    <div class="d-flex align-items-center h-100 fs-16px">
                                         @if(Carbon\Carbon::parse($job->expiry_date)->format('Y-m-d') > Carbon\Carbon::now()->format('Y-m-d'))
                                         {{ __(\App\Job::getListStatusJob()[$job->status]) }}
                                         @else
@@ -413,21 +413,37 @@
         
         $("#comfirm_update").modal("show");
         $("#comfirm_update_btn").click(()=>{
-            showSpinner();
-            // $.post("{{ route('delete.front.job') }}", {
-            //         id: id,
-            //         _method: 'DELETE',
-            //         _token: '{{ csrf_token() }}'
-            //     })
-            //     .done(function(response) {
-            //         if (response == 'ok') {
-            //             $('#job_li_' + id).remove();
-            //         } else {
-            //             alert('Request Failed!');
-            //         }
-            //     });
-            hideSpinner()
-            $("#comfirm_update").modal("hide");
+           
+         
+            $.ajax({
+            type: "POST",
+            url:  `{{ route('store.publish.job') }}`,
+            beforeSend: showSpinner(),
+            data: {
+                id:id,
+                _token: '{{ csrf_token() }}'
+            },
+       
+            })
+            .done(function(data){
+                hideSpinner()
+                   if(data.success);{
+                       $("#comfirm_update .modal-body").empty();
+                       $("#comfirm_update .modal-body").text("Yêu cầu thành công")
+                       $("#comfirm_update #comfirm_update_btn").css("display","none");
+                   }
+
+              
+                    
+            })
+            .fail(function(jqXHR, textStatus){
+                hideSpinner()  
+            })
+            .always(function(jqXHR, textStatus) {
+                
+            });
+            
+            
         })
       
     }

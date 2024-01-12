@@ -58,40 +58,40 @@
 
                     <td colspan="3">
                         <div class="h-100">
-                            <div class="fs-18px font-weight-bold text-primary">
+                            <div class="fs-16px font-weight-bold text-primary">
                                 {{$package->package_title}}
                             </div>
                         </div>
                     </td>
                 
                     <td>
-                        <div class="h-100 fs-18px">
+                        <div class="h-100 fs-16px">
                             {{$package->package_num_listings}}
                         </div>
                     </td>
 
                     
                     <td>
-                        <div class="h-100 fs-18px">
+                        <div class="h-100 fs-16px">
                             {{Auth::guard('company')->user()->availed_jobs_quota}} / {{Auth::guard('company')->user()->jobs_quota}}
                         </div>
                     </td>
                  
                     <td>
 
-                        <div class="h-100 fs-18px">
+                        <div class="h-100 fs-16px">
                             {{Auth::guard('company')->user()->package_start_date }}
                         </div>
                     </td>
                 
                     <td>
-                        <div class="h-100 fs-18px">
+                        <div class="h-100 fs-16px">
                             {{Auth::guard('company')->user()->package_end_date}}
                         </div>
                     </td>
                 
                     <td>
-                        <div class="h-100 fs-18px">
+                        <div class="h-100 fs-16px">
                             {{$package->package_price ? $package->package_price :" "}}
                         </div>
                     </td>

@@ -1000,11 +1000,14 @@
 
 @media only screen and (min-width: 1240px) and (max-width: 1399px)  {
   .container {
-    max-width: 1140px;
+    max-width: 1170px;
   }
   .content {
     padding-left: 135px;
     padding-right: 135px;
+  }
+  .company-wrapper .company-content {
+    padding: 60px 0px;
   }
   .page-heading-tool.job-detail.mobile {
     display: none;
@@ -1064,10 +1067,13 @@
 
 @media only screen and (min-width: 1400px) { 
   .container {
-    max-width: 1140px;
+    max-width: 1200px;
   }
   .container.company-content {
-    max-width: 1400px;
+    max-width: 1200px;
+  }
+  .company-wrapper .company-content {
+    padding: 60px 0px;
   }
   .content {
     padding-left: 135px;

@@ -36,7 +36,7 @@ use App\Http\Requests\JobFormRequest;
 use App\Traits\Skills;
 use App\Events\JobPosted;
 use Illuminate\Support\Str;
-
+use \stdClass;
 class JobPublishController extends Controller
 {
 
@@ -131,10 +131,10 @@ class JobPublishController extends Controller
         
     
         $job->status =2;
-
         
-   
+        
         $job->save();
+    
 
         /*         * ******************************* */
         $job->slug = Str::slug($job->title, '-') . '-' . $job->id;
@@ -249,8 +249,8 @@ class JobPublishController extends Controller
             $itemError->success =false;
             $itemError->message ="Yêu cầu thất bại";
             return response()->json([
-                'sucess'=>false,
-                'error'=> $error ], 200);
+                'success'=>false,
+                'error'=> $itemError ], 200);
         }
         
         if($job->status !="2")
@@ -259,8 +259,8 @@ class JobPublishController extends Controller
         }
         $job->update();
         return response()->json([
-            'sucess'=>true,
-            'error'=> $error ], 200);
+            'success'=>true,
+            'error'=> $itemError ], 200);
     }
 
 
