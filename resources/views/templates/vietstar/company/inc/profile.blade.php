@@ -561,7 +561,16 @@
                                 </td>
                             </tr>
 
-
+                            <tr>
+                                <td class="table_title">
+                                    <strong>
+                                        {{__('City')}}
+                                    </strong>
+                                </td>
+                                <td class="table_value">
+                                        HCM
+                                </td>
+                            </tr>
 
                             <tr>
                                 <td class="table_title">
