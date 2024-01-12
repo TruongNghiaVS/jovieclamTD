@@ -161,38 +161,11 @@
 
     }
 
-    // if(email) {
-    //     $("#form_reset_content").empty();
-    //     $("#form_reset_content").append(`<div class="title" bis_skin_checked="1">
-    //                     <h2 class="text-primary">Quên Mật Khẩu</h2>
-    //                 </div>`)
 
-    //     $("#form_reset_content").append(`<div class="step-title d-flex align-center" bis_skin_checked="1">
-    //                     <div class="main-step-title" bis_skin_checked="1">
-    //                         <h3>Vui lòng kiểm tra email của bạn và làm theo hướng dẫn để tạo mật khẩu mới</h3>
-    //                     </div>
-    //                 </div>`)
-    //     $("#form_reset_content").append(`<div class="main-form"  bis_skin_checked="1"> <p class="my-3">
-    //                             Nếu bạn sử dụng Gmail hoặc công ty bạn đang sử dụng dịch vụ email của Google để đăng ký tài khoản, bạn nên kiểm tra email trong các mục Inbox/Hộp thư đến (Primary, Social, Promotions) và Spam. Hoặc dùng công cụ tìm kiếm email để tìm tên email: support@Jobvieclam.
-    //                         </p></div>
-    //                         <div class="user-action" bis_skin_checked="1">
-
-    //                         <p> <a class="register" href="#" data-toggle="modal" data-target="#company_logup_Modal">Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
-
-    //                         <div class="text-help" bis_skin_checked="1">
-    //                             <p>Nếu bạn cần sự trợ giúp, vui lòng liên hệ:</p>
-    //                             <p>Email: <a href="#" target="_blank">support@jobvieclam.com</a></p>
-    //                         </div>
-    //                     </div>`)
-
-
-
-    // }
-
-    // Perform AJAX request to check if the email exists
             $.ajax({
             type: "POST",
             url:  '{{url('/')}}/recruiter/requestResetPassword',
+            beforeSend:showSpinner(),
             data: {
                 email:email,
             },
@@ -226,7 +199,7 @@
                 }
                 })
                 .done(function(data){
-                   
+                    hideSpinner();
                     $("#form_reset_content").empty();
                         $("#form_reset_content").append(`<div class="title" bis_skin_checked="1">
                                         <h2 class="text-primary">Quên Mật Khẩu</h2>
@@ -251,7 +224,7 @@
                                         </div>`)
                 })
                 .fail(function(jqXHR, textStatus){
-                    
+                    hideSpinner();
                 })
                 .always(function(jqXHR, textStatus) {
                 

@@ -334,7 +334,7 @@
                     // }, 2000);
                     if(data.sucess == true){
                     
-                        showModal_Success('Đăng nhập', `${data.message ? data.message :"Đăng nhập thành công"}`, `${ data.urlRedirect ?  data.urlRedirect : "/dashboard"}`);
+                        showModal_Success('Đăng nhập', `${data.message ? data.message :"Đăng nhập thành công"}`, "/dashboard");
                         setTimeout(function(){
                               window.location.href =  "/dashboard";
                         }, 3000);

@@ -506,7 +506,7 @@
                                 </td>
                             </tr>
 
-
+                      
                             <tr>
                                 <td class="table_title">
                                     <strong>
@@ -581,7 +581,8 @@
                                     </strong>
                                 </td>
                                 <td class="table_value">
-                                    2
+                                {{ isset($company->no_of_offices) ? $company->no_of_offices : old('no_of_offices') }}
+
                                 </td>
                             </tr>
 
@@ -592,7 +593,7 @@
                                     </strong>
                                 </td>
                                 <td class="table_value">
-                                    50-100
+                                {{ isset($company->no_of_employees) ? $company->no_of_employees : old('no_of_employees') }}
                                 </td>
                             </tr>
 
@@ -771,13 +772,16 @@
                     url: `{{route('update.company.avatar')}}`,
                     type: 'POST',
                     data: formData,
+                    beforeSend:showSpinner(),
                     contentType: false,
                     processData: false,
 
                     success: function(response) {
                         // Handle success response
+                        hideSpinner();
                         if(response){
                             showModal_Success('Thông báo', `Cập nhật avatar thành công`, ``);
+                            
                             setTimeout(function(){
                                 window.location.reload();
                             }, 3000);
@@ -785,10 +789,13 @@
                     },
                     error: function(xhr, status, error) {
                         // Handle error
+                        hideSpinner();
+
                         console.error('Error uploading avatar:', error);
                     }
                 });
             } else {
+                hideSpinner();
                 alert('Please select an image before uploading.');
             }
 
@@ -826,11 +833,13 @@
                     url: `{{route('update.company.avatar')}}`,
                     type: 'POST',
                     data: formData,
+                    beforeSend:showSpinner(),
                     contentType: false,
                     processData: false,
 
                     success: function(response) {
                         // Handle success response
+                        hideSpinner();
                         if(response){
                         showModal_Success('Thông báo', `Cập nhật background thành công`, ``);
                             setTimeout(function(){
@@ -840,6 +849,7 @@
                     },
                     error: function(xhr, status, error) {
                         // Handle error
+                        hideSpinner();
                         console.error('Error uploading avatar:', error);
                     }
                 });

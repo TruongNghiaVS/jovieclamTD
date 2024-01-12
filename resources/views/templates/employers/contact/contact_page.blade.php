@@ -276,6 +276,7 @@ $(document).ready(function() {
             $.ajax({
             type: "POST",
             url:  `{{ route('contact-request') }}`,
+            beforeSend:showSpinner(),
             datatype:"JSON",
             data: {
                 phone:phone,
@@ -304,6 +305,7 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
+                    hideSpinner();
                     $('#contact_success').modal('show');
                     $('#contactform')[0].reset();
                     $('#contactform').removeClass("was-validated");
@@ -316,6 +318,7 @@ $(document).ready(function() {
                     },3000)
                 })
                 .fail(function(jqXHR, textStatus){
+                    hideSpinner();
                     
                 })
                 .always(function(jqXHR, textStatus) {

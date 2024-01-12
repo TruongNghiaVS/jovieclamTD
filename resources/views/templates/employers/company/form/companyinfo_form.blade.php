@@ -168,7 +168,7 @@
                 <div class="form-group">
                   <label for="Established_In">{{__('Established In')}}</label>
                   <em class="important">*</em>
-                  <input type="text" class="form-control" id="established_in" name="established_in" name_table="{{__('Established In')}}" value="{{ isset($company->established_in) ? $company->established_in : old('established_in')}}" placeholder="Established In">
+                  <input type="text" class="form-control" id="established_in" name="established_in" name_table="{{__('Established In')}}" value="{{ isset($company->established_in) ? $company->established_in : old('established_in')}}" placeholder="{{__('Established In')}}">
                 </div>
               </div>
             </div>
