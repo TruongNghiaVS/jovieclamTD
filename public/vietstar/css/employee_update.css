@@ -449,11 +449,13 @@ h2.title {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
+    padding-left: 0;
 }
-.box-profile-view .job-information .information-list  li {
-    flex: 0 0 50%;
-    max-width: 50%;
+.box-profile-view .job-information .information-list li {
+    flex: 0 0 100%;
+    max-width: 100%;
     width: 100%;
+    margin: 2px  0;
     padding-right: 10px;
     display: flex;
 }

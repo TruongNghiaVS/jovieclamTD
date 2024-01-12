@@ -186,6 +186,8 @@ $(document).ready(function() {
             event.preventDefault(); // Prevent the form from submitting
         }
         if (isValid) { 
+            showSpinner();
+
             $.ajax({
             type: "POST",
             url:  '{{ route('company.login') }}',
@@ -221,20 +223,15 @@ $(document).ready(function() {
                     //     $("#employer_login_Modal").removeClass("show");
                     //     window.location.href =  "/dashboard";
                     // }
-                    console.log(data);
+                    
+                    hideSpinner();
                     if (data.sucess == true) { 
-                        // console.log(data);
-                        
-                        // $("#exampleModal").modal("show")
+    
                         $("#employer_login_Modal").modal("hide")
-                        //showModal_Success('Đăng nhập', `${data.message}`, '/dashboard');
-                        // $("#login_success button").click(function(){
-                        //     $("#login_success").removeClass("show")
-                        //     window.location.href =  "/dashboard";
-                        // });
+                        showModal_Success("Thông báo", "Đăng nhập thành công","")
                         setTimeout(function(){
                               window.location.href =  "/dashboard";
-                        }, 3000);
+                        }, 2000);
                     }
                     else {
                         showModal_Fail('Đăng nhập', `Đăng nhập thất bại`, '');

@@ -305,10 +305,12 @@ $(document).ready(function() {
         });
 
         if (isValid) { 
+
             $.ajax({
             type: "POST",
             url:  `{{ route('company.register') }}`,
             data: $(this).serialize(),
+            beforeSend: showSpinner(),
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
                     console.log(responseObject.error);
@@ -334,33 +336,19 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
+                    hideSpinner();
                     if (data.sucess == true ) {
                         $("#employer_logup_Modal").modal("hide")
-                        //showModal_Success('Đăng ký', `Đăng ký thành công`, '/dashboard');
+                        showModal_Success("Thông báo", "Đăng ký thành công","/dashboard")
                         setTimeout(function(){
                                   window.location.href =  "/dashboard";
                         }, 3000);
                     }
-                   
-                                
-                    // $("#logup_em_success").addClass("show")
-                    // $("#thank-you-pop button").on("click",function(){
-                    //     $("#logup_em_success").removeClass("show")
-                        
-                    //     window.location.href =  "/dashboard";
-                    // });
-                    // $("#logup_em_success .modal-dialog").on("click",function(){
-                    //     console.log(1231412);
-                    //     // $("#logup_em_success").removeClass("show")
-                        
-                    //     // window.location.href =  "/company-home";
-                    // });
-
-               
+                       
                      
                 })
                 .fail(function(jqXHR, textStatus){
-                    
+                    hideSpinner();
                 })
                 .always(function(jqXHR, textStatus) {
                 
