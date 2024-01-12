@@ -223,6 +223,47 @@ class JobPublishController extends Controller
         return \Redirect::route('edit.front.job', array($job->id));
     }
 
+
+    public function  publishJob( request $request )
+    {
+
+        $id = $request->input("id");
+        if($id)
+        {
+
+        }
+        else 
+        {
+            $id =-1;
+        }
+        $itemError = new stdClass();
+        $itemError->success =true;
+        $itemError->message ="Yêu cầu thành công";
+        $job = Job::findOrFail($id);
+        if($job)
+        {
+
+        }
+        else 
+        {
+            $itemError->success =false;
+            $itemError->message ="Yêu cầu thất bại";
+            return response()->json([
+                'sucess'=>false,
+                'error'=> $error ], 200);
+        }
+        
+        if($job->status !="2")
+        {
+            $job->status =="4";
+        }
+        $job->update();
+        return response()->json([
+            'sucess'=>true,
+            'error'=> $error ], 200);
+    }
+
+
     private function assignJobValues($job, $request)
     {
         $job->title = $request->input('title');

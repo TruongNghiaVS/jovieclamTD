@@ -337,10 +337,15 @@
 
 <div class="row">
     <div class="col-md-12 d-flex justify-content-center">
-        <button   id="clearBtn" class="btn btn-outline m-2" type="button" >{{__('Reset form')}} </button>
+     
+  
 
-        <button  id="scrollBtn" class="btn btn-croll-top m-2" type="button" >{{__('Review recruitment information')}} </button>
-        <button class="btn btn-lg btn-primary m-2" type="submit" id="submit_update_job">{{__('Post Job')}} </button>
+        <button  id="scrollBtn" class="btn btn-croll-top m-2" type="button" >lên trên đầu </button>
+        @if($job->status =="2")
+            <button class="btn btn-lg btn-primary m-2" type="submit" id="submit_update_job">Cập nhật </button>
+      
+        @endif
+       
     </div>
 </div>
 
