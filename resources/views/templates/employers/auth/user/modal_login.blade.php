@@ -223,6 +223,7 @@ $(document).ready(function() {
                     //     $("#employer_login_Modal").removeClass("show");
                     //     window.location.href =  "/dashboard";
                     // }
+                    console.log(data);
                     
                     hideSpinner();
                     if (data.sucess == true) { 
