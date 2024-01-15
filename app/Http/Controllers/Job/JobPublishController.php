@@ -71,9 +71,9 @@ class JobPublishController extends Controller
 				)
 			{
               
-				flash(__('Please subscribe to package first'))->error();
-				return \Redirect::route('company.home');
-				exit;
+				// flash(__('Please subscribe to package first'))->error();
+				// return \Redirect::route('company.home');
+				// exit;
 			}
 		}
 		// $countries = DataArrayHelper::langCountriesArray();
@@ -119,7 +119,7 @@ class JobPublishController extends Controller
     {
 
         
-        
+ 
         $company = Auth::guard('company')->user();
         $job = new Job();
 

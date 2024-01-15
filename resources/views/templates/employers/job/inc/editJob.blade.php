@@ -1,5 +1,11 @@
 {!! Form::model($job, array('method' => 'put', 'route' => array('update.front.job', $job->id), 'class' => 'form')) !!}
 {!! Form::hidden('id', $job->id) !!}
+<?php
+// PHP code goes here
+
+$test =  ['.net','php','intern'];
+
+?>
 
 <div class="card card-edit-profile">
     <h2 class="fs-4 card-edit-profile__section">Thông tin tuyển dụng</h2>
@@ -329,6 +335,32 @@
                     <span> Tick chọn nếu vị trí tuyển dụng này cho phép ứng viên có thể chọn chế độ làm việc tại nhà trong thời điểm hiện tại (Work from home) mà không nhất thiết phải có mặt tại văn phòng công ty. Hệ thống sẽ phân loại và đánh dấu đăng tuyển này vào danh mục tìm kiếm loại công việc là “Work from Home”.</span>
              </div>
             @endif
+
+            <div class="col-md-6">
+                    <div class="container todo-container">
+                
+                        <div class="form-group">
+                            <label for="degree_level_id" class="font-weight-bold fs-18px">Thêm tag </label>
+                            <div class="d-flex justify-content-center">
+                                <input type="text" id="addtag" class="form-control" placeholder="Thêm tag" aria-label="Add a new task" aria-describedby="addButton">
+                                <button class="btn btn-primary mx-2" type="button" id="addButton">Thêm tag</button>
+                            </div>
+                            
+                        </div>
+    
+                    </div>
+                    <div class="welfare" id="todoList">
+                        <!-- To-Do items will be added here dynamically -->
+                        @if($test)
+                            @foreach ($test as $item)
+                                <span class="box-meta">{{$item}}<i class="fa-solid fa-xmark mx-2 text-primary"></i></span>
+                            @endforeach
+                        @endif
+                        
+                    </div>
+                    <input type="hidden" name="tags[]" id="tagsInput">
+                </div>
+
          
          </div>
     </div>
@@ -353,11 +385,81 @@
 <input type="file" name="image" id="image" style="display:none;" accept="image/*" />
 </form>
 
-<script>
+@push('styles')
+<style>
+    #addtag {
+        flex: 1;
+    }
+    .welfare {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    }
 
+    .box-meta {
+       
+        font-size: 15px;
+        line-height: 15px;
+        color: var(--sub-text);
+        text-decoration: none;
+        display: flex;
+    }
+    .welfare span {
+    padding: 10px;
+    background-color: #D9D9D9;
+    color: #000000;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.box-meta i {
+    margin-top: 2px;
+}
+</style>
+@endpush
 
-  window.addEventListener('DOMContentLoaded',function () {
-    document.getElementById("gender{{$job->gender_id}}").checked = true;
-    document.getElementById("jobtype{{$job->job_type_id}}").checked = true;
-});
+@push('scripts')
+<script type="text/javascript">
+ $(document).ready(function () {
+        var tagsArray = [];
+
+        // Add a new task to the list
+        $("#addButton").click(function () {
+            var todoText = $("#addtag").val();
+            if (todoText !== "") {
+                var listItem = $("<span>").addClass("box-meta").text(todoText);
+                listItem.append('<i class="fa-solid fa-xmark mx-2 text-primary"></i>');
+                
+                
+                $("#todoList").append(listItem);
+                
+                tagsArray.push(todoText);
+
+                // Update the hidden input field with the array of tags
+                $("#tagsInput").val(JSON.stringify(tagsArray));
+
+                $("#addtag").val("");
+            }
+        });
+
+        // Remove a task from the list when clicked
+        $("#todoList").on("click", "span", function () {
+            $(this).remove();
+        });
+    });
 </script>
+@endpush

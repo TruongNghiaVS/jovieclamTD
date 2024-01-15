@@ -143,14 +143,16 @@
 
 .card-edit-profile {
     background-color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .card-edit-profile__section {
     padding: 20px;
     background-color: #ffffff;
 
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     border-bottom: 1px solid var(--placeholder);
     background-color: #eedada;
 }
