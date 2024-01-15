@@ -65,7 +65,7 @@
 .widget-dashboard .our-packages .package .package-title {
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 33px;
     color: var(--sub-1);
     text-align: center;
@@ -74,7 +74,7 @@
 .widget-dashboard .our-packages .package .price {
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 49px;
     vertical-align: baseline;
     color: var(--sub-3);
@@ -143,14 +143,16 @@
 
 .card-edit-profile {
     background-color: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .card-edit-profile__section {
     padding: 20px;
     background-color: #ffffff;
 
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     border-bottom: 1px solid var(--placeholder);
     background-color: #eedada;
 }

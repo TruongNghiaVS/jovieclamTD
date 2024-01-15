@@ -1,6 +1,10 @@
 
 /* Extra small devices (phones, 767px and down) */
 @media only screen and (max-width: 767px) {
+  .container {
+    max-width: 100%;
+  }
+
   .container.nav {
     position: absolute;
     top: 0;
@@ -596,6 +600,10 @@
 
 /* Medium devices (landscape tablets, 600px and up) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 100%;
+  }
+
   .w-10 {
     width: 30% !important;
   }
@@ -628,6 +636,10 @@
   }
   .main-menu {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  
+  .links {
+    padding: 60px 1.5rem 30px !important;
   }
 
   button#mobile-sidebarCollapse {
@@ -1000,11 +1012,14 @@
 
 @media only screen and (min-width: 1240px) and (max-width: 1399px)  {
   .container {
-    max-width: 1140px;
+    max-width: 1170px;
   }
   .content {
     padding-left: 135px;
     padding-right: 135px;
+  }
+  .company-wrapper .company-content {
+    padding: 60px 0px;
   }
   .page-heading-tool.job-detail.mobile {
     display: none;
@@ -1064,10 +1079,13 @@
 
 @media only screen and (min-width: 1400px) { 
   .container {
-    max-width: 1140px;
+    max-width: 1200px;
   }
   .container.company-content {
-    max-width: 1400px;
+    max-width: 1200px;
+  }
+  .company-wrapper .company-content {
+    padding: 60px 0px;
   }
   .content {
     padding-left: 135px;
