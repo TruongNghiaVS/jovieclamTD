@@ -429,12 +429,12 @@
     .user-badge__btn {
         position: relative;
         padding: 3px 11px;
-        max-width: 200px;
+        max-width: 230px;
         height: 100%;
     }
 
-    .user-badge__btn  span {
-        -webkit-line-clamp: 1;
+    .user-badge__btn  span{
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         display: -webkit-box;
         overflow: hidden;
