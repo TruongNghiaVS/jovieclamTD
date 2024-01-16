@@ -2,10 +2,11 @@
     <div class="header-bar-bg">
         <div class="swiper slider-hero-banner">
             @php
-            $sliders = \App\Slider::select([
-            'sliders.id', 'sliders.slider_id',
-            'sliders.is_active','sliders.used_for','sliders.slider_image','sliders.slider_image_mobile'
-            ])->sorted()->get();
+            $sliders = \App\Slider::where("type",1)
+                        ->select([
+                        'sliders.id', 'sliders.slider_id',
+                        'sliders.is_active','sliders.used_for','sliders.slider_image','sliders.slider_image_mobile'
+                        ])->sorted()->get();
             @endphp
             <div class="swiper-wrapper">
                 @foreach($sliders as $slider)

@@ -561,8 +561,7 @@ class CompanyController extends Controller
         // $company->pinterest = $request->input('pinterest');
         $company->website= $request->input('website');
         // $company->website = (false === strpos($website, 'http')) ? 'http://' . $website : $website;
-		// $company->is_subscribed = isset($request->is_subscribed) ? 1 : null;
-		
+        // $company->is_subscribed = isset($request->is_subscribed) ? 1 : null;
         // $company->slug = Str::slug($company->name, '-') . '-' . $company->id;
         $company->update();
 		/*************************/
