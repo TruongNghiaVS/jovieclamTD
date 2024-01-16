@@ -23,11 +23,7 @@
                         <div id="cPwdInvalid" class="invalid-feedback"></div>
                     </div>
                     <div class="form-group">
-<<<<<<< HEAD
-                        <button id="reset_submitBtn" type="button" class="btn btn-primary submit-button" disabled>Đổi mật khẩu</button>
-=======
                         <button id="reset_submitBtn" type="button" class="btn btn-primary submit-button" disabled>Gửi</button>
->>>>>>> 11/1_TD
                     </div>
                 </form>
             </div>
