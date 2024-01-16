@@ -8,9 +8,7 @@
             <div class="row px-4 g-0">
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="banner-form__wrapper">
-                        <div class="banner-form__img">
-
-                        </div>
+                        <img src="{{ asset('/') }}admin_assets/supportform.jpg" alt="">
                     </div>
                 </div>
                 <div class="banner-form-main col-lg-6 col-md-12 col-sm-12 bg-white border">
@@ -130,20 +128,12 @@
         margin-bottom: 35px;
     }
     .banner-form__wrapper {
-        background-image: url(https://tuyendung.topcv.vn/images/banner_form_bg.png);
+        width: 100%;
         height: 100%;
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        border-bottom-left-radius: 10px;
-        border-top-left-radius: 10px;
     }
-    .banner-form__img {
-        background-image: url(https://tuyendung.topcv.vn/images/banner_form_center.png);
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 593px;
+    .banner-form__wrapper img {
+        width: 100%;
+        height: 100%;
     }
     .banner-form-main{
         border-bottom-right-radius: 10px;
