@@ -14,7 +14,7 @@
                 <div class="item">
                     <div class="image loadAds">
                         <a href="#">
-                           <img src="https://ads.careerbuilder.vn/www/images/6804e96cfe23971714beafba912d8782.jpg" alt="ads">
+                           <img src="{{ asset('/') }}admin_assets/login.jpg" alt="ads">
                         </a>
                     </div>
                 </div>
