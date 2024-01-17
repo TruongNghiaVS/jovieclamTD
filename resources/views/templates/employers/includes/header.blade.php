@@ -285,7 +285,7 @@
             </div>
             <div class="modal-footer">
            
-                <a id="modalLink" class="btn btn-secondary" href="#">Đóng</a>
+              
             </div>
         </div>
     </div>
@@ -306,11 +306,7 @@
                  <h3 class="text-center"></h3>
             </div>
             <div class="modal-footer">
-           
-<<<<<<< HEAD
-=======
-                <a id="modalLink" class="btn btn-secondary" href="#">Đóng</a>
->>>>>>> parent of d36acac (.)
+        
             </div>
         </div>
     </div>
