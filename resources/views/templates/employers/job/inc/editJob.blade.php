@@ -1,4 +1,5 @@
-{!! Form::model($job, array('method' => 'put', 'route' => array('update.front.job', $job->id), 'class' => 'form')) !!}
+{!! Form::model($job, array('method' => 'put', 'route' => array('update.front.job', $job->id), 'class' => 'needs-validation', 'id' => 'edit_front_job','novalidate')) !!}
+
 {!! Form::hidden('id', $job->id) !!}
 <?php
 // PHP code goes here
@@ -16,7 +17,7 @@ $test =  ['.net','php','intern'];
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="Job_title" class="font-weight-bold fs-18px">{{__('Job title')}}  <span class="required">*</span> </label>
-                            <input type="text" class="form-control" id="title" name="title" placeholder="{{__('Job title')}}" value="{{ $edit && isset($job) ? __($job->title) : old('title') }}">
+                            <input type="text" class="form-control" id="title" name="title" placeholder="{{__('Job title')}}" value="{{ $edit && isset($job) ? __($job->title) : old('title') }}" required>
                             {!! APFrmErrHelp::showErrors($errors, 'title') !!}
                         </div>
                     </div>
@@ -28,7 +29,7 @@ $test =  ['.net','php','intern'];
                     <div class="col-md-6">
                     <div class="form-group">
                     <label for="industry_id" class="font-weight-bold fs-18px">{{__('Industry')}} </label>
-                    {!! Form::select('industry_id', ['' => __('Select Industry')] + $industries,  $job->industry_id , array('class'=>'form-control form-select', 'id'=>'industry_id')) !!}
+                    {!! Form::select('industry_id', ['' => __('Select Industry')] + $industries,  $job->industry_id , array('class'=>'form-control form-select', 'id'=>'industry_id' ,'required' => 'required')) !!}
                     {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!}
                 </div>
                     </div>
@@ -50,7 +51,7 @@ $test =  ['.net','php','intern'];
                    
                     <div class="col-md-6 col-lg-6 col-sm-12">
                         <div class="form-group" id="city_dd">
-                            {!! Form::select('city_id', ['' => __('Select City')] + $cities, $job->city_id, array('class'=>'form-control form-select shadow-sm', 'id'=>'city_id')) !!}
+                            {!! Form::select('city_id', ['' => __('Select City')] + $cities, $job->city_id, array('class'=>'form-control form-select shadow-sm', 'id'=>'city_id','required' => 'required')) !!}
                             <div class="invalid-feedback">
                                 Địa điểm làm việc là bắt buộc
                             </div>
@@ -59,7 +60,7 @@ $test =  ['.net','php','intern'];
                     <div class="col-md-6 col-lg-6 col-sm-12" id="place_1">
                         <div class="form-group">
                       
-                            <input type="text" class="form-control" id="location" name="location" placeholder="Địa điểm làm việc" value="{{ isset($job) ? $job->location : old('location') }}">
+                            <input type="text" class="form-control" id="location" name="location" placeholder="Địa điểm làm việc" value="{{ isset($job) ? $job->location : old('location') }}" required>
                             
                         </div>
                     </div>
@@ -75,7 +76,7 @@ $test =  ['.net','php','intern'];
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="description" class="font-weight-bold fs-18px">{{ __('Job description') }} <span class="required">*</span> </label>
-                            {!! Form::textarea('description', $job->description, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>__('Job description')))  !!}
+                            {!! Form::textarea('description', $job->description, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>__('Job description'), 'required' => 'required'))  !!}
                                 <div class="invalid-feedback">
                                     Please provide a valid textarea.
                                 </div>
@@ -87,7 +88,7 @@ $test =  ['.net','php','intern'];
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="requirements" class="font-weight-bold fs-18px">{{ __('Job requirements') }} <span class="required">*</span> </label>
-                            {!! Form::textarea('requirement', $job->requirement, array('class'=>'form-control', 'id'=>'requirement', 'placeholder'=>__('Job requirements'))) !!}
+                            {!! Form::textarea('requirement', $job->requirement, array('class'=>'form-control', 'id'=>'requirement', 'placeholder'=>__('Job requirements') , 'required' => 'required' )) !!}
                             <div class="invalid-feedback">
                                 Please provide a valid textarea.
                             </div>
@@ -99,7 +100,7 @@ $test =  ['.net','php','intern'];
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="Benefits" class="font-weight-bold fs-18px">{{ __('Job Benefits') }} <span class="required">*</span> </label>
-                            {!! Form::textarea('benefits', $job->benefits, array('class'=>'form-control', 'id'=>'benefits', 'placeholder'=>__('Job Benefits'))) !!}
+                            {!! Form::textarea('benefits', $job->benefits, array('class'=>'form-control', 'id'=>'benefits', 'placeholder'=>__('Job Benefits'), 'required' => 'required')) !!}
                             <div class="invalid-feedback">
                                 Please provide a valid textarea.
                             </div>
@@ -121,14 +122,14 @@ $test =  ['.net','php','intern'];
                             <div class="col-md-12" id="salary_from_dd" style="display:none;">
                                 <div class="form-group">
                                     <label for="salary_from" class="font-weight-bold fs-18px">{{__('Salary From')}} </label>
-                                    <input type="text" class="form-control currency-mask" id="salary_from" placeholder="{{__('Salary From')}}" value="{{ $edit ? __($job->salary_from) : old('salary_from') }}">
+                                    <input type="text" class="form-control currency-mask" id="salary_from" placeholder="{{__('Salary From')}}" value="{{ $edit ? __($job->salary_from) : old('salary_from') }}" required>
                                     {!! APFrmErrHelp::showErrors($errors, 'salary_from') !!}
                                 </div>
                             </div>
                             <div class="col-md-12" id="salary_to_dd" style="display:none;">
                                 <div class="form-group">
                                     <label for="salary_range" class="font-weight-bold fs-18px">{{__('Salary To')}} </label>
-                                    <input type="text" class="form-control currency-mask" id="salary_to" placeholder="{{__('Salary To')}}" value="{{ $edit ? __($job->salary_to) : old('salary_to') }}">
+                                    <input type="text" class="form-control currency-mask" id="salary_to" placeholder="{{__('Salary To')}}" value="{{ $edit ? __($job->salary_to) : old('salary_to') }}" required>
                                     {!! APFrmErrHelp::showErrors($errors, 'salary_to') !!}
                                 </div>
                             </div>
@@ -180,7 +181,7 @@ $test =  ['.net','php','intern'];
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="expiry_date" class="font-weight-bold fs-18px">Hạn nhận hồ sơ </label>
-                            <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="Deadline" value="{{ $edit && isset($job) ? \Carbon\Carbon::parse($job->expiry_date)->format('d-m-Y') : \Carbon\Carbon::parse(old('expiry_date'))->format('d-m-Y') }}">
+                            <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="Deadline" value="{{ $edit && isset($job) ? \Carbon\Carbon::parse($job->expiry_date)->format('d-m-Y') : \Carbon\Carbon::parse(old('expiry_date'))->format('d-m-Y') }}" required>
                         </div>
                     </div>
                 </div>
@@ -216,6 +217,108 @@ $test =  ['.net','php','intern'];
 
     </div>
 </div>
+
+<div class="card card-edit-profile my-3" id="benefit_section">
+        <h2 class="fs-4 card-edit-profile__section">PHÚC LỢI</h2>
+        <div class="card-body">
+                        <div class="row" bis_skin_checked="1">
+                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="big-checkbox" id="benefit_id_2" name="benefit_id[]" value="2" checked="checked">
+                                        <label for="benefit_id_2"> <em class="fa fa-medkit"></em>Chế độ bảo hiểm</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_3" name="benefit_id[]" value="3" checked="checked">
+                                        <label for="benefit_id_3"> <em class="fa fa-plane"></em>Du Lịch</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_8" name="benefit_id[]" value="8" checked="checked">
+                                        <label for="benefit_id_8"> <em class="fa fa-usd"></em>Chế độ thưởng</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_9" name="benefit_id[]" value="9" checked="checked">
+                                        <label for="benefit_id_9"> <em class="fa fa-user-md"></em>Chăm sóc sức khỏe</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_10" name="benefit_id[]" value="10" checked="checked">
+                                        <label for="benefit_id_10"> <em class="fa fa-graduation-cap"></em>Đào tạo</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_11" name="benefit_id[]" value="11" checked="checked">
+                                        <label for="benefit_id_11"> <em class="fa fa-line-chart"></em>Tăng lương</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_1" name="benefit_id[]" value="1">
+                                        <label for="benefit_id_1"> <em class="fa fa-laptop"></em>Laptop</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_4" name="benefit_id[]" value="4">
+                                        <label for="benefit_id_4"> <em class="fa fa-money"></em>Phụ cấp</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_5" name="benefit_id[]" value="5">
+                                        <label for="benefit_id_5"> <em class="fa fa-taxi"></em>Xe đưa đón</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_6" name="benefit_id[]" value="6">
+                                        <label for="benefit_id_6"> <em class="fa fa-fighter-jet"></em>Du lịch nước ngoài</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_7" name="benefit_id[]" value="7">
+                                        <label for="benefit_id_7"> <em class="fa fa-black-tie"></em>Đồng phục</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_12" name="benefit_id[]" value="12">
+                                        <label for="benefit_id_12"> <em class="fa fa-credit-card"></em>Công tác phí</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_13" name="benefit_id[]" value="13">
+                                        <label for="benefit_id_13"> <em class="fa fa-money"></em>Phụ cấp thâm niên</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_14" name="benefit_id[]" value="14">
+                                        <label for="benefit_id_14"> <em class="fa fa-briefcase"></em>Nghỉ phép năm</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_15" name="benefit_id[]" value="15">
+                                        <label for="benefit_id_15"> <em class="fa fa-heartbeat"></em>CLB thể thao</label>
+                                    </div>
+                                </div>
+                            </div>
+            
+        </div>
+
+    </div>
+
+
 
 <div class="card card-edit-profile my-3">
     <h2 class="fs-4 card-edit-profile__section">Yêu cầu chung</h2>
@@ -309,7 +412,7 @@ $test =  ['.net','php','intern'];
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="num_of_positions" class="font-weight-bold fs-18px">{{__('Number of positions')}}   <span class="required">*</span>  </label>&nbsp;&nbsp;&nbsp;<span class="text-danger" id="num_of_positions_error" class="error danger"></span>
-                            <input type="text" class="form-control" id="num_of_positions" name="num_of_positions" placeholder="{{__('Number of positions')}}" value="{{ $edit && isset($job) ? $job->num_of_positions : old('num_of_positions') }}" required>
+                            <input type="text" class="form-control" id="num_of_positions" name="num_of_positions" placeholder="{{__('Number of positions')}}" value="{{ $edit && isset($job) ? $job->num_of_positions : '1' }}" >
 
                         </div>
                     </div>
@@ -372,12 +475,11 @@ $test =  ['.net','php','intern'];
      
   
 
-        <button  id="scrollBtn" class="btn btn-croll-top m-2" type="button" >lên trên đầu </button>
+        <button  id="scrollBtn" class="btn btn-croll-top m-2" type="button" >Lên trên đầu  </button>
         @if($job->status =="2")
             <button class="btn btn-lg btn-primary m-2" type="submit" id="submit_update_job">Cập nhật </button>
-      
         @endif
-       
+    
     </div>
 </div>
 
@@ -429,11 +531,40 @@ $test =  ['.net','php','intern'];
 .box-meta i {
     margin-top: 2px;
 }
+.big-checkbox {width: 15px; height: 15px;}
+#benefit_section em,#benefit_section label{
+    font-size: 17px; 
+    margin: 0 8px;
+}
 </style>
 @endpush
 
 @push('scripts')
 <script type="text/javascript">
+    $(document).ready(function () {
+        var form = document.getElementById('edit_front_job')
+        console.log(form);
+        // Loop over them and prevent submission  
+        form.addEventListener('submit', function (event) {
+           console.log(form.checkValidity());
+            if (form.checkValidity()) {
+                form.classList.remove('was-validated')
+                form.submit();
+            }
+            else {
+                
+                form.classList.add('was-validated')
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+
+
+        })
+    })
+
+
+
  $(document).ready(function () {
         var tagsArray = [];
 
