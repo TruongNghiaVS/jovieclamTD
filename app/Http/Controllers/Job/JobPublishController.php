@@ -172,7 +172,8 @@ class JobPublishController extends Controller
         $cities = \App\City::where('lang', \App::getLocale())->active()->pluck('city', 'id')->toArray();
         $selectedSkills = JobSkillManager::where('job_id', '=', $id)->pluck('job_skill_id')->toArray();
         $desiredSkills = [];
-        
+       
+
         array_walk(
             $selectedSkills,
             function($v) use(&$desiredSkills) {return $desiredSkills[$v] = ['selected' => true];}
@@ -203,15 +204,64 @@ class JobPublishController extends Controller
 
     public function updateFrontJob($id, request $request)
     {
-        $job = Job::findOrFail($id);
-		$job = $this->assignJobValues($job, $request);
-        /*         * ******************************* */
-        $job->slug = Str::slug($job->title, '-') . '-' . $job->id;
-        /*         * ******************************* */
-        /*         * ************************************ */
-        $job->status =1;
-        $job->update();
+
       
+        $job = Job::findOrFail($id);
+		
+        $job->title = $request->input('title');
+        $job->description = $request->input('description');
+        $job->requirement = $request->input('requirement');
+        $job->benefits = $request->input('benefits');
+        $job->country_id = $request->input('country_id') ?? Null;
+        $job->state_id = $request->input('state_id') ?? Null;
+        $job->city_id = $request->input('city_id');
+        $job->is_freelance = $request->input('is_freelance') ?? Null;
+        $job->career_level_id = $request->input('career_level_id') ?? Null;
+        $job->functional_area_id = $request->input('functional_area_id') ?? Null;
+        $job->industry_id = $request->input('industry_id') ?? Null;
+     
+        /**
+         * salary
+         */
+        switch($request->input('salary_type'))
+        {
+            case Job::SALARY_TYPE_RANGE:
+                $job->salary_type = Job::SALARY_TYPE_RANGE;
+                $job->salary_from = (int) str_replace(",","",$request->input('salary_from'));
+                $job->salary_to = (int) str_replace(",","",$request->input('salary_to'));
+                break;
+            case Job::SALARY_TYPE_FROM:
+                $job->salary_type = Job::SALARY_TYPE_FROM;
+                $job->salary_from = (int) str_replace(",","",$request->input('salary_from'));
+                $job->salary_to = Null;
+                break;
+            case Job::SALARY_TYPE_TO:
+                $job->salary_type = Job::SALARY_TYPE_TO;
+                $job->salary_from = Null;
+                $job->salary_to = (int) str_replace(",","",$request->input('salary_to'));
+                break;
+            default:
+                $job->salary_type = Job::SALARY_TYPE_NEGOTIABLE;
+                $job->salary_from = Null;
+                $job->salary_to = Null;
+                break;
+        }
+        $job->salary_currency = $request->input('salary_currency') ?? (\App::getLocale() =='vi' ? 'VND' : 'USD');
+        $job->hide_salary = $request->input('hide_salary') ?? false;
+        $job->functional_area_id = $request->input('functional_area_id');
+        $job->job_type_id = $request->input('job_type_id');
+        $job->job_shift_id = $request->input('job_shift_id') ?? Null;
+        $job->num_of_positions = $request->input('num_of_positions') ?? null;
+        $job->gender_id = $request->input('gender_id');
+        $job->expiry_date = \Carbon\Carbon::parse($request->input('expiry_date'))->format('Y-m-d');
+        $job->degree_level_id = $request->input('degree_level_id') ?? Null;
+        $job->job_experience_id = $request->input('job_experience_id');
+        $job->salary_period_id = $request->input('salary_period_id') ?? null;
+
+        $job->location = $request->input('location') ?? null;
+ 
+        $job->save();
+  
         /*         * ************************************ */
         $this->storeJobSkills($request, $job->id);
         /*         * ************************************ */
@@ -255,7 +305,7 @@ class JobPublishController extends Controller
         {
             $job->status =="4";
         }
-        $job->update();
+        $job->save();
         return response()->json([
             'success'=>true,
             'error'=> $itemError ], 200);
@@ -264,8 +314,17 @@ class JobPublishController extends Controller
 
     private function assignJobValues($job, $request)
     {
-        $job->title = $request->input('title');
+        // dd($request->input("tags"));
 
+       
+        if($request->has('tags'))
+        { 
+
+            // $arrayRequest=   json_decode($request->input('tags')[0], true);
+            $job->tags =   $request->input('tags')[0];
+        }
+      
+        $job->title = $request->input('title');
         $job->address = $request->input('location');
         $job->description = $request->input('description');
         $job->requirement = $request->input('requirement');
@@ -280,6 +339,8 @@ class JobPublishController extends Controller
         $job->status = $request->input('status');
         $job->job_type_id = $request->input('job_type_id');
         $job->gender_id = $request->input('gender');
+
+
 
     
         /**

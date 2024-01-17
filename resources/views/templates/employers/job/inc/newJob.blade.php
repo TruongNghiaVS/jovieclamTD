@@ -275,9 +275,9 @@
                     <div class="container todo-container">
                 
                         <div class="form-group">
-                            <label for="degree_level_id" class="font-weight-bold fs-18px">Thêm tag </label>
+                            <label for="degree_level_id" class="font-weight-bold fs-18px">Tên resume tag</label>
                             <div class="d-flex justify-content-center">
-                                <input type="text" id="addtag" class="form-control" placeholder="Thêm tag" aria-label="Add a new task" aria-describedby="addButton">
+                                <input type="text" id="addtag" class="form-control" placeholder="Tên resume tag" aria-label="Add a new task" aria-describedby="addButton">
                                 <button class="btn btn-primary mx-2" type="button" id="addButton">Thêm tag</button>
                             </div>
                             

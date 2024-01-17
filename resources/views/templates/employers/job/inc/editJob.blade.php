@@ -3,7 +3,14 @@
 <?php
 // PHP code goes here
 
-$test =  ['.net','php','intern'];
+if($job->tags == '')
+{
+    $test =  [];
+}
+else 
+{
+    $test =  json_decode($job->tags);
+}
 
 ?>
 
@@ -233,11 +240,7 @@ $test =  ['.net','php','intern'];
                         </div>
 
                         <div class="form-check m-2">
-                            @if ($job->gender_id ==0)
-                            <input class="form-check-input" type="radio" value ="0"  checked   name="gender" id="gender0">
-                            @else 
-                            <input class="form-check-input" type="radio" value ="0"   name="gender" id="gender0">
-                            @endif
+                             <input class="form-check-input" type="radio" value ="0"   name="gender" id="gender0">
                           
                             <label class="form-check-label" for="gender0">
                                 Nam
@@ -246,11 +249,7 @@ $test =  ['.net','php','intern'];
                         <div class="form-check m-2">
                           
 
-                            @if ($job->gender_id ==1)
                             <input class="form-check-input" type="radio" value ="1"  name="gender" id="gender1">
-                            @else 
-                            <input class="form-check-input" type="radio" value ="1"  name="gender" id="gender1">
-                            @endif
                             <label class="form-check-label" for="gender1">
                                 Nữ
                             </label>
@@ -340,9 +339,9 @@ $test =  ['.net','php','intern'];
                     <div class="container todo-container">
                 
                         <div class="form-group">
-                            <label for="degree_level_id" class="font-weight-bold fs-18px">Thêm tag </label>
+                            <label for="degree_level_id" class="font-weight-bold fs-18px"> Tên resume tag </label>
                             <div class="d-flex justify-content-center">
-                                <input type="text" id="addtag" class="form-control" placeholder="Thêm tag" aria-label="Add a new task" aria-describedby="addButton">
+                                <input type="text" id="addtag" class="form-control" placeholder="Tên resume tag"  aria-describedby="addButton">
                                 <button class="btn btn-primary mx-2" type="button" id="addButton">Thêm tag</button>
                             </div>
                             
@@ -461,5 +460,11 @@ $test =  ['.net','php','intern'];
             $(this).remove();
         });
     });
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded',function () {
+    document.getElementById("gender{{$job->gender_id}}").checked = true;
+    document.getElementById("jobtype{{$job->job_type_id}}").checked = true;
+});
 </script>
 @endpush
