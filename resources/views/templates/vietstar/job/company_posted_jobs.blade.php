@@ -199,7 +199,7 @@
                                     <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
                                         <i class="fa-solid fa-upload p-2"></i>
                                     </a>
-                                </td>
+                            </td>
                             <td>
                                 <div class="d-flex">
                                         <a href="{{url('/')}}/edit-front-job/{{$job->id}}">
@@ -279,13 +279,13 @@
                                 </td>
                              
                                 @if($job->status == 2)
-                                <td>
-                                    <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
-                                        <i class="fa-solid fa-upload p-2"></i>
-                                    </a>
-                                </td>
+                                    <td>
+                                        <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
+                                            <i class="fa-solid fa-upload p-2"></i>
+                                        </a>
+                                    </td>
                                 @else
-                                <td></td> 
+                                     <td></td> 
                                 @endif
     
                                 <td>
@@ -410,6 +410,7 @@
 
 
     function updateJob(id) {
+     
         
         $("#comfirm_update").modal("show");
         $("#comfirm_update_btn").click(()=>{
@@ -426,11 +427,18 @@
        
             })
             .done(function(data){
-                hideSpinner()
+          
+                  hideSpinner()
                    if(data.success);{
                        $("#comfirm_update .modal-body").empty();
                        $("#comfirm_update .modal-body").text("Yêu cầu thành công")
                        $("#comfirm_update #comfirm_update_btn").css("display","none");
+                       setTimeout(() => {
+                        location.reload();
+                       }, 300);
+                  
+
+
                    }
 
               

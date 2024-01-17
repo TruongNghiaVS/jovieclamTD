@@ -274,8 +274,7 @@ class JobPublishController extends Controller
 
     public function  publishJob( request $request )
     {
-
-        $id = $request->input("id");
+        $id =$request->all()["id"];
         if($id)
         {
 
@@ -284,6 +283,7 @@ class JobPublishController extends Controller
         {
             $id =-1;
         }
+
         $itemError = new stdClass();
         $itemError->success =true;
         $itemError->message ="Yêu cầu thành công";
@@ -301,9 +301,9 @@ class JobPublishController extends Controller
                 'error'=> $itemError ], 200);
         }
         
-        if($job->status !="2")
+        if($job->status =="2")
         {
-            $job->status =="4";
+            $job->status ="4";
         }
         $job->save();
         return response()->json([

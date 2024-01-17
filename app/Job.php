@@ -34,6 +34,7 @@ class Job extends Model
     const POST_ACTIVE = 1;
     const POST_PENDING = 2;
     const POST_INACTIVE = 3;
+    const POST_Watting = 4;
 
 
     protected $table = 'jobs';
@@ -306,6 +307,8 @@ class Job extends Model
             self::POST_ACTIVE => __('Active job post'),
             self::POST_PENDING => __('Pending job post'),
             self::POST_INACTIVE => __('Inactive job post'),
+            self::POST_Watting => 'Đang duyệt'
+            
         ];
     }
 

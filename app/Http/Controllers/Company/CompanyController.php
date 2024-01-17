@@ -790,8 +790,20 @@ class CompanyController extends Controller
         if($request->title) {
             $jobs = $jobs->where('title', 'like', '%'.$request->title.'%');
         }
+    
         if($request->status) {
-            $jobs = $jobs->where('status', $request->status);
+
+            if($request->status =="1")
+            {  
+                 $statusQuerry = ["1", "4"];
+                 $jobs = $jobs->whereIn('status', $statusQuerry);
+
+            }
+            else
+            {
+                $jobs = $jobs->where('status', $request->status);
+            }
+            
         }
         if($request->city_id) {
             $jobs = $jobs->where('city_id', $request->city_id);
@@ -840,12 +852,13 @@ class CompanyController extends Controller
         }
 
         $jobs = $jobs->orderBy('jobs.created_at', 'desc')->paginate(6);
-
+     
         $data = [
             'jobs' => $jobs,
             'request' => $request->all(),
             'cities' => City::where('lang', 'vi')->active()->pluck('city', 'id')->toArray()
         ];
+      
         
         return view(config('app.THEME_PATH').'.job.company_posted_jobs', $data);
     }
