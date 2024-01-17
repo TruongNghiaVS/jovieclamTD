@@ -1,7 +1,7 @@
 <section class="employer-choose cb-section">
     <div class="flex-img" bis_skin_checked="1">
         <div class="image" bis_skin_checked="1">
-            <img src="https://static.careerbuilder.vn/themes/employer/img/employer/3.png" alt="careerbuilder.vn">
+            <img src="{{ asset('/vietstar/imgs') }}/solution.png" alt="jobvieclam.com">
         </div>
     </div>
     <div class="box-content" bis_skin_checked="1">

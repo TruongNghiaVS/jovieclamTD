@@ -8,7 +8,7 @@
             <div class="row px-4 g-0">
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="banner-form__wrapper">
-                        <img src="{{ asset('/') }}admin_assets/supportform.jpg" alt="">
+                        <img src="{{ asset('/') }}admin_assets/supportform.png" alt="">
                     </div>
                 </div>
                 <div class="banner-form-main col-lg-6 col-md-12 col-sm-12 bg-white border">

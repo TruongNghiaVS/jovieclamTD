@@ -19,7 +19,7 @@
                     </p>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12">
-                        <img class="about_us_content__img" src="https://tuyendung.topcv.vn/images/banner_form_center.png" alt="about us">
+                        <img class="about_us_content__img" src="{{ asset('/') }}admin_assets/supportform.png" alt="about us">
                 </div>
             </div>
 
