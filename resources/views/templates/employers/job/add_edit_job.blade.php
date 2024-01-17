@@ -1,9 +1,9 @@
 @extends('templates.employers.layouts.app')
 @section('content') 
 <!-- Header start --> 
-    <!-- Header start -->
-    @include('templates.employers.includes.header')
-    <!-- Header end -->
+<!-- Header start -->
+@include('templates.employers.includes.header')
+<!-- Header end -->
    
 <!-- Header end --> 
 @include('templates.employers.includes.company_dashboard_menu') 
