@@ -186,12 +186,13 @@ $(document).ready(function() {
             event.preventDefault(); // Prevent the form from submitting
         }
         if (isValid) { 
-            showSpinner();
+     
 
             $.ajax({
             type: "POST",
             url:  '{{ route('company.login') }}',
             data: $(this).serialize(),
+            beforeSend:showSpinner(),
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
                     console.log(responseObject.error);
@@ -239,6 +240,7 @@ $(document).ready(function() {
                     }
                 })
                 .fail(function(jqXHR, textStatus){
+                    hideSpinner();
                     
                 })
                 .always(function(jqXHR, textStatus) {
