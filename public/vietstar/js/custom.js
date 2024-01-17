@@ -48,9 +48,6 @@ function showModal_Success(title, message, targetUrl) {
     // Set the message
     $('#customModal-success .modal-body p').text(message);
 
-    // Set the target URL
-    $('#customModal-success #modalLink').attr('href', targetUrl);
-
     // Show the modal
     $('#customModal-success').modal('show');
 }
@@ -63,9 +60,7 @@ function showModal_Fail(title, message, targetUrl) {
     // Set the message
     $('#customModal-fail .modal-body p').text(message);
 
-    // Set the target URL
-    $('#customModal-fail #modalLink').attr('href', targetUrl);
-
+ 
     // Show the modal
     $('#customModal-fail').modal('show');
 }
