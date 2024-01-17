@@ -172,6 +172,108 @@
         </div>
     </div>
 
+    <div class="card card-edit-profile my-3" id="benefit_section">
+        <h2 class="fs-4 card-edit-profile__section">PHÚC LỢI</h2>
+        <div class="card-body">
+                        <div class="row" bis_skin_checked="1">
+                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="big-checkbox" id="benefit_id_2" name="benefit_id[]" value="2" checked="checked">
+                                        <label for="benefit_id_2"> <em class="fa fa-medkit"></em>Chế độ bảo hiểm</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_3" name="benefit_id[]" value="3" checked="checked">
+                                        <label for="benefit_id_3"> <em class="fa fa-plane"></em>Du Lịch</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_8" name="benefit_id[]" value="8" checked="checked">
+                                        <label for="benefit_id_8"> <em class="fa fa-usd"></em>Chế độ thưởng</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_9" name="benefit_id[]" value="9" checked="checked">
+                                        <label for="benefit_id_9"> <em class="fa fa-user-md"></em>Chăm sóc sức khỏe</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_10" name="benefit_id[]" value="10" checked="checked">
+                                        <label for="benefit_id_10"> <em class="fa fa-graduation-cap"></em>Đào tạo</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_11" name="benefit_id[]" value="11" checked="checked">
+                                        <label for="benefit_id_11"> <em class="fa fa-line-chart"></em>Tăng lương</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_1" name="benefit_id[]" value="1">
+                                        <label for="benefit_id_1"> <em class="fa fa-laptop"></em>Laptop</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_4" name="benefit_id[]" value="4">
+                                        <label for="benefit_id_4"> <em class="fa fa-money"></em>Phụ cấp</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_5" name="benefit_id[]" value="5">
+                                        <label for="benefit_id_5"> <em class="fa fa-taxi"></em>Xe đưa đón</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_6" name="benefit_id[]" value="6">
+                                        <label for="benefit_id_6"> <em class="fa fa-fighter-jet"></em>Du lịch nước ngoài</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_7" name="benefit_id[]" value="7">
+                                        <label for="benefit_id_7"> <em class="fa fa-black-tie"></em>Đồng phục</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_12" name="benefit_id[]" value="12">
+                                        <label for="benefit_id_12"> <em class="fa fa-credit-card"></em>Công tác phí</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_13" name="benefit_id[]" value="13">
+                                        <label for="benefit_id_13"> <em class="fa fa-money"></em>Phụ cấp thâm niên</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_14" name="benefit_id[]" value="14">
+                                        <label for="benefit_id_14"> <em class="fa fa-briefcase"></em>Nghỉ phép năm</label>
+                                    </div>
+                                </div>
+                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                                    <div class="form-group form-checkbox" bis_skin_checked="1">
+                                        <input type="checkbox" class="" id="benefit_id_15" name="benefit_id[]" value="15">
+                                        <label for="benefit_id_15"> <em class="fa fa-heartbeat"></em>CLB thể thao</label>
+                                    </div>
+                                </div>
+                            </div>
+            
+        </div>
+
+    </div>
+
+
+
     <div class="card card-edit-profile my-3">
         <h2 class="fs-4 card-edit-profile__section">Yêu cầu chung</h2>
         <div class="card-body">
@@ -358,12 +460,41 @@
 .box-meta i {
     margin-top: 2px;
 }
+.big-checkbox {width: 15px; height: 15px;}
+#benefit_section em,#benefit_section label{
+    font-size: 17px; 
+    margin: 0 8px;
+}
 </style>
 @endpush
 
 @push('scripts')
 <script type="text/javascript">
- $(document).ready(function () {
+    $(document).ready(function () {
+        var form = document.getElementById('new-job-form')
+        console.log(form);
+    // Loop over them and prevent submission  
+        form.addEventListener('submit', function (event) {
+           
+            if (form.checkValidity()) {
+                form.classList.remove('was-validated')
+                form.submit();
+            }
+            else {
+                
+                form.classList.add('was-validated')
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+
+
+        })
+    })
+    
+       
+ 
+    $(document).ready(function () {
         var tagsArray = [];
 
         // Add a new task to the list

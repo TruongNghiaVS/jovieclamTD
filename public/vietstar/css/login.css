@@ -18,7 +18,7 @@
 }
 
 .login-img-swapper__img {
-	background-image: url('http://t1.gstatic.com/images?q=tbn:ANd9GcQTU8uN-ZlysgtFbal9iensUeNMQ3QHjcgz4rgI_8v_ewnSWx93');
+	
 	background-color: #cccccc;
 	/* Used if the image is unavailable */
 	height: 750px;
