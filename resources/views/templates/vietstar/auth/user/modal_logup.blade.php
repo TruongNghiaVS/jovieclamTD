@@ -364,6 +364,7 @@ $(document).ready(function() {
                     
                 })
                 .fail(function(jqXHR, textStatus){
+                    hideSpinner();
                     
                 })
                 .always(function(jqXHR, textStatus) {

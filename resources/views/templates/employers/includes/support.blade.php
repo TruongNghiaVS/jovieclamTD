@@ -254,6 +254,8 @@ $(document).ready(function() {
             type: "POST",
             url:  `{{ route('contact-advice') }}`,
             datatype:"JSON",
+            beforeSend:showSpinner(),
+
             data: {
                 
                 fullName:name,
@@ -294,6 +296,7 @@ $(document).ready(function() {
                     }
                 })
                 .fail(function(jqXHR, textStatus){
+                    hideSpinner();
                     
                 })
                 .always(function(jqXHR, textStatus) {

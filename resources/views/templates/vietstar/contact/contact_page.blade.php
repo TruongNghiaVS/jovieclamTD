@@ -267,6 +267,8 @@ $(document).ready(function() {
             type: "POST",
             url:  `{{ route('contact-request') }}`,
             datatype:"JSON",
+            beforeSend:showSpinner(),
+
             data: {
                 phone:phone,
                 title:subject,
@@ -306,6 +308,7 @@ $(document).ready(function() {
                     },3000)
                 })
                 .fail(function(jqXHR, textStatus){
+                    hideSpinner();
                     
                 })
                 .always(function(jqXHR, textStatus) {

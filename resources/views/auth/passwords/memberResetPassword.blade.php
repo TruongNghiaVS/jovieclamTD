@@ -176,6 +176,8 @@
                 $.ajax({
             type: "POST",
             url:  `{{ route('member.ChangePassword') }}`,
+            beforeSend:showSpinner(),
+
             data: {
                 password:$('#newPassword').val() ?$('#newPassword').val() :"",
                 code:key.code ? key.code :"",
@@ -206,6 +208,7 @@
                     }
                 })
                 .fail(function(jqXHR, textStatus){
+                    hideSpinner();
                     
                 })
                 .always(function(jqXHR, textStatus) {
