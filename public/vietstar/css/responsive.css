@@ -32,6 +32,10 @@
   .col-sm-6 {
     width: 100%;
   }
+  h2.section-title {
+      font-size: 1.3rem;
+  }
+
 
 
   /* Header Nav */
@@ -48,13 +52,16 @@
     margin-bottom: 0;
     position: relative;
     top: 0;
-    height: 400px !important;
+    left: 0;
+    padding-top: 30%;
   }
 
   .header-bar .header-bar-bg {
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
     height: 100%;
     width: 100%;
   }
@@ -65,6 +72,36 @@
     left: 0;
     height: 100%;
   }
+
+  .employer-number-impressive .list-number li .number span, .employer-number-impressive .list-number li .number p {
+    font-size: 21px !important;
+  }
+  .employer-number-impressive .list-number li .title {
+    font-size: 15px;
+  }
+  .all-product-service.cb-section {
+
+  }
+  .employer-choose .box-content .cb-title {
+    font-size: 1.5rem !important;
+  }
+
+  .employer-choose .box-content .box-content__content p {
+    font-size: 17px !important;
+  }
+  .employer-choose .box-content .box-content__content ul li {
+    font-size: 15.5px;
+  }
+  .about_us_content__text {
+    font-size: 17px;
+  }
+  .banner-form__subtitle {
+    padding: 0 10px;
+  }
+  .banner-form-main {
+    padding: 0px 10px;
+  }
+
 
   .form-group-search-box.active {
     max-width: unset;

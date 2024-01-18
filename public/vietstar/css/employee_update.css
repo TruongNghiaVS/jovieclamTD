@@ -556,9 +556,7 @@ h2.title {
         margin: 3px;
         width: 30% !important;
     }
-    .all-product-service.cb-section {
-        margin-top: 60px !important;
-    }
+  
     .all-product-service .list-service .item {
         flex-direction: column;
     }
