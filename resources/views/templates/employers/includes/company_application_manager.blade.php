@@ -51,7 +51,7 @@
                         
                         <td>
                             <div class="fullname">
-                                <a href="#" role="button" class="font-weight-bold text-dark text-primary-hover text-capitalize public-profile"
+                                <a href="#" role="button" class="font-weight-bold text-dark text-primary-hover text-capitalize public-profile-toggle"
                                    data-user="{{$value->user->id}}" data-job="{{$value->job->id}}"
                                    data-name="{{$value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name}}">
                                    {{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name }}
@@ -111,6 +111,11 @@
                                 <a role="button" onClick="submitUpdateApplication({{ $value->id }});" class="dropdown-item" data-toggle="modal" data-target="#modalReviewApplication">Đổi trạng thái CV</a> 
                                 <a role="button" onClick="submitUpdateNoteApplication({{ $value->id }});" class="dropdown-item"  data-toggle="modal" data-target="#modalReviewApplicationNote">Ghi chú</a> 
                                 <a role="button" download href="{{'http://localhost:8000/'.'cvs/'.$value->user->getDefaultCv()->cv_file}}" target="_blank" class="dropdown-item">Tải CV</a>
+                                <a role="button" href="#" class="dropdown-item public-profile-toggle"
+                                    data-user="{{$value->user->id}}" data-job="{{$value->job->id}}"
+                                   data-name="{{$value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name}}"
+                                
+                                >Xem CV</a>
                             
                             </div>
                         </td>
@@ -176,33 +181,36 @@
         height: 50px;
         border-radius: 50%;
     }
+
+    #candidate-profile-modal .modal-body iframe{
+            width: 100%;
+            height: 100%;
+    }
+    #candidate-profile-modal .modal-dialog {
+        max-height: 100vh;
+        height: 100vh;
+    }
+    #candidate-profile-modal .modal-dialog  .modal-content{
+        max-height: 90%;
+        height: 90%;
+    }
 </style>
 @endpush
 @push('scripts')
 <script>
     $(document).ready(function(){
-        $('.public-profile').on('click',function(e){
+        $('.public-profile-toggle').on('click',function(e){
             e.preventDefault();
             var user_id = $(this).attr('data-user');
             var job_id = $(this).attr('data-job');
             var user_name = $(this).attr('data-name');
             
-            if(user_id > 0){
-                var url = "{{ route('application.profile.candidate', [':user_id', ':job_id']) }}";
-                url = url.replace(':user_id',user_id).replace(':job_id',job_id);
-                $('#candidate-profile-modal .modal-body').empty();
-                $.ajax({
-                    url: url,
-                    method: 'get',
-                    beforeSend: function(){
-                    },
-                    success: function(response){
-                        $('#candidate-profile-modal-title').html($('#candidate-profile-modal-title').html() + ' - ' + user_name);
-                        $('#candidate-profile-modal .modal-body').html(response);
-                        $('#candidate-profile-modal').modal('show').trigger('focus');
 
-                    }
-                });
+
+            if(user_id > 0){
+                $('#candidate-profile-modal-title').html($('#candidate-profile-modal-title').html() + ' - ' + user_name);
+                $('#candidate-profile-modal .modal-body').html(`<iframe src="http://localhost:8001/xem-ho-so-cv/138" title="description"></iframe>`);
+                $('#candidate-profile-modal').modal('show').trigger('focus');
             }
         });
 

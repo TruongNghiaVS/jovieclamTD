@@ -1,4 +1,4 @@
-{!! Form::model($job, array('method' => 'put', 'route' => array('update.front.job', $job->id), 'class' => 'needs-validation', 'id' => 'edit_front_job','novalidate')) !!}
+{!! Form::model($job, array('method' => 'put', 'route' => array('update.front.job', $job->id), 'class' => 'form', 'id' => 'edit_front_job',)) !!}
 
 {!! Form::hidden('id', $job->id) !!}
 <?php
@@ -476,7 +476,7 @@ else
 
         <button  id="scrollBtn" class="btn btn-croll-top m-2" type="button" >Lên trên đầu  </button>
         @if($job->status =="2")
-            <button class="btn btn-lg btn-primary m-2" type="submit" id="submit_update_job">Cập nhật </button>
+            <button class="btn btn-lg btn-primary m-2" type="submit" id="">Cập nhật </button>
         @endif
     
     </div>
@@ -540,27 +540,7 @@ else
 
 @push('scripts')
 <script type="text/javascript">
-    $(document).ready(function () {
-        var form = document.getElementById('edit_front_job')
-        console.log(form);
-        // Loop over them and prevent submission  
-        form.addEventListener('submit', function (event) {
-           console.log(form.checkValidity());
-            if (form.checkValidity()) {
-                form.classList.remove('was-validated')
-                form.submit();
-            }
-            else {
-                
-                form.classList.add('was-validated')
-                event.preventDefault()
-                event.stopPropagation()
-            }
-
-
-
-        })
-    })
+   
 
 
 
