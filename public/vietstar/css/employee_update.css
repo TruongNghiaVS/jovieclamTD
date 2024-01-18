@@ -97,29 +97,40 @@
 
 
 .head {
-    padding: 20px ;
+    padding:20px 20px ;
     background-color: var(--bs-primary);
 }
 
 .head .title-dashboard {
-    font-size: 18px;
+    font-size: 17px;
     text-align: center;
     color: white;
-    
+    margin-bottom: 0;
 }
-.company-account-information {
+
+.company-account-information, .company-account-operation {
     list-style-type: none;
-    padding: 10px;
+    padding-left: 0;
 }
-.company-account-information li {
+.company-account-information li,.company-account-operation li{
     display: flex;
     border-bottom: 1px solid #f5f5f5;
     padding: 20px 20px;
 }
-.company-account-information li p {
-    margin-right: 10px;
-    font-size: 17px;
+
+.company-account-information li .number {
+    margin-right: 15px;
+    font-size: 19px;
     color: var(--bs-primary);
+}
+.company-account-operation li .time time {
+    font-size: 14px;
+    font-weight: 400;
+
+}
+.company-account-information li .title , .company-account-operation li .title{
+    font-size: 14px;
+    font-weight: 400;
 }
 #spinner-wrapper {
     position: fixed;

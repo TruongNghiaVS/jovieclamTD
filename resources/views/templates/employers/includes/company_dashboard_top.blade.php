@@ -30,7 +30,9 @@
                     <div class="body" bis_skin_checked="1">
                         <ul class="company-account-information">
                             <li>
-                                Chưa có điểm xem hồ sơ
+                                <a href="#" class="title">
+                                    Chưa có điểm xem hồ sơ
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -75,9 +77,16 @@
                         <h2 class="title-dashboard">Lịch sử hoạt động</h2>
                     </div>
                     <div class="body" bis_skin_checked="1">
-                        <ul class="company-account-information">
-                            <li>
-                                Chưa có dữ liệu
+                        <ul class="company-account-operation">
+                            <li class="flex-column">
+                                <p class="time">
+                                    <time>06/10/2023</time>
+                                </p>
+                                <a href="#" class="title">
+                                    ID#: 1641617 - Code:  - Title: IT (Step 1)
+
+                                    Post from: CB.VN
+                                </a>
                             </li>
                         </ul>
                   
