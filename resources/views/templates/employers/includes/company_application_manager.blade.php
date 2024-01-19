@@ -113,7 +113,7 @@
                                 <a role="button" onClick="submitUpdateNoteApplication({{ $value->id }});" class="dropdown-item"  data-toggle="modal" data-target="#modalReviewApplicationNote">Ghi chú</a> 
 
                              
-                                <a role="button" download href="{{'http://localhost:8000/'.'cvs/'.$value->user->getDefaultCv()->cv_file}}" target="_blank" class="dropdown-item">Tải CV</a>
+                                <a role="button" download href="{{'http://jobvieclam.com/'.'cvs/'.$value->user->getDefaultCv()->cv_file}}" target="_blank" class="dropdown-item">Tải CV</a>
                                 <a role="button" href="javascript:void(0)" class="dropdown-item public-profile-toggle"
                                     data-user="{{$value->user->id}}" data-job="{{$value->job->id}}"
                                    data-name="{{$value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name}}">
@@ -211,7 +211,7 @@
 
             if(user_id > 0){
                 $('#candidate-profile-modal-title').html($('#candidate-profile-modal-title').html() + ' - ' + user_name);
-                $('#candidate-profile-modal .modal-body').html(`<iframe src="http://localhost:8000/xem-ho-so-cv/${user_id}" title="description"></iframe>`);
+                $('#candidate-profile-modal .modal-body').html(`<iframe src="http://jobvieclam.com/xem-ho-so-cv/${user_id}" title="description"></iframe>`);
                 $('#candidate-profile-modal').modal('show').trigger('focus');
             }
         });

@@ -174,7 +174,7 @@
         <div class="row align-items-start " bis_skin_checked="1">
             <div class="col-md-6 col-lg-4 mb-4 " bis_skin_checked="1">
                 <div class="figure" bis_skin_checked="1">
-                    <a href="http://localhost:8000/blog/cau-chuyn-chn-ngh" class="figure-images"><img src="https://contenthub-static.grammarly.com/blog/wp-content/uploads/2017/11/how-to-write-a-blog-post.jpeg" alt=""></a>
+                    <a href="http://jobvieclam.com/blog/cau-chuyn-chn-ngh" class="figure-images"><img src="https://contenthub-static.grammarly.com/blog/wp-content/uploads/2017/11/how-to-write-a-blog-post.jpeg" alt=""></a>
                     <div class="figcaption" bis_skin_checked="1">
                         <h3 class="figcaption__category-name"><a href="#">KỸ NĂNG CÔNG SỞ</a></h3>
                         <div class="figcaption__title" bis_skin_checked="1"><a href="#">Flex là gì? Làm sao thoát flexing đồng nghiệp hay

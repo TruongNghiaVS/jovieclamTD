@@ -42,7 +42,7 @@
                                 <!-- Title  End-->
     
                                 <!-- companyName Start-->
-                                <div class="info-item companyName" bis_skin_checked="1"><a href="http://localhost:8000/company/cong-ty-co-phan-incom-sai-gon-9" title="{{$company->name}}">{{$company->name}}</a>
+                                <div class="info-item companyName" bis_skin_checked="1"><a href="http://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9" title="{{$company->name}}">{{$company->name}}</a>
                                 </div>
                                 <!-- companyName End-->
                                 <!--rank-salary and place Start-->
