@@ -53,7 +53,7 @@
     position: relative;
     top: 0;
     left: 0;
-    padding-top: 30%;
+    padding-top: 66.666%;
   }
 
   .header-bar .header-bar-bg {
@@ -72,6 +72,15 @@
     left: 0;
     height: 100%;
   }
+
+  .slider-hero-banner .bg-slider {
+    min-height: 100%;
+    min-width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  
+} 
 
   .employer-number-impressive .list-number li .number span, .employer-number-impressive .list-number li .number p {
     font-size: 21px !important;
