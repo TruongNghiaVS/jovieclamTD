@@ -4,7 +4,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="item">
                     <div class="image loadAds">
-                        <a href="http://localhost:8000/">
+                        <a href="http://jobvieclam.com/">
                             <img src="https://elca.vietnamworks.com/assets/images/page/banner/cover.png?r=1689852315" alt="#">
                         </a>
                     </div>
@@ -13,7 +13,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="item">
                     <div class="image loadAds">
-                        <a href="http://localhost:8000/">
+                        <a href="http://jobvieclam.com/">
                             <img src="https://elca.vietnamworks.com/assets/images/page/banner/cover.png?r=1689852315" alt="#">
                         </a>
                     </div>
@@ -22,7 +22,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="item">
                     <div class="image loadAds">
-                        <a href="http://localhost:8000/">
+                        <a href="http://jobvieclam.com/">
                             <img src="https://elca.vietnamworks.com/assets/images/page/banner/cover.png?r=1689852315" alt="#">
                         </a>
                     </div>
@@ -31,7 +31,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="item">
                     <div class="image loadAds">
-                        <a href="http://localhost:8000/">
+                        <a href="http://jobvieclam.com/">
                             <img src="https://elca.vietnamworks.com/assets/images/page/banner/cover.png?r=1689852315" alt="#">
                         </a>
                     </div>

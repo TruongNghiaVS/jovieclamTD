@@ -4,7 +4,7 @@
 @include('templates.employers.includes.header')
 <!-- Header end -->
 <!-- Inner Page Title start -->
-<section class="hero-banner-company-profile" style="background-image: url(http://localhost:8000/vietstar/imgs/company-cover.jpg);"></section>
+<section class="hero-banner-company-profile" style="background-image: url(http://jobvieclam.com/vietstar/imgs/company-cover.jpg);"></section>
 
 
 <section class="cb-section about-us-section ">

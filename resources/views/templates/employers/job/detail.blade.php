@@ -434,9 +434,9 @@ $company = $job->getCompany();
                     <div class="related-jobs-wapper jobs-side-list">
                         <div class="related-jobs-item item-job mb-3">
                             <div class="logo-company">
-                                <a href="http://localhost:8000/company/cong-ty-co-phan-incom-sai-gon-9"
+                                <a href="http://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9"
                                     title="Công Ty Cổ Phần Incom Sài Gòn" class="pic">
-                                    <img src="http://localhost:8000\company_logos/-1692007134-455.png"
+                                    <img src="http://jobvieclam.com\company_logos/-1692007134-455.png"
                                         style="max-width:140px; max-height:140px;" alt="Công Ty Cổ Phần Incom Sài Gòn"
                                         title="Công Ty Cổ Phần Incom Sài Gòn">
                                 </a>
@@ -449,17 +449,17 @@ $company = $job->getCompany();
                                         <div class="job-title" bis_skin_checked="1">
                                             <span>Mới</span>
                                             <h3 class="job-title-name"><a
-                                                    href="http://localhost:8000/job/nhan-vien-bat-dong-san-40"
+                                                    href="http://jobvieclam.com/job/nhan-vien-bat-dong-san-40"
                                                     title="Nhân viên bất động sản">Nhân viên bất động sản</a></h3>
                                         </div>
                                         @if(Auth::check() && Auth::user()->isFavouriteJob($job->slug))
                                         <a class="save-job active"
-                                            href="http://localhost:8000/add-to-favourite-job/nhan-vien-bat-dong-san-40"><i
+                                            href="http://jobvieclam.com/add-to-favourite-job/nhan-vien-bat-dong-san-40"><i
                                                 class="far fa-heart"></i>
                                         </a>
                                         @else
                                         <a class="save-job"
-                                            href="http://localhost:8000/add-to-favourite-job/nhan-vien-bat-dong-san-40"><i
+                                            href="http://jobvieclam.com/add-to-favourite-job/nhan-vien-bat-dong-san-40"><i
                                                 class="far fa-heart"></i>
                                         </a>
                                         @endif
@@ -468,7 +468,7 @@ $company = $job->getCompany();
 
                                     <!-- companyName Start-->
                                     <div class="info-item companyName" bis_skin_checked="1"><a
-                                            href="http://localhost:8000/company/cong-ty-co-phan-incom-sai-gon-9"
+                                            href="http://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9"
                                             title="Công Ty Cổ Phần Incom Sài Gòn">Công Ty Cổ Phần Incom Sài Gòn</a>
                                     </div>
                                     <!-- companyName End-->
@@ -526,9 +526,9 @@ $company = $job->getCompany();
 
                         <div class="related-jobs-item item-job mb-3">
                             <div class="logo-company">
-                                <a href="http://localhost:8000/company/cong-ty-co-phan-incom-sai-gon-9"
+                                <a href="http://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9"
                                     title="Công Ty Cổ Phần Incom Sài Gòn" class="pic">
-                                    <img src="http://localhost:8000\company_logos/-1692007134-455.png"
+                                    <img src="http://jobvieclam.com\company_logos/-1692007134-455.png"
                                         style="max-width:140px; max-height:140px;" alt="Công Ty Cổ Phần Incom Sài Gòn"
                                         title="Công Ty Cổ Phần Incom Sài Gòn">
                                 </a>
@@ -541,11 +541,11 @@ $company = $job->getCompany();
                                         <div class="job-title" bis_skin_checked="1">
                                             <span>Mới</span>
                                             <h3 class="job-title-name"><a
-                                                    href="http://localhost:8000/job/nhan-vien-bat-dong-san-40"
+                                                    href="http://jobvieclam.com/job/nhan-vien-bat-dong-san-40"
                                                     title="Nhân viên bất động sản">Nhân viên bất động sản</a></h3>
                                         </div>
                                         <a class="save-job"
-                                            href="http://localhost:8000/add-to-favourite-job/nhan-vien-bat-dong-san-40"><i
+                                            href="http://jobvieclam.com/add-to-favourite-job/nhan-vien-bat-dong-san-40"><i
                                                 class="far fa-heart"></i>
                                         </a>
                                     </div>
@@ -553,7 +553,7 @@ $company = $job->getCompany();
 
                                     <!-- companyName Start-->
                                     <div class="info-item companyName" bis_skin_checked="1"><a
-                                            href="http://localhost:8000/company/cong-ty-co-phan-incom-sai-gon-9"
+                                            href="http://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9"
                                             title="Công Ty Cổ Phần Incom Sài Gòn">Công Ty Cổ Phần Incom Sài Gòn</a>
                                     </div>
                                     <!-- companyName End-->
