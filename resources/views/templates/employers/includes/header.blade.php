@@ -36,15 +36,7 @@
                     {{--<li>
                         <a href="{{ route('job.list') }}" class="nav-link {{ Request::url() == route('job.list') || strpos(Request::url(),'/job/') > 0 ? 'header-active' : 'text-main-color' }}" style="{{ Request::url() == route('job.list')  || strpos(Request::url(),'job') ? 'color:#981B1E;' : '' }}">{{__('Jobs')}}</a>
                     </li>--}}
-                    <!--  <li>
-                        <a href="{{ route('products-services') }}" class="nav-link {{ Request::url() == route('products-services') ? 'header-active' : 'text-main-color' }}"
-                        style="{{ Request::url() == route('products-services')   ? 'color:#981B1E;' : '' }}">{{__('Products and Services')}}</a>
-                    </li> -->
-                    <!--  <li>
-                        <a href="{{ route('vietnam-salary') }}" class="nav-link {{ Request::url() == route('vietnam-salary')  ? 'header-active' : 'text-main-color' }}"
-                        style="{{ Request::url() == route('vietnam-salary')  ? 'color:#981B1E;' : '' }}">{{__('Vietnam Salary')}}</a>
-                    </li> -->
-                 
+                   
                     
                     <!-- NEW STAR -->
                     <li>
@@ -84,11 +76,11 @@
                     style="{{ Request::url() == route('cms', $top_menu->page_slug)  ? 'color:#981B1E;' : '' }}">{{ $cmsContent->page_title }}</a>
                     </li>
                     @endforeach --}}
-                    {{-- 
+                
                         <li class="has-child">
                         <a href="#" class="nav-link nav-link-parent" {{ Request::url() == route('blogs') ? 'header-active' : 'text-main-color' }}" style="{{ Request::url() == route('blogs')  ? 'color:#981B1E;' : '' }}">{{__('Blog')}}
                         </a>
-                        @php($categories = \App\Blog_category::get())
+                        @php($categories = \App\Blog_category::where("typePost" , "1")->get())
                         <button type="button" class="btn-show-sub-menu" data-ref="findJob_blog" data-target="false"><span class="iconmoon icon-p-next"></span></button>
                         <ul class="sub-menu" data-ref="findJob_blog" data-target="false">
                             @foreach($categories as $category)
@@ -100,7 +92,7 @@
                             @endforeach
                         </ul>
                     </li> 
-                    --}}
+                
 
                     <li><a href="{{ route('contact.us') }}"
                             class="nav-link  {{ Request::url() == route('contact.us') ? 'header-active' : 'text-main-color' }}"

@@ -166,6 +166,7 @@ class CompanyController extends Controller
             'request' => $request->all(),
             'log_seen' => $request->log_seen ? $request->log_seen : null,
         ];
+        
         return view(config('app.THEME_PATH').'.application_manager', $data);
     }
 

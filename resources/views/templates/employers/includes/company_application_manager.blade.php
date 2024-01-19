@@ -1,3 +1,4 @@
+
 <div class="table-content">
     <div class="p-3 mt-2 d-flex justify-content-between ">
             <div class="text-muted">
@@ -110,12 +111,13 @@
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a role="button" onClick="submitUpdateApplication({{ $value->id }});" class="dropdown-item" data-toggle="modal" data-target="#modalReviewApplication">Đổi trạng thái CV</a> 
                                 <a role="button" onClick="submitUpdateNoteApplication({{ $value->id }});" class="dropdown-item"  data-toggle="modal" data-target="#modalReviewApplicationNote">Ghi chú</a> 
+
+                             
                                 <a role="button" download href="{{'http://localhost:8000/'.'cvs/'.$value->user->getDefaultCv()->cv_file}}" target="_blank" class="dropdown-item">Tải CV</a>
-                                <a role="button" href="#" class="dropdown-item public-profile-toggle"
+                                <a role="button" href="javascript:void(0)" class="dropdown-item public-profile-toggle"
                                     data-user="{{$value->user->id}}" data-job="{{$value->job->id}}"
-                                   data-name="{{$value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name}}"
-                                
-                                >Xem CV</a>
+                                   data-name="{{$value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name}}">
+                                   Xem CV</a>
                             
                             </div>
                         </td>
@@ -141,7 +143,7 @@
     <div class="modal-dialog modal-lg modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="candidate-profile-modal-title">{{__('Candidate public profile')}}</h5>
+                <h5 class="modal-title" id="candidate-profile-modal-title">{{__('Candidate public profile')}} </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span class="iconmoon icon-recruiter-close"></span>
                 </button>
@@ -209,7 +211,7 @@
 
             if(user_id > 0){
                 $('#candidate-profile-modal-title').html($('#candidate-profile-modal-title').html() + ' - ' + user_name);
-                $('#candidate-profile-modal .modal-body').html(`<iframe src="http://localhost:8001/xem-ho-so-cv/138" title="description"></iframe>`);
+                $('#candidate-profile-modal .modal-body').html(`<iframe src="http://localhost:8000/xem-ho-so-cv/${user_id}" title="description"></iframe>`);
                 $('#candidate-profile-modal').modal('show').trigger('focus');
             }
         });
