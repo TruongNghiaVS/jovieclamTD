@@ -2,7 +2,9 @@
     <div class="header-bar-bg">
         <div class="swiper slider-hero-banner">
             @php
-            $sliders = \App\Slider::where("type",1)->select([
+            $sliders = \App\Slider::where("type",1)
+            ->where("lang","vi")
+            ->select([
             'sliders.id', 'sliders.slider_id',
             'sliders.is_active','sliders.used_for','sliders.slider_image','sliders.slider_image_mobile'
             ])->sorted()->get();
