@@ -239,7 +239,7 @@
                 }
                 })
                 .done(function(data){
-                    hideSpinner();
+                    
 
                     // setTimeout(function() { 
                     //     alert(data.message)
