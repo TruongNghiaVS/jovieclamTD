@@ -5245,17 +5245,17 @@ div#industry_id_chosen {
 }
 
 .form-user-profile .img-avatar {
-    height: 120px;
-    width: 120px;
+  
+    width:200px;
     position: relative;
-    border-radius: 50%;
+  
    
 }
 .form-user-profile .img-avatar .img-avatar__wrapper{
-    height: 120px;
-    width: 120px;
+  
+    width: 200px;
     overflow: hidden;
-    border-radius: 50%;
+
 }
 .card-bio .img-avatar__wrapper {
     display: flex;

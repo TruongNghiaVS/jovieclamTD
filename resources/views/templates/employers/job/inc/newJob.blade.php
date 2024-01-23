@@ -112,14 +112,14 @@
                                 <div class="col-md-12" id="salary_from_dd" style="display:none;">
                                     <div class="form-group">
                                         <label for="salary_from" class="font-weight-bold fs-18px">{{__('Salary From')}} </label>
-                                        <input type="text" class="form-control currency-mask" id="salary_from" placeholder="{{__('Salary From')}}" value="{{ $edit ? __($job->salary_from) : old('salary_from') }}" required>
+                                        <input type="text" class="form-control currency-mask" id="salary_from" placeholder="{{__('Salary From')}}" value="{{ $edit ? __($job->salary_from) : old('salary_from') }}">
                                         {!! APFrmErrHelp::showErrors($errors, 'salary_from') !!}
                                     </div>
                                 </div>
                                 <div class="col-md-12" id="salary_to_dd" style="display:none;">
                                     <div class="form-group">
                                         <label for="salary_range" class="font-weight-bold fs-18px">{{__('Salary To')}} </label>
-                                        <input type="text" class="form-control currency-mask" id="salary_to" placeholder="{{__('Salary To')}}" value="{{ $edit ? __($job->salary_to) : old('salary_to') }}" required>
+                                        <input type="text" class="form-control currency-mask" id="salary_to" placeholder="{{__('Salary To')}}" value="{{ $edit ? __($job->salary_to) : old('salary_to') }}">
                                         {!! APFrmErrHelp::showErrors($errors, 'salary_to') !!}
                                     </div>
                                 </div>
@@ -498,26 +498,26 @@
         var tagsArray = [];
 
         // Add a new task to the list
-        $("#addButton").click(function () {
-            var todoText = $("#addtag").val();
+        $("#new-job-form #addButton").click(function () {
+            var todoText = $("#new-job-form #addtag").val();
             if (todoText !== "") {
                 var listItem = $("<span>").addClass("box-meta").text(todoText);
                 listItem.append('<i class="fa-solid fa-xmark mx-2 text-primary"></i>');
                 
                 
-                $("#todoList").append(listItem);
+                $("#new-job-form #todoList").append(listItem);
 
                 tagsArray.push(todoText);
 
                 // Update the hidden input field with the array of tags
-                $("#tagsInput").val(JSON.stringify(tagsArray));
+                $("#new-job-form #tagsInput").val(JSON.stringify(tagsArray));
 
-                $("#addtag").val("");
+                $("#new-job-form #addtag").val("");
             }
         });
 
         // Remove a task from the list when clicked
-        $("#todoList").on("click", "span", function () {
+        $("#edit_front_job #todoList").on("click", "span", function () {
             $(this).remove();
         });
     });

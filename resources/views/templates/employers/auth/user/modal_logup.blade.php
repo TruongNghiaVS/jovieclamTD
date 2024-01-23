@@ -16,7 +16,7 @@
 
                         <div class="formrow{{ $errors->has('name') ? ' has-error' : '' }}">
 
-                            <input type="text" name="name" class="form-control" required="required" placeholder="{{__('Name')}}" value="{{old('name')}}">
+                            <input type="text" name="name" class="form-control" required="required" placeholder="Tên Công Ty" value="{{old('name')}}">
 
                            
                                 <div class="invalid-feedback name-error">

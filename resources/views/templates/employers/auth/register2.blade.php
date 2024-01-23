@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-8 col-sm-12" bis_skin_checked="1">
-                <div class="box-info-signup forgot-password" id="login" bis_skin_checked="1">
+                <div class="box-info-signup forgot-password" id="logup" bis_skin_checked="1">
                     <div class="title" bis_skin_checked="1">
                         <h2 class="text-primary"> {{__('Register')}}</h2>
                     </div>
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="main-form" bis_skin_checked="1">
-                        <form class="form-horizontal needs-validation" id="formLogin2" novalidate>
+                        <form class="form-horizontal needs-validation" id="formLogup2" novalidate>
                             {{ csrf_field() }}
                             <input type="hidden" name="candidate_or_employer" value="employer">
                             <div class="form-group d-flex" bis_skin_checked="1">
@@ -238,21 +238,21 @@
 
 $(document).ready(function() {
     
-    $('#formLogin2').submit(function(event) {
+    $('#formLogup2').submit(function(event) {
         var passwordValue = $('#company_passId2').val();
         var confirmPasswordValue = $('#company_comfirmId2').val();
 
         var isValid = true;
         event.preventDefault()
         // Check each input field for emptiness
-        $('#formLogin2 input').each(function() {
+        $('#formLogup2 input').each(function() {
             if (!$(this).val()) {
                 isValid = false;
                 $(this).addClass('is-invalid');
               
             }
         });
-        $("#formLogin2").find(":input").prop("disabled", false);
+        $("#formLogup2").find(":input").prop("disabled", false);
         if (!isValid) {
             event.preventDefault(); // Prevent the form from submitting
         }
@@ -310,11 +310,11 @@ $(document).ready(function() {
                     console.log(responseObject.error);
                 if(responseObject.error) {
                     responseObject.error.forEach(err => {
-                        $(`#formLogin2 .invalid-feedback.${err.key}-error`).text(err.textError)
-                        $(`#formLogin2 .invalid-feedback.${err.key}-error`).addClass('has-error')
-                        $(`#formLogin2 input[name*='${err.key}']`).addClass('has-error')
+                        $(`#formLogup2 .invalid-feedback.${err.key}-error`).text(err.textError)
+                        $(`#formLogup2 .invalid-feedback.${err.key}-error`).addClass('has-error')
+                        $(`#formLogup2 input[name*='${err.key}']`).addClass('has-error')
                         
-                        // $(`#formLogin2 .invalid-feedback.${err.key}-error`).append(err.textError)
+                        // $(`#formLogup2 .invalid-feedback.${err.key}-error`).append(err.textError)
                      
                     }) 
                 }
@@ -354,7 +354,7 @@ $(document).ready(function() {
     });
 
     // Remove validation class on input change
-    $('#formLogin2 input').on('input', function() {
+    $('#formLogup2 input').on('input', function() {
         $(this).removeClass('is-invalid');
         $(this).removeClass('has-error');
     });
