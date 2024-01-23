@@ -17,7 +17,7 @@
 							
                             
 							@if(Auth::guard('company')->check())
-							<li class="nav-item"><a href="{{url('/job-seekers')}}" class="nav-link">{{__('Seekers')}}</a> </li>
+							<li class="nav-item"><a href="{{url('/tim-ung-vien')}}" class="nav-link">{{__('Seekers')}}</a> </li>
 							@else
 							<li class="nav-item"><a href="{{url('/jobs')}}" class="nav-link">{{__('Jobs')}}</a> </li>
 							@endif

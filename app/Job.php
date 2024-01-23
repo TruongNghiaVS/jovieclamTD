@@ -84,9 +84,16 @@ class Job extends Model
         if($interview_status != null) {
             $interviews = $interviews->where('interview_status', $interview_status);
         }
-
         return $interviews;
     }
+    public function getCoundApplyUser($status = null) {
+        $applyUsers = $this->appliedUsers;
+        if($status != null) {
+            $applyUsers = $applyUsers->where('status', $status);
+        }
+        return $applyUsers->count();
+    }
+    
 
     public function getJobSkillsStr()
     {

@@ -18,7 +18,7 @@ Route::post('job/publish', 'Job\JobPublishController@publishJob')->name('store.p
 Route::get('edit-front-job/{id}', 'Job\JobPublishController@editFrontJob')->name('edit.front.job');
 Route::put('update-front-job/{id}', 'Job\JobPublishController@updateFrontJob')->name('update.front.job');
 Route::delete('delete-front-job', 'Job\JobPublishController@deleteJob')->name('delete.front.job');
-Route::get('job-seekers', 'Job\JobSeekerController@jobSeekersBySearch')->name('job.seeker.list');
+Route::get('tim-ung-vien', 'Job\JobSeekerController@jobSeekersBySearch')->name('job.seeker.list');
 
 Route::post('submit-message', 'Job\SeekerSendController@submit_message')->name('submit-message');
 

@@ -1089,7 +1089,7 @@ class CompanyController extends Controller
             }
             return redirect()->back();
         } else {
-            return redirect('/company-packages');
+            return redirect('/don-hang');
         }
     }
     function addtoString($str, $item)
