@@ -1,7 +1,7 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 @section('content')
 <!-- Header start -->
-@include('templates.vietstar.includes.header')
+@include('templates.employers.includes.header')
 <!-- Header end -->
 <!-- Inner Page Title start -->
 
@@ -13,7 +13,7 @@
 
 @include('templates.vietstar.includes.blog', ['dataDraw' => $data])
 
-@include('templates.vietstar.includes.footer')
+@include('templates.employers.includes.footer')
 @endsection
 @push('styles')
 <style>

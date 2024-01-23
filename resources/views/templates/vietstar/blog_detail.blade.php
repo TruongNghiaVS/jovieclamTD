@@ -1,13 +1,10 @@
 @extends('templates.vietstar.layouts.app')
 @section('content')
 
-@if(Auth::guard('company')->check())
-<!-- Header start -->
-@include('templates.employers.includes.header')
-<!-- Header end -->
-@else
+
+
 @include('templates.vietstar.includes.header')
-@endif
+
 
 <!-- Inner Page Title start -->
 <!-- Inner Page Title end -->
@@ -43,33 +40,7 @@
 </div>
 </div>
 
-<div class="col-lg-3">
 
-    <div class="sidebar">
-        <!-- Search -->
-        <div class="widget">
-            <h5 class="widget-title">{{__('Search')}}</h5>
-            <div class="search">
-                <form action="{{route('blog-search')}}" method="GET">
-                    <input type="text" class="form-control" placeholder="{{__('Search')}}" name="search">
-                    <button type="submit" class="btn"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
-        <!-- Categories -->
-        @if(null!==($categories))
-        <div class="widget">
-            <h5 class="widget-title">{{__('Categories')}}</h5>
-            <ul class="categories">
-                @foreach($categories as $category)
-                <li><a href="{{url('/blog/category/').'/'.$category->slug}}">{{$category->heading}}</a>
-                </li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
-    </div>
-</div>
 </div>
 </div>
 </section>
@@ -79,7 +50,7 @@
 <section class="">
     <div class="container">
 
-        <h3 class="section-title aline-left mb-3">{{__('Related post')}}</h3>
+        <h3 class="section-title aline-left mb-3">{{__('Related post')}} </h3>
         <div class="blogwrapper">
             <div class="blogList">
                 <div class="row">
@@ -127,7 +98,7 @@
     
         ?>
         <div class="row align-items-start">
-            <div class="col-lg-12 m-15px-tb">
+            <div class="col-lg-9">
                 <article class="article">
                     <div class="article-title">
                         <h6><a href="#">KỸ NĂNG CÔNG SỞ</a></h6>
@@ -154,14 +125,45 @@
                         <a href="#">Research</a>
                         <a href="#">Managment</a>
                     </div> -->
+
+
+                    @if($blog->authorPost != null)
+
                     <div class="media">
                             <div class="media-body">
-                                <label>Phạm Thị Thu Hiền</label>
+                                <label>{{$blog->authorPost}}</label>
                             </div>
                         </div>
+                        @endif
                 </article>
 
             </div>
+            <div class="col-lg-3">
+                <div class="sidebar my-3">
+                            <!-- Search -->
+                            <div class="widget my-2">
+                                <h5 class="widget-title">{{__('Search')}}</h5>
+                                <div class="search py-3">
+                                    <form action="{{route('blog-search')}}" method="GET">
+                                        <input type="text" class="form-control blog-search-input" placeholder="{{__('Search')}}" name="search">
+                                        <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Categories -->
+                            @if(null!==($categories))
+                            <div class="widget my-2">
+                                <h5 class="widget-title">{{__('Categories')}}</h5>
+                                <ul class="categories">
+                                    @foreach($categories as $category)
+                                    <li><a href="{{url('/blog/category/').'/'.$category->slug}}">{{$category->heading}}</a>
+                                    </li>
+                                    @endforeach
+                        </ul>
+                    </div>
+                    @endif
+    </div>
+</div>
         </div>
     </div>
 
@@ -170,42 +172,24 @@
     </div>
 
     <div class="container">
-        <h3 class="section-title aline-left mb-3">{{__('Related post')}}</h3>
+        <h3 class="section-title aline-left mb-3">{{__('Related post')}} </h3>
         <div class="row align-items-start " bis_skin_checked="1">
+           
+          @foreach($blogRelations as $itemRe)
             <div class="col-md-6 col-lg-4 mb-4 " bis_skin_checked="1">
                 <div class="figure" bis_skin_checked="1">
-                    <a href="http://jobvieclam.com/blog/cau-chuyn-chn-ngh" class="figure-images"><img src="https://contenthub-static.grammarly.com/blog/wp-content/uploads/2017/11/how-to-write-a-blog-post.jpeg" alt=""></a>
+                    <a href="/blog/{{$itemRe->slug}}" class="figure-images">
+                        
+                    <img src="/uploads/blogs/{{$itemRe->image}}" alt=""></a>
                     <div class="figcaption" bis_skin_checked="1">
-                        <h3 class="figcaption__category-name"><a href="#">KỸ NĂNG CÔNG SỞ</a></h3>
-                        <div class="figcaption__title" bis_skin_checked="1"><a href="#">Flex là gì? Làm sao thoát flexing đồng nghiệp hay
-                                khoe khoang?</a></div>
+                        <h3 class="figcaption__category-name"><a href="/blog/category/{{$blog_relateion->slug}}"> {{$blog_relateion->heading}} </a></h3>
+                        <div class="figcaption__title" bis_skin_checked="1"><a href="/blog/{{$itemRe->slug}}">{{$itemRe->heading}}</a></div>
 
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 mb-4 " bis_skin_checked="1">
-                <div class="figure" bis_skin_checked="1">
-                    <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/08/do-loi.jpg" alt=""></a>
-                    <div class="figcaption" bis_skin_checked="1">
-                        <h3 class="figcaption__category-name"><a href="#">KỸ NĂNG CÔNG SỞ</a></h3>
-                        <div class="figcaption__title" bis_skin_checked="1"><a href="#">Tìm việc trực tuyến an toàn và cảnh
-                                giác trước
-                                các công việc nhẹ lương cao</a></div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4 " bis_skin_checked="1">
-                <div class="figure" bis_skin_checked="1">
-                    <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/08/ket-ban-voi-dong-nghiep.jpg" alt=""></a>
-                    <div class="figcaption" bis_skin_checked="1">
-                        <h3 class="figcaption__category-name"><a href="#">THỊ TRƯỜNG LAO ĐỘNG</a></h3>
-                        <div class="figcaption__title" bis_skin_checked="1"><a href="#">Những nguyên tắc ngầm khi giao tiếp, kết bạn với
-                                đồng nghiệp nơi công sở </a></div>
-
-                    </div>
-                </div>
-            </div>
+            @endforeach
+      
         </div>
     </div>
 
@@ -453,8 +437,7 @@
         }
 
         .blog-single {
-            padding-top: 30px;
-            padding-bottom: 30px;
+            
         }
 
         .article {
@@ -739,6 +722,12 @@
             -ms-transform: rotate(45deg);
             -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
+        }
+        .blog-search-input {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
         }
     </style>
     @endpush

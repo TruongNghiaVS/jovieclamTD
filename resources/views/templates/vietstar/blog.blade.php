@@ -8,10 +8,7 @@
 <!-- Dashboard start -->
 @include('templates.vietstar.includes.mobile_dashboard_menu')
 <!-- Dashboard end -->
-
 @include('templates.vietstar.includes.blog')
-
-
 @include('templates.vietstar.includes.footer')
 @endsection
 @push('styles')
