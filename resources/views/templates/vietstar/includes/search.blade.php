@@ -6,7 +6,7 @@
             'sliders.id', 'sliders.slider_id',
             'sliders.is_active','sliders.used_for','sliders.slider_image','sliders.slider_image_mobile'
             ])->sorted()->get();
-            dd($sliders);
+           
             @endphp
             <div class="swiper-wrapper">
                 @foreach($sliders as $slider)
