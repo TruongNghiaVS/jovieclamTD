@@ -147,11 +147,11 @@
                                
                                 <th class="font-weight-bold p-2" >Lượt nộp</th>
                                 <th class="font-weight-bold p-2"  >{{ __('Interview Candidates') }}</th>
-                                <th class="font-weight-bold p-2"  >{{ __('List of Hired Candidates') }}</th>
+                                <th class="font-weight-bold p-2"  >{{ __('List of Hired Candidates') }} </th>
                                 <th class="font-weight-bold p-2"  >{{ __('List of Rejected Candidates') }}</th>
-                               
+                                @if(Request::get('status') == 2)
                                 <th class="font-weight-bold p-2 text-center"  >{{ __('Post Job') }}</th>
-                                
+                                @endif
                                 <th class="font-weight-bold p-2"  >{{ __('Action') }}</th>
     
                             @endif
@@ -256,38 +256,28 @@
                                 
                                 <td>
                                     <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                        {{ $job->appliedUsers->count() }} 
+                                        {{ $job->getCoundApplyUser() }} 
                                     </div>
                                 </td>
     
                                 <td>
                                     <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                        {{ $job->getStatusInterview()->count() }}
+                                        {{ $job->getCoundApplyUser(3) }}
                                     </div>
                                 </td>
     
                                 <td>
                                     <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                        {{ $job->getStatusInterview(3)->count() }}
+                                        {{ $job->getCoundApplyUser(5) }}
                                     </div>
                                 </td>
     
                                 <td>
                                     <div class="d-flex align-items-center justify-content-center h-100 fs-18px">
-                                        {{ $job->getStatusInterview(4)->count() }}
+                                        {{ $job->getCoundApplyUser(6) }}
                                     </div>
                                 </td>
                              
-                                @if($job->status == 2)
-                                    <td>
-                                        <a href="javascript:void(0)" class="d-flex align-items-center justify-content-center h-100 fs-18px cursor-pointer" onclick="updateJob({{ $job->id }})">
-                                            <i class="fa-solid fa-upload p-2"></i>
-                                        </a>
-                                    </td>
-                                @else
-                                     <td></td> 
-                                @endif
-    
                                 <td>
                                     <div class="d-flex">
                                         <a href="{{url('/')}}/edit-front-job/{{$job->id}}">
