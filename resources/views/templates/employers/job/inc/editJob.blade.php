@@ -12,7 +12,15 @@ else
 {
     $test =  json_decode($job->tags);
 }
-
+$arrayBenefic = [];
+if($job->benefit_id == '')
+{
+    $arrayBenefic =  [];
+}
+else 
+{
+    $arrayBenefic =  json_decode($job->benefit_id);
+}
 ?>
 
 <div class="card card-edit-profile">
@@ -226,42 +234,42 @@ else
 </div>
 
 <div class="card card-edit-profile my-3" id="benefit_section">
-        <h2 class="fs-4 card-edit-profile__section">PHÚC LỢI</h2>
+        <h2 class="fs-4 card-edit-profile__section">PHÚC LỢI </h2>
         <div class="card-body">
                         <div class="row" bis_skin_checked="1">
                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
-                                        <input type="checkbox" class="big-checkbox" id="benefit_id_2" name="benefit_id[]" value="2" checked="checked">
+                                        <input type="checkbox" class="big-checkbox" id="benefit_id_2" name="benefit_id[]" value="2" >
                                         <label for="benefit_id_2"> <em class="fa fa-medkit"></em>Chế độ bảo hiểm</label>
                                     </div>
                                 </div>
                                                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
-                                        <input type="checkbox" class="" id="benefit_id_3" name="benefit_id[]" value="3" checked="checked">
+                                        <input type="checkbox" class="" id="benefit_id_3" name="benefit_id[]" value="3" >
                                         <label for="benefit_id_3"> <em class="fa fa-plane"></em>Du Lịch</label>
                                     </div>
                                 </div>
                                                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
-                                        <input type="checkbox" class="" id="benefit_id_8" name="benefit_id[]" value="8" checked="checked">
+                                        <input type="checkbox" class="" id="benefit_id_8" name="benefit_id[]" value="8" >
                                         <label for="benefit_id_8"> <em class="fa fa-usd"></em>Chế độ thưởng</label>
                                     </div>
                                 </div>
                                                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
-                                        <input type="checkbox" class="" id="benefit_id_9" name="benefit_id[]" value="9" checked="checked">
+                                        <input type="checkbox" class="" id="benefit_id_9" name="benefit_id[]" value="9" >
                                         <label for="benefit_id_9"> <em class="fa fa-user-md"></em>Chăm sóc sức khỏe</label>
                                     </div>
                                 </div>
                                                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
-                                        <input type="checkbox" class="" id="benefit_id_10" name="benefit_id[]" value="10" checked="checked">
+                                        <input type="checkbox" class="" id="benefit_id_10" name="benefit_id[]" value="10" >
                                         <label for="benefit_id_10"> <em class="fa fa-graduation-cap"></em>Đào tạo</label>
                                     </div>
                                 </div>
                                                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
-                                        <input type="checkbox" class="" id="benefit_id_11" name="benefit_id[]" value="11" checked="checked">
+                                        <input type="checkbox" class="" id="benefit_id_11" name="benefit_id[]" value="11" >
                                         <label for="benefit_id_11"> <em class="fa fa-line-chart"></em>Tăng lương</label>
                                     </div>
                                 </div>
@@ -573,9 +581,26 @@ else
     });
 </script>
 <script>
+
+
+ var arayPhucLoi = {!! json_encode($arrayBenefic) !!};
+ setTimeout(() => {
+    for (let index = 0; index < arayPhucLoi.length; index++) {
+        const element = arayPhucLoi[index];
+
+        document.getElementById("benefit_id_"+element).checked = true;
+        
+    }
+ }, 1000);
+
+
+
   window.addEventListener('DOMContentLoaded',function () {
     document.getElementById("gender{{$job->gender_id}}").checked = true;
     document.getElementById("jobtype{{$job->job_type_id}}").checked = true;
+    
+   
+
 });
 </script>
 @endpush

@@ -101,6 +101,18 @@ use AuthenticatesUsers;
                       ->first();  
         $error = array();
 
+        if($exitMemeber->verified != 1)
+        {
+            $itemError = new stdClass();
+            $itemError->key ="password";
+            $itemError->textError = "Tài khoản chưa được kích hoạt, vui lòng kiểm tra mail và kích hoạt. Rồi đăng nhập lại. ";
+            array_push($error, $itemError);
+            return response()->json([
+                'sucess'=>false,
+                'error'=> $error ], 401);
+        }
+
+
         if(!$exitMemeber)
         {
             $itemError = new stdClass();

@@ -116,8 +116,7 @@ class JobPublishController extends Controller
     public function storeFrontJob(JobFrontFormRequest $request)
     {
 
-        
- 
+
         $company = Auth::guard('company')->user();
         $job = new Job();
 
@@ -207,6 +206,16 @@ class JobPublishController extends Controller
 
       
         $job = Job::findOrFail($id);
+
+        if($request->has('tags'))
+        {
+             $job->tags =   $request->input('tags')[0];
+        }
+
+        if($request->has('benefit_id'))
+        { 
+            $job->benefit_id =   json_encode( $request->input('benefit_id'));
+        }
 		
         $job->title = $request->input('title');
         $job->description = $request->input('description');
@@ -252,14 +261,14 @@ class JobPublishController extends Controller
         $job->job_type_id = $request->input('job_type_id');
         $job->job_shift_id = $request->input('job_shift_id') ?? Null;
         $job->num_of_positions = $request->input('num_of_positions') ?? null;
-        $job->gender_id = $request->input('gender_id');
+    
         $job->expiry_date = \Carbon\Carbon::parse($request->input('expiry_date'))->format('Y-m-d');
         $job->degree_level_id = $request->input('degree_level_id') ?? Null;
         $job->job_experience_id = $request->input('job_experience_id');
         $job->salary_period_id = $request->input('salary_period_id') ?? null;
 
         $job->location = $request->input('location') ?? null;
- 
+        $job->gender_id = $request->input('gender');
         $job->save();
   
         /*         * ************************************ */
@@ -318,12 +327,14 @@ class JobPublishController extends Controller
 
        
         if($request->has('tags'))
-        { 
-
-            // $arrayRequest=   json_decode($request->input('tags')[0], true);
-            $job->tags =   $request->input('tags')[0];
+        {
+             $job->tags =   $request->input('tags')[0];
         }
-      
+
+        if($request->has('benefit_id'))
+        { 
+            $job->benefit_id =   json_encode( $request->input('benefit_id'));
+        }
         $job->title = $request->input('title');
         $job->address = $request->input('location');
         $job->description = $request->input('description');
