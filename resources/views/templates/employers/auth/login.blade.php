@@ -307,10 +307,14 @@
 
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
+                    hideSpinner();
+
                     console.log(responseObject.error);
         
                 },
                 401: function(responseObject, textStatus, jqXHR) {
+                    hideSpinner();
+
                     // No content found (404)
                     console.log(responseObject.responseJSON);
                     responseObject.responseJSON.error.forEach(err => {
@@ -323,6 +327,8 @@
                     // This code will be executed if the server returns a 404 response
                 },
                 503: function(responseObject, textStatus, errorThrown) {
+                    hideSpinner();
+
                     // Service Unavailable (503)
                     console.log(responseObject.error);
 
@@ -404,6 +410,8 @@
             
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
+                    hideSpinner();
+
                     console.log(responseObject.error);
                 if(responseObject.error) {
                     responseObject.error.forEach(err => {
@@ -417,16 +425,22 @@
                 }
                 },
                 404: function(responseObject, textStatus, jqXHR) {
+                    hideSpinner();
+
                     // No content found (404)
                     // This code will be executed if the server returns a 404 response
                 },
                 503: function(responseObject, textStatus, errorThrown) {
+                    hideSpinner();
+
                     // Service Unavailable (503)
                     // This code will be executed if the server returns a 503 response
                 }           
                 }
                 })
                 .done(function(data){
+                    hideSpinner();
+
                     if (data.sucess == true) {
                         showModal_Success('Đăng nhập', `${data.message ? data.message :"Đăng ký thành công"}`, `${ data.urlRedirect ?  data.urlRedirect : "/dashboard"}`);
                         setTimeout(function(){

@@ -171,10 +171,14 @@
             },
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
+                    hideSpinner();
+
                     console.log(responseObject.error);
         
                 },
                 400: function(responseObject, textStatus, jqXHR) {
+                    hideSpinner();
+
                     // No content found (400)
                     if(responseObject.responseJSON.error){
 
@@ -191,6 +195,8 @@
                     // This code will be executed if the server returns a 404 response
                 },
                 503: function(responseObject, textStatus, errorThrown) {
+                    hideSpinner();
+
                     // Service Unavailable (503)
                     console.log(responseObject.error);
 

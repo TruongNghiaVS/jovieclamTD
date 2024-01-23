@@ -79,17 +79,19 @@
 
       $('#reset_submitBtn').on('click',()=>{
           if ($('#pwdId').val()) {
-                  showSpinner();
+          
                     // Simulating an AJAX POST request
                     $.ajax({
                         url:  `{{ route('update.company.updatePassword') }}`,
                         type: 'post',
+                        beforeSend: showSpinner(),
                         data:  {
                             _token: '{{ csrf_token() }}',
                             password:$('#pwdId').val(),
                         },
                     
                         success: function (response) {
+                          hideSpinner();
                           
                             if (response.sucess) {
                               $("#user_info").modal("hide");
@@ -102,6 +104,8 @@
                         },
                         error: function (xhr, status, error) {
                             // Handle error
+                            hideSpinner();
+
                             console.error('Error uploading avatar:', error);
                         },
                         complete: function() {

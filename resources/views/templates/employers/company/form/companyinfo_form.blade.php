@@ -309,8 +309,7 @@
         
         
         $("#submit_company_info").click(()=>{
-          showSpinner();
-          console.log(formData);
+       
           if(formData){
             $.ajaxSetup({
                 headers: {
@@ -321,9 +320,10 @@
                 url: `{{ route('update.company.profile') }}`,
                 type: 'post',
                 data: formData,
+                beforeSend:showSpinner(),
                 success: function(response) {
            
-                    hideSpinner()
+                    hideSpinner();
                     if (response) {
                     
                         $('#company_info').modal("hide");
@@ -334,7 +334,8 @@
                     }
                 },
                 error: function(xhr, status, error) {
-                  hideSpinner()
+                  hideSpinner();
+
                     // Handle error
                 },
                 complete: function() {
