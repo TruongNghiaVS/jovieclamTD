@@ -278,16 +278,22 @@ $(document).ready(function() {
             },
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
+                    hideSpinner();
+
                     console.log(responseObject.error);
         
                 },
                 401: function(responseObject, textStatus, jqXHR) {
+                    hideSpinner();
+
                     // No content found (404)
                     console.log(responseObject.responseJSON);
                     
                     // This code will be executed if the server returns a 404 response
                 },
                 503: function(responseObject, textStatus, errorThrown) {
+                    hideSpinner();
+
                     // Service Unavailable (503)
                     console.log(responseObject.error);
 
@@ -296,6 +302,8 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
+                    hideSpinner();
+
                     $('#contact_success').modal('show');
                     $('#contactform')[0].reset();
 

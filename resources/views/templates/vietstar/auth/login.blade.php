@@ -289,10 +289,14 @@
 
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
+                    hideSpinner();
+
                     console.log(responseObject.error);
         
                 },
                 401: function(responseObject, textStatus, jqXHR) {
+                    hideSpinner();
+
                     // No content found (404)
                     console.log(responseObject.responseJSON);
                     responseObject.responseJSON.error.forEach(err => {
@@ -304,6 +308,8 @@
                     // This code will be executed if the server returns a 404 response
                 },
                 503: function(responseObject, textStatus, errorThrown) {
+                    hideSpinner();
+
                     // Service Unavailable (503)
                     console.log(responseObject.error);
 
@@ -312,6 +318,8 @@
                 }
                 })
                 .done(function(data){
+                    hideSpinner();
+
                     // setTimeout(function() { 
                     //     alert(data.message)
                     // }, 2000);

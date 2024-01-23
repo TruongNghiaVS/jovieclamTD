@@ -185,23 +185,31 @@
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
                     console.log(responseObject.error);
+                    hideSpinner();
+
         
                 },
                 400: function(responseObject, textStatus, jqXHR) {
                     // No content found (400)
                     console.log(responseObject.responseJSON);
+                    hideSpinner();
+
                 
                     // This code will be executed if the server returns a 404 response
                 },
                 503: function(responseObject, textStatus, errorThrown) {
                     // Service Unavailable (503)
                     console.log(responseObject.error);
+                    hideSpinner();
+
 
                     // This code will be executed if the server returns a 503 response
                 }           
                 }
                 })
                 .done(function(data){
+                    hideSpinner();
+
                 
                     if(data.sucess){
                         window.location.href = "{{route('company.login')}}";

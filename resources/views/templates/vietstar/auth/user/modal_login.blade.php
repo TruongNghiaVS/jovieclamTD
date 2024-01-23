@@ -227,10 +227,14 @@ $(document).ready(function() {
 
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
+                    hideSpinner();
+
                     console.log(responseObject.error);
         
                 },
                 401: function(responseObject, textStatus, jqXHR) {
+                    hideSpinner();
+
                     // No content found (404)
                     console.log(responseObject.responseJSON);
                     responseObject.responseJSON.error.forEach(err => {
@@ -242,6 +246,8 @@ $(document).ready(function() {
                     // This code will be executed if the server returns a 404 response
                 },
                 503: function(responseObject, textStatus, errorThrown) {
+                    hideSpinner();
+
                     // Service Unavailable (503)
                     console.log(responseObject.error);
 
@@ -250,6 +256,8 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
+                    hideSpinner();
+
                     $("#login_success").addClass("show")
                     $("#user_login_Modal").css("display:none")
                     $("#user_login_Modal").removeClass("show")
