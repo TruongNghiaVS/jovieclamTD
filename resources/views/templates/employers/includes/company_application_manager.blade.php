@@ -34,7 +34,6 @@
                     @if(count($userApply) > 0)
                     @foreach($userApply as $value)
 
-                   
                     <tr class="cv viewed">
                         <td>
                             <div class="d-flex align-items-center">
@@ -54,11 +53,13 @@
                         
                         <td>
                             <div class="fullname">
-                                <a href="#" role="button" class="font-weight-bold text-dark text-primary-hover text-capitalize public-profile-toggle"
-                                   data-user="{{$value->user->id}}" data-job="{{$value->job->id}}"
-                                   data-name="{{$value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name}}">
-                                   {{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name }}
-                                </a>
+                 
+
+
+                                <a role="button" href="javascript:void(0)"  class="font-weight-bold text-dark text-primary-hover text-capitalize public-profile-toggle"
+                                    onclick="showModal_candidate('{{ $value->user->id }}', '{{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name  }}');">
+                                    {{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name }}
+                                    </a>
                             </div>
                             <div class="mb-2">
                                 <span class="badge badge-secondary badge-default transparent-1 font-weight-normal">{{ $value->seen == 1 ? 'Đã xem' : 'Chưa xem' }}</span>
@@ -116,10 +117,13 @@
 
                              
                                 <a role="button" download href="{{'http://jobvieclam.com/'.'cvs/'.$value->user->getDefaultCv()->cv_file}}" target="_blank" class="dropdown-item">Tải CV</a>
-                                <a role="button" href="javascript:void(0)" class="dropdown-item public-profile-toggle"
-                                    data-user="{{$value->user->id}}" data-job="{{$value->job->id}}"
-                                   data-name="{{$value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name}}">
-                                   Xem CV</a>
+                            
+
+
+                                   <a role="button" href="javascript:void(0)" class="dropdown-item public-profile-toggle"
+                                    onclick="showModal_candidate('{{ $value->user->id }}', '{{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name  }}');">
+                                                    <!-- Rest of your code here -->Xem cv
+                                    </a>
                             
                             </div>
                         </td>
@@ -203,21 +207,7 @@
 @push('scripts')
 <script>
     $(document).ready(function(){
-        $('.public-profile-toggle').on('click',function(e){
-            e.preventDefault();
-            var user_id = $(this).attr('data-user');
-            var job_id = $(this).attr('data-job');
-            var user_name = $(this).attr('data-name');
-            
-
-
-            if(user_id > 0){
-                $('#candidate-profile-modal-title').html($('#candidate-profile-modal-title').html() + ' - ' + user_name);
-                $('#candidate-profile-modal .modal-body').html(`<iframe src="http://jobvieclam.com/xem-ho-so-cv/${user_id}" title="description"></iframe>`);
-                $('#candidate-profile-modal').modal('show').trigger('focus');
-            }
-        });
-
+    
         $('.job-details').on('click',function(e){
             e.preventDefault();
             var job_slug= $(this).attr('data-job-slug');

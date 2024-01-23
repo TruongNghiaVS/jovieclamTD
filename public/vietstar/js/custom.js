@@ -81,6 +81,24 @@ function hideSpinner() {
 }
 
 
+function showModal_candidate(user_id,user_name) {
+    $('#candidate-profile-modal-title').empty();
+    $('#candidate-profile-modal .modal-body').empty();
+
+    if(user_id > 0){
+        $('#candidate-profile-modal-title').html($('#candidate-profile-modal-title').html() + 'Hồ sơ - ' + user_name);
+        $('#candidate-profile-modal .modal-body').html(`<iframe src="http://localhost:8000/xem-ho-so-cv/${user_id}" title="description"></iframe>`);
+        $('#candidate-profile-modal').modal('show').trigger('focus');
+    }
+
+
+}
+
+
+
+
+
+
 
 
 
