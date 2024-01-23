@@ -14,7 +14,7 @@
              
             
                     <li class="nav-item {{ Request::url() == route('posted.jobs') ? 'active' : '' }}">
-                        <a href="/posted-jobs?status=1" class="nav-link list-group-item-action ">
+                        <a href="/quan-ly-dang-tuyen?status=1" class="nav-link list-group-item-action ">
                           
                                 {{__('Company\'s Posted Jobs')}}
                            

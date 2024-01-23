@@ -11,10 +11,10 @@
                         <ul class="company-account-information">
                             
                             <li>
-                                <p class="number orderNew">1</p><a class="title" href="/company-packages">Đơn hàng đang sử dụng</a>
+                                <p class="number orderNew">1</p><a class="title" href="/don-hang">Đơn hàng đang sử dụng</a>
                             </li>
                             <li>
-                                <p class="number JskNew">{{ $dashboarOverview->candidateCount}}</p><a class="title" href="/application-manager">Ứng viên ứng tuyển</a>
+                                <p class="number JskNew">{{ $dashboarOverview->candidateCount}}</p><a class="title" href="/quan-ly-ung-vien">Ứng viên ứng tuyển</a>
                             </li>
                         </ul>
                     </div>
