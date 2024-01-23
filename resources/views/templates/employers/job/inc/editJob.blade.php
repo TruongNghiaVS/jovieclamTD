@@ -345,7 +345,7 @@ else
                     <label for="Gender" class="font-weight-bold fs-18px">{{__('Gender')}} </label>
                     <div class="d-flex">
                      <div class="form-check m-2">
-                            <input class="form-check-input" type="radio" value ="3"  name="gender" id="gender3" >
+                            <input class="form-check-input" type="radio" value ="3"  name="gender" id="gender3"  checked="checked">
                             <label class="form-check-label" for="gender1">
                                 Nam/ Nữ
                             </label>
@@ -484,9 +484,9 @@ else
   
 
         <button  id="scrollBtn" class="btn btn-croll-top m-2" type="button" >Lên trên đầu  </button>
-        @if($job->status == "2")
+
         <button class="btn btn-lg btn-primary m-2" type="submit" id="">Cập nhật </button>
-        @endif
+
     
     </div>
 </div>
@@ -544,6 +544,7 @@ else
     font-size: 17px; 
     margin: 0 8px;
 }
+
 </style>
 @endpush
 
