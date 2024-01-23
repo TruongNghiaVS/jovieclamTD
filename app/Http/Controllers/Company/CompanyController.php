@@ -84,17 +84,19 @@ class CompanyController extends Controller
         
     
         $jobs = Job::where("company_id",$companyActive->id);
+   
         
-        $coutJobComplete =    $jobs->where("status",1)->count();
-        $coutJobWatiting =    $jobs->where("status",2)->count();
-        $coutJobPause =    $jobs->where("status",3)->count();
-        $coutJobExprise =    $jobs->where("status",4)->count();
-    
+        $coutJobComplete =    $jobs->clone()->where("status",1)->count();
+        $coutJobWatiting =     $jobs->clone()->where("status",2)->count();
+        $coutJobPause =     $jobs->clone()->where("status",3)->count();
+        $coutJobExprise =    $jobs->clone()->where("status",4)->count();
+      
         $dashboarOverview = new \stdClass();
         $dashboarOverview->TotalJobPublish =  $coutJobComplete;
         $dashboarOverview->TotalJobWatiting =  $coutJobWatiting;
         $dashboarOverview->TotalJobPause =  $coutJobPause;
         $dashboarOverview->TotalJobExprise =  $coutJobExprise;
+        $dashboarOverview->TotalPublished =  $coutJobComplete;
         $countFavourite =  FavouriteCompany::where('company_slug', 'like', $companyActive->slug)->count();  
         $jobs = Job::where("company_id",$companyActive->id)
                     ->orderBy('jobs.created_at', 'desc')
