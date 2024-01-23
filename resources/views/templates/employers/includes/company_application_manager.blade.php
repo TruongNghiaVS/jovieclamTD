@@ -34,7 +34,7 @@
                     @if(count($userApply) > 0)
                     @foreach($userApply as $value)
 
-                    
+                   
                     <tr class="cv viewed">
                         <td>
                             <div class="d-flex align-items-center">
@@ -42,8 +42,10 @@
                                     style="width: 40px; height: 40px; flex: 0 0 40px; background-image: url();">
                                     @php
                                         $candidate_image = $value->user->image ? $value->user->image :"no-image.png";
+                                       
                                     @endphp
                                     <div class="image-candidate">
+                                        
                                     {{ ImgUploader::print_image("user_images/$candidate_image") }}
                                     </div>
                                 </div>

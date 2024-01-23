@@ -21,6 +21,7 @@ else
 {
     $arrayBenefic =  json_decode($job->benefit_id);
 }
+
 ?>
 
 <div class="card card-edit-profile">
@@ -344,7 +345,7 @@ else
                     <label for="Gender" class="font-weight-bold fs-18px">{{__('Gender')}} </label>
                     <div class="d-flex">
                      <div class="form-check m-2">
-                            <input class="form-check-input" type="radio" value ="3"  name="gender" id="gender3" >
+                            <input class="form-check-input" type="radio" value ="3"  name="gender" id="gender3"  checked="checked">
                             <label class="form-check-label" for="gender1">
                                 Nam/ Nữ
                             </label>
@@ -468,7 +469,7 @@ else
                         @endif
                         
                     </div>
-                    <input type="hidden" name="tags[]" id="tagsInput">
+                    <input type="hidden" name="tags[]" id="tagsInput" value="{{ json_encode($test) }}">
                 </div>
 
          
@@ -484,7 +485,7 @@ else
 
         <button  id="scrollBtn" class="btn btn-croll-top m-2" type="button" >Lên trên đầu  </button>
 
-            <button class="btn btn-lg btn-primary m-2" type="submit" id="">Cập nhật </button>
+        <button class="btn btn-lg btn-primary m-2" type="submit" id="">Cập nhật </button>
 
     
     </div>
@@ -543,6 +544,7 @@ else
     font-size: 17px; 
     margin: 0 8px;
 }
+
 </style>
 @endpush
 
@@ -553,12 +555,14 @@ else
 
 
  $(document).ready(function () {
-        var tagsArray = [];
+        var tagsArray = {!! json_encode($test) !!};
 
         // Add a new task to the list
         $("#edit_front_job #addButton").click(function () {
+            
             var todoText = $("#edit_front_job #addtag").val();
-            if (todoText !== "") {
+            if (todoText !== "" && !tagsArray.includes(todoText)) {
+           
                 var listItem = $("<span>").addClass("box-meta").text(todoText);
                 listItem.append('<i class="fa-solid fa-xmark mx-2 text-primary"></i>');
                 
@@ -572,11 +576,20 @@ else
 
                 $("#edit_front_job #addtag").val("");
             }
+            else {
+                alert("Tag bị trùng lặp");
+            }
+           
         });
 
         // Remove a task from the list when clicked
         $("#edit_front_job #todoList").on("click", "span", function () {
+            var removedItem = $(this).text().trim();
+            tagsArray = tagsArray.filter(item => item !== removedItem);
             $(this).remove();
+
+            // Update the hidden input field with the updated array of tags
+            $("#edit_front_job #tagsInput").val(JSON.stringify(tagsArray));
         });
     });
 </script>
