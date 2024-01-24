@@ -17,17 +17,17 @@
         </div>
     <div class="card-body">
         <div class="table-responsive ">
-            <table class="table table-applican-manager table-hover mb-0 border-0">
+            <table class="table table-applican-manager table-hover mb-0 border-0" id="table-applican-manager">
                 <thead>
                     <tr>
-                        <th class="font-weight-bold" colspan="2">{{ __('Candidate') }}</th>
+                        <th class="font-weight-bold" >{{ __('Candidate') }}</th>
                         <!-- <th class="font-weight-bold"></th> -->
                         <th class="font-weight-bold">{{ __('Recruitment Bulletin') }}</th>
                         <th class="font-weight-bold">{{ __('Candidate Detail') }}</th>
                         <th class="font-weight-bold">{{ __('Date Application') }}</th>
 
                         <th class="font-weight-bold">{{ __('Status') }}</th>
-                        <th></th>
+                        <th class="not-export-column">{{ __('Action') }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,7 +38,7 @@
                         <td>
                             <div class="d-flex align-items-center">
                                 <div class="rounded-circle avatar "
-                                    style="width: 40px; height: 40px; flex: 0 0 40px; background-image: url();">
+                                    style="width: 50px; height: 50px; flex: 0 0 60px; background-image: url();">
                                     @php
                                         $candidate_image = $value->user->image ? $value->user->image :"no-image.png";
                                        
@@ -48,23 +48,17 @@
                                     {{ ImgUploader::print_image("user_images/$candidate_image") }}
                                     </div>
                                 </div>
+                                <div class="fullname">     
+                                    <a role="button" href="javascript:void(0)"  class="font-weight-bold text-dark text-primary-hover text-capitalize public-profile-toggle"
+                                        onclick="showModal_candidate('{{ $value->user->id }}', '{{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name  }}');">
+                                        {{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name }}
+                                    </a>
+                                </div>
+                                
                             </div>
                         </td>
                         
-                        <td>
-                            <div class="fullname">
-                 
-
-
-                                <a role="button" href="javascript:void(0)"  class="font-weight-bold text-dark text-primary-hover text-capitalize public-profile-toggle"
-                                    onclick="showModal_candidate('{{ $value->user->id }}', '{{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name  }}');">
-                                    {{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name }}
-                                    </a>
-                            </div>
-                            <div class="mb-2">
-                                <span class="badge badge-secondary badge-default transparent-1 font-weight-normal">{{ $value->seen == 1 ? 'Đã xem' : 'Chưa xem' }}</span>
-                            </div>
-                        </td>
+                     
                         <td>
                             <a class="text-gray text-truncate has-tooltip job-details"
                                 data-original-title="null" style="max-width: 150px;" data-job-slug="{{$value->job->slug}}"
@@ -90,11 +84,6 @@
                         </td>
                         <td class="align-top text-gray">
                             <div class="insights text-muted">
-                                <div>
-                                    <span style="cursor: pointer;">
-                                    <i class="iconmoon icon-recruiter-suitcase"></i>
-                                        Ứng tuyển
-                                    </span></div>
                                 <div>
                                     <span style="cursor: pointer;">
                                         <i class="iconmoon icon-calendar-icon1"></i> {{ \Carbon\Carbon::parse($value->created_at)->format('Y-m-d H:i') }}
@@ -202,10 +191,61 @@
         max-height: 90%;
         height: 90%;
     }
+
+    .dt-buttons .btn-outline-primary span
+    {
+        color: var(--bs-primary);
+    }
+
+    .dt-buttons .btn-outline-primary:hover span {
+        color: white;
+    }
+
+    .table-content .card-body {
+        padding: 1rem 1rem;
+    }
+    
+    
 </style>
 @endpush
 @push('scripts')
 <script>
+function EuToUsCurrencyFormat(input) {
+	return input.replace(/[,.]/g, function(x) {
+		return x == "," ? "." : ",";
+	});
+}
+
+$(document).ready(function() {
+	//Only needed for the filename of export files.
+	//Normally set in the title tag of your page.
+	document.title = 'DataTable Excel';
+	// DataTable initialisation
+	$('#table-applican-manager').DataTable({
+		"dom": '<"dt-buttons"Bf><"clear">lirtp',
+		"paging": false,
+		"autoWidth": true,
+        bFilter: false, bInfo: false,
+        
+		"buttons": [{
+            extend: 'excelHtml5',
+            text: '<i class="fa-solid fa-download  m-1 "></i> Xuất file</button>',
+            titleAttr: 'Xuất file',
+            className: 'btn btn-outline-primary btn-sm text-primary m-2',
+            "exportOptions": {
+                columns: ":not(.not-export-column)"
+            }
+		}],
+        
+
+	});
+});
+
+
+
+
+
+
     $(document).ready(function(){
     
         $('.job-details').on('click',function(e){

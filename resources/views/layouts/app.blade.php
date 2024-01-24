@@ -72,6 +72,8 @@ if (!isset($seo)) {
         type="text/javascript"></script>
     <script src="{{ asset('/') }}admin_assets/global/plugins/Bootstrap-3-Typeahead/bootstrap3-typeahead.min.js"
         type="text/javascript"></script>
+    <script src="{{ asset('/') }}admin_assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
+
     <!-- END PAGE LEVEL PLUGINS -->
     <script src="{{ asset('/') }}admin_assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript">
     </script>
