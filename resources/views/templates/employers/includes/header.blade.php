@@ -38,12 +38,7 @@
                     </li>--}}
                    
                     
-                    <!-- NEW STAR -->
-                    <li>
-                        <a class="nav-link " href="#" style="">{{__('News')}}</a>
-                    </li>
-                    <!-- NEW END -->
-
+                  
 
                     {{--<li class="has-child">
                         <a href="{{route('company.listing')}}" class="nav-link">{{__('Company')}}</a>

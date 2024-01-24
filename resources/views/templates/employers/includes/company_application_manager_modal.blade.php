@@ -45,6 +45,66 @@
                             class="form-control p-3"></textarea>
                     </div>
 
+                    <ul class="timeline">
+                        <li class="timeline-inverted">
+                        <div class="timeline-badge">1</div>
+                        <div class="timeline-panel">
+                            <div class="d-flex justify-content-around">
+                            <div class="timeline-heading">
+                                <h4 class="timeline-title">CV tiếp nhận</h4>
+                                <p>Tiếp nhận</p>
+                            </div>
+                            <div class="timeline-clock">
+                                <p><i class="glyphicon glyphicon-time"></i>3 ngày</p>
+                            </div>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="timeline-inverted">
+                        <div class="timeline-badge">2</div>
+                        <div class="timeline-panel">
+                            <div class="d-flex justify-content-around">
+                            <div class="timeline-heading">
+                                <h4 class="timeline-title">Phù hợp</h4>
+                                <p>Đáp ứng yêu cầu</p>
+                            </div>
+                            <div class="timeline-clock">
+                                <p><i class="glyphicon glyphicon-time"></i> 2 ngày</p>
+                            </div>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="timeline-inverted">
+                        <div class="timeline-badge">3</div>
+                        <div class="timeline-panel">
+                            <div class="d-flex justify-content-around">
+                            <div class="timeline-heading">
+                                <h4 class="timeline-title">Hẹn phỏng vấn</h4>
+                                <p>Ngày phỏng vấn 24/01/2024</p>
+                            </div>
+                            <div class="timeline-clock">
+                                <p><i class="glyphicon glyphicon-time"></i> 3 phút </p>
+                            </div>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="timeline-inverted">
+                        <div class="timeline-badge">4</div>
+                        <div class="timeline-panel">
+                            <div class="d-flex justify-content-around">
+                            <div class="timeline-heading">
+                                <h4 class="timeline-title">Nhận việc</h4>
+                                <p>Từ chối</p>
+                            </div>
+                            <div class="timeline-clock">
+                                <p><i class="glyphicon glyphicon-time"></i> 1 phút</p>
+                            </div>
+                            </div>
+                        </div>
+                        </li>
+                    
+                    </ul>
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ bỏ</button>

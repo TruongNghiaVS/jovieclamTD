@@ -105,25 +105,9 @@
             </li>
         </ul>
         <div class="border">
-            <div class="p-2 action-posting">
-                <div class="left">
-                    <button type="button" onclick="exportFile()" class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-download  m-2"></i>{{ __('Export file') }}</button>
-                </div>
-                <div class="right">
-                    <div class="form-group m-0">
-                            <label for="show-table">{{__('Show')}}</label>
-                        <select class="form-control-sm " id="show-table">
-                            <option>10</option>
-                            <option>20</option>
-                            <option>30</option>
-                            <option>40</option>
-                            <option>50</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+           
             <div class="table-responsive table-content">
-                <table class="table table-applican-manager table-hover mb-0 border-0 ">
+                <table class="table table-applican-manager table-hover mb-0 border-0 " id="company_posted_tb">
                     <thead>
                         <tr>
                             @if(Request::get('status') == 2)
@@ -152,7 +136,7 @@
                                 @if(Request::get('status') == 2)
                                 <th class="font-weight-bold p-2 text-center"  >{{ __('Post Job') }}</th>
                                 @endif
-                                <th class="font-weight-bold p-2"  >{{ __('Action') }}</th>
+                                <th class="font-weight-bold p-2 not-export-column"  >{{ __('Action') }}</th>
     
                             @endif
                         </tr>
@@ -370,6 +354,17 @@
     .cursor-pointer {
         cursor: pointer;
     }
+    .dt-buttons .btn-outline-primary span
+    {
+        color: var(--bs-primary);
+    }
+
+    .dt-buttons .btn-outline-primary:hover span {
+        color: white;
+    }
+    .table-content .card-body {
+        padding: 1rem 1rem;
+    }
     
 
   
@@ -379,6 +374,40 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 
 <script type="text/javascript">
+
+function EuToUsCurrencyFormat(input) {
+	return input.replace(/[,.]/g, function(x) {
+		return x == "," ? "." : ",";
+	});
+}
+
+$(document).ready(function() {
+	//Only needed for the filename of export files.
+	//Normally set in the title tag of your page.
+	document.title = 'DataTable Excel';
+	// DataTable initialisation
+	$('#company_posted_tb').DataTable({
+		"dom": '<"dt-buttons"Bf><"clear">lirtp',
+		"paging": false,
+		"autoWidth": true,
+        bFilter: false, bInfo: false,
+        
+		"buttons": [{
+            extend: 'excel',
+            text: '<i class="fa-solid fa-download  m-1 "></i> Xuất file</button>',
+            titleAttr: 'Xuất file',
+            className: 'btn btn-outline-primary btn-sm text-primary m-2',
+            "exportOptions": {
+                columns: ":not(.not-export-column)"
+            }
+		}],
+
+       
+	});
+});
+
+
+
     function deleteJob(id) {
         console.log(id);
         var msg = 'Are you sure?';
