@@ -2178,7 +2178,6 @@ h3.seekertxt span {
 .figure {
 	width: 100%;
 	background: #ffffff;
-    height: 276px;
 	overflow: hidden;
 }
 
@@ -2201,6 +2200,7 @@ h3.seekertxt span {
 
 .figcaption {
 	padding: 20px;
+	height: 160px;
 }
 
 .figcaption__category-name a {
