@@ -1,85 +1,8 @@
 @extends('templates.employers.layouts.app')
 @section('content')
-
-<!-- Header start -->
 @include('templates.employers.includes.header')
-<!-- Header end -->
-
-
-
 @include('templates.employers.includes.mobile_dashboard_menu')
-
-<!-- Inner Page Title start -->
-<!-- Inner Page Title end -->
-<!-- <a class="btn btn-primary applyCV-btn" href="http://jobvieclam.com/login#cvs">Nộp CV</a> -->
 @include('flash::message')
-
-<!-- <form action="{{route('job.seeker.list')}}" method="get"> -->
-<!-- Page Title start -->
-<!-- <div class="pageSearch">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-2">
-                    @if(Auth::guard('company')->check())
-                    <a href="{{ route('post.job') }}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i>
-                        {{__('Post Job')}}</a>
-                    @else
-                    <a href="{{url('my-profile#cvs')}}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i>
-                        {{__('Upload Your Resume')}}</a>
-                    @endif
-
-                </div>
-                <div class="col-lg-10">
-                    <div class="searchform">
-                        <div class="row">
-                            <div class="col-md-{{((bool)$siteSetting->country_specific_site)? 5:3}}">
-                                <input type="text" name="search" value="{{Request::get('search', '')}}"
-                                    class="form-control" placeholder="{{__('Enter Skills or job seeker details')}}" />
-                            </div>
-                            <div class="col-md-2"> {!! Form::select('functional_area_id[]', ['' => __('Lựa chọn Bộ phận
-                                chức năng')]+$functionalAreas, Request::get('functional_area_id', null),
-                                array('class'=>'form-control', 'id'=>'functional_area_id')) !!} </div>
-
-
-                            @if((bool)$siteSetting->country_specific_site)
-                            {!! Form::hidden('country_id[]', Request::get('country_id[]',
-                            $siteSetting->default_country_id), array('id'=>'country_id')) !!}
-                            @else
-                            <div class="col-md-2">
-                                {!! Form::select('country_id[]', ['' => __('Select Country')]+$countries,
-                                Request::get('country_id', $siteSetting->default_country_id),
-                                array('class'=>'form-control', 'id'=>'country_id')) !!}
-                            </div>
-                            @endif
-
-                            <div class="col-md-2">
-                                <span id="state_dd">
-                                    {!! Form::select('state_id[]', ['' => __('Select State')], Request::get('state_id',
-                                    null), array('class'=>'form-control', 'id'=>'state_id')) !!}
-                                </span>
-                            </div>
-                            <div class="col-md-2">
-                                <span id="city_dd">
-                                    {!! Form::select('city_id[]', ['' => __('Select City')], Request::get('city_id',
-                                    null), array('class'=>'form-control', 'id'=>'city_id')) !!}
-                                </span>
-                            </div>
-                            <div class="col-md-1">
-                                <button type="submit" class="btn"><i class="fa fa-search"
-                                        aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-<!-- Page Title end -->
-<!-- </form> -->
-
-<!-- Dashboard menu start -->
-
-<!-- Dashboard menu end -->
 @include('templates.employers.user.inc.filters_job_wrapper')
 <div class="job-seekers-page listpgWraper">
 

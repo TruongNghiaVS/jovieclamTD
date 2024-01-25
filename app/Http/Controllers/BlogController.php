@@ -68,7 +68,7 @@ class BlogController extends Controller
         ->where('lang', 'like', \App::getLocale())
         ->take(3)
         ->get();
-    
+        
       
         $data['blog_categories'] = Blog_category::where("typePost" , "1")->get();
         $data['blog_relateion'] = Blog_category::where("id", $data['blog']->cate_id)->first();

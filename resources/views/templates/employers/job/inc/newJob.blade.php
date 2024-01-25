@@ -178,37 +178,37 @@
                         <div class="row" bis_skin_checked="1">
                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
-                                        <input type="checkbox" class="big-checkbox" id="benefit_id_2" name="benefit_id[]" value="2" checked="checked">
+                                        <input type="checkbox" class="big-checkbox" id="benefit_id_2" name="benefit_id[]" value="2" >
                                         <label for="benefit_id_2"> <em class="fa fa-medkit"></em>Chế độ bảo hiểm</label>
                                     </div>
                                 </div>
                                                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
-                                        <input type="checkbox" class="" id="benefit_id_3" name="benefit_id[]" value="3" checked="checked">
+                                        <input type="checkbox" class="" id="benefit_id_3" name="benefit_id[]" value="3" >
                                         <label for="benefit_id_3"> <em class="fa fa-plane"></em>Du Lịch</label>
                                     </div>
                                 </div>
                                                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
-                                        <input type="checkbox" class="" id="benefit_id_8" name="benefit_id[]" value="8" checked="checked">
+                                        <input type="checkbox" class="" id="benefit_id_8" name="benefit_id[]" value="8" >
                                         <label for="benefit_id_8"> <em class="fa fa-usd"></em>Chế độ thưởng</label>
                                     </div>
                                 </div>
                                                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
-                                        <input type="checkbox" class="" id="benefit_id_9" name="benefit_id[]" value="9" checked="checked">
+                                        <input type="checkbox" class="" id="benefit_id_9" name="benefit_id[]" value="9" >
                                         <label for="benefit_id_9"> <em class="fa fa-user-md"></em>Chăm sóc sức khỏe</label>
                                     </div>
                                 </div>
-                                                                <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
+                             <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
-                                        <input type="checkbox" class="" id="benefit_id_10" name="benefit_id[]" value="10" checked="checked">
+                                        <input type="checkbox" class="" id="benefit_id_10" name="benefit_id[]" value="10" >
                                         <label for="benefit_id_10"> <em class="fa fa-graduation-cap"></em>Đào tạo</label>
                                     </div>
                                 </div>
                                                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
-                                        <input type="checkbox" class="" id="benefit_id_11" name="benefit_id[]" value="11" checked="checked">
+                                        <input type="checkbox" class="" id="benefit_id_11" name="benefit_id[]" value="11" >
                                         <label for="benefit_id_11"> <em class="fa fa-line-chart"></em>Tăng lương</label>
                                     </div>
                                 </div>
