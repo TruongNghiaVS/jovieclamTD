@@ -15,19 +15,21 @@
             @include('flash::message')
             @include('templates.employers.includes.company_dashboard_top')
             @include('templates.employers.includes.company_dashboard_stats')
-           
+            {{--
                 <?php
          
             if((bool)config('company.is_company_package_active')){     
                    
              
               ?> 
+
+
             <?php if(null !== $package){ ?>
 
             @include('templates.employers.includes.company_package_msg')
-          
+         
             @include('templates.employers.includes.company_packages_upgrade')
-            
+         
           
             <?php }
             elseif(null !== $packages){ ?>
@@ -37,6 +39,7 @@
             <?php }} 
             
             ?>
+            --}}
            
         </div>
     

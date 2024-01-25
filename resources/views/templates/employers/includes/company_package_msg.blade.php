@@ -1,4 +1,5 @@
-<div class="instoretxt">
+
+<div class="instoretxt" >
     <div class="posted-manager-header" bis_skin_checked="1">
         <h1 class="title-manage">{{__('Order Management')}}</h1>
     </div>
@@ -66,33 +67,33 @@
                 
                     <td>
                         <div class="h-100 fs-16px">
-                            {{$package->package_num_listings}}
+                           
                         </div>
                     </td>
 
                     
                     <td>
                         <div class="h-100 fs-16px">
-                            {{Auth::guard('company')->user()->availed_jobs_quota}} / {{Auth::guard('company')->user()->jobs_quota}}
+                           
                         </div>
                     </td>
                  
                     <td>
 
                         <div class="h-100 fs-16px">
-                            {{Auth::guard('company')->user()->package_start_date }}
+
                         </div>
                     </td>
                 
                     <td>
                         <div class="h-100 fs-16px">
-                            {{Auth::guard('company')->user()->package_end_date}}
+                           
                         </div>
                     </td>
                 
                     <td>
                         <div class="h-100 fs-16px">
-                            {{$package->package_price ? $package->package_price :" "}}
+                           
                         </div>
                     </td>
 
@@ -104,6 +105,7 @@
         </table>
     </div>
 </div>
+
 
 @push('styles')
 <style type="text/css">

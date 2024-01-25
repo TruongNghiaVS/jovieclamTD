@@ -1,11 +1,12 @@
 @if($packages->count())
+{{-- 
 <div class="card widget-dashboard mb-3 w-100 shadow-sm">
     <div class="card-body">
 		<div class="paypackages"> 
 			<!---four-paln-->
 			<div class="four-plan">
 				<div class="posted-manager-header" bis_skin_checked="1">
-					<h1 class="title-manage">{{__('Upgrade Package')}}</h1>
+					<h1 class="title-manage">{{__('Upgrade Package')}} </h1>
 				</div>
 				<div class="our-packages mt-4">
 					@php
@@ -70,4 +71,6 @@
 		</div>
 	</div>
 </div>
+--}}
+
 @endif

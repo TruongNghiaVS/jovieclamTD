@@ -26,10 +26,7 @@
                                     class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status">
                                     Hẹn phỏng vấn
                                 </span></div>
-                            <div class="d-inline-block mb-3"><span role="button" data-value="4"
-                                    class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status">
-                                    Gửi đề nghị
-                                </span></div>
+                            
                             <div class="d-inline-block mb-3"><span role="button" data-value="5"
                                     class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status">
                                     Nhận việc

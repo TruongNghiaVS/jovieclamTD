@@ -3,7 +3,7 @@
     <!---four-paln-->
     <div class="four-plan">
 <div class="posted-manager-header" bis_skin_checked="1">
-        <h1 class="title-manage">{{__('Upgrade Package')}}</h1>
+        <h1 class="title-manage">{{__('Upgrade Package')}}  </h1>
     </div>
         <div class="row">
             @foreach($packages as $package)

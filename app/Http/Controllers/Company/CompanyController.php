@@ -245,10 +245,7 @@ class CompanyController extends Controller
                                 class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status ';($jobApply->status == 3) ? $html.='active' : $html.=''; $html.='">
                                 Hẹn phỏng vấn
                             </span></div>
-                        <div class="d-inline-block mb-3"><span role="button" data-value="4"
-                                class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status ';($jobApply->status == 4) ? $html.='active' : $html.=''; $html.='">
-                                Gửi đề nghị
-                            </span></div>
+                     
                         <div class="d-inline-block mb-3"><span role="button" data-value="5"
                                 class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status ';($jobApply->status == 5) ? $html.='active' : $html.=''; $html.='">
                                 Nhận việc
