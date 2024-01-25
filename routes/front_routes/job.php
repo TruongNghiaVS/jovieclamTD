@@ -12,7 +12,7 @@ Route::get('remove-from-favourite-job/{job_slug}', 'Job\JobController@removeFrom
 Route::get('my-job-applications', 'Job\JobController@myJobApplications')->name('my.job.applications');
 Route::get('list-rejected-users/{id}', 'Company\CompanyController@listRejectedUsers')->name('rejected-users');
 Route::get('my-favourite-jobs', 'Job\JobController@myFavouriteJobs')->name('my.favourite.jobs');
-Route::get('post-job', 'Job\JobPublishController@createFrontJob')->name('post.job');
+Route::get('tao-tin-tuyen-dung', 'Job\JobPublishController@createFrontJob')->name('post.job');
 Route::post('store-front-job', 'Job\JobPublishController@storeFrontJob')->name('store.front.job');
 Route::post('job/publish', 'Job\JobPublishController@publishJob')->name('store.publish.job');
 Route::get('edit-front-job/{id}', 'Job\JobPublishController@editFrontJob')->name('edit.front.job');

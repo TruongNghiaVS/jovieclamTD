@@ -2,7 +2,9 @@
 <!-- SEARCH STICKY -->
 <div class="page-heading-tool job-detail ">
     <div class="container">
-        <div class="tool-wrapper">
+    <form action="{{route('job.seeker.list')}}" method="get">
+  
+    <div class="tool-wrapper">
             <div class="search-job">
                 <div class="form-horizontal">
                     <div class="form-wrap">
@@ -10,21 +12,21 @@
                             <input type="search" class="keyword form-control" id="search" name="search"
                                 placeholder="{{__('Skills or Job Titles')}}" autocomplete="off">
                         </div>
-                        <div class="form-group" id="functional_area_dd">
-                            <select class="form-control" name="functional_area_id" id="functional_area">
-                                <option value="">Chọn phòng ban</option>
-                                <option value="Nhân sự">Nhân sự</option>
-                                <option value="Hành chính">Hành chính</option>
-                                <option value="Kế toán">Kế toán</option>
+                        <div class="form-group">
+                              <select class="form-control" name="industry_id" id="industry_id">
+                                <option value="">Chọn lĩnh vực</option>
+                                @foreach($industryIds as $item)
+                                     <option value="{{$item->industry_id}}">{{$item->industry}}</option>
+                                @endforeach
                             </select>
                         </div>
                         
-                        <div class="form-group" id="city_dd2">
-                            <select class="form-control" name="city_id" id="city">
-                                <option value="">Chọn địa điểm</option>
-                                <option value="3">HCM</option>
-                                <option value="5">Hà Nội</option>
-                                <option value="5">Đà Nẵng</option>
+                        <div class="form-group">
+                              <select class="form-control" name="cities" id="cities">
+                                <option value="">Chọn tỉnh/thành</option>
+                                @foreach($cities as $item)
+                                     <option value="{{$item->city_id}}">{{$item->city}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group form-submit">
@@ -42,6 +44,8 @@
                 </button>
             </div>
         </div>
+    </form>
+      
     </div>
 </div>
 
@@ -79,20 +83,9 @@
 <div class="filters-job-wrapper job-detail">
     <div class="container">
         <div class="filters-wrapper">
-            <form action="{{route('job.list')}}" method="get">
+            <form action="{{route('job.seeker.list')}}" method="get">
                 <div class="row">
-                    <div class="col-sm-6 col-lg-2">
-                        <div class="form-group form-select">
-                            <label>Theo thành phố</label>
-                            <select class="form-control form-select" name="salary" id="salary">
-                                <option value="">Tất cả</option>
-                                <option value="3"> TP. Hồ Chí Minh</option>
-                                <option value="5">Đồng Nai</option>
-                                <option value="5">Hà Giang</option>
-
-                            </select>
-                        </div>
-                    </div>
+                    
                     <div class="col-sm-6 col-lg-3">
                         <div class="form-group" id="degree_level_dd">
                             <label>Theo kinh nghiệm</label>
@@ -109,44 +102,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="form-group" id="job_type_dd">
-                            <label>Theo ngành</label>
-                            <select class="form-control form-select" name="job_type" id="job_type">
-                                <option value="">Tất cả</option>
-                                <option data-id="Hành Chính / Nhân Sự" value="nhan-vien-chinh-thuc_1000">
-                                    Hành Chính / Nhân Sự
-                                </option>
-                                <option data-id="IT" value="tam-thoi-du-an_0100">
-                                    Công Nghệ Thông Tin (IT)
-                                </option>
-                                <option data-id="Xuất Nhập Khẩu" value="tam-thoi-du-an_0100">
-                                    Xuất Nhập Khẩu
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="form-group form-group-custom-multiselect" id="benefit_id_dd">
-                            <label>Theo kỹ năng</label>
-                            <select class="form-control form-select shadow-sm multiselect" name="benefit_id"
-                                id="benefit" multiple>
-                                <option value="">Tất Cả</option>
-                                <option value="Nhân sự"> Word</option>
-                                <option value="Hành chính"> Photoshop</option>
-                                <option value="Kế toán"> Access</option>
-                                <option value="Kế toán"> Excel</option>
-                            </select>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="close-filter-box">
-                    <div class="close-input-filter">
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="row">
+                   
                     <div class="col-sm-6 col-lg-2">
                         <div class="form-group form-select">
                             <label>Theo cấp bậc</label>
@@ -173,31 +129,13 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="form-group" id="job_type_dd">
-                            <label>Lương</label>
-                            <select class="form-control form-select" name="salary" id="salary">
-                                <option value="">Tất cả</option>
-                                <option value="3">Từ 3.000.000 đ</option>
-                                <option value="5">Từ 5.000.000 đ</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="form-group form-group-custom-multiselect" id="benefit_id_dd">
-                            <label>Chọn phúc lợi mong muốn</label>
-                            <select class="form-control form-select shadow-sm multiselect" name="benefit_id"
-                                id="benefit" multiple>
-                                <option value="">Chọn phòng ban</option>
-                                <option value="Nhân sự">Nhân sự</option>
-                                <option value="Hành chính">Hành chính</option>
-                                <option value="Kế toán">Kế toán</option>
-                            </select>
-                        </div>
-                    </div>
-
-
                 </div>
+                <div class="close-filter-box">
+                    <div class="close-input-filter">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                </div>
+               
             </form>
         </div>
     </div>
@@ -212,7 +150,7 @@
             </div>
         </div>
         <div class="filters-wrapper">
-            <form action="{{route('job.list')}}" method="get">
+            <form action="{{route('job.seeker.list')}}" method="get">
                 <div class="row">
                     <div class="col-sm-6 col-lg-2">
                         <div class="form-group form-keyword">

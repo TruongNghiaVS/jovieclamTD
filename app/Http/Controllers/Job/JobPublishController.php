@@ -53,7 +53,11 @@ class JobPublishController extends Controller
     }
 
     public function createFrontJob() {
-      
+        $benefits = \App\Benefit::pluck('name', 'code')->toArray();
+        $benefits = array_map(function($v){
+            
+            return __($v);}, $benefits);
+   
         $company = Auth::guard('company')->user();
         if ((bool)$company->is_active === false) {
             flash(__('Your account is inactive contact site admin to activate it'))->error();
@@ -110,6 +114,7 @@ class JobPublishController extends Controller
                         ->with('cities', $cities)
                         ->with('salaryPeriods', $salaryPeriods)
                         ->with('industries', $industries)
+                        ->with('benefits', $benefits)
                         ->with('edit', false);
     }
 
