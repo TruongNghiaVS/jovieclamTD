@@ -60,7 +60,7 @@
         {!! APFrmErrHelp::showErrors($errors, 'date_of_birth') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'gender_id') !!}">
-        {!! Form::label('gender_id', 'Giới tính', ['class' => 'bold']) !!}
+        {!! Form::label('gender_id', 'Giới Tính', ['class' => 'bold']) !!}
         {!! Form::select('gender_id', [''=>'Lựa chọn']+[1=>'Nữ', 2=>'Nam'], null, array('class'=>'form-control', 'id'=>'gender_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'gender_id') !!}                                       
     </div>

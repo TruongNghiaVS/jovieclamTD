@@ -63,7 +63,7 @@ if (Auth::guard('company')->user()) {
                       <p>Chưa cập nhật</p>
                     </li>
                     <li>
-                      <p><strong>Giới tính:</strong></p>
+                      <p><strong>Giới Tính:</strong></p>
                       <p>Chưa cập nhật giới tính - {{$user->getGender('gender') ? - $user->getGender('gender') :""}}  {{$user->getMaritalStatus('marital_status')}}</p>
                     </li>
                     <li>
@@ -89,11 +89,11 @@ if (Auth::guard('company')->user()) {
             <div class="job-information">
               <ul class="information-list">
                 <li>
-                  <p> <strong>Năm kinh nghiệm:</strong></p>
+                  <p> <strong>Năm Kinh Nghiệm:</strong></p>
                   <p>{{$user->getJobExperience('job_experience')}}</p>
                 </li>
                 <li>
-                  <p> <strong>Bằng cấp cao nhất:</strong></p>
+                  <p> <strong>Bằng Cấp Cao Nhất:</strong></p>
                   <p>{{$user->getCareerLevel('careerLevel')}} Chưa có thông tin</p>
                 </li>
                 <li>

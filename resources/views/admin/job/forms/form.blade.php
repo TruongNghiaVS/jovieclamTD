@@ -140,12 +140,12 @@
         {!! APFrmErrHelp::showErrors($errors, 'expiry_date') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div">
-        {!! Form::label('degree_level_id', 'Bằng cấp yêu cầu', ['class' => 'bold']) !!}
+        {!! Form::label('degree_level_id', 'Bằng Cấp Yêu Cầu', ['class' => 'bold']) !!}
         {!! Form::select('degree_level_id', ['' => 'Lựa chọn']+$degreeLevels, null, array('class'=>'form-control', 'id'=>'degree_level_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'degree_level_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'job_experience_id') !!}" id="job_experience_id_div">
-        {!! Form::label('job_experience_id', 'Kinh nghiệm yêu cầu', ['class' => 'bold']) !!}
+        {!! Form::label('job_experience_id', 'Kinh Nghiệm Yêu Cầu', ['class' => 'bold']) !!}
         {!! Form::select('job_experience_id', ['' => 'Lựa chọn']+$jobExperiences, null, array('class'=>'form-control', 'id'=>'job_experience_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'job_experience_id') !!}                                       
     </div>

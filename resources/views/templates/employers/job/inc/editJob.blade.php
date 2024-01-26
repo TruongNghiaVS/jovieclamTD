@@ -196,7 +196,7 @@ else
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="expiry_date" class="font-weight-bold fs-18px">Hạn nhận hồ sơ </label>
+                            <label for="expiry_date" class="font-weight-bold fs-18px">Hạn Nhận Hồ Sơ  </label>
                             <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="Deadline" value="{{ $edit && isset($job) ? \Carbon\Carbon::parse($job->expiry_date)->format('d-m-Y') : \Carbon\Carbon::parse(old('expiry_date'))->format('d-m-Y') }}" required>
                         </div>
                     </div>
@@ -394,7 +394,7 @@ else
             
             <div class="col-md-3 col-md-3 col-sm-12">
             <div class="form-group form-group-custom-chosen">
-                    <label for="degree_level_id" class="font-weight-bold fs-18px">Bằng cấp </label>
+                    <label for="degree_level_id" class="font-weight-bold fs-18px">Bằng Cấp </label>
                    <select name ="degree_level_id"  id ="degree_level_id" class ="form-control form-select">
                    <option value=""> Chọn bằng cấp</option> 
                    @foreach ($degreeLevel as $item)

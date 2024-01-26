@@ -15,8 +15,8 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'lang') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'degree_level') !!}">
-        {!! Form::label('degree_level', 'Bằng cấp', ['class' => 'bold']) !!}
-        {!! Form::text('degree_level', null, array('class'=>'form-control', 'id'=>'degree_level', 'placeholder'=>'Bằng cấp', 'dir'=>$direction)) !!}
+        {!! Form::label('degree_level', 'Bằng Cấp', ['class' => 'bold']) !!}
+        {!! Form::text('degree_level', null, array('class'=>'form-control', 'id'=>'degree_level', 'placeholder'=>'Bằng Cấp', 'dir'=>$direction)) !!}
         {!! APFrmErrHelp::showErrors($errors, 'degree_level') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'is_default') !!}">
