@@ -15,7 +15,7 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'lang') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'industry') !!}">
-        {!! Form::label('industry', 'Ngành nghề', ['class' => 'bold']) !!}
+        {!! Form::label('industry', 'Ngành Nghề', ['class' => 'bold']) !!}
         {!! Form::text('industry', null, array('class'=>'form-control', 'id'=>'industry', 'placeholder'=>'Industry', 'dir'=>$direction)) !!}
         {!! APFrmErrHelp::showErrors($errors, 'industry') !!}                                       
     </div>
@@ -40,7 +40,7 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'is_default') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'industry_id') !!}" id="industry_id_div">
-        {!! Form::label('industry_id', 'Ngành nghề mặc định', ['class' => 'bold']) !!}
+        {!! Form::label('industry_id', 'Ngành nghề Mặc Định', ['class' => 'bold']) !!}
         {!! Form::select('industry_id', ['' => 'Lựa chọn']+$industries, null, array('class'=>'form-control', 'id'=>'industry_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!}                                       
     </div>

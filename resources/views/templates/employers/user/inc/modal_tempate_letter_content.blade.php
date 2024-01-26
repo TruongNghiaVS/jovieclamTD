@@ -13,7 +13,7 @@
                     <li>[Ngày viết thư]</li>
                     <li>[Tên người liên hệ]</li>
                     <li>[chức danh nhà tuyển dụng]</li>
-                    <li>[Tên công ty]</li>
+                    <li>[Tên Công Ty]</li>
                     <li>[Địa chỉ công ty]</li>
                     <li>[Email nhà tuyển dụng]</li>
                 </ul>

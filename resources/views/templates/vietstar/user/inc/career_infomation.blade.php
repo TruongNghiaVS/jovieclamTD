@@ -50,7 +50,7 @@
                 <tr>
                     <td class="text-primary table_title">
                         <strong>
-                        {{__('Lựa chọn Ngành nghề')}}
+                        {{__('Lựa Chọn Ngành Nghề')}}
                         </strong>
                     </td>
                     <td class="table_value">
@@ -178,8 +178,8 @@
                     </div>
                     <div class="col-md-12">
                         <div class="form-group {!! APFrmErrHelp::hasError($errors, 'industry_id') !!}">
-                            <label for="">{{__('Lựa chọn Ngành nghề')}}</label>
-                            {!! Form::select('industry_id', [''=>__('Lựa chọn Ngành nghề')]+$industries, null,
+                            <label for="">{{__('Lựa Chọn Ngành Nghề')}}</label>
+                            {!! Form::select('industry_id', [''=>__('Lựa Chọn Ngành Nghề')]+$industries, null,
                             array('class'=>'form-control form-select', 'id'=>'industry_id')) !!}
                             {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!}
                         </div>

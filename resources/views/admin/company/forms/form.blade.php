@@ -17,8 +17,8 @@
         </div>    
         @endif  
     </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'name') !!}"> {!! Form::label('name', 'Tên Công ty', ['class' => 'bold']) !!}
-        {!! Form::text('name', null, array('class'=>'form-control', 'id'=>'name', 'placeholder'=>'Tên Công ty')) !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'name') !!}"> {!! Form::label('name', 'Tên Công Ty', ['class' => 'bold']) !!}
+        {!! Form::text('name', null, array('class'=>'form-control', 'id'=>'name', 'placeholder'=>'Tên Công Ty')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'name') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'email') !!}"> {!! Form::label('email', 'Email', ['class' => 'bold']) !!}
         {!! Form::text('email', null, array('class'=>'form-control', 'id'=>'email', 'placeholder'=>'Email')) !!}
@@ -29,7 +29,7 @@
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'ceo') !!}"> {!! Form::label('ceo', 'CEO Công ty', ['class' => 'bold']) !!}
         {!! Form::text('ceo', null, array('class'=>'form-control', 'id'=>'ceo', 'placeholder'=>'CEO Công ty')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'ceo') !!} </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'industry_id') !!}"> {!! Form::label('industry_id', 'Ngành nghề', ['class' => 'bold']) !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'industry_id') !!}"> {!! Form::label('industry_id', 'Ngành Nghề', ['class' => 'bold']) !!}
         {!! Form::select('industry_id', ['' => 'Lựa chọn']+$industries, null, array('class'=>'form-control', 'id'=>'industry_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'ownership_type') !!}"> {!! Form::label('ownership_type', 'Loại hình doanh nghiệp', ['class' => 'bold']) !!}

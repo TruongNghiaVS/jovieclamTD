@@ -119,7 +119,7 @@
         {!! APFrmErrHelp::showErrors($errors, 'career_level_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'industry_id') !!}">
-        {!! Form::label('industry_id', 'Ngành nghề', ['class' => 'bold']) !!}
+        {!! Form::label('industry_id', 'Ngành Nghề', ['class' => 'bold']) !!}
         {!! Form::select('industry_id', [''=>'Lựa chọn']+$industries, null, array('class'=>'form-control', 'id'=>'industry_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!}                                       
     </div>

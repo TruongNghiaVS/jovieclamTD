@@ -101,15 +101,15 @@ if (Auth::guard('company')->user()) {
                   <p>{{ number_format($user->current_salary)}} </p>
                 </li>
                 <li>
-                  <p> <strong>Mức lương mong muốn:</strong></p>
+                  <p> <strong>Mức Lương Mong Muốn:</strong></p>
                   <p>{{number_format($user->expected_salary)}} {{$user->salary_currency}} </p>
                 </li>
                 <li>
-                  <p> <strong>Ngành nghề mong muốn:</strong></p>
+                  <p> <strong>Ngành Nghề Mong Muốn:</strong></p>
                   <p>{{$user->getIndustry('industry')}}</p>
                 </li>
                 <li>
-                  <p> <strong>Địa điểm:</strong></p>
+                  <p> <strong>Địa Điểm:</strong></p>
                   <p>Chưa cập nhật</p>
                 </li>
                 <li>

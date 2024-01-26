@@ -23,7 +23,7 @@
                                 <label for="industry_id" class="font-weight-bold fs-18px">{{__('Industry')}} <span class="required">*</span> </label>
                                 {!! Form::select('industry_id', ['' => __('Select Industry')] + $industries, null, array('class'=>'form-control form-select', 'id'=>'industry_id' ,'required' => 'required' )) !!}
                                 <div class="invalid-feedback">
-                                    Ngành nghề là bắt buộc
+                                    Ngành Nghề là bắt buộc
                                 </div>
                             </div>
                         </div>

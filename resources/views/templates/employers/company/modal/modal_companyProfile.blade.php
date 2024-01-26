@@ -69,7 +69,7 @@ $company = Auth::guard('company')->user();
                                     <div class="job-information" bis_skin_checked="1">
                                         <ul class="information-list">
                                             <li>
-                                                <p> <strong>Tên công ty:</strong></p>
+                                                <p> <strong>Tên Công Ty:</strong></p>
                                                 <p>  {{ isset($company->name) ? $company->name : old('name') }}</p>
                                             </li>
                                             <li>
