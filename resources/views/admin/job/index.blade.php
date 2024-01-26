@@ -38,7 +38,7 @@
                                         <tr role="row" class="filter">
                                             <td>{!! Form::select('company_id', ['' => __('Select')]+$companies, null, array('id'=>'company_id', 'class'=>'form-control')) !!}</td>
                                             <td><input type="text" class="form-control" name="title" id="title" autocomplete="off" placeholder="Chức danh"></td>
-                                            <td><input type="text" class="form-control" name="description" id="description" autocomplete="off" placeholder="Mô tả Công việc"></td>
+                                            <td><input type="text" class="form-control" name="description" id="description" autocomplete="off" placeholder="Mô Tả Công Việc"></td>
                                             <td>
                                                 <?php $default_country_id = Request::query('country_id', $siteSetting->default_country_id); ?>
                                                 {!! Form::select('country_id', ['' => __('Select')]+$countries, $default_country_id, array('id'=>'country_id', 'class'=>'form-control')) !!}

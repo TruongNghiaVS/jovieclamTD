@@ -13,8 +13,8 @@
         {!! APFrmErrHelp::showErrors($errors, 'title') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'description') !!}">
-        {!! Form::label('description', 'Mô Tả Công việc', ['class' => 'bold']) !!}
-        {!! Form::textarea('description', null, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>'Mô Tả Công việc')) !!}
+        {!! Form::label('description', 'Mô Tả Công Việc', ['class' => 'bold']) !!}
+        {!! Form::textarea('description', null, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>'Mô Tả Công Việc')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'description') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'skills') !!}">
