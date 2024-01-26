@@ -5,13 +5,13 @@
             <div class="card widget-dashboard mb-3 w-100 shadow-sm">
                 <div class="box-dasboard-top" bis_skin_checked="1">
                     <div class="head" bis_skin_checked="1">
-                        <h2 class="title-dashboard">Thông tin tài khoản </h2>
+                        <h2 class="title-dashboard">Thông Tin Tài Khoản </h2>
                     </div>
                     <div class="body" bis_skin_checked="1">
                         <ul class="company-account-information">
                             
                             <li>
-                                <p class="number orderNew">1</p><a class="title" href="/don-hang">Đơn hàng đang sử dụng</a>
+                                <p class="number orderNew">1</p><a class="title" href="/don-hang">Đơn Hàng đang sử dụng</a>
                             </li>
                             <li>
                                 <p class="number JskNew">{{ $dashboarOverview->candidateCount}}</p><a class="title" href="/quan-ly-ung-vien">Ứng viên ứng tuyển</a>
@@ -45,7 +45,7 @@
             <div class="card widget-dashboard mb-3 w-100 shadow-sm">
                 <div class="box-dasboard-top" bis_skin_checked="1">
                     <div class="head" bis_skin_checked="1">
-                        <h2 class="title-dashboard">Quản lý đăng tuyển</h2>
+                        <h2 class="title-dashboard">Quản Lý Đăng Tuyển</h2>
                     </div>
                     <div class="body" bis_skin_checked="1">
                         <ul class="company-account-information">

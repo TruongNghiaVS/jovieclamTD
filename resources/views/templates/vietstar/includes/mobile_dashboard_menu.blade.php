@@ -688,7 +688,7 @@
             @if(Auth::user())
             <li class="openmyacount">
                 <div class="d-flex w-100">
-                    <span class="side-bar-content">Thông tin tài khoản</span>
+                    <span class="side-bar-content">Thông Tin Tài Khoản</span>
                 </div>
 
             </li>
@@ -707,7 +707,7 @@
             @elseif(!Auth::user())
             <li class="openmyacount">
                 <div class="d-flex w-100">
-                    <span class="side-bar-content">Thông tin tài khoản</span>
+                    <span class="side-bar-content">Thông Tin Tài Khoản</span>
                 </div>
 
             </li>

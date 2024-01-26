@@ -101,7 +101,7 @@
             </div>--}}
             <div class="col-md-6 col-lg-6 col-xl-4">
                 <div class="footer-widget">
-                    <h4 class="widget-title">Kết nối với Jobvieclam</h4>
+                    <h4 class="widget-title">Kết Nối Với Jobvieclam</h4>
                     <div class="socials">
                         <a href="#" class="social"><i class="fa-brands fa-facebook-f fa-lg me-3"></i></a>
                         <a href="#" class="social"><i class="fa-brands fa-twitter fa-lg me-3"></i></a>

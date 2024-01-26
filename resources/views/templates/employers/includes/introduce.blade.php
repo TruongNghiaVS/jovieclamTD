@@ -21,7 +21,7 @@
                 <div class="card p-4">
                     <div class="card-head">
                         <i class="bi bi-blockquote-left"></i>
-                        <h5>Quản lý đăng tuyển</h5>
+                        <h5>Quản Lý Đăng Tuyển</h5>
                     </div>
                     <div class="card-body">
                         <p class="card-text">Với thư viện chuẩn của hơn 1000+ mô tả công việc gợi ý cho nhà tuyển dụng với các ngành nghề và vị trí khác nhau.</p>
@@ -32,7 +32,7 @@
                 <div class="card p-4">
                     <div class="card-head">
                         <i class="bi bi-blockquote-left"></i>
-                        <h5>Quản lý ứng viên</h5>
+                        <h5>Quản Lý Ứng Viên</h5>
                     </div>
                     <div class="card-body">
                         <p class="card-text">Với công cụ quản lý tích hợp, báo cáo trực quan, dễ sử dụng và theo dõi kho hồ sơ ứng viên theo từng vị trí đăng tuyển</p>
