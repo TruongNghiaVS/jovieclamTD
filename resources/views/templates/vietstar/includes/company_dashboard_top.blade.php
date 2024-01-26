@@ -27,7 +27,7 @@
             <div class="card widget-dashboard mb-3 w-100 shadow-sm">
                 <div class="box-dasboard-top" bis_skin_checked="1">
                     <div class="head" bis_skin_checked="1">
-                        <h2 class="title-dashboard">Tìm kiếm hồ sơ</h2>
+                        <h2 class="title-dashboard">Tìm Kiếm Hồ Sơ</h2>
                     </div>
                     <div class="body" bis_skin_checked="1">
                         <ul class="company-account-information">
@@ -84,7 +84,7 @@
             <div class="card widget-dashboard mb-3 w-100 shadow-sm">
                 <div class="box-dasboard-top" bis_skin_checked="1">
                     <div class="head" bis_skin_checked="1">
-                        <h2 class="title-dashboard">LỊCH SỬ HOẠT ĐỘNG</h2>
+                        <h2 class="title-dashboard">Lịch Sử Hoạt Động</h2>
                     </div>
                     <div class="body" bis_skin_checked="1">
                         <ul class="company-account-information">

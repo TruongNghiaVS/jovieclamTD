@@ -5,7 +5,7 @@
 </div>
 <div class="accordion-single js-acc-single">
   <div class="accordion-single-item js-acc-item">
-    <h3 class="accordion-single-title js-acc-single-trigger">Thời gian cập nhật</h3>
+    <h3 class="accordion-single-title js-acc-single-trigger">Thời Gian Cập Nhật</h3>
     <div class="accordion-single-content">
     <div class="form-check">
         <input class="form-check-input" type="radio" name="time" id="time1" value="option1" checked>
@@ -42,7 +42,7 @@
     </div>
   </div>
   <div class="accordion-single-item js-acc-item">
-    <h3 class="accordion-single-title js-acc-single-trigger">Hình thức làm việc</h3>
+    <h3 class="accordion-single-title js-acc-single-trigger">Hình Thức Làm Việc</h3>
     <div class="accordion-single-content">
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="jobtype">
@@ -78,7 +78,7 @@
     </div>
   </div>
   <div class="accordion-single-item js-acc-item">
-    <h3 class="accordion-single-title js-acc-single-trigger">Địa điểm</h3>
+    <h3 class="accordion-single-title js-acc-single-trigger">Địa Điểm</h3>
     <div class="accordion-single-content">
         <div class="form-group form-select-chosen" id="city_dd2">
             <select class="form-control form-select" name="city_id" id="city">
@@ -91,37 +91,37 @@
     </div>
   </div>
   <div class="accordion-single-item js-acc-item">
-    <h3 class="accordion-single-title js-acc-single-trigger">Bằng cấp</h3>
+    <h3 class="accordion-single-title js-acc-single-trigger">Bằng Cấp</h3>
     <div class="accordion-single-content">
        
     </div>
   </div>
   <div class="accordion-single-item js-acc-item">
-    <h3 class="accordion-single-title js-acc-single-trigger">Kinh nghiệm</h3>
+    <h3 class="accordion-single-title js-acc-single-trigger">Kinh Nghiệm</h3>
     <div class="accordion-single-content">
        
     </div>
   </div>
   <div class="accordion-single-item js-acc-item">
-    <h3 class="accordion-single-title js-acc-single-trigger">Mức lương</h3>
+    <h3 class="accordion-single-title js-acc-single-trigger">Mức Lương</h3>
     <div class="accordion-single-content">
        
     </div>
   </div>
   <div class="accordion-single-item js-acc-item">
-    <h3 class="accordion-single-title js-acc-single-trigger">Giới tinh</h3>
+    <h3 class="accordion-single-title js-acc-single-trigger">Giới Tinh</h3>
     <div class="accordion-single-content">
        
     </div>
   </div>
   <div class="accordion-single-item js-acc-item">
-    <h3 class="accordion-single-title js-acc-single-trigger">Ngoại ngữ</h3>
+    <h3 class="accordion-single-title js-acc-single-trigger">Ngoại Ngữ</h3>
     <div class="accordion-single-content">
        
     </div>
   </div>
   <div class="accordion-single-item js-acc-item">
-    <h3 class="accordion-single-title js-acc-single-trigger">Loại hồ sơ</h3>
+    <h3 class="accordion-single-title js-acc-single-trigger">Loại Hồ Sơ</h3>
     <div class="accordion-single-content">
        
     </div>
