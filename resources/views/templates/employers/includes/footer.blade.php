@@ -78,8 +78,7 @@
                             <ul class="list-unstyled footer-links">
                                 <li><a href="#">{{__('Job search policy')}}</a></li>
                                 <li><a href="">{{__('Privacy Policy')}}</a></li>
-                                <li><a href="">{{__('Agreement of use')}}</a></li>
-                                
+
                                 
 
                             </ul>
