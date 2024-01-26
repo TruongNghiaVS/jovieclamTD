@@ -134,7 +134,7 @@
                                         <strong>{{ $errors->first('g-recaptcha-response') }}</strong> </span> @endif
                                 </div>
 
-                                <input type="submit" class="btn" value="{{__('Đăng ký')}}">
+                                <input type="submit" class="btn" value="{{__('Đăng Ký')}}">
 
                             </form>
 
@@ -213,7 +213,7 @@
                                         <strong>{{ $errors->first('g-recaptcha-response') }}</strong> </span> @endif
                                 </div>
 
-                                <input type="submit" class="btn" value="{{__('Đăng ký')}}">
+                                <input type="submit" class="btn" value="{{__('Đăng Ký')}}">
 
                             </form>
 
@@ -223,7 +223,7 @@
 
                     <!-- sign up form -->
 
-                    <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i> {{__('Have Account')}}? <a href="{{route('login')}}">{{__('Đăng nhập')}}</a></div>
+                    <div class="newuser"><i class="fa fa-user" aria-hidden="true"></i> {{__('Have Account')}}? <a href="{{route('login')}}">{{__('Đăng Nhập')}}</a></div>
 
                     <!-- sign up form end--> 
 
