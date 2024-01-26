@@ -622,7 +622,7 @@
                         <a class="nav-link login_link btn btn-primary login-btn" data-toggle="modal" data-target="#employer_login_Modal" >{{__('Log in')}} / {{__('Đăng ký')}} </a>
                 
                         <!-- <a href="{{url('/employers')}}" class="btn btn-primary">Dành cho Nhà tuyển dụng</a> -->
-                             <a href="http://jobvieclam.com" class="btn btn-primary">Dành cho ứng viên</a>
+                             <a href="http://jobvieclam.com" class="btn btn-primary">Dành Cho Ứng Viên</a>
 
                         {{--<a class="btn btn-primary my-2" href="{{route('register')}}" class="nav-link
                         register">{{__('Đăng ký')}}</a> --}}
@@ -643,7 +643,7 @@
                        
                 
                         <!-- <a href="{{url('/employers')}}" class="btn btn-primary">Dành cho Nhà tuyển dụng</a> -->
-                             <a href="http://jobvieclam.com" class="btn btn-primary">Dành cho ứng viên</a>
+                             <a href="http://jobvieclam.com" class="btn btn-primary">Dành Cho Ứng Viên</a>
 
                         
                     </div>

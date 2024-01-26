@@ -201,10 +201,10 @@
                 <a class="btn_for_em" href="http://127.0.0.1:8001/employers">
 
                 <div  class="btn_for_em__head">
-                    Dành cho
+                    Dành Cho
                 </div> 
                 <div  class="btn_for_em__body">
-                    Nhà tuyển dụng
+                    Nhà Tuyển Dụng
                 </div>    
                 </a>
                 
