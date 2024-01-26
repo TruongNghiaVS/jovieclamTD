@@ -9,7 +9,7 @@
 
 <section class="cb-section about-us-section ">
     <h4 class="text-center mb-4 text-uppercase text-primary">
-            Về chúng tôi
+            Về Chúng Tôi
         </h4>
     <div class="container">
         <div class="row about_us_content justify-content-md-center " bis_skin_checked="1">

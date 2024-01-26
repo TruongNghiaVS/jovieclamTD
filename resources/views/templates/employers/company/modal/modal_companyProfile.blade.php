@@ -84,34 +84,34 @@ $company = Auth::guard('company')->user();
                                             </li>
 
                                             <li>
-                                                <p> <strong>Sở hữu:</strong></p>
+                                                <p> <strong>Sở Hữu:</strong></p>
                                                 <p>{{ !empty($company->ownershipTypes)?$company->ownershipTypes->ownershipTypes : 'TNHH' }}</p>
                                             </li>
                                             <li>
-                                                <p> <strong>Mô tả:</strong></p>
+                                                <p> <strong>Mô Tả:</strong></p>
                                                 <p>{!! $company->description !!} </p>
                                             </li>
                                             <li>
-                                                <p> <strong>Quốc gia:</strong></p>
+                                                <p> <strong>Quốc Gia:</strong></p>
                                                 <p> Viet Nam</p>
                                             </li>
                                             <li>
-                                                <p> <strong>Địa chỉ:</strong></p>
+                                                <p> <strong>Địa Chỉ:</strong></p>
                                                 <p> {{ isset($company->location) ? $company->location : old('location') }}</p>
                                             </li>
                                             <li>
-                                                <p> <strong>Số lượng văn phòng:</strong></p>
+                                                <p> <strong>Số Lượng Văn Phòng:</strong></p>
                                                 <p>  {{ isset($company->no_of_offices) ? $company->no_of_offices : old('no_of_offices') }}
                                                 </p>
                                             </li>
 
                                             <li>
-                                                <p> <strong>Số lượng nhân viên:</strong></p>
+                                                <p> <strong>Số Lượng Nhân Viên:</strong></p>
                                                 <p>{{ isset($company->no_of_employees) ? $company->no_of_employees : old('no_of_employees') }}</p>
                                             </li>
 
                                             <li>
-                                                <p> <strong>Thành lập năm:</strong></p>
+                                                <p> <strong>Thành Lập Năm:</strong></p>
                                                 <p>  {{ isset($company->established_in) ? $company->established_in : old('established_in')}}</p>
                                             </li>
                                         

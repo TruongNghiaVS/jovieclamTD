@@ -62,7 +62,7 @@
 <section class="about-us section-static d-none">
     <div class="about-us-bg" style="background-image: url({{ asset('/vietstar/imgs') }}/officers.jpeg);"></div>
     <div class="content">
-        <h2 class=section-title>Về chúng tôi</h2>
+        <h2 class=section-title>Về Chúng Tôi</h2>
 
         <ul class="list-about-us">
             <li class="item">
