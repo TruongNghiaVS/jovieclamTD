@@ -136,7 +136,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="text-white p-2 fs-18px">Việc làm IT</div>
                                 <div class="text-white p-2 fs-18px">Việc làm Marketing</div>
-                                <div class="text-white p-2 fs-18px">Việc làm Chăm Sóc Khác Hàng</div>
+                                <div class="text-white p-2 fs-18px">Việc làm Chăm Sóc Khách Hàng</div>
                 
                 </div>
 
