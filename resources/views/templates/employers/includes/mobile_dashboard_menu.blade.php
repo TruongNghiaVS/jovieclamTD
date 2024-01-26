@@ -692,8 +692,10 @@
         $('#mobile-sidebar').removeClass("active");
     }
     $(document).ready(function() {
-        $('#mobile-sidebarCollapse').on('click', function() {
+        $('#mobile-sidebarCollapse , .screen-overlay').on('click', function() {
             $('#mobile-sidebar').toggleClass('active');
+            $("body").toggleClass("offcanvas-active");
+            $(".screen-overlay").toggleClass("show");
         });
 
 

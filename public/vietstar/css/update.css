@@ -3898,7 +3898,8 @@ div#industry_id_chosen {
     height: 76px;
     display: block;
     background-color: #ffffff !important;
-    z-index: 10;
+    z-index: 40;
+
     
 }
 
