@@ -235,7 +235,7 @@ else
 </div>
 
 <div class="card card-edit-profile my-3" id="benefit_section">
-        <h2 class="fs-4 card-edit-profile__section">PHÚC LỢI </h2>
+        <h2 class="fs-4 card-edit-profile__section">Phúc Lợi </h2>
         <div class="card-body">
                         <div class="row" bis_skin_checked="1">
                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
@@ -342,7 +342,7 @@ else
 
 
 <div class="card card-edit-profile my-3">
-    <h2 class="fs-4 card-edit-profile__section">Yêu cầu chung</h2>
+    <h2 class="fs-4 card-edit-profile__section">Yêu Cầu Chung</h2>
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
@@ -416,7 +416,7 @@ else
 
 
 <div class="card card-edit-profile my-3">
-    <h2 class="fs-4 card-edit-profile__section">THÔNG TIN KHÁC (KHÔNG BẮT BUỘC)</h2>
+    <h2 class="fs-4 card-edit-profile__section">Thông Tin Khác (Không Bắt Buộc)</h2>
     <div class="card-body">
         <p>
         Giới thiệu về môi trường làm việc, thời gian thử việc, cơ hội huấn luyện, đồng nghiệp
