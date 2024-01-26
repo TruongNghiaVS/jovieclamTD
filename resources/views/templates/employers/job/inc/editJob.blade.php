@@ -25,7 +25,7 @@ else
 ?>
 
 <div class="card card-edit-profile">
-    <h2 class="fs-4 card-edit-profile__section">Thông tin tuyển dụng</h2>
+    <h2 class="fs-4 card-edit-profile__section">Thông Tin Tuyển Dụng</h2>
     <div class="card-body">
         <div class="section-infomation account-infomation">
             <div class="row">
