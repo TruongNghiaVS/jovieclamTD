@@ -70,7 +70,7 @@
         {!! APFrmErrHelp::showErrors($errors, 'career_level_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'salary_from') !!}" id="salary_from_div">
-        {!! Form::label('salary_from', 'Mức lương từ', ['class' => 'bold']) !!}
+        {!! Form::label('salary_from', 'Mức Lương Từ ', ['class' => 'bold']) !!}
         {!! Form::number('salary_from', null, array('class'=>'form-control', 'id'=>'salary_from')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'salary_from') !!}                                       
     </div>
