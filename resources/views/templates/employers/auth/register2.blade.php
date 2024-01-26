@@ -339,7 +339,7 @@ $(document).ready(function() {
                        
                         setTimeout(function(){
                               window.location.href =  "/dashboard";
-                        }, 3000);
+                        }, 1000);
                     }
                           
                      

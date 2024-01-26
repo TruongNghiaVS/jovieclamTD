@@ -223,13 +223,6 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
-                    // if (data.sucess == true) { 
-                    //     $("#employer_login_Modal").css("display:none");
-                    //     $("#employer_login_Modal").removeClass("show");
-                    //     window.location.href =  "/dashboard";
-                    // }
-            
-                    
                     hideSpinner();
                     if (data.sucess == true) { 
     
@@ -237,7 +230,7 @@ $(document).ready(function() {
                         
                         setTimeout(function(){
                               window.location.href =  "/dashboard";
-                        }, 2000);
+                        }, 1000);
                     }
                 })
                 .fail(function(jqXHR, textStatus){

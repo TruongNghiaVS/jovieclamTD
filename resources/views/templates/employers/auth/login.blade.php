@@ -345,7 +345,7 @@
                 
                         setTimeout(function(){
                               window.location.href =  "/dashboard";
-                        }, 3000);
+                        }, 1000);
                     }
                 
                 })
@@ -445,7 +445,7 @@
                         
                         setTimeout(function(){
                               window.location.href =  "/dashboard";
-                        }, 3000);
+                        }, 1000);
                     }
                 })
                 .fail(function(jqXHR, textStatus){

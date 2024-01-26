@@ -249,7 +249,7 @@
                       
                         setTimeout(function(){
                               window.location.href =  "/dashboard";
-                        }, 2000);
+                        }, 1000);
                     }
                 
                 })
