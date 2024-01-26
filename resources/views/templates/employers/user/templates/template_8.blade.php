@@ -11,7 +11,7 @@
             <div class="left-profile">
                 <h2 class="name">{{ $user->last_name.' '.$user->middle_name.' '.$user->first_name }}</h2>
                <div class="contact-info">
-                    <div><strong>Số điện thoại</strong> {{ $user->phone }}</div>
+                    <div><strong>Số Điện Thoại</strong> {{ $user->phone }}</div>
                     <div><strong>Địa Chỉ</strong> {{ $user->street_address }}</div>
                     <div><strong>Email</strong> {{ $user->email }}</div>
                     <div><strong>Ngày sinh</strong> {{ $user->date_of_birth->format('d-m-Y') }}</div>
@@ -50,7 +50,7 @@
                         <div class="box">
                             <h3>LIÊN LẠC</h3>
                             <div class="contact-info">
-                                <div><strong>Số điện thoại</strong> {{ $user->phone }}</div>
+                                <div><strong>Số Điện Thoại</strong> {{ $user->phone }}</div>
                                 <div><strong>Địa Chỉ</strong> {{ $user->street_address }}</div>
                                 <div><strong>Email</strong> {{ $user->email }}</div>
                                 <div><strong>Ngày sinh</strong> {{ $user->date_of_birth->format('d-m-Y') }}</div>
@@ -170,7 +170,7 @@
                                             <ul>
                                                 <li> <i class="fas fa-user"></i>{{ $references->ref_position }}</li>
                                                 <li> <i class="far fa-building"></i>{{ $references->ref_company }}</li>
-                                                <li> <i class="fas fa-phone-alt"></i>Số điện thoại: {{ $references->ref_phone }}</li>
+                                                <li> <i class="fas fa-phone-alt"></i>Số Điện Thoại: {{ $references->ref_phone }}</li>
                                                 <i class="fa-regular fa-envelope"></i>Email: {{ $references->ref_email }}</li>
                                             </ul>
                                         </div>
@@ -356,7 +356,7 @@
                                             <ul>
                                                 <li> <i class="fas fa-user"></i>{{ $references->ref_position }}</li>
                                                 <li> <i class="far fa-building"></i>{{ $references->ref_company }}</li>
-                                                <li> <i class="fas fa-phone-alt"></i>Số điện thoại: {{ $references->ref_phone }}</li>
+                                                <li> <i class="fas fa-phone-alt"></i>Số Điện Thoại: {{ $references->ref_phone }}</li>
                                                 <i class="fa-regular fa-envelope"></i>Email: {{ $references->ref_email }}</li>
                                             </ul>
                                         </div>
