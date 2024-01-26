@@ -1,10 +1,8 @@
 @extends('templates.vietstar.layouts.app')
 @section('content')
-
-
-
 @include('templates.vietstar.includes.header')
 
+@include('templates.vietstar.includes.mobile_dashboard_menu')
 
 <!-- Inner Page Title start -->
 <!-- Inner Page Title end -->
@@ -178,12 +176,12 @@
           @foreach($blogRelations as $itemRe)
             <div class="col-md-6 col-lg-4 mb-4 " bis_skin_checked="1">
                 <div class="figure" bis_skin_checked="1">
-                    <a href="/blog/{{$itemRe->slug}}" class="figure-images">
+                    <a href="/tin-tuc/{{$categoryCurrent->slug}}/{{$itemRe->slug}}" class="figure-images">
                         
                     <img src="/uploads/blogs/{{$itemRe->image}}" alt=""></a>
                     <div class="figcaption" bis_skin_checked="1">
-                        <h3 class="figcaption__category-name"><a href="/blog/category/{{$blog_relateion->slug}}"> {{$blog_relateion->heading}} </a></h3>
-                        <div class="figcaption__title" bis_skin_checked="1"><a href="/blog/{{$itemRe->slug}}">{{$itemRe->heading}}</a></div>
+                        <h3 class="figcaption__category-name"><a href="/tin-tuc/{{$categoryCurrent->slug}}"> {{$categoryCurrent->heading}} </a></h3>
+                        <div class="figcaption__title" bis_skin_checked="1"><a href="/tin-tuc/{{$categoryCurrent->slug}}/{{$itemRe->slug}}">{{$itemRe->heading}}</a></div>
 
                     </div>
                 </div>

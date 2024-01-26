@@ -85,7 +85,7 @@ $blogs = $data["blogs"]->items();
         <div class="container">
             <div class="head-box" bis_skin_checked="1">
                 <div class="cb-title" bis_skin_checked="1">
-                    <h2 ><a href="{{url('/')}}/blog/category/{{$category -> slug }}" class ="blog-heading" title="Bí quyết tìm việc">{{$heading}}</a></h2>
+                    <h2 ><a href="{{url('/')}}/tin-tuc/{{$category -> slug }}" class ="blog-heading" title="Bí quyết tìm việc">{{$heading}}</a></h2>
                 </div>
                 
             </div>
@@ -95,7 +95,7 @@ $blogs = $data["blogs"]->items();
                 @foreach($blogs as $blog)
                 <div class="col-sm-12 col-md-6 col-lg-3  mb-4 ">
                     <div class="figure">
-                        <a href="{{url('/')}}/blog/cau-chuyn-chn-ngh" class="figure-images">
+                        <a href="{{url('/')}}/{{$category->slug}}/{{ $blog-> slug }}" class="figure-images">
                             @if($blog-> image) 
                             <img src="{{url('/')}}/uploads/blogs/{{ $blog-> image }}" alt="{{$blog->heading}}">
                             @else 
@@ -103,8 +103,8 @@ $blogs = $data["blogs"]->items();
                             @endif
                         </a>
                         <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="{{url('/')}}/blog/category/{{$category -> slug }}">{{$heading}}</a></h3>
-                            <div class="figcaption__title"><a href="{{url('/')}}/blog/{{ $blog-> slug }}">{{ $blog-> heading}} </a></div>
+                            <h3 class="figcaption__category-name"><a href="/tin-tuc/{{$category->slug }}">{{$heading}}</a></h3>
+                            <div class="figcaption__title"><a href="/tin-tuc/{{$category->slug}}/{{ $blog-> slug }}">{{ $blog-> heading}} </a></div>
 
                         </div>
                     </div>
@@ -112,65 +112,9 @@ $blogs = $data["blogs"]->items();
                 @endforeach
 
 
-                <!-- <div class="col-sm-12 col-md-6 col-lg-3  mb-4 ">
-                    <div class="figure">
-                        <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/08/do-loi.jpg" alt=""></a>
-                        <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="#">KỸ NĂNG CÔNG SỞ</a></h3>
-                            <div class="figcaption__title"><a href="#">Tìm việc trực tuyến an toàn và cảnh
-                                    giác trước
-                                    các công việc nhẹ lương cao</a></div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3  mb-4 ">
-                    <div class="figure">
-                        <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/08/ket-ban-voi-dong-nghiep.jpg" alt=""></a>
-                        <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="#">THỊ TRƯỜNG LAO ĐỘNG</a></h3>
-                            <div class="figcaption__title"><a href="#">Những nguyên tắc ngầm khi giao tiếp, kết bạn với
-                                    đồng nghiệp nơi công sở </a></div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12  col-md-6 col-lg-3  mb-4 ">
-                    <div class="figure">
-                        <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/07/flex-la-gi.jpg" alt=""></a>
-                        <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="#">KỸ NĂNG CÔNG SỞ</a></h3>
-                            <div class="figcaption__title"><a href="#">Flex là gì? Làm sao thoát flexing đồng nghiệp hay
-                                    khoe khoang?</a></div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12col-md-6 col-lg-3  mb-4 ">
-                    <div class="figure">
-                        <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/08/do-loi.jpg" alt=""></a>
-                        <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="#">KỸ NĂNG CÔNG SỞ</a></h3>
-                            <div class="figcaption__title"><a href="#">Tìm việc trực tuyến an toàn và cảnh
-                                    giác trước
-                                    các công việc nhẹ lương cao</a></div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class=" col-sm-12 col-md-6 col-lg-3  mb-4 ">
-                    <div class="figure">
-                        <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/08/ket-ban-voi-dong-nghiep.jpg" alt=""></a>
-                        <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="#">THỊ TRƯỜNG LAO ĐỘNG</a></h3>
-                            <div class="figcaption__title"><a href="#">Những nguyên tắc ngầm khi giao tiếp, kết bạn với
-                                    đồng nghiệp nơi công sở </a></div>
-
-                        </div>
-                    </div>
-                </div> -->
+               
             </div>
-            <!-- <div class="show-more" bis_skin_checked="1"><a href="#" class="btn btn-secondary show-more-btn bg-white " title="Bí quyết tìm việc">Xem thêm <em class="mdi mdi-arrow-right"></em></a></div> -->
+          
         </div>
     </section>
 </div>

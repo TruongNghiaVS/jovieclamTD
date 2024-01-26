@@ -57,9 +57,43 @@ class BlogController extends Controller
         $data['blogs'] = Blog::where('cate_id',17)->paginate(10);
         return $data;
     }
-    public function details($slug)
+    public function details2($cate, $slug)
     {
 
+      
+        $data['blog'] = Blog::where('slug','like','%'. $slug.'%')
+        ->where("typePost",1)->where('lang', 'like', \App::getLocale())->first();
+
+        $data['blogRelations'] = Blog::where("slug","!=",$slug)
+        ->where("cate_id", $data['blog']->cate_id)
+        ->where("typePost",1)
+        ->where('lang', 'like', \App::getLocale())
+        ->take(3)
+        ->get();
+      
+        $data['blog_categories'] = Blog_category::where("typePost" , "1")->get();
+        $data['categoryCurrent'] = Blog_category::where("id", $data['blog']->cate_id)->first();
+   
+		$data['categories'] = Blog_category::where("typePost", "1")->get();
+         $data['seo'] = (object) array(
+                    'seo_title' => $data['blog']->meta_title,
+                    'seo_description' => $data['blog']->meta_keywords,
+                    'seo_keywords' => $data['blog']->meta_descriptions,
+                    'seo_other' => ''
+        );
+        return view(config('app.THEME_PATH').'.blog_detail')->with($data);
+    }
+    public function details($slug)
+    {
+        $blog= Blog::where('slug','like','%'. $slug.'%')
+        ->where("typePost",0)->where('lang', 'like', \App::getLocale())->first();
+
+        if($blog)
+        {
+            $category= Blog_category::where("id", $blog->cate_id)->first();
+            return redirect('/tin-tuc/'.$category->slug."/".$slug);
+        }
+        return;
         $data['blog'] = Blog::where('slug','like','%'. $slug.'%')->where("typePost",1)->where('lang', 'like', \App::getLocale())->first();
 
         $data['blogRelations'] = Blog::where("slug","!=",$slug)
@@ -86,6 +120,7 @@ class BlogController extends Controller
     }
     public function categories($slug)
     {
+        return redirect('/tin-tuc/'.$slug);
         $category = Blog_category::where('slug', $slug)
         ->where("typePost" , "1")
         ->first();
@@ -110,6 +145,26 @@ class BlogController extends Controller
         
                     
         return view(config('app.THEME_PATH').'.blog_categories_details', compact('data'));
+    }
+    public function categories2 ($cate)
+    {
+        
+        $category = Blog_category::where('slug', $cate)->where("typePost",1)->first();
+
+        if(!$category)
+        {
+            dd("not found"); 
+        }
+        
+        $data['category'] = $category;
+        $data['blogs_categories'] = Blog_category::where("id", $category->id)
+                                    ->where("typePost" , "1")->get();
+        $data['blogs'] = Blog::whereRaw("FIND_IN_SET('$category->id',cate_id)")
+                        ->where('lang', 'like', \App::getLocale())->orderBy('id', 'DESC')
+                        ->paginate(8);
+                      
+                      
+     return view(config('app.THEME_PATH').'.blog_categories_details', compact('data'));
     }
     public function search(Request $request)
     { 

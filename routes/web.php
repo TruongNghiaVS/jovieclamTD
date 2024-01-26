@@ -154,7 +154,12 @@ Route::get('blog/get-allcareer', 'BlogController@getAllCarrier')->name('blog-get
 Route::get('blog/{slug}', 'BlogController@details')->name('blog-detail');
 
 Route::get('/blog/category/{blog}', 'BlogController@categories')->name('blog-category');
+Route::get('blog/{slug}', 'BlogController@details')->name('blog-detail');
 
+Route::get('/blog/category/{blog}', 'BlogController@categories')->name('blog-category');
+
+Route::get('/tin-tuc/{cate}', 'BlogController@categories2');
+Route::get('/tin-tuc/{cate}/{slug}', 'BlogController@details2');
 Route::get('/company-change-message-status', 'CompanyMessagesController@change_message_status')->name('company-change-message-status');
 Route::get('/seeker-change-message-status', 'Job\SeekerSendController@change_message_status')->name('seeker-change-message-status');
 
