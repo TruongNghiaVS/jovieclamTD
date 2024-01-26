@@ -55,7 +55,7 @@
                                     <div class="col-lg-4 col-md-4 col-sm-4">
                                        
                                         <div class="d-flex justify-content-end-rp align-items-center h-100">
-                                            Thời gian cập nhật: 05/01/2024
+                                        Thời Gian Cập Nhật: 05/01/2024
                                         </div>
                                        
                                     </div>

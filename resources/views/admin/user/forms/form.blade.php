@@ -60,7 +60,7 @@
         {!! APFrmErrHelp::showErrors($errors, 'date_of_birth') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'gender_id') !!}">
-        {!! Form::label('gender_id', 'Giới tính', ['class' => 'bold']) !!}
+        {!! Form::label('gender_id', 'Giới Tính', ['class' => 'bold']) !!}
         {!! Form::select('gender_id', [''=>'Lựa chọn']+[1=>'Nữ', 2=>'Nam'], null, array('class'=>'form-control', 'id'=>'gender_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'gender_id') !!}                                       
     </div>
@@ -80,7 +80,7 @@
         {!! APFrmErrHelp::showErrors($errors, 'national_id_card_number') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}">
-        {!! Form::label('country_id', 'Quốc gia', ['class' => 'bold']) !!}
+        {!! Form::label('country_id', 'Quốc Gia', ['class' => 'bold']) !!}
         {!! Form::select('country_id', [''=>'Lựa chọn']+$countries, old('country_id', (isset($user))? $user->country_id:$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}                                       
     </div>
@@ -119,7 +119,7 @@
         {!! APFrmErrHelp::showErrors($errors, 'career_level_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'industry_id') !!}">
-        {!! Form::label('industry_id', 'Ngành nghề', ['class' => 'bold']) !!}
+        {!! Form::label('industry_id', 'Ngành Nghề', ['class' => 'bold']) !!}
         {!! Form::select('industry_id', [''=>'Lựa chọn']+$industries, null, array('class'=>'form-control', 'id'=>'industry_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!}                                       
     </div>
@@ -144,8 +144,8 @@
         {!! APFrmErrHelp::showErrors($errors, 'salary_currency') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'street_address') !!}">
-        {!! Form::label('street_address', 'Địa chỉ chi tiết', ['class' => 'bold']) !!}
-        {!! Form::textarea('street_address', null, array('class'=>'form-control', 'id'=>'street_address', 'placeholder'=>'Địa chỉ chi tiết')) !!}
+        {!! Form::label('street_address', 'Địa Chỉ Chi Tiết', ['class' => 'bold']) !!}
+        {!! Form::textarea('street_address', null, array('class'=>'form-control', 'id'=>'street_address', 'placeholder'=>'Địa Chỉ chi tiết')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'street_address') !!}                                       
     </div>
 

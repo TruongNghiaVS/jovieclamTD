@@ -185,7 +185,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-3" for="title">Mô tả Meta </label>
+                                        <label class="control-label col-sm-3" for="title">Mô Tả Meta </label>
                                         <div class="col-sm-12">
                                             <textarea class="form-control" name="meta_descriptions"
                                                 id="meta_descriptions" cols="40" rows="5"

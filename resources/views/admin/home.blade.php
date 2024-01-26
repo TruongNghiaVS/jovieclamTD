@@ -7,7 +7,7 @@
         <!-- BEGIN PAGE BAR -->
         <div class="page-bar">
             <ul class="page-breadcrumb">
-                <li> <a href="index.html">Trang chủ</a> <i class="fa fa-circle"></i> </li>
+                <li> <a href="index.html">Trang Chủ</a> <i class="fa fa-circle"></i> </li>
                 <li> <span>{{ $siteSetting->site_name }} Panel dành cho Quản trị viên</span> </li>
             </ul>
         </div>

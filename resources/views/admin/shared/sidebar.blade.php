@@ -48,7 +48,7 @@
 		@if(APAuthHelp::check(['SUP_ADM']))
 		
         <li class="heading">
-            <h3 class="uppercase">Tài khoản</h3>
+            <h3 class="uppercase">Tài Khoản</h3>
         </li>
         @include('admin/shared/side_bars/package')
 

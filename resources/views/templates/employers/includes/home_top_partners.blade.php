@@ -2,7 +2,7 @@
 
     <div class="container">
         <div class="box-title-bg">
-            <h2 class="section-title text-uppercase">{{ __('Nhà tuyển dụng hàng đầu') }}</h2>
+            <h2 class="section-title text-uppercase">{{ __('Nhà Tuyển Dụng Hàng Đầu') }}</h2>
         </div>
         <!-- <div>
         <h5>Người tìm việc có cơ hội làm việc tại các doanh nghiệp hàng đầu</h5>

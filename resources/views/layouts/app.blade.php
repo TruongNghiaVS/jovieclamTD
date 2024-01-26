@@ -54,6 +54,8 @@ if (!isset($seo)) {
 
 <body class="default-page">
     <main style="padding-top: 76px;">
+        <b class="screen-overlay"></b>
+
         @yield('content')
     </main>
 

@@ -19,7 +19,7 @@
         </div>
         <!-- END PAGE BAR --> 
         <!-- BEGIN PAGE TITLE-->
-        <h3 class="page-title">Quản lý ứng viên <small>Danh sách ứng viên</small> </h3>
+        <h3 class="page-title">Quản Lý Ứng Viên <small>Danh sách ứng viên</small> </h3>
         <!-- END PAGE TITLE--> 
         <!-- END PAGE HEADER-->
         <div class="row">

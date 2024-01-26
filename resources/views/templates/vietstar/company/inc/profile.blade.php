@@ -130,7 +130,7 @@
     <div class="user-account-section">
         <div class="formpanel mt0">
             <div class="section-head">
-                <h1 class="title-form">Chỉnh sửa thông tin tài khoản</h1>
+                <h1 class="title-form">Chỉnh Sửa Thông Tin Tài Khoản</h1>
             </div>
 
             <div class="section-body">
@@ -158,7 +158,7 @@
 
                     <div class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center">
                         <div class="formrow formrow-photo">
-                        <h6>Hình nền</h6>
+                        <h6>Hình Nền</h6>
                             <div id="thumbnail">
                                 <div class="pic img-thumnail">
                                     <div class="img-thumnail__wrapper">
@@ -289,7 +289,7 @@
                             <tr>
                                 <td class="table_title">
                                     <strong>
-                                       Tỉnh/Thành phố
+                                       Tỉnh/Thành Phố
                                     </strong>
                                 </td>
                                 <td class="table_value">

@@ -149,7 +149,7 @@
     <section class="home-salary-3 cb-section">
         <div class="container">
             <div class="cb-title cb-title-center">
-                <h2>Tìm kiếm mức lương theo ngành nghề</h2>
+                <h2>Tìm Kiếm Mức Lương Theo Ngành Nghề</h2>
             </div>
             <div class="main-content">
                 <ul class="list-item">

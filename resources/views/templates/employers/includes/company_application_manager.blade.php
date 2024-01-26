@@ -60,7 +60,7 @@
                         
                      
                         <td>
-                            <a class="text-gray text-truncate has-tooltip job-details"
+                            <a class="text-gray text-truncate has-tooltip job-details curr"
                                 data-original-title="null" style="max-width: 150px;" data-job-slug="{{$value->job->slug}}"
                                data-job-name="{{$value->job->title ??''}}">
                                 {{ $value->job->title ??'' }}
@@ -157,7 +157,7 @@
     <div class="modal-dialog modal-lg modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="job-detail-modal-title">{{__('Job details')}}</h5>
+                <h5 class="modal-title" id="job-detail-modal-title">{{__('Job Details')}}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span class="iconmoon icon-recruiter-close"></span>
                 </button>

@@ -78,8 +78,7 @@
                             <ul class="list-unstyled footer-links">
                                 <li><a href="#">{{__('Job search policy')}}</a></li>
                                 <li><a href="">{{__('Privacy Policy')}}</a></li>
-                                <li><a href="">{{__('Agreement of use')}}</a></li>
-                                
+
                                 
 
                             </ul>
@@ -101,7 +100,7 @@
             </div>--}}
             <div class="col-md-6 col-lg-6 col-xl-4">
                 <div class="footer-widget">
-                    <h4 class="widget-title">Kết nối với Jobvieclam</h4>
+                    <h4 class="widget-title">Kết Nối Với Jobvieclam</h4>
                     <div class="socials">
                         <a href="#" class="social"><i class="fa-brands fa-facebook-f fa-lg me-3"></i></a>
                         <a href="#" class="social"><i class="fa-brands fa-twitter fa-lg me-3"></i></a>
@@ -136,7 +135,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="text-white p-2 fs-18px">Việc làm IT</div>
                                 <div class="text-white p-2 fs-18px">Việc làm Marketing</div>
-                                <div class="text-white p-2 fs-18px">Việc làm Chăm Sóc Khác Hàng</div>
+                                <div class="text-white p-2 fs-18px">Việc làm Chăm Sóc Khách Hàng</div>
                 
                 </div>
 

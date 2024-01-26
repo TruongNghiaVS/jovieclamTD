@@ -14,7 +14,7 @@
                 <div class="banner-form-main col-lg-6 col-md-12 col-sm-12 bg-white border">
                     <div class="formpanel">
 
-                        <div class="form-main__title py-3 text-primary">Đăng ký nhận tư vấn</div>
+                        <div class="form-main__title py-3 text-primary">Đăng Ký Nhận Tư Vấn</div>
                         <form id="support_form"  class="form-horizontal needs-validation" novalidate>
                             <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
                             <div class="form-group">

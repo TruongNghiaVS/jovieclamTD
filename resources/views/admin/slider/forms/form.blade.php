@@ -40,8 +40,8 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'slider_heading') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'slider_description') !!}">
-        {!! Form::label('slider_description', 'Mô tả Slider ', ['class' => 'bold']) !!}
-        {!! Form::textarea('slider_description', null, array('class'=>'form-control', 'id'=>'slider_description', 'placeholder'=>'Mô tả Slider ', 'dir'=>$direction)) !!}
+        {!! Form::label('slider_description', 'Mô Tả Slider ', ['class' => 'bold']) !!}
+        {!! Form::textarea('slider_description', null, array('class'=>'form-control', 'id'=>'slider_description', 'placeholder'=>'Mô Tả Slider ', 'dir'=>$direction)) !!}
         {!! APFrmErrHelp::showErrors($errors, 'slider_description') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'slider_link') !!}">

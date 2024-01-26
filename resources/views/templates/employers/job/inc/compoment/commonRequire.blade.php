@@ -1,5 +1,5 @@
 <div class="card card-edit-profile my-3">
-    <h2 class="fs-4 card-edit-profile__section">Yêu cầu chung</h2>
+    <h2 class="fs-4 card-edit-profile__section">Yêu Cầu Chung</h2>
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">

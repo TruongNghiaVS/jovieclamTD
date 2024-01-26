@@ -25,7 +25,7 @@ else
 ?>
 
 <div class="card card-edit-profile">
-    <h2 class="fs-4 card-edit-profile__section">Thông tin tuyển dụng</h2>
+    <h2 class="fs-4 card-edit-profile__section">Thông Tin Tuyển Dụng</h2>
     <div class="card-body">
         <div class="section-infomation account-infomation">
             <div class="row">
@@ -196,7 +196,7 @@ else
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="expiry_date" class="font-weight-bold fs-18px">Hạn nhận hồ sơ </label>
+                            <label for="expiry_date" class="font-weight-bold fs-18px">Hạn Nhận Hồ Sơ  </label>
                             <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="Deadline" value="{{ $edit && isset($job) ? \Carbon\Carbon::parse($job->expiry_date)->format('d-m-Y') : \Carbon\Carbon::parse(old('expiry_date'))->format('d-m-Y') }}" required>
                         </div>
                     </div>
@@ -235,7 +235,7 @@ else
 </div>
 
 <div class="card card-edit-profile my-3" id="benefit_section">
-        <h2 class="fs-4 card-edit-profile__section">PHÚC LỢI </h2>
+        <h2 class="fs-4 card-edit-profile__section">Phúc Lợi </h2>
         <div class="card-body">
                         <div class="row" bis_skin_checked="1">
                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
@@ -342,7 +342,7 @@ else
 
 
 <div class="card card-edit-profile my-3">
-    <h2 class="fs-4 card-edit-profile__section">Yêu cầu chung</h2>
+    <h2 class="fs-4 card-edit-profile__section">Yêu Cầu Chung</h2>
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
@@ -394,7 +394,7 @@ else
             
             <div class="col-md-3 col-md-3 col-sm-12">
             <div class="form-group form-group-custom-chosen">
-                    <label for="degree_level_id" class="font-weight-bold fs-18px">Bằng cấp </label>
+                    <label for="degree_level_id" class="font-weight-bold fs-18px">Bằng Cấp </label>
                    <select name ="degree_level_id"  id ="degree_level_id" class ="form-control form-select">
                    <option value=""> Chọn bằng cấp</option> 
                    @foreach ($degreeLevel as $item)
@@ -416,7 +416,7 @@ else
 
 
 <div class="card card-edit-profile my-3">
-    <h2 class="fs-4 card-edit-profile__section">THÔNG TIN KHÁC (KHÔNG BẮT BUỘC)</h2>
+    <h2 class="fs-4 card-edit-profile__section">Thông Tin Khác (Không Bắt Buộc)</h2>
     <div class="card-body">
         <p>
         Giới thiệu về môi trường làm việc, thời gian thử việc, cơ hội huấn luyện, đồng nghiệp
@@ -456,9 +456,9 @@ else
                     <div class="container todo-container">
                 
                         <div class="form-group">
-                            <label for="degree_level_id" class="font-weight-bold fs-18px"> Tên resume tag </label>
+                            <label for="degree_level_id" class="font-weight-bold fs-18px"> Tên Resume Tag </label>
                             <div class="d-flex justify-content-center">
-                                <input type="text" id="addtag" class="form-control" placeholder="Tên resume tag"  aria-describedby="addButton">
+                                <input type="text" id="addtag" class="form-control" placeholder="Tên Resume Tag"  aria-describedby="addButton">
                                 <button class="btn btn-primary mx-2" type="button" id="addButton">Thêm tag</button>
                             </div>
                             

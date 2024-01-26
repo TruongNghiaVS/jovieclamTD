@@ -15,8 +15,8 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'lang') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'job_experience') !!}">
-        {!! Form::label('job_experience', 'Kinh nghiệm làm việc', ['class' => 'bold']) !!}
-        {!! Form::text('job_experience', null, array('class'=>'form-control', 'id'=>'job_experience', 'placeholder'=>'Kinh nghiệm làm việc', 'dir'=>$direction)) !!}
+        {!! Form::label('job_experience', 'Kinh Nghiệm làm việc', ['class' => 'bold']) !!}
+        {!! Form::text('job_experience', null, array('class'=>'form-control', 'id'=>'job_experience', 'placeholder'=>'Kinh Nghiệm làm việc', 'dir'=>$direction)) !!}
         {!! APFrmErrHelp::showErrors($errors, 'job_experience') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'is_default') !!}">
@@ -40,7 +40,7 @@ $queryString = MiscHelper::getLangQueryStr();
         {!! APFrmErrHelp::showErrors($errors, 'is_default') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'job_experience_id') !!}" id="job_experience_id_div">
-        {!! Form::label('job_experience_id', 'Kinh nghiệm làm việc mặc định', ['class' => 'bold']) !!}
+        {!! Form::label('job_experience_id', 'Kinh Nghiệm làm việc mặc định', ['class' => 'bold']) !!}
         {!! Form::select('job_experience_id', ['' => 'Lựa chọn']+$jobExperiences, null, array('class'=>'form-control', 'id'=>'job_experience_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'job_experience_id') !!}                                       
     </div>

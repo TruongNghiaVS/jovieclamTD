@@ -31,7 +31,7 @@
                             <li><a href="#Summary" data-toggle="tab" aria-expanded="false">Tóm tắt</a></li>
                             <li><a href="#CV" data-toggle="tab" aria-expanded="false">C.V</a></li>
                             <li><a href="#Projects" data-toggle="tab" aria-expanded="false">Dự án</a></li>
-                            <li><a href="#Experience" data-toggle="tab" aria-expanded="false">Kinh nghiệm</a></li>
+                            <li><a href="#Experience" data-toggle="tab" aria-expanded="false">Kinh Nghiệm</a></li>
                             <li><a href="#Education" data-toggle="tab" aria-expanded="false">Đào tạo</a></li>
                             <li><a href="#Skills" data-toggle="tab" aria-expanded="false">Kỹ năng</a></li>
                             <li><a href="#Languages" data-toggle="tab" aria-expanded="false">{{__('Language')}}</a></li>

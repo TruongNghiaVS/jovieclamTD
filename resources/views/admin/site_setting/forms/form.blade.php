@@ -49,13 +49,13 @@
         {!! APFrmErrHelp::showErrors($errors, 'site_slogan') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'site_phone_primary') !!}">
-        {!! Form::label('site_phone_primary', 'Số điện thoại chính#', ['class' => 'bold']) !!}
-        {!! Form::text('site_phone_primary', null, array('class'=>'form-control', 'id'=>'site_phone_primary', 'placeholder'=>'Số điện thoại chính#')) !!}
+        {!! Form::label('site_phone_primary', 'Số Điện Thoại Chính#', ['class' => 'bold']) !!}
+        {!! Form::text('site_phone_primary', null, array('class'=>'form-control', 'id'=>'site_phone_primary', 'placeholder'=>'Số Điện Thoại chính#')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'site_phone_primary') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'site_phone_secondary') !!}">
-        {!! Form::label('site_phone_secondary', 'Số điện thoại phụ#', ['class' => 'bold']) !!}
-        {!! Form::text('site_phone_secondary', null, array('class'=>'form-control', 'id'=>'site_phone_secondary', 'placeholder'=>'Số điện thoại phụ#')) !!}
+        {!! Form::label('site_phone_secondary', 'Số Điện Thoại phụ#', ['class' => 'bold']) !!}
+        {!! Form::text('site_phone_secondary', null, array('class'=>'form-control', 'id'=>'site_phone_secondary', 'placeholder'=>'Số Điện Thoại phụ#')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'site_phone_secondary') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'mail_from_address') !!}">
@@ -79,7 +79,7 @@
         {!! APFrmErrHelp::showErrors($errors, 'mail_to_name') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'default_country_id') !!}">
-        {!! Form::label('default_country_id', 'Quốc gia mặc định', ['class' => 'bold']) !!}
+        {!! Form::label('default_country_id', 'Quốc Gia mặc định', ['class' => 'bold']) !!}
         {!! Form::select('default_country_id',$countries, null, array('class'=>'form-control', 'id'=>'default_country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'default_country_id') !!}                                       
     </div>

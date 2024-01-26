@@ -85,12 +85,12 @@
                         <div class="col-md-6 co-item-service animation fade-left" >
                             <div class="item">
                                 <div class="image">
-                                    <img class="lazy-new" alt="Tìm hồ sơ ứng viên"
+                                    <img class="lazy-new" alt="Tìm Hồ Sơ Ứng Viên"
                                             src="{{ asset('/vietstar/imgs/product-service/seo1.png') }}"
                                             style="">
                                 </div>
                                 <div class="caption">
-                                    <h3 class="title"><a href="javascript: void(0)">Tìm hồ sơ ứng viên</a></h3>
+                                    <h3 class="title"><a href="javascript: void(0)">Tìm Hồ Sơ Ứng Viên</a></h3>
                                     <div class="content">
                                         <p><strong>Sàng lọc ứng viên - Chọn đúng nhân tài</strong></p>
 

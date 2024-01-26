@@ -14,7 +14,7 @@
         {!! APFrmErrHelp::showErrors($errors, 'name') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'email') !!}">
-        {!! Form::label('email', 'Địa chỉ Email', ['class' => 'bold']) !!}
+        {!! Form::label('email', 'Địa Chỉ Email', ['class' => 'bold']) !!}
         {!! Form::text('email', null, array('required', 'class'=>'form-control', 'placeholder'=>'Email Address')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'email') !!}
     </div>

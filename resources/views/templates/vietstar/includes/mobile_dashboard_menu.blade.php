@@ -688,7 +688,7 @@
             @if(Auth::user())
             <li class="openmyacount">
                 <div class="d-flex w-100">
-                    <span class="side-bar-content">Thông tin tài khoản</span>
+                    <span class="side-bar-content">Thông Tin Tài Khoản</span>
                 </div>
 
             </li>
@@ -698,7 +698,7 @@
                    
                   
                     <!-- <a href="{{url('/employers')}}" class="btn btn-primary">Dành cho Nhà tuyển dụng</a> -->
-                    <a href="http://127.0.0.1:8001/employers" class="btn btn-primary">Dành cho Nhà tuyển dụng</a>
+                    <a href="http://127.0.0.1:8001/employers" class="btn btn-primary">Dành Cho Nhà Tuyển Dụng</a>
 
                  
                 </div>
@@ -707,7 +707,7 @@
             @elseif(!Auth::user())
             <li class="openmyacount">
                 <div class="d-flex w-100">
-                    <span class="side-bar-content">Thông tin tài khoản</span>
+                    <span class="side-bar-content">Thông Tin Tài Khoản</span>
                 </div>
 
             </li>
@@ -717,7 +717,7 @@
                     <a class="nav-link login_link btn btn-primary login-btn" data-toggle="modal" data-target="#user_login_Modal" >{{__('Log in')}} / {{__('Đăng ký')}} </a>
                   
                     <!-- <a href="{{url('/employers')}}" class="btn btn-primary">Dành cho Nhà tuyển dụng</a> -->
-                    <a href="http://127.0.0.1:8001/employers" class="btn btn-primary">Dành cho Nhà tuyển dụng</a>
+                    <a href="http://127.0.0.1:8001/employers" class="btn btn-primary">Dành Cho Nhà Tuyển Dụng</a>
 
                     {{--<a class="btn btn-primary my-2" href="{{route('register')}}" class="nav-link
                     register">{{__('Đăng ký')}}</a> --}}

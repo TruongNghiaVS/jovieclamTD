@@ -345,10 +345,9 @@ $(document).ready(function() {
                     hideSpinner();
                     if (data.sucess == true ) {
                         $("#employer_logup_Modal").modal("hide")
-                        showModal_Success("Thông báo", "Đăng ký thành công","/dashboard")
                         setTimeout(function(){
                                   window.location.href =  "/dashboard";
-                        }, 3000);
+                        }, 1000);
                     }
                        
                      

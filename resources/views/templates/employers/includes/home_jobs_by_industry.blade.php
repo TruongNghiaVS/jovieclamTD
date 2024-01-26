@@ -1,7 +1,7 @@
 
 <section class="section-jobs-by-industry">
     <div class="container">
-        <h2 class="section-title text-center mb-3 text-primary">Việc làm theo ngành nghề</h2>
+        <h2 class="section-title text-center mb-3 text-primary">Việc Làm Theo Ngành Nghề</h2>
         <div class="swiper-container jobs-by-industry_swiper">
             <div class="swiper-wrapper">
                 @foreach(collect($industries)->chunk(1) as $chunk)

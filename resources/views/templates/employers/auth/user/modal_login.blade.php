@@ -223,24 +223,14 @@ $(document).ready(function() {
                 }
                 })
                 .done(function(data){
-                    // if (data.sucess == true) { 
-                    //     $("#employer_login_Modal").css("display:none");
-                    //     $("#employer_login_Modal").removeClass("show");
-                    //     window.location.href =  "/dashboard";
-                    // }
-            
-                    
                     hideSpinner();
                     if (data.sucess == true) { 
     
                         $("#employer_login_Modal").modal("hide")
-                        showModal_Success("Thông báo", "Đăng nhập thành công","")
+                        
                         setTimeout(function(){
                               window.location.href =  "/dashboard";
-                        }, 2000);
-                    }
-                    else {
-                        showModal_Fail('Đăng nhập', `Đăng nhập thất bại`, '');
+                        }, 1000);
                     }
                 })
                 .fail(function(jqXHR, textStatus){

@@ -39,7 +39,7 @@
                                             <td>{!! Form::select('lang', ['' => __('Select')]+$languages, config('default_lang'), array('id'=>'lang', 'class'=>'form-control')) !!}</td>
                                             <td>
                                                 <?php $default_country_id = Request::query('country_id', $siteSetting->default_country_id); ?>
-                                                {!! Form::select('country_id', ['' => 'Chọn Quốc gia']+$countries, $default_country_id, array('id'=>'country_id', 'class'=>'form-control')) !!}</td>
+                                                {!! Form::select('country_id', ['' => 'Chọn Quốc Gia']+$countries, $default_country_id, array('id'=>'country_id', 'class'=>'form-control')) !!}</td>
                                             <td><input type="text" class="form-control" name="state" id="state" autocomplete="off" placeholder="State"></td>
                                             <td><select name="is_active" id="is_active"  class="form-control">
                                                     <option value="-1">{{__('Active?')}}</option>

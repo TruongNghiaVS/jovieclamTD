@@ -37,7 +37,7 @@ $direction = MiscHelper::getLangDirection($lang);
                             <li class=""> <a href="#captcha" data-toggle="tab" aria-expanded="false"> Captcha </a> </li>
                             <li class=""> <a href="#socialMediaLogin" data-toggle="tab" aria-expanded="false"> Đang nhập bằng mạng xã hội </a> </li>
                             <li class=""> <a href="#paymentGateways" data-toggle="tab" aria-expanded="false"> Cổng thanh toán </a> </li>
-                            <li class=""> <a href="#homePageSlider" data-toggle="tab" aria-expanded="false"> Thanh trượt/Slider trang chủ </a> </li>
+                            <li class=""> <a href="#homePageSlider" data-toggle="tab" aria-expanded="false"> Thanh trượt/Slider Trang Chủ </a> </li>
                             <li class=""> <a href="#mailChimp" data-toggle="tab" aria-expanded="false"> Mail Chimp </a> </li>
 
                             <li class=""> <a href="#googleAnalytics" data-toggle="tab" aria-expanded="false"> Google Analytics </a> </li>              

@@ -201,8 +201,8 @@
                             <input type="text" class="form-control" placeholder="Họ tên">
                         </div>
                         <div class="form-group">
-                            <label for="">Số điện thoại</label>
-                            <input type="tel" class="form-control" placeholder="Số điện thoại">
+                            <label for="">Số Điện Thoại</label>
+                            <input type="tel" class="form-control" placeholder="Số Điện Thoại">
                         </div>
                         <div class="form-group">
                             <label for="">Email</label>
