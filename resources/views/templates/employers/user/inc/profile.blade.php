@@ -41,7 +41,7 @@
             }
             ?>
 }}            <input type="checkbox" value="1" name="is_subscribed" {{$is_checked}} />
-            {{__('Đăng ký nhận tin tức mới')}}
+            {{__('Đăng ký nhận Tin Tức mới')}}
             {!! APFrmErrHelp::showErrors($errors, 'is_subscribed') !!}
         </div>
     </div>
