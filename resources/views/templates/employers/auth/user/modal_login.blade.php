@@ -234,13 +234,10 @@ $(document).ready(function() {
                     if (data.sucess == true) { 
     
                         $("#employer_login_Modal").modal("hide")
-                        showModal_Success("Thông báo", "Đăng nhập thành công","")
+                        
                         setTimeout(function(){
                               window.location.href =  "/dashboard";
                         }, 2000);
-                    }
-                    else {
-                        showModal_Fail('Đăng nhập', `Đăng nhập thất bại`, '');
                     }
                 })
                 .fail(function(jqXHR, textStatus){

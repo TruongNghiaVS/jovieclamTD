@@ -336,7 +336,7 @@ $(document).ready(function() {
                 .done(function(data){
                     hideSpinner();
                     if (data.sucess == true ) {
-                        showModal_Success('Đăng nhập', `${data.message ? data.message :"Đăng ký thành công"}`, `${ data.urlRedirect ?  data.urlRedirect : "/dashboard"}`);
+                       
                         setTimeout(function(){
                               window.location.href =  "/dashboard";
                         }, 3000);
