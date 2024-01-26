@@ -6,8 +6,8 @@
         {!! APFrmErrHelp::showErrors($errors, 'seo_title') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'seo_description') !!}">
-        {!! Form::label('seo_description', 'Mô tả SEO', ['class' => 'bold']) !!}
-        {!! Form::textarea('seo_description', null, array('class'=>'form-control', 'id'=>'seo_description', 'placeholder'=>'Mô tả SEO')) !!}
+        {!! Form::label('seo_description', 'Mô Tả SEO', ['class' => 'bold']) !!}
+        {!! Form::textarea('seo_description', null, array('class'=>'form-control', 'id'=>'seo_description', 'placeholder'=>'Mô Tả SEO')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'seo_description') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'seo_keywords') !!}">

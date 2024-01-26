@@ -48,7 +48,7 @@
         </div>
 
         <div class="formrow" id="div_description">
-            <textarea name="description" class="form-control" id="description" placeholder="{{__('Mô tả Dự án')}}">{{(isset($profileProject)? $profileProject->description:'')}}</textarea>
+            <textarea name="description" class="form-control" id="description" placeholder="{{__('Mô Tả Dự án')}}">{{(isset($profileProject)? $profileProject->description:'')}}</textarea>
             <span class="help-block description-error"></span> </div>
     </div>
 </div>

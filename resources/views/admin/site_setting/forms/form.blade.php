@@ -79,7 +79,7 @@
         {!! APFrmErrHelp::showErrors($errors, 'mail_to_name') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'default_country_id') !!}">
-        {!! Form::label('default_country_id', 'Quốc gia mặc định', ['class' => 'bold']) !!}
+        {!! Form::label('default_country_id', 'Quốc Gia mặc định', ['class' => 'bold']) !!}
         {!! Form::select('default_country_id',$countries, null, array('class'=>'form-control', 'id'=>'default_country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'default_country_id') !!}                                       
     </div>

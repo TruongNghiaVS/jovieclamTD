@@ -80,7 +80,7 @@
         {!! APFrmErrHelp::showErrors($errors, 'national_id_card_number') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}">
-        {!! Form::label('country_id', 'Quốc gia', ['class' => 'bold']) !!}
+        {!! Form::label('country_id', 'Quốc Gia', ['class' => 'bold']) !!}
         {!! Form::select('country_id', [''=>'Lựa chọn']+$countries, old('country_id', (isset($user))? $user->country_id:$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}                                       
     </div>

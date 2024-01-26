@@ -158,7 +158,7 @@
 
                     <div class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center">
                         <div class="formrow formrow-photo">
-                        <h6>Hình nền</h6>
+                        <h6>Hình Nền</h6>
                             <div id="thumbnail">
                                 <div class="pic img-thumnail">
                                     <div class="img-thumnail__wrapper">

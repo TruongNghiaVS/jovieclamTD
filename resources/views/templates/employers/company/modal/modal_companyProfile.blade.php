@@ -42,7 +42,7 @@ $company = Auth::guard('company')->user();
                         <div class="box-profile-view" bis_skin_checked="1">
                             <div class="formpanel mt0" bis_skin_checked="1">
                                 <div class="section-head" bis_skin_checked="1">
-                                    <h3 class="title">Thông tin công ty</h3>
+                                    <h3 class="title">Thông Tin Công Ty</h3>
                                 </div>
                                 <div class="section-body" bis_skin_checked="1">
                                     <div class="row" bis_skin_checked="1">
@@ -63,7 +63,7 @@ $company = Auth::guard('company')->user();
                                     </div>
                                   
                                
-                                    <p class="title-flip">Thông tin công ty</p>
+                                    <p class="title-flip">Thông Tin Công Ty</p>
 
 
                                     <div class="job-information" bis_skin_checked="1">

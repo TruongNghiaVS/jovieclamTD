@@ -67,7 +67,7 @@ if (Auth::guard('company')->user()) {
                       <p>Chưa cập nhật giới tính - {{$user->getGender('gender') ? - $user->getGender('gender') :""}}  {{$user->getMaritalStatus('marital_status')}}</p>
                     </li>
                     <li>
-                      <p><strong>Quốc gia:</strong></p>
+                      <p><strong>Quốc Gia:</strong></p>
                       <p>Việt Nam</p>
                     </li>
                     <li>

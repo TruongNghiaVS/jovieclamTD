@@ -52,8 +52,8 @@
         </div>
 
         <div class="form-group" id="div_description">
-            <label for="name" class="bold">Mô tả Dự án</label>
-            <textarea name="description" class="form-control" id="description" placeholder="Mô tả Dự án">{{(isset($profileProject)? $profileProject->description:'')}}</textarea>
+            <label for="name" class="bold">Mô Tả Dự án</label>
+            <textarea name="description" class="form-control" id="description" placeholder="Mô Tả Dự án">{{(isset($profileProject)? $profileProject->description:'')}}</textarea>
             <span class="help-block description-error"></span> </div>
     </div>
 </div>

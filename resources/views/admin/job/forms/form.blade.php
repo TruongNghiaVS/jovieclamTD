@@ -13,8 +13,8 @@
         {!! APFrmErrHelp::showErrors($errors, 'title') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'description') !!}">
-        {!! Form::label('description', 'Mô tả Công việc', ['class' => 'bold']) !!}
-        {!! Form::textarea('description', null, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>'Mô tả Công việc')) !!}
+        {!! Form::label('description', 'Mô Tả Công việc', ['class' => 'bold']) !!}
+        {!! Form::textarea('description', null, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>'Mô Tả Công việc')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'description') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'skills') !!}">
@@ -26,8 +26,8 @@
         {!! APFrmErrHelp::showErrors($errors, 'skills') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'country_id') !!}" id="country_id_div">
-        {!! Form::label('country_id', 'Quốc gia', ['class' => 'bold']) !!}
-        {!! Form::select('country_id', ['' => 'Chọn Quốc gia']+$countries, old('country_id', (isset($job))? $job->country_id:$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
+        {!! Form::label('country_id', 'Quốc Gia', ['class' => 'bold']) !!}
+        {!! Form::select('country_id', ['' => 'Chọn Quốc Gia']+$countries, old('country_id', (isset($job))? $job->country_id:$siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'state_id') !!}" id="state_id_div">
