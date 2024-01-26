@@ -619,13 +619,13 @@
     
                 <li>
                     <div class="d-flex gap-10 my-2 group-button">
-                        <a class="nav-link login_link btn btn-primary login-btn" data-toggle="modal" data-target="#employer_login_Modal" >{{__('Log in')}} / {{__('Đăng ký')}} </a>
+                        <a class="nav-link login_link btn btn-primary login-btn" data-toggle="modal" data-target="#employer_login_Modal" >{{__('Log in')}} / {{__('Đăng Ký')}} </a>
                 
                         <!-- <a href="{{url('/employers')}}" class="btn btn-primary">Dành cho Nhà tuyển dụng</a> -->
                              <a href="http://jobvieclam.com" class="btn btn-primary">Dành Cho Ứng Viên</a>
 
                         {{--<a class="btn btn-primary my-2" href="{{route('register')}}" class="nav-link
-                        register">{{__('Đăng ký')}}</a> --}}
+                        register">{{__('Đăng Ký')}}</a> --}}
                     </div>
                 </li>
 
@@ -652,9 +652,9 @@
             @elseif(!Auth::user() && !Auth::guard('company')->user())
                 <li>
                     <div class="d-flex gap-10 my-4 group-button">
-                    <a class="nav-link login_link btn btn-primary login-btn" data-toggle="modal" data-target="#employer_login_Modal" >{{__('Log in')}} / {{__('Đăng ký')}} </a>
+                    <a class="nav-link login_link btn btn-primary login-btn" data-toggle="modal" data-target="#employer_login_Modal" >{{__('Log in')}} / {{__('Đăng Ký')}} </a>
                         {{--<a class="btn btn-primary my-2" href="{{route('register')}}" class="nav-link
-                        register">{{__('Đăng ký')}}</a> --}}
+                        register">{{__('Đăng Ký')}}</a> --}}
                         <!-- <a href="{{route('index')}}" class="btn btn-primary">Dành cho ứng viên</a> -->
                         <a href="http://jobvieclam.com" class="btn btn-primary">Dành cho ứng viên</a>
 

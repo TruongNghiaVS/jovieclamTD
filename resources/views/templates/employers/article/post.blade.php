@@ -10,7 +10,7 @@ article.article {
     overflow: hidden;
     background: #ffffff;
     padding: 50px;
-    margin: 15px 0 30px;
+    margin: 0px 0 30px;
 }
 .article .article-title {
     padding: 15px 0 20px;
