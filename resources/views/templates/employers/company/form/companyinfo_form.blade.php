@@ -16,7 +16,7 @@
             <a class="nav-link" data-toggle="tab" href="#ads" role="tab">Mô Tả</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#placementPanel" role="tab">Địa chỉ</a>
+            <a class="nav-link" data-toggle="tab" href="#placementPanel" role="tab">Địa Chỉ</a>
           <li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#detail" role="tab">Chi tiết</a>

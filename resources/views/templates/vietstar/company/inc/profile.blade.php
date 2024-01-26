@@ -289,7 +289,7 @@
                             <tr>
                                 <td class="table_title">
                                     <strong>
-                                       Tỉnh/Thành phố
+                                       Tỉnh/Thành Phố
                                     </strong>
                                 </td>
                                 <td class="table_value">

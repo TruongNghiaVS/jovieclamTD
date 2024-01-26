@@ -20,8 +20,8 @@
             </div>
             <span class="help-block image-error"></span> </div>
         <div class="form-group" id="div_url">
-            <label for="url" class="bold">Địa chỉ website/URL Dự án</label>
-            <input class="form-control" id="url" placeholder="Địa chỉ website/URL Dự án" name="url" type="text" value="{{(isset($profileProject)? $profileProject->url:'')}}">
+            <label for="url" class="bold">Địa Chỉ Website/URL Dự án</label>
+            <input class="form-control" id="url" placeholder="Địa Chỉ Website/URL Dự án" name="url" type="text" value="{{(isset($profileProject)? $profileProject->url:'')}}">
             <span class="help-block url-error"></span> </div>
         <div class="form-group" id="div_date_start">
             <label for="date_start" class="bold">Ngày bắt đầu Dự án</label>

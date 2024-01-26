@@ -19,7 +19,7 @@
             </div>
             <span class="help-block image-error"></span> </div>
         <div class="formrow" id="div_url">
-            <input class="form-control" id="url" placeholder="{{__('Địa chỉ website/URL Dự án')}}" name="url" type="text" value="{{(isset($profileProject)? $profileProject->url:'')}}">
+            <input class="form-control" id="url" placeholder="{{__('Địa Chỉ Website/URL Dự án')}}" name="url" type="text" value="{{(isset($profileProject)? $profileProject->url:'')}}">
             <span class="help-block url-error"></span> </div>
         <div class="formrow" id="div_date_start">
             <input class="form-control datepicker" id="date_start" placeholder="{{__('Ngày bắt đầu Dự án')}}" name="date_start" type="text" autocomplete="off" value="{{(isset($profileProject)? $profileProject->date_start:'')}}">

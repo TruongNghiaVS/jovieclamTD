@@ -66,8 +66,8 @@
 
 
 
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'facebook') !!}"> {!! Form::label('facebook', 'Địa chỉ Facebook', ['class' => 'bold']) !!}
-        {!! Form::text('facebook', null, array('class'=>'form-control', 'id'=>'facebook', 'placeholder'=>'Địa chỉ Facebook')) !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'facebook') !!}"> {!! Form::label('facebook', 'Địa Chỉ Facebook', ['class' => 'bold']) !!}
+        {!! Form::text('facebook', null, array('class'=>'form-control', 'id'=>'facebook', 'placeholder'=>'Địa Chỉ Facebook')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'facebook') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'twitter') !!}"> {!! Form::label('twitter', 'Twitter', ['class' => 'bold']) !!}
         {!! Form::text('twitter', null, array('class'=>'form-control', 'id'=>'twitter', 'placeholder'=>'Twitter')) !!}

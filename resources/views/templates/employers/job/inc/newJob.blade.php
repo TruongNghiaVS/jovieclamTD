@@ -34,7 +34,7 @@
                         <div lass="col-md-6 col-lg-6 col-sm-12">
 
 
-                            <label for="City" class="font-weight-bold fs-18px my-2">Địa chỉ làm việc<span class="required">*</span></label>
+                            <label for="City" class="font-weight-bold fs-18px my-2">Địa Chỉ Làm Việc<span class="required">*</span></label>
 
 
 
