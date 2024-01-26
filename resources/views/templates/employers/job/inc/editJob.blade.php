@@ -456,9 +456,9 @@ else
                     <div class="container todo-container">
                 
                         <div class="form-group">
-                            <label for="degree_level_id" class="font-weight-bold fs-18px"> Tên resume tag </label>
+                            <label for="degree_level_id" class="font-weight-bold fs-18px"> Tên Resume Tag </label>
                             <div class="d-flex justify-content-center">
-                                <input type="text" id="addtag" class="form-control" placeholder="Tên resume tag"  aria-describedby="addButton">
+                                <input type="text" id="addtag" class="form-control" placeholder="Tên Resume Tag"  aria-describedby="addButton">
                                 <button class="btn btn-primary mx-2" type="button" id="addButton">Thêm tag</button>
                             </div>
                             
