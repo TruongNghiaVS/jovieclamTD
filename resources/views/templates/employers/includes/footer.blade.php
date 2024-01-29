@@ -76,7 +76,8 @@
                         <div class="footer-widget">
                             <h4 class="widget-title">{{__('Help')}}</h4>
                             <ul class="list-unstyled footer-links">
-                                <li><a href="/dieu-khoan-su-dung-nha-tuyen-dung">{{__('Terms Of Use')}}</a></li>
+                                <li><a href="/dieu-khoan-su-dung-dich-vu-voi-nguoi-tim-viec">Điều Khoản Sử Dụng Cho UV</a></li>
+                                <li><a href="/dieu-khoan-su-dung-nha-tuyen-dung">Điều Khoản Sử Dụng Cho NTD</a></li>
                                 <li><a href="/chinh-sach-bao-mat-thong-tin">{{__('Privacy Policy')}}</a></li>
 
                                 
