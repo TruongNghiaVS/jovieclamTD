@@ -165,7 +165,7 @@ $company = Auth::guard('company')->user();
                         <div class="about-company">
                             {!! $company->description !!}
                             <div class="d-flex justify-content-end">
-                                <a class="btn-view-more" href="{{ route('company.detail', $company->slug) }}" target="_blank" rel="noopener noreferrer">Xem thêm</a>
+                                <a class="btn-view-more" href="{{ route('company.detail', $company->slug) }}" target="_blank" rel="noopener noreferrer">Xem Thêm</a>
                             </div>
                         </div>
                     </div>

@@ -1,8 +1,8 @@
 {!! APFrmErrHelp::showOnlyErrorsNotice($errors) !!}
 @include('flash::message')
 <div class="form-body">
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'package_title') !!}"> {!! Form::label('package_title', 'Tên gói', ['class' => 'bold']) !!}
-        {!! Form::text('package_title', null, array('class'=>'form-control', 'id'=>'package_title', 'placeholder'=>'Tên gói')) !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'package_title') !!}"> {!! Form::label('package_title', 'Tên Gói', ['class' => 'bold']) !!}
+        {!! Form::text('package_title', null, array('class'=>'form-control', 'id'=>'package_title', 'placeholder'=>'Tên Gói')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'package_title') !!} </div>
     @php
         $language = \App::getLocale();

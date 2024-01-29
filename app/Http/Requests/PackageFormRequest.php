@@ -44,7 +44,7 @@ class PackageFormRequest extends Request
     public function messages()
     {
         return [
-            'package_title.required' => 'Tên gói bắt buộc/ Package title required.',
+            'package_title.required' => 'Tên Gói bắt buộc/ Package title required.',
             'package_price.required' => 'Đơn giá gói bắt buộc/ Package price required.',
             'package_num_days.required' => 'Thời hạn gói bắt buộc/ Package number of days required.',
             'package_num_listings.required' => 'Số lượng bài đăng cho gói bắt buộc/ Package number of listings required.',
