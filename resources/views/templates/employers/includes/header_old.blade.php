@@ -64,8 +64,8 @@ Dashboard
                                 </ul>
                             </li>
                             @endif @if(!Auth::user() && !Auth::guard('company')->user())
-                            <li class="nav-item"><a href="{{route('login')}}" class="nav-link">{{__('Đăng nhập')}}</a> </li>
-							<li class="nav-item"><a href="{{route('register')}}" class="nav-link register">{{__('Đăng ký')}}</a> </li>
+                            <li class="nav-item"><a href="{{route('login')}}" class="nav-link">{{__('Đăng Nhập')}}</a> </li>
+							<li class="nav-item"><a href="{{route('register')}}" class="nav-link register">{{__('Đăng Ký')}}</a> </li>
                             @endif
                             <li class="dropdown userbtn"><a href="{{url('/')}}"><img src="{{asset('/')}}images/lang.png" alt="" class="userimg" /></a>
                                 <ul class="dropdown-menu">

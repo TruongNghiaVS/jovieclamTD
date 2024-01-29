@@ -178,7 +178,7 @@
                                                 <strong>{{ $errors->first('g-recaptcha-response') }}</strong> </span> @endif
                                         </div>
 
-                                        <input type="submit" class="btn" value="{{__('Đăng ký')}}">
+                                        <input type="submit" class="btn" value="{{__('Đăng Ký')}}">
 
                                     </form>
 

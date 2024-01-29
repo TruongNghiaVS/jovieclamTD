@@ -714,13 +714,13 @@
 
             <li>
                 <div class="d-flex gap-10 my-2 group-button">
-                    <a class="nav-link login_link btn btn-primary login-btn" data-toggle="modal" data-target="#user_login_Modal" >{{__('Log in')}} / {{__('Đăng ký')}} </a>
+                    <a class="nav-link login_link btn btn-primary login-btn" data-toggle="modal" data-target="#user_login_Modal" >{{__('Log in')}} / {{__('Đăng Ký')}} </a>
                   
                     <!-- <a href="{{url('/employers')}}" class="btn btn-primary">Dành cho Nhà tuyển dụng</a> -->
                     <a href="http://127.0.0.1:8001/employers" class="btn btn-primary">Dành Cho Nhà Tuyển Dụng</a>
 
                     {{--<a class="btn btn-primary my-2" href="{{route('register')}}" class="nav-link
-                    register">{{__('Đăng ký')}}</a> --}}
+                    register">{{__('Đăng Ký')}}</a> --}}
                 </div>
             </li>
 

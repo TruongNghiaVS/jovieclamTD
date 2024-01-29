@@ -76,8 +76,9 @@
                         <div class="footer-widget">
                             <h4 class="widget-title">{{__('Help')}}</h4>
                             <ul class="list-unstyled footer-links">
-                                <li><a href="#">{{__('Job search policy')}}</a></li>
-                                <li><a href="">{{__('Privacy Policy')}}</a></li>
+                                <li><a href="/dieu-khoan-su-dung-dich-vu-voi-nguoi-tim-viec">Điều Khoản Sử Dụng Cho UV</a></li>
+                                <li><a href="/dieu-khoan-su-dung-nha-tuyen-dung">Điều Khoản Sử Dụng Cho NTD</a></li>
+                                <li><a href="/chinh-sach-bao-mat-thong-tin">{{__('Privacy Policy')}}</a></li>
 
                                 
 
@@ -165,8 +166,8 @@
             <p class="copyright">Copyright © 2022</p>
             <div class="term-link">
                 <span class="fs-16px pe-2">All Rights Reserved</span>
-                <div class="d-inline-block border-start"><a class="fs-16px px-2" href="#">{{__('Terms Of Use')}}</a></div>
-                <div class="d-inline-block border-start"><a class="fs-16px ps-2" href="#">{{__('Policies')}}</a></div>
+                <div class="d-inline-block border-start"><a class="fs-16px px-2" href="/dieu-khoan-su-dung-nha-tuyen-dung">{{__('Terms Of Use')}}</a></div>
+                <div class="d-inline-block border-start"><a class="fs-16px ps-2" href="/chinh-sach-bao-mat-thong-tin">{{__('Policies')}}</a></div>
             </div>
         </div>
     </div>

@@ -171,7 +171,7 @@
 
 
                 @if(!Auth::guard('company')->check())
-                <a class="nav-link login-link" data-toggle="modal" data-target="#employer_login_Modal">{{__('Log in')}} / {{__('Đăng ký')}} </a>
+                <a class="nav-link login-link" data-toggle="modal" data-target="#employer_login_Modal">{{__('Log in')}} / {{__('Đăng Ký')}} </a>
                 @endif
 
                 
