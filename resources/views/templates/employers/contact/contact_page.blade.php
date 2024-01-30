@@ -3,6 +3,12 @@
 <!-- Header start -->
 
 
+<!-- Dashboard menu start -->
+@include('templates.employers.includes.mobile_dashboard_menu')
+<!-- Dashboard menu end -->
+
+
+
 <!-- Header start -->
 @include('templates.employers.includes.header')
 <!-- Header end -->

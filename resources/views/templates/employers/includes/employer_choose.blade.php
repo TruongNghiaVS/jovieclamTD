@@ -19,10 +19,10 @@
                 <li><i class="bi bi-arrow-right mx-2 text-white"></i>Đội ngũ CSKH duy trì liên lạc với ứng viên, cung cấp thông tin, điều phối quy trình tuyển dụng cho trải nghiệm tuyển dụng một cách chuyên nghiệp và hiệu quả.
 </li>
 <li><i class="bi bi-arrow-right mx-2 text-white">
+</i>
 Sử dụng chiến lược tiếp thị (Recruitment Marketing) tăng cường sự nhận thức và quan tâm đối với chiến dịch tuyển dụng trên các phương tiện truyền thông, quảng cáo…
 
 
-</i>
 </li>
             </ul>
         </div>
@@ -80,7 +80,7 @@ Sử dụng chiến lược tiếp thị (Recruitment Marketing) tăng cường 
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-left:50px;
+            padding:0  50px;
             color: white;
         }
         .employer-choose .box-content .cb-title {
@@ -100,15 +100,19 @@ Sử dụng chiến lược tiếp thị (Recruitment Marketing) tăng cường 
         .employer-choose .box-content .box-content__content ul {
             margin-top: 10px;
             list-style-type: none;
+            padding:0 2rem;
+            text-align: justify;
+
         }
         .employer-choose .box-content .box-content__content ul li {
-              position: relative;
-                padding-left: 20px;
+                position: relative;
+                
                 line-height: 24px;
                 font-size: 16.5px;
                 font-weight: 400;
                 margin: 5px 0;
                 color: white;
+                text-align: justify;
         }
         
       
