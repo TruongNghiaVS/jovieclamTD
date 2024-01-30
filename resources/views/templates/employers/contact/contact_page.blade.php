@@ -2,7 +2,7 @@
 @section('content')
 <!-- Header start -->
 
-
+@include('templates.employers.includes.mobile_dashboard_menu')
 <!-- Header start -->
 @include('templates.employers.includes.header')
 <!-- Header end -->

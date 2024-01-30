@@ -2,6 +2,10 @@
 @section('content')
 <!-- Header start -->
 @include('templates.employers.includes.header')
+@include('templates.employers.includes.mobile_dashboard_menu')
+
+
+
 <!-- Header end -->
 <!-- Inner Page Title start -->
 <section class="hero-banner-company-profile" style="background-image: url(http://jobvieclam.com/vietstar/imgs/company-cover.jpg);"></section>

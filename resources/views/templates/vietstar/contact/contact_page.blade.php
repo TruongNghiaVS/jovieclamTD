@@ -2,7 +2,7 @@
 @section('content')
 <!-- Header start -->
 
-
+@include('templates.vietstar.includes.mobile_dashboard_menu')
 <!-- Header start -->
 @include('templates.vietstar.includes.header')
 <!-- Header end -->
