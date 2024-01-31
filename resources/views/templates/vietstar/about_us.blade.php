@@ -41,7 +41,7 @@
             <div class="container">
                 <div class="row about_us_content justify-content-md-center " bis_skin_checked="1">
                     <div class="col-lg-5 col-md-12 col-sm-12  about_us_img animation fade-left ">
-                        <img src="https://vietstargroup.vn/assets/img/hoatdong.jpeg" class="img_left_about">
+                        <img src="http://jobvieclam.com/admin_assets/hoatdong.jpeg" class="img_left_about">
                     </div>
                     <div class="col-lg-7  col-md-12  col-sm-12  d-flex align-items-center animation fade-right">
                         <div class="content_title" bis_skin_checked="1">
