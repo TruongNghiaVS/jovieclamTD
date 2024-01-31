@@ -118,6 +118,7 @@ p {
 	overflow: hidden;
 	padding: 0;
 	margin:0 1rem;
+	margin-right: 0;
 }
 
 .navbar .navbar-brand img {
@@ -1093,7 +1094,7 @@ h4.tablinks:hover {
 /* Blogs slider */
 
 .blogs-slider {
-	padding: 60px  0;
+	padding: 10px  0;
 }
 
 .blogs-slider .section-title-block {
@@ -2350,9 +2351,6 @@ h3.seekertxt span {
            ==all-product-service==
 
 *************************************************/
-section.all-product-service.cb-section {
-	padding-top: 60px;
-}
 
 
 

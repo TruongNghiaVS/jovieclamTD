@@ -60,8 +60,8 @@
                                         <div class="form-group">
                                             <label for="find_day">Tìm theo ngày</label>
                                                 <select class="form-select" id="find_day">
-                                                    <option>Ngày đăng</option>
-                                                    <option>Ngày hết hạn</option>
+                                                    <option>Ngày Đăng</option>
+                                                    <option>Ngày Hết Hạn</option>
                                                 
                                                 </select>
                                             </div>

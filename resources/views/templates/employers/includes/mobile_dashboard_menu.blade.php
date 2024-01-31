@@ -432,7 +432,7 @@
         <div class="menu">
             <ul class="list-unstyled components sidebar-main-nav" id="sidebar-main-nav">
                 <li class="sidebar-item {{ Request::url() == route('index') ? 'active' : '' }}">
-                    <a href="Request::url() == route('index')" class="list-group-item list-group-item-action {{ Request::url() == route('index')  ? 'active' : '' }}">
+                    <a href="{{ Request::url() == route('index') }}" class="list-group-item list-group-item-action {{ Request::url() == route('index')  ? 'active' : '' }}">
                         <div class="d-flex w-100">
                             <i class="fa-solid fa-house fs-24px me-2"></i>
                             <span class="side-bar-content"> {{__('Home')}}</span>
@@ -525,7 +525,14 @@
                     </a>
                 </li>
 
-               
+                <li class="sidebar-item">
+                    <a href="#" class="list-group-item list-group-item-action ">
+                            <div class="d-flex w-100">
+                                <i class="fas fa-search  fs-24px me-2"></i>
+                                <span class="side-bar-content">Cấu Hình Mail</span>
+                            </div>
+                    </a>
+                </li>
 
 
                 <li class="sidebar-item  {{ Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) ? 'active' : '' }}">
@@ -593,6 +600,17 @@
                     </a>
                 </li>
 
+                
+                <li class="sidebar-item {{ Request::url() == url('/tim-ung-vien') ? 'active' : '' }}">
+                <a href="{{url('/tim-ung-vien')}}" class="list-group-item list-group-item-action ">
+                        <div class="d-flex w-100">
+                            <i class="fas fa-search  fs-24px me-2"></i>
+                            <span class="side-bar-content">Tìm Ứng Viên</span>
+                        </div>
+                    </a>
+                </li>
+
+
                 <li class="sidebar-item {{ Request::url() == route('company.logout') ? 'active' : '' }}">
                     <a href="{{ route('company.logout') }}" class="list-group-item list-group-item-action ">
                         <div class="d-flex w-100">
@@ -609,13 +627,8 @@
 
     <div class="sidebar-bottom active">
         <ul class="list-unstyled components sidebar-bottom__item">
-            @if(!Auth::guard('company')->check())
-                <li class="openmyacount">
-                    <div class="d-flex w-100">
-                        <span class="side-bar-content">Thông tin tài khoản</span>
-                    </div>
-
-                </li>
+                @if(!Auth::guard('company')->check())
+        
     
                 <li>
                     <div class="d-flex gap-10 my-2 group-button">
@@ -630,13 +643,14 @@
                 </li>
 
             @elseif(Auth::guard('company')->user())
-
-            <li class="openmyacount">
+                @if(Auth::guard('company')->user())
+                <li class="openmyacount">
                     <div class="d-flex w-100">
                         <span class="side-bar-content">Thông Tin Tài Khoản</span>
                     </div>
 
                 </li>
+                @endif
     
                 <li>
                     <div class="d-flex gap-10 my-2 group-button">

@@ -4,7 +4,7 @@
 
 .cb-section {
     /* padding: 60px 0; */
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
 }
 
 .cb-title * {
@@ -1169,9 +1169,7 @@ footer .contact-detail p i.far {
 }
 
 @media screen and (max-width: 767px) {
-    .cb-section {
-        padding: 30px 0
-    }
+  
 
     h2.cb-title,
     .cb-title h2 {
@@ -3433,7 +3431,7 @@ footer .inner-copyright .copyright {
 }
 
 .recruitment-news {
-    padding-bottom: 60px;
+    
     padding-top: 0px;
 }
 
@@ -4610,7 +4608,7 @@ div#industry_id_chosen {
     }
 
     footer .footer-widget .widget-title {
-        margin-bottom: 16px
+        margin-bottom: 0
     }
 
 
@@ -4788,7 +4786,7 @@ div#industry_id_chosen {
 
     .blogs-slider {
         background-color: #f4f5f8;
-        padding: 40px 0 60px 0
+        padding: 20px 0 24px 0
     }
 
     .blogs-slider .__row {
@@ -4869,7 +4867,7 @@ div#industry_id_chosen {
     }
 
     footer .footer-widget .widget-title {
-        margin-bottom: 16px
+        margin-bottom: 0
     }
 
     footer .navbar-brand {

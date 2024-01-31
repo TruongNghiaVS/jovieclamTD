@@ -56,19 +56,19 @@
                     <div class="body" bis_skin_checked="1">
                         <ul class="company-account-information">
                             <li>
-                                <p class="number intNumPostNoUse">0</p><a class="title" href="#">Việc làm đang đăng</a>
+                                <p class="number intNumPostNoUse">0</p><a class="title" href="#">Việc Làm Đang Đăng</a>
                             </li>
                             <li>
                                 <p class="number orderNew">0</p><a class="title" href="#">
-                                    Việc làm chờ đăng</a>
+                                    Việc Làm Chờ Đăng</a>
                             </li>
                             <li>
                                 <p class="number JskNew">0</p><a class="title" href="#">
-                                    Việc làm tạm dừng đăng</a>
+                                    Việc Làm Tạm Dừng đăng</a>
                             </li>
                             <li>
                                 <p class="number JskNew">0</p><a class="title" href="#">
-                                    Việc làm hết hạn</a>
+                                    Việc Làm Hết Hạn</a>
                             </li>
                             <li>
                                 <p class="number JskNew">0</p><a class="title" href="#">

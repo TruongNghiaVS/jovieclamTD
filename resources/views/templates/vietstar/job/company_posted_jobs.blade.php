@@ -45,8 +45,8 @@
                     <div class="form-group">
                         <label for="find_day">Tìm theo ngày</label>
                         <select name="find_day" value="{{ isset($request['find_day']) ? $request['find_day'] : '0' }}" class="form-select" id="find_day">
-                            <option value="0">Ngày đăng</option>
-                            <option value="1">Ngày hết hạn</option>
+                            <option value="0">Ngày Đăng</option>
+                            <option value="1">Ngày Hết Hạn</option>
 
                         </select>
                     </div>
@@ -113,7 +113,7 @@
                             @if(Request::get('status') == 2)
                             <th class="font-weight-bold p-2" >{{ __('Positions') }}</th>
                             <!-- <th class="font-weight-bold"></th> -->
-                            <th class="font-weight-bold p-2"  >Ngày hết hạn</th>
+                            <th class="font-weight-bold p-2"  >Ngày Hết Hạn</th>
                             <th class="font-weight-bold p-2"  >{{ __('Status') }}</th>
     
                             <th class="font-weight-bold p-2"  >{{ __('Location') }}</th>
@@ -123,13 +123,13 @@
                             @else
                                 <th class="font-weight-bold p-2" >{{ __('Positions') }}</th>
                                 <!-- <th class="font-weight-bold"></th> -->
-                                <th class="font-weight-bold p-2"  >Ngày đăng</th>
-                                <th class="font-weight-bold p-2"  >Ngày hết hạn</th>
+                                <th class="font-weight-bold p-2"  >Ngày Đăng</th>
+                                <th class="font-weight-bold p-2"  >Ngày Hết Hạn</th>
                                 <th class="font-weight-bold p-2"  >{{ __('Status') }}</th>
     
                                 <th class="font-weight-bold p-2"  >{{ __('Location') }}</th>
                                
-                                <th class="font-weight-bold p-2" >Lượt nộp</th>
+                                <th class="font-weight-bold p-2" >Lượt Nộp</th>
                                 <th class="font-weight-bold p-2"  >{{ __('Interview Candidates') }}</th>
                                 <th class="font-weight-bold p-2"  >{{ __('List of Hired Candidates') }} </th>
                                 <th class="font-weight-bold p-2"  >{{ __('List of Rejected Candidates') }}</th>

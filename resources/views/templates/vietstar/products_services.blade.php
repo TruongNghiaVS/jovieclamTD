@@ -81,7 +81,7 @@
                                         <p style="font-weight: bold">Hiển thị việc làm - Tiếp cận nhân tài</p>
                                         <p>Thông tin về vị trí tuyển dụng của bạn sẽ được hiển thị trên trang web Jobvieclam và fanpage Jobvieclam- Tuyển Dụng & Việc Làm trong 30 ngày.</p>
                                     </div>
-                                    <a class="view-more" href="#">Xem thêm</a>
+                                    <a class="view-more" href="#">Xem Thêm</a>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
 
                                         <p>Cơ hội truy cập và tiếp cận hàng trăm ngàn hồ sơ được cập nhật mới thường xuyên giúp nhà tuyển dụng dễ dàng tìm kiếm ứng viên phù hợp.</p>
                                     </div>
-                                    <a class="view-more"  href="#">Xem thêm</a>
+                                    <a class="view-more"  href="#">Xem Thêm</a>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +163,7 @@
 
                                         <p>Jobvieclam là nền tảng cho phép các ứng viên khác giới thiệu việc làm cho bạn bè người quen và ngược lại, giới thiệu CV cho nhà tuyển dụng.</p>
                                     </div>
-                                    <a class="view-more" href="#">Xem thêm</a>
+                                    <a class="view-more" href="#">Xem Thêm</a>
                                 </div>
                             </div>
                         </div>
@@ -373,7 +373,7 @@
             <!-- </div> -->
             <!-- </div> -->
         </div>
-        <div class="view-more"><a class="btn-gradient" href="#">Xem thêm</a>
+        <div class="view-more"><a class="btn-gradient" href="#">Xem Thêm</a>
         </div>
     </div>
 </section> <!-- Danh Gia Khach Hang -->

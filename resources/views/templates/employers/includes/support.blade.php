@@ -12,9 +12,9 @@
                     </div>
                 </div>
                 <div class="banner-form-main col-lg-6 col-md-12 col-sm-12 bg-white border">
-                    <div class="formpanel">
+                    <div>
 
-                        <div class="form-main__title py-3 text-primary">Đăng Ký Nhận Tư Vấn</div>
+                        <div class="form-main__title py-2 text-primary">Đăng Ký Nhận Tư Vấn</div>
                         <form id="support_form"  class="form-horizontal needs-validation" novalidate>
                             <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
                             <div class="form-group">
@@ -105,7 +105,7 @@
         background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
-        padding: 50px;
+        padding:10px 50px;
     }
     .banner-form__title{
         font-size: 28px;
@@ -125,7 +125,7 @@
         letter-spacing: 0.14px;
         color: #FFF;
         text-align: center;
-        margin-bottom: 35px;
+        margin-bottom: 20px;
     }
     .banner-form__wrapper {
         width: 100%;

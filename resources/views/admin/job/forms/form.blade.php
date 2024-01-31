@@ -135,8 +135,8 @@
         {!! APFrmErrHelp::showErrors($errors, 'gender_id') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'expiry_date') !!}">
-        {!! Form::label('expiry_date', 'Ngày hết hạn', ['class' => 'bold']) !!}
-        {!! Form::text('expiry_date', null, array('class'=>'form-control datepicker', 'id'=>'expiry_date', 'placeholder'=>'Ngày hết hạn', 'autocomplete'=>'off')) !!}
+        {!! Form::label('expiry_date', 'Ngày Hết Hạn', ['class' => 'bold']) !!}
+        {!! Form::text('expiry_date', null, array('class'=>'form-control datepicker', 'id'=>'expiry_date', 'placeholder'=>'Ngày Hết Hạn', 'autocomplete'=>'off')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'expiry_date') !!}
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'degree_level_id') !!}" id="degree_level_id_div">

@@ -8,7 +8,7 @@
                     </div>    
                         
                     <div>
-                        <a class="btn btn-primary btn-lg "  href="#">{{__('Post a job')}} ngay</a>
+                        <a class="btn btn-primary btn-lg "  href="#">Đăng Việc Ngay</a>
                     </div> 
                 </div>
             </div>

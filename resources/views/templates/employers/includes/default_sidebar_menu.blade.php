@@ -54,9 +54,8 @@
                             <span class="icon-dashboard-icon fs-24px me-2"></span>
                             <span class="side-bar-content"><!-- {{__('Dashboard')}} -->
 
-Dashboard
-
-</span>
+                                Dashboard
+                            </span>
                         </div>
                     </a>
                 </li>
@@ -166,7 +165,7 @@ Dashboard
 @include('templates.employers.user.templates.modal_user_info')
 @push('scripts')
 <script type="text/javascript">
-    if ($(window).width() > 992) {
+    if ($(window).width() > 1199) {
         $('#default-sidebar').addClass("active");
     }
     else {

@@ -28,8 +28,8 @@
                             <div class="sort-item-wrapped">
                                 <div class="sort-item-wrapped__item active">Mặc định</div>
                                 <div class="sort-item-wrapped__item">Lương &lpar; cao - thấp &rpar; </div>
-                                <div class="sort-item-wrapped__item">Ngày đăng &lpar; mới nhất &rpar;</div>
-                                <div class="sort-item-wrapped__item">Ngày đăng &lpar; cũ nhất &rpar;</div>
+                                <div class="sort-item-wrapped__item">Ngày Đăng &lpar; mới nhất &rpar;</div>
+                                <div class="sort-item-wrapped__item">Ngày Đăng &lpar; cũ nhất &rpar;</div>
                                 <div class="sort-item-wrapped__item">Làm việc từ xa</div>
                             </div>
                         </div>

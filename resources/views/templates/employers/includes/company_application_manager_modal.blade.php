@@ -38,7 +38,7 @@
                         </div>
                         <input type="hidden" name="status" id="review-application-status">
                         <input type="hidden" name="job_application" value="" id="id_job">
-                        <textarea id="review-application-note" name="note" rows="5" placeholder="Bạn có muốn thêm ghi chú cho sự thay đổi này không ?"
+          
                             class="form-control p-3"></textarea>
                          </div>
                         <div class="row">
