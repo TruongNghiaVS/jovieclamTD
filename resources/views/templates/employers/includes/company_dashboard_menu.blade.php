@@ -60,6 +60,13 @@
                           
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link list-group-item-action ">
+                          
+                                Cấu Hình Mail
+                           
+                        </a>
+                    </li>
     
               
             </ul>
