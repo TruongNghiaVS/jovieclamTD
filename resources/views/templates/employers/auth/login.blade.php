@@ -135,7 +135,7 @@
 
                                             <input type="checkbox" value="1" name="terms_of_use" />
 
-                                            <a href="{{url('terms-of-use')}}">{{__('I accept Terms of Use')}}</a>
+                                            <a href="/dieu-khoan-su-dung-nha-tuyen-dung">{{__('I accept Terms of Use')}}</a>
 
 
 
