@@ -174,7 +174,7 @@
 }
 
 .section_postnow {
-    padding: 40px 0;
+    padding: 10px 0;
 }
 .introduce {
     background-color: var(--bs-gray-100);
@@ -240,7 +240,7 @@
     bottom: -4px;
 }
 .our_customer {
-    padding: 80px 0;
+    padding: 10px 0;
 
 }
 .our_customer .group-company {

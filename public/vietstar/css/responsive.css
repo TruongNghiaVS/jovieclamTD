@@ -4,7 +4,9 @@
   .container {
     max-width: 100%;
   }
-
+  footer {
+      padding: 20px 0 24px 0;
+  }
   .container.nav {
     position: absolute;
     top: 0;
@@ -513,7 +515,7 @@
   }
 
   footer section.links {
-    padding: 20px;
+    padding:0 20px;
     text-align: left;
   }
 
@@ -663,6 +665,9 @@
     .slider-hero-banner .bg-slider.is-sp {
       display: block
     }  
+    .box-content__content {
+      padding:unset !important
+    } 
 
   }
 

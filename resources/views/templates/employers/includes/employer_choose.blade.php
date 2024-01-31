@@ -40,7 +40,7 @@ Sử dụng chiến lược tiếp thị (Recruitment Marketing) tăng cường 
            
         }
         section.employer-choose.cb-section{
-            padding: 60px 0;
+            padding: 0px 0;
         }
         .employer-choose .flex-img, .employer-choose .box-content {
             -webkit-box-flex: 0;

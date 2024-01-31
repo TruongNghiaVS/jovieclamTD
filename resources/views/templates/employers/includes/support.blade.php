@@ -105,7 +105,7 @@
         background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
-        padding: 50px;
+        padding:10px 50px;
     }
     .banner-form__title{
         font-size: 28px;
@@ -125,7 +125,7 @@
         letter-spacing: 0.14px;
         color: #FFF;
         text-align: center;
-        margin-bottom: 35px;
+        margin-bottom: 20px;
     }
     .banner-form__wrapper {
         width: 100%;

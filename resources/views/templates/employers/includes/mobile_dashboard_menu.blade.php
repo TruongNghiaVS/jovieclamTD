@@ -525,7 +525,14 @@
                     </a>
                 </li>
 
-               
+                <li class="sidebar-item">
+                    <a href="#" class="list-group-item list-group-item-action ">
+                            <div class="d-flex w-100">
+                                <i class="fas fa-search  fs-24px me-2"></i>
+                                <span class="side-bar-content">Cấu Hình Mail</span>
+                            </div>
+                    </a>
+                </li>
 
 
                 <li class="sidebar-item  {{ Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) ? 'active' : '' }}">
@@ -592,6 +599,17 @@
                         </div>
                     </a>
                 </li>
+
+                
+                <li class="sidebar-item {{ Request::url() == url('/tim-ung-vien') ? 'active' : '' }}">
+                <a href="{{url('/tim-ung-vien')}}" class="list-group-item list-group-item-action ">
+                        <div class="d-flex w-100">
+                            <i class="fas fa-search  fs-24px me-2"></i>
+                            <span class="side-bar-content">Tìm Ứng Viên</span>
+                        </div>
+                    </a>
+                </li>
+
 
                 <li class="sidebar-item {{ Request::url() == route('company.logout') ? 'active' : '' }}">
                     <a href="{{ route('company.logout') }}" class="list-group-item list-group-item-action ">

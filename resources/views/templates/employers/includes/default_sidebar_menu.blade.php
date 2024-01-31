@@ -54,9 +54,8 @@
                             <span class="icon-dashboard-icon fs-24px me-2"></span>
                             <span class="side-bar-content"><!-- {{__('Dashboard')}} -->
 
-Dashboard
-
-</span>
+                                Dashboard
+                            </span>
                         </div>
                     </a>
                 </li>
