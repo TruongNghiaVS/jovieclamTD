@@ -63,7 +63,6 @@ class BlogController extends Controller
       
         $data['blog'] = Blog::where('slug','like','%'. $slug.'%')
         ->where("typePost",1)->where('lang', 'like', \App::getLocale())->first();
-
         $data['blogRelations'] = Blog::where("slug","!=",$slug)
         ->where("cate_id", $data['blog']->cate_id)
         ->where("typePost",1)
@@ -86,9 +85,7 @@ class BlogController extends Controller
     public function details($slug)
     {
         $blog= Blog::where('slug','like','%'. $slug.'%')
-        ->where("typePost",0)->where('lang', 'like', \App::getLocale())->first();
-
-        if($blog)
+        ->where("typePost",0)->where('lang', 'like', \App::getLocale())->first();                                                            if($blog)
         {
             $category= Blog_category::where("id", $blog->cate_id)->first();
             return redirect('/tin-tuc/'.$category->slug."/".$slug);

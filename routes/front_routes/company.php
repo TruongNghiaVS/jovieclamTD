@@ -25,6 +25,7 @@ Route::get('remove-from-favourite-applicant/{application_id}/{user_id}/{job_id}/
 Route::get('hire-from-favourite-applicant/{application_id}/{user_id}/{job_id}/{company_id}', 'Company\CompanyController@hireFromFavouriteApplicant')->name('hire.from.favourite.applicant');
 Route::get('quan-ly-ung-vien', 'Company\CompanyController@applicationManager')->name('application.manager');
 Route::post('detail-application', 'Company\CompanyController@detailApplication')->name('detail.application');
+Route::post('data-detail-note', 'Company\CompanyController@getNoteData')->name('getNoteData');
 Route::post('update-application', 'Company\CompanyController@updateApplication')->name('application.update');
 Route::get('view-public-profile-candidate/{user_id}/{job_id}', 'Company\CompanyController@viewPublicProfileCandidate')->name('application.profile.candidate');
 Route::get('refresh-front-job/{job_id}', 'Company\CompaniesController@refreshFrontJob')->name('refresh.front.job');

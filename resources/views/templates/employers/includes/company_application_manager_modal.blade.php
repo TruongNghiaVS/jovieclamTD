@@ -38,68 +38,16 @@
                         </div>
                         <input type="hidden" name="status" id="review-application-status">
                         <input type="hidden" name="job_application" value="" id="id_job">
-                        <textarea id="review-application-note" name="note" rows="5" placeholder="Bạn có muốn thêm ghi chú cho sự thay đổi này không?"
+                        <textarea id="review-application-note" name="note" rows="5" placeholder="Bạn có muốn thêm ghi chú cho sự thay đổi này không ?"
                             class="form-control p-3"></textarea>
-                    </div>
+                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-12" >
-                                    <ul class="timeline">
-                                        <li class="timeline-inverted">
-                                        <div class="timeline-badge">1</div>
-                                        <div class="timeline-panel">
-                                            <div class="d-flex justify-content-around">
-                                            <div class="timeline-heading">
-                                                <h4 class="timeline-title">CV tiếp nhận</h4>
-                                                <p>Tiếp nhận</p>
-                                            </div>
-                                            <div class="timeline-clock">
-                                                <p><i class="glyphicon glyphicon-time"></i>3 ngày</p>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </li>
-                                        <li class="timeline-inverted">
-                                        <div class="timeline-badge">2</div>
-                                        <div class="timeline-panel">
-                                            <div class="d-flex justify-content-around">
-                                            <div class="timeline-heading">
-                                                <h4 class="timeline-title">Phù hợp</h4>
-                                                <p>Đáp ứng yêu cầu</p>
-                                            </div>
-                                            <div class="timeline-clock">
-                                                <p><i class="glyphicon glyphicon-time"></i> 2 ngày</p>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </li>
-                                        <li class="timeline-inverted">
-                                        <div class="timeline-badge">3</div>
-                                        <div class="timeline-panel">
-                                            <div class="d-flex justify-content-around">
-                                            <div class="timeline-heading">
-                                                <h4 class="timeline-title">Hẹn phỏng vấn</h4>
-                                                <p>Ngày phỏng vấn 24/01/2024</p>
-                                            </div>
-                                            <div class="timeline-clock">
-                                                <p><i class="glyphicon glyphicon-time"></i> 3 phút </p>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </li>
-                                        <li class="timeline-inverted">
-                                        <div class="timeline-badge">4</div>
-                                        <div class="timeline-panel">
-                                            <div class="d-flex justify-content-around">
-                                            <div class="timeline-heading">
-                                                <h4 class="timeline-title">Nhận việc</h4>
-                                                <p>Từ chối</p>
-                                            </div>
-                                            <div class="timeline-clock">
-                                                <p><i class="glyphicon glyphicon-time"></i> 1 phút</p>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </li>
+                            <div class="col-lg-6 col-md-6 col-sm-12"  >
+                                    <ul class="timeline"   id ="listNoteHistory" >
+                                       
+                                        
+                                       
+
                                     
                                     </ul>
                             </div>
@@ -147,7 +95,7 @@
 </div>
 @push('scripts')
     <script type="text/javascript">
-        function submitUpdateApplication(id_apply_job) {
+        function OpenmodalPopup(id_apply_job) {
             detailApplyJob(id_apply_job)
         }
 
@@ -163,10 +111,24 @@
                 datatype: 'json',
                 success: function(json) {
                     $("#load_review_cv").html(json.html);
+                    loadHistoryNote(id_apply_job);
                 }
             });
         }
-
+        function loadHistoryNote(id_apply_job) {
+            $.ajax({
+                type: "POST",
+                url: "{{ route('getNoteData') }}",
+                data: {
+                    "id_apply_job": id_apply_job,
+                    "_token": "{{ csrf_token() }}"
+                },
+                datatype: 'json',
+                success: function(json) {
+                    $("#listNoteHistory").html(json.html);
+                }
+            });
+        }
         function submitUpdateNoteApplication(id_apply_job) {
           detailNoteApplyJob(id_apply_job);
         }

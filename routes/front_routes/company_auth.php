@@ -5,8 +5,6 @@ Route::prefix('recruiter')->name('company.')->group(function () {
     Route::get('/login', 'Company\Auth\LoginController@showLoginForm')->name('login');
     Route::post('/login', 'Company\Auth\LoginController@login');
     Route::get('/logout', 'Company\Auth\LoginController@logout')->name('logout');
-
-
     // Registration Routes...
     Route::get('/register', 'Company\Auth\RegisterController@showRegistrationForm')->name('register');
     Route::post('/register', 'Company\Auth\RegisterController@register');

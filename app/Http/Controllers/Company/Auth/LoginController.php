@@ -86,10 +86,7 @@ use AuthenticatesUsers;
     public function login(Request $request)
 
     {
-    
       
-    
-
         $passwordInput = $request->input('password');
         $request->validate([
             'email' => 'required',
@@ -100,7 +97,17 @@ use AuthenticatesUsers;
         $exitMemeber = Company::where('email', $request->get('email'))
                       ->first();  
         $error = array();
-
+        if(is_null($exitMemeber))
+        {
+            $itemError = new stdClass();
+            $itemError->key ="email";
+            $itemError->textError = "Tài khoản không tồn tại trong hệ thống. ";
+            array_push($error, $itemError);
+            return response()->json([
+                'sucess'=>false,
+                'error'=> $error ], 401);
+        }
+     
         if($exitMemeber->verified != 1)
         {
             $itemError = new stdClass();
@@ -111,8 +118,6 @@ use AuthenticatesUsers;
                 'sucess'=>false,
                 'error'=> $error ], 401);
         }
-
-
         if(!$exitMemeber)
         {
             $itemError = new stdClass();

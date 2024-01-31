@@ -67,7 +67,9 @@ class User extends Authenticatable
 
     public function getDefaultCv()
     {
-        $cv = ProfileCv::where('user_id', '=', $this->id)->where('is_default', '=', 1)->first();
+        $cv = ProfileCv::where('user_id', '=', $this->id)->where('is_default', '=', 1)
+                                            ->orderby("created_at", "desc")
+                                            ->first();
 
         if (null === $cv)
             $cv = ProfileCv::where('user_id', '=', $this->id)->first();

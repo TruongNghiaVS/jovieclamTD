@@ -316,7 +316,7 @@ class UserController extends Controller
                         ->addColumn('cv', function ($users) {
                             $user = User::find($users->id);
                             if ($user->getDefaultCv()) {
-                                return '<a href="' . asset('cvs/'.$user->getDefaultCv()->cv_file) . '" target="_blank" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-download"></i> '. __('Download CV').'</a>';
+                                return '<a href="' . asset('cvs/'.$user->getDefaultCv()->cv_file) . '" target="_blank" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-download"></i> '. __('Download CV') .'</a>';
                             } else {
                                 return __('No CV');
                             }

@@ -20,7 +20,7 @@
                 <div class="col-md-6">
                     <div class="group-button-cv-template ">
                         <button type="button" class="btn btn-light"
-                            onclick="Download_CV();">{{ __('Download CV') }}</button>
+                            onclick="Download_CV();">{{ __('Download CV') }} </button>
                         <a class="btn btn-primary" href="{{route('change.template')}}">{{ __('Change Template') }}</a>
                     </div>
                 </div>

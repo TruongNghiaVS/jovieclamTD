@@ -23,10 +23,10 @@
                     {{-- <button type="button" hidden class="btn btn-light" data-toggle="modal" data-target="#modalViewCV">Xem
                             CV Template</button> --}}
                     <button type="button" class="btn btn-light"
-                        onclick="Download_CV();">{{ __('Download CV') }}</button>
+                        onclick="Download_CV();">{{ __('Download CV') }} </button>
 
                     <button type="submit" class="btn btn-primary"
-                        onclick="Convert_HTML_To_PDF();">{{ __('Save this CV') }}</button>
+                        onclick="Convert_HTML_To_PDF();">{{ __('Save this CV') }} </button>
                 </div>
             </div>
         </div>

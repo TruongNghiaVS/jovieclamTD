@@ -30,6 +30,7 @@ use App\Package;
 use App\FavouriteApplicant;
 use App\OwnershipType;
 use App\JobApply;
+use App\Models\NoteForJob;
 
 use App\Job;
 use Carbon\Carbon;
@@ -163,6 +164,7 @@ class CompanyController extends Controller
 
         $userApply = $userApply->orderByDesc('id')->paginate(6);
 
+
         $data = [
             'userApply' => $userApply,
             'request' => $request->all(),
@@ -226,6 +228,8 @@ class CompanyController extends Controller
     public function detailApplication(Request $request) {
        if($request->id_apply_job) {
             $jobApply = JobApply::findOrFail($request->id_apply_job);
+             $noteForJobs =  NoteForJob::where("jobId",$jobApply->job_id )->orderBy("id", "desc")->get();
+
             if($request->modal_note == 1) {
                 $html = '
                     <input type="hidden" name="job_application" value="'.$jobApply->id.'" id="id_job">
@@ -269,9 +273,82 @@ class CompanyController extends Controller
        }
     }
 
-    public function updateApplication(Request $request) {
-        if($request->job_application) {
+    public function getNoteData(Request $request) {
+        if($request->id_apply_job) {
+
+             $jobApply = JobApply::findOrFail($request->id_apply_job);
+              $noteForJobs =  NoteForJob::where("jobId",$jobApply->job_id )->
+                              orderBy("id", "desc")->get();
+              $innerHtml ='';
+
+              if($noteForJobs)
+              {
+                $index = 1;
+                foreach ($noteForJobs as $itemNote) {
+
+                    $statustext= "CV tiếp nhận";
+                    $statusText ="";
+                    if($itemNote->statusNew =="1")
+                    {
+                        $statustext= "CV tiếp nhận";
+                    }
+                    else if($itemNote->statusNew =="2")
+                    {
+                        $statustext= "Phù hợp";
+                    }
+                    else if($itemNote->statusNew =="3")
+                    {
+                        $statustext= "Hẹn phỏng vấn";
+                    }
+                    else if($itemNote->statusNew =="4")
+                    {
+                        $statustext= "Gửi đề nghị";
+                    }
+                    else if($itemNote->statusNew =="5")
+                    {
+                        $statustext= "Nhận việc";
+                    }
+                    else if($itemNote->statusNew =="6")
+                    {
+                        $statustext= "Từ chối";
+                    }
+                    $innerHtml = $innerHtml.'    <li class="timeline-inverted">
+                    <div class="timeline-badge">'.$index.'</div>
+                    <div class="timeline-panel">
+                        <div class="d-flex justify-content-around">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">'.$statustext.'</h4>
+                            <p>'.$itemNote->Noted.'</p>
+                        </div>
+                        <div class="timeline-clock">
+                            <p><i class="glyphicon glyphicon-time"></i>'.$itemNote->created_at->format('Y-m-d H:i:s').'</p>
+                        </div>
+                        </div>
+                    </div>
+                    </li>';
+                    $index++;
+                 }
+              }
+             
+              return response()->json([
+                 'success' => true,
+                 'html' => $innerHtml,
+             ]); 
+        }
+     }
+    public function updateApplication(Request $request)
+     {
+         if($request->job_application) {
+            
             $jobApply = JobApply::findOrFail($request->job_application);
+            $jobInfo = Job::where("id",$jobApply->job_id)->first();
+            $itemInsert = new NoteForJob();
+            $itemInsert->title =$jobInfo->title;
+            $itemInsert->jobId =$jobApply->job_id;
+            $itemInsert->statusOld =$jobApply->status;
+            $itemInsert->statusNew =$request->status;
+            $itemInsert->Noted =$request->note;
+            $itemInsert->save();
             $jobApply->update([
                 'status' => !is_null($request->status) ? $request->status : $jobApply->status,
                 'note' => $request->note,
