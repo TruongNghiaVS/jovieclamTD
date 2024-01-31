@@ -640,6 +640,18 @@
     .card-body {
       padding: 0.5rem;
     }
+
+    button#mobile-sidebarCollapse {
+      display: block;
+    }
+    #company-default-nav{
+      display: none;
+    }
+  
+    #company-default-nav{
+      display: none;
+    }
+  
   }
 
 
@@ -650,6 +662,11 @@
     max-width: 100%;
   }
 
+ 
+
+  button#mobile-sidebarCollapse {
+    display: block;
+  }
   .w-10 {
     width: 30% !important;
   }
@@ -1002,23 +1019,33 @@
   .card-body{
     padding: 0.5rem;
   }
+  #company-default-nav{
+    display: none;
+  }
+
+
 }
 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width: 1239px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .container {
     max-width: 960px;
   }
 
-  
+  .navbar .group-button {
+    display: none;
+  }
+
+
+
   .content {
     padding-left: 24px;
     padding-right: 24px;
   }
 
   .page-heading-tool.job-detail.mobile {
-    display: none;
+    display: block;
   }
 
   .page-heading-tool .search-job #search{
@@ -1026,10 +1053,52 @@
   }
 
   .filters-job-wrapper-mobile {
-    display: none;
+    display: block;
   }
 
   #mobile-sidebarCollapse {
+    display: block;
+  }
+
+  #mobile-sidebar {
+    display: block !important;
+  }
+
+  #mobile-sidebar.active {
+    display: block !important;
+  }
+
+  #mobile-sidebar-main-nav {
+    display: block;
+  }
+
+  #mobile-sidebar.active .sidebar-header {
+    max-height: 70%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 70%
+  }
+
+  .action-posting {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #company-default-nav{
+    display: none;
+  }
+
+
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px)  {
+  .container {
+    max-width: 1170px;
+  }
+  button#mobile-sidebarCollapse {
     display: none;
   }
 
@@ -1045,21 +1114,8 @@
     display: none;
   }
 
-  .action-posting {
-    display: flex;
-    justify-content: space-between;
-  }
 
 
-}
-
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-
-@media only screen and (min-width: 1240px) and (max-width: 1399px)  {
-  .container {
-    max-width: 1170px;
-  }
   .content {
     padding-left: 135px;
     padding-right: 135px;
@@ -1124,6 +1180,9 @@
 
 
 @media only screen and (min-width: 1400px) { 
+  button#mobile-sidebarCollapse {
+    display: none;
+  }
   .container {
     max-width: 1200px;
   }

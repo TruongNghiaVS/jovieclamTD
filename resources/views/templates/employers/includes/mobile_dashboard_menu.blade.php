@@ -432,7 +432,7 @@
         <div class="menu">
             <ul class="list-unstyled components sidebar-main-nav" id="sidebar-main-nav">
                 <li class="sidebar-item {{ Request::url() == route('index') ? 'active' : '' }}">
-                    <a href="Request::url() == route('index')" class="list-group-item list-group-item-action {{ Request::url() == route('index')  ? 'active' : '' }}">
+                    <a href="{{ Request::url() == route('index') }}" class="list-group-item list-group-item-action {{ Request::url() == route('index')  ? 'active' : '' }}">
                         <div class="d-flex w-100">
                             <i class="fa-solid fa-house fs-24px me-2"></i>
                             <span class="side-bar-content"> {{__('Home')}}</span>

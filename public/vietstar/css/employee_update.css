@@ -4,6 +4,7 @@
     left: 0;
     max-width: 100%;
     width: 100%;
+    height: 100%;
 }
 .company-wrapper{
     position: relative;
@@ -318,7 +319,7 @@ ul.list-unstyled.components.sidebar-bottom__item li{
     margin: 0;
 }
 button#mobile-sidebarCollapse {
-    display: none;
+
     width: unset;
     position: absolute;
     top: 15px;

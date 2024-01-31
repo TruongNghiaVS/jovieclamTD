@@ -163,7 +163,7 @@
                 @endif
             </div>
             <!-- end user-badge -->
-            <div class="d-flex group-button gap-2">
+            <div class="group-button gap-2">
                 {{--@if(Auth::guard('company')->user())
                 <a class="btn btn-primary" href="{{route('job.seeker.list')}}" class="nav-link">{{__('Find candidates')}}</a>
                 @endif--}}

@@ -37,10 +37,10 @@ if (!isset($seo)) {
     <link href="{{ asset('/vietstar/css/update.css')}}" rel="stylesheet">
     <link href="{{ asset('/vietstar/css/user_update.css')}}" rel="stylesheet">
     <link href="{{ asset('/vietstar/css/employee_update.css')}}" rel="stylesheet">
-    <link href="{{ asset('/vietstar/css/responsive.css')}}" rel="stylesheet">
     <link href="{{ asset('/vietstar/css/font-awsome.min.css')}}" rel="stylesheet">
     <script src="{{ asset('/vietstar/js/animation.js')}}" type="text/javascript"></script>
     <link href="{{ asset('/vietstar/css/custom-chosen.css')}}" rel="stylesheet">
+    <link href="{{ asset('/vietstar/css/responsive.css')}}" rel="stylesheet">
     @stack('styles')
     <script src="{{asset('/')}}js/jquery.min.js"></script>
     {!! $siteSetting->ganalytics !!}

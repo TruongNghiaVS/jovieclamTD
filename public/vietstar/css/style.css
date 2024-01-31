@@ -118,6 +118,7 @@ p {
 	overflow: hidden;
 	padding: 0;
 	margin:0 1rem;
+	margin-right: 0;
 }
 
 .navbar .navbar-brand img {

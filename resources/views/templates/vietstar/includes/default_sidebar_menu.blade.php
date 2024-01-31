@@ -166,7 +166,7 @@ Dashboard
 @include('templates.vietstar.user.templates.modal_user_info')
 @push('scripts')
 <script type="text/javascript">
-    if ($(window).width() > 992) {
+    if ($(window).width() > 1199) {
         $('#default-sidebar').addClass("active");
     }
     else {
