@@ -71,9 +71,7 @@
             <li>
             <a href="{{ route('application.manager', ['status' => '3']) }}" class="{{ Request::get('status') == 3 ? 'type-active' : '' }}">{{ __('Interview') }}</a>
             </li>
-            <li>
-                <a href="{{ route('application.manager', ['status' => '4']) }}" class="{{ Request::get('status') == 4 ? 'type-active' : '' }}">{{ __('Suggest') }}</a>
-            </li>
+           
             <li>
             <a href="{{ route('application.manager', ['status' => '5']) }}"
                     class="{{ Request::get('status') == 5 ? 'type-active' : '' }}">{{ __('Confirm')
