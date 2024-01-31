@@ -201,7 +201,7 @@
         <div class="container">
             <h1 class="text-primary">Văn Hóa Jobvieclam</h1>
                 <div class="culture-img">
-                        <img src="http://localhost:8000\uploads/blogs/tim-viec-lam-anh-dai-dien_542_742.png" alt="tim-viec-lam-anh-dai-dien_542_742.png" title="tim-viec-lam-anh-dai-dien_542_742.png">
+                        <img src="/uploads/blogs/tim-viec-lam-anh-dai-dien_542_742.png" alt="tim-viec-lam-anh-dai-dien_542_742.png" title="tim-viec-lam-anh-dai-dien_542_742.png">
                 </div>
             <div class="title">
                 <i class="fas fa-hand-point-right text-primary"></i> Văn Hóa Tập Trung vào Con Người:
