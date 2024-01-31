@@ -630,7 +630,7 @@
       height: 340px;
     }
     .banner-form-main {
-      padding: 10px;
+      padding: 10px !important;
     }
 
     .card-body-schedule-interview__top{
