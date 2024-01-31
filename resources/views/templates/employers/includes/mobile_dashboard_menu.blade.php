@@ -627,13 +627,8 @@
 
     <div class="sidebar-bottom active">
         <ul class="list-unstyled components sidebar-bottom__item">
-            @if(!Auth::guard('company')->check())
-                <li class="openmyacount">
-                    <div class="d-flex w-100">
-                        <span class="side-bar-content">Thông tin tài khoản</span>
-                    </div>
-
-                </li>
+                @if(!Auth::guard('company')->check())
+        
     
                 <li>
                     <div class="d-flex gap-10 my-2 group-button">
@@ -648,13 +643,14 @@
                 </li>
 
             @elseif(Auth::guard('company')->user())
-
-            <li class="openmyacount">
+                @if(Auth::guard('company')->user())
+                <li class="openmyacount">
                     <div class="d-flex w-100">
                         <span class="side-bar-content">Thông Tin Tài Khoản</span>
                     </div>
 
                 </li>
+                @endif
     
                 <li>
                     <div class="d-flex gap-10 my-2 group-button">
