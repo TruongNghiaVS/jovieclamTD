@@ -108,20 +108,18 @@
 
                             
 
-                                      @php
+                                        @php
                                         $cvUserApply = $value->user->getDefaultCv();
 
                                        @endphp
                                  
                                        
-                                        @if( $cvUserApply->type =="1")
-                                        {
+                                        @if( $cvUserApply->type =="1")    
                                             <a role="button" href="javascript:void(0)" class="dropdown-item public-profile-toggle"
                                                 onclick="showModal_candidate('{{ $value->user->id }}', '{{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name  }}');">
                                                                 <!-- Rest of your code here -->Xem cv
                                                 </a>
 
-                                        }
                                         @else
                                              <a role="button" download href="{{'http://jobvieclam.com/'.'cvs/'.$value->user->getDefaultCv()->cv_file}}" target="_blank" class="dropdown-item">Tải CV</a>
                                     

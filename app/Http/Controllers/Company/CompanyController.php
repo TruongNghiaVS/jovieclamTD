@@ -324,10 +324,9 @@ class CompanyController extends Controller
                         <div class="timeline-heading">
                             <h4 class="timeline-title">'.$statustext.'</h4>
                             <p>'.$itemNote->Noted.'</p>
-                        </div>
-                        <div class="timeline-clock">
                             <p><i class="glyphicon glyphicon-time"></i>'.$itemNote->created_at->format('Y-m-d H:i:s').'</p>
                         </div>
+                     
                         </div>
                     </div>
                     </li>';

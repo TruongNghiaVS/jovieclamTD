@@ -1066,6 +1066,18 @@
     display: none;
   }
 
+  li .group-button {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  li .group-button .btn {
+    width: 100%;
+  }
+  .sidebar-bottom__item .group-button a {
+    margin: unset;
+  }
+
 
 
   .content {
