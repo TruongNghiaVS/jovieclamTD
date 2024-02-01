@@ -23,7 +23,7 @@ $ads = \App\AdBanner::all();
                 <div class="item">
                     <div class="image loadAds">
                         <a href="#">
-                            <img src="{{ asset('/') }}admin_assets/login.png"
+                            <img src="{{ asset('/') }}admin_assets/login.jpg"
                                 alt="#">
                         </a>
                     </div>

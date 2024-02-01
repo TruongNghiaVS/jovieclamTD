@@ -10,7 +10,7 @@
         <div class="row g-0 login-swapper shadow">
             <div class="col-6">
                 <div class="login-img-swapper">
-                    <div class="login-img-swapper__img" style="background-image: url({{ asset('/') }}admin_assets/login.png);">
+                    <div class="login-img-swapper__img" style="background-image: url({{ asset('/') }}admin_assets/login.jpg);">
                     </div>
                 </div>
             </div>
