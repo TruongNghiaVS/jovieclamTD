@@ -5,7 +5,7 @@
         </div>
 
 
-        <ul class="nav nav-tabs" id="config_mail" role="tablist">
+        <ul class="nav nav-tabs mb-0 mt-1" id="config_mail" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Yêu Cầu Email Marketing</a>
             </li>
