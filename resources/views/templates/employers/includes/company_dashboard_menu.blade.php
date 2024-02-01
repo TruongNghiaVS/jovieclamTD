@@ -60,11 +60,9 @@
                           
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-link list-group-item-action ">
-                          
+                    <li class="nav-item {{ Request::url() == route('company.config-mail') ? 'active' : '' }}">
+                        <a href="/cau-hinh-mail" class="nav-link list-group-item-action ">
                                 Cấu Hình Mail
-                           
                         </a>
                     </li>
     

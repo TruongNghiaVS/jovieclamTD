@@ -174,6 +174,14 @@ class CompanyController extends Controller
         return view(config('app.THEME_PATH').'.application_manager', $data);
     }
 
+
+    public  function configMail(Request $request)
+    {
+
+        
+        return view(config('app.THEME_PATH').'.config_mail');
+    }
+
     public  function applicationManagerbk(Request $request)
     {
         $jobs = Auth::guard('company')->user()->jobs()->orderBy('jobs.created_at', 'desc')->pluck('jobs.id')->toArray();

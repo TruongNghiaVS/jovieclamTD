@@ -525,8 +525,8 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item">
-                    <a href="#" class="list-group-item list-group-item-action ">
+                <li class="sidebar-item {{ Request::url() == route('company.config-mail') ? 'active' : '' }}">
+                    <a href="/cau-hinh-mail" class="list-group-item list-group-item-action ">
                             <div class="d-flex w-100">
                                 <i class="fas fa-search  fs-24px me-2"></i>
                                 <span class="side-bar-content">Cấu Hình Mail</span>

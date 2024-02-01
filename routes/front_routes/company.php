@@ -60,3 +60,4 @@ Route::delete('shared-cvs/{cv}/delete','Company\RecruiterSharedCVController@dest
 Route::get('shared-cvs/{cv}/edit','Company\RecruiterSharedCVController@edit')->name('shared.cvs.edit');
 
 
+Route::get('cau-hinh-mail', 'Company\CompanyController@configMail')->name('company.config-mail');
