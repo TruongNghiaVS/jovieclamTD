@@ -114,7 +114,9 @@ $blogs = $data["blogs"]->items();
 
                
             </div>
-          
+            <div class="d-flex justify-content-center">
+            {{ $data["blogs"]->links() }}
+            </div>
         </div>
     </section>
 </div>

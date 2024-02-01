@@ -534,7 +534,7 @@
                     </a>
                 </li>
 
-
+                {{--
                 <li class="sidebar-item  {{ Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) ? 'active' : '' }}">
                     <a href="{{route('interview.schedule.calendar',['company_id'=> Auth::guard('company')->user()->id])}}" class="list-group-item list-group-item-action">
                         <div class="d-flex w-100">
@@ -543,7 +543,7 @@
                         </div>
                     </a>
                 </li>
-
+                --}}
 
                 <li class="sidebar-item {{ Request::url() == route('company.profile') ? 'active' : '' }}">
                     <a href="{{route('company.profile') }}" class="list-group-item list-group-item-action ">

@@ -75,7 +75,7 @@
                         <li class="has-child">
                         <a href="#" class="nav-link nav-link-parent" {{ Request::url() == route('blogs') ? 'header-active' : 'text-main-color' }}" style="{{ Request::url() == route('blogs')  ? 'color:#981B1E;' : '' }}">{{__('Blog')}}
                         </a>
-                        @php($categories = \App\Blog_category::where("typePost" , "1")->get())
+                        @php($categories = \App\Blog_category::where("typePost" , "0")->get())
                         <button type="button" class="btn-show-sub-menu" data-ref="findJob_blog" data-target="false"><span class="iconmoon icon-p-next"></span></button>
                         <ul class="sub-menu" data-ref="findJob_blog" data-target="false">
                             @foreach($categories as $category)

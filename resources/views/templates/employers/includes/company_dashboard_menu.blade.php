@@ -42,14 +42,14 @@
                     
     
     
-                    <li class="nav-item  {{ Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) ? 'active' : '' }}">
+                    {{-- <li class="nav-item  {{ Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) ? 'active' : '' }}">
                         <a href="{{route('interview.schedule.calendar',['company_id'=> Auth::guard('company')->user()->id])}}" class="nav-link list-group-item-action">
                             
                              
                                 {{__('Interview Schedule')}}
                           
                         </a>
-                    </li>
+                    </li> --}}
 
 
                     <li class="nav-item  {{route('job.seeker.list')}} ? 'active' : '' }}">

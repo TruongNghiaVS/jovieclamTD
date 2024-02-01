@@ -54,7 +54,9 @@ class BlogController extends Controller
     }
     public function getAllCarrier()
     {
-        $data['blogs'] = Blog::where('cate_id',17)->paginate(10);
+        $data['blogs'] = Blog::whereRaw("FIND_IN_SET('17',cate_id)")
+        ->where('lang', 'like', \App::getLocale())->orderBy('id', 'DESC')
+        ->paginate(4);
         return $data;
     }
     public function details2($cate, $slug)
@@ -62,18 +64,18 @@ class BlogController extends Controller
 
       
         $data['blog'] = Blog::where('slug','like','%'. $slug.'%')
-        ->where("typePost",1)->where('lang', 'like', \App::getLocale())->first();
+        ->where("typePost",0)->where('lang', 'like', \App::getLocale())->first();
         $data['blogRelations'] = Blog::where("slug","!=",$slug)
         ->where("cate_id", $data['blog']->cate_id)
-        ->where("typePost",1)
+        ->where("typePost",0)
         ->where('lang', 'like', \App::getLocale())
         ->take(3)
         ->get();
       
-        $data['blog_categories'] = Blog_category::where("typePost" , "1")->get();
+        $data['blog_categories'] = Blog_category::where("typePost" , "0")->get();
         $data['categoryCurrent'] = Blog_category::where("id", $data['blog']->cate_id)->first();
    
-		$data['categories'] = Blog_category::where("typePost", "1")->get();
+		$data['categories'] = Blog_category::where("typePost", "0")->get();
          $data['seo'] = (object) array(
                     'seo_title' => $data['blog']->meta_title,
                     'seo_description' => $data['blog']->meta_keywords,
@@ -91,20 +93,20 @@ class BlogController extends Controller
             return redirect('/tin-tuc/'.$category->slug."/".$slug);
         }
         return;
-        $data['blog'] = Blog::where('slug','like','%'. $slug.'%')->where("typePost",1)->where('lang', 'like', \App::getLocale())->first();
+        $data['blog'] = Blog::where('slug','like','%'. $slug.'%')->where("typePost",0)->where('lang', 'like', \App::getLocale())->first();
 
         $data['blogRelations'] = Blog::where("slug","!=",$slug)
         ->where("cate_id", $data['blog']->cate_id)
-        ->where("typePost","1")
+        ->where("typePost","0")
         ->where('lang', 'like', \App::getLocale())
         ->take(3)
         ->get();
         
       
-        $data['blog_categories'] = Blog_category::where("typePost" , "1")->get();
+        $data['blog_categories'] = Blog_category::where("typePost" , "0")->get();
         $data['blog_relateion'] = Blog_category::where("id", $data['blog']->cate_id)->first();
       
-		$data['categories'] = Blog_category::where("typePost" , "1")
+		$data['categories'] = Blog_category::where("typePost" , "0")
                             ->get();
          $data['seo'] = (object) array(
                     'seo_title' => $data['blog']->meta_title,
@@ -119,7 +121,7 @@ class BlogController extends Controller
     {
         return redirect('/tin-tuc/'.$slug);
         $category = Blog_category::where('slug', $slug)
-        ->where("typePost" , "1")
+        ->where("typePost" , "0")
         ->first();
         if(!$category)
         {
@@ -130,13 +132,13 @@ class BlogController extends Controller
         $data['category'] = $category;
     
         $data['blogs_categories'] = Blog_category::where("id", $category->id)
-        ->where("typePost" , "1")
+        ->where("typePost" , "0")
         ->get();
       
        
         $data['blogs'] = Blog::whereRaw("FIND_IN_SET('$category->id',cate_id)")
                         ->where('lang', 'like', \App::getLocale())
-                        ->where("typePost" , "1")
+                        ->where("typePost" , "0")
                         ->orderBy('id', 'DESC')
                         ->paginate(10);
         
@@ -146,7 +148,7 @@ class BlogController extends Controller
     public function categories2 ($cate)
     {
         
-        $category = Blog_category::where('slug', $cate)->where("typePost",1)->first();
+        $category = Blog_category::where('slug', $cate)->where("typePost", 0)->first();
 
         if(!$category)
         {
@@ -155,7 +157,7 @@ class BlogController extends Controller
         
         $data['category'] = $category;
         $data['blogs_categories'] = Blog_category::where("id", $category->id)
-                                    ->where("typePost" , "1")->get();
+                                    ->where("typePost" , "0")->get();
         $data['blogs'] = Blog::whereRaw("FIND_IN_SET('$category->id',cate_id)")
                         ->where('lang', 'like', \App::getLocale())->orderBy('id', 'DESC')
                         ->paginate(8);
