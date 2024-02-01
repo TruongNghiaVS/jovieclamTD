@@ -9,7 +9,7 @@
 
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="box-img">
-                    <img src="{{ asset('/') }}admin_assets/quen_mk.png" alt="">
+                    <img src="{{ asset('/') }}admin_assets/quen_mk.jpg" alt="">
                 </div>
             </div>
             <div class="col-lg-6 col-md-8 col-sm-12" bis_skin_checked="1">
