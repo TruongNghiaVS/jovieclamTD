@@ -114,7 +114,7 @@
                 </div>
                 <div class="col-6">
                         <button class="btn btn-primary" type="submit">
-                            Tìm kiếm
+                            Tìm Kiếm
                         </button>
                 </div>
             </div>

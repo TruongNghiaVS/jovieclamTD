@@ -39,7 +39,7 @@
                     <div class="content">
                         <h3 class="num">350.000+</h3>
                         <div class="desc">
-                            Nhà tuyển dụng sử dụng thường xuyên để đăng tin tuyển dụng, tìm kiếm ứng viên tiềm năng chỉ với những thao tác đơn giản, nhanh gọn.
+                            Nhà tuyển dụng sử dụng thường xuyên để đăng tin tuyển dụng, Tìm Kiếm ứng viên tiềm năng chỉ với những thao tác đơn giản, nhanh gọn.
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
                     <div class="content">
                         <h3 class="num">350.000+</h3>
                         <div class="desc">
-                            Nhà tuyển dụng sử dụng thường xuyên để đăng tin tuyển dụng, tìm kiếm ứng viên tiềm năng chỉ với những thao tác đơn giản, nhanh gọn.
+                            Nhà tuyển dụng sử dụng thường xuyên để đăng tin tuyển dụng, Tìm Kiếm ứng viên tiềm năng chỉ với những thao tác đơn giản, nhanh gọn.
                         </div>
                     </div>
                 </div>

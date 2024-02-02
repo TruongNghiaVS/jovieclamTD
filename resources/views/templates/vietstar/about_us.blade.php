@@ -77,7 +77,7 @@
                             </div>
                             <div class="text">
                                    <p>
-                                        Jobvieclam.com cung cấp hàng ngàn cơ hội việc làm trong nhiều lĩnh vực khác nhau, từ sản xuất đến dịch vụ, từ công nghệ thông tin đến tài chính, giúp doanh nghiệp dễ dàng tìm kiếm ứng viên phù hợp với nhu cầu tuyển dụng của doanh nghiệp.
+                                        Jobvieclam.com cung cấp hàng ngàn cơ hội việc làm trong nhiều lĩnh vực khác nhau, từ sản xuất đến dịch vụ, từ công nghệ thông tin đến tài chính, giúp doanh nghiệp dễ dàng Tìm Kiếm ứng viên phù hợp với nhu cầu tuyển dụng của doanh nghiệp.
                                     </p>
                             </div>
                      </div>
@@ -93,7 +93,7 @@
                             </div>
                             <div class="text">
                                    <p>
-                                    Với việc sử dụng công nghệ tiên tiến, Jobvieclam.com tạo ra trải nghiệm tuyển dụng mượt mà và hiệu quả. Giao diện dễ sử dụng và tính năng tìm kiếm thông minh giúp doanh nghiệp tiết kiệm thời gian và năng lực trong quá trình tìm kiếm ứng viên.
+                                    Với việc sử dụng công nghệ tiên tiến, Jobvieclam.com tạo ra trải nghiệm tuyển dụng mượt mà và hiệu quả. Giao diện dễ sử dụng và tính năng Tìm Kiếm thông minh giúp doanh nghiệp tiết kiệm thời gian và năng lực trong quá trình Tìm Kiếm ứng viên.
 
                                     </p>
                             </div>
@@ -110,7 +110,7 @@
                             </div>
                             <div class="text">
                                    <p>
-                                   Jobvieclam.com không chỉ giúp doanh nghiệp tìm kiếm ứng viên, mà còn hỗ trợ trong quá trình đánh giá chất lượng của họ. Hệ thống đánh giá và phản hồi từ người sử dụng giúp tạo ra một cộng đồng chia sẻ thông tin chân thực về các công ty và vị trí làm việc.
+                                   Jobvieclam.com không chỉ giúp doanh nghiệp Tìm Kiếm ứng viên, mà còn hỗ trợ trong quá trình đánh giá chất lượng của họ. Hệ thống đánh giá và phản hồi từ người sử dụng giúp tạo ra một cộng đồng chia sẻ thông tin chân thực về các công ty và vị trí làm việc.
                                     </p>
                             </div>
                      </div>
@@ -126,7 +126,7 @@
                             </div>
                             <div class="text">
                                    <p>
-                                   Đội ngũ tư vấn chuyên nghiệp của Jobvieclam.com sẵn sàng hỗ trợ doanh nghiệp trong quá trình tìm kiếm, lựa chọn và giữ chân nhân sự. Họ cung cấp các giải pháp tùy chỉnh để đáp ứng nhu cầu cụ thể của từng doanh nghiệp.
+                                   Đội ngũ tư vấn chuyên nghiệp của Jobvieclam.com sẵn sàng hỗ trợ doanh nghiệp trong quá trình Tìm Kiếm, lựa chọn và giữ chân nhân sự. Họ cung cấp các giải pháp tùy chỉnh để đáp ứng nhu cầu cụ thể của từng doanh nghiệp.
 
                                     </p>
                             </div>

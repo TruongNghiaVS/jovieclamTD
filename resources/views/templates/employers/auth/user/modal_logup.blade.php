@@ -120,7 +120,7 @@
                             <p>Bạn có thể sử dụng mật khẩu mới để đăng nhập vào hệ thống</p>
                             <p>Vui lòng kiểm tra email để kích hoạt tài khoản</p>
                             
-                            <p>Bạn vui lòng  kiểm tra trong các mục InBox/ Hộp thư đến/(Primary, Social, .....) và Spam. Hoặc sử dụng công cụ tìm kiếm với tên mail: suport@jobvieclam.com
+                            <p>Bạn vui lòng  kiểm tra trong các mục InBox/ Hộp thư đến/(Primary, Social, .....) và Spam. Hoặc sử dụng công cụ Tìm Kiếm với tên mail: suport@jobvieclam.com
                      
                             </p>
 

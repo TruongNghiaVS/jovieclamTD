@@ -46,7 +46,7 @@
                         <h5>Quảng cáo đa nền tảng</h5>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Với cơ chế đẩy tin lên các vị trí đầu trang kết quả tìm kiếm việc làm và kết hợp nguồn tiếp cận thông qua các kênh truyền thông mạng xã hội Facebook, Tiktok</p>
+                        <p class="card-text">Với cơ chế đẩy tin lên các vị trí đầu trang kết quả Tìm Kiếm việc làm và kết hợp nguồn tiếp cận thông qua các kênh truyền thông mạng xã hội Facebook, Tiktok</p>
                     </div>
                 </div>
             </div>

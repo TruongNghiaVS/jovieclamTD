@@ -16,7 +16,7 @@
                             <div class="figcaption__content big">
                                 <p>TOP 5 website nâng cấp bản thân sau sẽ giúp bạn học &#8722 hiểu &#8722 nghe &#8722
                                     chia sẻ &#8722 thể
-                                    hiện &#8722 tìm kiếm cơ hội của chính mình nhiều hơn. Từ đó, Việc Làm 24h mong rằng
+                                    hiện &#8722 Tìm Kiếm cơ hội của chính mình nhiều hơn. Từ đó, Việc Làm 24h mong rằng
                                     trên
                                     hành trình ấy, bạn sẽ vừa nâng cấp được tri thức, tăng cường bản lĩnh, trau dồi thêm
                                     kỹ

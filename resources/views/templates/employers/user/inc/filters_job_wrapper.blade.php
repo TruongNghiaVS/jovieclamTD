@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group form-submit">
                             <button class="btn-gradient" type="submit">
-                                Tìm kiếm
+                                Tìm Kiếm
                             </button>
                         </div>
 
@@ -63,7 +63,7 @@
                         </div>
                         <div class="form-group form-submit">
                             <button class="btn-gradient" type="submit">
-                                Tìm kiếm
+                                Tìm Kiếm
                             </button>
                         </div>
                     </div>
@@ -292,7 +292,7 @@
                 <div class="row">
                     <div class="form-group form-submit">
                         <button class="btn btn-primary" type="submit">
-                            Tìm kiếm
+                            Tìm Kiếm
                         </button>
                     </div>
                 </div>

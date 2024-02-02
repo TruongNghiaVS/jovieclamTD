@@ -7,11 +7,11 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 font-weight-normal d-flex align-items-center  justify-content-center flex-column ">
                     <p class="about_us_content__text py-2 ">
-                    Jobvieclam.com là một trang web việc làm, được thiết kế để kết nối những người tìm kiếm làm với các công ty và tổ chức đang tuyển dụng. 
+                    Jobvieclam.com là một trang web việc làm, được thiết kế để kết nối những người Tìm Kiếm làm với các công ty và tổ chức đang tuyển dụng. 
                     </p>
                     <p class="about_us_content__text py-2"> 
 
-                    Với sứ mệnh tạo ra một nền tảng thuận lợi và hiệu quả, Jobvieclam.com cung cấp cho người tìm việc nhiều cơ hội nghề nghiệp và giúp doanh nghiệp thuận lợi trong quá trình tìm kiếm và chọn lựa ứng viên phù hợp.
+                    Với sứ mệnh tạo ra một nền tảng thuận lợi và hiệu quả, Jobvieclam.com cung cấp cho người tìm việc nhiều cơ hội nghề nghiệp và giúp doanh nghiệp thuận lợi trong quá trình Tìm Kiếm và chọn lựa ứng viên phù hợp.
                     </p class="about_us_content__text py-2">
 
                     <p class="about_us_content__text py-2">

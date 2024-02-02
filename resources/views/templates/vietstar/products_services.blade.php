@@ -97,7 +97,7 @@
                                     <div class="content">
                                         <p style="font-weight: bold">Sàng lọc hồ sơ - Chọn đúng nhu cầu</p>
 
-                                        <p>Cơ hội truy cập và tiếp cận hàng trăm ngàn hồ sơ được cập nhật mới thường xuyên giúp nhà tuyển dụng dễ dàng tìm kiếm ứng viên phù hợp.</p>
+                                        <p>Cơ hội truy cập và tiếp cận hàng trăm ngàn hồ sơ được cập nhật mới thường xuyên giúp nhà tuyển dụng dễ dàng Tìm Kiếm ứng viên phù hợp.</p>
                                     </div>
                                     <a class="view-more"  href="#">Xem Thêm</a>
                                 </div>
@@ -117,7 +117,7 @@
                                     <div class="content">
                                         <p><strong>Giải pháp toàn diện - Tiết kiệm thời gian</strong></p>
 
-                                        <p>Dịch vụ Headhunt toàn diện sẽ giúp các doanh nghiệp tiết kiệm tối đa thời gian tìm kiếm nhân sự, sàng lọc ứng viên với thời hạn bảo hành dài lâu.</p>
+                                        <p>Dịch vụ Headhunt toàn diện sẽ giúp các doanh nghiệp tiết kiệm tối đa thời gian Tìm Kiếm nhân sự, sàng lọc ứng viên với thời hạn bảo hành dài lâu.</p>
                                     </div>
                                     <a class="view-more"
                                         href="#">Xem

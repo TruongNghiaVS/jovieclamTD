@@ -19,7 +19,7 @@
                                     <div class="content">
                                         <p style="font-weight: bold">Tìm việc nhanh chóng - Phát triển sự nghiệp</p>
                                         <p>
-                                            Người tìm việc dễ dàng tạo hồ sơ năng lực để nhà tuyển dụng tìm kiếm. Đồng thời, người tìm việc có thể trực tiếp tìm kiếm công việc phù hợp và gửi hồ sơ năng lực đến nhà tuyển dụng.
+                                            Người tìm việc dễ dàng tạo hồ sơ năng lực để nhà tuyển dụng Tìm Kiếm. Đồng thời, người tìm việc có thể trực tiếp Tìm Kiếm công việc phù hợp và gửi hồ sơ năng lực đến nhà tuyển dụng.
                                         </p>
                                     </div>
 
@@ -56,7 +56,7 @@
                                     <div class="content">
                                         <p><strong>Hiển thị việc làm - Tiếp cận nhân tài</strong></p>
 
-                                        <p>Nhà tuyển dụng dễ dàng đăng tin tuyển dụng trên website Jobvieclam trong 30 ngày. Đồng thời, tin tuyển dụng sẽ được đăng trên fanpage Jobvieclam, giúp rút ngắn thời gian tìm kiếm ứng viên.</p>
+                                        <p>Nhà tuyển dụng dễ dàng đăng tin tuyển dụng trên website Jobvieclam trong 30 ngày. Đồng thời, tin tuyển dụng sẽ được đăng trên fanpage Jobvieclam, giúp rút ngắn thời gian Tìm Kiếm ứng viên.</p>
                                     </div>
 
 
@@ -75,7 +75,7 @@
                                     <div class="content">
                                         <p style="font-weight: bold">Giải pháp toàn diện - Tiết kiệm thời gian</p>
 
-                                        <p>Giải pháp cung ứng nhân sự giúp nhà tuyển dụng nhanh chóng tìm kiếm được ứng viên với chi phí tốt nhất và thời hạn bảo hành lâu dài.</p>
+                                        <p>Giải pháp cung ứng nhân sự giúp nhà tuyển dụng nhanh chóng Tìm Kiếm được ứng viên với chi phí tốt nhất và thời hạn bảo hành lâu dài.</p>
                                     </div>
 
                                 </div>
@@ -94,7 +94,7 @@
                                     <div class="content">
                                         <p><strong>Sàng lọc ứng viên - Chọn đúng nhân tài</strong></p>
 
-                                        <p>Nhà tuyển dụng có cơ hội tìm kiếm hàng trăm ngàn ứng viên tiềm năng, đáp ứng yêu cầu về kinh nghiệm, chuyên môn và các kỹ năng mềm.</p>
+                                        <p>Nhà tuyển dụng có cơ hội Tìm Kiếm hàng trăm ngàn ứng viên tiềm năng, đáp ứng yêu cầu về kinh nghiệm, chuyên môn và các kỹ năng mềm.</p>
                                     </div>
 
                                 </div>

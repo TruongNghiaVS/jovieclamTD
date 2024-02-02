@@ -49,10 +49,10 @@
                 <div class="sidebar">
                     <!-- Search -->
                     <div class="widget">
-                        <h5 class="widget-title">Tìm kiếm</h5>
+                        <h5 class="widget-title">Tìm Kiếm</h5>
                         <div class="search">
                             <form action="https://jobvieclam.vn/blog/search" method="GET">
-                                <input type="text" class="form-control" placeholder="Tìm kiếm" name="search">
+                                <input type="text" class="form-control" placeholder="Tìm Kiếm" name="search">
                                 <button type="submit" class="btn"><i class="fa fa-search"></i></button>
                             </form>
                         </div>

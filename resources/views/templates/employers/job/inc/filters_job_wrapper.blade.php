@@ -25,7 +25,7 @@ dd($funclAreas)
                         </div>
                         <div class="form-group form-submit">
                             <button class="btn-gradient" type="submit">
-                                Tìm kiếm
+                                Tìm Kiếm
                             </button>
                         </div>
 
@@ -174,7 +174,7 @@ dd($funclAreas)
                 <div class="row">
                     <div class="form-group form-submit">
                         <button class="btn btn-primary filter_submit" type="submit">
-                            Tìm kiếm
+                            Tìm Kiếm
                         </button>
                     </div>
                 </div>

@@ -38,7 +38,7 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <h3 class="header-bar__title mb-3" style="max-width: 100%; width: 100%">Tìm kiếm cơ hội việc làm
+                        <h3 class="header-bar__title mb-3" style="max-width: 100%; width: 100%">Tìm Kiếm cơ hội việc làm
                         </h3>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                         <div class="advance-search row">
                             <div class="advance-search__reset col-lg-6">Reset</div>
                             <div class="col-lg-6 advance-search__box">
-                                <div class="advance-search__open" onClick="opensearchbox()"><i class="fas fa-search search-icon"></i><span>Tìm kiếm nâng cao</span></div>
+                                <div class="advance-search__open" onClick="opensearchbox()"><i class="fas fa-search search-icon"></i><span>Tìm Kiếm nâng cao</span></div>
                                 <div class="advance-search__close" onClick="closesearchbox()"><span>Thu nhỏ</span></div>
                             </div>
                         </div>

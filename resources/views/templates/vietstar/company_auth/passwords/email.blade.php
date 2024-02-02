@@ -217,7 +217,7 @@
                                         </div>
                                     </div>`)
                         $("#form_reset_content").append(`<div class="main-form"  bis_skin_checked="1"> <p class="my-3">
-                                                Nếu bạn sử dụng Gmail hoặc công ty bạn đang sử dụng dịch vụ email của Google để đăng ký tài khoản, bạn nên kiểm tra email trong các mục Inbox/Hộp thư đến (Primary, Social, Promotions) và Spam. Hoặc dùng công cụ tìm kiếm email để tìm tên email: support@Jobvieclam.
+                                                Nếu bạn sử dụng Gmail hoặc công ty bạn đang sử dụng dịch vụ email của Google để đăng ký tài khoản, bạn nên kiểm tra email trong các mục Inbox/Hộp thư đến (Primary, Social, Promotions) và Spam. Hoặc dùng công cụ Tìm Kiếm email để tìm tên email: support@Jobvieclam.
                                             </p></div>
                                             <div class="user-action" bis_skin_checked="1">
 
