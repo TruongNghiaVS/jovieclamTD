@@ -142,7 +142,7 @@
             <div class="footer-widget footer-widget-contact">
                 <h5>CÔNG TY CỔ PHẦN TẬP ĐOÀN VIETSTAR</h5>
                 <ul class="contact-detail">
-                    <li style="padding-left: 0">Tầng 2 GMA Building, 307/6 Đ. Nguyễn Văn Trỗi, Phường 1, Tân Bình, Thành phố Hồ Chí Minh</li>
+                    <li style="padding-left: 0">54/31 Phổ Quang, Phường 2, Tân Bình</li>
                     <li><i class="fa-solid fa-phone"></i>02871000 555</li>
                     <li><i class="far fa-envelope"></i>info@jobvieclam.com</li>
                 </ul>
