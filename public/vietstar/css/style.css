@@ -1101,7 +1101,7 @@ h4.tablinks:hover {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-bottom: 25px;
+	padding-bottom: 15px;
 }
 
 .sectionBlock__title {

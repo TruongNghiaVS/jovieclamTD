@@ -125,7 +125,7 @@
         letter-spacing: 0.14px;
         color: #FFF;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     .banner-form__wrapper {
         width: 100%;
