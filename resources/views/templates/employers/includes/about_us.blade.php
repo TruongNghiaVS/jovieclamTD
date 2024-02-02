@@ -7,15 +7,16 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 font-weight-normal d-flex align-items-center  justify-content-center flex-column ">
                     <p class="about_us_content__text py-2 ">
-                        Công ty Cổ phần Tập doàn Việt Star (VIETSTAR GROUP JOINT STOCK CMPANY) viết tắt là Vietstar Group được thành lập ngày 01 tháng 08 năm 2018.
+                    Jobvieclam.com là một trang web việc làm, được thiết kế để kết nối những người tìm kiếm làm với các công ty và tổ chức đang tuyển dụng. 
                     </p>
                     <p class="about_us_content__text py-2"> 
 
-                        Đây là doanh nghiệp chuyên cung cấp dịc vụ tài chính và cung ứng nhân sự cho thị trường Việt Nam. 
+                    Với sứ mệnh tạo ra một nền tảng thuận lợi và hiệu quả, Jobvieclam.com cung cấp cho người tìm việc nhiều cơ hội nghề nghiệp và giúp doanh nghiệp thuận lợi trong quá trình tìm kiếm và chọn lựa ứng viên phù hợp.
                     </p class="about_us_content__text py-2">
 
                     <p class="about_us_content__text py-2">
-                        Với đội ngũ nhân viên được trang bị đầy đủ kiến thức và kinh nghiệm. Vietstar luôn đáp ứng tốt dịch vụ nhân sự và tài chính cho các doanh nghiệp ở thời điểm hiện tại. Giá trị cốt lõi
+                        Jobvieclam.com chú trọng đến trải nghiệm người dùng bằng cách cung cấp giao diện thân thiện và dễ sử dụng.
+
                     </p>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12">
