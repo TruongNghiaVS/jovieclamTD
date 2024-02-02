@@ -64,8 +64,8 @@
                                 <thead>
                                     <tr>
 
-                                        <th>Tiêu đề</th>
-                                        <th>Nội dung</th>
+                                        <th>Tiêu Đề</th>
+                                        <th>Nội Dung</th>
 
                                         <th>Cập nhật lần cuối</th>
                                         <th>{{__('Action')}}</th>

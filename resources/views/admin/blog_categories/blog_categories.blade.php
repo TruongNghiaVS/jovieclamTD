@@ -52,7 +52,7 @@
                             <table class="table" id="blog_categoryTable">
                                 <thead>
                                     <tr>
-                                        <th>Tiêu đề</th>
+                                        <th>Tiêu Đề</th>
                                         <th>Cập nhật lần cuối</th>
                                         <th>{{__('Action')}}</th>
                                     </tr>
