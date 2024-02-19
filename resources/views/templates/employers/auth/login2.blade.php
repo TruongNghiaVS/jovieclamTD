@@ -31,10 +31,12 @@
                                     <span>{{__(('Email'))}}</span>
                                 </div>
                                 <div class="form-input " bis_skin_checked="1">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus placeholder="{{__('Email Address')}}">
+                                    <input id="email" type="email" class="form-control" name="email"
+                                        value="{{ old('email') }}" required autofocus
+                                        placeholder="{{__('Email Address')}}">
                                     <div class="invalid-feedback email-error">
                                         {{__('Email is required')}}
-                                </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -43,17 +45,20 @@
                                     <span>{{__(('Password'))}}</span>
                                 </div>
                                 <div class="form-input" bis_skin_checked="1">
-                                <input id="password" type="password" class="form-control" name="password" value="" required placeholder="{{__('Password')}}">
+                                    <input id="password" type="password" class="form-control" name="password" value=""
+                                        required placeholder="{{__('Password')}}">
                                     <div class="invalid-feedback password-error">
-                                            {{__('Password is required')}}
+                                        {{__('Password is required')}}
                                     </div>
                                 </div>
                             </div>
                             <div class="user-action" bis_skin_checked="1">
                                 <div class="btn-area" bis_skin_checked="1">
-                                    <button type="submit"  class="btn btn-primary" value="Gửi">Đăng nhập</button>
+                                    <button type="submit" class="btn btn-primary" value="Gửi">Đăng nhập</button>
                                 </div>
-                                <p> <a class="register" href="#" data-toggle="modal" data-target="#company_logup_Modal">Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
+                                <p> <a class="register" href="#" data-toggle="modal"
+                                        data-target="#employer_logup_Modal">Quý khách chưa có tài khoản?</a> Đăng ký dễ
+                                    dàng, hoàn toàn miễn phí</p>
 
                                 <div class="text-help" bis_skin_checked="1">
                                     <p>Nếu bạn cần sự trợ giúp, vui lòng liên hệ:</p>
@@ -155,17 +160,17 @@
 
 @push('scripts')
 <script type="text/javascript">
-    
-     $('#formLogin2').submit(function(event) {
+
+    $('#formLogin2').submit(function (event) {
         var isValid = true;
         event.preventDefault()
-        
+
         // Check each input field for emptiness
-        $('#formLogin2 input').each(function() {
+        $('#formLogin2 input').each(function () {
             if (!$(this).val()) {
                 isValid = false;
                 $(this).addClass('is-invalid');
-              
+
             }
         });
 
@@ -183,87 +188,87 @@
             $('#formLogin2  #email').addClass('is-valid');
 
             isValid = true;
-           
+
         } else {
             // Email is invalid
-           
+
             $('#formLogin2 #email').removeClass('is-valid');
             $('#formLogin2 #email').addClass('is-invalid');
             $('#formLogin2 .email-error').text('{{__('The email must be a valid email address')}}')
         }
 
 
-      
 
-     
+
+
         if (!isValid) {
             event.preventDefault(); // Prevent the form from submitting
         }
-      
-        
-        if (isValid) { 
-         
+
+
+        if (isValid) {
+
             $.ajax({
-            type: "POST",
-            url:  `{{route('company.login')}}`,
-            data: $(this).serialize(),
-            beforeSend:showSpinner(),
-            statusCode: {
-                202 :  function(responseObject, textStatus, jqXHR) {
-                    hideSpinner();
+                type: "POST",
+                url: `{{route('company.login')}}`,
+                data: $(this).serialize(),
+                beforeSend: showSpinner(),
+                statusCode: {
+                    202: function (responseObject, textStatus, jqXHR) {
+                        hideSpinner();
 
-                    console.log(responseObject.error);
-        
-                },
-                401: function(responseObject, textStatus, jqXHR) {
-                    hideSpinner();
+                        console.log(responseObject.error);
 
-                    // No content found (404)
-                    console.log(responseObject.responseJSON);
-                    responseObject.responseJSON.error.forEach(err => {
-                        $(`#formLogin2 .invalid-feedback.${err.key}-error`).empty();
-                        $(`#formLogin2 .invalid-feedback.${err.key}-error`).text(err.textError)
-                        $(`#formLogin2 .invalid-feedback.${err.key}-error`).addClass('has-error')
-                        $(`#formLogin2 input[name*='${err.key}']`).addClass('has-error')
-                    })
-                    // This code will be executed if the server returns a 404 response
-                },
-                503: function(responseObject, textStatus, errorThrown) {
-                    hideSpinner();
+                    },
+                    401: function (responseObject, textStatus, jqXHR) {
+                        hideSpinner();
 
-                    // Service Unavailable (503)
-                    console.log(responseObject.error);
+                        // No content found (404)
+                        console.log(responseObject.responseJSON);
+                        responseObject.responseJSON.error.forEach(err => {
+                            $(`#formLogin2 .invalid-feedback.${err.key}-error`).empty();
+                            $(`#formLogin2 .invalid-feedback.${err.key}-error`).text(err.textError)
+                            $(`#formLogin2 .invalid-feedback.${err.key}-error`).addClass('has-error')
+                            $(`#formLogin2 input[name*='${err.key}']`).addClass('has-error')
+                        })
+                        // This code will be executed if the server returns a 404 response
+                    },
+                    503: function (responseObject, textStatus, errorThrown) {
+                        hideSpinner();
 
-                    // This code will be executed if the server returns a 503 response
-                }           
+                        // Service Unavailable (503)
+                        console.log(responseObject.error);
+
+                        // This code will be executed if the server returns a 503 response
+                    }
                 }
-                })
-                .done(function(data){
-                    
+            })
+                .done(function (data) {
+
 
                     // setTimeout(function() { 
                     //     alert(data.message)
                     // }, 2000);
                     hideSpinner();
-                    if(data.sucess == true){
-                      
-                        setTimeout(function(){
-                              window.location.href =  "/dashboard";
+                    if (data.sucess == true) {
+
+                        setTimeout(function () {
+                            window.location.href = "/dashboard";
                         }, 1000);
                     }
-                
+
                 })
-                .fail(function(jqXHR, textStatus){
+                .fail(function (jqXHR, textStatus) {
                     hideSpinner();
                 })
-                .always(function(jqXHR, textStatus) {
-                
+                .always(function (jqXHR, textStatus) {
+
                 });
-                }
+        }
     });
 
     // Remove validation class on input change
-    $('#formLogin2 input').on('input', function() {
+    $('#formLogin2 input').on('input', function () {
         $(this).removeClass('is-invalid');
     });
 </script>
