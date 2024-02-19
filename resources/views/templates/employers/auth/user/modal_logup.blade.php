@@ -313,18 +313,19 @@ $(document).ready(function() {
             beforeSend: showSpinner(),
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
-                    hideSpinner();
+                  
 
-                    console.log(responseObject.error);
-                if(responseObject.error) {
-                    responseObject.error.forEach(err => {
-                        $(`#fromEmployerRegister .invalid-feedback.${err.key}-error`).text(err.textError)
-                        $(`#fromEmployerRegister .invalid-feedback.${err.key}-error`).addClass('has-error')
-                        $(`#fromEmployerRegister input[name*='${err.key}']`).addClass('has-error')
+                        console.log(responseObject.error);
+                    if(responseObject.error) {
+                        responseObject.error.forEach(err => {
+                            $(`#fromEmployerRegister .invalid-feedback.${err.key}-error`).text(err.textError)
+                            $(`#fromEmployerRegister .invalid-feedback.${err.key}-error`).addClass('has-error')
+                            $(`#fromEmployerRegister input[name*='${err.key}']`).addClass('has-error')
+                            
+                            // $(`#fromEmployerRegister .invalid-feedback.${err.key}-error`).append(err.textError)
                         
-                        // $(`#fromEmployerRegister .invalid-feedback.${err.key}-error`).append(err.textError)
-                     
-                    }) 
+                        }) 
+                        hideSpinner();
                 }
                 },
                 404: function(responseObject, textStatus, jqXHR) {
