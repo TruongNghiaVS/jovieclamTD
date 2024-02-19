@@ -61,10 +61,9 @@ class BlogController extends Controller
     }
     public function details2($cate, $slug)
     {
-
-      
-        $data['blog'] = Blog::where('slug','like','%'. $slug.'%')
-        ->where("typePost",0)->where('lang', 'like', \App::getLocale())->first();
+         $data['blog'] = Blog::where('slug','like','%'. $slug.'%')
+                        ->where("typePost",0)
+                        ->where('lang', 'like', \App::getLocale())->first();
         $data['blogRelations'] = Blog::where("slug","!=",$slug)
         ->where("cate_id", $data['blog']->cate_id)
         ->where("typePost",0)
@@ -74,9 +73,8 @@ class BlogController extends Controller
       
         $data['blog_categories'] = Blog_category::where("typePost" , "0")->get();
         $data['categoryCurrent'] = Blog_category::where("id", $data['blog']->cate_id)->first();
-   
-		$data['categories'] = Blog_category::where("typePost", "0")->get();
-         $data['seo'] = (object) array(
+        $data['categories'] = Blog_category::where("typePost", "0")->get();
+        $data['seo'] = (object) array(
                     'seo_title' => $data['blog']->meta_title,
                     'seo_description' => $data['blog']->meta_keywords,
                     'seo_keywords' => $data['blog']->meta_descriptions,
