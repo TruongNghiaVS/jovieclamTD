@@ -22,8 +22,8 @@
                     <tr>
                         <th class="font-weight-bold" >{{ __('Candidate') }}</th>
                         <!-- <th class="font-weight-bold"></th> -->
-                        <th class="font-weight-bold">{{ __('Recruitment Bulletin') }}</th>
-                        <th class="font-weight-bold">{{ __('Candidate Detail') }}</th>
+                        <th class="font-weight-bold"  style="width: 30%;">{{ __('Recruitment Bulletin') }}</th>
+                        <th class="font-weight-bold" >{{ __('Candidate Detail') }}</th>
                         <th class="font-weight-bold">{{ __('Date Application') }}</th>
 
                         <th class="font-weight-bold">{{ __('Status') }}</th>
@@ -60,11 +60,13 @@
                         
                      
                         <td>
-                            <a class="text-gray text-truncate has-tooltip job-details curr"
-                                data-original-title="null" style="max-width: 150px;" data-job-slug="{{$value->job->slug}}"
-                               data-job-name="{{$value->job->title ??''}}">
-                                {{ $value->job->title ??'' }}
-                            </a>
+                            <div class="h-100">
+                                <a class="text-gray has-tooltip job-details curr h-100"  style="cursor: pointer; max-width: 200px;overflow-wrap: break-word;"
+                                    data-original-title="null" style="max-width: 150px;" data-job-slug="{{$value->job->slug}}"
+                                   data-job-name="{{$value->job->title ??''}}">
+                                    {{ $value->job->title ??'' }}
+                                </a>
+                            </div>
                         </td>
                         <td class="align-top text-gray">
                             <div class="insights">
