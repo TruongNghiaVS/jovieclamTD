@@ -1,3 +1,36 @@
+@php
+                                            function checksalary( $from, $to)
+                                            {
+                                                    $salaryTextFrom = 0;
+                                                    $salaryTextTo =  0;
+                                                    $textSalary ='';
+                                                    if($from > 0 &&  $to > 0) 
+                                                    {
+                                                        $salaryTextFrom = number_format($from, 0, '', '.');
+                                                        $salaryTextTo = number_format($to, 0, '', '.');
+                                                        return  $salaryTextFrom."-".$salaryTextTo. "  VNĐ";
+
+                                                    }
+                                                    if($from < 1 && $to < 1)
+                                                    {
+                                                    return  'Thương lượng';
+
+                                                    }
+                                                    if($from >0)
+                                                    {
+                                                        $salaryTextFrom = number_format($from, 0, '', '.');
+                                                        return "Từ ".$salaryTextFrom." VNĐ";
+                                                    }
+                                                    if($to >0)
+                                                    {
+                                                        $salaryTextTo = number_format($to, 0, '', '.');
+                                                        return "Đến ".$salaryTextTo." VNĐ";
+                                                    }
+                                                
+                                            }
+
+                                            
+@endphp
 @extends('templates.employers.layouts.app')
 @section('content') 
 <!-- Header start --> 
@@ -20,6 +53,10 @@
                         <!-- job start --> 
                         @if(isset($users) && count($users))
                         @foreach($users as $user)
+
+                        @php
+                            $salaryText  = checksalary($user->current_salary, $user->expected_salary);
+                        @endphp
                         <div class="item-job">
                             <div class="card-news card-news-applied-jobs gap-16 mb-2">
                                 <div class="card-news__icon">
@@ -47,8 +84,11 @@
                                                 {{_('Female')}}
                                                 @endif
                                             </p>
+                                            
                                             <div class="rank-salary">
-                                                {{$user->current_salary}} {{$user->salary_currency}} - {{$user->expected_salary}} {{$user->salary_currency}}
+
+                                                {{$salaryText}}
+                                              
                                             </div>
                                            <div>
                                                     <a role="button" href="javascript:void(0)" class="dropdown-item public-profile-toggle"
