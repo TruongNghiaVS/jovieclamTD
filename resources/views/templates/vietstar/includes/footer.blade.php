@@ -109,7 +109,7 @@
     </div>
     <div class="container">
         <div class="inner-copyright">
-            <p class="copyright">Copyright © 2022</p>
+            <p class="copyright">Jobvieclam © 2022</p>
             <div class="term-link">
                 <span class="fs-16px pe-2">All Rights Reserved</span>
                 <div class="d-inline-block border-start"><a class="fs-16px px-2" href="#">{{__('Terms Of Use')}}</a></div>
