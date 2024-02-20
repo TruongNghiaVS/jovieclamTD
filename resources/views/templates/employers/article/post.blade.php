@@ -72,7 +72,7 @@ article.article {
     </div>
 </div>
 
-@include('templates.vietstar.includes.footer')
+@include('templates.employers.includes.footer')
 @endsection
 
 @push('scripts')
