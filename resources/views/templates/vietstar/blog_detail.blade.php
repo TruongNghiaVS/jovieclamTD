@@ -1,8 +1,8 @@
-@extends('templates.vietstar.layouts.app')
+@extends('templates.employers.layouts.app')
 @section('content')
-@include('templates.vietstar.includes.header')
+@include('templates.employers.includes.header')
 
-@include('templates.vietstar.includes.mobile_dashboard_menu')
+@include('templates.employers.includes.mobile_dashboard_menu')
 
 <!-- Inner Page Title start -->
 <!-- Inner Page Title end -->
@@ -209,7 +209,7 @@
 
 
 
-    @include('templates.vietstar.includes.footer')
+    @include('templates.employers.includes.footer')
     @endsection
     @push('styles')
     <style>
@@ -730,7 +730,7 @@
     </style>
     @endpush
     @push('scripts')
-    @include('templates.vietstar.includes.immediate_available_btn')
+    @include('templates.employers.includes.immediate_available_btn')
     <script>
     </script>
     @endpush
