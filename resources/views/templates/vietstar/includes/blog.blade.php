@@ -95,7 +95,7 @@ $blogs = $data["blogs"]->items();
                 @foreach($blogs as $blog)
                 <div class="col-sm-12 col-md-6 col-lg-3  mb-4 ">
                     <div class="figure">
-                        <a href="{{url('/')}}/{{$category->slug}}/{{ $blog-> slug }}" class="figure-images">
+                        <a href="{{url('/')}}/tin-tuc/{{$category->slug}}/{{ $blog-> slug }}" class="figure-images">
                             @if($blog-> image) 
                             <img src="{{url('/')}}/uploads/blogs/{{ $blog-> image }}" alt="{{$blog->heading}}">
                             @else 
