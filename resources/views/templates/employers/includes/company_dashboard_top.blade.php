@@ -50,18 +50,18 @@
                     <div class="body" bis_skin_checked="1">
                         <ul class="company-account-information">
                             <li>
-                                <p class="number intNumPostNoUse">{{$dashboarOverview->TotalJobPublish}}</p><a class="title" href="#">Việc Làm Đang Đăng</a>
+                                <p class="number intNumPostNoUse">{{$dashboarOverview->TotalJobPublish}}</p><a class="title" href="/quan-ly-dang-tuyen?status=1">Việc Làm Đang Đăng</a>
                             </li>
                             <li>
-                                <p class="number orderNew">{{$dashboarOverview->TotalJobWatiting}}</p><a class="title" href="#">
+                                <p class="number orderNew">{{$dashboarOverview->TotalJobWatiting}}</p><a class="title" href="/quan-ly-dang-tuyen?status=2">
                                     Việc Làm Chờ Đăng</a>
                             </li>
                             <li>
-                                <p class="number JskNew">{{$dashboarOverview->TotalJobPause}}</p><a class="title" href="#">
+                                <p class="number JskNew">{{$dashboarOverview->TotalJobPause}}</p><a class="title" href="/quan-ly-dang-tuyen?status=3">
                                     Việc Làm Tạm Dừng đăng</a>
                             </li>
                             <li>
-                                <p class="number JskNew">{{$dashboarOverview->TotalJobExprise}}</p><a class="title" href="#">
+                                <p class="number JskNew">{{$dashboarOverview->TotalJobExprise}}</p><a class="title" href="/quan-ly-dang-tuyen?expired=true">
                                     Việc Làm Hết Hạn</a>
                             </li>
                           
