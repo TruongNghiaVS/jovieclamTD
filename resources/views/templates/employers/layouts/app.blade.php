@@ -127,7 +127,31 @@ if (!isset($seo)) {
         });
 		
         </script>
-
+    <script type="application/ld+json">{
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "name": "Jobvieclam",
+          "description": "Jobvieclam.com là một nền tảng hàng đầu cung cấp giải pháp nhân sự toàn diện cho doanh nghiệp, giúp tối ưu hóa quá trình tuyển dụng và quản lý nhân sự. Với mục tiêu tạo ra sự kết nối hiệu quả giữa doanh nghiệp và ứng viên, Jobvieclam.com không chỉ là một cầu nối thông tin tuyển dụng mà còn là đối tác đáng tin cậy đồng hành cùng sự phát triển của doanh nghiệp.",
+          "logo": "http://tuyendung.jobvieclam.com:9999/vietstar/imgs/logo-new.svg",
+          "url": "http://tuyendung.jobvieclam.com:9999/",
+          "telephone": "02871000 555",
+          "sameAs": ["https://www.facebook.com/tuyendungvietstar"],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "54/31 Đ. Phổ Quang",
+            "addressLocality": "Phường 2, Tân Bình, Thành phố Hồ Chí Minh,",
+            "postalCode": "70000",
+            "addressCountry": "Việt Nam"
+          }}</script><script type="application/ld+json">{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "http://tuyendung.jobvieclam.com:9999/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "http://tuyendung.jobvieclam.com:9999/tuyen-dung?search={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+   }</script>
 </body>
 
 </html>
