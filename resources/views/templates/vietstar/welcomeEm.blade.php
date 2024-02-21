@@ -1,6 +1,44 @@
 @extends('templates.employers.layouts.app')
 @section('content')
+@push('scripts')
+<script type=”application/ld+json”>
 
+{
+
+  “@context”: “http://schema.org”,
+
+  “@type”: “Restaurant”,
+
+  “name”: “My Restaurant”,
+
+  “description”: “The best dishes all over the world!”,
+
+  “address”: {
+
+    “@type”: “PostalAddress”,
+
+    “addressLocality”: “Ho Chi Minh City, VN”,
+
+    “streetAddress”: “123 abc”
+
+  },
+
+  “openingHours”: [
+
+    “Mo-Sa 09:00-22:30”,
+
+    “Su 09:00-23:00”
+
+  ],
+
+  “telephone”: “+84123456789”,
+
+  “menu”: “http://www.myrestaurant.com/menu”
+
+}
+
+</script>
+@endpush
 <!-- Header start -->
 @include('templates.employers.includes.header')
 <!-- Header end -->
