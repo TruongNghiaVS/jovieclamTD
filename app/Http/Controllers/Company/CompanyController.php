@@ -545,7 +545,7 @@ class CompanyController extends Controller
         /*         * **************************************** */
         if ($request->hasFile('cover_logo')) {
             $image = $request->file('cover_logo');
-            $fileName = ImgUploader::UploadImage('company_logos', $image, $request->input('cover_logo'), 300, 300, false);
+            $fileName = ImgUploader::UploadImage('company_logos', $image, $request->input('cover_logo'), 1600, 800, false);
             $company->cover_logo = $fileName;
         }
         $company->update();
