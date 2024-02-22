@@ -19,24 +19,48 @@
                     </div>
                     <div class="col-lg-9 col-md-8 col-sm-12 ">
                         <div class="searchList jobs-side-list" bis_skin_checked="1">
-                            @if(isset($jobSeekers) && count($jobSeekers))
-                            @foreach($jobSeekers as $jobSeeker)
+                            @if(isset($jobAply) && count($jobAply))
+                            @foreach($jobAply as $jobSeeker)
+                            @php
+                                $userValue = $jobSeeker->getUserApply();
+                                $age = '';
+                                $dayofBirth = $userValue->date_of_birth;
+                                $numberyear = \Carbon\Carbon::now()->diff( \Carbon\Carbon::parse($dayofBirth));
+                                $job= $jobSeeker->getJob();
+                                $cities =  $userValue->getCity();
+                                $citiName = '';
+                                if($cities != null)
+                                {
+                                    $citiName =  $cities->city;
+                                }
+                                $lastUpdate =  $jobSeeker->created_at->format('d/m/Y');
+
+                                $salaryText = $job->salary_from;
+                                $experienceText  = $job->getJobExperience()->job_experience;
+
+                            
+                            @endphp
+
+                            @if($userValue == null)
+                              @continue;
+                            @endif
+
                             <div  class="item-job-search mb-3" bis_skin_checked="1">
                                 <div class="row">
                                     <div class="col-lg-8 col-md-8 col-sm-8">
                                                     <strong class="item-job-search__name">
-                                                        Nguyen Thanh Minh 
+                                                        {{ $userValue->getNameUser()}}
                                                     </strong>   
                                                     <span>
-                                                        (29 tuổi)
+                                                        ({{ $numberyear->y }} tuổi)
                                                     </span>
 
                                            
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4">
                                         <div class="d-flex  justify-content-end-rp">
-                                            <a href="#" class="btn btn-outline btn-sm  mx-1"><i class="fa-regular fa-heart"></i></a>
-                                            <a href="#" class="btn btn-secondary btn-sm">Xem</a>
+                                            <a href="javascript:void(0)" class="btn btn-outline btn-sm  mx-1"><i class="fa-regular fa-heart"></i></a>
+                                            <a href="javascript:void(0)" class="btn btn-secondary btn-sm">Xem</a>
 
                                         </div>
                                      
@@ -48,14 +72,14 @@
                                             
                                            
                                                 <span class="item-job-search__industry">
-                                                    Nhân Viên Kinh Doanh
+                                                    {{ $job->title }}
                                                 </span>
                                             
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4">
                                        
                                         <div class="d-flex justify-content-end-rp align-items-center h-100">
-                                        Thời Gian Cập Nhật: 05/01/2024
+                                                 Thời Gian Cập Nhật: {{$lastUpdate}}
                                         </div>
                                        
                                     </div>
@@ -65,27 +89,23 @@
                                     <div class="col-lg-8 col-md-8 col-sm-8">
                                             <div class="d-flex">
                                                 <div>
-
-                                                    <i class="fa-solid fa-circle-dollar-to-slot mx-1"></i> 7 triệu
+                                                    <i class="fa-solid fa-circle-dollar-to-slot mx-1"></i> {{$salaryText/1000000}} triệu
                                                 </div>
                                                 <div class="mx-3">
-
-                                                    <i class="fa-solid fa-briefcase mx-1"></i>Dưới 1 năm
+                                                     <i class="fa-solid fa-briefcase mx-1"></i> {{ $experienceText }}
                                                 </div>
-
                                                 <div>
-
-                                                    <i class="fa-solid fa-map-location-dot mx-1"></i> Hà Nội
+                                                     <i class="fa-solid fa-map-location-dot mx-1"></i> {{ $citiName }}
                                                 </div>
 
                                             </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                    <!-- <div class="col-lg-4 col-md-4 col-sm-4">
                                       
                                         <div class="d-flex justify-content-end-rp">
                                             NTD quan tâm : 36
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                 </div>
                             </div>
@@ -100,13 +120,13 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <div class="showreslt">
-                                        {{__('Showing Pages')}} : {{ $jobSeekers->firstItem() }} -
-                                        {{ $jobSeekers->lastItem() }} {{__('Total')}} {{ $jobSeekers->total() }}
+                                        {{__('Showing Pages')}} : {{ $jobAply->firstItem() }} -
+                                        {{ $jobAply->lastItem() }} {{__('Total')}} {{ $jobAply->total() }}
                                     </div>
                                 </div>
                                 <div class="col-md-7 text-right">
-                                    @if(isset($jobSeekers) && count($jobSeekers))
-                                    {{ $jobSeekers->appends(request()->query())->links() }}
+                                    @if(isset($jobAply) && count($jobAply))
+                                    {{ $jobAply->appends(request()->query())->links() }}
                                     @endif
                                 </div>
                             </div>

@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Traits\FetchJobSeekers;
+use App\JobApply;
 
 class JobSeekerController extends Controller
 {
@@ -37,7 +38,8 @@ class JobSeekerController extends Controller
     }
 
     public function jobSeekersBySearch(Request $request)
-    {
+    {   
+      
         $search = $request->query('search', '');
         $functional_area_ids = $request->query('functional_area_id', array());
         $country_ids = $request->query('country_id', array());
@@ -53,12 +55,9 @@ class JobSeekerController extends Controller
         $order_by = $request->query('order_by', 'id');
         $limit = 10;
         $jobSeekers = User::where("is_active",1);
-
         $jobSeekers =$jobSeekers->paginate(10);
-
-       
-
-        /*         * ************************************************** */
+        $jobAply =  JobApply::paginate(10);
+         /*         * ************************************************** */
 
         $jobSeekerIdsArray = $this->fetchIdsArray($search, $industry_ids, $functional_area_ids, $country_ids, $state_ids, $city_ids, $career_level_ids, $gender_ids, $job_experience_ids, $current_salary, $expected_salary, $salary_currency, 'users.id');
 
@@ -120,9 +119,9 @@ class JobSeekerController extends Controller
                     'seo_title' => $seoArray['description'],
                     'seo_description' => $seoArray['description'],
                     'seo_keywords' => $seoArray['keywords'],
+
                     'seo_other' => ''
         );
-       
         return view(config('app.THEME_PATH').'.user.list')
                         ->with('functionalAreas', $this->functionalAreas)
                         ->with('countries', $this->countries)
@@ -138,6 +137,8 @@ class JobSeekerController extends Controller
                         ->with('genderIdsArray', $genderIdsArray)
                         ->with('jobExperienceIdsArray', $jobExperienceIdsArray)
                         ->with('cities', $cities)
+                        ->with('jobAply', $jobAply)
+                        
                         ->with('industryIds', $industryIds)
                         ->with('seo', $seo);
     }
