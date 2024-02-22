@@ -71,10 +71,10 @@
                         <td class="align-top text-gray">
                             <div class="insights">
                                 @if($value->user->email)
-                                <div class="text-nowrap text-truncate" style="max-width: 250px;">
+                                <a href="mailto:{{ $value->user->email }}" class="text-nowrap text-truncate text-gray " style="max-width: 250px;">
                                     <i class="iconmoon icon-recruiter-email text-primary"></i>
                                     {{ $value->user->email }}
-                                </div>
+                                </a>
                                 @endif
                                 @if($value->user->phone)
                                 <div class="text-nowrap text-truncate" style="max-width: 250px;">
@@ -227,7 +227,7 @@ function EuToUsCurrencyFormat(input) {
 $(document).ready(function() {
 	//Only needed for the filename of export files.
 	//Normally set in the title tag of your page.
-	document.title = 'DataTable Excel';
+	document.title = 'Quản lý ứng viên';
 	// DataTable initialisation
 	$('#table-applican-manager').DataTable({
 		"dom": '<"dt-buttons"Bf><"clear">lirtp',

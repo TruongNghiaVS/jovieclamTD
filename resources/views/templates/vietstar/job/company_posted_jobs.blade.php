@@ -384,7 +384,7 @@ function EuToUsCurrencyFormat(input) {
 $(document).ready(function() {
 	//Only needed for the filename of export files.
 	//Normally set in the title tag of your page.
-	document.title = 'DataTable Excel';
+	document.title = 'Quản lý đăng tuyển';
 	// DataTable initialisation
 	$('#company_posted_tb').DataTable({
 		"dom": '<"dt-buttons"Bf><"clear">lirtp',
