@@ -43,7 +43,7 @@
 </style>
 @endpush
 @push('scripts')
-@include('templates.vietstar.includes.immediate_available_btn')
+@include('templates.employers.includes.immediate_available_btn')
 <script>
 </script>
 @endpush
