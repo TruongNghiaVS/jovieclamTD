@@ -15,7 +15,7 @@
             <div class="banner-form__subtitle  text-primary">
                 Hãy để lại thông tin và các chuyên viên tư vấn tuyển dụng của VietStar sẽ liên hệ ngay với bạn
             </div>
-            <div class="row px-4 g-0">
+            <div class="row  g-0">
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <div class="banner-form__wrapper">
                         <img src="{{ asset('/') }}admin_assets/supportform.png" alt="">

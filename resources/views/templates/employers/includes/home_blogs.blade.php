@@ -2,19 +2,7 @@
 
 
 <style>
-    
-    @media only screen and (max-width: 700px) {
-        .show-more {
-
-        margin-top: unset !important;
-        }
-
-        .blogs-slider {
-
-        padding: 20px 0 0 0 !important;
-        }
-
-    }
+   
 
     .aboutus-hp{
             overflow-x: hidden;

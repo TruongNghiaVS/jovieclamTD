@@ -505,7 +505,14 @@
   }
 
   .blogs-slider .section-title-block{
-    margin-left: 10px;
+   
+    justify-content: center;
+  }
+  .our_customer  h2.section-title {
+      margin-bottom: 30px;
+  }
+  .introductionHompage {
+    margin-bottom: 30px;
   }
 
   .tab.tab-nav {
@@ -542,7 +549,7 @@
     padding-right: 10px;
   }
   
-  .our_customer,.introduce {
+  .our_customer,.introduce,.form_support {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -676,6 +683,16 @@
     .cardBlock {
       margin-bottom: 20px;
     }
+
+    .show-more {
+
+      margin-top: unset !important;
+      }
+
+      .blogs-slider {
+
+          padding: 0px 10px 30px 10px !important;
+      }
 }
 
 
