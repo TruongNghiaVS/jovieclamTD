@@ -8,10 +8,10 @@
 <!-- Inner Page Title end -->
 
 <!-- Dashboard start -->
-@include('templates.vietstar.includes.mobile_dashboard_menu')
+@include('templates.employers.includes.mobile_dashboard_menu')
 <!-- Dashboard end -->
 
-@include('templates.vietstar.includes.blog', ['dataDraw' => $data])
+@include('templates.employers.includes.blog', ['dataDraw' => $data])
 
 @include('templates.employers.includes.footer')
 @endsection
