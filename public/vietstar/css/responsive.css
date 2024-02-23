@@ -607,12 +607,17 @@
       width: 100% !important;
     }
 
-    .box-profile-view .job-information .information-list  li  {
+    .box-profile-view  .section-head,.box-profile-view .section-body{
+        padding: unset;
+    }
+
+    .box-profile-view .job-information .information-list li {
       flex: 0 0 100%;
       max-width: 100%;
       width: 100%;
       padding-right: 10px;
       display: flex;
+      flex-direction: column;
     }
 
     .btn_for_em, .btn_for_user {
