@@ -19,11 +19,21 @@
 
                     </p>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                        <img class="about_us_content__img" src="{{ asset('/') }}admin_assets/supportform.png" alt="about us">
+                <div class="col-lg-6 col-md-12 col-sm-12 about_us_img">
+                        <img class="about_us_content__img" src="{{ asset('/') }}admin_assets/hoatdong.jpeg" alt="about us">
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
+@push('styles')
+<style>
+    .about_us_img img {
+        width: 100%;
+        border-radius: 20px;
+    }
+</style>
+@endpush
+
