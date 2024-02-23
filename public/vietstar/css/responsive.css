@@ -673,7 +673,9 @@
     .box-content__content {
       padding:unset !important
     } 
-
+    .cardBlock {
+      margin-bottom: 20px;
+    }
 }
 
 
