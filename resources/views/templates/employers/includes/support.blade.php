@@ -109,7 +109,7 @@
         background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
-        padding:0px 50px;
+        /* padding:0px 50px; */
     }
     .banner-form__title{
         font-size: 28px;
