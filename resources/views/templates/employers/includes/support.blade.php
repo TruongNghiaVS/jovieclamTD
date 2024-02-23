@@ -1,13 +1,4 @@
 
-<style>
-    
-    @media only screen and (min-width: 600px) {
-        .banner-form__subtitle{
-            margin-bottom: 15px !important;
-        }
-       
-    }
-</style>
 <section class="form_support cb-section">
     <div class="container">
         <div class="banner-form ">
@@ -135,7 +126,7 @@
         letter-spacing: 0.14px;
         color: #FFF;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
     .banner-form__wrapper {
         width: 100%;
