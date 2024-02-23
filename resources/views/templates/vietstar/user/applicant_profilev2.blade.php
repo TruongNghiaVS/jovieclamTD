@@ -94,11 +94,11 @@ if (Auth::guard('company')->user()) {
                 </li>
                 <li>
                   <p> <strong>Bằng Cấp Cao Nhất:</strong></p>
-                  <p>{{$user->getCareerLevel('careerLevel')}} Chưa có thông tin</p>
+                  <p>Chưa cập nhật</p>
                 </li>
                 <li>
                   <p> <strong>{{__('Current salary')}}</strong></p>
-                  <p>{{ number_format($user->current_salary)}} </p>
+                  <p>Chưa cập nhật</p>
                 </li>
                 <li>
                   <p> <strong>Mức Lương Mong Muốn:</strong></p>

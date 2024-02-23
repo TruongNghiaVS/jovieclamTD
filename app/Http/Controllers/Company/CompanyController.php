@@ -128,10 +128,12 @@ class CompanyController extends Controller
 
     public  function applicationManager(Request $request)
     {
+     
         $jobs = Auth::guard('company')->user()->jobs()->orderBy('jobs.created_at', 'desc')->pluck('jobs.id')->toArray();
         $userApply = JobApply::with('user', 'job')->whereIn('job_apply.job_id', $jobs);
         $from_to = $request->from;
         $from_to2 = $request->to;
+        
         if($request->name) {
             $userApply = $userApply->whereHas('user', function($query) use ($request) {
                 $query->where('users.name', 'like', '%'.$request->name.'%')->orWhere('users.email', 'like', '%'.$request->name.'%');
@@ -184,6 +186,7 @@ class CompanyController extends Controller
 
     public  function applicationManagerbk(Request $request)
     {
+      
         $jobs = Auth::guard('company')->user()->jobs()->orderBy('jobs.created_at', 'desc')->pluck('jobs.id')->toArray();
         $userApply = JobApply::with('user', 'job')->whereIn('job_apply.job_id', $jobs);
 
@@ -223,7 +226,7 @@ class CompanyController extends Controller
         }
 
         $userApply = $userApply->orderByDesc('id')->paginate(6);
-
+       
         $data = [
             'userApply' => $userApply,
             'request' => $request->all(),
@@ -1070,14 +1073,24 @@ class CompanyController extends Controller
 
     public function userProfile($id)
     {
+        $jobApply = JobApply::where("id",$id)->first();
 
-        $user = User::findOrFail($id);
+        if($jobApply == null )
+        {
+            return;
+        }
+
+        
+        
+        $user = $jobApply->getUserApply();
+      
+
         $profileCv = $user->getDefaultCv();
-
-        /*         * ********************************************** */
+         /*         * ********************************************** */
         $num_profile_views = $user->num_profile_views + 1;
         $user->num_profile_views = $num_profile_views;
-        $user->update();
+        // $user->update();
+    
         /*         * ********************************************** */
         return view(config('app.THEME_PATH').'.user.applicant_profilev2')
                         ->with('user', $user)

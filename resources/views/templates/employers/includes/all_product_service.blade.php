@@ -1,6 +1,16 @@
+<style>
+    
+    @media only screen and (min-width: 600px) {
+        .introductionHompage {
+            margin-bottom: 30px;
+        }
+      
+    }
+</style>
+
 <section class="all-product-service cb-section ">
     <div class="container">
-    <h2 class="section-title  text-center text-primary">Chúng tôi mang đến trải nghiệm toàn diện<br/>trong lĩnh vực cung ứng nhân sự, cung ứng
+    <h2 class="section-title introductionHompage text-center text-primary">Chúng tôi mang đến trải nghiệm toàn diện <br/>trong lĩnh vực cung ứng nhân sự, cung ứng
             việc làm</h2>
 
         <div class="list-service">

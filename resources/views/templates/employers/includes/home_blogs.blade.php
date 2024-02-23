@@ -1,9 +1,31 @@
 <!-- Blogs slider -->
+
+
+<style>
+    
+    @media only screen and (max-width: 700px) {
+        .show-more {
+
+        margin-top: unset !important;
+        }
+
+        .blogs-slider {
+
+        padding: 20px 0 0 0 !important;
+        }
+
+    }
+
+    .aboutus-hp{
+            overflow-x: hidden;
+            border-bottom: 1px solid #e8e8e8;
+    }
+</style>
 <section class="blogs-slider section-static">
     <div class="container">
 
         <div class="section-title-block">
-            <div class="sectionBlock__title">Cẩm nang nghề nghiệp</div>
+            <div class="sectionBlock__title">Cẩm nang nghề nghiệp </div>
         </div>
 
 

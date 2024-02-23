@@ -22,6 +22,11 @@ class JobApply extends Model
     {
         return $this->belongsTo('App\User', 'user_id', 'id');
     }
+
+    public function getUserApply()
+    {
+      return  $this->user()->first();
+    }
     public function getUser($field = '')
     {
         if (null !== $user = $this->user()->first()) {

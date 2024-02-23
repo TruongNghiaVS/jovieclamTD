@@ -21,7 +21,6 @@
                 <thead>
                     <tr>
                         <th class="font-weight-bold" >{{ __('Candidate') }}</th>
-                        <!-- <th class="font-weight-bold"></th> -->
                         <th class="font-weight-bold"  style="width: 30%;">{{ __('Recruitment Bulletin') }}</th>
                         <th class="font-weight-bold" >{{ __('Candidate Detail') }}</th>
                         <th class="font-weight-bold">{{ __('Date Application') }}</th>
@@ -33,7 +32,9 @@
                 <tbody>
                     @if(count($userApply) > 0)
                     @foreach($userApply as $value)
-
+                          @if($value->user == null )
+                              @continue;
+                          @endif
                     <tr class="cv viewed">
                         <td>
                             <div class="d-flex align-items-center">
@@ -44,8 +45,7 @@
                                        
                                     @endphp
                                     <div class="image-candidate">
-                                        
-                                    {{ ImgUploader::print_image("user_images/$candidate_image") }}
+                                        {{ ImgUploader::print_image("user_images/$candidate_image") }}
                                     </div>
                                 </div>
                                 <div class="fullname">     
@@ -105,18 +105,12 @@
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a role="button" onClick="OpenmodalPopup({{ $value->id }});" class="dropdown-item" data-toggle="modal" data-target="#modalReviewApplication">Đổi trạng thái CV</a> 
                                 <a role="button" onClick="submitUpdateNoteApplication({{ $value->id }});" class="dropdown-item"  data-toggle="modal" data-target="#modalReviewApplicationNote">Ghi chú</a> 
-
-                             
-
-                            
-
-                                        @php
+                                      @php
                                         $cvUserApply = $value->user->getDefaultCv();
 
                                        @endphp
-                                 
                                        
-                                        @if( $cvUserApply->type =="1")    
+                                       @if( $cvUserApply->type =="1")    
                                             <a role="button" href="javascript:void(0)" class="dropdown-item public-profile-toggle"
                                                 onclick="showModal_candidate('{{ $value->user->id }}', '{{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name  }}');">
                                                                 <!-- Rest of your code here -->Xem cv
