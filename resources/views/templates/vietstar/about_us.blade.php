@@ -346,7 +346,7 @@
         padding: 20px 0;
     }
     .feature_section{
-        padding-top: 20px;
+        padding-top: 25px;
     } 
     .feature_section_end{
         padding-top: 20px;
