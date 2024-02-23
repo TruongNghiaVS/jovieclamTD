@@ -1,6 +1,18 @@
-<section class="our_customer cb-section ">
+<style>
+    
+    @media only screen and (min-width: 600px) {
+        .aboutusHOmepage {
+            margin-bottom: 30px
+        }
+        .aboutus-hp{
+            overflow-x: hidden;
+            border-bottom: 1px solid #e8e8e8;
+        }
+    }
+</style>
+<section class="our_customer aboutus-hp cb-section ">
     <div class="container">
-        <h2 class="section-title  text-center text-primary">
+        <h2 class="section-title  aboutusHOmepage text-center text-primary">
             {{__('About Us')}}
         </h2>
         <div class="about_us_content animation fade-top active" bis_skin_checked="1">

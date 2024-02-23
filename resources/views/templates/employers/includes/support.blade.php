@@ -1,3 +1,13 @@
+
+<style>
+    
+    @media only screen and (min-width: 600px) {
+        .banner-form__subtitle{
+            margin-bottom: 15px !important;
+        }
+       
+    }
+</style>
 <section class="form_support cb-section">
     <div class="container">
         <div class="banner-form ">
@@ -105,7 +115,7 @@
         background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat;
-        padding:10px 50px;
+        padding:0px 50px;
     }
     .banner-form__title{
         font-size: 28px;

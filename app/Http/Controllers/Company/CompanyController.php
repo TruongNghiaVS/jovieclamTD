@@ -1073,14 +1073,24 @@ class CompanyController extends Controller
 
     public function userProfile($id)
     {
+        $jobApply = JobApply::where("id",$id)->first();
 
-        $user = User::findOrFail($id);
+        if($jobApply == null )
+        {
+            return;
+        }
+
+        
+        
+        $user = $jobApply->getUserApply();
+      
+
         $profileCv = $user->getDefaultCv();
-
-        /*         * ********************************************** */
+         /*         * ********************************************** */
         $num_profile_views = $user->num_profile_views + 1;
         $user->num_profile_views = $num_profile_views;
-        $user->update();
+        // $user->update();
+    
         /*         * ********************************************** */
         return view(config('app.THEME_PATH').'.user.applicant_profilev2')
                         ->with('user', $user)

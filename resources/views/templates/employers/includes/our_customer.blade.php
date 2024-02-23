@@ -1,6 +1,18 @@
-<section class="our_customer cb-section">
+<style>
+    .our_customerv2 {
+        overflow-x: hidden;
+        border-bottom: 1px solid #e8e8e8;
+    }
+ 
+    @media only screen and (min-width: 600px) {
+        .section-titlev2 {
+            margin-bottom: 30px
+        }
+    }
+</style>
+<section class="our_customer our_customerv2 cb-section aboutus-homepage">
     <div class="container">
-        <h2 class="section-title  text-center text-primary">
+        <h2 class="section-title section-titlev2  text-center text-primary">
             {{ __('Our Customer') }}
         </h2>
         <div class="container-company" bis_skin_checked="1">

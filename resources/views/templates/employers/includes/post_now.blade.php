@@ -1,4 +1,4 @@
-<section class="section_postnow cb-section">
+<!-- <section class="section_postnow cb-section">
     <div class="container" bis_skin_checked="1">
         <div class="col-12" bis_skin_checked="1">
             <div class="" bis_skin_checked="1">
@@ -15,4 +15,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
