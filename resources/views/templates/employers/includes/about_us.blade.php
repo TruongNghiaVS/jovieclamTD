@@ -4,10 +4,12 @@
         .aboutusHOmepage {
             margin-bottom: 30px
         }
-        .aboutus-hp{
+       
+    }
+
+    .aboutus-hp{
             overflow-x: hidden;
             border-bottom: 1px solid #e8e8e8;
-        }
     }
 </style>
 <section class="our_customer aboutus-hp cb-section ">
