@@ -361,7 +361,10 @@
     align-items: center;
   }
 
- 
+  
+  #support_form .btn {
+    width: 100%;
+  }
 
   /************************************************
 
@@ -726,7 +729,7 @@
     padding: 8px 0;
   }
   footer {
-    padding:0 40px;
+    padding:0 0px;
   }
 
   .page-heading-tool.job-detail.mobile input {
@@ -793,7 +796,21 @@
     height: 100%;
     width: 100%;
   }
+  .blogs-slider .section-title-block {
+    justify-content: center;
 
+  }
+  .about_us_content {
+    padding: 0 40px;
+  }
+  .about_us_content .content_title {
+    padding-left: 0;
+    padding-top: 25px;
+  }
+  .feature_section,.feature_section_end   {
+    padding:0  40px;
+  }
+  
   .slider-hero-banner .bg-slider
  {
     height: 100%;
