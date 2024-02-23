@@ -508,7 +508,6 @@
   }
 
   .blogs-slider .section-title-block{
-   
     justify-content: center;
   }
   .our_customer h2.section-title {
@@ -699,7 +698,7 @@
 
       .blogs-slider {
 
-          padding: 0px 10px 30px 10px !important;
+          padding: 0px 10px 20px 10px !important;
       }
       
 }
@@ -802,8 +801,13 @@
     width: 100%;
   }
   .blogs-slider .section-title-block {
-    justify-content: center;
-
+    justify-content: center !important;
+  }
+  .banner-form__wrapper {
+    display: none;
+  }
+  .banner-form  {
+    padding: 0 40px;
   }
   .about_us_content {
     padding: 0 40px;
@@ -978,8 +982,6 @@
     width: 100%;
 
   }
-
-  .group-for-mobile {}
 
   .group-for-mobile .user-badge {
     display: none;
