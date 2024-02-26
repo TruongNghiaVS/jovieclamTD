@@ -505,7 +505,7 @@
         // Add a new task to the list
         $("#new-job-form #addButton").click(function () {
             var todoText = $("#new-job-form #addtag").val();
-            if (todoText !== "") {
+            if (todoText !== "" && !tagsArray.includes(todoText)) {
                 var listItem = $("<span>").addClass("box-meta").text(todoText);
                 listItem.append('<i class="fa-solid fa-xmark mx-2 text-primary"></i>');
                 
@@ -519,11 +519,19 @@
 
                 $("#new-job-form #addtag").val("");
             }
+            else {
+                alert("Tag bị trùng lặp");
+            }
         });
 
         // Remove a task from the list when clicked
-        $("#edit_front_job #todoList").on("click", "span", function () {
+        $("#new-job-form #todoList").on("click", "span", function () {
+            var removedItem = $(this).text().trim();
+            tagsArray = tagsArray.filter(item => item !== removedItem);
             $(this).remove();
+
+            // Update the hidden input field with the updated array of tags
+            $("#new-job-form #tagsInput").val(JSON.stringify(tagsArray));
         });
     });
 </script>
