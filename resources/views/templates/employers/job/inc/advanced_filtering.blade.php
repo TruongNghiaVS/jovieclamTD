@@ -9,85 +9,201 @@
       <h3 class="accordion-single-title js-acc-single-trigger">Thời Gian Cập Nhật</h3>
       <div class="accordion-single-content">
       <div class="form-check">
-          <input class="form-check-input" type="radio" name="time" id="time1" value="option1"  checked="checked">
-          <label class="form-check-label" for="time1">
+          <input class="form-check-input" type="radio" name="timeUpdate"  value=""  checked="checked">
+          <label class="form-check-label" >
               Tất cả
           </label>
       </div>
+      
+       @if("trong-vong-1-ngay" ==$requestParam->query('thoi-gian-cap-nhat',''))
+        <div class="form-check">
+            <input class="form-check-input" checked checked type="radio" name="timeUpdate"  value="trong-vong-1-ngay" >
+            <label class="form-check-label" for="timeUpdate">
+            Trong vòng 1 ngày
+            </label>
+
+        </div>
+      @else 
+        <div class="form-check">
+            <input class="form-check-input"  type="radio" name="timeUpdate"  value="trong-vong-1-ngay"  >
+            <label class="form-check-label" for="timeUpdate">
+            Trong vòng 1 ngày
+            </label>
+
+        </div>
+      @endif
+
+
+      @if("1-tuan-gan-day" ==$requestParam->query('thoi-gian-cap-nhat',''))
       <div class="form-check">
-          <input class="form-check-input" type="radio" name="time" id="time2" value="option2">
-          <label class="form-check-label" for="time2">
-              Trong vòng 1 ngày
+          <input class="form-check-input" checked checked type="radio" name="timeUpdate"  value="1-tuan-gan-day"  >
+          <label class="form-check-label" for="timeUpdate">
+          1 Tuần gần đây
+          </label>
+
+      </div>
+      @else 
+      <div class="form-check">
+          <input class="form-check-input"  type="radio" name="timeUpdate"  value="1-tuan-gan-day"  >
+          <label class="form-check-label" for="timeUpdate">
+          1 Tuần gần đây
+          </label>
+
+      </div>
+      @endif
+
+
+      @if("1-thang-gan-day" ==$requestParam->query('thoi-gian-cap-nhat',''))
+      <div class="form-check">
+          <input class="form-check-input" checked checked type="radio" name="timeUpdate"  value="1-thang-gan-day"  checked="checked">
+          <label class="form-check-label" for="timeUpdate">
+          1 Tháng gần đây
+          </label>
+
+      </div>
+      @else 
+      <div class="form-check">
+          <input class="form-check-input"  type="radio" name="timeUpdate"  value="1-thang-gan-day"  >
+          <label class="form-check-label" for="timeUpdate">
+          1 Tháng gần đây
+          </label>
+
+      </div>
+      @endif
+      
+
+     
+
+      @if("2-thang-gan-day" ==$requestParam->query('thoi-gian-cap-nhat',''))
+      <div class="form-check">
+          <input class="form-check-input"  checked type="radio" name="timeUpdate"  value="2-thang-gan-day">
+          <label class="form-check-label" >
+            2 Tháng gần đây
           </label>
       </div>
+      @else 
       <div class="form-check">
-          <input class="form-check-input" type="radio" name="time" id="time3" value="option2">
-          <label class="form-check-label" for="time2">
-              1 Tuần gần đây
+          <input class="form-check-input" type="radio" name="timeUpdate"  value="2-thang-gan-day">
+          <label class="form-check-label" >
+          2 Tháng gần đây
           </label>
       </div>
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="time" id="time4" value="option2">
-          <label class="form-check-label" for="time2">
-              1 Tháng gần đây
-          </label>
-      </div>
-  
-      <div class="form-check">
-          <input class="form-check-input" type="radio" name="time" id="time2" value="option2">
-          <label class="form-check-label" for="time2">
-              2 Tháng gần đây
-          </label>
-      </div>
+      @endif
   
       </div>
     </div>
     <div class="accordion-single-item js-acc-item">
-      <h3 class="accordion-single-title js-acc-single-trigger">Hình Thức Làm Việc</h3>
+      <h3 class="accordion-single-title js-acc-single-trigger">Hình thức làm việc</h3>
       <div class="accordion-single-content">
-          <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="jobtype">
-              <label class="form-check-label" for="jobtype">
-                  Toàn thời gian cố định
-              </label>
-          </div>
-  
-          <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="jobtype">
-              <label class="form-check-label" for="jobtype">
+   
+
+      @if("toan-thoi-gian-co-dinh" ==$requestParam->query('hinh-thuc-lam-viec',''))
+        <div class="form-check">
+            <input class="form-check-input" checked type="radio" name="waycontact"  value="toan-thoi-gian-co-dinh"  >
+            <label class="form-check-label" for="waycontact">
+                Toàn thời gian cố định
+            </label>
+
+        </div>
+      @else 
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="waycontact"  value="toan-thoi-gian-co-dinh"  >
+        <label class="form-check-label" for="waycontact">
+        Toàn thời gian cố định
+        </label>
+
+      </div>
+      @endif
+      @if("toan-thoi-gian-tam-thoi" ==$requestParam->query('hinh-thuc-lam-viec',''))
+      <div class="form-check">
+          <input class="form-check-input" checked type="radio" name="waycontact"  value="toan-thoi-gian-tam-thoi" >
+          <label class="form-check-label" for="waycontact">
               Toàn thời gian tạm thời
-              </label>
-          </div>
-          <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="jobtype">
-              <label class="form-check-label" for="jobtype">
-                  Bán thời gian tạm thời
-              </label>
-          </div>
-          <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="jobtype">
-              <label class="form-check-label" for="jobtype">
-                  Thực tập
-              </label>
-          </div>
-          <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="jobtype">
-              <label class="form-check-label" for="jobtype">
-                  Khác
-              </label>
-          </div>
+          </label>
+
+      </div>
+      @else 
+      <div class="form-check">
+          <input class="form-check-input"  type="radio" name="waycontact"  value="toan-thoi-gian-tam-thoi" >
+          <label class="form-check-label" for="waycontact">
+              Toàn thời gian tạm thời
+          </label>
+
+      </div>
+      @endif
+    
+
+      @if("ban-thoi-gian-tam-thoi" ==$requestParam->query('hinh-thuc-lam-viec',''))
+      <div class="form-check">
+          <input class="form-check-input" checked type="radio" name="waycontact"  value="ban-thoi-gian-tam-thoi"  >
+          <label class="form-check-label" for="waycontact">
+          Bán thời gian tạm thời
+          </label>
+
+      </div>
+      @else 
+      <div class="form-check">
+          <input class="form-check-input"  type="radio" name="waycontact"  value="ban-thoi-gian-tam-thoi" >
+          <label class="form-check-label" for="waycontact">
+           Bán thời gian tạm thời
+          </label>
+
+      </div>
+      @endif
+
+      @if("thuc-tap" ==$requestParam->query('hinh-thuc-lam-viec',''))
+      <div class="form-check">
+          <input class="form-check-input" checked type="radio" name="waycontact"  value="thuc-tap" >
+          <label class="form-check-label" for="waycontact">
+          Thực tập
+          </label>
+
+      </div>
+      @else 
+      <div class="form-check">
+          <input class="form-check-input"  type="radio" name="waycontact"  value="thuc-tap"  >
+          <label class="form-check-label" for="waycontact">
+          Thực tập
+          </label>
+
+      </div>
+      @endif
+      @if("khac" ==$requestParam->query('hinh-thuc-lam-viec',''))
+      <div class="form-check">
+          <input class="form-check-input" checked type="radio" name="waycontact"  value="khac" >
+          <label class="form-check-label" for="waycontact">
+          Khác
+          </label>
+
+      </div>
+      @else 
+      <div class="form-check">
+          <input class="form-check-input"  type="radio" name="waycontact"  value="khac" >
+          <label class="form-check-label" for="waycontact">
+          Khác
+          </label>
+
+      </div>
+      @endif
       </div>
     </div>
     <div class="accordion-single-item js-acc-item">
       <h3 class="accordion-single-title js-acc-single-trigger">Địa Điểm</h3>
       <div class="accordion-single-content">
           <div class="form-group" id="city_dd2">
-              <select class="form-control form-select" name="city_id" id="city">
-                  <option value="">Chọn địa điểm</option>
-                  <option value="3">HCM</option>
-                  <option value="5">Hà Nội</option>
-                  <option value="5">Đà Nẵng</option>
+              <select class="form-control form-select" name="city_id2" id="city_id2">
+                  <option value="">Chọn địa điểm </option>
+                  @foreach($cities as $item)
+                    @if($item->slug ==$requestParam->query('tinh-thanh',''))
+                    <option selected value="{{$item->slug}}">{{$item->city}}</option>
+                    @else 
+                    <option value="{{$item->slug}}">{{$item->city}}</option>
+                    @endif
+                      
+                @endforeach
               </select>
+
+              
           </div>
       </div>
     </div>

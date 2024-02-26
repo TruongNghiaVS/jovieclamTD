@@ -300,7 +300,9 @@ class User extends Authenticatable
 
     public function getJobExperience($field = '')
     {
+      
         $jobExperience = $this->jobExperience()->lang()->first();
+    
         if (null === $jobExperience) {
             $jobExperience = $this->jobExperience()->first();
         }
@@ -311,7 +313,21 @@ class User extends Authenticatable
                 return $jobExperience;
         }
     }
-
+    public function getJobExperiencev2($field = '')
+    {
+      
+        $jobExperience = $this->jobExperience()->lang()->first();
+    
+        if (null === $jobExperience) {
+            return "Chưa cập nhật";
+        }
+        if (null !== $jobExperience) {
+            if (!empty($field))
+                return $jobExperience->$field;
+            else
+                return $jobExperience;
+        }
+    }
     public function gender()
     {
         return $this->belongsTo('App\Gender', 'gender_id', 'gender_id');
@@ -319,16 +335,24 @@ class User extends Authenticatable
 
     public function getGender($field = '')
     {
-        $gender = $this->gender()->lang()->first();
-        if (null === $gender) {
-            $gender = $this->gender()->first();
+        if( $this->gender_id  ==15)
+        {
+            return "Nam";
         }
-        if (null !== $gender) {
-            if (!empty($field))
-                return $gender->$field;
-            else
-                return $gender;
-        }
+        else if( $this->gender_id  ==16 )
+        return "Nữ";
+
+        return "Chưa cập nhật";
+        // $gender = $this->gender()->lang()->first();
+        // if (null === $gender) {
+        //     $gender = $this->gender()->first();
+        // }
+        // if (null !== $gender) {
+        //     if (!empty($field))
+        //         return $gender->$field;
+        //     else
+        //         return $gender;
+        // }
     }
 
     public function maritalStatus()

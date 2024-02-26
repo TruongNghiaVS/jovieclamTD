@@ -1265,7 +1265,9 @@
   .section-head, .section-body {
     padding: 20px 20px;
   }
-
+  .section-head2 {
+    padding: 0px !important;
+  }
   .slider-hero-banner .bg-slider.is-pc {
     display: none
   }

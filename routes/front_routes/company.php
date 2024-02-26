@@ -34,7 +34,7 @@ Route::get('refresh-front-job/{job_id}', 'Company\CompaniesController@refreshFro
 Route::get('removed-from-hired-applicant/{application_id}/{user_id}/{job_id}/{company_id}', 'Company\CompanyController@removehireFromFavouriteApplicant')->name('remove.hire.from.favourite.applicant');
 Route::get('applicant-profile/{application_id}', 'Company\CompanyController@applicantProfile')->name('applicant.profile');
 Route::get('reject-applicant-profile/{application_id}', 'Company\CompanyController@rejectApplicantProfile')->name('reject.applicant.profile');
-Route::get('user-profile/{id}', 'Company\CompanyController@userProfile')->name('user.profile');
+Route::get('thong-tin-ung-vien/{id}', 'Company\CompanyController@userProfile')->name('user.profile');
 Route::get('company-followers', 'Company\CompanyController@companyFollowers')->name('company.followers');
 /* Route::get('company-messages', 'Company\CompanyController@companyMessages')->name('company.messages'); */
 Route::post('submit-message-seeker', 'CompanyMessagesController@submitnew_message_seeker')->name('submit-message-seeker');

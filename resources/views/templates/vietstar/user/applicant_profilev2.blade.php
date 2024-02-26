@@ -27,17 +27,17 @@ if (Auth::guard('company')->user()) {
   @include('templates.employers.includes.mobile_dashboard_menu')
   <div class="container company-content">
     <div class="user-account-section">
-      <div class="action" bis_skin_checked="1">
+      <!-- <div class="action" bis_skin_checked="1">
           <ul class="action-list">
             <li> <a href="javascript:void(0);"><i class="bi bi-tag-fill"></i><span>Thêm Tag  </span></a></li>
           </ul>
-      </div>
+      </div> -->
       <div class="box-profile-view">
         <div class="formpanel mt0">
-          <div class="section-head">
-            <h3 class="title">Thông tin ứng viên</h3>
+          <div class="section-head section-head2">
+            <h3 class="title">CHỨC DANH/VỊ TRÍ: {{$job->title}}</h3>
           </div>
-          <div class="section-body">
+          <div class="section-body  section-head2">
             <div class="row">
               <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="info" bis_skin_checked="1">
@@ -59,12 +59,11 @@ if (Auth::guard('company')->user()) {
                     </li>
                     <li>
                       <p><strong>Quốc tịch:</strong></p>
-                      
-                      <p>Chưa cập nhật</p>
+                      <p>Người việt Nam</p>
                     </li>
                     <li>
                       <p><strong>Giới Tính:</strong></p>
-                      <p>Chưa cập nhật giới tính - {{$user->getGender('gender') ? - $user->getGender('gender') :""}}  {{$user->getMaritalStatus('marital_status')}}</p>
+                      <p>{{$user->getGender('gender')}}</p>
                     </li>
                     <li>
                       <p><strong>Quốc Gia:</strong></p>
@@ -72,7 +71,7 @@ if (Auth::guard('company')->user()) {
                     </li>
                     <li>
                       <p><strong>Tỉnh/Thành Phố:</strong></p>
-                      <p>Chưa cập nhật</p>
+                      <p>{{$user->getCity2()}}</p>
                     </li>
                     <li>
                       <p><strong>Địa chỉ:</strong></p>
@@ -90,31 +89,60 @@ if (Auth::guard('company')->user()) {
               <ul class="information-list">
                 <li>
                   <p> <strong>Năm Kinh Nghiệm:</strong></p>
-                  <p>{{$user->getJobExperience('job_experience')}}</p>
+                  <p>{{$user->getJobExperiencev2('job_experience')}}</p>
                 </li>
                 <li>
-                  <p> <strong>Bằng Cấp Cao Nhất:</strong></p>
-                  <p>Chưa cập nhật</p>
+                  @php
+                    $education = $user->profileEducation()->first();
+                    $educationText = 'Chưa cập nhật';
+                    if($education)
+                    {
+                      $item = $education->getDegreeLevel();
+
+                      if($item)
+                      {
+                        $educationText = $item->degree_level;
+                      }
+                     
+                    }
+                  @endphp
+                  <p> <strong>Bằng Cấp Cao Nhất: </strong></p>
+                  <p>{{$educationText}}</p>
                 </li>
                 <li>
                   <p> <strong>{{__('Current salary')}}</strong></p>
-                  <p>Chưa cập nhật</p>
+                  @if($user->current_salary > 0 )
+                    <p>{{number_format($user->current_salary)}}</p>
+                  @else 
+                    <p>Chưa cập nhật</p>
+                  @endif
+                 
                 </li>
                 <li>
                   <p> <strong>Mức Lương Mong Muốn:</strong></p>
-                  <p>{{number_format($user->expected_salary)}} {{$user->salary_currency}} </p>
+
+                  @if($user->expected_salary > 0 )
+                    <p>{{number_format($user->expected_salary)}}</p>
+                  @else 
+                  <p>Chưa cập nhật</p>
+
+                  @endif
+                 
                 </li>
+
+
+                
                 <li>
                   <p> <strong>Ngành Nghề Mong Muốn:</strong></p>
                   <p>{{$user->getIndustry('industry')}}</p>
                 </li>
                 <li>
                   <p> <strong>Địa Điểm:</strong></p>
-                  <p>Chưa cập nhật</p>
+                  <p>{{$user->street_address}}</p>
                 </li>
                 <li>
                   <p> <strong>Hình thức:</strong></p>
-                  <p>Chưa cập nhật</p>
+                  <p>Nhân viên chính thức</p>
                 </li>
                 <li>
                   <p> <strong>Ngày tạo:</strong></p>
@@ -127,7 +155,19 @@ if (Auth::guard('company')->user()) {
               </ul>
 
             </div>
-            <!-- <p class="title-flip">NỘI DUNG HỒ SƠ</p> -->
+            <p class="title-flip">NỘI DUNG HỒ SƠ</p>
+           
+            <div class ="profile-iframe" >
+                  <iframe id="frm_view_pdf" 
+                  frameborder="0"
+                  toolbar =0,
+                  navpanes=0,
+                   scrolling="no" 
+                  src="http://jobvieclam.com/cvs/83b901eb2cc47bf714c899608a4d263b.pdf" 
+                  height="934"   width="100%">
+                  </iframe>
+             </div>
+
           </div>
 
         </div>

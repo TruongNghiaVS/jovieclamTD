@@ -2,21 +2,26 @@
 <!-- SEARCH STICKY -->
 <div class="page-heading-tool job-detail ">
     <div class="container">
-    <form action="{{route('job.seeker.list')}}" method="get">
+
   
     <div class="tool-wrapper">
             <div class="search-job">
                 <div class="form-horizontal">
                     <div class="form-wrap">
                         <div class="form-group form-keyword">
-                            <input type="search" class="keyword form-control" id="search" name="search"
-                                placeholder="{{__('Skills or Job Titles')}}" autocomplete="off">
+                            <input type="text" class="keyword form-control" id="search" name="search"
+                            value ="{{$requestParam->query('tu-khoa','')}}"     placeholder="{{__('Skills or Job Titles')}}" >
                         </div>
                         <div class="form-group">
                               <select class="form-control" name="industry_id" id="industry_id">
                                 <option value="">Chọn lĩnh vực</option>
                                 @foreach($industryIds as $item)
-                                     <option value="{{$item->industry_id}}">{{$item->industry}}</option>
+                                   @if($item->slug ==$requestParam->query('linh-vuc',''))
+                                    <option selected value="{{$item->slug}}">{{$item->industry}}</option>
+                                    @else 
+                                    <option value="{{$item->slug}}">{{$item->industry}}</option>
+                                    @endif
+                                     
                                 @endforeach
                             </select>
                         </div>
@@ -25,13 +30,19 @@
                               <select class="form-control" name="cities" id="cities">
                                 <option value="">Chọn tỉnh/thành</option>
                                 @foreach($cities as $item)
-                                     <option value="{{$item->city_id}}">{{$item->city}}</option>
+                                    @if($item->slug ==$requestParam->query('tinh-thanh',''))
+                                    <option selected value="{{$item->slug}}">{{$item->city}}</option>
+                                    @else 
+                                    <option value="{{$item->slug}}">{{$item->city}}</option>
+                                    @endif
+                                     
                                 @endforeach
                             </select>
                         </div>
+
                         <div class="form-group form-submit">
-                            <button class="btn-gradient" type="submit">
-                                Tìm Kiếm
+                            <button class="btn-gradient" onclick ="searchForm()">
+                                Tìm Kiếm 
                             </button>
                         </div>
 
@@ -44,7 +55,7 @@
                 </button>
             </div>
         </div>
-    </form>
+  
       
     </div>
 </div>
@@ -86,44 +97,47 @@
             <form action="{{route('job.seeker.list')}}" method="get">
                 <div class="row">
                     
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="form-group" id="degree_level_dd">
-                            <label>Theo kinh nghiệm</label>
-                            <select class="form-control form-select" id="level" name="level">
-                                <option value="">Tất Cả</option>
-                                <option value="5" data-id="1">
-                                    5 năm
-                                </option>
-                                <option value="1" data-id="2">
-                                    1 năm
-                                </option>
-
-                            </select>
-                        </div>
-                    </div>
-
-                   
+                 
+                    
                     <div class="col-sm-6 col-lg-2">
                         <div class="form-group form-select">
                             <label>Theo cấp bậc</label>
-                            <select class="form-control form-select" name="salary" id="salary">
-                                <option value="">Tất cả</option>
-                                <option value="3">Nhân viên</option>
-                                <option value="5">Trưởng nhóm/Giám sát</option>
+                            <select class="form-control form-select" name="careerLevel" id="careerLevelId">
+                                <option value="-1">Tất cả</option>
+                                @foreach($careerLevelIdsArray as $item)
+                                    @if($item->slug ==$requestParam->query('cap-bac',''))
+                                        <option selected value="{{$item->slug}}">{{$item->career_level}}</option>
+                                    @else 
+                                      <option value="{{$item->slug}}">{{$item->career_level}}</option>
+                                    @endif
+                               @endforeach
                             </select>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
-                        <div class="form-group" id="degree_level_dd">
+                        <div class="form-group" >
                             <label>Theo giới tính</label>
-                            <select class="form-control form-select" id="level" name="level">
-                                <option value="">Tất Cả</option>
-                                <option value="Nam" data-id="1">
+                            <select class="form-control form-select" id="genderSelect" name="gender">
+                                <option value="">Chọn giới tính</option>
+                                @if("nam" ==$requestParam->query('gioi-tinh',''))
+                                <option  selected  value="nam" data-id="1">
                                     Nam
                                 </option>
-                                <option value="Nữ" data-id="2">
-                                    Nữ
+                                @else 
+                                <option  value="nam" data-id="1">
+                                    Nam
                                 </option>
+                                @endif
+                                
+                                @if("nu" ==$requestParam->query('gioi-tinh',''))
+                                    <option  selected  value="nu" data-id="1">
+                                        Nữ
+                                    </option>
+                                @else 
+                                    <option  value="nu" data-id="1">
+                                        Nu
+                                    </option>
+                                @endif>
 
                             </select>
                         </div>
@@ -158,8 +172,6 @@
                                 placeholder="{{__('Skills or Job Titles')}}" autocomplete="off">
                         </div>
                     </div>
-
-
                     <div class="col-sm-6 col-lg-2">
                         <div class="form-group form-select-chosen" id="functional_area_dd">
                             <select class="form-control form-select" name="functional_area_id" id="functional_area">
@@ -320,7 +332,51 @@ $('#benefit_id').each(function() {
     });
 });
 
+function searchForm()
+{
+    var keywordText = $("#search").val();
+    var linhvucField = $("#industry_id ").val();
+    var tinhThanh = $("#cities").val();
+    var careerLevelSelect = $("#careerLevelId").val();
+    var genderSelectText = $("#genderSelect").val();
+    var lastUpdated = $('input:radio[name="timeUpdate"]:checked').val();
+    var wayContact = $('input:radio[name="waycontact"]:checked').val();
 
+    var href ="/tim-ung-vien?1=1";
+    if(keywordText != '')
+    {
+        href =  href + '&&tu-khoa=' + keywordText;
+    }
+    if(linhvucField != '')
+    {
+        href =  href + '&&linh-vuc=' + linhvucField;
+    }
+    if(tinhThanh != '')
+    {
+        href =  href + '&&tinh-thanh=' + tinhThanh;
+    }
+    if(careerLevelSelect != '')
+    {
+        href =  href + '&&cap-bac=' + careerLevelSelect;
+    }
+    if(genderSelectText != '')
+    {
+        href =  href + '&&gioi-tinh=' + genderSelectText;
+    }
+
+   
+
+    if(lastUpdated != '')
+    {
+        href =  href + '&&thoi-gian-cap-nhat=' + lastUpdated;
+    }
+
+    if(wayContact != '')
+    {
+        href =  href + '&&hinh-thuc-lam-viec=' + wayContact;
+    }
+    window.open( href,'_self');
+}
 
 </script>
 @endpush

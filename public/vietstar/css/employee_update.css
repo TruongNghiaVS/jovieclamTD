@@ -409,7 +409,7 @@ h2.title {
     justify-content: center;
     width: 160px;
     height: 160px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-right: 40px;
     margin-left: 0;
     overflow: hidden;
@@ -420,7 +420,7 @@ h2.title {
 }
 
 .box-profile-view .section-body  .info .info-list{
-    margin-top: 25px;
+    /* margin-top: 25px; */
     list-style-type: none;
 }
 .box-profile-view .section-body .info-list li {
@@ -434,8 +434,8 @@ h2.title {
     padding: 1px;
 }
 .box-profile-view .section-body .info-list li p:first-child {
-    width: 200px;
-    min-width: 200px;
+    /* width: 200px; */
+    min-width: 150px;
     padding-right: 10px;
 }
 
@@ -780,3 +780,6 @@ h2.title {
 }
   
   
+.profile-iframe {
+    margin-top: 15px;
+}

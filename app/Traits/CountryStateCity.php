@@ -143,6 +143,16 @@ trait CountryStateCity
         }
     }
 
+    public function getCity2($field = '')
+    {
+        $city = $this->city()->lang()->first();
+        if (null === $city) {
+           return "Chưa cập nhật";
+        }
+        if (null !== $city) {
+            return $city->city;
+        }
+    }
     public function getLocation()
     {
         $country = $this->getCountry('country');

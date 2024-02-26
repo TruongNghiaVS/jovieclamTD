@@ -37,9 +37,7 @@
 
                                 $salaryText = $job->salary_from;
                                 $experienceText  = $job->getJobExperience()->job_experience;
-
-                            
-                            @endphp
+                           @endphp
 
                             @if($userValue == null)
                               @continue;
@@ -60,8 +58,7 @@
                                     <div class="col-lg-4 col-md-4 col-sm-4">
                                         <div class="d-flex  justify-content-end-rp">
                                             <a href="javascript:void(0)" class="btn btn-outline btn-sm  mx-1"><i class="fa-regular fa-heart"></i></a>
-                                            <a href="javascript:void(0)" class="btn btn-secondary btn-sm">Xem</a>
-
+                                            <a href="/thong-tin-ung-vien/{{$jobSeeker->id}}" class="btn btn-secondary btn-sm">Xem</a>
                                         </div>
                                      
                                     </div>
@@ -188,10 +185,6 @@
         justify-content: end;
         text-align: end;
     }
-
-
-
-
 </style>
 @endpush
 @push('scripts')

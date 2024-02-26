@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use App\Http\Controllers\Controller;
 use App\Traits\FetchJobSeekers;
 use App\JobApply;
+use App\CareerLevel;
 
 class JobSeekerController extends Controller
 {
@@ -40,7 +41,16 @@ class JobSeekerController extends Controller
     public function jobSeekersBySearch(Request $request)
     {   
       
-        $search = $request->query('search', '');
+        $timeUpdate = $request->query('thoi-gian-cap-nhat', '');
+    
+        $wayWork = $request->query('hinh-thuc-lam-viec', '');
+        $location = $request->query('dia-diem', '');
+        $tinhthanh = $request->query('tinh-thanh', '');
+        $linhvuc = $request->query('linh-vuc', '');
+        $search = $request->query('tu-khoa', '');
+
+        
+      
         $functional_area_ids = $request->query('functional_area_id', array());
         $country_ids = $request->query('country_id', array());
         $state_ids = $request->query('state_id', array());
@@ -90,8 +100,9 @@ class JobSeekerController extends Controller
 
         /*         * ************************************************** */
 
-        $careerLevelIdsArray = $this->fetchIdsArray($search, $industry_ids, $functional_area_ids, $country_ids, $state_ids, $city_ids, $career_level_ids, $gender_ids, $job_experience_ids, $current_salary, $expected_salary, $salary_currency, 'users.career_level_id');
-
+        $careerLevelIdsArray =  CareerLevel::where("lang","vi")->get();
+    
+    
         /*         * ************************************************** */
 
         $genderIdsArray = $this->fetchIdsArray($search, $industry_ids, $functional_area_ids, $country_ids, $state_ids, $city_ids, $career_level_ids, $gender_ids, $job_experience_ids, $current_salary, $expected_salary, $salary_currency, 'users.gender_id');
@@ -138,7 +149,7 @@ class JobSeekerController extends Controller
                         ->with('jobExperienceIdsArray', $jobExperienceIdsArray)
                         ->with('cities', $cities)
                         ->with('jobAply', $jobAply)
-                        
+                        ->with('requestParam',$request)
                         ->with('industryIds', $industryIds)
                         ->with('seo', $seo);
     }
