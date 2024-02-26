@@ -48,6 +48,20 @@
                     </div>
                     --}}
 
+
+                    
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-widget">
+                            <h4 class="widget-title">{{__('Recruiters')}}</h4>
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="{{route('post.job')}}">{{__('Post a Job')}}</a></li>
+                                <li><a href="{{ route('job.seeker.list') }}">{{__('CV Seek')}}</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
                     <div class="col-md-6 col-lg-6 col-xl-2">
                         <div class="footer-widget">
                             <h4 class="widget-title">{{__('About Us')}}</h4>
@@ -60,17 +74,6 @@
                     </div>
 
 
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="footer-widget">
-                            <h4 class="widget-title">{{__('Recruiters')}}</h4>
-                            <ul class="list-unstyled footer-links">
-                                <li><a href="{{route('post.job')}}">{{__('Post a Job')}}</a></li>
-                                <li><a href="{{ route('job.seeker.list') }}">{{__('CV Seek')}}</a></li>
-
-
-                            </ul>
-                        </div>
-                    </div>
 
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-widget">

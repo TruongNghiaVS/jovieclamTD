@@ -527,9 +527,9 @@
     white-space: nowrap;
     padding: 0 10px;
   }
-
+ 
   footer section.links {
-    padding:0 20px;
+    padding: 0px 1.5rem 30px !important;
     text-align: left;
   }
 
@@ -750,8 +750,11 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
   
-  .links {
+  footer section.links {
     padding: 60px 1.5rem 30px !important;
+  }
+  footer .inner-copyright {
+    padding: 0 1.5rem;
   }
 
   button#mobile-sidebarCollapse {
