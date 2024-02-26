@@ -7,15 +7,16 @@
 
         <ul class="tabslet-tab d-flex justify-content-start  mb-0 mt-1" id="config_mail" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Yêu Cầu Email Marketing</a>
+                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab" onclick="toggleTab(this)">Yêu Cầu Email Marketing</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Email Mẫu</a>
+                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab" onclick="toggleTab(this)">Email Mẫu</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">Thông Báo Ứng Viên</a>
+                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab" onclick="toggleTab(this)">Thông Báo Ứng Viên</a>
             </li>
-        </ul><!-- Tab panes -->
+        </ul>
+        <!-- Tab panes -->
         <div class="tab-content">
             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                    
@@ -93,9 +94,10 @@
     @push('scripts')
     <script type="text/javascript">
         function toggleTab(e) {
+            console.log(e);
             var hrefVal = $(e).attr('href');
-            $('.tabslet-tab li').removeClass('active');
-            $('.tabslet-tab li[data-active="' + hrefVal + '"]').addClass('active');
+            $('.tabslet-tab li a').removeClass('active');
+            $('.tabslet-tab li a[data-active="' + hrefVal + '"]').addClass('active');
         }
     </script>
     @endpush
