@@ -1,3 +1,21 @@
+
+<?php
+// dd($dataDraw);
+// $data = $dataDraw["blogs"];
+$data = $dataDraw;
+$category = $data["category"];
+$heading = $data["category"]->heading;
+$blogs = $data["blogs"]->items();
+
+
+// foreach ($blogs as $value) {
+//     echo "$value->heading";
+// }
+
+
+?>
+
+
 <div class="blog-content">
     <!-- <section id="blog-content main-log"> -->
     <!-- <div class="container"> -->
@@ -67,79 +85,37 @@
         <div class="container">
             <div class="head-box" bis_skin_checked="1">
                 <div class="cb-title" bis_skin_checked="1">
-                    <h2><a href="#" title="Bí quyết tìm việc">Bí quyết tìm việc</a></h2>
+                    <h2 ><a href="{{url('/')}}/tin-tuc/{{$category -> slug }}" class ="blog-heading" title="Bí quyết tìm việc">{{$heading}}</a></h2>
                 </div>
-                <div class="view-all" bis_skin_checked="1"><a href="#" title="Bí quyết tìm việc">Xem Thêm <em class="mdi mdi-arrow-right"></em></a></div>
+                
             </div>
             <div class="row align-items-start ">
-                <div class="col-md-6 col-lg-4 mb-4 ">
+
+            
+                @foreach($blogs as $blog)
+                <div class="col-sm-12 col-md-6 col-lg-3  mb-4 ">
                     <div class="figure">
-                        <a href="" class="figure-images"><img src="https://contenthub-static.grammarly.com/blog/wp-content/uploads/2017/11/how-to-write-a-blog-post.jpeg" alt=""></a>
+                        <a href="{{url('/')}}/tin-tuc/{{$category->slug}}/{{ $blog-> slug }}" class="figure-images">
+                            @if($blog-> image) 
+                            <img src="{{url('/')}}/uploads/blogs/{{ $blog-> image }}" alt="{{$blog->heading}}">
+                            @else 
+                            <img src="{{ asset('/') }}/admin_assets/no-image.png" alt="{{ $blog->heading}}">
+                            @endif
+                        </a>
                         <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="#">KỸ NĂNG CÔNG SỞ</a></h3>
-                            <div class="figcaption__title"><a href="#">Flex là gì? Làm sao thoát flexing đồng nghiệp hay
-                                    khoe khoang?</a></div>
+                            <h3 class="figcaption__category-name"><a href="/tin-tuc/{{$category->slug }}">{{$heading}}</a></h3>
+                            <div class="figcaption__title"><a href="/tin-tuc/{{$category->slug}}/{{ $blog-> slug }}">{{ $blog-> heading}} </a></div>
 
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 mb-4 ">
-                    <div class="figure">
-                        <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/08/do-loi.jpg" alt=""></a>
-                        <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="#">KỸ NĂNG CÔNG SỞ</a></h3>
-                            <div class="figcaption__title"><a href="#">Tìm việc trực tuyến an toàn và cảnh
-                                    giác trước
-                                    các công việc nhẹ lương cao</a></div>
+                @endforeach
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 ">
-                    <div class="figure">
-                        <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/08/ket-ban-voi-dong-nghiep.jpg" alt=""></a>
-                        <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="#">THỊ TRƯỜNG LAO ĐỘNG</a></h3>
-                            <div class="figcaption__title"><a href="#">Những nguyên tắc ngầm khi giao tiếp, kết bạn với
-                                    đồng nghiệp nơi công sở </a></div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 ">
-                    <div class="figure">
-                        <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/07/flex-la-gi.jpg" alt=""></a>
-                        <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="#">KỸ NĂNG CÔNG SỞ</a></h3>
-                            <div class="figcaption__title"><a href="#">Flex là gì? Làm sao thoát flexing đồng nghiệp hay
-                                    khoe khoang?</a></div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 ">
-                    <div class="figure">
-                        <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/08/do-loi.jpg" alt=""></a>
-                        <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="#">KỸ NĂNG CÔNG SỞ</a></h3>
-                            <div class="figcaption__title"><a href="#">Tìm việc trực tuyến an toàn và cảnh
-                                    giác trước
-                                    các công việc nhẹ lương cao</a></div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 ">
-                    <div class="figure">
-                        <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/08/ket-ban-voi-dong-nghiep.jpg" alt=""></a>
-                        <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="#">THỊ TRƯỜNG LAO ĐỘNG</a></h3>
-                            <div class="figcaption__title"><a href="#">Những nguyên tắc ngầm khi giao tiếp, kết bạn với
-                                    đồng nghiệp nơi công sở </a></div>
-
-                        </div>
-                    </div>
-                </div>
+               
+            </div>
+            <div class="d-flex justify-content-center">
+            {{ $data["blogs"]->links() }}
             </div>
         </div>
     </section>

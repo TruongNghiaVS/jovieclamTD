@@ -316,6 +316,10 @@
         transform: translateX(-300px);
         transition: 0.4s ease-out all;
     }
+    #mobile-sidebar ul li a h1 {
+        font-size: 18px;
+        font-weight: 600;
+    }
 
     .sidebar-main-nav,
     .sidebar-user-nav {
@@ -432,7 +436,7 @@
         <div class="menu">
             <ul class="list-unstyled components sidebar-main-nav" id="sidebar-main-nav">
                 <li class="sidebar-item {{ Request::url() == route('index') ? 'active' : '' }}">
-                    <a href="{{ Request::url() == route('index') }}" class="list-group-item list-group-item-action {{ Request::url() == route('index')  ? 'active' : '' }}">
+                    <a href="/" class="list-group-item list-group-item-action {{ Request::url() == route('index')  ? 'active' : '' }}">
                         <div class="d-flex w-100">
                             <i class="fa-solid fa-house fs-24px me-2"></i>
                             <span class="side-bar-content"> {{__('Home')}}</span>
@@ -460,13 +464,28 @@
                 </li>
                 @endif
                 <li class="sidebar-item ">
-                    <a href="#" class="list-group-item list-group-item-action ">
+                    <a href="#blog_sub_list" data-toggle="collapse"     aria-expanded="false" class="dropdown-toggle">
+                            <div class="d-flex w-100">
+                                <i class="fa-regular fa-newspaper fs-24px me-2"></i>
+                                <span class="side-bar-content">{{__('Blog')}}</span>
+                            </div>
+                        </a>
 
-                        <div class="d-flex w-100">
-                            <i class="fa-regular fa-newspaper fs-24px me-2"></i> 
-                            <span class="side-bar-content"> {{__('News')}}</span>
-                        </div>
-                    </a>
+                    @php($categories = \App\Blog_category::get())
+
+                    <ul class="collapse list-unstyled sub_list" data-ref="findJob_blog" data-target="false" id="blog_sub_list">
+                        @foreach($categories as $category)
+                        <li>
+                            <a class="sub-item" href="{{ url('/blog/category/') . "/" . $category->slug }}">
+
+                                <div class="d-flex w-100">
+
+                                    <h1 class="side-bar-content">{{$category->heading}}</h1>
+                                </div>
+                            </a>
+                        </li>
+                        @endforeach
+                    </ul>
                 </li>
                 <li class="sidebar-item ">
                     <a href="{{ route('contact.us') }}" class="list-group-item list-group-item-action {{ Request::url() == route('contact.us') ? 'active' : '' }}">
@@ -528,7 +547,8 @@
                 <li class="sidebar-item {{ Request::url() == route('company.config-mail') ? 'active' : '' }}">
                     <a href="/cau-hinh-mail" class="list-group-item list-group-item-action ">
                             <div class="d-flex w-100">
-                                <i class="fas fa-search  fs-24px me-2"></i>
+                                <i class="fa fa-cog fs-24px me-2" aria-hidden="true"></i>
+                              
                                 <span class="side-bar-content">Cấu Hình Mail</span>
                             </div>
                     </a>

@@ -14,7 +14,7 @@
 </style>
 <section class="our_customer aboutus-hp cb-section ">
     <div class="container">
-        <h2 class="section-title  aboutusHOmepage text-center text-primary">
+        <h2 class="aboutusHOmepage text-center text-primary">
             {{__('About Us')}}
         </h2>
         <div class="about_us_content animation fade-top active" bis_skin_checked="1">

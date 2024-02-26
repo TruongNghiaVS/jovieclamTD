@@ -361,7 +361,10 @@
     align-items: center;
   }
 
- 
+  
+  #support_form .btn {
+    width: 100%;
+  }
 
   /************************************************
 
@@ -505,7 +508,18 @@
   }
 
   .blogs-slider .section-title-block{
-    margin-left: 10px;
+    justify-content: center;
+  }
+  .our_customer h2.section-title {
+      margin-bottom: 30px;
+  }
+
+  
+
+
+
+  .introductionHompage {
+    margin-bottom: 30px;
   }
 
   .tab.tab-nav {
@@ -513,9 +527,9 @@
     white-space: nowrap;
     padding: 0 10px;
   }
-
+ 
   footer section.links {
-    padding:0 20px;
+    padding: 0px 1.5rem 30px !important;
     text-align: left;
   }
 
@@ -542,7 +556,7 @@
     padding-right: 10px;
   }
   
-  .our_customer,.introduce {
+  .our_customer,.introduce,.form_support {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -607,12 +621,17 @@
       width: 100% !important;
     }
 
-    .box-profile-view .job-information .information-list  li  {
+    .box-profile-view  .section-head,.box-profile-view .section-body{
+        padding: unset;
+    }
+
+    .box-profile-view .job-information .information-list li {
       flex: 0 0 100%;
       max-width: 100%;
       width: 100%;
       padding-right: 10px;
       display: flex;
+      flex-direction: column;
     }
 
     .btn_for_em, .btn_for_user {
@@ -668,7 +687,20 @@
     .box-content__content {
       padding:unset !important
     } 
+    .cardBlock {
+      margin-bottom: 20px;
+    }
 
+    .show-more {
+
+      margin-top: unset !important;
+      }
+
+      .blogs-slider {
+
+          padding: 0px 10px 20px 10px !important;
+      }
+      
 }
 
 
@@ -701,7 +733,7 @@
     padding: 8px 0;
   }
   footer {
-    padding:0 40px;
+    padding:0 0px;
   }
 
   .page-heading-tool.job-detail.mobile input {
@@ -718,8 +750,11 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
   
-  .links {
+  footer section.links {
     padding: 60px 1.5rem 30px !important;
+  }
+  footer .inner-copyright {
+    padding: 0 1.5rem;
   }
 
   button#mobile-sidebarCollapse {
@@ -738,6 +773,7 @@
   }
   .figcaption {
     padding: 10px;
+    height: 130px;
   }
   .figcaption__title a {
     margin: 5px;
@@ -767,7 +803,26 @@
     height: 100%;
     width: 100%;
   }
-
+  .blogs-slider .section-title-block {
+    justify-content: center !important;
+  }
+  .banner-form__wrapper {
+    display: none;
+  }
+  .banner-form  {
+    padding: 0 40px;
+  }
+  .about_us_content {
+    padding: 0 40px;
+  }
+  .about_us_content .content_title {
+    padding-left: 0;
+    padding-top: 25px;
+  }
+  .feature_section,.feature_section_end   {
+    padding:0  40px;
+  }
+  
   .slider-hero-banner .bg-slider
  {
     height: 100%;
@@ -931,8 +986,6 @@
 
   }
 
-  .group-for-mobile {}
-
   .group-for-mobile .user-badge {
     display: none;
   }
@@ -1023,7 +1076,7 @@
     margin-top: unset;
   }
   .box-content__content {
-    padding-left: 0 !important;
+    padding:unset !important;
   }
   .employer-choose .box-content .box-content__content p {
     padding-left: 20px;
