@@ -1076,7 +1076,7 @@
     margin-top: unset;
   }
   .box-content__content {
-    padding-left: 0 !important;
+    padding:unset !important;
   }
   .employer-choose .box-content .box-content__content p {
     padding-left: 20px;
