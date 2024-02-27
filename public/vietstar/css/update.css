@@ -5284,6 +5284,7 @@ div#industry_id_chosen {
 }
 .box-profile-view .img-thumnail__wrapper img {
     max-height: 150px;
+    max-width: 100%;
 }
 .card-bio .img-avatar__wrapper img{
     width: 150px;
