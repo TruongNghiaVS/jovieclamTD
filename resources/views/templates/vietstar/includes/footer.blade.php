@@ -112,8 +112,8 @@
             <p class="copyright">Copyright © Jobvieclam</p>
             <div class="term-link">
                 <span class="fs-16px pe-2">All Rights Reserved</span>
-                <div class="d-inline-block border-start"><a class="fs-16px px-2" href="#">{{__('Terms Of Use')}}</a></div>
-                <div class="d-inline-block border-start"><a class="fs-16px ps-2" href="#">{{__('Policies')}}</a></div>
+                <div class="d-inline-block "><a class="fs-16px px-2" href="#">{{__('Terms Of Use')}}</a></div>
+                <div class="d-inline-block "><a class="fs-16px ps-2" href="#">{{__('Policies')}}</a></div>
             </div>
         </div>
     </div>
