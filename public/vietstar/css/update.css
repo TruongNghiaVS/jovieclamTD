@@ -1784,6 +1784,13 @@ footer .footer-widget.footer-widget-contact .contact-detail li i {
     color: var(--bs-primary)
 }
 
+footer .footer-widget.footer-widget-contact .contact-detail li a {
+    color: var(--text-main);
+}
+footer .footer-widget.footer-widget-contact .contact-detail li a:hover {
+    text-decoration: underline;
+}
+
 footer .inner-copyright {
     display: -webkit-box;
     display: -ms-flexbox;

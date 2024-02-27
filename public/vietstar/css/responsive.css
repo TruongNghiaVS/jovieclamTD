@@ -82,7 +82,7 @@
     background-repeat: no-repeat;
     background-position: bottom center;
   
-} 
+  } 
 
   .employer-number-impressive .list-number li .number span, .employer-number-impressive .list-number li .number p {
     font-size: 21px !important;
@@ -1419,6 +1419,21 @@
   }
 
 
+  .slider-hero-banner .bg-slider.is-pc {
+    display: none
+  }
+  
+  .slider-hero-banner .bg-slider.is-pc-sm {
+    display: block
+  }
+  
+  
+  .slider-hero-banner .bg-slider.is-sp {
+    display: none
+  }
+}
+
+@media only screen and (min-width: 1600px) {
   .slider-hero-banner .bg-slider.is-pc {
     display: block
   }

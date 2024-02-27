@@ -1,6 +1,6 @@
     <!-- Main -->
     <!-- Bio -->
-    <div class="row py-3">
+    <div class="row py-3 g-0">
         <div class="col-md-6 px-3">
             <div class="card widget-dashboard mb-3 w-100 shadow-sm">
                 <div class="card-body">
