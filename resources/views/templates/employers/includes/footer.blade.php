@@ -66,7 +66,7 @@
                         <div class="footer-widget">
                             <h4 class="widget-title">{{__('About Us')}}</h4>
                             <ul class="list-unstyled footer-links">
-                                <li><a href="/about-us">{{__('About Us')}}</a></li>
+                                <li><a href="/ve-chung-toi">{{__('About Us')}}</a></li>
                                 <li><a href="{{ route('contact.us') }}">{{__('Contact')}}</a></li>
                                 
                             </ul>

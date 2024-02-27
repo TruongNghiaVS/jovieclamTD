@@ -17,7 +17,6 @@ if (Auth::guard('company')->user()) {
     }
   }
 }
-
 ?> 
 
 
@@ -27,11 +26,7 @@ if (Auth::guard('company')->user()) {
   @include('templates.employers.includes.mobile_dashboard_menu')
   <div class="container company-content">
     <div class="user-account-section">
-      <!-- <div class="action" bis_skin_checked="1">
-          <ul class="action-list">
-            <li> <a href="javascript:void(0);"><i class="bi bi-tag-fill"></i><span>Thêm Tag  </span></a></li>
-          </ul>
-      </div> -->
+ 
       <div class="box-profile-view">
         <div class="formpanel mt0">
           <div class="section-head section-head2">
@@ -172,6 +167,17 @@ if (Auth::guard('company')->user()) {
 
         </div>
       </div>
+
+   <div class="action" bis_skin_checked="1">
+          <ul class="action-list">
+            <li> <a href ="javascript:void(0)"
+                    onclick ="downloadFileFromUrl('http://jobvieclam.com/cvs/83b901eb2cc47bf714c899608a4d263b.pdf', 'nguyen_truong_nghia.pdf')"
+            >
+                   <img style ="width:32px" src= "/iconDowloadFile.png"> 
+                   <span>Xuất file pdf   </span></a>
+            </li>
+          </ul>
+      </div>
     </div>
   </div>
 
@@ -181,7 +187,25 @@ if (Auth::guard('company')->user()) {
 
 @endsection
 
+<script>
+function downloadFileFromUrl(url, filename) {
 
+  fetch(url,
+  {
+            method: "GET", 
+            
+            mode: 'cors'
+        })
+    .then(response => response.blob())
+    .then(blob => {
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = filename;
+      link.click();
+  })
+  .catch(console.error);
+}  
+</script>
 
 
 
@@ -384,6 +408,8 @@ if (Auth::guard('company')->user()) {
 @endpush
 @push('scripts')
 <script type="text/javascript">
+
+
   $(document).ready(function() {
     $(document).on('click', '#send_applicant_message', function() {
       var postData = $('#send-applicant-message-form').serialize();
@@ -554,6 +580,8 @@ if (Auth::guard('company')->user()) {
       }
     })
   }
+
+
 </script>
 @endpush
 @include('templates.employers.includes.footer')

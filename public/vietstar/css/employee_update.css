@@ -441,7 +441,7 @@ h2.title {
 
 .box-profile-view .title-flip {
     margin-top: 15px;
-    padding: 8px 20px;
+    padding: 8px 0px;
     background: #fff1f4;
     color: #172642;
     font-size: 16px;
@@ -783,3 +783,20 @@ h2.title {
 .profile-iframe {
     margin-top: 15px;
 }
+
+/* profile user apply for */
+@media only screen and (max-width: 600px) { 
+    ul {
+        padding-left : unset !important;
+    }
+    .box-profile-view .section-body  .info {
+        display: block !important;
+    }
+    
+    .box-profile-view .section-body  .info .image{
+        display: block;
+        margin:auto;
+        margin-bottom:1rem;
+    }
+}
+  

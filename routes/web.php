@@ -38,7 +38,7 @@ Route::post('contact/addEmailNotification', 'Contact\ContactController@Noficatio
 
 
 Route::get('/employers', 'EmployerController@index')->name('employerIndex');
-Route::get('/about-us', 'IndexController@aboutUs')->name('about_us');
+Route::get('/ve-chung-toi', 'IndexController@aboutUs')->name('about_us');
 Route::get('/check-time', 'IndexController@checkTime')->name('check-time');
 Route::post('set-locale', 'IndexController@setLocale')->name('set.locale');
 
