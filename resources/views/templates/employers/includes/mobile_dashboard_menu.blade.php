@@ -149,7 +149,7 @@
         font-size: 1.1em;
         display: block;
     }
-    #mobile-sidebar ul .sidebar-item   a {
+    #mobile-sidebar ul .sidebar-item >a {
         background-color: white;
     }
 
@@ -402,6 +402,14 @@
     .sub_list li{
         margin-left: 40px;
     }
+    #blog_sub_list li.active  ,ul#pageSubmenu li.active , ul#pageSubmenu li.active>a{
+        background:var(--bs-primary);
+        color:white;
+    
+    }
+    #blog_sub_list li.active .side-bar-content ,ul#pageSubmenu li.active .side-bar-content ,ul#pageSubmenu li.active i {
+        color:white;
+    }
 
 </style>
 
@@ -473,9 +481,9 @@
 
                     @php($categories = \App\Blog_category::get())
 
-                    <ul class="collapse list-unstyled sub_list" data-ref="findJob_blog" data-target="false" id="blog_sub_list">
+                    <ul class="collapse list-unstyled sub_list {{ strpos(Request::url(),'/tin-tuc/') > 0 ? 'show' : '' }}" data-ref="findJob_blog" data-target="false" id="blog_sub_list">
                         @foreach($categories as $category)
-                        <li>
+                        <li class="{{ basename(Request::url()) == $category->slug ? 'active' : '' }}">
                             <a class="sub-item" href="{{ url('/blog/category/') . "/" . $category->slug }}">
 
                                 <div class="d-flex w-100">

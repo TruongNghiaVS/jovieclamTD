@@ -700,7 +700,10 @@
 
           padding: 0px 10px 20px 10px !important;
       }
-      
+      .box-profile-view .img-avatar__wrapper  ,.box-profile-view .img-thumnail__wrapper {
+        justify-content: center;
+        margin-bottom: 10px;
+      } 
 }
 
 
@@ -773,7 +776,7 @@
   }
   .figcaption {
     padding: 10px;
-    height: 130px;
+    height: 150px;
   }
   .figcaption__title a {
     margin: 5px;

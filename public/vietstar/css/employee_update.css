@@ -662,6 +662,13 @@ h2.title {
   }
 
 
+.modal.fade .modal-dialog {
+    transition: transform 0.5s ease-out;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: translate(0, 0);
+}
 @media only screen and (max-width: 767px) {
     #company-default-nav {
         display: none;

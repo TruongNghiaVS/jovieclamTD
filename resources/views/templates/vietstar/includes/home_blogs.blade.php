@@ -148,7 +148,7 @@
                     image = `{{url('/')}}/uploads/blogs/${item.image}`;
                     slug = `{{url('/')}}/blog/${item.slug}`;
                     if (item) {
-                        return `  <div class="col-sm-12 col-md-3 col-lg-3">
+                        return `  <div class="col-md-6 col-lg-3 col-sm-12 mb-4">
                                
                                 <div class="cardBlock">
                                
