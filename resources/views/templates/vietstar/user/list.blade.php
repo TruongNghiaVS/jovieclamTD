@@ -22,11 +22,19 @@
                             @if(isset($jobAply) && count($jobAply))
                             @foreach($jobAply as $jobSeeker)
                             @php
-                                $userValue = $jobSeeker->getUserApply();
-                                $age = '';
+                            $userValue = $jobSeeker->getUserApply();
+                            $job= $jobSeeker->getJob();
+                            
+                            @endphp
+
+                            @if($userValue == null || $job == null)
+                                @continue
+                            @endif
+
+                            @php
+                                 $age = '';
                                 $dayofBirth = $userValue->date_of_birth;
                                 $numberyear = \Carbon\Carbon::now()->diff( \Carbon\Carbon::parse($dayofBirth));
-                                $job= $jobSeeker->getJob();
                                 $cities =  $userValue->getCity();
                                 $citiName = '';
                                 if($cities != null)
@@ -35,7 +43,7 @@
                                 }
                                 $lastUpdate =  $jobSeeker->created_at->format('d/m/Y');
 
-                                $salaryText = $job->salary_from;
+                                $salaryText = $job->salary_from == null ? 0: $job->salary_from ;
                                 $experienceText  = $job->getJobExperience()->job_experience;
                            @endphp
 
