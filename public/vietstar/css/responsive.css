@@ -1321,11 +1321,11 @@
     padding: 0px !important;
   }
   .slider-hero-banner .bg-slider.is-pc {
-    display: none
+    display: block
   }
   
   .slider-hero-banner .bg-slider.is-pc-sm {
-    display: block
+    display: none
   }
   
   
