@@ -2208,9 +2208,10 @@ h3.seekertxt span {
 
 .figcaption__home {
 	padding: 10px;
-	min-height: 130px;
+	min-height: 120px;
 
 	display: flex;
+	width: 100%;
 }
 
 
@@ -2231,6 +2232,13 @@ h3.seekertxt span {
 	
 }
 
+.figcaption__title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	overflow: hidden;
+}
 
 
 
@@ -2245,7 +2253,7 @@ h3.seekertxt span {
 	text-overflow: ellipsis;
 	line-height: 30px;
 	color: var(--text-main);
-	height: 100%;
+
 }
 
 .figcaption__title.big a {
