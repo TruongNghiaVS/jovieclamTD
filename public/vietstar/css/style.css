@@ -2253,7 +2253,7 @@ h3.seekertxt span {
 	text-overflow: ellipsis;
 	line-height: 30px;
 	color: var(--text-main);
-	height: 100%;
+
 }
 
 .figcaption__title.big a {

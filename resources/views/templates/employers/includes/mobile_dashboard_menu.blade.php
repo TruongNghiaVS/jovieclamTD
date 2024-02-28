@@ -416,10 +416,10 @@
 @endpush
 <nav id="mobile-sidebar">
     <div class="sidebar-header">
-        @if(Auth::guard('company')->user())
+        @if(Auth::guard('company')->check()==true)
         <div class="profile" bis_skin_checked="1">
             <div class="avatar" bis_skin_checked="1"><a href="#">
-                        
+                {{Auth::guard('company')->user()->printCompanyImage()}}
                 </a>
             </div>
             <div class="username" bis_skin_checked="1">
@@ -434,7 +434,7 @@
         <div class="profile" bis_skin_checked="1">
             <div class="avatar" bis_skin_checked="1"><a href="#">
             
-                
+                <img src="/admin_assets/no-company.png" alt="">
             </a>
             </div>
             <div class="username" bis_skin_checked="1">
