@@ -108,7 +108,7 @@ Sử dụng chiến lược tiếp thị (Recruitment Marketing) tăng cường 
                 position: relative;
                 
                 line-height: 24px;
-                font-size: 16.5px;
+                font-size: 16px;
                 font-weight: 400;
                 margin: 5px 0;
                 color: white;

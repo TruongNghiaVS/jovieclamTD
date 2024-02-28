@@ -98,10 +98,13 @@
   }
 
   .employer-choose .box-content .box-content__content p {
-    font-size: 17px !important;
+    font-size: 16px !important;
+  }
+  .employer-choose .box-content .box-content__content ul {
+    
   }
   .employer-choose .box-content .box-content__content ul li {
-    font-size: 15.5px;
+    font-size: 16px;
   }
   .about_us_content__text {
     font-size: 17px;
@@ -605,14 +608,14 @@
       padding-left: 0 !important;
     }
     .employer-choose .box-content .box-content__content p {
-      font-size: 15px;
+      font-size: 16px;
       padding-left: 10px;
     }
     .employer-choose .box-content .cb-title {
       margin-left: 0;
     }
     .employer-choose .box-content .box-content__content ul {
-      margin-left: 0 !important;
+      padding: 0 10px !important;
     }
     .employer-choose .box-content .box-content__content ul li {
       padding-left:0px !important
