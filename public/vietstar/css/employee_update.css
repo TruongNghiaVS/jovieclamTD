@@ -757,6 +757,7 @@ h2.title {
     .modal-company-profile-dialog {
         width: 90% !important;
         max-width:90% !important;
+        min-width: 90% !important;
     }
     .introduce__slide {
         display: none;

@@ -57,23 +57,20 @@
                     image = `{{url('/')}}/uploads/blogs/${item.image}`;
                     slug = `{{url('/')}}/blog/${item.slug}`;
                     if (item) {
-                        return `  <div class="col-md-3 col-lg-3 col-sm-12">
+                        return `  <div class="col-md-6 col-lg-3 col-sm-12 mb-4">
                                
-                                <div class="cardBlock p-0">
+                               <div class="cardBlock p-0">
+                              
+                                   <div class="figure" bis_skin_checked="1">
+                                       <a href="${slug}" class="figure-images"><img src="${image}" alt="${item.heading}"></a>
+                                       <div class="figcaption__home" bis_skin_checked="1">        
+                                           <div class="figcaption__title" bis_skin_checked="1"><a href="${slug}">${item.heading}</a></div>
+                                       </div>
+                                   </div>
+                               </div>
+                               </div>
                                
-                                    <div class="figure" bis_skin_checked="1">
-                                        <a href="${slug}" class="figure-images"><img src="${image}" alt="${item.heading}"></a>
-                                        <div class="figcaption" bis_skin_checked="1">
-
-                                            <h3 class="figcaption__category-name"><a href="#"></a></h3>
-                                        
-                                            <div class="figcaption__title" bis_skin_checked="1"><a href="${slug}">${item.heading}</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                                
-                    `
+                   `
                     }
 
                 })

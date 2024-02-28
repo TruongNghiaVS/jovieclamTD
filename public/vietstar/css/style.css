@@ -2180,6 +2180,8 @@ h3.seekertxt span {
 	width: 100%;
 	background: #ffffff;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 }
 
 .figure-images {
@@ -2200,9 +2202,17 @@ h3.seekertxt span {
 }
 
 .figcaption {
-	padding: 20px;
+	padding: 10px;
 	height: 160px;
 }
+
+.figcaption__home {
+	padding: 10px;
+	min-height: 130px;
+
+	display: flex;
+}
+
 
 .figcaption__category-name a {
 
@@ -2226,14 +2236,14 @@ h3.seekertxt span {
 
 .figcaption__title a {
 	margin: 10px;
-	-webkit-line-clamp: 2;
+	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 	display: -webkit-box;
 	overflow: hidden;
-	font-size: 23px;
+	font-size: 20px;
 	font-weight: 600;
 	text-overflow: ellipsis;
-	line-height: 40px;
+	line-height: 30px;
 	color: var(--text-main);
 }
 

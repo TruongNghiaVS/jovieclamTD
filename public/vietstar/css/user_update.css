@@ -626,6 +626,7 @@ i.fas.fa-heart.iconoutline {
     }
     .modal-dialog.modal-company-profile-dialog {
         width: 95%;
+        min-width: 95%;
         max-width: 95%;
     }
     .modal-dialog.modal-company-profile-dialog .modal-body {

@@ -181,7 +181,8 @@ $company = Auth::guard('company')->user();
 <style type="text/css">
 
     .modal-company-profile-dialog {
-        max-width: 60%;
+        max-width: 70%;
+        min-width: 70%;
     }
 
     .btn-view-more {
