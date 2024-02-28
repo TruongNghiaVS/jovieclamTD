@@ -645,9 +645,7 @@
       justify-content: start !important;
     }
   
-    .figure {
-      height: 340px;
-    }
+   
     .banner-form-main {
       padding: 10px !important;
     }
@@ -785,9 +783,7 @@
   .useraccountwrap .nav-link.active {
     color: white !important;
   }
-  .figure {
-    height: 300px;
-  }
+
   
 
   .header-bar {
