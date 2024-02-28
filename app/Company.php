@@ -88,11 +88,20 @@ class Company extends Authenticatable
 
         $logo = (string)$this->logo;
 
-        $logo = (!empty($logo)) ? $logo : '/admin_assets/no-image.png';
-        return \ImgUploader::print_image("company_logos/$logo", $width, $height, '/admin_assets/no-image.png', $this->name);
+        $logo = (!empty($logo)) ? $logo : '/admin_assets/no-company.png';
+        return \ImgUploader::print_image("company_logos/$logo", $width, $height, '/admin_assets/no-company.png', $this->name);
 
     }
 
+    public function printCompanyCoverImage($width = 0, $height = 0)
+
+    {
+
+        $cover_logo = (string)$this->cover_logo;
+        $cover_logo = (!empty($cover_logo)) ? $cover_logo : '/admin_assets/no-cover.jpg';
+        return \ImgUploader::print_image("company_logos/$cover_logo", $width, $height, '/admin_assets/no-cover.jpg', $this->name);
+
+    }
 
 
     public function jobs()

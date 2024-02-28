@@ -105,9 +105,10 @@
         font-size: 20px;
     }
     .pic.img-thumnail {
-     
-
         position: relative;
+        min-width: 100%;
+        max-width: 100%;
+
     }
     .img-thumnail .img-thumnail__wrapper {
        
@@ -162,7 +163,8 @@
                             <div id="thumbnail">
                                 <div class="pic img-thumnail">
                                     <div class="img-thumnail__wrapper">
-                                    {{ ImgUploader::print_image("company_logos/$company->cover_logo") }}
+                                    {{--{{ ImgUploader::print_image("company_logos/$company->cover_logo") }}--}}
+                                    {{$company->printCompanyCoverImage()}}
                                     </div>
                                     <input type="file" name="image" id="company_thumnail_input" style="display: none;">
 

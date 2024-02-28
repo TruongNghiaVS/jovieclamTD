@@ -5251,10 +5251,10 @@ div#industry_id_chosen {
 
 .form-user-profile .img-avatar {
   
-    width:200px;
+    width: 200px;
+    max-width: 200px;
     position: relative;
-  
-   
+    min-width: 200px;
 }
 .form-user-profile .img-avatar .img-avatar__wrapper{
   
