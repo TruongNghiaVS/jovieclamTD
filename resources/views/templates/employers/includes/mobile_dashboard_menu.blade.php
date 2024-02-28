@@ -419,7 +419,8 @@
         @if(Auth::guard('company')->user())
         <div class="profile" bis_skin_checked="1">
             <div class="avatar" bis_skin_checked="1"><a href="#">
-                   
+                        {{Auth::guard('company')->user()->printCompanyImage()}}
+                </a>
             </div>
             <div class="username" bis_skin_checked="1">
                 <p><a href="#">{{Auth::guard('company')->user()->name}}</a></p>
@@ -432,7 +433,7 @@
 
         <div class="profile" bis_skin_checked="1">
             <div class="avatar" bis_skin_checked="1"><a href="#">
-                    <img class="lazy-bg" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="avatar" style=""></a>
+            {{Auth::guard('company')->user()->printCompanyImage()}}</a>
             </div>
             <div class="username" bis_skin_checked="1">
                 <p><a href="#">Welcome to Jobvieclam</a></p>
