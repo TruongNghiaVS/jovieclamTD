@@ -419,7 +419,7 @@
         @if(Auth::guard('company')->user())
         <div class="profile" bis_skin_checked="1">
             <div class="avatar" bis_skin_checked="1"><a href="#">
-                        {{Auth::guard('company')->user()->printCompanyImage()}}
+                        
                 </a>
             </div>
             <div class="username" bis_skin_checked="1">
@@ -433,7 +433,9 @@
 
         <div class="profile" bis_skin_checked="1">
             <div class="avatar" bis_skin_checked="1"><a href="#">
-            {{Auth::guard('company')->user()->printCompanyImage()}}</a>
+            
+                
+            </a>
             </div>
             <div class="username" bis_skin_checked="1">
                 <p><a href="#">Welcome to Jobvieclam</a></p>
