@@ -65,6 +65,22 @@
     cursor: pointer;
     color: var(--text-main);
 }
+.border-t-l-ra-0 {
+    border-top-left-radius:0 !important;
+}
+
+.border-b-l-ra-0 {
+    border-bottom-left-radius:0 !important;
+}
+
+
+.border-t-r-ra-0 {
+    border-top-right-radius:0 !important;
+}
+
+.border-b-r-ra-0 {
+    border-bottom-right-radius:0 !important;
+}
 
 
 #company-default-nav .nav-item::after{

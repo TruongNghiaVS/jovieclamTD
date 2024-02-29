@@ -338,7 +338,7 @@ $(document).ready(function() {
                     if (data.sucess == true ) {
                        
                         setTimeout(function(){
-                              window.location.href =  "/dashboard";
+                              window.location.href =  "/recruiter/xac-nhan-email-dang-ky";
                         }, 1000);
                     }
                           

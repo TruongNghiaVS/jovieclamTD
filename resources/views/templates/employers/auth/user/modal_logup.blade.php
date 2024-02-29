@@ -341,7 +341,7 @@ $(document).ready(function() {
                     if (data.sucess == true ) {
                         $("#employer_logup_Modal").modal("hide")
                         setTimeout(function(){
-                                  window.location.href =  "/dashboard";
+                                  window.location.href =  "/recruiter/xac-nhan-email-dang-ky";
                         }, 1000);
                     }
                        

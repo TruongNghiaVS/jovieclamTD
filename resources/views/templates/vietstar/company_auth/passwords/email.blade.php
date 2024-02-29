@@ -29,7 +29,7 @@
                                     <span>Email</span>
                                 </div>
                                 <div class="form-input" bis_skin_checked="1">
-                                    <input type="text" name="email" id="email" class="form-control" placeholder=" Vui lòng nhập thông tin" onkeyup="this.setAttribute('value', this.value);" value="" onfocus="javascript:if(this.value=='Email/Tên đăng nhập') this.value='';">
+                                    <input type="text" name="email" id="email" class="form-control border-t-l-ra-0 border-b-l-ra-0" placeholder=" Vui lòng nhập thông tin" onkeyup="this.setAttribute('value', this.value);" value="" onfocus="javascript:if(this.value=='Email/Tên đăng nhập') this.value='';">
                                     <div class="invalid-feedback email-error">
                                         {{__('Email is required')}}
                                     </div>

@@ -9,46 +9,29 @@
 
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="box-img">
-                    <img src="{{ asset('/') }}admin_assets/quen_mk.jpg" alt="">
+                    <img src="{{ asset('/') }}admin_assets/comfirm.jpg" alt="">
                 </div>
             </div>
             <div class="col-lg-6 col-md-8 col-sm-12" bis_skin_checked="1">
-                <div class="box-info-signup forgot-password" id="form_reset_content" bis_skin_checked="1">
-                    <div class="title" bis_skin_checked="1">
-                        <h2 class="text-primary">Xác nhận email</h2>
-                    </div>
-                    <div class="step-title d-flex align-center" bis_skin_checked="1">
-                        <div class="main-step-title" bis_skin_checked="1">
-                            <h3>Chúng tôi sẽ gửi email hướng dẫn bạn tạo mật khẩu mới</h3>
-                        </div>
-                    </div>
-                    <div class="main-form" bis_skin_checked="1">
-                        <form class="form-horizontal" id="resetPasswordForm_company">
-                            <div class="form-group d-flex" bis_skin_checked="1">
-                                <div class="form-info" bis_skin_checked="1">
-                                    <span>Email</span>
-                                </div>
-                                <div class="form-input" bis_skin_checked="1">
-                                    <input type="text" name="email" id="email" class="form-control" placeholder=" Vui lòng nhập thông tin" onkeyup="this.setAttribute('value', this.value);" value="" onfocus="javascript:if(this.value=='Email/Tên đăng nhập') this.value='';">
-                                    <div class="invalid-feedback email-error">
-                                        {{__('Email is required')}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="user-action" bis_skin_checked="1">
-                                <div class="btn-area" bis_skin_checked="1">
-                                    <button type="button" id="resetPasswordBtn_company" class="btn btn-primary" value="Gửi">Gửi</button>
-                                </div>
-                                <p> <a class="register" href="/employer/register" target="_self">Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
+                    <div class="box-info-signup forgot-password" id="form_reset_content" bis_skin_checked="1"><div class="title" bis_skin_checked="1">
+                                        <h2 class="text-primary">Xác Nhận Email</h2>
+                                    </div><div class="step-title d-flex align-center" bis_skin_checked="1">
+                                        <div class="main-step-title" bis_skin_checked="1">
+                                            <h3>Vui lòng kiểm tra email của bạn và làm theo hướng dẫn để hoàn thành các bước tạo tài khoản</h3>
+                                        </div>
+                                    </div><div class="main-form" bis_skin_checked="1"> <p class="my-3">
+                                                Nếu bạn sử dụng Gmail hoặc công ty bạn đang sử dụng dịch vụ email của Google để đăng ký tài khoản, bạn nên kiểm tra email trong các mục Inbox/Hộp thư đến (Primary, Social, Promotions) và Spam. Hoặc dùng công cụ tìm kiếm email để tìm tên email: support@jobvieclam.com
+                                            </p></div>
+                                            <div class="user-action" bis_skin_checked="1">
 
-                                <div class="text-help" bis_skin_checked="1">
-                                    <p>Nếu bạn cần sự trợ giúp, vui lòng liên hệ:</p>
-                                    <p>Email: <a href="mailto:support@jobvieclam.com" target="_self"> support@jobvieclam.com</a></p>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                                            <p> <a class="register" href="#" data-toggle="modal" data-target="#company_logup_Modal">Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
+
+                                            <div class="text-help" bis_skin_checked="1">
+                                                <p>Nếu bạn cần sự trợ giúp, vui lòng liên hệ:</p>
+                                                <p>Email: <a href="#" target="_blank">support@jobvieclam.com</a></p>
+                                            </div>
+                                        </div>
+                        </div>
             </div>
         </div>
     </div>
