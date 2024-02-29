@@ -4,7 +4,7 @@
         <div class="banner-form ">
             <h2 class="section-title  text-center text-primary">Đâu là giải pháp phù hợp cho doanh nghiệp của bạn?</h2>
             <div class="banner-form__subtitle  text-primary">
-                Hãy để lại thông tin và các chuyên viên tư vấn tuyển dụng của VietStar sẽ liên hệ ngay với bạn
+                Hãy để lại thông tin và các chuyên viên tư vấn tuyển dụng của Jobvieclam sẽ liên hệ ngay với bạn
             </div>
             <div class="row  g-0">
                 <div class="col-lg-6 col-md-12 col-sm-12">
