@@ -794,7 +794,7 @@
     position: relative;
     top: 0;
     left: 0;
-    padding-top: 24.66666%;
+    padding-top: 24%;
     height: 0;
   }
 
@@ -1159,7 +1159,7 @@
     position: relative;
     top: 0;
     left: 0;
-    padding-top: 24.6666%;
+    padding-top: 24%;
     height: 0;
   }
 
@@ -1177,7 +1177,7 @@
   }
 
   .page-heading-tool.job-detail.mobile {
-    display: block;
+    display: none;
   }
 
   .page-heading-tool .search-job #search{
@@ -1185,7 +1185,7 @@
   }
 
   .filters-job-wrapper-mobile {
-    display: block;
+    display: none;
   }
 
   #mobile-sidebarCollapse {

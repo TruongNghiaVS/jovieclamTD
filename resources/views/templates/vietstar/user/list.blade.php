@@ -123,13 +123,13 @@
                         <!-- Pagination Start -->
                         <div class="pagiWrap">
                             <div class="row">
-                                <div class="col-md-5">
+                                <div class="col-12">
                                     <div class="showreslt">
                                         {{__('Showing Pages')}} : {{ $jobAply->firstItem() }} -
                                         {{ $jobAply->lastItem() }} {{__('Total')}} {{ $jobAply->total() }}
                                     </div>
                                 </div>
-                                <div class="col-md-7 text-right">
+                                <div class="col-12 d-flex justify-content-center">
                                     @if(isset($jobAply) && count($jobAply))
                                     {{ $jobAply->appends(request()->query())->links() }}
                                     @endif

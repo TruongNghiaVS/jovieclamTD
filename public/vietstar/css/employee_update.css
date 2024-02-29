@@ -779,6 +779,7 @@ h2.title {
     }
     .job-seekers-page {
         margin-top: 160px;
+        padding-top: 0 !important;
     }
  
 }

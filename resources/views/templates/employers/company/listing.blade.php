@@ -230,7 +230,7 @@
                         </div>
 
                         <a class="company-items__logo shadow" href="#">
-                            <img src="${element.logo ? `{{url('/')}}/company_logos/${element.logo}` : `{{url('/')}}/admin_assets/no-image.png` }" alt="">
+                            <img src="${element.logo ? `{{url('/')}}/company_logos/${element.logo}` : `{{url('/')}}/admin_assets/no-image.jpg` }" alt="">
                         </a>
                       
                         <!-- <div class="company-items__follower">

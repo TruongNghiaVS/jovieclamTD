@@ -46,7 +46,7 @@ $company = Auth::guard('company')->user();
                                 </div>
                                 <div class="section-body" bis_skin_checked="1">
                                     <div class="row" bis_skin_checked="1">
-                                        <div class="col-lg-6 col-md-6 col-sm-12" bis_skin_checked="1">
+                                        <div class="col-lg-4 col-md-6 col-sm-12" bis_skin_checked="1">
                                             <div class="info" bis_skin_checked="1">
                                                 <div class="img-avatar__wrapper">
                                                     {{$company->printCompanyImage()}}

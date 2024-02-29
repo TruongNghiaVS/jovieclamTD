@@ -1,6 +1,6 @@
 
 <div class="table-content">
-    <div class="p-3 mt-2 d-flex justify-content-between ">
+    <div class="tool-table  p-3 mt-2 d-flex justify-content-between ">
             <div class="text-muted">
                 {{ __('Found') }} <span  class="font-weight-bold text-primary">{{ $userApply->count('id') }}</span> {{ __('Candidates') }}
             </div>
@@ -41,7 +41,7 @@
                                 <div class="rounded-circle avatar "
                                     style="width: 50px; height: 50px; flex: 0 0 60px; background-image: url();">
                                     @php
-                                        $candidate_image = $value->user->image ? $value->user->image :"no-image.png";
+                                        $candidate_image = $value->user->image ? $value->user->image :"no-image.jpg";
                                        
                                     @endphp
                                     <div class="image-candidate">

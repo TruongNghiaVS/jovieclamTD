@@ -2924,14 +2924,14 @@ footer .inner-copyright .copyright {
     top: 155px;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 15;
 }
 
 
 
 .filters-job-wrapper-mobile {
     position: fixed;
-    top: 0;
+    top: 76px;
     left: 0;
     bottom: 0;
     right: 0;

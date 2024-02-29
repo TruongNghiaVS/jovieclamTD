@@ -508,10 +508,14 @@ i.fas.fa-heart.iconoutline {
 }
 
 .show-more {
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     margin-top: 20px;
+}
+
+.show-more.show-more-home {
+    margin-top: 0 !important;
 }
 
 .hide {

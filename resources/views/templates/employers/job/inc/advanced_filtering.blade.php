@@ -192,12 +192,12 @@
       <div class="accordion-single-content">
           <div class="form-group" id="city_dd2">
               <select class="form-control form-select" name="city_id2" id="city_id2">
-                  <option value="">Chọn địa điểm </option>
+                  <option  value="">Chọn địa điểm </option>
                   @foreach($cities as $item)
                     @if($item->slug ==$requestParam->query('tinh-thanh',''))
-                    <option selected value="{{$item->slug}}">{{$item->city}}</option>
+                      <option selected value="{{$item->slug}}">{{$item->city}}</option>
                     @else 
-                    <option value="{{$item->slug}}">{{$item->city}}</option>
+                      <option value="{{$item->slug}}">{{$item->city}}</option>
                     @endif
                       
                 @endforeach
@@ -335,8 +335,13 @@ function toggleAccordion() {
   });
 }
 function clearFormFiltercandidates(){
+  console.log(23123);
      // Clear radio buttons for time
-    $("input[name='time']").prop('checked', function() {
+    $("input[name='timeUpdate']").prop('checked', function() {
+        return this.defaultChecked;
+    });
+
+    $("input[name='waycontact']").prop('checked', function() {
         return this.defaultChecked;
     });
 
@@ -357,6 +362,8 @@ function clearFormFiltercandidates(){
     items.forEach(item => {
       item.classList.remove('is-open');
   });
+  console.log(4);
+
 
 }
 
