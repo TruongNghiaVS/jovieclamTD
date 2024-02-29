@@ -166,13 +166,13 @@
         <div class="filters-wrapper">
             <form action="{{route('job.seeker.list')}}" method="get">
                 <div class="row">
-                    <div class="col-sm-6 col-lg-2">
+                    <div class="col-sm-4 col-md-4 col-lg-2">
                         <div class="form-group form-keyword">
                             <input type="search" class="keyword form-control" id="search" name="search"
                                 placeholder="{{__('Skills or Job Titles')}}" autocomplete="off">
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-2">
+                    <div class="col-sm-4 col-md-4 col-lg-2">
                         <div class="form-group form-select-chosen" id="functional_area_dd">
                             <select class="form-control form-select" name="functional_area_id" id="functional_area">
                                 <option value="">Chọn phòng ban</option>
@@ -182,7 +182,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-2">
+                    <div class="col-sm-4  col-md-4 col-lg-2">
                         <div class="form-group form-select-chosen" id="city_dd2">
                             <select class="form-control form-select" name="city_id" id="city">
                                 <option value="">Chọn địa điểm</option>

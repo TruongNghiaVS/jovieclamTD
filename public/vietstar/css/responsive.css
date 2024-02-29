@@ -1177,7 +1177,7 @@
   }
 
   .page-heading-tool.job-detail.mobile {
-    display: block;
+    display: none;
   }
 
   .page-heading-tool .search-job #search{
@@ -1185,7 +1185,7 @@
   }
 
   .filters-job-wrapper-mobile {
-    display: block;
+    display: none;
   }
 
   #mobile-sidebarCollapse {

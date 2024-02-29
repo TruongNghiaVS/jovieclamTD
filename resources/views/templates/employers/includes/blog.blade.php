@@ -99,7 +99,7 @@ $blogs = $data["blogs"]->items();
                             @if($blog-> image) 
                             <img src="{{url('/')}}/uploads/blogs/{{ $blog-> image }}" alt="{{$blog->heading}}">
                             @else 
-                            <img src="{{ asset('/') }}/admin_assets/no-image.png" alt="{{ $blog->heading}}">
+                            <img src="{{ asset('/') }}/admin_assets/no-image.jpg" alt="{{ $blog->heading}}">
                             @endif
                         </a>
                         <div class="figcaption">

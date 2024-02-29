@@ -214,7 +214,7 @@ class User extends Authenticatable
 
         $image = (string)$this->image;
         $image = (!empty($image)) ? $image : 'no-no-image.gif';
-        return \ImgUploader::print_image("user_images/$image", $width, $height, '/admin_assets/no-image.png', $this->getName());
+        return \ImgUploader::print_image("user_images/$image", $width, $height, '/admin_assets/no-image.jpg', $this->getName());
     }
 	
 	public function printUserCoverImage($width = 0, $height = 0)
@@ -227,7 +227,7 @@ class User extends Authenticatable
     public function avatar()
     { 
      
-        return \ImgUploader::print_image_src("user_images/$this->image", '/admin_assets/no-image.png', $this->name);
+        return \ImgUploader::print_image_src("user_images/$this->image", '/admin_assets/no-image.jpg', $this->name);
     }
 
     public function coverImage()

@@ -5,7 +5,7 @@
                 @if($user->logo)
                 <img src="{{ $user->avatar() }}" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="vietstar">
                 @else
-                <img src="{{ $user->avatar() }}/no-image.png" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="vietstar">
+                <img src="{{ $user->avatar() }}/no-image.jpg" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="vietstar">
 
                 @endif
             </div>

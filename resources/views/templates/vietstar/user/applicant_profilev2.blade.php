@@ -40,7 +40,7 @@ if (Auth::guard('company')->user()) {
                     @if($user->logo)
                     <img src="{{ $user->avatar() }}" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="employers">
                     @else
-                    <img src="/admin_assets/no-image.png" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="employers">
+                    <img src="/admin_assets/no-image.jpg" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="employers">
                     @endif
                   </div>
                   <ul class="info-list">
@@ -257,7 +257,7 @@ if (Auth::guard('company')->user()) {
         @if($user->logo)
         <img src="{{ $user->avatar() }}" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="employers">
         @else
-        <img src="/admin_assets/no-image.png" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="employers">
+        <img src="/admin_assets/no-image.jpg" class="img-bio rounded mx-md-auto mt-md-4 d-block" alt="employers">
         @endif
       </div>
       <div class="col-md-10">

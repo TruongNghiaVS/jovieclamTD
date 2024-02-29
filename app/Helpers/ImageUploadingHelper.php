@@ -121,7 +121,7 @@ class ImageUploadingHelper
         return $fileName;
     }
 
-    public static function print_image($image_path, $width = 0, $height = 0, $default_image = '/admin_assets/no-image.png', $alt_title_txt = '')
+    public static function print_image($image_path, $width = 0, $height = 0, $default_image = '/admin_assets/no-image.jpg', $alt_title_txt = '')
     {
         echo self::get_image($image_path, $width, $height, $default_image, $alt_title_txt);
     }
@@ -131,7 +131,7 @@ class ImageUploadingHelper
         echo self::get_doc($doc_path, $doc_title, $alt_title_txt);
     }
 
-    public static function get_image($image_path, $width = 0, $height = 0, $default_image = '/admin_assets/no-image.png', $alt_title_txt = '')
+    public static function get_image($image_path, $width = 0, $height = 0, $default_image = '/admin_assets/no-image.jpg', $alt_title_txt = '')
     {
 		$dimensions = '';
         if ($width > 0 && $height > 0) {
@@ -145,7 +145,7 @@ class ImageUploadingHelper
         return '<img src="' . $image_src . '" ' . $dimensions . ' alt="' . $alt_title_txt . '" title="' . $alt_title_txt . '">';
     }
 	
-	public static function print_image_src($image_path, $width = 0, $height = 0, $default_image = '/admin_assets/no-image.png', $alt_title_txt = '')
+	public static function print_image_src($image_path, $width = 0, $height = 0, $default_image = '/admin_assets/no-image.jpg', $alt_title_txt = '')
     {
         
         if (!empty($image_path) && file_exists(ImageUploadingHelper::real_public_path() . $image_path)) {
@@ -164,7 +164,7 @@ class ImageUploadingHelper
         }
     }
 
-    public static function print_image_relative($image_path, $width = 0, $height = 0, $default_image = '/admin_assets/no-image.png', $alt_title_txt = '')
+    public static function print_image_relative($image_path, $width = 0, $height = 0, $default_image = '/admin_assets/no-image.jpg', $alt_title_txt = '')
     {
         $dimensions = '';
         if ($width > 0 && $height > 0) {

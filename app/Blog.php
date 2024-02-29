@@ -13,6 +13,6 @@ class Blog extends Model
     {
         $logo = (string)$this->image;
         $logo = (!empty($logo)) ? $logo : 'no-no-image.gif';
-        return \ImgUploader::print_image("uploads/blogs/$logo", $width, $height, '/admin_assets/no-image.png', $this->image);
+        return \ImgUploader::print_image("uploads/blogs/$logo", $width, $height, '/admin_assets/no-image.jpg', $this->image);
     }
 }
