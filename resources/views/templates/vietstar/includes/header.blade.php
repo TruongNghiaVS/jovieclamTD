@@ -1,7 +1,7 @@
 @include('templates.vietstar.auth.user.modal_login')
 @include('templates.vietstar.auth.user.modal_logup')
 <!-- Navigation bar -->
-<nav class="navbar navbar-expand-xl navbar-light bg-light shadow-sm fixed-top" id="main-nav">
+<nav class="navbar navbar-expand-xl navbar-light bg-light border-bottom fixed-top" id="main-nav">
     <!-- <div class="container-navbar"> -->
     <div class="container nav">
         <a class="navbar-brand" href="{{url('/')}}">
