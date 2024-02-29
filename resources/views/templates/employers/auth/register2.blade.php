@@ -7,12 +7,12 @@
     <div class="container">
         <div class="row justify-content-md-center">
 
-            <div class="col-lg-6 col-md-4 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="box-img">
                     <img src="{{ asset('/') }}admin_assets/login.jpg" alt="">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-8 col-sm-12" bis_skin_checked="1">
+            <div class="col-lg-6 col-md-6 col-sm-12" bis_skin_checked="1">
                 <div class="box-info-signup forgot-password" id="logup" bis_skin_checked="1">
                     <div class="title" bis_skin_checked="1">
                         <h2 class="text-primary"> {{__('Register')}}</h2>

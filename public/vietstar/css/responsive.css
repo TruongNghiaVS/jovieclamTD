@@ -164,7 +164,9 @@
   .section-jobs-by-industry .swiper-button-prev {
     left: 0;
   }
-
+  .box-info-signup {
+    margin-left: 0 !important;
+  }
 
   /************************************************
 
@@ -787,7 +789,10 @@
     color: white !important;
   }
 
-  
+   .box-info-signup {
+    margin-left: 0 !important;
+  }
+
 
   .header-bar {
     margin-bottom: 0;
