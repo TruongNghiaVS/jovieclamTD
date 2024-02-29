@@ -1,6 +1,6 @@
 
 <!-- SEARCH STICKY -->
-<div class="page-heading-tool job-detail ">
+<div class="page-heading-tool job-detail border-bottom ">
     <div class="container">
 
   
@@ -62,7 +62,7 @@
 
 <!-- SEARCH STICKY Mobile-->
 
-<div class="page-heading-tool job-detail mobile">
+<div class="page-heading-tool job-detail border-bottom mobile">
     <div class="container">
         <div class="tool-wrapper">
             <div class="search-job">

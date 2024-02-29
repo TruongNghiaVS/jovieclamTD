@@ -514,6 +514,10 @@ i.fas.fa-heart.iconoutline {
     margin-top: 20px;
 }
 
+.show-more.show-more-home {
+    margin-top: 0 !important;
+}
+
 .hide {
     display: none;
 }
