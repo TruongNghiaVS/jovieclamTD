@@ -313,16 +313,12 @@ $(document).ready(function() {
             beforeSend: showSpinner(),
             statusCode: {
                 202 :  function(responseObject, textStatus, jqXHR) {
-                  
-
-                        console.log(responseObject.error);
                     if(responseObject.error) {
                         responseObject.error.forEach(err => {
                             $(`#fromEmployerRegister .invalid-feedback.${err.key}-error`).text(err.textError)
                             $(`#fromEmployerRegister .invalid-feedback.${err.key}-error`).addClass('has-error')
                             $(`#fromEmployerRegister input[name*='${err.key}']`).addClass('has-error')
                             
-                            // $(`#fromEmployerRegister .invalid-feedback.${err.key}-error`).append(err.textError)
                         
                         }) 
                         hideSpinner();
@@ -331,14 +327,12 @@ $(document).ready(function() {
                 404: function(responseObject, textStatus, jqXHR) {
                     hideSpinner();
 
-                    // No content found (404)
-                    // This code will be executed if the server returns a 404 response
+               
                 },
                 503: function(responseObject, textStatus, errorThrown) {
                     hideSpinner();
 
-                    // Service Unavailable (503)
-                    // This code will be executed if the server returns a 503 response
+             
                 }           
                 }
                 })

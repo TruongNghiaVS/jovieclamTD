@@ -128,7 +128,10 @@ use RegistersUsers;
         return $this->registered($request, $company) ?: redirect($this->redirectPath());
     }
 
-
+    public function VerifyEmail()
+    {
+        return view(config('app.THEME_PATH').'.company.register.verifyEmail');
+    }
 
     public function getVerification(Request $request, $token)
     {

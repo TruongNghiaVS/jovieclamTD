@@ -11,6 +11,7 @@ Route::prefix('recruiter')->name('company.')->group(function () {
     Route::post('/resetPassword', 'Company\Auth\ResetPasswordController@ResetPassword');
     Route::post('/requestResetPassword', 'Company\Auth\ForgotPasswordController@RequestResetPassword');
     Route::get('/password/reset', 'Company\Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+    Route::get('/xac-nhan-email-dang-ky', 'Company\Auth\RegisterController@VerifyEmail')->name('VerifyEmail');
     Route::post('/password/email', 'Company\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
     Route::get('/password/reset/{token}', 'Company\Auth\ResetPasswordController@showResetForm')->name('password.reset');
     Route::post('/password/reset', 'Company\Auth\ResetPasswordController@reset');
