@@ -1762,7 +1762,8 @@ footer .footer-widget .widget-title {
 
 footer .footer-widget.footer-widget-contact .contact-detail {
     list-style-type: none;
-    padding-left: 0
+    padding-left: 0;
+    margin-bottom: unset;
 }
 
 footer .footer-widget.footer-widget-contact .contact-detail li {
@@ -4906,7 +4907,7 @@ div#industry_id_chosen {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding-top: 16px
+ 
     }
 
     footer .inner-copyright .copyright {
