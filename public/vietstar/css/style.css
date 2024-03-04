@@ -2215,9 +2215,9 @@ h3.seekertxt span {
 .figcaption__home {
 	padding: 10px;
 	min-height: 120px;
-
 	display: flex;
 	width: 100%;
+	overflow: hidden;
 }
 
 
