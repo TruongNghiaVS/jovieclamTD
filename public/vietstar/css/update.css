@@ -4912,7 +4912,8 @@ div#industry_id_chosen {
 
     footer .inner-copyright .copyright {
         text-align: center;
-        margin-bottom: 8px;
+        margin-top: 8px;
+     
         padding: 0
     }
 
