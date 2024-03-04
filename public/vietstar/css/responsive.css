@@ -668,6 +668,16 @@
     .card-body {
       padding: 0.5rem;
     }
+    .tool-table {
+        flex-direction: column;
+
+    } 
+    .text-muted {
+      margin-left: 10px;
+    }
+    .CV-filter-box {
+      margin-top: 1rem;
+    }
 
     button#mobile-sidebarCollapse {
       display: block;

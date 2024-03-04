@@ -4,7 +4,7 @@
             <div class="text-muted">
                 {{ __('Found') }} <span  class="font-weight-bold text-primary">{{ $userApply->count('id') }}</span> {{ __('Candidates') }}
             </div>
-            <div class="d-flex justify-content-between">
+            <div class="CV-filter-box d-flex justify-content-between">
                 <div class="custom-control custom-radio custom-control-inline mr-2">
                     <input type="radio" id="quick-filter-1" name="quick-filter" class="custom-control-input" {{ $log_seen != 'unseen' ? 'checked' : '' }}>
                     <label class="custom-control-label" for="quick-filter-1">{{ __('Show all CV') }}</label>

@@ -6,7 +6,7 @@
         <form action="{{ route('application.manager') }}" method="get" class="form-search">
             <div class="row filter-cv" style="margin-bottom: 00px">
                 <div class="col-sm-12 col-md-4 col-lg-6">
-                    <div class="form-group">
+                    <div class="form-group mb-0">
                         <label for="from_to">Từ Khóa</label>
                         <input type="text" name="name" 
                         value="{{ isset($request['name']) ? $request['name'] : '' }}"
@@ -16,7 +16,7 @@
                 </div>
                
                 <div class="col-md-3 col-lg-3 col-sm-12">
-                                        <div class="form-group form-group-datepicker " >
+                                        <div class="form-group form-group-datepicker mb-0" >
                                             <label for="from_to">Từ</label>
                                             <input type="date" value="{{ isset($request['from']) ? $request['from'] : '' }}"  class=" form-control " name="from" id="from_to"
                                                 placeholder="{{ __('Start date-End date') }}" />
@@ -24,7 +24,7 @@
                                     </div>
 
                                     <div class="col-md-3 col-lg-3 col-sm-12">
-                                        <div class="form-group form-group-datepicker "  >
+                                        <div class="form-group form-group-datepicker mb-0"  >
                                             <label for="from_to2">Đến</label>
                                             <input type="date" class=" form-control " value="{{ isset($request['to']) ? $request['to'] : '' }}"  name="to" id="from_to2"
                                                 placeholder="{{ __('Start date-End date') }}" />

@@ -676,8 +676,8 @@
             @elseif(Auth::guard('company')->user())
                 @if(Auth::guard('company')->user())
                 <li class="openmyacount">
-                    <div class="d-flex w-100">
-                        <span class="side-bar-content">Thông Tin Tài Khoản</span>
+                    <div class="btn  btn-primary btn-sm  w-100">
+                        <span class="side-bar-content text-white"><i class="fas fa-arrow-circle-right text-white"></i> Thông Tin Tài Khoản</span>
                     </div>
 
                 </li>
@@ -760,6 +760,9 @@
 
             // remove sidebar item
             $('.sidebar-bottom').removeClass('active');
+
+            $('.openmyacount').addClass('disabled');
+
            
         });
 
@@ -770,6 +773,8 @@
             $('.sidebar-user-nav').removeClass('active');
             $('.back-menu-normal').removeClass('active');
             $('.sidebar-bottom').addClass('active');
+            $('.openmyacount').removeClass('disabled');
+
         });
     });
 </script>

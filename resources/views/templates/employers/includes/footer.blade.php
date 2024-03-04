@@ -166,7 +166,7 @@
             <div class="term-link">
                 <span class="fs-16px pe-2">All Rights Reserved</span>
                 <div class="d-inline-block "><a class="fs-16px px-2" href="/dieu-khoan-su-dung-nha-tuyen-dung">{{__('Terms Of Use')}}</a></div>
-                <div class="d-inline-block border-start"><a class="fs-16px ps-2" href="/chinh-sach-bao-mat-thong-tin">{{__('Policies')}}</a></div>
+                <div class="d-inline-block"><a class="fs-16px ps-2" href="/chinh-sach-bao-mat-thong-tin">{{__('Policies')}}</a></div>
             </div>
         </div>
     </div>
