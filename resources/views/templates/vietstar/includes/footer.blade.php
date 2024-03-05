@@ -1,4 +1,4 @@
-<footer class="bg-white text-lg-start text-muted border-top">
+<footer class="bg-white text-lg-start border-top">
     <section class="links">
         <div class="container">
             <div class=" text-md-start">
