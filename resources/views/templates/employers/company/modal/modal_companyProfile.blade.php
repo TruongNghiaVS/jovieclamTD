@@ -133,13 +133,14 @@ $company = Auth::guard('company')->user();
                                             </li>
                                             <li>
                                                 <p> <strong>{{__('Fax')}}:</strong></p>
-                                                <p>    {{ isset($company->fax) ? $company->fax : old('fax')}} </p>
+                                                <p>    <a href="tel:{{ isset($company->fax) ? $company->fax : old('fax')}}">{{ isset($company->fax) ? $company->fax : old('fax')}}</a> </p>
                                             </li>
                                             
                                             
                                             <li>
                                                 <p> <strong>{{__('Mobile Number')}}:</strong></p>
-                                                <p>   {{ isset($company->phone) ? $company->phone : old('phone')}}</p>
+                                                <p>    <a href="tel:{{ isset($company->phone) ? $company->phone : old('phone')}}">{{ isset($company->phone) ? $company->phone : old('phone')}}</a>
+                                                </p>
                                             </li>
 
                                             <li>

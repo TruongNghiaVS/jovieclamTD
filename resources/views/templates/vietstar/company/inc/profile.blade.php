@@ -403,7 +403,9 @@
                                     </strong>
                                 </td>
                                 <td class="table_value">
-                                    {{ isset($company->fax) ? $company->fax : old('fax')}}
+                                    <a href="tel:{{ isset($company->fax) ? $company->fax : old('fax')}}">{{ isset($company->fax) ? $company->fax : old('fax')}}</a>
+                                    
+                                    
                                 </td>
                             </tr>
 
@@ -414,7 +416,7 @@
                                     </strong>
                                 </td>
                                 <td class="table_value">
-                                    {{ isset($company->phone) ? $company->phone : old('phone')}}
+                                    <a href="tel:{{ isset($company->phone) ? $company->phone : old('phone')}}">{{ isset($company->phone) ? $company->phone : old('phone')}}</a>
                                 </td>
                             </tr>
 
