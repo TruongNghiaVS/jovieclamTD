@@ -186,7 +186,7 @@
                                 <div class="col-sm-6 col-md-6 col-xl-3" bis_skin_checked="1">
                                     <div class="form-group form-checkbox" bis_skin_checked="1">
                                         <input type="checkbox" class="" id="benefit_id_2" name="benefit_id[]" value="2" >
-                                        <label for="benefit_id_2"> <em class="fa fa-usd"></em>Đi lại</label>
+                                        <label for="benefit_id_2"> <i class="fas fa-bus"></i>Đi lại</label>
                                     </div>
                                 </div>
                           
@@ -407,7 +407,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-center">
+        <div class="group-btn-create-job col-md-12 d-flex justify-content-center">
             <button id="clearBtn" class="btn btn-outline m-2" type="button">{{__('Reset form')}} </button>
 
             <button id="scrollBtn" class="btn btn-croll-top m-2" type="button">{{__('Review recruitment information')}} </button>

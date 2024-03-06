@@ -696,7 +696,9 @@
     .slider-hero-banner .bg-slider.is-pc-sm {
       display: none
     }
-    
+    .group-btn-create-job {
+      flex-direction: column-reverse;
+    }
     
     .slider-hero-banner .bg-slider.is-sp {
       display: block
