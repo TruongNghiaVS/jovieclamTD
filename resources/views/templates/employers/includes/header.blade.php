@@ -113,11 +113,11 @@
                 </ul>
             
             </div>
-            @if(Auth::guard('company')->check())
-            <a href="{{route('post.job')}}" class="btn btn-primary btn-post-a-job">{{__('Post a job')}}</a>
+            @if(Auth::guard('company')->check() && Auth::guard('company')->user()->is_active == 1 )
+                <a href="{{route('post.job')}}" class="btn btn-primary btn-post-a-job">{{__('Post a job')}}</a>
             @endif
           
-            @if(Auth::guard('company')->check())
+            @if(Auth::guard('company')->check() && Auth::guard('company')->user()->is_active == 1)
 
             <!-- user-badge -->
          
@@ -127,6 +127,8 @@
                     <a class="dropdown_menu__link" href="{{route('company.home')}}">
                         <span >
                         <i class="fa-solid fa-user fs-18px mx-2"></i>
+
+                        
                         {{ Auth::guard('company')->user()->name ? Auth::guard('company')->user()->name :"" }}
 
                       
@@ -170,7 +172,7 @@
 
 
 
-                @if(!Auth::guard('company')->check())
+                @if(!Auth::guard('company')->check() || !Auth::guard('company')->user()->is_active == 1)
                 <a class="nav-link login-link" data-toggle="modal" data-target="#employer_login_Modal">{{__('Log in')}} / {{__('Đăng Ký')}} </a>
                 @endif
 
