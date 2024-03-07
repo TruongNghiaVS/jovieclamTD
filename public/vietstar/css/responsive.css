@@ -685,7 +685,30 @@
     #company-default-nav{
       display: none;
     }
-  
+    .culture-img {
+      width: 100% !important;
+    }
+    .culture-section .container {
+      padding: 30px 20px !important;
+    }
+    .about_us_content .content_title {
+        padding-left: unset !important;
+        padding: 0 10px !important;
+    }
+    .about_us_content .content_title .title {
+      margin-top: 25px;
+      text-align: center;
+    }
+    .about-us-section .about_us_content {
+      padding: 10px !important;
+    }
+    .content_title .text {
+      padding-right: unset !important;
+    }
+    .content_title .text p {
+      padding-right: unset !important;
+    } 
+
     #company-default-nav{
       display: none;
     }
