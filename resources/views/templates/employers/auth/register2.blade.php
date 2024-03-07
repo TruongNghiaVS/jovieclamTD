@@ -3,6 +3,11 @@
 <!-- Header start -->
 @include('templates.employers.includes.header')
 <!-- Header end -->
+
+<!-- Dashboard menu start -->
+@include('templates.employers.includes.mobile_dashboard_menu')
+<!-- Dashboard menu end -->
+
 <div class="second-login-section cb-section">
     <div class="container">
         <div class="row justify-content-md-center">

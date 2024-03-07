@@ -708,7 +708,14 @@
     .content_title .text p {
       padding-right: unset !important;
     } 
+    .box-info-signup .title h2 {
+      margin-bottom: 20px !important;
+      margin-top: 20px !important;
 
+    }
+    .box-info-signup{
+      padding: 10px;
+    }
     #company-default-nav{
       display: none;
     }

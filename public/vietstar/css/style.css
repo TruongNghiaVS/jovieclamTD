@@ -2188,6 +2188,7 @@ h3.seekertxt span {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	border-radius: 5px;
 }
 
 .figure-images {

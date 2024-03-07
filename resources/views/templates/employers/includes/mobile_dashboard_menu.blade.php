@@ -665,11 +665,11 @@
         
     
                 <li>
-                    <div class="d-flex gap-10 my-2 group-button">
-                        <a class="nav-link login_link btn btn-primary login-btn" data-toggle="modal" data-target="#employer_login_Modal" >{{__('Log in')}} / {{__('Đăng Ký')}} </a>
+                    <div class="my-2 group-button">
+                        <a class="nav-link login_link btn btn-primary login-btn btn-sm" data-toggle="modal" data-target="#employer_login_Modal" >{{__('Log in')}} / {{__('Đăng Ký')}} </a>
                 
                         <!-- <a href="{{url('/employers')}}" class="btn btn-primary">Dành cho Nhà tuyển dụng</a> -->
-                             <a href="http://jobvieclam.com" class="btn btn-primary">Dành Cho Ứng Viên</a>
+                             <a href="http://jobvieclam.com" class="btn btn-primary btn-sm">Dành Cho Ứng Viên</a>
 
                         {{--<a class="btn btn-primary my-2" href="{{route('register')}}" class="nav-link
                         register">{{__('Đăng Ký')}}</a> --}}
@@ -687,11 +687,11 @@
                 @endif
     
                 <li>
-                    <div class="d-flex gap-10 my-2 group-button">
+                    <div class="my-2 group-button">
                        
                 
                         <!-- <a href="{{url('/employers')}}" class="btn btn-primary">Dành cho Nhà tuyển dụng</a> -->
-                             <a href="http://jobvieclam.com" class="btn btn-primary">Dành Cho Ứng Viên</a>
+                             <a href="http://jobvieclam.com" class="btn btn-primary btn-sm">Dành Cho Ứng Viên</a>
 
                         
                     </div>
