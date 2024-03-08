@@ -373,7 +373,7 @@ $company = $job->getCompany();
                                                     <div class="icon-salary icon-size-30"></div>
                                                 </div>
                                                 <div class="require-card__item-content">
-                                                    <p>Mức lương trung bình</p>
+                                                    <p>Mức Lương Trung Bình</p>
                                                     <strong>NA</strong>
                                                 </div>
                                             </div>
