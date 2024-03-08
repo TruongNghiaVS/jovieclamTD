@@ -27,7 +27,7 @@
                                 <div class="caption">
                                     <h3 class="title"><a href="javascript: void(0)">Đăng tin tìm việc</a></h3>
                                     <div class="content">
-                                        <p style="font-weight: bold">Tìm việc nhanh chóng - Phát triển sự nghiệp</p>
+                                        <p style="font-weight: bold">Tìm Việc Nhanh Chóng - Phát Triển Sự Nghiệp</p>
                                         <p>
                                             Người tìm việc dễ dàng tạo hồ sơ năng lực để nhà tuyển dụng Tìm Kiếm. Đồng thời, người tìm việc có thể trực tiếp Tìm Kiếm công việc phù hợp và gửi hồ sơ năng lực đến nhà tuyển dụng.
                                         </p>
@@ -46,7 +46,7 @@
                                 <div class="caption">
                                     <h3 class="title"><a href="javascript: void(0)">Giới thiệu Ứng Viên</a></h3>
                                     <div class="content">
-                                        <p style="font-weight: bold">Đa dạng nguồn việc - Ưng viên phong phú</p>
+                                        <p style="font-weight: bold">Đa Dạng Nguồn Việc - Ưng Viên Phong Phú</p>
 
                                         <p>Jobvieclam cho phép người tìm việc và nhà tuyển dụng giới thiệu thông tin việc làm đến các ứng viên có nhu cầu tìm việc và người giới thiệu sẽ nhận được các chính sách hấp dẫn.</p>
                                     </div>
@@ -64,7 +64,7 @@
                                 <div class="caption">
                                     <h3 class="title"><a href="javascript: void(0)">Đăng tin tuyển dụng</a></h3>
                                     <div class="content">
-                                        <p><strong>Hiển thị việc làm - Tiếp cận nhân tài</strong></p>
+                                        <p><strong>Hiển Thị Việc Làm - Tiếp Cận Nhân Tài</strong></p>
 
                                         <p>Nhà tuyển dụng dễ dàng đăng tin tuyển dụng trên website Jobvieclam trong 30 ngày. Đồng thời, tin tuyển dụng sẽ được đăng trên fanpage Jobvieclam, giúp rút ngắn thời gian Tìm Kiếm ứng viên.</p>
                                     </div>
@@ -83,7 +83,7 @@
                                 <div class="caption">
                                     <h3 class="title"><a href="javascript: void(0)">Cung ứng nhân sự (Headhunt)</a></h3>
                                     <div class="content">
-                                        <p style="font-weight: bold">Giải pháp toàn diện - Tiết kiệm thời gian</p>
+                                        <p style="font-weight: bold">Giải Pháp Toàn Diện - Tiết Kiệm Thời Gian</p>
 
                                         <p>Giải pháp cung ứng nhân sự giúp nhà tuyển dụng nhanh chóng Tìm Kiếm được ứng viên với chi phí tốt nhất và thời hạn bảo hành lâu dài.</p>
                                     </div>
@@ -102,7 +102,7 @@
                                 <div class="caption">
                                     <h3 class="title"><a href="javascript: void(0)">Tìm Hồ Sơ Ứng Viên</a></h3>
                                     <div class="content">
-                                        <p><strong>Sàng lọc ứng viên - Chọn đúng nhân tài</strong></p>
+                                        <p><strong>Sàng Lọc Ứng Viên - Chọn Đúng Nhân Tài</strong></p>
 
                                         <p>Nhà tuyển dụng có cơ hội Tìm Kiếm hàng trăm ngàn ứng viên tiềm năng, đáp ứng yêu cầu về kinh nghiệm, chuyên môn và các kỹ năng mềm.</p>
                                     </div>
@@ -120,7 +120,7 @@
                                 <div class="caption">
                                     <h3 class="title"><a href="javascript: void(0)">Quảng cáo tuyển dụng</a></h3>
                                     <div class="content">
-                                        <p><strong>Tăng lượt tiếp cận - Xây dựng niềm tin</strong></p>
+                                        <p><strong>Tăng Lượt Tiếp Cận - Xây Dựng Niềm Tin</strong></p>
 
                                         <p>Thông tin tuyển dụng được quảng bá trên nhiều nền tảng kỹ thuật số, giúp người tìm việc dễ dàng tiếp cận thông tin tuyển dụng. Đồng thời, nâng cao uy tín của nhà tuyển dụng.
                                         </p>
