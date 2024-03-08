@@ -168,6 +168,10 @@
     #mobile-sidebar ul li a i {
         font-size: 20px;
         color: var(--text-main);
+        width: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 
