@@ -13,7 +13,7 @@
                                                     }
                                                     if($from < 1 && $to < 1)
                                                     {
-                                                    return  'Thương lượng';
+                                                    return  'Thương Lượng';
 
                                                     }
                                                     if($from >0)

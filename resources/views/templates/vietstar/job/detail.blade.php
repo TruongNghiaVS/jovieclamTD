@@ -475,7 +475,7 @@ $company = $job->getCompany();
                                     <!--rank-salary and place Start-->
                                     <div class="info-item box-meta" bis_skin_checked="1">
                                         <div class="rank-salary" bis_skin_checked="1">
-                                            <span class="fas fa-money-bill"></span> Thương lượng
+                                            <span class="fas fa-money-bill"></span> Thương Lượng
                                         </div>
                                         <div class="navbar__link-separator" bis_skin_checked="1"></div>
                                         <!--meta-city-->
@@ -560,7 +560,7 @@ $company = $job->getCompany();
                                     <!--rank-salary and place Start-->
                                     <div class="info-item box-meta" bis_skin_checked="1">
                                         <div class="rank-salary" bis_skin_checked="1">
-                                            <span class="fas fa-money-bill"></span> Thương lượng
+                                            <span class="fas fa-money-bill"></span> Thương Lượng
                                         </div>
                                         <div class="navbar__link-separator" bis_skin_checked="1"></div>
                                         <!--meta-city-->
