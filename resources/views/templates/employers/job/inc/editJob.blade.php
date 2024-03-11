@@ -56,7 +56,7 @@ else
                     <div lass="col-md-6 col-lg-6 col-sm-12">
                             
             
-                            <label for="City" class="font-weight-bold fs-18px my-2">Địa điểm làm việc  <span class="required">*</span> </label>
+                            <label for="City" class="font-weight-bold fs-18px my-2">Địa Điểm Làm Việc<span class="required">*</span> </label>
                     
                   
                           
