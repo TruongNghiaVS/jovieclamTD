@@ -67,7 +67,7 @@
                                         <th>Tiêu Đề</th>
                                         <th>Nội Dung</th>
 
-                                        <th>Cập nhật lần cuối</th>
+                                        <th>Cập Nhật Lần Cuối</th>
                                         <th>{{__('Action')}}</th>
                                     </tr>
                                     {{ csrf_field() }}
@@ -222,7 +222,7 @@
                             enctype="multipart/form-data">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Cập nhật Blog</h4>
+                                <h4 class="modal-title">Cập Nhật Blog</h4>
 
                             </div>
                             <div class="modal-body">

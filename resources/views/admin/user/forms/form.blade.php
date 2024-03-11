@@ -234,7 +234,7 @@
         </div>
         {!! APFrmErrHelp::showErrors($errors, 'verified') !!}
     </div> 
-    {!! Form::button('Cập nhật thông tin ', array('class'=>'btn btn-large btn-primary', 'type'=>'submit')) !!}
+    {!! Form::button('Cập Nhật Thông Tin ', array('class'=>'btn btn-large btn-primary', 'type'=>'submit')) !!}
 </div>
 {!! Form::close() !!}
 @push('css')

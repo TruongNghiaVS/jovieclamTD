@@ -195,7 +195,7 @@
                 </div>
 
 
-            <button class="btn btn-primary w-100" type="button" id="submit_company_info">Cập nhật</button>
+            <button class="btn btn-primary w-100" type="button" id="submit_company_info">Cập Nhật</button>
           </div>
         </div>
 

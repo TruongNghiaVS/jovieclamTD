@@ -89,7 +89,7 @@ if (Auth::guard('company')->user()) {
                 <li>
                   @php
                     $education = $user->profileEducation()->first();
-                    $educationText = 'Chưa cập nhật';
+                    $educationText = 'Chưa Cập Nhật';
                     if($education)
                     {
                       $item = $education->getDegreeLevel();
@@ -109,7 +109,7 @@ if (Auth::guard('company')->user()) {
                   @if($user->current_salary > 0 )
                     <p>{{number_format($user->current_salary)}}</p>
                   @else 
-                    <p>Chưa cập nhật</p>
+                    <p>Chưa Cập Nhật</p>
                   @endif
                  
                 </li>
@@ -119,7 +119,7 @@ if (Auth::guard('company')->user()) {
                   @if($user->expected_salary > 0 )
                     <p>{{number_format($user->expected_salary)}}</p>
                   @else 
-                  <p>Chưa cập nhật</p>
+                  <p>Chưa Cập Nhật</p>
 
                   @endif
                  
@@ -136,15 +136,15 @@ if (Auth::guard('company')->user()) {
                   <p>{{$user->street_address}}</p>
                 </li>
                 <li>
-                  <p> <strong>Hình thức:</strong></p>
+                  <p> <strong>Hình Thức:</strong></p>
                   <p>Nhân viên chính thức</p>
                 </li>
                 <li>
-                  <p> <strong>Ngày tạo:</strong></p>
+                  <p> <strong>Ngày Tạo:</strong></p>
                   <p>{{ date('d-m-Y', strtotime($user->created_at)) }}</p>
                 </li>
                 <li>
-                  <p> <strong>Cập nhật:</strong></p>
+                  <p> <strong>Cập Nhật:</strong></p>
                   <p>{{ date('d-m-Y', strtotime($user->updated_at)) }}</p>
                 </li>
               </ul>

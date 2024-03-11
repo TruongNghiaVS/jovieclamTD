@@ -8,7 +8,7 @@
         <div class="col-md-12">
             <div class="portlet light portlet-fit bordered">
                 <div class="portlet-title">
-                    <div class="caption"> <i class=" icon-layers font-green"></i> <span class="caption-subject font-green bold uppercase">Danh sách Đào tạo</span> </div>
+                    <div class="caption"> <i class=" icon-layers font-green"></i> <span class="caption-subject font-green bold uppercase">Danh Sách Đào Tạo</span> </div>
                 </div>
                 <div class="portlet-body"><div class="row" id="education_div"></div></div>
             </div>

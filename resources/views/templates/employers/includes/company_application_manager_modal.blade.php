@@ -53,7 +53,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12" >
                                 <div class="mt-4">
-                                    <button type="submit" class="btn btn-primary mx-2" onclick="updateReviewApplication" id="btnUpdateReviewApplication">Cập nhật</button>
+                                    <button type="submit" class="btn btn-primary mx-2" onclick="updateReviewApplication" id="btnUpdateReviewApplication">Cập Nhật</button>
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ bỏ</button>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ bỏ</button>
-                    <button type="submit" class="btn btn-primary" id="btnUpdateReviewApplication">Cập nhật</button>
+                    <button type="submit" class="btn btn-primary" id="btnUpdateReviewApplication">Cập Nhật</button>
                 </div>
             </div>
         </form>

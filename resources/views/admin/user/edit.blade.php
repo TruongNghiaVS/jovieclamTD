@@ -28,12 +28,12 @@
                     <div class="portlet-body form">          
                         <ul class="nav nav-tabs">              
                             <li class="active"> <a href="#Details" data-toggle="tab" aria-expanded="false">{{__('Details')}}</a> </li>
-                            <li><a href="#Summary" data-toggle="tab" aria-expanded="false">Tóm tắt</a></li>
+                            <li><a href="#Summary" data-toggle="tab" aria-expanded="false">Tóm Tắt</a></li>
                             <li><a href="#CV" data-toggle="tab" aria-expanded="false">C.V</a></li>
-                            <li><a href="#Projects" data-toggle="tab" aria-expanded="false">Dự án</a></li>
+                            <li><a href="#Projects" data-toggle="tab" aria-expanded="false">Dự Án</a></li>
                             <li><a href="#Experience" data-toggle="tab" aria-expanded="false">Kinh Nghiệm</a></li>
-                            <li><a href="#Education" data-toggle="tab" aria-expanded="false">Đào tạo</a></li>
-                            <li><a href="#Skills" data-toggle="tab" aria-expanded="false">Kỹ năng</a></li>
+                            <li><a href="#Education" data-toggle="tab" aria-expanded="false">Đào Tạo</a></li>
+                            <li><a href="#Skills" data-toggle="tab" aria-expanded="false">Kỹ Năng</a></li>
                             <li><a href="#Languages" data-toggle="tab" aria-expanded="false">{{__('Language')}}</a></li>
                         </ul>
 

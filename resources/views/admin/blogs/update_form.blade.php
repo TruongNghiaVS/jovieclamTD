@@ -25,7 +25,7 @@ $queryString = MiscHelper::getLangQueryStr();
         <!-- BEGIN PAGE BAR -->
         <div class="page-bar">
             <ul class="page-breadcrumb">
-                <li> <a>Cập nhật Blog</a> <i class="fa fa-circle"></i> </li>
+                <li> <a>Cập Nhật Blog</a> <i class="fa fa-circle"></i> </li>
                 <li> <span>Blogs</span> </li>
             </ul>
         </div>

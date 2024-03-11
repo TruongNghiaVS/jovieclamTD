@@ -92,7 +92,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ bỏ</button>
-                        <button type="submit" class="btn btn-primary" id="btnUpdateScheduleInterview">Cập nhật</button>
+                        <button type="submit" class="btn btn-primary" id="btnUpdateScheduleInterview">Cập Nhật</button>
                     </div>
                 </div>
             </form>

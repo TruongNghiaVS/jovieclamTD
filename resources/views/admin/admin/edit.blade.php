@@ -28,7 +28,7 @@
                         {!! Form::hidden('id', $user->id) !!}
                         @include('admin.admin.add_edit_form')
                         <div class="form-actions">
-                            {!! Form::submit('Cập nhật Quản trị viên!', array('class'=>'btn blue')) !!}
+                            {!! Form::submit('Cập Nhật Quản trị viên!', array('class'=>'btn blue')) !!}
                         </div>
                         {!! Form::close() !!}
                     </div>

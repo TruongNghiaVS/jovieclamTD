@@ -86,7 +86,7 @@
             data: form.serialize(),
             dataType: 'json',
             success: function(json) {
-                $("#success_msg").html("<span class='text text-primary'>{{__('Cập nhật thành công')}}</span>");
+                $("#success_msg").html("<span class='text text-primary'>{{__('Cập Nhật Thành Công')}}</span>");
             },
             error: function(json) {
                 if (json.status === 422) {

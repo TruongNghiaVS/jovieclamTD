@@ -7,7 +7,7 @@
             <label for="summary" class="bold">Tóm tắt hồ sơ</label>
             <textarea name="summary" class="form-control" id="summary" placeholder="Tóm tắt hồ sơ">{{ old('summary', (isset($user))? $user->getProfileSummary('summary'):'') }}</textarea>
             <span class="help-block summary-error"></span> </div>
-        <button type="button" class="btn btn-large btn-primary" onClick="submitProfileSummaryForm();">Cập nhật </button>
+        <button type="button" class="btn btn-large btn-primary" onClick="submitProfileSummaryForm();">Cập Nhật </button>
     </div>
 </form>
 @push('scripts') 
@@ -20,7 +20,7 @@
             data: form.serialize(),
             dataType: 'json',
             success: function (json) {
-                $("#success_msg").html('<span class="text text-primary">Cập nhật thành công</span>');
+                $("#success_msg").html('<span class="text text-primary">Cập Nhật Thành Công</span>');
             },
             error: function (json) {
                 if (json.status === 422) {
