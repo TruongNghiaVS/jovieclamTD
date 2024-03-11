@@ -4,7 +4,7 @@
         <div class="row">
         <div class="col">
             <div class="item">
-                <a href="http://jobvieclam.com/"> 
+                <a href="https://jobvieclam.com/"> 
                     <img src="https://images.vietnamworks.com/logo/1-1392x326_124299.png" alt="banner">
                 </a>
             </div>

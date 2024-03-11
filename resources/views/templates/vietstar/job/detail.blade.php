@@ -434,9 +434,9 @@ $company = $job->getCompany();
                     <div class="related-jobs-wapper jobs-side-list">
                         <div class="related-jobs-item item-job mb-3">
                             <div class="logo-company">
-                                <a href="http://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9"
+                                <a href="https://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9"
                                     title="Công Ty Cổ Phần Incom Sài Gòn" class="pic">
-                                    <img src="http://jobvieclam.com\company_logos/-1692007134-455.png"
+                                    <img src="https://jobvieclam.com\company_logos/-1692007134-455.png"
                                         style="max-width:140px; max-height:140px;" alt="Công Ty Cổ Phần Incom Sài Gòn"
                                         title="Công Ty Cổ Phần Incom Sài Gòn">
                                 </a>
@@ -449,17 +449,17 @@ $company = $job->getCompany();
                                         <div class="job-title" bis_skin_checked="1">
                                             <span>Mới</span>
                                             <h3 class="job-title-name"><a
-                                                    href="http://jobvieclam.com/job/nhan-vien-bat-dong-san-40"
+                                                    href="https://jobvieclam.com/job/nhan-vien-bat-dong-san-40"
                                                     title="Nhân viên bất động sản">Nhân viên bất động sản</a></h3>
                                         </div>
                                         @if(Auth::check() && Auth::user()->isFavouriteJob($job->slug))
                                         <a class="save-job active"
-                                            href="http://jobvieclam.com/add-to-favourite-job/nhan-vien-bat-dong-san-40"><i
+                                            href="https://jobvieclam.com/add-to-favourite-job/nhan-vien-bat-dong-san-40"><i
                                                 class="far fa-heart"></i>
                                         </a>
                                         @else
                                         <a class="save-job"
-                                            href="http://jobvieclam.com/add-to-favourite-job/nhan-vien-bat-dong-san-40"><i
+                                            href="https://jobvieclam.com/add-to-favourite-job/nhan-vien-bat-dong-san-40"><i
                                                 class="far fa-heart"></i>
                                         </a>
                                         @endif
@@ -468,7 +468,7 @@ $company = $job->getCompany();
 
                                     <!-- companyName Start-->
                                     <div class="info-item companyName" bis_skin_checked="1"><a
-                                            href="http://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9"
+                                            href="https://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9"
                                             title="Công Ty Cổ Phần Incom Sài Gòn">Công Ty Cổ Phần Incom Sài Gòn</a>
                                     </div>
                                     <!-- companyName End-->
@@ -526,9 +526,9 @@ $company = $job->getCompany();
 
                         <div class="related-jobs-item item-job mb-3">
                             <div class="logo-company">
-                                <a href="http://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9"
+                                <a href="https://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9"
                                     title="Công Ty Cổ Phần Incom Sài Gòn" class="pic">
-                                    <img src="http://jobvieclam.com\company_logos/-1692007134-455.png"
+                                    <img src="https://jobvieclam.com\company_logos/-1692007134-455.png"
                                         style="max-width:140px; max-height:140px;" alt="Công Ty Cổ Phần Incom Sài Gòn"
                                         title="Công Ty Cổ Phần Incom Sài Gòn">
                                 </a>
@@ -541,11 +541,11 @@ $company = $job->getCompany();
                                         <div class="job-title" bis_skin_checked="1">
                                             <span>Mới</span>
                                             <h3 class="job-title-name"><a
-                                                    href="http://jobvieclam.com/job/nhan-vien-bat-dong-san-40"
+                                                    href="https://jobvieclam.com/job/nhan-vien-bat-dong-san-40"
                                                     title="Nhân viên bất động sản">Nhân viên bất động sản</a></h3>
                                         </div>
                                         <a class="save-job"
-                                            href="http://jobvieclam.com/add-to-favourite-job/nhan-vien-bat-dong-san-40"><i
+                                            href="https://jobvieclam.com/add-to-favourite-job/nhan-vien-bat-dong-san-40"><i
                                                 class="far fa-heart"></i>
                                         </a>
                                     </div>
@@ -553,7 +553,7 @@ $company = $job->getCompany();
 
                                     <!-- companyName Start-->
                                     <div class="info-item companyName" bis_skin_checked="1"><a
-                                            href="http://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9"
+                                            href="https://jobvieclam.com/company/cong-ty-co-phan-incom-sai-gon-9"
                                             title="Công Ty Cổ Phần Incom Sài Gòn">Công Ty Cổ Phần Incom Sài Gòn</a>
                                     </div>
                                     <!-- companyName End-->
@@ -622,7 +622,7 @@ $company = $job->getCompany();
                 <div class="related-jobs__title d-flex justify-content-between align-items-center">
                     <h6>Công việc liên quan</h6>
                     <a class="btn btn-round btn-link btn-sm main-color"
-                        href="http://jobvieclam.com/jobs?job_titles%5B%5D=Nh%C3%A2n%20Vi%C3%AAn%20Nh%C3%A2n%20S%E1%BB%B1%20-%20Tuy%E1%BB%83n%20D%E1%BB%A5ng%20%28HR%29&amp;country_ids%5B%5D=&amp;state_ids%5B%5D=&amp;city_ids%5B%5D=48710">
+                        href="https://jobvieclam.com/jobs?job_titles%5B%5D=Nh%C3%A2n%20Vi%C3%AAn%20Nh%C3%A2n%20S%E1%BB%B1%20-%20Tuy%E1%BB%83n%20D%E1%BB%A5ng%20%28HR%29&amp;country_ids%5B%5D=&amp;state_ids%5B%5D=&amp;city_ids%5B%5D=48710">
                         Xem tất cả công việc<i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
                 <!-- related jobs Slider -->
@@ -635,12 +635,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/ke-toan-phai-thu-30"
+                                                        href="https://jobvieclam.com/job/ke-toan-phai-thu-30"
                                                         title="Kế Toán Phải Thu">Kế
                                                         Toán Phải Thu</a></h6>
                                                 <p class="card-news__content-detail">Công ty TNHH VBI</p>
@@ -662,12 +662,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
+                                                        href="https://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
                                                         title="Nhân Viên Nhân Sự - Tuyển Dụng (HR)">Nhân Viên Nhân Sự -
                                                         Tuyển Dụng
                                                         (HR)</a>
@@ -691,12 +691,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
+                                                        href="https://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
                                                         title="Nhân Viên Nhân Sự - Tuyển Dụng (HR)">Nhân Viên Nhân Sự -
                                                         Tuyển Dụng
                                                         (HR)</a>
@@ -720,12 +720,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
+                                                        href="https://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
                                                         title="Nhân Viên Nhân Sự - Tuyển Dụng (HR)">Nhân Viên Nhân Sự -
                                                         Tuyển Dụng
                                                         (HR)</a>
@@ -749,12 +749,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
+                                                        href="https://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
                                                         title="Nhân Viên Nhân Sự - Tuyển Dụng (HR)">Nhân Viên Nhân Sự -
                                                         Tuyển Dụng
                                                         (HR)</a>
@@ -778,12 +778,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
+                                                        href="https://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
                                                         title="Nhân Viên Nhân Sự - Tuyển Dụng (HR)">Nhân Viên Nhân Sự -
                                                         Tuyển Dụng
                                                         (HR)</a>
@@ -807,12 +807,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
+                                                        href="https://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
                                                         title="Nhân Viên Nhân Sự - Tuyển Dụng (HR)">Nhân Viên Nhân Sự -
                                                         Tuyển Dụng
                                                         (HR)</a>
@@ -843,12 +843,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/ke-toan-phai-thu-30"
+                                                        href="https://jobvieclam.com/job/ke-toan-phai-thu-30"
                                                         title="Kế Toán Phải Thu">Kế
                                                         Toán Phải Thu</a></h6>
                                                 <p class="card-news__content-detail">Công ty TNHH VBI</p>
@@ -870,12 +870,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
+                                                        href="https://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
                                                         title="Nhân Viên Nhân Sự - Tuyển Dụng (HR)">Nhân Viên Nhân Sự -
                                                         Tuyển Dụng
                                                         (HR)</a>
@@ -899,12 +899,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
+                                                        href="https://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
                                                         title="Nhân Viên Nhân Sự - Tuyển Dụng (HR)">Nhân Viên Nhân Sự -
                                                         Tuyển Dụng
                                                         (HR)</a>
@@ -928,12 +928,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
+                                                        href="https://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
                                                         title="Nhân Viên Nhân Sự - Tuyển Dụng (HR)">Nhân Viên Nhân Sự -
                                                         Tuyển Dụng
                                                         (HR)</a>
@@ -957,12 +957,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
+                                                        href="https://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
                                                         title="Nhân Viên Nhân Sự - Tuyển Dụng (HR)">Nhân Viên Nhân Sự -
                                                         Tuyển Dụng
                                                         (HR)</a>
@@ -986,12 +986,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
+                                                        href="https://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
                                                         title="Nhân Viên Nhân Sự - Tuyển Dụng (HR)">Nhân Viên Nhân Sự -
                                                         Tuyển Dụng
                                                         (HR)</a>
@@ -1015,12 +1015,12 @@ $company = $job->getCompany();
                                     <div class="col-md-6 col-lg-4 mb-3" bis_skin_checked="1">
                                         <div class="card-news p-3" bis_skin_checked="1">
                                             <div class="card-news__icon" bis_skin_checked="1">
-                                                <img src="http://jobvieclam.com/company_logos/-1672127797-895.jpg"
+                                                <img src="https://jobvieclam.com/company_logos/-1672127797-895.jpg"
                                                     alt="Công ty TNHH VBI">
                                             </div>
                                             <div class="card-news__content" bis_skin_checked="1">
                                                 <h6 class="card-news__content-title"><a
-                                                        href="http://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
+                                                        href="https://jobvieclam.com/job/nhan-vien-nhan-su-tuyen-dung-hr-33"
                                                         title="Nhân Viên Nhân Sự - Tuyển Dụng (HR)">Nhân Viên Nhân Sự -
                                                         Tuyển Dụng
                                                         (HR)</a>

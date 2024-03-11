@@ -4875,7 +4875,7 @@ div#industry_id_chosen {
     }
 
     footer .footer-widget .widget-title {
-        margin-bottom: 0
+        margin-bottom: 10px;
     }
 
     footer .navbar-brand {

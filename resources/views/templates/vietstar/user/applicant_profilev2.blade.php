@@ -158,7 +158,7 @@ if (Auth::guard('company')->user()) {
                   toolbar =0,
                   navpanes=0,
                    scrolling="no" 
-                  src="http://jobvieclam.com/cvs/83b901eb2cc47bf714c899608a4d263b.pdf" 
+                  src="https://jobvieclam.com/cvs/83b901eb2cc47bf714c899608a4d263b.pdf" 
                   height="934"   width="100%">
                   </iframe>
              </div>
@@ -171,7 +171,7 @@ if (Auth::guard('company')->user()) {
    <div class="action" bis_skin_checked="1">
           <ul class="action-list">
             <li> <a href ="javascript:void(0)"
-                    onclick ="downloadFileFromUrl('http://jobvieclam.com/cvs/83b901eb2cc47bf714c899608a4d263b.pdf', 'nguyen_truong_nghia.pdf')"
+                    onclick ="downloadFileFromUrl('https://jobvieclam.com/cvs/83b901eb2cc47bf714c899608a4d263b.pdf', 'nguyen_truong_nghia.pdf')"
             >
                    <img style ="width:32px" src= "/iconDowloadFile.png"> 
                    <span>Xuất file pdf   </span></a>

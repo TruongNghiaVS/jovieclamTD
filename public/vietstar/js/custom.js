@@ -87,7 +87,7 @@ function showModal_candidate(user_id,user_name) {
 
     if(user_id > 0){
         $('#candidate-profile-modal-title').html($('#candidate-profile-modal-title').html() + 'Hồ sơ - ' + user_name);
-        $('#candidate-profile-modal .modal-body').html(`<iframe src="http://jobvieclam.com/xem-ho-so-cv/${user_id}" title="description"></iframe>`);
+        $('#candidate-profile-modal .modal-body').html(`<iframe src="https://jobvieclam.com/xem-ho-so-cv/${user_id}" title="description"></iframe>`);
         $('#candidate-profile-modal').modal('show').trigger('focus');
     }
 

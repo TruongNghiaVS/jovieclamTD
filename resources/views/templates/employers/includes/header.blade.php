@@ -179,7 +179,7 @@
                 
 
 
-                <a class="btn_for_user" href="http://jobvieclam.com/">
+                <a class="btn_for_user" href="https://jobvieclam.com/">
                 <div  class="btn_for_user__head">
                 {{__('For')}}
                 </div> 

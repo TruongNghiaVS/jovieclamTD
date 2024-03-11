@@ -117,7 +117,7 @@
                                                 </a>
 
                                         @else
-                                             <a role="button" download href="{{'http://jobvieclam.com/'.'cvs/'.$value->user->getDefaultCv()->cv_file}}" target="_blank" class="dropdown-item">Tải CV</a>
+                                             <a role="button" download href="{{'https://jobvieclam.com/'.'cvs/'.$value->user->getDefaultCv()->cv_file}}" target="_blank" class="dropdown-item">Tải CV</a>
                                     
                                         @endif
                                

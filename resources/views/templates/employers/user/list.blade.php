@@ -10,7 +10,7 @@
 
 <!-- Inner Page Title start -->
 <!-- Inner Page Title end -->
-<!-- <a class="btn btn-primary applyCV-btn" href="http://jobvieclam.com/login#cvs">Nộp CV</a> -->
+<!-- <a class="btn btn-primary applyCV-btn" href="https://jobvieclam.com/login#cvs">Nộp CV</a> -->
 @include('flash::message')
 
 <!-- <form action="{{route('job.seeker.list')}}" method="get"> -->
