@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
 
-            <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="col-lg-4 col-md-5 col-sm-12">
                 <div class="box-img">
                     <img src="{{ asset('/') }}admin_assets/comfirm.jpg" alt="">
                 </div>
