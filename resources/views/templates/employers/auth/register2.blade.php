@@ -17,10 +17,10 @@
                     <img src="{{ asset('/') }}admin_assets/login.jpg" alt="">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12" bis_skin_checked="1">
+            <div class="col-lg-6 col-md-7 col-sm-12" bis_skin_checked="1">
                 <div class="box-info-signup forgot-password" id="logup" bis_skin_checked="1">
                     <div class="title" bis_skin_checked="1">
-                        <h2 class="text-primary"> {{__('Register')}}</h2>
+                        <h2 class="text-primary text-center"> {{__('Register')}}</h2>
                     </div>
                     <div class="step-title d-flex align-center" bis_skin_checked="1">
                         <div class="main-step-title" bis_skin_checked="1">
@@ -33,10 +33,10 @@
                             <input type="hidden" name="candidate_or_employer" value="employer">
                             <div class="form-group d-flex" bis_skin_checked="1">
                                 <div class="form-info" bis_skin_checked="1">
-                                    <span>{{__('Name')}}</span>
+                                    <span>{{__('Company')}}</span>
                                 </div>
                                 <div class="form-input " bis_skin_checked="1">
-                                    <input type="text" name="name" class="form-control" required="required" placeholder="{{__('Name')}}" value="{{old('name')}}">
+                                    <input type="text" name="name" class="form-control border-t-l-ra-0 border-b-l-ra-0" required="required" placeholder="{{__('Company Name')}}" value="{{old('name')}}">
                                     <div class="invalid-feedback name-error">
                                         {{__('Name is required')}}
                                     </div>
@@ -52,7 +52,7 @@
                                     <span>{{__(('Email'))}}</span>
                                 </div>
                                 <div class="form-input " bis_skin_checked="1">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus placeholder="{{__('Email Address')}}">
+                                    <input id="email" type="email" class="form-control border-t-l-ra-0 border-b-l-ra-0" name="email" value="{{ old('email') }}" required autofocus placeholder="{{__('Email Address')}}">
                                     <div class="invalid-feedback email-error">
                                         {{__('Email is required')}}
                                     </div>
@@ -64,7 +64,7 @@
                                     <span>{{__(('Password'))}}</span>
                                 </div>
                                 <div class="form-input" bis_skin_checked="1">
-                                    <input id="company_passId2" type="password" class="form-control" name="password" value="" required placeholder="{{__('Password')}}">
+                                    <input id="company_passId2" type="password" class="form-control form-control border-t-l-ra-0 border-b-l-ra-0" name="password" value="" required placeholder="{{__('Password')}}">
                                     <div class="invalid-feedback password-error">
                                         {{__('Password is required')}}
                                     </div>
@@ -77,7 +77,7 @@
                                     <span>{{__('Password Confirmation')}}</span>
                                 </div>
                                 <div class="form-input" bis_skin_checked="1">
-                                <input  id="company_comfirmId2" type="password" name="password_confirmation" class="form-control" required="required" placeholder="{{__('Password Confirmation')}}" value="">
+                                <input  id="company_comfirmId2" type="password" name="password_confirmation" class="form-control form-control border-t-l-ra-0 border-b-l-ra-0" required="required" placeholder="{{__('Password Confirmation')}}" value="">
                                     <div class="invalid-feedback password-error">
                                         {{__('Password Incorrect')}}
                                     </div>
@@ -103,12 +103,10 @@
                                 </span> 
                             </div>
 
-
-
                             <input type="checkbox" value="1" name="terms_of_use" />
 
-<a href="/dieu-khoan-su-dung-nha-tuyen-dung">{{__('I accept Terms of Use')}}</a>
-<span class="help-block terms_of_use">
+                            <a href="/dieu-khoan-su-dung-nha-tuyen-dung">{{__('I accept Terms of Use')}}</a>
+                            <span class="help-block terms_of_use">
 
 
 
@@ -116,8 +114,8 @@
                             @if ($errors->has('g-recaptcha-response')) <span class="help-block">
                                 <strong>{{ $errors->first('g-recaptcha-response') }}</strong> </span> @endif
 
-                            <div class="user-action" bis_skin_checked="1">
-                                <div class="btn-area" bis_skin_checked="1">
+                            <div class="user-action " bis_skin_checked="1">
+                                <div class="btn-area d-grid" bis_skin_checked="1">
                                     <button type="submit" id="" class="btn btn-primary" value="Gửi">Đăng ký</button>
                                 </div>
                                 <p> <a class="register" href="/employer/register" target="_self" >Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
@@ -127,6 +125,8 @@
                                     <p>Email: <a href="mailto:support@jobvieclam.com" target="_self">support@jobvieclam.com</a></p>
                                 </div>
                             </div>
+
+
                         </form>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
     }
 
     .box-info-signup {
-        margin-left: 50px;
+ 
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -176,8 +176,8 @@
 
     .main-form .form-group .form-info {
         -webkit-box-flex: 0;
-        flex: 0 0 150px;
-        max-width: 150px;
+        flex: 0 0 100px;
+        max-width: 100px;
     }
 
     .main-form .form-group .form-info span {
@@ -186,7 +186,7 @@
         color: #fff;
         text-transform: uppercase;
         padding-left: 15px;
-        height: 45px;
+        height: 46px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -195,10 +195,10 @@
     }
 
     .main-form .form-group .form-input {
-        -ms-flex: 0 0 calc(100% - 150px);
+        -ms-flex: 0 0 calc(100% - 100px);
         -webkit-box-flex: 0;
-        flex: 0 0 calc(100% - 150px);
-        max-width: calc(100% - 150px);
+        flex: 0 0 calc(100% - 100px);
+        max-width: calc(100% - 100px);
     }
 
     .main-form .form-group .form-input.short {

@@ -753,6 +753,10 @@
         justify-content: center;
         margin-bottom: 10px;
       } 
+      .box-img {
+        display: none;
+      }
+      /* END-767px */
 }
 
 
@@ -1180,6 +1184,15 @@
   .slider-hero-banner .bg-slider.is-sp {
     display: none
   }
+  .second-login-section.cb-section {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+
+  }
+  .box-img {
+    display: none;
+  }
+  /* END-992px */
 }
 
 

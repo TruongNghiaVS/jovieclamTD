@@ -20,7 +20,7 @@
             </div>
             <div class="col-lg-6 col-md-8 col-sm-12" bis_skin_checked="1">
                     <div class="box-info-signup forgot-password" id="form_reset_content" bis_skin_checked="1"><div class="title" bis_skin_checked="1">
-                                        <h2 class="text-primary">Xác Nhận Email</h2>
+                                        <h2 class="text-primary text-center">Xác Nhận Email</h2>
                                     </div><div class="step-title d-flex align-center" bis_skin_checked="1">
                                         <div class="main-step-title" bis_skin_checked="1">
                                             <h3>Vui lòng kiểm tra email của bạn và làm theo hướng dẫn để hoàn thành các bước tạo tài khoản</h3>
@@ -64,7 +64,7 @@
     }
 
     .box-info-signup {
-        margin-left: 50px;
+    
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -84,8 +84,8 @@
 
     .main-form .form-group .form-info {
         -webkit-box-flex: 0;
-        flex: 0 0 150px;
-        max-width: 150px;
+        flex: 0 0 100px;
+        max-width: 100px;
     }
 
     .main-form .form-group .form-info span {
@@ -94,7 +94,7 @@
         color: #fff;
         text-transform: uppercase;
         padding-left: 15px;
-        height: 45px;
+        height: 46px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -103,10 +103,10 @@
     }
 
     .main-form .form-group .form-input {
-        -ms-flex: 0 0 calc(100% - 150px);
+        -ms-flex: 0 0 calc(100% - 100px);
         -webkit-box-flex: 0;
-        flex: 0 0 calc(100% - 150px);
-        max-width: calc(100% - 150px);
+        flex: 0 0 calc(100% - 100px);
+        max-width: calc(100% - 100px);
     }
 
     .main-form .form-group .form-input.short {

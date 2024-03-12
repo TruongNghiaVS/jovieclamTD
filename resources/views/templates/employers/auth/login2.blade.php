@@ -12,15 +12,15 @@
     <div class="container">
         <div class="row justify-content-md-center">
 
-            <div class="col-lg-6 col-md-4 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="box-img">
                     <img src="{{ asset('/') }}admin_assets/login.jpg" alt="">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-8 col-sm-12" bis_skin_checked="1">
+            <div class="col-lg-6 col-md-7 col-sm-12" bis_skin_checked="1">
                 <div class="box-info-signup forgot-password" id="login" bis_skin_checked="1">
                     <div class="title" bis_skin_checked="1">
-                        <h2 class="text-primary"> {{__('Login')}}</h2>
+                        <h2 class="text-primary text-center"> {{__('Login')}}</h2>
                     </div>
                     <div class="step-title d-flex align-center" bis_skin_checked="1">
                         <div class="main-step-title" bis_skin_checked="1">
@@ -36,7 +36,7 @@
                                     <span>{{__(('Email'))}}</span>
                                 </div>
                                 <div class="form-input " bis_skin_checked="1">
-                                    <input id="email" type="email" class="form-control" name="email"
+                                    <input id="email" type="email" class="form-control border-t-l-ra-0 border-b-l-ra-0 " name="email"
                                         value="{{ old('email') }}" required autofocus
                                         placeholder="{{__('Email Address')}}">
                                     <div class="invalid-feedback email-error">
@@ -50,7 +50,7 @@
                                     <span>{{__(('Password'))}}</span>
                                 </div>
                                 <div class="form-input" bis_skin_checked="1">
-                                    <input id="password" type="password" class="form-control" name="password" value=""
+                                    <input id="password" type="password" class="form-control border-t-l-ra-0 border-b-l-ra-0" name="password" value=""
                                         required placeholder="{{__('Password')}}">
                                     <div class="invalid-feedback password-error">
                                         {{__('Password is required')}}
@@ -58,7 +58,7 @@
                                 </div>
                             </div>
                             <div class="user-action" bis_skin_checked="1">
-                                <div class="btn-area" bis_skin_checked="1">
+                                <div class="btn-area d-grid" bis_skin_checked="1">
                                     <button type="submit" class="btn btn-primary" value="Gửi">Đăng nhập</button>
                                 </div>
                                 <p> <a class="register" href="#" data-toggle="modal"
@@ -99,7 +99,6 @@
     }
 
     .box-info-signup {
-        margin-left: 50px;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -119,8 +118,8 @@
 
     .main-form .form-group .form-info {
         -webkit-box-flex: 0;
-        flex: 0 0 150px;
-        max-width: 150px;
+        flex: 0 0 100px;
+        max-width: 100px;
     }
 
     .main-form .form-group .form-info span {
@@ -129,7 +128,7 @@
         color: #fff;
         text-transform: uppercase;
         padding-left: 15px;
-        height: 45px;
+        height: 46px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -138,10 +137,10 @@
     }
 
     .main-form .form-group .form-input {
-        -ms-flex: 0 0 calc(100% - 150px);
+        -ms-flex: 0 0 calc(100% - 100px);
         -webkit-box-flex: 0;
-        flex: 0 0 calc(100% - 150px);
-        max-width: calc(100% - 150px);
+        flex: 0 0 calc(100% - 100px);
+        max-width: calc(100% - 100px);
     }
 
     .main-form .form-group .form-input.short {
