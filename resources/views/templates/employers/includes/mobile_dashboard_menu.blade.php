@@ -421,9 +421,13 @@
 </style>
 
 @endpush
+@php
+    $company =  Auth::guard('company')->check()==true ?  Auth::guard('company')->user() : null;
+    $company_active = $company ? $company->is_active : 0;
+@endphp
 <nav id="mobile-sidebar">
     <div class="sidebar-header">
-        @if(Auth::guard('company')->check()==true)
+        @if(Auth::guard('company')->check()==true && $company_active == 1 )
         <div class="profile" bis_skin_checked="1">
             <div class="avatar" bis_skin_checked="1"><a href="#">
                 {{Auth::guard('company')->user()->printCompanyImage()}}
@@ -462,7 +466,7 @@
                     </a>
                 </li>
 
-                @if(Auth::guard('company')->check())
+                @if(Auth::guard('company')->check() &&  $company_active == 1 )
                 <li class="sidebar-item {{ Request::url() == route('company.home') || Request::url() == route('posted.jobs') ||  Request::url() == route('application.manager') || Request::url() == route('company.packages') || Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) || Request::url() == route('company.profile') || Request::url() == route('post.job')  ? 'active' : '' }}">
                     <a href="{{route('company.home')}}" class="list-group-item list-group-item-action{{ Request::url() == route('company.home') || Request::url() == route('posted.jobs') ||  Request::url() == route('application.manager') || Request::url() == route('company.packages') || Request::url() == route('interview.schedule.calendar', ['company_id'=> Auth::guard('company')->user()->id]) || Request::url() == route('company.profile') || Request::url() == route('post.job')  ? 'active' : '' }}}">
                         <div class="d-flex w-100">
@@ -518,7 +522,7 @@
             </ul>
             <!-- user nav -->
 
-            @if(Auth::guard('company')->check())
+            @if(Auth::guard('company')->check() &&  $company_active == 1 )
     
             <ul class="list-unstyled components sidebar-user-nav" id="sidebar-user-nav">
                 <li class="sidebar-item {{ Request::url() == route('company.home') ? 'active' : '' }}">
@@ -665,75 +669,34 @@
 
     <div class="sidebar-bottom active">
         <ul class="list-unstyled components sidebar-bottom__item">
-                @if(!Auth::guard('company')->check())
-        
-    
+            @if(!Auth::guard('company')->check() ||  $company_active == 0)
                 <li>
                     <div class="my-2 group-button">
                         <a class="nav-link login_link btn btn-primary login-btn btn-sm" data-toggle="modal" data-target="#employer_login_Modal" >{{__('Log in')}} / {{__('Đăng Ký')}} </a>
-                
-                        <!-- <a href="{{url('/employers')}}" class="btn btn-primary">Dành cho Nhà tuyển dụng</a> -->
-                             <a href="https://jobvieclam.com" class="btn btn-primary btn-sm">Dành Cho Ứng Viên</a>
-
-                        {{--<a class="btn btn-primary my-2" href="{{route('register')}}" class="nav-link
-                        register">{{__('Đăng Ký')}}</a> --}}
+                        <a href="https://jobvieclam.com" class="btn btn-primary btn-sm">Dành Cho Ứng Viên</a>
                     </div>
                 </li>
-
-            @elseif(Auth::guard('company')->user())
-                @if(Auth::guard('company')->user())
+                
+            @elseif(Auth::guard('company')->check() && Auth::guard('company')->user() &&  $company_active == 1 )
+                
                 <li class="openmyacount">
                     <div class="btn  btn-primary btn-sm  w-100">
                         <span class="side-bar-content text-white"><i class="fas fa-arrow-circle-right text-white"></i> Thông Tin Tài Khoản</span>
                     </div>
 
                 </li>
-                @endif
-    
                 <li>
                     <div class="my-2 group-button">
-                       
-                
-                        <!-- <a href="{{url('/employers')}}" class="btn btn-primary">Dành cho Nhà tuyển dụng</a> -->
                              <a href="https://jobvieclam.com" class="btn btn-primary btn-sm">Dành Cho Ứng Viên</a>
 
                         
                     </div>
                 </li>
+                
 
-            @elseif(!Auth::user() && !Auth::guard('company')->user())
-                <li>
-                    <div class="d-flex gap-10 my-4 group-button">
-                    <a class="nav-link login_link btn btn-primary login-btn" data-toggle="modal" data-target="#employer_login_Modal" >{{__('Log in')}} / {{__('Đăng Ký')}} </a>
-                        {{--<a class="btn btn-primary my-2" href="{{route('register')}}" class="nav-link
-                        register">{{__('Đăng Ký')}}</a> --}}
-                        <!-- <a href="{{route('index')}}" class="btn btn-primary">Dành cho ứng viên</a> -->
-                        <a href="https://jobvieclam.com" class="btn btn-primary">Dành cho ứng viên</a>
-
-                        
-                    </div>
-
-                </li>
+        
             @endif
 
-        {{--    <li>
-                <ul class="navbar-nav navbar-lang ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link navbar-lang__link" href="#" >
-
-                            <img src="{{ asset('/vietstar/imgs/flags/') }}/{{config('app.available_locales')[App::getLocale()]['flag-icon']}}.png" alt="vietstar">
-                        </a>
-                        <div class="dropdown__lang_menu">
-                            @foreach (config('app.available_locales') as $lang => $language)
-                            @if ($lang != App::getLocale())
-                            <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"><span class="flag-icon flag-icon-{{$language['flag-icon']}}"><img src="{{ asset('/vietstar/imgs/flags/') }}/{{$language['flag-icon']}}.png" alt="vietstar"></span> {{$language['display']}}</a>
-                            @endif
-                            @endforeach
-
-                        </div>
-                    </li>
-                </ul>
-            </li> --}}
         </ul>
     </div>
 </nav>
