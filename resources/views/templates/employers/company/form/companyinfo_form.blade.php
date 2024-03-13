@@ -72,7 +72,7 @@
               <div class="form-group">
                 <label for="Description">{{__('Description')}}</label>
                 <em class="important">*</em>
-                <textarea class="form-control" id="description_text" required name="description"  name_table="Mô tả" rows="4">{{ isset($company->description) ? $company->description : old('description') }}</textarea>
+                <textarea class="form-control" id="description_text" required name="description"  name_table="Mô Tả" rows="4">{{ isset($company->description) ? $company->description : old('description') }}</textarea>
               </div>
             </div>
             <button class="btn btn-secondary" id="adsContinue">Tiếp Tục</button>
