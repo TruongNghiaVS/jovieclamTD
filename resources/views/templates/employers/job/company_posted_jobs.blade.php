@@ -25,7 +25,7 @@
                                 <div class="row filter-job">
                                     <div class="col-md-5 col-lg-5 col-sm-12">
                                         <div class="form-group">
-                                            <label for="">Từ khóa</label>
+                                            <label for="">Từ Khóa</label>
                                             <input type="text" name="title" placeholder="{{ __('Research Jobs') }}"
                                                 class="form-control search-title"
                                                 value="{{ isset($request['title']) ? $request['title'] : '' }}">
@@ -58,7 +58,7 @@
                                     </div> -->
                                     <div class="col-md-3 col-lg-3 col-sm-12">
                                         <div class="form-group">
-                                            <label for="find_day">Tìm theo ngày</label>
+                                            <label for="find_day">Tìm Theo Ngày</label>
                                                 <select class="form-select" id="find_day">
                                                     <option>Ngày Đăng</option>
                                                     <option>Ngày Hết Hạn</option>

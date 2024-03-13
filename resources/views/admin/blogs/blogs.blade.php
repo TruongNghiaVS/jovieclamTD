@@ -178,7 +178,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-3" for="title">Từ khóa Meta </label>
+                                        <label class="control-label col-sm-3" for="title">Từ Khóa Meta </label>
                                         <div class="col-sm-12">
                                             <input type="text" class="form-control" name="meta_keywords"
                                                 id="meta_keywords" autofocus value="{{ old('meta_keywords') }}">
@@ -293,7 +293,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-3" for="title">Từ khóa Meta</label>
+                                        <label class="control-label col-sm-3" for="title">Từ Khóa Meta</label>
                                         <div class="col-sm-12">
                                             <input type="text" class="form-control" name="meta_keywords_update"
                                                 id="meta_keywords_update" autofocus

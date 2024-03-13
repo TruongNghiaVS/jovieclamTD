@@ -11,8 +11,8 @@
         {!! APFrmErrHelp::showErrors($errors, 'seo_description') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'seo_keywords') !!}">
-        {!! Form::label('seo_keywords', 'Từ khóa SEO', ['class' => 'bold']) !!}
-        {!! Form::textarea('seo_keywords', null, array('class'=>'form-control', 'id'=>'seo_keywords', 'placeholder'=>'Từ khóa SEO')) !!}
+        {!! Form::label('seo_keywords', 'Từ Khóa SEO', ['class' => 'bold']) !!}
+        {!! Form::textarea('seo_keywords', null, array('class'=>'form-control', 'id'=>'seo_keywords', 'placeholder'=>'Từ Khóa SEO')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'seo_keywords') !!}                                       
     </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'seo_other') !!}">
