@@ -44,7 +44,7 @@
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'map') !!}"> {!! Form::label('map', 'Google Map', ['class' => 'bold']) !!}
         {!! Form::textarea('map', null, array('class'=>'form-control', 'id'=>'map', 'placeholder'=>'Google Map')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'map') !!} </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'no_of_offices') !!}"> {!! Form::label('no_of_offices', 'Số lượng văn phòng/chi nhánh', ['class' => 'bold']) !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'no_of_offices') !!}"> {!! Form::label('no_of_offices', 'Số Lượng Văn Phòng/chi nhánh', ['class' => 'bold']) !!}
         {!! Form::select('no_of_offices', ['' => 'Lựa chọn']+MiscHelper::getNumOffices(), null, array('class'=>'form-control', 'id'=>'no_of_offices')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'no_of_offices') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'website') !!}"> {!! Form::label('website', 'Website', ['class' => 'bold']) !!}
@@ -53,7 +53,7 @@
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'no_of_employees') !!}"> {!! Form::label('no_of_employees', 'Số nhân viên', ['class' => 'bold']) !!}
         {!! Form::select('no_of_employees', ['' => 'Lựa chọn']+MiscHelper::getNumEmployees(), null, array('class'=>'form-control', 'id'=>'no_of_employees')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'no_of_employees') !!} </div>
-    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'established_in') !!}"> {!! Form::label('established_in', 'Thành lập năm', ['class' => 'bold']) !!}
+    <div class="form-group {!! APFrmErrHelp::hasError($errors, 'established_in') !!}"> {!! Form::label('established_in', 'Thành Lập Năm', ['class' => 'bold']) !!}
         {!! Form::select('established_in', ['' => 'Lựa chọn']+MiscHelper::getEstablishedIn(), null, array('class'=>'form-control', 'id'=>'established_in')) !!}
         {!! APFrmErrHelp::showErrors($errors, 'established_in') !!} </div>
     <div class="form-group {!! APFrmErrHelp::hasError($errors, 'fax') !!}"> {!! Form::label('fax', 'Fax #', ['class' => 'bold']) !!}

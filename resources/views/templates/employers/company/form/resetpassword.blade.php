@@ -11,18 +11,18 @@
                 <form id="myForm1" class="needs-validation" novalidate>
                    
                     <div class="form-group">
-                        <label for="CEO_Name">Mật khẩu mới</label>
+                        <label for="pwdId">Mật Khẩu Mới</label>
                         <input type="password" id="pwdId" class="form-control pwds"  required>
                         
                         <div class="invalid-feedback">Nhập mật khẩu</div>
                     </div>
                     <div class="form-group">
-                        <label for="CEO_Name">Nhập lại mật khẩu mới</label>
+                        <label for="cPwdId">Nhập Lại Mật Khẩu Mới</label>
                         <input type="password" id="cPwdId" class="form-control pwds"  required>
                         <div id="cPwdValid" class="valid-feedback"></div>
                         <div id="cPwdInvalid" class="invalid-feedback"></div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group d-grid">
                         <button id="reset_submitBtn" type="button" class="btn btn-primary submit-button" disabled>Gửi</button>
                     </div>
                 </form>

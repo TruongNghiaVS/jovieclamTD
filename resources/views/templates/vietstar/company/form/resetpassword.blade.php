@@ -11,13 +11,13 @@
                 <form id="myForm1" class="needs-validation" novalidate>
                     
                     <div class="form-group">
-                        <label for="CEO_Name">{{__('Password')}}</label>
+                        <label for="pwdId">{{__('Password')}}</label>
                         <input type="password" id="pwdId" class="form-control pwds"  required>
                         
                         <div class="invalid-feedback">{{__('Password is required')}}</div>
                     </div>
                     <div class="form-group">
-                        <label for="CEO_Name">{{__('Confirm Password')}}</label>
+                        <label for="cPwdId">{{__('Confirm Password')}}</label>
                         <input type="password" id="cPwdId" class="form-control pwds"  required>
                         <div id="cPwdValid" class="valid-feedback">Valid</div>
                         <div id="cPwdInvalid" class="invalid-feedback"></div>

@@ -65,17 +65,17 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-secondary" id="infoContinue">Tiếp tục</button>
+            <button class="btn btn-secondary" id="infoContinue">Tiếp Tục</button>
           </div>
           <div class="tab-pane fade" id="ads" role="tabpanel">
             <div class="col-md-12">
               <div class="form-group">
                 <label for="Description">{{__('Description')}}</label>
                 <em class="important">*</em>
-                <textarea class="form-control" id="description_text" required name="description"  name_table="description" rows="4">{{ isset($company->description) ? $company->description : old('description') }}</textarea>
+                <textarea class="form-control" id="description_text" required name="description"  name_table="Mô tả" rows="4">{{ isset($company->description) ? $company->description : old('description') }}</textarea>
               </div>
             </div>
-            <button class="btn btn-secondary" id="adsContinue">Tiếp tục</button>
+            <button class="btn btn-secondary" id="adsContinue">Tiếp Tục</button>
           </div>
           <div class="tab-pane fade" id="placementPanel" role="tabpanel">
             <div class="row">
@@ -140,7 +140,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-secondary" id="placementContinue">Tiếp tục</button>
+            <button class="btn btn-secondary" id="placementContinue">Tiếp Tục</button>
           </div>
           <div class="tab-pane fade" id="detail" role="tabpanel">
             <div class="row">
@@ -182,7 +182,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-secondary" id="detailContinue">Tiếp tục</button>
+            <button class="btn btn-secondary" id="detailContinue">Tiếp Tục</button>
           </div>
           <div class="tab-pane fade" id="review" role="tabpanel">
             <h4>{{__('Review the form')}} </h4>  

@@ -58,7 +58,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="CEO_Name">{{__('Password')}}</label>
+                                                    <label for="Password">{{__('Password')}}</label>
                                                     <input type="password" class="form-control" id="Password"
                                                            placeholder="{{__('Password')}}">
                                                 </div>

@@ -51,7 +51,7 @@
                                 <div class="form-group">
                                     <label for="newPassword">{{__('New Password')}}</label>
                                     <div class="input-group">
-                                        <input type="password" class="form-control" id="newPassword" placeholder="Nhập mật khẩu mới" required>
+                                        <input type="password" class="form-control" id="newPassword" placeholder="Nhập Mật Khẩu Mới" required>
                                         <div class="input-group-append">
                                             <button class="btn" type="button" id="showNewPassword">
                                                 <i class="fa fa-eye"></i>
@@ -66,7 +66,7 @@
                                 <div class="form-group">
                                     <label for="confirmPassword">{{__('Confirm Password')}}</label>
                                     <div class="input-group">
-                                        <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập lại mật khẩu mới" required>
+                                        <input type="password" class="form-control" id="confirmPassword" placeholder="Nhập Lại Mật Khẩu Mới" required>
                                         <div class="input-group-append">
                                             <button class="btn" type="button" id="showConfirmPassword">
                                                 <i class="fa fa-eye"></i>
@@ -84,8 +84,9 @@
                                    
                                 </div> -->
                                 <input type="text" class="form-control" id="forgotpassword" style="display: none;" required value="{{$resetPassword}}">
-                                
-                                <button type="button" id="passwordForm_btn" class="btn btn-primary w-100">Đổi Mật Khẩu</button>
+                                <div class="d-grid">
+                                    <button type="button" id="passwordForm_btn" class="btn btn-primary w-100">Đổi Mật Khẩu</button>
+                                </div>
                             </form>
                             <div class="need-help my-4" bis_skin_checked="1">
                                 <p>Nếu cần giúp đỡ, hãy liên hệ với chúng tôi
