@@ -6,7 +6,7 @@
 <div class="reset-password-section cb-section">
     <div class="container mt-5">
         <div class="cb-title cb-title-center" bis_skin_checked="1">
-            <h2> Thay đổi mật khẩu</h2>
+            <h2> Thay Đổi Mật Khẩu</h2>
         </div>
         <!-- <form id="passwordForm" novalidate>
         <div class="form-group">
@@ -85,7 +85,7 @@
                                 </div> -->
                                 <input type="text" class="form-control" id="forgotpassword" style="display: none;" required value="{{$resetPassword}}">
                                 
-                                <button type="button" id="passwordForm_btn" class="btn btn-primary w-100">Đổi mật khẩu</button>
+                                <button type="button" id="passwordForm_btn" class="btn btn-primary w-100">Đổi Mật Khẩu</button>
                             </form>
                             <div class="need-help my-4" bis_skin_checked="1">
                                 <p>Nếu cần giúp đỡ, hãy liên hệ với chúng tôi

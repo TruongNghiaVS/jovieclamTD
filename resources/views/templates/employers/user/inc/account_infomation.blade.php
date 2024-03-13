@@ -13,7 +13,7 @@
             <i class="bi bi-lightbulb"></i>
             <p>Tips</p>
         </div>
-        <div class="right-action__link-edit" ><a data-toggle="modal" data-target="#changepassword"><i class="bi bi-pen"></i>Đổi mật khẩu</a></div>
+        <div class="right-action__link-edit" ><a data-toggle="modal" data-target="#changepassword"><i class="bi bi-pen"></i>Đổi Mật Khẩu</a></div>
         <div class="right-action__link-edit-mobile"><a data-toggle="modal" data-target="#changepassword"><i class="bi bi-pen"></i></a></div>
     </div>
 </div>

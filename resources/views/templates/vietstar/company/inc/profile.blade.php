@@ -176,7 +176,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-lg-4 d-flex flex-column justify-content-start align-items-center">
-                        <a class="cursor-pointer text-decoration text-secondary" data-toggle="modal" data-target="#user_info" href="#">Đổi mật khẩu <i class="bi bi-lock-fill"></i></a>
+                        <a class="cursor-pointer text-decoration text-secondary" data-toggle="modal" data-target="#user_info" href="#">Đổi Mật Khẩu <i class="bi bi-lock-fill"></i></a>
                     </div>
                 </div>
                
