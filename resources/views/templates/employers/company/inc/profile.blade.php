@@ -443,7 +443,7 @@
                     </div>
                 </div>
                 <div class="section-head__right-action" bis_skin_checked="1">
-                    <div class="right-action__tips" bis_skin_checked="1">
+                    <div class="right-action__tips" bis_skin_checked="1" >
                         <i class="bi bi-lightbulb"></i>
                         <p>Tips</p>
                     </div>
@@ -497,7 +497,7 @@
                     </div>
                 </div>
                 <div class="section-head__right-action" bis_skin_checked="1">
-                    <div class="right-action__tips" bis_skin_checked="1">
+                    <div class="right-action__tips" bis_skin_checked="1" >
                         <i class="bi bi-lightbulb"></i>
                         <p>Tips</p>
                     </div>

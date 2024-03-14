@@ -205,6 +205,49 @@
   </div>
 </div>
 
+<!--Company-Info Start -->
+<div id="company-info-tip" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cập Nhật Thông Tin Công Ty</h4>
+      </div>
+      <div class="modal-body">
+        <p>Vui lòng cập nhật các thông tin của công ty để tăng độ tin cậy.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--Company-Info End -->
+
+
+<!--Company Contact Start -->
+<div id="company-contact-tip" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cập Nhật Thông Tin Liên Hệ</h4>
+      </div>
+      <div class="modal-body">
+        <p>Vui lòng cập nhật các thông tin liên hệ của công ty để tăng độ tin cậy.</p>
+        <p>Việc cập nhật các thông tin liên hệ giúp người dùng có thể liên kết với công ty dễ hơn.</p>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--Company Contact End -->
+
+
+
 @push('scripts')
 <script type="text/javascript">
   $(function() {
