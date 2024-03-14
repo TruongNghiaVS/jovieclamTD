@@ -14,32 +14,37 @@
                   @csrf
                     <div id="load_review_cv">
                         <div>
-                            <div class="d-inline-block mb-3"><span role="button" data-value="1"
-                                    class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status active">
+                            <div class="d-inline-block me-3 mb-3">
+                                <span role="button" data-value="1" class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status active">
                                     CV tiếp nhận
-                                </span></div>
-                            <div class="d-inline-block mb-3"><span role="button" data-value="2"
-                                    class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status">
+                                </span>
+                            </div>
+                            <div class="d-inline-block me-3 mb-3">
+                                <span role="button" data-value="2"class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status">
                                     Phù hợp
-                                </span></div>
-                            <div class="d-inline-block mb-3"><span role="button" data-value="3"
-                                    class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status">
+                                </span>
+                            </div>
+                            <div class="d-inline-block me-3 mb-3">
+                                <span role="button" data-value="3" class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status">
                                     Hẹn phỏng vấn
-                                </span></div>
+                                </span>
+                            </div>
                             
-                            <div class="d-inline-block mb-3"><span role="button" data-value="5"
-                                    class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status">
+                            <div class="d-inline-block me-3 mb-3">
+                                <span role="button" data-value="5" class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status">
                                     Nhận việc
-                                </span></div>
-                            <div class="d-inline-block mb-3"><span role="button" data-value="6"
-                                    class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status">
+                                </span>
+                            </div>
+                            <div class="d-inline-block me-3 mb-3">
+                                <span role="button" data-value="6" class="btn btn-cv-application rounded-30 mr-2 d-block px-3 status">
                                     Từ chối
-                                </span></div>
+                                </span>
+                            </div>
                         </div>
                         <input type="hidden" name="status" id="review-application-status">
                         <input type="hidden" name="job_application" value="" id="id_job">
           
-                            class="form-control p-3"></textarea>
+                           <textarea class="form-control p-3"></textarea>
                          </div>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12"  >
@@ -96,6 +101,7 @@
 @push('scripts')
     <script type="text/javascript">
         function OpenmodalPopup(id_apply_job) {
+            console.log(id_apply_job);
             detailApplyJob(id_apply_job)
         }
 

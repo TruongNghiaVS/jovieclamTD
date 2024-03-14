@@ -87,7 +87,7 @@
                         <td class="align-top text-gray">
                             <div class="insights text-muted">
                                 <div>
-                                    <span style="cursor: pointer;">
+                                    <span>
                                         <i class="iconmoon icon-calendar-icon1"></i> {{ \Carbon\Carbon::parse($value->created_at)->format('Y-m-d H:i') }}
                                     </span>
                                 </div>
@@ -96,7 +96,9 @@
                         </td>
                         <td>
                             <!-- Có 6 trạng thái status từ cv-status-1 đến cv-status-6  -->
-                            <span role="button" class="cv-status cv-status-1 cv-status-default" data-toggle="modal" data-target="#modalReviewApplication">{{ __(\App\JobApply::getListStatus()[$value->status]) }}</span>
+                            <span role="button" class="cv-status cv-status-1 cv-status-default" data-toggle="modal" data-target="#modalReviewApplication" 
+                            onClick="OpenmodalPopup({{ $value->id }});"
+                            >{{ __(\App\JobApply::getListStatus()[$value->status]) }}</span>
                         </td>
                         <td class="text-right pl-0">
                             <span type="button" role="button" data-toggle="dropdown" class=""
