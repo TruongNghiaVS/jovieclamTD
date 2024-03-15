@@ -513,6 +513,42 @@ h2.title {
     right: 0;
     object-fit: contain;
 }
+
+/* Example styles for TOC list */
+.mce-toc ul {
+    list-style-type: none;
+    counter-reset: item;
+    padding-left: 20px; /* Adjust the padding as needed */
+}
+
+.mce-toc ul ul {
+    padding-left: 40px; /* Adjust the padding for nested lists */
+}
+
+.mce-toc li {
+    counter-increment: item;
+}
+
+.mce-toc li:before {
+    content: counters(item, ".") ". ";
+}
+
+
+.pagination li.page-item {
+    background-color: #fff;
+    padding: 5px;
+    margin: 3px 3px;
+    border-radius: 5px;
+}
+.pagination li.page-item:hover {
+    opacity: 0.8;
+}
+.pagination li.page-item.active {
+    background: var(--bs-primary);
+}
+.pagination li.page-item.active span {
+    color: #fff;
+}
  
 .user-account-section  .action  .action-list{
     display: flex;
