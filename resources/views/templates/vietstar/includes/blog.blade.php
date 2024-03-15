@@ -27,7 +27,7 @@ $blogs = $data["blogs"]->items();
                     <div class="figure">
                         <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/09/website-nang-cap-ban-than.jpg" alt=""></a>
                         <div class="figcaption">
-                            <h2 class="figcaption__category-name"><a href="#">THỊ TRƯỜNG LAO ĐỘNG</a></h2>
+                            <h2 class="figcaption__category-name mb-0"><a href="#">THỊ TRƯỜNG LAO ĐỘNG</a></h2>
                             <div class="figcaption__title big"><a href="#">Tìm việc trực tuyến an toàn và cảnh giác
                                     trước
                                     các công việc nhẹ lương cao</a></div>
@@ -54,7 +54,7 @@ $blogs = $data["blogs"]->items();
                             <div class="figure">
                                 <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/09/website-nang-cap-ban-than.jpg" alt=""></a>
                                 <div class="figcaption">
-                                    <h3 class="figcaption__category-name"><a href="#">THỊ TRƯỜNG LAO ĐỘNG</a></h3>
+                                    <h3 class="figcaption__category-name mb-0"><a href="#">THỊ TRƯỜNG LAO ĐỘNG</a></h3>
                                     <div class="figcaption__title"><a href="#">Tìm việc trực tuyến an toàn và cảnh
                                             giác trước
                                             các công việc nhẹ lương cao</a></div>
@@ -67,7 +67,7 @@ $blogs = $data["blogs"]->items();
                             <div class="figure">
                                 <a href="" class="figure-images"><img src="https://nghenghiep.vieclam24h.vn/wp-content/uploads/2023/09/website-nang-cap-ban-than.jpg" alt=""></a>
                                 <div class="figcaption">
-                                    <h3 class="figcaption__category-name"><a href="#">THỊ TRƯỜNG LAO ĐỘNG</a></h3>
+                                    <h3 class="figcaption__category-name mb-0"><a href="#">THỊ TRƯỜNG LAO ĐỘNG</a></h3>
                                     <div class="figcaption__title"><a href="#">Tìm việc trực tuyến an toàn và cảnh
                                             giác trước
                                             các công việc nhẹ lương cao</a></div>
@@ -103,8 +103,8 @@ $blogs = $data["blogs"]->items();
                             @endif
                         </a>
                         <div class="figcaption">
-                            <h3 class="figcaption__category-name"><a href="/tin-tuc/{{$category->slug }}">{{$heading}}</a></h3>
-                            <div class="figcaption__title"><a href="/tin-tuc/{{$category->slug}}/{{ $blog-> slug }}">{{ $blog-> heading}} </a></div>
+                            <h3 class="figcaption__category-name mb-0"><a href="/tin-tuc/{{$category->slug }}">{{$heading}}</a></h3>
+                            <div class="figcaption__title"><a class="mt-0" href="/tin-tuc/{{$category->slug}}/{{ $blog-> slug }}">{{ $blog-> heading}} </a></div>
 
                         </div>
                     </div>

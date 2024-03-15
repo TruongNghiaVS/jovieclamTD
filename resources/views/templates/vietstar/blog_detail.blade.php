@@ -180,8 +180,8 @@
                         
                     <img src="/uploads/blogs/{{$itemRe->image}}" alt=""></a>
                     <div class="figcaption" bis_skin_checked="1">
-                        <h3 class="figcaption__category-name"><a href="/tin-tuc/{{$categoryCurrent->slug}}"> {{$categoryCurrent->heading}} </a></h3>
-                        <div class="figcaption__title" bis_skin_checked="1"><a href="/tin-tuc/{{$categoryCurrent->slug}}/{{$itemRe->slug}}">{{$itemRe->heading}}</a></div>
+                        <h3 class="figcaption__category-name mb-0"><a href="/tin-tuc/{{$categoryCurrent->slug}}"> {{$categoryCurrent->heading}} </a></h3>
+                        <div class="figcaption__title" bis_skin_checked="1"><a class="mt-0" href="/tin-tuc/{{$categoryCurrent->slug}}/{{$itemRe->slug}}">{{$itemRe->heading}}</a></div>
 
                     </div>
                 </div>
