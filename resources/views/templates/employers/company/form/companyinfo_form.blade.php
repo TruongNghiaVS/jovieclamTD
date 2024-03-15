@@ -207,7 +207,7 @@
 
 <!--Company-Info Start -->
 <div id="company-info-tip" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered ">
 
     <!-- Modal content-->
     <div class="modal-content">
@@ -227,7 +227,7 @@
 
 <!--Company Contact Start -->
 <div id="company-contact-tip" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered ">
 
     <!-- Modal content-->
     <div class="modal-content">
