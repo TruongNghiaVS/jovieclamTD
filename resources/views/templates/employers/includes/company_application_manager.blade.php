@@ -271,7 +271,7 @@ $(document).ready(function() {
                     beforeSend: function(){
                     },
                     success: function(response){
-                        console.log(response);
+                        
                         $('#job-detail-modal-title').html($('#job-detail-modal-title').html() + ' - ' + job_name);
                         $('#job-detail-modal .modal-body').html(response);
                         $('#job-detail-modal').modal('show').trigger('focus');
