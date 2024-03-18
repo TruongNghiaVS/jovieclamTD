@@ -390,6 +390,9 @@ $(document).ready(function() {
 		"dom": '<"dt-buttons"Bf><"clear">lirtp',
 		"paging": false,
 		"autoWidth": true,
+        "oLanguage": {
+        "sEmptyTable": "Không có dữ liệu"
+        },
         bFilter: false, bInfo: false,
         
 		"buttons": [{
