@@ -73,7 +73,7 @@ $company = $job->getCompany();
                         @if($job->isJobExpired())
                         <span class="btn btn-primary btn-apply">
                             <!-- <i class="fa fa-paper-plane iconawesome" aria-hidden="true"></i> -->
-                            Nộp Đơn
+                            Nộp Đơn Ứng Tuyển
                             <!-- {{__('Job is expired')}} -->
                         </span>
                         @elseif(Auth::check() && Auth::user()->isAppliedOnJob($job->id))
@@ -83,7 +83,7 @@ $company = $job->getCompany();
                         @else
                         <a href="{{route('apply.job', $job->slug)}}" class="btn btn-primary apply"><i
                                 class="fa fa-paper-plane iconawesome" aria-hidden="true"></i>
-                            Nộp Đơn
+                            Nộp Đơn Ứng Tuyển
                         </a>
                         @endif
                         @if(Auth::check() && Auth::user()->isFavouriteJob($job->slug))
@@ -1094,7 +1094,7 @@ $company = $job->getCompany();
                             @if($job->isJobExpired())
                             <span class="btn btn-primary btn-apply">
                                 <!-- <i class="fa fa-paper-plane iconawesome" aria-hidden="true"></i> -->
-                                Nộp Đơn
+                                Nộp Đơn Ứng Tuyển
                                 <!-- {{__('Job is expired')}} -->
                             </span>
                             @elseif(Auth::check() && Auth::user()->isAppliedOnJob($job->id))
@@ -1104,7 +1104,7 @@ $company = $job->getCompany();
                             @else
                             <a href="{{route('apply.job', $job->slug)}}" class="btn btn-primary apply"><i
                                     class="fa fa-paper-plane iconawesome" aria-hidden="true"></i>
-                                Nộp Đơn
+                                Nộp Đơn Ứng Tuyển
                             </a>
                             @endif
                             @if(Auth::check() && Auth::user()->isFavouriteJob($job->slug))
