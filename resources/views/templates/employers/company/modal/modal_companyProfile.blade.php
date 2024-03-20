@@ -56,7 +56,7 @@ $company = Auth::guard('company')->user();
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12" bis_skin_checked="1">
                                             <div class="img-thumnail__wrapper">
-                                                    {{ ImgUploader::print_image("company_logos/$company->cover_logo") }}
+                                                    {{$company->printCompanyCoverImage()}}
                                                 </div>
 
                                         </div>
