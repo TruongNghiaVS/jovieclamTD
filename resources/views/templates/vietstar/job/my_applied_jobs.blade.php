@@ -69,7 +69,7 @@
     
                                 <!--Day update and place Start-->
                                 <div class="info-item day-update" bis_skin_checked="1">
-                                    Hôm nay
+                                    Hôm Nay
                                 </div>
                                 <div class="info-item Interview" bis_skin_checked="1">
                                     <i class="iconmoon icon-calendar-icon1"></i>Interview at: 16:30 20/07/2022

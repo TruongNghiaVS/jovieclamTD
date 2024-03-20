@@ -120,7 +120,7 @@
 
                                             <!--Day update and place Start-->
                                             <div class="info-item day-update">
-                                                Hôm nay
+                                                Hôm Nay
                                             </div>
                                             <!--Day update and place End-->
 

@@ -22,7 +22,7 @@
                         <div class="visual"> <i class="fa fa-user"></i> </div>
                         <div class="details">
                             <div class="number"> <span data-counter="counterup" data-value="1349">{{ $totalTodaysUsers }}</span> </div>
-                            <div class="desc"> Số Ứng viên hôm nay </div>
+                            <div class="desc"> Số Ứng viên Hôm Nay </div>
                         </div>
                     </a> </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"> <a class="dashboard-stat dashboard-stat-v2 red" href="#">
@@ -45,7 +45,7 @@
                         <div class="visual"> <i class="fa fa-list"></i> </div>
                         <div class="details">
                             <div class="number"> <span data-counter="counterup" data-value="1349">{{ $totalTodaysJobs }}</span> </div>
-                            <div class="desc"> Việc làm hôm nay </div>
+                            <div class="desc"> Việc làm Hôm Nay </div>
                         </div>
                     </a> </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"> <a class="dashboard-stat dashboard-stat-v2 blue" href="#">

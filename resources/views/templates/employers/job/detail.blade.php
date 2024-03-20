@@ -491,7 +491,7 @@ $company = $job->getCompany();
 
                                     <!--Day update and place Start-->
                                     <div class="info-item day-update" bis_skin_checked="1">
-                                        Hôm nay
+                                        Hôm Nay
                                     </div>
                                     <!--Day update and place End-->
 
@@ -576,7 +576,7 @@ $company = $job->getCompany();
 
                                     <!--Day update and place Start-->
                                     <div class="info-item day-update" bis_skin_checked="1">
-                                        Hôm nay
+                                        Hôm Nay
                                     </div>
                                     <!--Day update and place End-->
 
