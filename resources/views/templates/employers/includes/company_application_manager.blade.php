@@ -31,6 +31,8 @@
                 </thead>
                 <tbody>
                     @if(count($userApply) > 0)
+              
+                    
                     @foreach($userApply as $value)
                           @if($value->user == null )
                               @continue;
@@ -109,10 +111,9 @@
                                 <a role="button" onClick="submitUpdateNoteApplication({{ $value->id }});" class="dropdown-item"  data-toggle="modal" data-target="#modalReviewApplicationNote">Ghi chú</a> 
                                       @php
                                         $cvUserApply = $value->user->getDefaultCv();
-
                                        @endphp
                                        
-                                       @if( $cvUserApply->type =="1")    
+                                       @if( $cvUserApply->type =="0")    
                                             <a role="button" href="javascript:void(0)" class="dropdown-item public-profile-toggle"
                                                 onclick="showModal_candidate('{{ $value->user->id }}', '{{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name  }}');">
                                                                 <!-- Rest of your code here -->Xem cv
