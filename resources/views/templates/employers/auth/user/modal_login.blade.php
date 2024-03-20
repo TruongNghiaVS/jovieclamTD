@@ -143,6 +143,7 @@
     })()
 $(document).ready(function() {
     $('#employers_login').submit(function(event) {
+   
         var isValid = true;
         event.preventDefault()
         
@@ -189,8 +190,11 @@ $(document).ready(function() {
      
 
             $.ajax({
+          
             type: "POST",
-            url:  '{{ route('company.login') }}',
+            url: '{{ URL::to('/recruiter/login',array(), true) }}',
+          
+            
             data: $(this).serialize(),
             beforeSend:showSpinner(),
             statusCode: {
@@ -201,10 +205,6 @@ $(document).ready(function() {
         
                 },
                 401: function(responseObject, textStatus, jqXHR) {
-            
-
-                    // No content found (404)
-                    console.log(responseObject.responseJSON);
                     responseObject.responseJSON.error.forEach(err => {
                         $(`#employers_login .invalid-feedback.${err.key}-error`).empty();
 
@@ -217,11 +217,9 @@ $(document).ready(function() {
                     // This code will be executed if the server returns a 404 response
                 },
                 503: function(responseObject, textStatus, errorThrown) {
-                    // Service Unavailable (503)
-                    console.log(responseObject.error);
-                    hideSpinner();
+                     hideSpinner();
 
-                    // This code will be executed if the server returns a 503 response
+                 
                 }           
                 }
                 })
