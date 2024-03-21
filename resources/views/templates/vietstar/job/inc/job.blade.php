@@ -5,7 +5,7 @@
 @else
 {!! Form::open(['route' => 'store.front.job', 'method' => 'POST', 'id' => 'new-job-form', 'class' => 'form', 'novalidate'] ) !!}
 @endif
-
+{{csrf_field()}}
 <div class="card card-edit-profile">
     <h2 class="fs-4 card-edit-profile__section">Thông Tin Tuyển Dụng</h2>
     <div class="card-body">

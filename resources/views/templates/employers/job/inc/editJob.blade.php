@@ -23,6 +23,7 @@ else
 }
 
 ?>
+   {{csrf_field()}}
 
 <div class="card card-edit-profile">
     <h2 class="fs-4 card-edit-profile__section">Thông Tin Tuyển Dụng</h2>
