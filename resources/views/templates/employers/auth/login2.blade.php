@@ -19,6 +19,12 @@
             </div>
             <div class="col-lg-6 col-md-7 col-sm-12" bis_skin_checked="1">
                 <div class="box-info-signup forgot-password" id="login" bis_skin_checked="1">
+                    @if(1==1)
+                        <div class="message-text d-flex justify-content-center flex-column " bis_skin_checked="1">
+                                <p class="text-center text-primary two-row-p"> Bạn đã kích hoạt tài khoản thành công</p>
+                                <p class="text-center text-primary two-row-p"> Vui lòng đăng nhật để trải nghiệm dịch vụ.</p>
+                        </div>
+                    @endif
                     <div class="title" bis_skin_checked="1">
                         <h2 class="text-primary text-center"> {{__('Login')}}</h2>
                     </div>
@@ -115,6 +121,11 @@
         font-size: 17px;
         color: #333;
     }
+    .two-row-p {
+    display: inline-block; /* Set display to inline-block */
+    width: 50%; /* Set width to 50% to span two rows */
+    margin: auto; /* Center the element */
+  }
 
     .main-form .form-group .form-info {
         -webkit-box-flex: 0;
@@ -158,6 +169,13 @@
 
     .btn-area {
         text-align: right;
+    }
+    .message-text {
+        margin-bottom: 20px;
+        
+    }
+    .message-text p{
+        font-size:18px;
     }
 </style>
 @endpush
