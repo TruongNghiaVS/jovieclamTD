@@ -101,7 +101,7 @@
                 <h5>CÔNG TY CỔ PHẦN TẬP ĐOÀN VIETSTAR</h5>
                 <ul class="contact-detail">
                     <li style="padding-left: 0">54/31 Đ. Phổ Quang, Phường 2, Tân Bình, Thành phố Hồ Chí Minh, Việt Nam</li>
-                    <li><i class="fa-solid fa-phone"></i>02871000 555</li>
+                    <li><i class="fa-solid fa-phone"></i>0938797478</li>
                     <li><i class="far fa-envelope"></i>info@jobvieclam.com</li>
                 </ul>
             </div>

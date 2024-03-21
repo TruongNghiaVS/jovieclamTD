@@ -147,8 +147,8 @@
                 <ul class="contact-detail">
                     <li style="padding-left: 0">54/31 Đ. Phổ Quang, Phường 2, Tân Bình, Thành phố Hồ Chí Minh, Việt Nam</li>
                     <li><i class="fa-solid fa-phone"></i>
-                    <a class="" href="tel:02871000 555"> 
-                        02871000 555 
+                    <a class="" href="tel:0938797478"> 
+                        0938797478 
                     </a>
                 </li>
                     <li><i class="far fa-envelope"></i>
