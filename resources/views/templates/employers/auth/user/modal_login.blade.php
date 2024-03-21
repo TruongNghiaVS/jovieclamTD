@@ -192,7 +192,7 @@ $(document).ready(function() {
             $.ajax({
           
             type: "POST",
-            url: '{{ URL::to('/recruiter/login',array(), true) }}',
+            url: '/recruiter/login',
           
             
             data: $(this).serialize(),
