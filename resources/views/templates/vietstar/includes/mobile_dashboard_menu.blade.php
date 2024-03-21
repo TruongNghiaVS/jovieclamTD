@@ -718,7 +718,9 @@
 
             <li>
                 <div class="my-2 group-button">
-                    <a class="nav-link login_link btn btn-primary login-btn btn-sm" data-toggle="modal" data-target="#user_login_Modal" >{{__('Log in')}} / {{__('Đăng Ký')}} </a>
+                    <a class="nav-link login_link btn btn-primary login-btn btn-sm" data-toggle="modal" data-target="#user_login_Modal" >{{__('Log in')}}</a>
+
+                    <a class="nav-link login_link btn btn-primary login-btn btn-sm" data-toggle="modal" data-target="#user_logup_Modal" >{{__('Đăng Ký')}} </a>
                   
                     <!-- <a href="{{url('/employers')}}" class="btn btn-primary">Dành cho Nhà tuyển dụng</a> -->
                     <a href="http://127.0.0.1:8001/employers" class="btn btn-primary btn-sm">Dành Cho Nhà Tuyển Dụng</a>

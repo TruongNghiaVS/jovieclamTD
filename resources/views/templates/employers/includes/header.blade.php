@@ -173,7 +173,9 @@
 
 
                 @if(!Auth::guard('company')->check() || !Auth::guard('company')->user()->is_active == 1)
-                <a class="nav-link login-link" data-toggle="modal" data-target="#employer_login_Modal">{{__('Log in')}} / {{__('Đăng Ký')}} </a>
+                    <a class="nav-link login-link" data-toggle="modal" data-target="#employer_login_Modal">{{__('Log in')}}</a>
+                    <a class="nav-link login-link me-3" data-toggle="modal" data-target="#employer_logup_Modal">{{__('Đăng Ký')}} </a>
+
                 @endif
 
                 

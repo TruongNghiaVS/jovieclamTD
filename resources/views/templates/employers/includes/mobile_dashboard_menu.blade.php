@@ -672,7 +672,10 @@
             @if(!Auth::guard('company')->check() ||  $company_active == 0)
                 <li>
                     <div class="my-2 group-button">
-                        <a class="nav-link login_link btn btn-primary login-btn btn-sm" data-toggle="modal" data-target="#employer_login_Modal" >{{__('Log in')}} / {{__('Đăng Ký')}} </a>
+                        <div class="d-flex">
+                            <a class="nav-link login_link btn btn-primary login-btn btn-sm me-2" data-toggle="modal" data-target="#employer_login_Modal" >{{__('Log in')}} </a>
+                            <a class="nav-link login_link btn btn-primary login-btn btn-sm" data-toggle="modal" data-target="#employer_logup_Modal" >{{__('Đăng Ký')}} </a>
+                        </div>
                         <a href="https://jobvieclam.com" class="btn btn-primary btn-sm">Dành Cho Ứng Viên</a>
                     </div>
                 </li>
