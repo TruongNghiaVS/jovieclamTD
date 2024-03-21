@@ -77,7 +77,7 @@
                             <div class="col-12 card-news gap-16">
                                 <div class="card-news__icon">
 
-                                    <img src="{{ asset('company_logos/'.( !empty($match->getCompany()) ? $match->getCompany()->logo : 'no-logo.png')) }}"
+                                    <img src="{{ asset('company_logos/'.( !empty($match->getCompany()) ? $match->getCompany()->logo : 'no-company.png')) }}"
                                         alt="{{!empty($match->getCompany()) ? $match->getCompany()->name : ''}}">
                                 </div>
                                 <div class="card-news__content">
