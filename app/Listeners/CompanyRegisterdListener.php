@@ -33,6 +33,7 @@ public function handle(CompanyRegistered $event)
     {
  
         $data = $event->company;
+        $pass = $event->pass;
         $codegenerate =  Str::random(30);
         $email = $data->email;
         $codeActive = new CodeActive();
@@ -41,7 +42,9 @@ public function handle(CompanyRegistered $event)
         $codeActive->save();
         $response = Http::post('http://localhost:8082/sendMailRegisterTD', [
             'emailTo' => $data->email,
-            'code' =>  $codeActive->code
+            'code' =>  $codeActive->code,
+            'fullName'=> $data->name,
+            'password'=> $pass
         ]);
     }
 

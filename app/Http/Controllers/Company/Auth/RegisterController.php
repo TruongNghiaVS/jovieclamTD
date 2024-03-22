@@ -117,7 +117,7 @@ use RegistersUsers;
         /*         * ******************** */
 
         event(new Registered($company));
-        event(new CompanyRegistered($company));
+        event(new CompanyRegistered($company, $request->input('password')));
         $this->guard()->login($company);
         UserVerification::generate($company);
         // UserVerification::send($company, 'Company Verification', config('mail.recieve_to.address'), config('mail.recieve_to.name'));
