@@ -348,7 +348,7 @@
     #mobile-sidebar.active .sidebar-bottom {
         display: flex;
         width: 100%;
-        position: absolute;
+      
         bottom: 20px;
         justify-content: end;
         align-items: center;
