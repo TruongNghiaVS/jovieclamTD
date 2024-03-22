@@ -123,16 +123,12 @@
         width: 100%;
     }
 
-    #mobile-sidebar.active .sidebar-header {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #mobile-sidebar .sidebar-header {
+    #mobile-sidebar.active .sidebar-header{
         padding: 20px;
         background: white;
         width: 100%;
-        display: none;
+        display: flex;
+        flex-direction: column;
     }
 
     #mobile-sidebar ul.components {
