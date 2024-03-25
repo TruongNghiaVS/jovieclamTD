@@ -145,7 +145,7 @@
     }
 
     #mobile-sidebar ul li a {
-        padding: 20px 20px;
+        padding: 5px 5px;
         font-size: 1.1em;
         display: block;
     }
@@ -348,7 +348,7 @@
     #mobile-sidebar.active .sidebar-bottom {
         display: flex;
         width: 100%;
-        position: absolute;
+      
         bottom: 20px;
         justify-content: end;
         align-items: center;

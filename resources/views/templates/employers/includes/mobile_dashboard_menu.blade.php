@@ -123,16 +123,12 @@
         width: 100%;
     }
 
-    #mobile-sidebar.active .sidebar-header {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #mobile-sidebar .sidebar-header {
+    #mobile-sidebar.active .sidebar-header{
         padding: 20px;
         background: white;
         width: 100%;
-        display: none;
+        display: flex;
+        flex-direction: column;
     }
 
     #mobile-sidebar ul.components {
@@ -145,7 +141,7 @@
     }
 
     #mobile-sidebar ul li a {
-        padding: 20px 20px;
+        padding: 5px 5px;
         font-size: 1.1em;
         display: block;
     }
@@ -337,10 +333,24 @@
 
     .sidebar-main-nav.active {
 
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+        transition: 0.4s ease-in-out all;
+    }
+
+
+    .sidebar-main-nav {
+        
         -webkit-transform: translateX(-300px);
         -ms-transform: translateX(-300px);
         transform: translateX(-300px);
+        opacity: 1;
+        pointer-events: auto;
+        transition: 0.4s ease-in-out all;
     }
+
+
 
     .sidebar-user-nav.active {
         transform: translateX(0);
@@ -355,7 +365,7 @@
     #mobile-sidebar.active .sidebar-bottom {
         display: flex;
         width: 100%;
-        position: absolute;
+       
         bottom: 20px;
         justify-content: end;
         align-items: center;
@@ -367,11 +377,19 @@
         -ms-transform: translateX(-300px);
         transform: translateX(-300px);
         transition: 0.4s ease-out all;
-        
+        padding: 20px;
+        margin-bottom:20px;
+        max-height: 0%;
+        height: 0%;
+        display: none;
+
     }
     #mobile-sidebar.active .sidebar-bottom.active {
-      
         transform: translateX(0);
+        max-height: 20%;
+        height: 20%;
+        display: block;
+
     }
 
     .profile .back-menu-normal {
@@ -392,9 +410,7 @@
         font-weight: 800;
     }
 
-    .sidebar-bottom {
-        padding: 20px
-    }
+ 
 
     .sidebar-bottom ul li span {
         color: white;
@@ -456,7 +472,7 @@
 
         @endif
         <div class="menu">
-            <ul class="list-unstyled components sidebar-main-nav" id="sidebar-main-nav">
+            <ul class="list-unstyled components sidebar-main-nav active" id="sidebar-main-nav">
                 <li class="sidebar-item {{ Request::url() == route('index') ? 'active' : '' }}">
                     <a href="/" class="list-group-item list-group-item-action {{ Request::url() == route('index')  ? 'active' : '' }}">
                         <div class="d-flex w-100">
@@ -668,11 +684,11 @@
     </div>
 
     <div class="sidebar-bottom active">
-        <ul class="list-unstyled components sidebar-bottom__item">
+        <ul class="list-unstyled components sidebar-bottom__item mb-0">
             @if(!Auth::guard('company')->check() ||  $company_active == 0)
                 <li>
                     <div class="my-2 group-button">
-                        <div class="d-flex">
+                        <div class="d-flex mb-2">
                             <a class="nav-link login_link btn btn-primary login-btn btn-sm me-2" data-toggle="modal" data-target="#employer_login_Modal" >{{__('Log in')}} </a>
                             <a class="nav-link login_link btn btn-primary login-btn btn-sm" data-toggle="modal" data-target="#employer_logup_Modal" >{{__('Đăng Ký')}} </a>
                         </div>
@@ -726,7 +742,7 @@
 
         $('.openmyacount').click(function() {
             // Remove 'active' class from all li elements
-            $('.sidebar-main-nav').addClass('active');
+            $('.sidebar-main-nav').removeClass('active');
             $('.menu').addClass('active');
             $('.sidebar-user-nav').addClass('active');
             $('.back-menu-normal').addClass('active');
@@ -741,7 +757,7 @@
 
         $('.back-menu-normal').click(function() {
             // Remove 'active' class from all li elements
-            $('.sidebar-main-nav').removeClass('active');
+            $('.sidebar-main-nav').addClass('active');
             $('.menu').removeClass('active');
             $('.sidebar-user-nav').removeClass('active');
             $('.back-menu-normal').removeClass('active');

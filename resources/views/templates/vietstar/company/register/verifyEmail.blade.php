@@ -19,24 +19,28 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-8 col-sm-12" bis_skin_checked="1">
-                    <div class="box-info-signup forgot-password" id="form_reset_content" bis_skin_checked="1"><div class="title" bis_skin_checked="1">
+                    <div class="box-info-signup forgot-password" id="form_reset_content" bis_skin_checked="1">
+                                    <div class="title" bis_skin_checked="1">
                                         <h2 class="text-primary text-center">Xác Nhận Email</h2>
-                                    </div><div class="step-title d-flex align-center" bis_skin_checked="1">
-                                        <div class="main-step-title" bis_skin_checked="1">
-                                            <h3>Vui lòng kiểm tra email của bạn và làm theo hướng dẫn để hoàn thành các bước tạo tài khoản</h3>
-                                        </div>
-                                    </div><div class="main-form" bis_skin_checked="1"> <p class="my-3">
-                                                Nếu bạn sử dụng Gmail hoặc công ty bạn đang sử dụng dịch vụ email của Google để đăng ký tài khoản, bạn nên kiểm tra email trong các mục Inbox/Hộp thư đến (Primary, Social, Promotions) và Spam. Hoặc dùng công cụ tìm kiếm email để tìm tên email: support@jobvieclam.com
-                                            </p></div>
-                                            <div class="user-action" bis_skin_checked="1">
+                                    </div>
+                                    <div class="main-form" bis_skin_checked="1"> 
+                                        <p class="mb-3">
+                                               Thông tin tài khoản tuyển dụng đã được tạo. Vui lòng kiểm tra Email và làm theo hướng dẫn. Email xác nhận này sẽ chứa thông tin chi tiết về quy trình kích hoạt tài khoản của bạn.
+                                        </p>
 
-                                            <p> <a class="register" href="#" data-toggle="modal" data-target="#company_logup_Modal">Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
+                                        <p class="mb-3">
+                                               Vào thư mục thư rác (spam) nếu bạn không nhận được email trong vòng vài phút.
+                                        </p>
 
-                                            <div class="text-help" bis_skin_checked="1">
-                                                <p>Nếu bạn cần sự trợ giúp, vui lòng liên hệ:</p>
-                                                <p>Email: <a href="#" target="_blank">support@jobvieclam.com</a></p>
-                                            </div>
-                                        </div>
+                                        <p class="mb-3">
+                                              Nếu không nhận được email hoặc có bất kỳ thắc mắc nào, đừng ngận ngại liên hệ với chúng tôi qua email <a href="mailto:support@jobvieclam.com">Support@jobvieclam.com</a> hoặc số điện thoại <a href="tel:(848) 3822 6060">(848) 3822 6060</a> để được hỗ trợ.
+                                        </p>
+
+                                        <p class="mb-3">
+                                              Cảm ơn và chúc bạn một ngày tốt lành!
+                                        </p>
+                                    </div>
+                                        
                         </div>
             </div>
         </div>
@@ -72,7 +76,8 @@
     }
 
     .box-info-signup .title h2 {
-        margin-bottom: 35px;
+        margin-bottom: 20px;
+        font-size:25px
     }
 
     .box-info-signup .main-step-title h3 {
@@ -114,6 +119,10 @@
         -webkit-box-flex: 0;
         flex: 0 0 200px;
         max-width: 200px;
+    }
+    .main-form p {
+        font-size: 17px;
+        line-height: 25px;
     }
 
     .user-action {}
