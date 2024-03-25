@@ -94,11 +94,11 @@
                 <div class="footer-widget">
                     <h4 class="widget-title">Kết Nối Với Jobvieclam</h4>
                     <div class="socials">
-                        <a href="#" class="social"><i class="fa-brands fa-facebook-f fa-lg me-3"></i></a>
-                        <a href="#" class="social"><i class="fa-brands fa-twitter fa-lg me-3"></i></a>
-                        <a href="#" class="social"><i class="fa-brands fa-instagram fa-lg me-3"></i></a>
-                        <a href="#" class="social"><i class="fa-brands fa-linkedin-in fa-lg me-3"></i></a>
-                        <a href="#" class="social"><i class="fa-brands fa-youtube fa-lg me-3"></i></a>
+                        <a href="https://www.facebook.com/tuyendungvietstar"  target="_blank"  class="social"><i class="fa-brands fa-facebook-f fa-lg me-3"></i></a>
+                        <a href="#"  target="_blank"  class="social"><i class="fa-brands fa-twitter fa-lg me-3"></i></a>
+                        <a href="#"  target="_blank"  class="social"><i class="fa-brands fa-instagram fa-lg me-3"></i></a>
+                        <a href="#"  target="_blank"  class="social"><i class="fa-brands fa-linkedin-in fa-lg me-3"></i></a>
+                        <a href="#"  target="_blank"  class="social"><i class="fa-brands fa-youtube fa-lg me-3"></i></a>
 
                     </div>
                 </div>
