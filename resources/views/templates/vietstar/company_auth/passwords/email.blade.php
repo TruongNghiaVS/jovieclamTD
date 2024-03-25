@@ -2,6 +2,11 @@
 @section('content')
 <!-- Header start -->
 @include('templates.employers.includes.header')
+
+<!-- Dashboard menu start -->
+@include('templates.employers.includes.mobile_dashboard_menu')
+<!-- Dashboard menu end -->
+
 <!-- Header end -->
 <div class="reset-password-section cb-section">
     <div class="container">
