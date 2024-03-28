@@ -6,7 +6,7 @@
 
 <!-- Header end -->
 <!-- Inner Page Title start -->
-<section class="about-us-banner" style="background-image: url(/vietstar/imgs/company-cover.jpg);"></section>
+<section class="about-us-banner" style="background-image: url(/admin_assets/no-cover.png);"></section>
     <!-- Bootstrap CSS -->
 <!-- jQuery first, then Bootstrap JS. -->
 <!-- Nav tabs -->
