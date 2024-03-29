@@ -17,7 +17,7 @@
 <!-- Inner Page Title start -->
 
 <!-- Inner Page Title end -->
-<div class="inner-page">
+<div class="inner-page contact-page">
     <!-- About -->
     <div class="container">
         <div class="contact-wrap shadow">
@@ -161,6 +161,39 @@
 </div>
 @include('templates.employers.includes.footer')
 @endsection
+
+@push('styles')
+<style>
+    @media screen and (max-height: 1080px) {
+        .contact-page.inner-page {
+            padding: 10px 0;
+       
+        }
+        .contact-form input {
+            height: 50px;
+        }
+        .contact-form input, .contact-form textarea {
+            margin-bottom: unset;
+            padding: 0px 20px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: unset;
+        }
+
+        .contact-form button {
+            margin-top: unset;
+        }
+
+
+        .contact-now .googlemap iframe  {
+            height:300px
+        }
+
+    }
+</style>
+@endpush
+
 
 @push('scripts')
 <script type="text/javascript">

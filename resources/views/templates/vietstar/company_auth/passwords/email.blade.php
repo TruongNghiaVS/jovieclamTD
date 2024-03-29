@@ -2,6 +2,11 @@
 @section('content')
 <!-- Header start -->
 @include('templates.employers.includes.header')
+
+<!-- Dashboard menu start -->
+@include('templates.employers.includes.mobile_dashboard_menu')
+<!-- Dashboard menu end -->
+
 <!-- Header end -->
 <div class="reset-password-section cb-section">
     <div class="container">
@@ -142,100 +147,112 @@
 @push('scripts')
 <script type="text/javascript">
     $('#resetPasswordBtn_company').on('click', function() {
-    // Get values from the form
-    var email = $('#resetPasswordForm_company #email').val();
-    var verificationCode = $('#resetPasswordForm_company #verificationCode').val();
 
-    // Validate form fields
-    $('.invalid-feedback').hide();
-
-
-    // Validate form fields
-    if (!email) {
-        $('.email-error').show(); // Show email error message
-
-    }
-
-    if (!verificationCode) {
-        $('.code-error').show(); // Show verification code error message
-
-    }
-
-
+        // Get values from the form
+       
+        var email = $('#resetPasswordForm_company #email').val();
+       
+        var verificationCode = $('#resetPasswordForm_company #verificationCode').val();
+    
+        // Validate form fields
+        $('.invalid-feedback').hide();
+    
+    
+        // Validate form fields
+        if (!email) {
+            $('.email-error').show(); // Show email error message
+    
+        }
+    
+        if (!verificationCode) {
+            $('.code-error').show(); // Show verification code error message
+    
+        }
+    
+    
             $.ajax({
-            type: "POST",
-            url:  '{{url('/')}}/recruiter/requestResetPassword',
-            beforeSend:showSpinner(),
-            data: {
-                email:email,
-            },
-            statusCode: {
-                202 :  function(responseObject, textStatus, jqXHR) {
-                    hideSpinner();
-
-                    console.log(responseObject.error);
-        
+                type: "POST",
+                url:  '{{url('/')}}/recruiter/requestResetPassword',
+                beforeSend:showSpinner(),
+                data: {
+                    email:email,
                 },
-                400: function(responseObject, textStatus, jqXHR) {
-                    hideSpinner();
-
-                    // No content found (400)
-                    if(responseObject.responseJSON.error){
-
-                        responseObject.responseJSON.error.forEach((element,key) => {
-                                console.log(element?.key,element?.textError);
-                                $(`.${element?.key}-error`).empty();
-                                $(`.${element?.key}-error`).text(element?.textError);
-        
-                                $(`.${element?.key}-error`).show();
-                            
-                        });
+                statusCode: {
+                    202 :  function(responseObject, textStatus, jqXHR) {
+                        hideSpinner();
+    
+                        console.log(responseObject.error);
+            
+                    },
+                    400: function(responseObject, textStatus, jqXHR) {
+                        hideSpinner();
+    
+                        // No content found (400)
+                        if(responseObject.responseJSON.error){
+    
+                            responseObject.responseJSON.error.forEach((element,key) => {
+                                    console.log(element?.key,element?.textError);
+                                    $(`.${element?.key}-error`).empty();
+                                    $(`.${element?.key}-error`).text(element?.textError);
+            
+                                    $(`.${element?.key}-error`).show();
+                                
+                            });
+                        }
+                       
+                        // This code will be executed if the server returns a 404 response
+                    },
+                    503: function(responseObject, textStatus, errorThrown) {
+                        hideSpinner();
+    
+                        // Service Unavailable (503)
+                        console.log(responseObject.error);
+    
+                        // This code will be executed if the server returns a 503 response
+                    }           
                     }
-                   
-                    // This code will be executed if the server returns a 404 response
-                },
-                503: function(responseObject, textStatus, errorThrown) {
-                    hideSpinner();
+                    })
+                    .done(function(data){
+                            hideSpinner();
+                            showModal_Success("Thông báo","Yêu cầu được gửi thành công","")
+                            $("#form_reset_content").empty();
+                                $("#form_reset_content").append(`<div class="title" bis_skin_checked="1">
+                                                <h2 class="text-primary">Quên Mật Khẩu</h2>
+                                            </div>`)
+    
+                                $("#form_reset_content").append(`<div class="step-title d-flex align-center" bis_skin_checked="1">
+                                                <div class="main-step-title" bis_skin_checked="1">
+                                                    <h3>Vui lòng kiểm tra email của bạn và làm theo hướng dẫn để tạo mật khẩu mới</h3>
+                                                </div>
+                                            </div>`)
+                                $("#form_reset_content").append(`<div class="main-form"  bis_skin_checked="1"> <p class="my-3">
+                                                        Nếu bạn sử dụng Gmail hoặc công ty bạn đang sử dụng dịch vụ email của Google để đăng ký tài khoản, bạn nên kiểm tra email trong các mục Inbox/Hộp thư đến (Primary, Social, Promotions) và Spam. Hoặc dùng công cụ Tìm Kiếm email để tìm tên email: support@Jobvieclam.
+                                                    </p></div>
+                                                    <div class="user-action" bis_skin_checked="1">
+    
+                                                    <p> <a class="register" href="/employer/register" target="_self" >Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
+    
+                                                    <div class="text-help" bis_skin_checked="1">
+                                                        <p>Nếu bạn cần sự trợ giúp, vui lòng liên hệ:</p>
+                                                        <p>Email: <a href="mailto:support@jobvieclam.com" target="_self">support@jobvieclam.com</a></p>
+                                                    </div>
+                                                </div>`)
+                                                
+                        setTimeout(() => {
+                            $('#customModal-success').modal('hide')
+    
+                            window.location.href = "/";
+                        }, 1500);
+                    })               
+                    
+                    .fail(function(jqXHR, textStatus){
+                        hideSpinner();
+                        
+                    })
+                    .always(function(jqXHR, textStatus) {
+                    
+                    });
+    })
 
-                    // Service Unavailable (503)
-                    console.log(responseObject.error);
-
-                    // This code will be executed if the server returns a 503 response
-                }           
-                }
-                })
-                .done(function(data){
-                    hideSpinner();
-                    $("#form_reset_content").empty();
-                        $("#form_reset_content").append(`<div class="title" bis_skin_checked="1">
-                                        <h2 class="text-primary">Quên Mật Khẩu</h2>
-                                    </div>`)
-
-                        $("#form_reset_content").append(`<div class="step-title d-flex align-center" bis_skin_checked="1">
-                                        <div class="main-step-title" bis_skin_checked="1">
-                                            <h3>Vui lòng kiểm tra email của bạn và làm theo hướng dẫn để tạo mật khẩu mới</h3>
-                                        </div>
-                                    </div>`)
-                        $("#form_reset_content").append(`<div class="main-form"  bis_skin_checked="1"> <p class="my-3">
-                                                Nếu bạn sử dụng Gmail hoặc công ty bạn đang sử dụng dịch vụ email của Google để đăng ký tài khoản, bạn nên kiểm tra email trong các mục Inbox/Hộp thư đến (Primary, Social, Promotions) và Spam. Hoặc dùng công cụ Tìm Kiếm email để tìm tên email: support@Jobvieclam.
-                                            </p></div>
-                                            <div class="user-action" bis_skin_checked="1">
-
-                                            <p> <a class="register" href="/employer/register" target="_self" >Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
-
-                                            <div class="text-help" bis_skin_checked="1">
-                                                <p>Nếu bạn cần sự trợ giúp, vui lòng liên hệ:</p>
-                                                <p>Email: <a href="mailto:support@jobvieclam.com" target="_self">support@jobvieclam.com</a></p>
-                                            </div>
-                                        </div>`)
-                })
-                .fail(function(jqXHR, textStatus){
-                    hideSpinner();
-                })
-                .always(function(jqXHR, textStatus) {
-                
-                });
-
-    });
 </script>
 @endpush

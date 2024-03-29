@@ -269,14 +269,29 @@
     margin: 0px 0;
     flex-wrap: wrap;
 }
-.our_customer .group-company img {
-    width: 170px;
-    height: 100px;
-}
 
 .trust-by {
-    flex: 20%; 
+    width: 150px;
+    height: 150px;
+    display: block;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
 }
+
+.our_customer .group-company img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    object-fit: contain;
+}
+
+
 .login-link {
     font-weight: 600;
 

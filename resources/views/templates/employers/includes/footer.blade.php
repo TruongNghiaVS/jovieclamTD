@@ -94,11 +94,11 @@
                 <div class="footer-widget">
                     <h4 class="widget-title">Kết Nối Với Jobvieclam</h4>
                     <div class="socials">
-                        <a href="#" class="social"><i class="fa-brands fa-facebook-f fa-lg me-3"></i></a>
-                        <a href="#" class="social"><i class="fa-brands fa-twitter fa-lg me-3"></i></a>
-                        <a href="#" class="social"><i class="fa-brands fa-instagram fa-lg me-3"></i></a>
-                        <a href="#" class="social"><i class="fa-brands fa-linkedin-in fa-lg me-3"></i></a>
-                        <a href="#" class="social"><i class="fa-brands fa-youtube fa-lg me-3"></i></a>
+                        <a href="https://www.facebook.com/tuyendungvietstar"  target="_blank"  class="social"><i class="fa-brands fa-facebook-f fa-lg me-3"></i></a>
+                        <a href="#"  target="_blank"  class="social"><i class="fa-brands fa-twitter fa-lg me-3"></i></a>
+                        <a href="#"  target="_blank"  class="social"><i class="fa-brands fa-instagram fa-lg me-3"></i></a>
+                        <a href="#"  target="_blank"  class="social"><i class="fa-brands fa-linkedin-in fa-lg me-3"></i></a>
+                        <a href="#"  target="_blank"  class="social"><i class="fa-brands fa-youtube fa-lg me-3"></i></a>
 
                     </div>
                 </div>
@@ -133,7 +133,7 @@
 
                 <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="text-white py-2 fs-18px"> <a href="" class="text-white py-2 fs-18px">Thiết Kế CV</a></div>
-                                <div class="text-white py-2 fs-18px"> <a href="" class="text-white py-2 fs-18px">Bí Quyết Tìm Việc</a></div>
+                                <div class="text-white py-2 fs-18px"> <a href="/tin-tuc/bi-quyet-tim-viec" class="text-white py-2 fs-18px">Bí Quyết Tìm Việc</a></div>
                                 <div class="text-white py-2 fs-18px"> <a href="" class="text-white py-2 fs-18px">Kỹ Năng Phỏng Vấn</a></div>
                 </div>
              </div>
@@ -181,7 +181,7 @@
         <!-- <span class="real-lanmak" style="display:none;">Jobvieclam</span> -->
     </a>
 
-    <a href="https://zalo.me/0969075139" class="icon-button lanmak-zalo"><i class="zalo-lanmak" target="_blank"></i>
+    <a href="https://zalo.me/0938797478" class="icon-button lanmak-zalo"><i class="zalo-lanmak" target="_blank"></i>
         <!-- <span class="real-lanmak" style="display:none;">Jobvieclam</span> -->
     </a>
 </div>

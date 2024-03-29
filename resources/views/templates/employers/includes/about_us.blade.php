@@ -14,7 +14,7 @@
 </style>
 <section class="our_customer aboutus-hp cb-section ">
     <div class="container">
-        <h2 class="aboutusHOmepage text-center text-primary">
+        <h2 class="aboutusHOmepage section-title text-center text-primary">
             {{__('About Us')}}
         </h2>
         <div class="about_us_content animation fade-top active" bis_skin_checked="1">
@@ -34,7 +34,7 @@
                     </p>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 about_us_img">
-                        <img class="about_us_content__img" src="{{ asset('/') }}admin_assets/hoatdong.jpeg" alt="about us">
+                        <img class="about_us_content__img" src="{{ asset('/') }}admin_assets/hoatdong.jpg" alt="about us">
                 </div>
             </div>
 
