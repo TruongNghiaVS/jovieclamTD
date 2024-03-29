@@ -134,6 +134,9 @@
     .banner-form__wrapper {
         width: 100%;
         height: 100%;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+        overflow: hidden;
     }
     .banner-form__wrapper img {
         width: 100%;
