@@ -144,7 +144,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group col-12 col-sm-12 col-md-10 text-center mx-auto mobile-padding-no  {{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                                        <div class="form-group col-12 col-sm-12 col-md-10 text-center  mobile-padding-no  {{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
                                             {!! app('captcha')->display() !!}
                                             @if ($errors->has('g-recaptcha-response')) <span class="help-block">
                                                 <strong>{{ $errors->first('g-recaptcha-response') }}</strong> </span> @endif

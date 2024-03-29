@@ -107,7 +107,7 @@
 
 
 #user_login_Modal .modal-body ,#user_logup_Modal .modal-body {
-	padding: 2rem;
+	padding: 20px;
 }
 
 
@@ -119,7 +119,7 @@
 }
 
 #employer_login_Modal .modal-body ,#employer_logup_Modal .modal-body {
-	padding: 2rem;
+	padding: 20px;
 }
 
 
@@ -156,14 +156,12 @@
 /* CSS chiều cao màn hình dưới 1080px */
 @media screen and (max-height: 1080px) {
 	#employer_login_Modal h3, #employer_logup_Modal h3 {
-		margin-bottom: 5px;
+		margin-bottom: 20px;
 	}
 	#employer_login_Modal .formpanel,#employer_logup_Modal  .formpanel {
 		margin-top: unset;
 	}
-	#employer_login_Modal .formpanel .formrow ,#employer_logup_Modal  .formpanel .formrow {
-		margin-bottom: 5px;
-	}
+	
 
 	#employer_login_Modal .form-group,#employer_logup_Modal .form-group {
 		margin-bottom: 5px;
