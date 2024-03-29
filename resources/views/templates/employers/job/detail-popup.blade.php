@@ -100,22 +100,26 @@
         <h3 class="job-information__title">{{__('Job Description')}}</h3>
         <div class="inner-content">{!! $job->description !!}</div>
     </div>
+    @if (!empty($job->requirement))
+
     <div class="job-information">
         <h3 class="job-information__title">{{__('Job Requirements')}}</h3>
         <div class="inner-content">{!! $job->requirement !!}</div>
     </div>
 
+    @if (!empty( $job->benefits))
     <div class="job-information">
         <h3 class="job-information__title">{{__('Benefits')}}</h3>
         <div class="inner-content">{!! $job->benefits !!}</div>
     </div>
+    @endif
 
-    <h6 class="mb-2">{{ __('Skills') }}</h6>
-    <div class="mb-5">
-        @if (!empty($job_skill_ids) && count($job_skill_ids) > 0)
+    @if (!empty($job_skill_ids) && count($job_skill_ids) > 0)
+        <h6 class="mb-2">{{ __('Skills') }}</h6>
+        <div class="mb-5">
             @foreach ($job_skill_ids as $jobSkillId)
                 <span class="badge badge-light">{{ $jobSkills[$jobSkillId] ?? 'NA' }}</span>
             @endforeach
-        @endif
-    </div>
+        </div>
+    @endif
 </section>
