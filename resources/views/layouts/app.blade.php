@@ -18,6 +18,14 @@ if (!isset($seo)) {
     <meta name="keywords" content="@yield('keywords')">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+    <!-- social meta tag share start -->
+    @yield('meta_tags')
+    <!-- social meta tag share end -->
+
+
+
+
+
     {!! $seo->seo_other !!}
     <link rel="icon" type="image/x-icon" href="{{ asset('/vietstar/imgs/jobvieclam.png') }}">
 

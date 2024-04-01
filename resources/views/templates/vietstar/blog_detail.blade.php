@@ -3,98 +3,57 @@
 @include('templates.employers.includes.header')
 
 @include('templates.employers.includes.mobile_dashboard_menu')
-
-<!-- Inner Page Title start -->
-<!-- Inner Page Title end -->
-{{-- @if(null!==($blog)) 
-
-
-<div class="">
-    <section id="blog-content">
-        <div class="container">
-            <?php
-            $cate_ids = explode(",", $blog->cate_id);
-            $data = DB::table('blog_categories')->whereIn('id', $cate_ids)->get();
-            $cate_array = array();
-            foreach ($data as $cat) {
-                $cate_array[] = "<a href='" . url('/blog/category/') . "/" . $cat->slug . "'>$cat->heading</a>";
-            }
-            ?>
-            <!-- Blog start -->
-            <div class="row">
-                <div class="col-lg-9">
-                    <!-- Blog List start -->
-                    <div class="blogWraper">
-                        <div class="blogList">
-                            <div class="blog-detail bloginner pb-5">
-                                <h2>{{$blog->heading}}</h2>
-<div class="postimg">{{$blog->printBlogImage()}}</div>
-<div class="post-header">
-    <!-- <div class="postmeta">Category : {!!implode(', ',$cate_array)!!}</div> -->
-</div>
-<p>{!! $blog->content !!}</p>
-</div>
-</div>
-</div>
-</div>
-
-
-</div>
-</div>
-</section>
-<div class="container">
-    <hr>
-</div>
-<section class="">
-    <div class="container">
-
-        <h3 class="section-title aline-left mb-3">{{__('Related post')}} </h3>
-        <div class="blogwrapper">
-            <div class="blogList">
-                <div class="row">
-                    @if(!empty($data))
-                    @foreach($data as $item)
-                    @php($posts = \App\Blog::where('cate_id', 'like', $item->id)->where('id','!=',$blog->id)->get())
-                    @foreach($posts as $related_post)
-                    <div class="col-xl-3 col-lg-4 col-md-4 mb-3">
-                        <a href="{{route('blog-detail',$related_post->slug)}}" class="bloginner">
-                            <div class="postimg">{{$related_post->printBlogImage()}}</div>
-                            <div class="post-header li-text">
-
-                                <h4>
-                                    <span class="li-head">{{$related_post->heading}}</span>
-                                </h4>
-
-                            </div>
-
-                        </a>
-                    </div>
-                    @endforeach
-                    @endforeach
-                    @endif
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-</div>
-
-@endif
-
---}}
-
-
-<div class="blog-single gray-bg">
-    <div class="container">
         <?php
         $cate_ids = explode(",", $blog->cate_id);
         $data = DB::table('blog_categories')->whereIn('id', $cate_ids)->get();
         $cate_array = array();
+        $meta_url_text =  "";
         foreach ($data as $cat) {
             $cate_array[] = "<a href='" . url('/blog/category/') . "/" . $cat->slug . "'>$cat->heading</a>";
+            $meta_url_text = url('tin-tuc') . '/' . $cat->slug . '/' . $blog->slug;
+        }
+
+        if(isset($blog->image)){
+            $meta_images_tag = "/uploads/blogs" . $blog->image;
+           
+        }
+        else {
+            $meta_images_tag = "/assets/job-detail-share.png";
         }
     
+    
         ?>
+
+        @if(isset($blog))  
+            @section('meta_tags')
+            <!-- Meta tag start -->
+
+
+            <!-- For Facebook -->
+            <meta property="og:title" content="{{ $blog->heading }}" />
+            <meta property="og:type" content="article" />
+            <meta property="og:image" content="{{url('/')}}{{$meta_images_tag}}" />
+            <meta property="og:url" content="{{ $meta_url_text }}" />
+            <meta property="og:description" content="{{ strip_tags($blog->meta_descriptions) }}" />
+
+            <!-- For Twitter -->
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:title" content="{{ $blog->heading }}" />
+            <meta name="twitter:description" content="{{ strip_tags($blog->meta_descriptions) }}" />
+
+            <!-- Meta tag end -->
+            @endsection
+
+        @endif
+<!-- Inner Page Title start -->
+<!-- Inner Page Title end -->
+
+
+<div class="blog-single gray-bg">
+    <div class="container">
+
+
+        
         <div class="row align-items-start">
             <div class="col-lg-9">
                 <article class="article">

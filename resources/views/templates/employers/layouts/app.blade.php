@@ -18,6 +18,10 @@ if (!isset($seo)) {
     <meta name="description" content="@yield('description')">
     <meta name="keywords" content="@yield('keywords')">
 
+    <!-- social meta tag share start -->
+    @yield('meta_tags')
+    <!-- social meta tag share end -->
+
     {!! $seo->seo_other !!}
     <link rel="icon" type="image/x-icon" href="{{ asset('/vietstar/imgs/jobvieclam.png') }}">
 

@@ -19,6 +19,11 @@ if (!isset($seo)) {
     {!! $seo->seo_other !!}
     <link rel="icon" type="image/x-icon" href="{{ asset('/vietstar/imgs/jobvieclam.png') }}">
 
+     <!-- social meta tag share start -->
+    @yield('meta_tags')
+    <!-- social meta tag share end -->
+
+    
     <!-- Here is the AOS CSS file  -->
     <link href="{{ asset('/vietstar/css/bootstrap.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/vietstar/css/swiper-bundle.min.css')}}" />
