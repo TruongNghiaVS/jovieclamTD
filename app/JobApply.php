@@ -56,9 +56,11 @@ class JobApply extends Model
         return $this->belongsTo('App\ProfileCv', 'cv_id', 'id');
     }
 
+
+
     public function GetInfomationCV()
     {
-        return $this->hasOne(App\ProfileCv::class, 'id', 'cv_id');
+        return $this->hasOne(App\ProfileCv::class, 'id', 'cv_id')->first();
     }
 
     public function getProfileCv($field = '')

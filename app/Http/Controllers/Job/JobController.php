@@ -372,10 +372,6 @@ class JobController extends Controller
             }
         }
 
-        // if($request->input('cv_id')){
-        //     $cvId = $request->input('cv_id');
-        // }
-
 
         $jobApply = new JobApply();
         $jobApply->user_id = $user_id;

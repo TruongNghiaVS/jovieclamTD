@@ -110,17 +110,20 @@
                                 <a role="button" onClick="OpenmodalPopup({{ $value->id }});" class="dropdown-item" data-toggle="modal" data-target="#modalReviewApplication">Đổi trạng thái CV</a> 
                                 <a role="button" onClick="submitUpdateNoteApplication({{ $value->id }});" class="dropdown-item"  data-toggle="modal" data-target="#modalReviewApplicationNote">Ghi chú</a> 
                                       @php
-                                        $cvUserApply = $value->user->getDefaultCv();
-                                       @endphp
+
+                                        $cvUserApply = $value->GetInfomationCV();
+                                        $linkfile =  "https://jobvieclam.com/cvs/".$cvUserApply->cv_file;
+                                      @endphp
                                        
-                                       @if( $cvUserApply->type =="0")    
+                                       @if( $cvUserApply->type =="1")    
                                             <a role="button" href="javascript:void(0)" class="dropdown-item public-profile-toggle"
                                                 onclick="showModal_candidate('{{ $value->user->id }}', '{{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name  }}');">
                                                                 <!-- Rest of your code here -->Xem cv
                                                 </a>
 
                                         @else
-                                             <a role="button" download href="{{'https://jobvieclam.com/'.'cvs/'.$value->user->getDefaultCv()->cv_file}}" target="_blank" class="dropdown-item">Tải CV</a>
+                                         
+                                             <a role="button" download href="{{ $linkfile }}" target="_blank" class="dropdown-item">Tải CV</a>
                                     
                                         @endif
                                
