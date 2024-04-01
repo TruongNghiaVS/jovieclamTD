@@ -58,7 +58,14 @@
             <div class="col-lg-9">
                 <article class="article">
                     <div class="article-title">
-                        <h6><a href="#">KỸ NĂNG CÔNG SỞ</a></h6>
+                        <h6>
+                            @foreach($cate_array as $index => $catetab) 
+                                {!! $catetab !!}
+                                @if ($index < count($cate_array) - 1)
+                                    <span>&#8226;</span> <!-- Special character (bullet point) -->
+                                @endif
+                            @endforeach
+                        </h6>
                         <h1>{{$blog->heading}}</h1>
                         <div class="media">
                             
