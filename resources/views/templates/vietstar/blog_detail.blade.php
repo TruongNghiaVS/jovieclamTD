@@ -14,7 +14,7 @@
         }
 
         if(isset($blog->image)){
-            $meta_images_tag = "/uploads/blogs" . $blog->image;
+            $meta_images_tag = "/uploads/blogs/" . $blog->image;
            
         }
         else {
