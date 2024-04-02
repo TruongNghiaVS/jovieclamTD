@@ -756,6 +756,11 @@
       .box-img {
         display: none;
       }
+      .pagiWrap .pagination {
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
       /* END-767px */
 }
 
