@@ -16,6 +16,10 @@ $blogs = $data["blogs"]->items();
 ?>
 
 
+
+
+
+
 <div class="blog-content">
     <!-- <section id="blog-content main-log"> -->
     <!-- <div class="container"> -->

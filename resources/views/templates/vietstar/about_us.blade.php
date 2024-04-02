@@ -1,5 +1,25 @@
 @extends('templates.employers.layouts.app')
 @section('content')
+
+
+@section('meta_tags')
+    <!-- Meta tag start -->
+
+    <!-- For Facebook -->
+    <meta property="og:title" content="Về Chúng Tôi | Jobvieclam.com" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="{{url('/')}}/assets/job-detail-share.png" />
+    <meta property="og:url" content="{{route('about_us')}}" />
+    <meta property="og:description" content="Jobvieclam.com là một nền tảng hàng đầu cung cấp giải pháp nhân sự toàn diện cho doanh nghiệp, giúp tối ưu hóa quá trình tuyển dụng và quản lý nhân sự." />
+
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Về Chúng Tôi | Jobvieclam.com" />
+    <meta name="twitter:description" content="Jobvieclam.com là một nền tảng hàng đầu cung cấp giải pháp nhân sự toàn diện cho doanh nghiệp, giúp tối ưu hóa quá trình tuyển dụng và quản lý nhân sự." />
+
+    <!-- Meta tag end -->
+@endsection
+
 <!-- Header start -->
 @include('templates.employers.includes.header')
 @include('templates.employers.includes.mobile_dashboard_menu')
