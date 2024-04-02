@@ -1,6 +1,25 @@
 @extends('templates.employers.layouts.app')
 @section('content')
 
+
+    @section('meta_tags')
+    <!-- Meta tag start -->
+
+    <!-- For Facebook -->
+    <meta property="og:title" content="Jobvieclam" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="{{url('/')}}/assets/job-detail-share.png" />
+    <meta property="og:url" content="{{url('/')}}" />
+    
+
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Jobvieclam" />
+    
+
+    <!-- Meta tag end -->
+    @endsection
+
 <!-- Header start -->
 @include('templates.employers.includes.header')
 <!-- Header end -->
