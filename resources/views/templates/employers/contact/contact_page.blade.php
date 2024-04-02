@@ -2,6 +2,24 @@
 @section('content')
 <!-- Header start -->
 
+@section('meta_tags')
+    <!-- Meta tag start -->
+
+    <!-- For Facebook -->
+    <meta property="og:title" content="Thông tin liên hệ Jobvieclam.com" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="{{url('/')}}/assets/job-detail-share.png" />
+    <meta property="og:url" content="{{ route('contact.us') }}" />
+    <meta property="og:description" content="Hãy kết nối với chúng tôi để được hỗ trợ tốt nhất." />
+
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Thông tin liên hệ Jobvieclam.com" />
+    <meta name="twitter:description" content="Hãy kết nối với chúng tôi để được hỗ trợ tốt nhất." />
+
+    <!-- Meta tag end -->
+@endsection
+
 
 <!-- Dashboard menu start -->
 @include('templates.employers.includes.mobile_dashboard_menu')
