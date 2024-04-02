@@ -44,7 +44,7 @@
                 <div class="col-md-3 col-lg-2 col-sm-12">
                     <div class="form-group">
                         <label for="find_day">Tìm Theo Ngày</label>
-                        <select name="find_day" value="{{ isset($request['find_day']) ? $request['find_day'] : '0' }}" class="form-select" id="find_day">
+                        <select name="find_day" value="{{ isset($request['find_day']) ? $request['find_day'] : '0' }}" class="form-control" id="find_day">
                             <option value="0">Ngày Đăng</option>
                             <option value="1">Ngày Hết Hạn</option>
 
@@ -67,7 +67,7 @@
                 <div class="col-md-3 col-lg-3 col-sm-12">
                     <div class="form-group">
                         <label for="city_id">{{ __('City') }}</label>
-                        <select name="city_id" class="form-select" name="" id="city_id" value="{{ isset($request['city_id']) ? $request['city_id'] : '' }}">
+                        <select name="city_id" class="form-control" name="" id="city_id" value="{{ isset($request['city_id']) ? $request['city_id'] : '' }}">
                             <option value="">{{ __('Select cities') }}</option>
                             @foreach ($cities as $key => $value)
                             <option {{ isset($request['city_id']) && $request['city_id'] == $key ? 'selected' : '' }} value="{{ $key }}">{{ $value }}</option>
