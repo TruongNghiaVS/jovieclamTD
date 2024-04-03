@@ -18,16 +18,16 @@
                 <div class="col-md-3 col-lg-3 col-sm-12">
                                         <div class="form-group form-group-datepicker mb-0" >
                                             <label for="from_to">Từ</label>
-                                            <input type="date" value="{{ isset($request['from']) ? $request['from'] : '' }}"  class=" form-control " name="from" id="from_to"
-                                                placeholder="{{ __('Start date-End date') }}" />
+                                            <input type="text" class=" form-control datepicker "  value="{{ isset($request['from']) ? $request['from'] : '' }}"  name="from" id="from_to"
+                                                placeholder="dd-mm-yyyy" />
                                         </div>
                                     </div>
 
                                     <div class="col-md-3 col-lg-3 col-sm-12">
                                         <div class="form-group form-group-datepicker mb-0"  >
                                             <label for="from_to2">Đến</label>
-                                            <input type="date" class=" form-control " value="{{ isset($request['to']) ? $request['to'] : '' }}"  name="to" id="from_to2"
-                                                placeholder="{{ __('Start date-End date') }}" />
+                                            <input type="text" class=" form-control datepicker " value="{{ isset($request['to']) ? $request['to'] : '' }}"  name="to" id="from_to2"
+                                                placeholder="dd-mm-yyyy" />
                                         </div>
                                     </div>
                 {{-- <div class="col-md-6 col-lg-4">
@@ -110,6 +110,13 @@
 @endpush
 @push('scripts')
     <script type="text/javascript">
+    function initdatepicker(){
+            $(".datepicker").datepicker({
+
+            autoclose: true,
+                    format:'dd-mm-yyyy',
+            });
+    }
     $(document).ready(function() {
         $('#quick-filter-1').click(function() {
             window.location.href = "{{ route('application.manager') }}"
@@ -118,6 +125,9 @@
         $('#quick-filter-2').click(function() {
             window.location.href = "{{ route('application.manager', ['log_seen' => 'unseen']) }}"
         })
+
+        
+        initdatepicker();
 
     })
     </script>

@@ -49,6 +49,7 @@ $(document).ready(function () {
     jobExperienceChange();
     reviewApplication();
     actionSubMenu();
+    initdatepicker();
     $(".currency-mask").formatCurrency({
         roundToDecimalPlace: 0,
         symbol: ''
@@ -64,6 +65,15 @@ $(document).ready(function () {
 $(window).resize(function () {
     // setPaddingBody();
 });
+
+function initdatepicker(){
+    $(".datepicker").datepicker({
+
+    autoclose: true,
+            format:'dd-mm-yyyy',
+    });
+}
+
 
 function jobExperienceChange() {
     $('body').on('change', '#job_experience_id', function () {

@@ -9,13 +9,13 @@
             <div class="col-md-3 col-lg-3 col-sm-12" bis_skin_checked="1">
                 <div class="form-group form-group-datepicker " bis_skin_checked="1">
                     <label for="from_to">Từ</label>
-                    <input type="date" value="" class=" form-control " name="from" id="from_to" placeholder="Ngày bắt đầu-kết thúc">
+                    <input type="text" value="" class=" form-control datepicker " name="from" id="from_to" placeholder="dd-mm-yyy">
                 </div>
             </div>
             <div class="col-md-3 col-lg-3 col-sm-12" bis_skin_checked="1">
                 <div class="form-group form-group-datepicker " bis_skin_checked="1">
                     <label for="from_to2">Đến</label>
-                    <input type="date" class=" form-control " value="" name="to" id="from_to2" placeholder="Ngày bắt đầu-kết thúc">
+                    <input type="text" class=" form-control datepicker " value="" name="to" id="from_to2" placeholder="dd-mm-yyy">
                 </div>
             </div>
             <div class="col-md-3 col-lg-3 col-sm-12 d-flex">
