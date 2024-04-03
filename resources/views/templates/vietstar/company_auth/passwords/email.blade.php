@@ -214,7 +214,7 @@
                     })
                     .done(function(data){
                             hideSpinner();
-                            showModal_Success("Thông báo","Yêu cầu được gửi thành công","")
+                          
                             $("#form_reset_content").empty();
                                 $("#form_reset_content").append(`<div class="title" bis_skin_checked="1">
                                                 <h2 class="text-primary">Quên Mật Khẩu</h2>
@@ -239,10 +239,10 @@
                                                 </div>`)
                                                 
                         setTimeout(() => {
-                            $('#customModal-success').modal('hide')
+                           
     
                             window.location.href = "/";
-                        }, 1500);
+                        }, 4000);
                     })               
                     
                     .fail(function(jqXHR, textStatus){
