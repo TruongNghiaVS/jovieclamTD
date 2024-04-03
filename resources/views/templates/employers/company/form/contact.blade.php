@@ -99,7 +99,7 @@
                         showModal_Success('Thông báo', `Cập nhật thông tin liên hệ thành công`, ``);
                         setTimeout(function(){
                               window.location.reload();
-                        }, 3000);
+                        }, 1000);
                     }
                 },
                 error: function(xhr, status, error) {

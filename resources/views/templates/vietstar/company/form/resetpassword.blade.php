@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="myForm1" class="needs-validation" novalidate>
+                <form id="changepassword_company_form" class="needs-validation" novalidate>
                     
                     <div class="form-group">
                         <label for="pwdId">{{__('Password')}}</label>
@@ -51,7 +51,7 @@
           $('.pwds').addClass('is-invalid')
           }
       });
-      let currForm1 = document.getElementById('myForm1');
+      let currForm1 = document.getElementById('changepassword_company_form');
         // Validate on submit:
         currForm1.addEventListener('submit', function(event) {
           if (currForm1.checkValidity() === false) {

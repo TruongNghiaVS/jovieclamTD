@@ -253,7 +253,19 @@
                                     </strong>
                                 </td>
                                 <td class="table_value">
-                                    {{ !empty($company->ownershipTypes)?$company->ownershipTypes->ownershipTypes : 'TNHH' }}
+                                <?php
+                           
+                                    $ownershiptype_tmp = "";
+                                    $cp_ownershiptype_id = isset($company->ownership_type_id) ? $company->ownership_type_id:""  ;
+                                    foreach ($ownershipTypes as $key => $value) {
+                                        if ($key == $cp_ownershiptype_id) {
+                                            $ownershiptype_tmp = $value;
+                                        }
+                                    }
+                            
+                                
+                                ?>
+                                    {{ !empty($ownershiptype_tmp)? $ownershiptype_tmp : '' }}
                                 </td>
                             </tr>
 

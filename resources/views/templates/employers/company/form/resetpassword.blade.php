@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="myForm1" class="needs-validation" novalidate>
+                <form id="changepassword_company_form" class="needs-validation" novalidate>
                    
                     <div class="form-group">
                         <label for="pwdId">Mật Khẩu Mới</label>
@@ -51,7 +51,7 @@
        
           }
       });
-      let currForm1 = document.getElementById('myForm1');
+      let currForm1 = document.getElementById('changepassword_company_form');
         // Validate on submit:
         currForm1.addEventListener('submit', function(event) {
           if (currForm1.checkValidity() === false) {
@@ -98,7 +98,7 @@
                               showModal_Success('Thông báo', `${response.message ? response.message : "Đổi Mật Khẩu thành công"}`, ``);
                               setTimeout(function(){
                                   window.location.reload();
-                              }, 3000);
+                              }, 1000);
                        
                             }
                         },

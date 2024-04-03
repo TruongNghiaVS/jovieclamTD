@@ -373,7 +373,7 @@
                         showModal_Success('Thông báo', `Cập nhật Thông Tin Công Ty thành công`, ``);
                         setTimeout(function(){
                               window.location.reload();
-                        }, 3000);
+                        }, 1000);
                     }
                 },
                 error: function(xhr, status, error) {
