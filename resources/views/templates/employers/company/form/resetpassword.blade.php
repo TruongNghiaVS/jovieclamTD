@@ -1,29 +1,28 @@
-<div class="modal fade" id="user_info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="user_info" tabindex="-1" role="dialog" aria-labelledby="user_infoLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Đổi Mật Khẩu</h5>
+                <h5 class="modal-title" id="exampleModalLabel">{{__('Account Information')}}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form id="changepassword_company_form" class="needs-validation" novalidate>
-                   
                     <div class="form-group">
-                        <label for="pwdId">Mật Khẩu Mới</label>
-                        <input type="password" id="pwdId" class="form-control pwds"  required>
-                        
-                        <div class="invalid-feedback">Nhập mật khẩu</div>
+                        <label for="password">{{__('Reset Password')}}</label>
+                        {!! Form::password('password', array('class'=>'form-control', 'id'=>'pwdId')) !!}
+                        {!! APFrmErrHelp::showErrors($errors, 'password') !!}
+                        <div class="invalid-feedback">{{__('Password is required')}}</div>
                     </div>
                     <div class="form-group">
-                        <label for="cPwdId">Nhập Lại Mật Khẩu Mới</label>
-                        <input type="password" id="cPwdId" class="form-control pwds"  required>
-                        <div id="cPwdValid" class="valid-feedback"></div>
+                        <label for="cPwdId">{{__('Confirm Password')}}</label>
+                        <input type="password" id="cPwdId" class="form-control pwds" placeholder="{{__('Confirm Password')}}"  required>
+                        <div id="cPwdValid" class="valid-feedback">Valid</div>
                         <div id="cPwdInvalid" class="invalid-feedback"></div>
                     </div>
-                    <div class="form-group d-grid">
-                        <button id="reset_submitBtn" type="button" class="btn btn-primary submit-button" disabled>Gửi</button>
+                    <div class="form-group">
+                        <button id="account_submitBtn" type="button" class="btn btn-primary submit-button" disabled>{{__(('Update'))}}</button>
                     </div>
                 </form>
             </div>
@@ -32,54 +31,37 @@
 </div>
 
 
+
+
 @push('scripts')
 <script type="text/javascript">
     $(document).ready(function(){
       // Check if passwords match
-      $('#pwdId, #cPwdId').on('keyup', function () {
-        if ($('#pwdId').val() != '' && $('#cPwdId').val() != '' && $('#pwdId').val() == $('#cPwdId').val()) {
-          $("#reset_submitBtn").attr("disabled",false);
+      $('#user_info #pwdId, #user_info #cPwdId').on('keyup', function () {
+        var pwd = $('#user_info #pwdId').val();
+        var cPwd = $('#user_info #cPwdId').val();
+        if (pwd != '' && cPwd != '' && pwd == cPwd && pwd.length >= 6 && pwd.length <= 15 && cPwd.length >= 6 && cPwd.length <= 15 ) {
+          $("#account_submitBtn").attr("disabled",false);
           $('#cPwdValid').show();
           $('#cPwdInvalid').hide();
-          $('#cPwdValid').html().css('color', 'green');
+          $('#cPwdValid').html('').css('color', 'green');
           $('.pwds').removeClass('is-invalid')
         } else {
-          $("#reset_submitBtn").attr("disabled",true);
+          $("#account_submitBtn").attr("disabled",true);
           $('#cPwdValid').hide();
           $('#cPwdInvalid').show();
-          $('#cPwdInvalid').html('Không khớp mật khẩu').css('color', 'red');
-       
-          }
-      });
-      let currForm1 = document.getElementById('changepassword_company_form');
-        // Validate on submit:
-        currForm1.addEventListener('submit', function(event) {
-          if (currForm1.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          currForm1.classList.add('was-validated');
-        }, false);
-        // Validate on input:
-        currForm1.querySelectorAll('.form-control').forEach(input => {
-          input.addEventListener(('input'), () => {
-            if (input.checkValidity()) {
-              input.classList.remove('is-invalid')
-              input.classList.add('is-valid');
+          if (!(pwd.length >= 6 && pwd.length <= 15)) {
+                $('#cPwdInvalid').html(`{{__(('Password must be 6-15 characters.'))}}`).css('color', 'red');
             } else {
-              input.classList.remove('is-valid')
-              input.classList.add('is-invalid');
+                $('#cPwdInvalid').html(`Passwords do not match`).css('color', 'red');
             }
-            var is_valid = $('.form-control').length === $('.form-control.is-valid').length;
-            $("#reset_submitBtn").attr("disabled", !is_valid);
-          });
-        });
+            $('.pwds').addClass('is-invalid');
+          }
       });
 
-
-      $('#reset_submitBtn').on('click',()=>{
-          if ($('#pwdId').val()) {
-          
+     $('#account_submitBtn').on('click',()=>{
+                if ($('#user_info #pwdId').val()) {
+                    showSpinner();
                     // Simulating an AJAX POST request
                     $.ajax({
                         url:  `{{ route('update.company.updatePassword') }}`,
@@ -87,40 +69,29 @@
                         beforeSend: showSpinner(),
                         data:  {
                             _token: '{{ csrf_token() }}',
-                            password:$('#pwdId').val(),
+                            password:$('#user_info #pwdId').val(),
                         },
-                    
                         success: function (response) {
                           hideSpinner();
-                          
-                            if (response.sucess) {
-                              $("#user_info").modal("hide");
-                              showModal_Success('Thông báo', `${response.message ? response.message : "Đổi Mật Khẩu thành công"}`, ``);
-                              setTimeout(function(){
-                                  window.location.reload();
-                              }, 1000);
-                       
+                          if (response.sucess) {
+                                $('#user_info').modal("hide");
+                                showModal_Success('Thông báo', `${response.message ? response.message : "Đổi Mật Khẩu thành công"}`, ``);
+                                setTimeout(function(){
+                                    window.location.reload();
+                                }, 1000);
                             }
                         },
                         error: function (xhr, status, error) {
                             // Handle error
                             hideSpinner();
-
-                            console.error('Error uploading avatar:', error);
-                        },
-                        complete: function() {
-                    // Hide spinner after the request is complete
-                            hideSpinner();
                         }
                     });
                 } else {
-                    alert('Please select an image before uploading.');
+                
                 }
   
     })
-    
-
-
+    });
 </script>
 @endpush
 
