@@ -127,7 +127,7 @@
 
                                     @if ($errors->has('terms_of_use')) <span class="help-block"> <strong>{{ $errors->first('terms_of_use') }}</strong> </span> @endif </div>
 
-                             <div
+                                <div
                                     class="form-group col-12 col-sm-12 col-md-10 text-center  mobile-padding-no {{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
                                  {!! app('captcha')->display() !!}
                                     @if ($errors->has('g-recaptcha-response')) <span class="help-block">

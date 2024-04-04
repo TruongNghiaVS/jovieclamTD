@@ -31,7 +31,7 @@ class CompanyFrontRegisterFormRequest extends Request
             'email' => 'required|email|email|max:100',
             'password' => 'required|confirmed|min:6|max:50',
             'terms_of_use' => 'required',
-            'g-recaptcha-response' => 'required|captcha',
+            // 'g-recaptcha-response' => 'required|captcha',
         ];
     }
 
