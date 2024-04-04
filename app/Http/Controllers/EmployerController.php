@@ -171,7 +171,7 @@ class EmployerController extends Controller
                 $itemCodeActive->status ="0";
                 $itemCodeActive->updated_at = \Carbon\Carbon::now() ;
                 $itemCodeActive->save();
-                $response = Http::post('http://localhost:8082/sendMailActiveTD', [
+                $response = Http::post('http://192.168.1.2:8083/sendMailActiveTD', [
                     'emailTo' => $companyActive->email,
                     'fullName' =>  $companyActive->name
                 ]);

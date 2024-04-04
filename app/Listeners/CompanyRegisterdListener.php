@@ -40,7 +40,7 @@ public function handle(CompanyRegistered $event)
         $codeActive->code = $codegenerate;
         $codeActive->userId = $data->id;
         $codeActive->save();
-        $response = Http::post('http://localhost:8082/sendMailRegisterTD', [
+        $response = Http::post('http://192.168.1.2:8083/sendMailRegisterTD', [
             'emailTo' => $data->email,
             'code' =>  $codeActive->code,
             'fullName'=> $data->name,

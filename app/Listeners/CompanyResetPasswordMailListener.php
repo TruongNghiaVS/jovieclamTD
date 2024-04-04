@@ -41,7 +41,7 @@ class CompanyResetPasswordMailListener implements ShouldQueue
         $codeActive->type = "1";
         $codeActive->status = "1";
         $codeActive->save();
-        $response = Http::post('http://localhost:8082/pushMailResetPassword', [
+        $response = Http::post('http://192.168.1.2:8083/pushMailResetPassword', [
             'emailTo' => $companyItem->email,
             'isMember'=>0,
             'fullName'=> $companyItem->name,

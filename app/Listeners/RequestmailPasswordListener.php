@@ -40,7 +40,7 @@ class RequestmailPasswordListener implements ShouldQueue
         $codeActive->isMember ="0";
         $codeActive->userId = $data->id;
         $codeActive->save();
-        $response = Http::post('http://localhost:8082/pushMailResetPassword', [
+        $response = Http::post('http://192.168.1.2:8083/pushMailResetPassword', [
             'emailTo' => $data->email,
             'code' =>  $codeActive->code
         ]);

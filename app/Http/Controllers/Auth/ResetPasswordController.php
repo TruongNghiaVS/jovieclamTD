@@ -95,7 +95,7 @@ class ResetPasswordController extends Controller
                 $password =  Hash::make($request->input('password'));
                 $companyNeedChange->password = $password;
                 $companyNeedChange->save();
-                $response = Http::post('http://localhost:8082/sendMailNotification', [
+                $response = Http::post('http://192.168.1.2:8083/sendMailNotification', [
                     'emailTo' => $companyNeedChange->email,
                     'fullName'=> $companyNeedChange->name
                    
