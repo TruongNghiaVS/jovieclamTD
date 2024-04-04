@@ -12,12 +12,12 @@
     <div class="container">
         <div class="row justify-content-md-center">
 
-            <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="col-lg-5 col-md-6 col-sm-12">
                 <div class="box-img">
                     <img src="{{ asset('/') }}admin_assets/quen_mk.jpg" alt="">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-8 col-sm-12" bis_skin_checked="1">
+            <div class="col-lg-4 col-md-6 col-sm-12" bis_skin_checked="1">
                 <div class="box-info-signup forgot-password" id="form_reset_content" bis_skin_checked="1">
                     <div class="title" bis_skin_checked="1">
                         <h2 class="text-primary text-center">Quên Mật Khẩu</h2>
@@ -41,8 +41,8 @@
                                 </div>
                             </div>
                             <div class="user-action" bis_skin_checked="1">
-                                <div class="btn-area" bis_skin_checked="1">
-                                    <button type="button" id="resetPasswordBtn_company" class="btn btn-primary" value="Gửi">Gửi</button>
+                                <div class="btn-area d-grid" bis_skin_checked="1">
+                                    <button type="button" id="resetPasswordBtn_company" class="btn btn-primary w-full" value="Gửi">Gửi</button>
                                 </div>
                                 <p> <a class="register" href="/employer/register" target="_self">Quý khách chưa có tài khoản?</a> Đăng ký dễ dàng, hoàn toàn miễn phí</p>
 
@@ -88,7 +88,7 @@
     }
 
     .box-info-signup .title h2 {
-        margin-bottom: 35px;
+        margin-bottom: 25px;
     }
 
     .box-info-signup .main-step-title h3 {
@@ -140,6 +140,18 @@
 
     .btn-area {
         text-align: right;
+    }
+    #resetPasswordForm_company .form-group .form-info {
+        -webkit-box-flex: 0;
+        flex: 0 0 150px;
+        max-width: 150px;
+    }
+
+    #resetPasswordForm_company .form-group .form-input {
+        -ms-flex: 0 0 calc(100% - 150px);
+        -webkit-box-flex: 0;
+        flex: 0 0 calc(100% - 150px);
+        max-width: calc(100% - 150px);
     }
 </style>
 @endpush
