@@ -687,12 +687,14 @@
 
                 
                 <li class="sidebar-item {{ Request::url() == url('/tim-ung-vien') ? 'active' : '' }}">
-                <a href="{{url('/tim-ung-vien')}}" class="list-group-item list-group-item-action ">
-                        <div class="d-flex w-100">
-                            <i class="fas fa-search  fs-24px me-2"></i>
-                            <span class="side-bar-content">Tìm Ứng Viên</span>
-                        </div>
-                    </a>
+                        {{--<a href="{{url('/tim-ung-vien')}}" class="list-group-item list-group-item-action ">--}}
+                        <a href="#" class="list-group-item list-group-item-action ">
+
+                                <div class="d-flex w-100">
+                                    <i class="fas fa-search  fs-24px me-2"></i>
+                                    <span class="side-bar-content">Tìm Ứng Viên</span>
+                                </div>
+                        </a>
                 </li>
 
 

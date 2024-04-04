@@ -53,7 +53,8 @@
 
 
                     <li class="nav-item  {{route('job.seeker.list')}} ? 'active' : '' }}">
-                        <a href="{{route('job.seeker.list')}}" class="nav-link list-group-item-action">
+                    {{--    <a href="{{route('job.seeker.list')}}" class="nav-link list-group-item-action"> --}}
+                    <a href="#" class="nav-link list-group-item-action"> 
                             
                              
                              {{__('Find candidates')}}
