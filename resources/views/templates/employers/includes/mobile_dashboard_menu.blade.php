@@ -440,7 +440,35 @@
 @php
     $company =  Auth::guard('company')->check()==true ?  Auth::guard('company')->user() : null;
     $company_active = $company ? $company->is_active : 0;
+
+    // Define an array with route names and their corresponding sidebar classes
+    $routes = [
+        'company.home',
+        'posted.jobs',
+        'application.manager',
+        'company.packages',
+        'company.config-mail',
+        'company.profile',
+        'company.followers',
+        'job.seeker.list',
+        'post.job',
+        'company.messages',
+
+        // Add mor,,e routes as needed
+    ];
+
+    // Initialize default values
+    $isActive = false;
+    // Loop through routes to determine active state
+    foreach ($routes as $route ) {
+        if (Request::url() == route($route)) {
+            $isActive =true;
+            break; // Exit loop once a match is found
+        }
+    }
 @endphp
+
+
 <nav id="mobile-sidebar">
     <div class="sidebar-header">
         @if(Auth::guard('company')->check()==true && $company_active == 1 )
@@ -452,7 +480,7 @@
             <div class="username" bis_skin_checked="1">
                 <p><a href="#">{{Auth::guard('company')->user()->name}}</a></p>
             </div>
-            <div class="back-menu-normal" bis_skin_checked="1"><i class="bi bi-arrow-left"></i></div>
+            <div class="back-menu-normal {{$isActive ? 'active': ''}}" bis_skin_checked="1"><i class="bi bi-arrow-left"></i></div>
         </div>
 
         @else 
@@ -472,7 +500,7 @@
 
         @endif
         <div class="menu">
-            <ul class="list-unstyled components sidebar-main-nav active" id="sidebar-main-nav">
+            <ul class="list-unstyled components sidebar-main-nav {{$isActive ? '': 'active'}}" id="sidebar-main-nav">
                 <li class="sidebar-item {{ Request::url() == route('index') ? 'active' : '' }}">
                     <a href="/" class="list-group-item list-group-item-action {{ Request::url() == route('index')  ? 'active' : '' }}">
                         <div class="d-flex w-100">
@@ -540,7 +568,7 @@
 
             @if(Auth::guard('company')->check() &&  $company_active == 1 )
     
-            <ul class="list-unstyled components sidebar-user-nav" id="sidebar-user-nav">
+            <ul class="list-unstyled components sidebar-user-nav {{$isActive ? 'active': ''}}" id="sidebar-user-nav">
                 <li class="sidebar-item {{ Request::url() == route('company.home') ? 'active' : '' }}">
                     <a href="{{ route('company.home') }}" class="list-group-item list-group-item-action ">
                         <div class="d-flex w-100">
@@ -683,7 +711,7 @@
 
     </div>
 
-    <div class="sidebar-bottom active">
+    <div class="sidebar-bottom {{$isActive ? '': "active"}}">
         <ul class="list-unstyled components sidebar-bottom__item mb-0">
             @if(!Auth::guard('company')->check() ||  $company_active == 0)
                 <li>
