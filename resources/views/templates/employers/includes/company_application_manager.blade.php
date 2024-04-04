@@ -53,7 +53,7 @@
                                 <div class="fullname">     
                                     <a role="button" href="javascript:void(0)"  class="font-weight-bold text-dark text-primary-hover text-capitalize public-profile-toggle"
                                         onclick="showModal_candidate('{{ $value->user->id }}', '{{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name  }}');">
-                                        {{ $value->user->first_name.' '.$value->user->middle_name.' '.$value->user->last_name }}
+                                        {{ $value->user->last_name.' '.$value->user->middle_name.' '.$value->user->first_name }}
                                     </a>
                                 </div>
                                 
