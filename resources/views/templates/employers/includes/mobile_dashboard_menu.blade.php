@@ -453,6 +453,7 @@
         'job.seeker.list',
         'post.job',
         'company.messages',
+        'edit.front.job',
 
         // Add mor,,e routes as needed
     ];
