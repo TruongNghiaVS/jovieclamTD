@@ -747,8 +747,8 @@ h2.title {
     justify-content: center;
     right: 0;
     top: 0;
-    height: 100% !important;
-    width: 40px !important;
+    height: 50px !important;
+    width: 50px !important;
     cursor: pointer;
 }
 
