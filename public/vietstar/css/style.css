@@ -5352,7 +5352,6 @@ ul.skillslist li a:hover {
 
 .formpanel .btn {
 	width: 100%;
-	background: #a84040;
 	color: #fff;
 	border-radius: 5px;
 	padding: 10px;
@@ -5362,7 +5361,7 @@ ul.skillslist li a:hover {
 }
 
 .formpanel .btn:hover {
-	background: #222;
+	
 }
 
 

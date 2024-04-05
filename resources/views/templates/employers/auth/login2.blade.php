@@ -55,9 +55,13 @@
                                 <div class="form-info" bis_skin_checked="1">
                                     <span>{{__(('Password'))}}</span>
                                 </div>
-                                <div class="form-input" bis_skin_checked="1">
+                                <div class="form-input position-relative" bis_skin_checked="1">
                                     <input id="password" type="password" class="form-control border-t-l-ra-0 border-b-l-ra-0" name="password" value=""
                                         required placeholder="{{__('Password')}}">
+
+                                        <button class="btn btn-showpassword" type="button" onclick="showPassword('#formLogin2 #password');">
+                                                        <i id="eyeIcon" class="fa fa-eye"></i>
+                                        </button>
                                     <div class="invalid-feedback password-error">
                                         {{__('Password is required')}}
                                     </div>

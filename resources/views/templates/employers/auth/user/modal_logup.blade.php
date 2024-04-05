@@ -34,19 +34,27 @@
                             </div>
                         </div>
 
-                        <div class="formrow{{ $errors->has('password') ? ' has-error' : '' }}">
+                        <div class="formrow position-relative {{ $errors->has('password') ? ' has-error' : '' }}">
 
                             <input id="company_passId" type="password" name="password" class="form-control" required="required" placeholder="{{__('Password')}}" value="">
+
+                            <button class="btn btn-showpassword" type="button" onclick="showPassword('#company_passId');">
+                                        <i id="eyeIcon" class="fa fa-eye"></i>
+                            </button>
+
 
                             <div class="invalid-feedback password-error">
                                 {{__('Password is required')}}
                             </div>
                         </div>
 
-                        <div class="formrow{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+                        <div class="formrow position-relative{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
 
                             <input  id="company_comfirmId" type="password" name="password_confirmation" class="form-control" required="required" placeholder="{{__('Password Confirmation')}}" value="">
 
+                            <button class="btn btn-showpassword" type="button" onclick="showPassword('#company_comfirmId');">
+                                        <i id="eyeIcon" class="fa fa-eye"></i>
+                            </button>
                             <div class="invalid-feedback password-error">
                                 {{__('Password Incorrect')}}
                             </div>

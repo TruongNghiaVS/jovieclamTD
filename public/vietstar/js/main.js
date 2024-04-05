@@ -1,3 +1,17 @@
+function showPassword(id) {
+    var x = document.querySelector(id);
+    var eyeIcon = document.getElementById("eyeIcon");
+    if (x.type === "password") {
+        x.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+    } else {
+        x.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+    }
+}
+
 $(document).ready(function () {
     if ($('.bs-picker').length) {
         $(".bs-picker").datetimepicker({

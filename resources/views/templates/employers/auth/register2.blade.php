@@ -63,8 +63,13 @@
                                 <div class="form-info" bis_skin_checked="1">
                                     <span>{{__(('Password'))}}</span>
                                 </div>
-                                <div class="form-input" bis_skin_checked="1">
+                                <div class="form-input position-relative" bis_skin_checked="1">
                                     <input id="company_passId2" type="password" class="form-control form-control border-t-l-ra-0 border-b-l-ra-0" name="password" value="" required placeholder="{{__('Password')}}">
+
+                                    <button class="btn btn-showpassword" type="button" onclick="showPassword('#formLogup2 #company_passId2');">
+                                                        <i id="eyeIcon" class="fa fa-eye"></i>
+                                    </button>
+
                                     <div class="invalid-feedback password-error">
                                         {{__('Password is required')}}
                                     </div>
@@ -76,8 +81,14 @@
                                 <div class="form-info" bis_skin_checked="1">
                                     <span>{{__('Password Confirmation')}}</span>
                                 </div>
-                                <div class="form-input" bis_skin_checked="1">
-                                <input  id="company_comfirmId2" type="password" name="password_confirmation" class="form-control form-control border-t-l-ra-0 border-b-l-ra-0" required="required" placeholder="{{__('Password Confirmation')}}" value="">
+                                <div class="form-input position-relative" bis_skin_checked="1">
+                                    <input  id="company_comfirmId2" type="password" name="password_confirmation" class="form-control form-control border-t-l-ra-0 border-b-l-ra-0" required="required" placeholder="{{__('Password Confirmation')}}" value="">
+
+                                    <button class="btn btn-showpassword" type="button" onclick="showPassword('#formLogup2 #company_comfirmId2');">
+                                        <i id="eyeIcon" class="fa fa-eye"></i>
+                                    </button>
+
+
                                     <div class="invalid-feedback password-error">
                                         {{__('Password Incorrect')}}
                                     </div>

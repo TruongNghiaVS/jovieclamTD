@@ -40,8 +40,12 @@
                                                 {{__('Email is required')}}
                                             </div>
                                         </div>
-                                        <div class="formrow{{ $errors->has('password') ? ' has-error' : '' }}">
+                                        <div class="formrow position-relative{{ $errors->has('password') ? ' has-error' : '' }}">
                                             <input id="password" type="password" class="form-control" name="password" value="" required placeholder="{{__('Password')}}">
+                                            <button class="btn btn-showpassword" type="button" onclick="showPassword('#login-tab #password');">
+                                                        <i id="eyeIcon" class="fa fa-eye"></i>
+                                            </button>
+
                                             <div class="invalid-feedback password-error">
                                             {{__('Password is required')}}
                                             </div>
