@@ -246,7 +246,16 @@
 </div>
 <!--Company Contact End -->
 
+@push('styles')
+<style>
 
+  #dataTable .tb-value {
+    min-width: 100px;
+  }
+  
+  
+</style>
+@endpush
 
 @push('scripts')
 <script type="text/javascript">
@@ -339,7 +348,7 @@
         // Add rows to the table with the values
         for (var key in tableData) {
             var newRow = '<tr>';
-            newRow += '<th colspan="4">' + key + '</th>';
+            newRow += '<th class="tb-value" colspan="4">' + key + '</th>';
             newRow += '<td>' + tableData[key] + '</td>';
             newRow += '</tr>';
             $('#dataTable tbody').append(newRow);
@@ -397,4 +406,7 @@
 
 </script>
 @endpush
+
+
+
 
