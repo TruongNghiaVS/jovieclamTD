@@ -40,7 +40,8 @@ if (!isset($seo)) {
     <link href="{{ asset('/vietstar/css/chosen/chosen.min.css')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
-
+    <link href="{{ asset('/') }}admin_assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet"
+    type="text/css" />
 
     
     <link href="{{ asset('/vietstar/css/default_sidebar.css')}}" rel="stylesheet">
@@ -78,7 +79,9 @@ if (!isset($seo)) {
     <script src="{{asset('/')}}js/owl.carousel.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-   
+    <script src="{{ asset('/') }}admin_assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+    <script src="{{ asset('/') }}admin_assets/global/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.vi.min.js" type="text/javascript"></script>
+
 
     <script src="{{ asset('/') }}admin_assets/global/plugins/Bootstrap-3-Typeahead/bootstrap3-typeahead.min.js"
         type="text/javascript"></script>
