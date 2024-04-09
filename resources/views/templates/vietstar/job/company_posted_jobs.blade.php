@@ -384,9 +384,10 @@ function initdatepicker(){
 
 $(".datepicker").datepicker({
 
-autoclose: true,
-
-    format:'dd-mm-yyyy'
+    autoclose: true,
+        format:'dd-mm-yyyy',
+        locale:'vi',
+language: 'vi',
 
 }); 
 }

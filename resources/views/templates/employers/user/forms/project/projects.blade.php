@@ -17,8 +17,10 @@
 <script type="text/javascript">
     function initdatepicker(){
     $(".datepicker").datepicker({
-    autoclose: true,
+        autoclose: true,
         format:'dd-mm-yyyy',
+        locale:'vi',
+language: 'vi',
     });
     }
     $(document).ready(function(){

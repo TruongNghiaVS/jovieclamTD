@@ -292,7 +292,9 @@
     function initdatepicker() {
         $(".datepicker").datepicker({
             autoclose: true,
-            format: 'yyyy-m-d'
+            format:'dd-mm-yyyy',
+            locale:'vi',
+language: 'vi',
         });
     }
 </script>

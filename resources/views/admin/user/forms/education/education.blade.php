@@ -103,8 +103,10 @@
     }
     function initdatepicker(){
     $(".datepicker").datepicker({
-    autoclose: true,
-            format:'yyyy-m-d'
+        autoclose: true,
+        format:'dd-mm-yyyy',
+        locale:'vi',
+language: 'vi',
     });
     /*****/
     $('.select2-multiple').select2({
