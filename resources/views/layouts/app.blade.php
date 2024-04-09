@@ -42,8 +42,8 @@ if (!isset($seo)) {
     <link href="{{ asset('/vietstar/css/select2.min.css')}}" rel="stylesheet" />
     <link href="{{ asset('/vietstar/css/jquery.multiselect.css')}}" rel="stylesheet">
     <link href="{{ asset('/vietstar/css/chosen/chosen.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('/') }}admin_assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet"
-    type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
     
     
     <link href="{{ asset('/fontawesome-free-6.5.1-web/css/all.min.css')}}" rel="stylesheet">
@@ -75,16 +75,13 @@ if (!isset($seo)) {
     <script src="{{asset('/')}}js/bootstrap.min.js"></script>
     <script src="{{ asset('/vietstar/js/jquery.multiselect.js')}}" type="text/javascript"></script>
 
-    <script src="{{asset('/')}}vendor/bootstrap-date-time-picker/js/bootstrap-datetimepicker.min.js"
-        type="text/javascript"></script>
+   
     <!-- Owl carousel -->
     <script src="{{asset('/')}}js/owl.carousel.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <script src="{{ asset('/') }}admin_assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"
-        type="text/javascript"></script>
-    <script src="{{ asset('/') }}admin_assets/global/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.vi.min.js" type="text/javascript"></script>
+ 
+   
     <script src="{{ asset('/') }}admin_assets/global/plugins/Bootstrap-3-Typeahead/bootstrap3-typeahead.min.js"
         type="text/javascript"></script>
     <script src="{{ asset('/') }}admin_assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
