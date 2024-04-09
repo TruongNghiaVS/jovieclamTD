@@ -35,6 +35,7 @@
             format:'dd-mm-yyyy',
             locale:'vi',
 language: 'vi',
+orientation: "bottom auto",
         });
         }
         $(document).ready(function(){

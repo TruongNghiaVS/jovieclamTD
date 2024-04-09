@@ -85,7 +85,8 @@ function initdatepicker(){
         autoclose: true,
         format:'dd-mm-yyyy',
         locale:'vi',
-language: 'vi',
+        language: 'vi',
+        
     });
 }
 

@@ -127,6 +127,7 @@
         format:'dd-mm-yyyy',
         locale:'vi',
 language: 'vi',
+orientation: "bottom auto",
     });
     /*****/
     $('.select2-multiple').select2({

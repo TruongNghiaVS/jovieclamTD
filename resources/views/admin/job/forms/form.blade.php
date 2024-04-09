@@ -211,7 +211,7 @@
             autoclose: true,
             format:'dd-mm-yyyy',
             locale:'vi',
-language: 'vi',
+            language: 'vi',
         });
         $('#country_id').on('change', function (e) {
             e.preventDefault();

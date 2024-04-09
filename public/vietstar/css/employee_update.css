@@ -735,6 +735,10 @@ h2.title {
     transform: translate(0, 0);
 }
 
+.datepicker {
+    z-index: 100 !important;
+}
+
 .btn-showpassword {
     position: absolute;
     -ms-flex-align: center;
