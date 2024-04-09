@@ -735,7 +735,7 @@ h2.title {
     transform: translate(0, 0);
 }
 
-.datepicker {
+.datepicker.datepicker-dropdown.dropdown-menu{
     z-index: 100 !important;
 }
 
