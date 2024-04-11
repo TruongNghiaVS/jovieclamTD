@@ -38,7 +38,8 @@ if (!isset($seo)) {
 
     <link href="{{ asset('/') }}admin_assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet"
     type="text/css" />
-    
+    <link href="{{ asset('/') }}admin_assets/global/plugins/cropper/css/cropper.css" rel="stylesheet"
+    type="text/css" />
 
 
 
@@ -81,7 +82,10 @@ if (!isset($seo)) {
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script src="{{ asset('/') }}admin_assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
     <script src="{{ asset('/') }}admin_assets/global/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.vi.min.js" type="text/javascript"></script>
+    <script src="{{ asset('/') }}admin_assets/global/plugins/cropper/js/cropper.js" type="text/javascript"></script>
+    <script src="{{ asset('/') }}admin_assets/global/plugins/cropper/js/jquery-cropper.js" type="text/javascript"></script>
 
+    
     <script src="{{ asset('/') }}admin_assets/global/plugins/Bootstrap-3-Typeahead/bootstrap3-typeahead.min.js" type="text/javascript"></script>
     <script src="{{ asset('/') }}admin_assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
 

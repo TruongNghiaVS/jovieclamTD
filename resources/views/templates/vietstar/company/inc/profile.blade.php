@@ -126,8 +126,14 @@
 </style>
 @endpush
 
+
+@include('templates.employers.includes.crop_img_modal')
+
+
+
 {!! Form::model($company, array('method' => 'put', 'route' => array('update.company.profile'), 'class' => 'form form-user-profile', 'files'=>true)) !!}
 <form action="">
+
     <div class="user-account-section">
         <div class="formpanel mt0">
             <div class="section-head">
@@ -148,7 +154,10 @@
                                     </div>
                                     <input type="file" name="image" id="company_fileInput" style="display: none;">
 
-                                    <a class="uploadImage_btn" href="javascript:void(0);" onclick="$('#company_fileInput').click()"><i class="bi bi-camera-fill"></i></a>
+                                    <a class="uploadImage_btn" href="javascript:void(0);" 
+                               
+                                    data-toggle="modal" data-target="#crop_img_modal"
+                                    ><i class="bi bi-camera-fill"></i></a>
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                 </div>
@@ -497,66 +506,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 @include('templates.vietstar.includes.tinyMCEFront')
 <script type="text/javascript">
-    function readURLAvatar(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                $('.img-avatar img').attr('src', e.target.result);
-            }
-            reader.readAsDataURL(input.files[0]);
-            var formData = new FormData();
-            var avatarFile = $('#company_fileInput')[0].files[0];
-
-            console.log(avatarFile);
-            if (avatarFile) {
-                formData.append('logo', avatarFile);
-
-                // Simulating an AJAX POST request
-
-                $.ajaxSetup({
-                    headers: {
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    }
-                });
-                $.ajax({
-                    url: `{{route('update.company.avatar')}}`,
-                    type: 'POST',
-                    data: formData,
-                    beforeSend:showSpinner(),
-                    contentType: false,
-                    processData: false,
-
-                    success: function(response) {
-                        // Handle success response
-                        hideSpinner();
-                        if(response){
-                            showModal_Success('Thông báo', `Cập nhật avatar thành công`, ``);
-                            
-                            setTimeout(function(){
-                                window.location.reload();
-                            }, 3000);
-                        }
-                    },
-                    error: function(xhr, status, error) {
-                        // Handle error
-                        hideSpinner();
-
-                        console.error('Error uploading avatar:', error);
-                    }
-                });
-            } else {
-                hideSpinner();
-                alert('Please select an image before uploading.');
-            }
-
-        }
-    }
-
-    $('#company_fileInput').change(function() {
-        readURLAvatar(this);
+    $(document).ready(function() {
+        initImageCropper(`{{route('update.company.avatar')}}`);
     });
-
-
+  
 
     function readURL(input) {
         if (input.files && input.files[0]) {
@@ -609,6 +562,10 @@
 
         }
     }
+
+
+
+
 
     $('#company_thumnail_input').change(function() {
         readURL(this);
