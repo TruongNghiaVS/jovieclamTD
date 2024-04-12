@@ -117,11 +117,6 @@
     .text-decoration {
         text-decoration: underline;
     }
-
-
-
-
-
 </style>
 @endpush
 
@@ -133,7 +128,7 @@
 {!! Form::model($company, array('method' => 'put', 'route' => array('update.company.profile'), 'class' => 'form form-user-profile', 'files'=>true)) !!}
 <form action="">
         
-        <ul class="nav nav-tabs mb-0" role="tablist">
+        <ul class="nav nav-tabs mb-0 bg-white" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#conpany_info_tab" role="tab">Thông Tin Công Ty</a>
             </li>
@@ -146,242 +141,242 @@
         </ul><!-- Tab panes -->
         <div class="tab-content">
             <div class="tab-pane active" id="conpany_info_tab" role="tabpanel">
-            <div class="user-account-section">
+                    <div class="user-account-section rounded-0">
                         <div class="formpanel mt0">
-                        <div class="section-head">
-                            <div class="section-head__figure">
-                                <div class="figure__image"><img src="https://icons.veryicon.com/png/o/system/alongthink/ico-user-info.png" alt=""></div>
-                                <div class="figure__caption">
+                            <div class="section-head">
+                                <div class="section-head__figure">
+                                    <div class="figure__image"><img src="https://icons.veryicon.com/png/o/system/alongthink/ico-user-info.png" alt=""></div>
+                                    <div class="figure__caption">
 
-                                    <h5 class="">{{__('Company Information')}}</h5>
-                                    <div class="status complete" bis_skin_checked="1">
-                                        <p>Hoàn thành</p>
+                                        <h5 class="">{{__('Company Information')}}</h5>
+                                        <div class="status complete" bis_skin_checked="1">
+                                            <p>Hoàn thành</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="section-head__right-action" bis_skin_checked="1">
-                                <div class="right-action__tips" bis_skin_checked="1"  data-toggle="modal" data-target="#company-info-tip">
-                                    <i class="bi bi-lightbulb"></i>
-                                    <p>Tips</p>
+                                <div class="section-head__right-action" bis_skin_checked="1">
+                                    <div class="right-action__tips" bis_skin_checked="1"  data-toggle="modal" data-target="#company-info-tip">
+                                        <i class="bi bi-lightbulb"></i>
+                                        <p>Tips</p>
+                                    </div>
+                                    <div class="right-action__link-edit"><a id="modalToggle" data-toggle="modal" data-target="#company_info" href="#"><i class="bi bi-pen"></i>Chỉnh sửa</a></div>
+                                    <div class="right-action__link-edit-mobile"><a id="modalToggle" data-toggle="modal" data-target="#company_info" href="#"><i class="bi bi-pen"></i></a></div>
                                 </div>
-                                <div class="right-action__link-edit"><a id="modalToggle" data-toggle="modal" data-target="#company_info" href="#"><i class="bi bi-pen"></i>Chỉnh sửa</a></div>
-                                <div class="right-action__link-edit-mobile"><a id="modalToggle" data-toggle="modal" data-target="#company_info" href="#"><i class="bi bi-pen"></i></a></div>
                             </div>
-                        </div>
 
-                        <div class="section-body">
-                            <div class="table-responsive">
-                                <table class="table table-responsive table-user-information">
-                                    <tbody>
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                    {{__('Company Name')}}
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
-                                                {{ isset($company->name) ? $company->name : old('name') }}
-                                            </td>
-                                        </tr>
+                            <div class="section-body">
+                                <div class="table-responsive">
+                                    <table class="table table-responsive table-user-information">
+                                        <tbody>
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                        {{__('Company Name')}}
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
+                                                    {{ isset($company->name) ? $company->name : old('name') }}
+                                                </td>
+                                            </tr>
 
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                    {{__('CEO Name')}}
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
-                                                {{ isset($company->ceo) ? $company->ceo : old('ceo') }}
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                        {{__('CEO Name')}}
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
+                                                    {{ isset($company->ceo) ? $company->ceo : old('ceo') }}
+                                                </td>
+                                            </tr>
 
-                                
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                    {{__('Industry')}}
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
-                                                {{ !empty($company->industry)?$company->industry->industry : '' }}
-                                            </td>
-                                        </tr>
-
-
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                    {{__('Ownership')}}
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
-                                            <?php
                                     
-                                                $ownershiptype_tmp = "";
-                                                $cp_ownershiptype_id = isset($company->ownership_type_id) ? $company->ownership_type_id:""  ;
-                                                foreach ($ownershipTypes as $key => $value) {
-                                                    if ($key == $cp_ownershiptype_id) {
-                                                        $ownershiptype_tmp = $value;
-                                                    }
-                                                }
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                        {{__('Industry')}}
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
+                                                    {{ !empty($company->industry)?$company->industry->industry : '' }}
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                        {{__('Ownership')}}
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
+                                                <?php
                                         
+                                                    $ownershiptype_tmp = "";
+                                                    $cp_ownershiptype_id = isset($company->ownership_type_id) ? $company->ownership_type_id:""  ;
+                                                    foreach ($ownershipTypes as $key => $value) {
+                                                        if ($key == $cp_ownershiptype_id) {
+                                                            $ownershiptype_tmp = $value;
+                                                        }
+                                                    }
                                             
-                                            ?>
-                                                {{ !empty($ownershiptype_tmp)? $ownershiptype_tmp : '' }}
-                                            </td>
-                                        </tr>
+                                                
+                                                ?>
+                                                    {{ !empty($ownershiptype_tmp)? $ownershiptype_tmp : '' }}
+                                                </td>
+                                            </tr>
 
 
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                    {{__('Description')}}
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
-                                                {!! $company->description !!}
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                        {{__('Description')}}
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
+                                                    {!! $company->description !!}
+                                                </td>
+                                            </tr>
 
 
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                    {{__('Country')}}
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                        {{__('Country')}}
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
 
 
 
-                                                @foreach ($countries as $key => $countrie)
-                                                @if($key == $company->country_id)
-                                                {{$countrie}}
-                                                @endif
-                                                @endforeach
-                                            </td>
-                                        </tr>
+                                                    @foreach ($countries as $key => $countrie)
+                                                    @if($key == $company->country_id)
+                                                    {{$countrie}}
+                                                    @endif
+                                                    @endforeach
+                                                </td>
+                                            </tr>
 
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                Tỉnh/Thành Phố
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
-                                                {{$cityCompany->city}}
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                    Tỉnh/Thành Phố
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
+                                                    {{$cityCompany->city}}
+                                                </td>
+                                            </tr>
 
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                    {{__('Address')}}
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
-                                                {{ isset($company->location) ? $company->location : old('location') }}
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                        {{__('Address')}}
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
+                                                    {{ isset($company->location) ? $company->location : old('location') }}
+                                                </td>
+                                            </tr>
 
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                    {{__('No of Office')}}
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
-                                            {{ isset($company->no_of_offices) ? $company->no_of_offices : old('no_of_offices') }}
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                        {{__('No of Office')}}
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
+                                                {{ isset($company->no_of_offices) ? $company->no_of_offices : old('no_of_offices') }}
 
-                                            </td>
-                                        </tr>
+                                                </td>
+                                            </tr>
 
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                    {{__('No of Employees')}}
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
-                                            {{ isset($company->no_of_employees) ? $company->no_of_employees : old('no_of_employees') }}
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                        {{__('No of Employees')}}
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
+                                                {{ isset($company->no_of_employees) ? $company->no_of_employees : old('no_of_employees') }}
+                                                </td>
+                                            </tr>
 
 
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                    {{__('Established In')}}
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
-                                                {{ isset($company->established_in) ? $company->established_in : old('established_in')}}
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                        {{__('Established In')}}
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
+                                                    {{ isset($company->established_in) ? $company->established_in : old('established_in')}}
+                                                </td>
+                                            </tr>
 
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                   Logo
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
-                                                <div class="pic img-avatar">
-                                                    <div class="img-avatar__wrapper">
-                                                        {{$company->printCompanyImage()}}
-                                                    </div>
-                                                    <input type="file" name="image" id="company_fileInput" style="display: none;">
-
-                                                    <a class="uploadImage_btn" href="javascript:void(0);" 
-                                            
-                                                    onclick="AvatarImageCropper(`{{route('update.company.avatar')}}`, 1, 1);"
-                                                    ><i class="bi bi-camera-fill"></i></a>
-                                                    {!! APFrmErrHelp::showErrors($errors, 'image') !!}
-                                                    {!! APFrmErrHelp::showErrors($errors, 'image') !!}
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="table_title">
-                                                <strong>
-                                                    Hình Nền
-                                                </strong>
-                                            </td>
-                                            <td class="table_value">
-                                                    
-                                                    <div id="thumbnail">
-                                                        <div class="pic img-thumnail">
-                                                            <div class="img-thumnail__wrapper">
-                                                            {{--{{ ImgUploader::print_image("company_logos/$company->cover_logo") }}--}}
-                                                            {{$company->printCompanyCoverImage()}}
-                                                            </div>
-                                                            <input type="file" name="image" id="company_thumnail_input" style="display: none;">
-
-                                                            <a class="uploadImage_btn" href="javascript:void(0);" 
-                                                            onclick="CoverImageCropper(`{{route('update.company.avatar')}}`, 16, 4 );"
-                                                            ><i class="bi bi-camera-fill"></i></a>
-                                                            {!! APFrmErrHelp::showErrors($errors, 'image') !!}
-                                                            {!! APFrmErrHelp::showErrors($errors, 'image') !!}
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                    Logo
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
+                                                    <div class="pic img-avatar">
+                                                        <div class="img-avatar__wrapper">
+                                                            {{$company->printCompanyImage()}}
                                                         </div>
+                                                        <input type="file" name="image" id="company_fileInput" style="display: none;">
+
+                                                        <a class="uploadImage_btn" href="javascript:void(0);" 
+                                                
+                                                        onclick="AvatarImageCropper(`{{route('update.company.avatar')}}`, 1, 1);"
+                                                        ><i class="bi bi-camera-fill"></i></a>
+                                                        {!! APFrmErrHelp::showErrors($errors, 'image') !!}
+                                                        {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                                     </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                @if(isset($company->map))
-                                    <h6>Map</h6>
-                                    <div class="gmap">
-                                        {!!$company->map!!}
-                                    </div>
-                                @endif
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="table_title">
+                                                    <strong>
+                                                        Hình Nền
+                                                    </strong>
+                                                </td>
+                                                <td class="table_value">
+                                                        
+                                                        <div id="thumbnail">
+                                                            <div class="pic img-thumnail">
+                                                                <div class="img-thumnail__wrapper">
+                                                                {{--{{ ImgUploader::print_image("company_logos/$company->cover_logo") }}--}}
+                                                                {{$company->printCompanyCoverImage()}}
+                                                                </div>
+                                                                <input type="file" name="image" id="company_thumnail_input" style="display: none;">
+
+                                                                <a class="uploadImage_btn" href="javascript:void(0);" 
+                                                                onclick="CoverImageCropper(`{{route('update.company.avatar')}}`, 16, 4 );"
+                                                                ><i class="bi bi-camera-fill"></i></a>
+                                                                {!! APFrmErrHelp::showErrors($errors, 'image') !!}
+                                                                {!! APFrmErrHelp::showErrors($errors, 'image') !!}
+                                                            </div>
+                                                        </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    @if(isset($company->map))
+                                        <h6>Map</h6>
+                                        <div class="gmap">
+                                            {!!$company->map!!}
+                                        </div>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
             <div class="tab-pane" id="contact_info_tab" role="tabpanel">
-                <div class="user-account-section">
+                <div class="user-account-section rounded-0">
                     <div class="formpanel mt0">
                         <div class="section-head">
                             <div class="section-head__figure">
@@ -499,9 +494,9 @@
                 </div>
             </div>
             <div class="tab-pane" id="changepassword" role="tabpanel">
-                <div class="user-account-section">
-                    @include('templates.employers.company.form.resetpassword')
-                </div>
+                    <div class="user-account-section rounded-0">
+                        @include('templates.employers.company.form.resetpassword')
+                    </div>
             </div>
         </div>
 

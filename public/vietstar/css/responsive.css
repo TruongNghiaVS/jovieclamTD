@@ -21,9 +21,17 @@
     margin-top: 140px;
   }
 
-
+  .pic.img-thumnail {
+    position: relative;
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
   #mobile-sidebar-main-nav {
     display: block;
+  }
+  .nav.nav-tabs {
+    overflow-x: auto  !important;
+    white-space: nowrap !important;
   }
 
 
@@ -531,10 +539,16 @@
     margin-bottom: 30px;
   }
 
-  .tab.tab-nav {
+  .nav-tabs {
     overflow: auto;
     white-space: nowrap;
     padding: 0 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: unset;
+    padding-left: 0;
+    margin-bottom: 0;
+ 
   }
  
   footer section.links {

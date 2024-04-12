@@ -297,6 +297,12 @@ a {
   pointer-events: none;
 }
 
+.nav-tabs .nav-link {
+  color: var(--sub-text);
+}
+
+
+
 .pagination {
   margin-bottom: unset;
 }
