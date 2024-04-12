@@ -8,8 +8,8 @@
         }
         .preview {
             overflow: hidden;
-            width: 200px; 
-            height: 200px;
+            width: 150px; 
+            height: 150px;
             border-radius: 50%;
             position: relative;
         }
@@ -88,7 +88,7 @@
                     <div class="col-lg-12">
                       <input type="file" id="fileInput-for-crop-img" accept="image/*" style="display: none;"/>
                     </div>
-                    <div class="col-lg-6 mb-3 d-flex justify-content-center flex-column align-items-center">
+                    <div class="col-lg-6 mb-3 d-flex flex-column align-items-center">
                         <h4>Ảnh gốc</h4>
                         <div class="editorChooseImage" >
                             <a href="#" class="btn-choose-image" onclick="$('#fileInput-for-crop-img').click();">Click chọn ảnh để tải lên!</a>
