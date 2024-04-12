@@ -547,8 +547,6 @@
       }
 
   })
-
-
 </script>
 @endpush
 

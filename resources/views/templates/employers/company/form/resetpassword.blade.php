@@ -1,34 +1,22 @@
-<div class="modal fade" id="user_info" tabindex="-1" role="dialog" aria-labelledby="user_infoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">{{__('Account Information')}}</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="changepassword_company_form" class="needs-validation" novalidate>
-                    <div class="form-group">
-                        <label for="password">{{__('Reset Password')}}</label>
-                        {!! Form::password('password', array('class'=>'form-control', 'id'=>'pwdId')) !!}
-                        {!! APFrmErrHelp::showErrors($errors, 'password') !!}
-                        <div class="invalid-feedback">{{__('Password is required')}}</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="cPwdId">{{__('Confirm Password')}}</label>
-                        <input type="password" id="cPwdId" class="form-control pwds" placeholder="{{__('Confirm Password')}}"  required>
-                        <div id="cPwdValid" class="valid-feedback">Valid</div>
-                        <div id="cPwdInvalid" class="invalid-feedback"></div>
-                    </div>
-                    <div class="form-group">
-                        <button id="account_submitBtn" type="button" class="btn btn-primary submit-button" disabled>{{__(('Update'))}}</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+
+<form id="changepassword_company_form" class="needs-validation" novalidate>
+    <div class="form-group">
+        <label for="password">{{__('Reset Password')}}</label>
+        {!! Form::password('password', array('class'=>'form-control', 'id'=>'pwdId')) !!}
+        {!! APFrmErrHelp::showErrors($errors, 'password') !!}
+        <div class="invalid-feedback">{{__('Password is required')}}</div>
     </div>
-</div>
+    <div class="form-group">
+        <label for="cPwdId">{{__('Confirm Password')}}</label>
+        <input type="password" id="cPwdId" class="form-control pwds" placeholder="{{__('Confirm Password')}}"  required>
+        <div id="cPwdValid" class="valid-feedback">Valid</div>
+        <div id="cPwdInvalid" class="invalid-feedback"></div>
+    </div>
+    <div class="form-group">
+        <button id="account_submitBtn" type="button" class="btn btn-primary submit-button" disabled>{{__(('Update'))}}</button>
+    </div>
+</form>
+
 
 
 
@@ -37,9 +25,10 @@
 <script type="text/javascript">
     $(document).ready(function(){
       // Check if passwords match
-      $('#user_info #pwdId, #user_info #cPwdId').on('keyup', function () {
-        var pwd = $('#user_info #pwdId').val();
-        var cPwd = $('#user_info #cPwdId').val();
+      $(' #pwdId,  #cPwdId').on('keyup', function () {
+        var pwd = $(' #pwdId').val();
+        var cPwd = $(' #cPwdId').val();
+        console.log(pwd,cPwd);
         if (pwd != '' && cPwd != '' && pwd == cPwd && pwd.length >= 6 && pwd.length <= 15 && cPwd.length >= 6 && cPwd.length <= 15 ) {
           $("#account_submitBtn").attr("disabled",false);
           $('#cPwdValid').show();
@@ -60,7 +49,7 @@
       });
 
      $('#account_submitBtn').on('click',()=>{
-                if ($('#user_info #pwdId').val()) {
+                if ($(' #pwdId').val()) {
                     showSpinner();
                     // Simulating an AJAX POST request
                     $.ajax({
@@ -69,12 +58,12 @@
                         beforeSend: showSpinner(),
                         data:  {
                             _token: '{{ csrf_token() }}',
-                            password:$('#user_info #pwdId').val(),
+                            password:$(' #pwdId').val(),
                         },
                         success: function (response) {
                           hideSpinner();
                           if (response.sucess) {
-                                $('#user_info').modal("hide");
+                            
                                 showModal_Success('Thông báo', `${response.message ? response.message : "Đổi Mật Khẩu thành công"}`, ``);
                                 setTimeout(function(){
                                     window.location.reload();

@@ -106,9 +106,8 @@
     }
     .pic.img-thumnail {
         position: relative;
-        min-width: 100%;
-        max-width: 100%;
-
+        min-width: 50%;
+        max-width: 50%;
     }
     .img-thumnail .img-thumnail__wrapper {
        
@@ -133,371 +132,385 @@
 
 {!! Form::model($company, array('method' => 'put', 'route' => array('update.company.profile'), 'class' => 'form form-user-profile', 'files'=>true)) !!}
 <form action="">
+        
+        <ul class="nav nav-tabs mb-0" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#conpany_info_tab" role="tab">Thông Tin Công Ty</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#contact_info_tab" role="tab">Thông Tin Liên Hệ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#changepassword" role="tab">Đổi Mật Khẩu</a>
+            </li>
+        </ul><!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="conpany_info_tab" role="tabpanel">
+            <div class="user-account-section">
+                        <div class="formpanel mt0">
+                        <div class="section-head">
+                            <div class="section-head__figure">
+                                <div class="figure__image"><img src="https://icons.veryicon.com/png/o/system/alongthink/ico-user-info.png" alt=""></div>
+                                <div class="figure__caption">
 
-    <div class="user-account-section">
-        <div class="formpanel mt0">
-            <div class="section-head">
-                <h1 class="title-form">Chỉnh Sửa Thông Tin Tài Khoản</h1>
-            </div>
-
-            <div class="section-body">
-           
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-4 d-flex flex-column justify-content-center align-items-center">
-                        <h6>Logo</h6>
-                        
-                        <div class="formrow formrow-photo">
-                            <div id="thumbnail">
-                                <div class="pic img-avatar">
-                                    <div class="img-avatar__wrapper">
-                                        {{$company->printCompanyImage()}}
+                                    <h5 class="">{{__('Company Information')}}</h5>
+                                    <div class="status complete" bis_skin_checked="1">
+                                        <p>Hoàn thành</p>
                                     </div>
-                                    <input type="file" name="image" id="company_fileInput" style="display: none;">
-
-                                    <a class="uploadImage_btn" href="javascript:void(0);" 
-                               
-                                    onclick="AvatarImageCropper(`{{route('update.company.avatar')}}`, 1, 1);"
-                                    ><i class="bi bi-camera-fill"></i></a>
-                                    {!! APFrmErrHelp::showErrors($errors, 'image') !!}
-                                    {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                 </div>
                             </div>
-                        
-                        </div>
-                    </div>
-
-                    <div class="col-sm-12 col-lg-4 d-flex flex-column justify-content-center align-items-center">
-                        <div class="formrow formrow-photo">
-                        <h6>Hình Nền</h6>
-                            <div id="thumbnail">
-                                <div class="pic img-thumnail">
-                                    <div class="img-thumnail__wrapper">
-                                    {{--{{ ImgUploader::print_image("company_logos/$company->cover_logo") }}--}}
-                                    {{$company->printCompanyCoverImage()}}
-                                    </div>
-                                    <input type="file" name="image" id="company_thumnail_input" style="display: none;">
-
-                                    <a class="uploadImage_btn" href="javascript:void(0);" 
-                                    onclick="CoverImageCropper(`{{route('update.company.avatar')}}`, 16, 4 );"
-                                    ><i class="bi bi-camera-fill"></i></a>
-                                    {!! APFrmErrHelp::showErrors($errors, 'image') !!}
-                                    {!! APFrmErrHelp::showErrors($errors, 'image') !!}
+                            <div class="section-head__right-action" bis_skin_checked="1">
+                                <div class="right-action__tips" bis_skin_checked="1"  data-toggle="modal" data-target="#company-info-tip">
+                                    <i class="bi bi-lightbulb"></i>
+                                    <p>Tips</p>
                                 </div>
+                                <div class="right-action__link-edit"><a id="modalToggle" data-toggle="modal" data-target="#company_info" href="#"><i class="bi bi-pen"></i>Chỉnh sửa</a></div>
+                                <div class="right-action__link-edit-mobile"><a id="modalToggle" data-toggle="modal" data-target="#company_info" href="#"><i class="bi bi-pen"></i></a></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-4 d-flex flex-column justify-content-start align-items-center">
-                        <a class="cursor-pointer text-decoration text-secondary" data-toggle="modal" data-target="#user_info" href="#">Đổi Mật Khẩu <i class="bi bi-lock-fill"></i></a>
-                    </div>
-                </div>
-               
-            </div>
-        </div>
-    </div>
-    
-    <div class="user-account-section">
-        <div class="formpanel mt0">
-            <div class="section-head">
-                <div class="section-head__figure">
-                    <div class="figure__image"><img src="https://icons.veryicon.com/png/o/system/alongthink/ico-user-info.png" alt=""></div>
-                    <div class="figure__caption">
 
-                        <h5 class="">{{__('Company Information')}}</h5>
-                        <div class="status complete" bis_skin_checked="1">
-                            <p>Hoàn thành</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-head__right-action" bis_skin_checked="1">
-                    <div class="right-action__tips" bis_skin_checked="1"  data-toggle="modal" data-target="#company-info-tip">
-                        <i class="bi bi-lightbulb"></i>
-                        <p>Tips</p>
-                    </div>
-                    <div class="right-action__link-edit"><a id="modalToggle" data-toggle="modal" data-target="#company_info" href="#"><i class="bi bi-pen"></i>Chỉnh sửa</a></div>
-                    <div class="right-action__link-edit-mobile"><a id="modalToggle" data-toggle="modal" data-target="#company_info" href="#"><i class="bi bi-pen"></i></a></div>
-                </div>
-            </div>
+                        <div class="section-body">
+                            <div class="table-responsive">
+                                <table class="table table-responsive table-user-information">
+                                    <tbody>
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    {{__('Company Name')}}
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                {{ isset($company->name) ? $company->name : old('name') }}
+                                            </td>
+                                        </tr>
 
-            <div class="section-body">
-                <div class="table-responsive">
-                    <table class="table table-responsive table-user-information">
-                        <tbody>
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        {{__('Company Name')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    {{ isset($company->name) ? $company->name : old('name') }}
-                                </td>
-                            </tr>
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    {{__('CEO Name')}}
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                {{ isset($company->ceo) ? $company->ceo : old('ceo') }}
+                                            </td>
+                                        </tr>
 
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        {{__('CEO Name')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    {{ isset($company->ceo) ? $company->ceo : old('ceo') }}
-                                </td>
-                            </tr>
-
-                      
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        {{__('Industry')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    {{ !empty($company->industry)?$company->industry->industry : '' }}
-                                </td>
-                            </tr>
-
-
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        {{__('Ownership')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                <?php
-                           
-                                    $ownershiptype_tmp = "";
-                                    $cp_ownershiptype_id = isset($company->ownership_type_id) ? $company->ownership_type_id:""  ;
-                                    foreach ($ownershipTypes as $key => $value) {
-                                        if ($key == $cp_ownershiptype_id) {
-                                            $ownershiptype_tmp = $value;
-                                        }
-                                    }
-                            
                                 
-                                ?>
-                                    {{ !empty($ownershiptype_tmp)? $ownershiptype_tmp : '' }}
-                                </td>
-                            </tr>
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    {{__('Industry')}}
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                {{ !empty($company->industry)?$company->industry->industry : '' }}
+                                            </td>
+                                        </tr>
 
 
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        {{__('Description')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    {!! $company->description !!}
-                                </td>
-                            </tr>
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    {{__('Ownership')}}
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                            <?php
+                                    
+                                                $ownershiptype_tmp = "";
+                                                $cp_ownershiptype_id = isset($company->ownership_type_id) ? $company->ownership_type_id:""  ;
+                                                foreach ($ownershipTypes as $key => $value) {
+                                                    if ($key == $cp_ownershiptype_id) {
+                                                        $ownershiptype_tmp = $value;
+                                                    }
+                                                }
+                                        
+                                            
+                                            ?>
+                                                {{ !empty($ownershiptype_tmp)? $ownershiptype_tmp : '' }}
+                                            </td>
+                                        </tr>
 
 
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        {{__('Country')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    {{__('Description')}}
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                {!! $company->description !!}
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    {{__('Country')}}
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
 
 
 
-                                    @foreach ($countries as $key => $countrie)
-                                    @if($key == $company->country_id)
-                                    {{$countrie}}
-                                    @endif
-                                    @endforeach
-                                </td>
-                            </tr>
+                                                @foreach ($countries as $key => $countrie)
+                                                @if($key == $company->country_id)
+                                                {{$countrie}}
+                                                @endif
+                                                @endforeach
+                                            </td>
+                                        </tr>
 
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                       Tỉnh/Thành Phố
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                       {{$cityCompany->city}}
-                                </td>
-                            </tr>
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                Tỉnh/Thành Phố
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                {{$cityCompany->city}}
+                                            </td>
+                                        </tr>
 
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        {{__('Address')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    {{ isset($company->location) ? $company->location : old('location') }}
-                                </td>
-                            </tr>
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    {{__('Address')}}
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                {{ isset($company->location) ? $company->location : old('location') }}
+                                            </td>
+                                        </tr>
 
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        {{__('No of Office')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                {{ isset($company->no_of_offices) ? $company->no_of_offices : old('no_of_offices') }}
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    {{__('No of Office')}}
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                            {{ isset($company->no_of_offices) ? $company->no_of_offices : old('no_of_offices') }}
 
-                                </td>
-                            </tr>
+                                            </td>
+                                        </tr>
 
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        {{__('No of Employees')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                {{ isset($company->no_of_employees) ? $company->no_of_employees : old('no_of_employees') }}
-                                </td>
-                            </tr>
-
-
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        {{__('Established In')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    {{ isset($company->established_in) ? $company->established_in : old('established_in')}}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h6>Map</h6>
-                    <div class="gmap">
-                        {!!$company->map!!}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    {{__('No of Employees')}}
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                            {{ isset($company->no_of_employees) ? $company->no_of_employees : old('no_of_employees') }}
+                                            </td>
+                                        </tr>
 
 
-    <div class="user-account-section">
-        <div class="formpanel mt0">
-            <div class="section-head">
-                <div class="section-head__figure">
-                    <div class="figure__image"><img src="https://icons.veryicon.com/png/o/system/alongthink/ico-user-info.png" alt=""></div>
-                    <div class="figure__caption">
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    {{__('Established In')}}
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                {{ isset($company->established_in) ? $company->established_in : old('established_in')}}
+                                            </td>
+                                        </tr>
 
-                        <h5 class="">Thông tin liên hệ</h5>
-                        <div class="status complete" bis_skin_checked="1">
-                            <p>Hoàn thành</p>
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                   Logo
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                <div class="pic img-avatar">
+                                                    <div class="img-avatar__wrapper">
+                                                        {{$company->printCompanyImage()}}
+                                                    </div>
+                                                    <input type="file" name="image" id="company_fileInput" style="display: none;">
+
+                                                    <a class="uploadImage_btn" href="javascript:void(0);" 
+                                            
+                                                    onclick="AvatarImageCropper(`{{route('update.company.avatar')}}`, 1, 1);"
+                                                    ><i class="bi bi-camera-fill"></i></a>
+                                                    {!! APFrmErrHelp::showErrors($errors, 'image') !!}
+                                                    {!! APFrmErrHelp::showErrors($errors, 'image') !!}
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    Hình Nền
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                    
+                                                    <div id="thumbnail">
+                                                        <div class="pic img-thumnail">
+                                                            <div class="img-thumnail__wrapper">
+                                                            {{--{{ ImgUploader::print_image("company_logos/$company->cover_logo") }}--}}
+                                                            {{$company->printCompanyCoverImage()}}
+                                                            </div>
+                                                            <input type="file" name="image" id="company_thumnail_input" style="display: none;">
+
+                                                            <a class="uploadImage_btn" href="javascript:void(0);" 
+                                                            onclick="CoverImageCropper(`{{route('update.company.avatar')}}`, 16, 4 );"
+                                                            ><i class="bi bi-camera-fill"></i></a>
+                                                            {!! APFrmErrHelp::showErrors($errors, 'image') !!}
+                                                            {!! APFrmErrHelp::showErrors($errors, 'image') !!}
+                                                        </div>
+                                                    </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                @if(isset($company->map))
+                                    <h6>Map</h6>
+                                    <div class="gmap">
+                                        {!!$company->map!!}
+                                    </div>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="section-head__right-action" bis_skin_checked="1">
-                    <div class="right-action__tips" bis_skin_checked="1" data-toggle="modal" data-target="#company-contact-tip">
-                        <i class="bi bi-lightbulb"></i>
-                        <p>Tips</p>
+            </div>
+            <div class="tab-pane" id="contact_info_tab" role="tabpanel">
+                <div class="user-account-section">
+                    <div class="formpanel mt0">
+                        <div class="section-head">
+                            <div class="section-head__figure">
+                                <div class="figure__image"><img src="https://icons.veryicon.com/png/o/system/alongthink/ico-user-info.png" alt=""></div>
+                                <div class="figure__caption">
+
+                                    <h5 class="">Thông tin liên hệ</h5>
+                                    <div class="status complete" bis_skin_checked="1">
+                                        <p>Hoàn thành</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-head__right-action" bis_skin_checked="1">
+                                <div class="right-action__tips" bis_skin_checked="1" data-toggle="modal" data-target="#company-contact-tip">
+                                    <i class="bi bi-lightbulb"></i>
+                                    <p>Tips</p>
+                                </div>
+                                <div class="right-action__link-edit"><a id="modalToggle" data-toggle="modal" data-target="#contact_info" href="#"><i class="bi bi-pen"></i>Chỉnh sửa</a></div>
+                                <div class="right-action__link-edit-mobile"><a id="modalToggle" data-toggle="modal" data-target="#contact_info" href="#"><i class="bi bi-pen"></i></a></div>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <div class="table-responsive">
+                                <table class="table table-responsive table-user-information">
+                                    <tbody>
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    <i class="fa fa-globe"></i> Trang Web
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                <a href="{{ isset($company->website) ? $company->website : old('website')}}">
+                                                    {{ $company->website ? $company->website : old('website')}}
+                                                </a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                <i class="fa-solid fa-fax"></i> {{__('Fax')}}
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                <a href="tel:{{ isset($company->fax) ? $company->fax : old('fax')}}">{{ isset($company->fax) ? $company->fax : old('fax')}}</a>
+                                                
+                                                
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    <i class="bi bi-telephone"></i> {{__('Mobile Number')}}
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                <a href="tel:{{ isset($company->phone) ? $company->phone : old('phone')}}">{{ isset($company->phone) ? $company->phone : old('phone')}}</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    <i class="bi bi-facebook"></i> Facebook
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                <a href="{{ isset($company->facebook) ? $company->facebook : old('facebook')}}">{{ isset($company->facebook) ? $company->facebook : old('facebook')}}</a>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    <i class="bi bi-twitter"></i> Twitter
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                <a href="{{ isset($company->twitter) ? $company->twitter : old('twitter')}}">{{ isset($company->twitter) ? $company->twitter : old('twitter')}}</a>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    <i class="bi bi-linkedin"></i> LinkedIn
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                <a href="{{ isset($company->linkedin) ? $company->linkedin : old('linkedin')}}">{{ isset($company->linkedin) ? $company->linkedin : old('linkedin')}}</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    <i class="bi bi-google"></i> Google Plus
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                <a href="{{ isset($company->google_plus) ? $company->google_plus : old('google_plus')}}">{{ isset($company->google_plus) ? $company->google_plus : old('google_plus')}}</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="right-action__link-edit"><a id="modalToggle" data-toggle="modal" data-target="#contact_info" href="#"><i class="bi bi-pen"></i>Chỉnh sửa</a></div>
-                    <div class="right-action__link-edit-mobile"><a id="modalToggle" data-toggle="modal" data-target="#contact_info" href="#"><i class="bi bi-pen"></i></a></div>
                 </div>
             </div>
-
-            <div class="section-body">
-                <div class="table-responsive">
-                    <table class="table table-responsive table-user-information">
-                        <tbody>
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        <i class="fa fa-globe"></i> Trang Web
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    <a href="{{ isset($company->website) ? $company->website : old('website')}}">
-                                        {{ $company->website ? $company->website : old('website')}}
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                    <i class="fa-solid fa-fax"></i> {{__('Fax')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    <a href="tel:{{ isset($company->fax) ? $company->fax : old('fax')}}">{{ isset($company->fax) ? $company->fax : old('fax')}}</a>
-                                    
-                                    
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        <i class="bi bi-telephone"></i> {{__('Mobile Number')}}
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    <a href="tel:{{ isset($company->phone) ? $company->phone : old('phone')}}">{{ isset($company->phone) ? $company->phone : old('phone')}}</a>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        <i class="bi bi-facebook"></i> Facebook
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    <a href="{{ isset($company->facebook) ? $company->facebook : old('facebook')}}">{{ isset($company->facebook) ? $company->facebook : old('facebook')}}</a>
-                                </td>
-                            </tr>
-
-
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        <i class="bi bi-twitter"></i> Twitter
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    <a href="{{ isset($company->twitter) ? $company->twitter : old('twitter')}}">{{ isset($company->twitter) ? $company->twitter : old('twitter')}}</a>
-                                </td>
-                            </tr>
-
-
-
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        <i class="bi bi-linkedin"></i> LinkedIn
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    <a href="{{ isset($company->linkedin) ? $company->linkedin : old('linkedin')}}">{{ isset($company->linkedin) ? $company->linkedin : old('linkedin')}}</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="table_title">
-                                    <strong>
-                                        <i class="bi bi-google"></i> Google Plus
-                                    </strong>
-                                </td>
-                                <td class="table_value">
-                                    <a href="{{ isset($company->google_plus) ? $company->google_plus : old('google_plus')}}">{{ isset($company->google_plus) ? $company->google_plus : old('google_plus')}}</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="tab-pane" id="changepassword" role="tabpanel">
+                <div class="user-account-section">
+                    @include('templates.employers.company.form.resetpassword')
                 </div>
-
             </div>
         </div>
-    </div>
-</form>
 
-@include('templates.employers.company.form.resetpassword')
+    
+   
+
+
+    
+</form>
 
 @include('templates.employers.company.form.companyinfo_form')
 
