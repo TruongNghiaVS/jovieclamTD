@@ -8,8 +8,9 @@
         }
         .preview {
             overflow: hidden;
-            width: 150px; 
-            height: 150px;
+            width: 100%; 
+            max-height: 150px;
+            height:150px;
             border-radius: 10px;
             position: relative;
         }
@@ -80,8 +81,7 @@
   <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
             <div class="modal-header d-flex justify-content-center bg-primary ">
-                <h5 class="modal-title text-white" id="exampleModalLabel">CHỈNH SỬA ẢNH ĐẠI DIỆN</h5>
-                
+                <h5 class="modal-title text-white" id="crop_img_modalLabel">CHỈNH SỬA ẢNH ĐẠI DIỆN</h5>
             </div>
             <div class="modal-body">
               <div class="row">
@@ -89,7 +89,7 @@
                       <input type="file" id="fileInput-for-crop-img" accept="image/*" style="display: none;"/>
                     </div>
                     <div class="col-lg-6 mb-3 d-flex flex-column align-items-center">
-                        <h4>Ảnh gốc</h4>
+                        <h5>Ảnh gốc</h5>
                         <div class="editorChooseImage" >
                             <a href="#" class="btn-choose-image" onclick="$('#fileInput-for-crop-img').click();">Click chọn ảnh để tải lên!</a>
                         </div>
@@ -98,13 +98,53 @@
                       </div>
                     </div>
                     <div class="col-lg-6 d-flex justify-content-center flex-column align-items-center">
-                            <h4>Ảnh đại diện hiển thị</h4>
+                            <h5 id="crop_img_modalLabel_review">Ảnh đại diện hiển thị</h5>
                           <div class="preview border mb-4">
-                              <img src="/assets/no-image.jpg" alt="">
+                              <img src="/assets/no-cover.png" alt="">
                           </div> 
                           <div class="d-flex justify-content-center mb-3">
                               <input type="button" class="btn m-1 btn-primary" id="btnCrop" value="Xong" />
-                              <input type="button" class="btn m-1 btn-secondary" id="btnRestore" value="Bỏ thay đổi" />
+                              <input type="button" class="btn m-1 btn-secondary" id="btnRestore" value="Bỏ Thay Đổi" />
+                          </div>
+                            <a href="#" class="btn-close-image-editor mb-2"  title="Đóng trình chỉnh sửa (Không lưu thay đổi)" data-dismiss="modal">Đóng lại (Không lưu)</a>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="crop_img_modal" tabindex="-1" role="dialog" aria-labelledby="crop_img_modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center bg-primary ">
+                <h5 class="modal-title text-white" id="crop_img_modalLabel">CHỈNH SỬA ẢNH ĐẠI DIỆN</h5>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                    <div class="col-lg-12">
+                      <input type="file" id="fileInput-for-crop-img" accept="image/*" style="display: none;"/>
+                    </div>
+                    <div class="col-lg-6 mb-3 d-flex flex-column align-items-center">
+                        <h5>Ảnh gốc</h5>
+                        <div class="editorChooseImage" >
+                            <a href="#" class="btn-choose-image" onclick="$('#fileInput-for-crop-img').click();">Click chọn ảnh để tải lên!</a>
+                        </div>
+                        <div class="canvas-div" style="width: 100%;height: 200px;max-height: 200px;max-width: 100%;"> 
+                            <canvas id="canvas-for-crop-img"></canvas>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-center flex-column align-items-center">
+                            <h5 id="crop_img_modalLabel_review">Ảnh đại diện hiển thị</h5>
+                          <div class="preview border mb-4">
+                              <img src="/assets/no-cover.png" alt="">
+                          </div> 
+                          <div class="d-flex justify-content-center mb-3">
+                              <input type="button" class="btn m-1 btn-primary" id="btnCrop" value="Xong" />
+                              <input type="button" class="btn m-1 btn-secondary" id="btnRestore" value="Bỏ Thay Đổi" />
                           </div>
                             <a href="#" class="btn-close-image-editor mb-2"  title="Đóng trình chỉnh sửa (Không lưu thay đổi)" data-dismiss="modal">Đóng lại (Không lưu)</a>
                     </div>
@@ -119,12 +159,13 @@
 
 @push('scripts')
 <script type="text/javascript">
-   function initImageCropper(url, formDataName, aspectRatioWidth, aspectRatioHeight) {
-        $('#crop_img_modal').modal('show');
-        console.log(url, formDataName, aspectRatioWidth, aspectRatioHeight);
-        var canvas = $(" #canvas-for-crop-img");
-        var context = canvas.get(0).getContext("2d");
-        var cropper;
+   function initImageCropper(url, formDataName, aspectRatioWidth, aspectRatioHeight,namemodal) {
+        $("#crop_img_modalLabel").empty().html(namemodal);
+        $("#crop_img_modalLabel_review").empty().html(namemodal);
+       var canvas = $(" #canvas-for-crop-img");
+       var context = canvas.get(0).getContext("2d");
+       var cropper;
+       $('#crop_img_modal').modal('show');
 
         $('#fileInput-for-crop-img').on('change', function() {
             $('.editorChooseImage').hide();
@@ -209,8 +250,6 @@
                 alert('No file(s) selected.');
             }
         });
-
-     
     }
 </script>
 @endpush
