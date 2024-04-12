@@ -10,7 +10,7 @@
             overflow: hidden;
             width: 150px; 
             height: 150px;
-            border-radius: 50%;
+            border-radius: 10px;
             position: relative;
         }
         .preview img {
@@ -119,7 +119,9 @@
 
 @push('scripts')
 <script type="text/javascript">
-    function initImageCropper(url) {
+   function initImageCropper(url, formDataName, aspectRatioWidth, aspectRatioHeight) {
+        $('#crop_img_modal').modal('show');
+        console.log(url, formDataName, aspectRatioWidth, aspectRatioHeight);
         var canvas = $(" #canvas-for-crop-img");
         var context = canvas.get(0).getContext("2d");
         var cropper;
@@ -137,7 +139,7 @@
                             context.canvas.width = img.width;
                             context.drawImage(img, 0, 0);
                             cropper = canvas.cropper({
-                                aspectRatio: 1,
+                                aspectRatio: aspectRatioWidth / aspectRatioHeight,
                                 preview: '.preview' // Add this line to specify the preview element
                             });
                             $('#btnCrop').click(function() {
@@ -160,7 +162,7 @@
                                     var formData = new FormData();
                                     
                                     // Append the File object to the FormData object
-                                    formData.append('logo', croppedFile);
+                                    formData.append(formDataName, croppedFile);
                                  
                                     // Simulate AJAX POST request
                                     $.ajaxSetup({

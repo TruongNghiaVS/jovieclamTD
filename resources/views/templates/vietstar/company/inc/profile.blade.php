@@ -156,7 +156,7 @@
 
                                     <a class="uploadImage_btn" href="javascript:void(0);" 
                                
-                                    data-toggle="modal" data-target="#crop_img_modal"
+                                    onclick="initImageCropper(`{{route('update.company.avatar')}}`,'logo', 1, 1);"
                                     ><i class="bi bi-camera-fill"></i></a>
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
@@ -177,7 +177,9 @@
                                     </div>
                                     <input type="file" name="image" id="company_thumnail_input" style="display: none;">
 
-                                    <a class="uploadImage_btn" href="javascript:void(0);" onclick="$('#company_thumnail_input').click()"><i class="bi bi-camera-fill"></i></a>
+                                    <a class="uploadImage_btn" href="javascript:void(0);" 
+                                    onclick="initImageCropper(`{{route('update.company.avatar')}}`,'cover_logo', 16, 9);"
+                                    ><i class="bi bi-camera-fill"></i></a>
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                 </div>
@@ -506,9 +508,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 @include('templates.vietstar.includes.tinyMCEFront')
 <script type="text/javascript">
-    $(document).ready(function() {
-        initImageCropper(`{{route('update.company.avatar')}}`);
-    });
+    
   
 
     function readURL(input) {
