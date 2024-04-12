@@ -1,19 +1,32 @@
 
 <form id="changepassword_company_form" class="needs-validation" novalidate>
-    <div class="form-group">
-        <label for="password">{{__('Reset Password')}}</label>
-        {!! Form::password('password', array('class'=>'form-control', 'id'=>'pwdId')) !!}
-        {!! APFrmErrHelp::showErrors($errors, 'password') !!}
-        <div class="invalid-feedback">{{__('Password is required')}}</div>
+    <div class="form-group row w-50">
+        <div class="col-lg-4">  
+            <label for="password">{{__('Reset Password')}}</label>
+        </div>
+
+        <div class="col-lg-8">  
+
+            {!! Form::password('password', array('class'=>'form-control border-0 border-bottom cursor-pointer', 'id'=>'pwdId')) !!}
+            {!! APFrmErrHelp::showErrors($errors, 'password') !!}
+            <div class="invalid-feedback">{{__('Password is required')}}</div>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="cPwdId">{{__('Confirm Password')}}</label>
-        <input type="password" id="cPwdId" class="form-control pwds" placeholder="{{__('Confirm Password')}}"  required>
-        <div id="cPwdValid" class="valid-feedback">Valid</div>
-        <div id="cPwdInvalid" class="invalid-feedback"></div>
+    <div class="form-group row w-50">
+        <div class="col-lg-4">
+            <label for="cPwdId">{{__('Confirm Password')}}</label>
+        </div>
+
+        <div class="col-lg-8">
+            <input type="password" id="cPwdId" class="form-control border-0 border-bottom cursor-pointer pwds" placeholder="{{__('Confirm Password')}}"  required>
+            <div id="cPwdValid" class="valid-feedback">Valid</div>
+            <div id="cPwdInvalid" class="invalid-feedback"></div>
+        </div>
     </div>
-    <div class="form-group">
-        <button id="account_submitBtn" type="button" class="btn btn-primary submit-button" disabled>{{__(('Update'))}}</button>
+    <div class="form-group  row w-50">
+        <div class="col-lg-12">
+            <button id="account_submitBtn" type="button" class="btn btn-primary submit-button" disabled>{{__(('Update'))}}</button>
+        </div>
     </div>
 </form>
 
