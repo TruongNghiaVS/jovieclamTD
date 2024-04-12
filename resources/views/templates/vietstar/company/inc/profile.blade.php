@@ -156,7 +156,7 @@
 
                                     <a class="uploadImage_btn" href="javascript:void(0);" 
                                
-                                    onclick="initImageCropper(`{{route('update.company.avatar')}}`,'logo', 1, 1,'Logo Công Ty');"
+                                    onclick="AvatarImageCropper(`{{route('update.company.avatar')}}`, 1, 1);"
                                     ><i class="bi bi-camera-fill"></i></a>
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
@@ -178,7 +178,7 @@
                                     <input type="file" name="image" id="company_thumnail_input" style="display: none;">
 
                                     <a class="uploadImage_btn" href="javascript:void(0);" 
-                                    onclick="initImageCropper(`{{route('update.company.avatar')}}`,'cover_logo', 16, 4,'Ảnh Bìa Công Ty');"
+                                    onclick="CoverImageCropper(`{{route('update.company.avatar')}}`, 16, 4 );"
                                     ><i class="bi bi-camera-fill"></i></a>
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                     {!! APFrmErrHelp::showErrors($errors, 'image') !!}
