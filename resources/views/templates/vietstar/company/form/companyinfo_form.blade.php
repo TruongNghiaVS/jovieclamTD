@@ -10,7 +10,7 @@
       <div class="modal-body">
         <ul class="nav nav-tabs" id="tab_company_info" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#infoPanel" role="tab">Công ty</a>
+            <a class="nav-link active" data-toggle="tab" href="#infoPanel" role="tab">Công Ty</a>
           <li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#ads" role="tab">Mô Tả</a>
@@ -19,7 +19,10 @@
             <a class="nav-link" data-toggle="tab" href="#placementPanel" role="tab">Địa Chỉ</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#detail" role="tab">Chi tiết</a>
+            <a class="nav-link" data-toggle="tab" href="#detail" role="tab">Chi Tiết</a>
+          <li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#social" role="tab">Mạng Xã Hội</a>
           <li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#review" role="tab">Review</a>
@@ -94,18 +97,7 @@
                   {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}
                 </div>
               </div>
-              <!-- <div class="col-md-6">
-                <div class="form-group">
-                  <label for="State">{{__('State')}}</label>
-                  <em class="important">*</em>
-                  <span id="default_state_dd">
-                    <select required class="form-control form-select" id="state_id" name="state_id" name_table="{{__('State')}}">
-                      <option value="">{{ __('Select one') }}</option>
-                    </select>
-                  </span>
-               
-                </div>
-              </div> -->
+            
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="City">{{__('City')}}</label>
@@ -175,6 +167,10 @@
             </div>
             <button class="btn btn-secondary" id="detailContinue">Continue</button>
           </div>
+          <div class="tab-pane fade" id="social" role="tabpanel">
+           Mạng Xã Hội
+          </div>
+
           <div class="tab-pane fade" id="review" role="tabpanel">
             <h4>{{__('Review the form')}}</h4>  
             <div class="table-responsive" bis_skin_checked="1">

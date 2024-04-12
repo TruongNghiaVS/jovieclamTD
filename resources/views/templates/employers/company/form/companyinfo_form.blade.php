@@ -10,7 +10,7 @@
       <div class="modal-body">
         <ul class="nav nav-tabs" id="tab_company_info" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#infoPanel" role="tab">Công ty</a>
+            <a class="nav-link active" data-toggle="tab" href="#infoPanel" role="tab">Công Ty</a>
           <li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#ads" role="tab">Mô Tả</a>
@@ -19,7 +19,10 @@
             <a class="nav-link" data-toggle="tab" href="#placementPanel" role="tab">Địa Chỉ</a>
           <li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#detail" role="tab">Chi tiết</a>
+            <a class="nav-link" data-toggle="tab" href="#detail" role="tab">Chi Tiết</a>
+          <li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#social" role="tab">Mạng Xã Hội</a>
           <li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#review" role="tab">Review</a>
@@ -27,143 +30,182 @@
         </ul>
         <div class="tab-content mt-2">
           <div class="tab-pane fade show active" id="infoPanel" role="tabpanel">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="name">{{__('Company Name')}}</label>
-                  <em class="important">*</em>
-                  <input type="text" class="form-control" required name="name" name_table="{{__('Company Name')}}" id="name" value="{{ isset($company->name) ? $company->name : old('name') }}" placeholder="{{__('Company Name')}}">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="ceo">{{__('CEO Name')}}</label>
-                  <input type="text" class="form-control" id="ceo" name="ceo" name_table="{{__('CEO Name')}}" value="{{ isset($company->ceo) ? $company->ceo : old('ceo') }}" placeholder="{{__('CEO Name')}}">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="Industry">{{__('Industry')}}</label>
-                  <em class="important">*</em>
-                  <select required class="form-control form-select" id="industry_id" name="industry_id" name_table="{{__('Industry')}}">
-                    <option value="">{{ __('Select one') }}</option>
-                    @if(count($industries) > 0)
-                    @foreach($industries as $key => $value)
-                    <option {{ $company->industry_id == $key ? 'selected' : '' }} value="{{ $key }}">{{ $value }}</option>
-                    @endforeach
-                    @endif
-                  </select>
-                  {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!}
+                <div class="form-group row">
+                  <div class="col-lg-4">
+                    <label for="name">{{__('Company Name')}}</label>
+                    <em class="important">*</em>
 
+                  </div>
+
+                  <div class="col-lg-8">
+                    <input type="text" class="form-control  border-0 border-bottom" required name="name" name_table="{{__('Company Name')}}" id="name" value="{{ isset($company->name) ? $company->name : old('name') }}" placeholder="{{__('Company Name')}}">
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="Ownership">{{__('Ownership')}}</label>
-                  {!! Form::select('ownership_type_id', ['' => __('Select Ownership type')]+$ownershipTypes, null, array('class'=>'form-control form-select', 'id'=>'ownership_type_id','name_table'=>__('Ownership')  )) !!}
-                  {!! APFrmErrHelp::showErrors($errors, 'ownership_type_id') !!}
+
+
+                <div class="form-group row">
+                  <div class="col-lg-4">
+                    <label for="ceo">{{__('CEO Name')}}</label>
+                  </div>
+                  <div class="col-lg-8">
+                    
+                    <input type="text" class="form-control border-0 border-bottom" id="ceo" name="ceo" name_table="{{__('CEO Name')}}" value="{{ isset($company->ceo) ? $company->ceo : old('ceo') }}" placeholder="{{__('CEO Name')}}">
+                  </div>
                 </div>
-              </div>
-            </div>
+ 
+            
+                <div class="form-group row">
+                  <div class="col-lg-4">
+
+                    <label for="Industry">{{__('Industry')}}</label>
+                    <em class="important">*</em>
+                  </div>
+
+
+                  <div class="col-lg-8">
+                    
+                    
+                    <select required class="form-control form-select border-0 border-bottom" id="industry_id" name="industry_id" name_table="{{__('Industry')}}">
+                      <option value="">{{ __('Select one') }}</option>
+                      @if(count($industries) > 0)
+                      @foreach($industries as $key => $value)
+                      <option {{ $company->industry_id == $key ? 'selected' : '' }} value="{{ $key }}">{{ $value }}</option>
+                      @endforeach
+                      @endif
+                    </select>
+                    {!! APFrmErrHelp::showErrors($errors, 'industry_id') !!}
+                  </div>
+                </div>
+              
+                <div class="form-group row">
+                  <div class="col-lg-4">
+                    <label for="Ownership">{{__('Ownership')}}</label>
+                  </div>
+
+                  <div class="col-lg-8">
+                    {!! Form::select('ownership_type_id', ['' => __('Select Ownership type')]+$ownershipTypes, null, array('class'=>'form-control form-select border-0 border-bottom', 'id'=>'ownership_type_id','name_table'=>__('Ownership')  )) !!}
+                    {!! APFrmErrHelp::showErrors($errors, 'ownership_type_id') !!}
+                  </div>
+                </div>
+             
+            
             <button class="btn btn-secondary" id="infoContinue">Tiếp Tục</button>
           </div>
           <div class="tab-pane fade" id="ads" role="tabpanel">
-            <div class="col-md-12">
-              <div class="form-group">
-                <label for="Description">{{__('Description')}}</label>
-                <em class="important">*</em>
-                <textarea class="form-control" id="description_text" required name="description"  name_table="Mô Tả" rows="4">{{ isset($company->description) ? $company->description : old('description') }}</textarea>
+            
+              <div class="form-group row">
+                <div class="col-lg-4">
+                  <label for="Description">{{__('Description')}}</label>
+                  <em class="important">*</em>
+                </div>
+                <div class="col-lg-8">
+                  <textarea class="form-control border-0 border-bottom" id="description_text" required name="description"  name_table="Mô Tả" rows="4">{{ isset($company->description) ? $company->description : old('description') }}</textarea>
+                </div>
               </div>
-            </div>
+            
             <button class="btn btn-secondary" id="adsContinue">Tiếp Tục</button>
           </div>
           <div class="tab-pane fade" id="placementPanel" role="tabpanel">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="Country">{{__('Country')}}</label>
-                  <em class="important">*</em>
-                  <select required class="form-control form-select" id="country_id" name="country_id" name_table="{{__('Country')}}">
-                    <option value="">{{ __('Select one') }}</option>
-                    @if(count($countries) > 0)
-                    @foreach($countries as $key => $value)
-                    <option {{ $company->country_id == $key ? 'selected' : '' }} value="{{ $key }}">{{ $value }}</option>
-                    @endforeach
-                    @endif
-                  </select>
-                  {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}
-                </div>
-              </div>
-              <!-- <div class="col-md-6">
-                <div class="form-group">
-                  <label for="State">{{__('State')}}</label>
-                  <em class="important">*</em>
-                  <span id="default_state_dd">
-                    <select required class="form-control form-select" id="state_id" name="state_id" name_table="{{__('State')}}">
-                      <option value="">{{ __('Select one') }}</option>
-                    </select>
-                  </span>
-               
-                </div>
-              </div> -->
-              <div class="col-md-6">
-              <div class="form-group">
-                  <label for="city_id">Thành/phố</label>
-                  <select name ="city_id" id ="city_id" class ="form-control form-select" >
-                  <option value="-1">Chọn</option>
-                  @foreach($city as $item)
-                      @if  ($cityCompany->city_id ==$item->city_id)
-                      <option selected value="{{$item->city_id}}">{{$item->city}}</option>
-                      @else 
-                      <option value="{{$item->city_id}}">{{$item->city}}</option>
-                      @endif
-                 
-                  @endforeach
-                  </select>
             
+              
+                <div class="form-group row">
+                  <div class="col-lg-4">
+                    <label for="Country">{{__('Country')}}</label>
+                    <em class="important">*</em>
+                  </div>
+                  <div class="col-lg-8">
+                    
+                    <select required class="form-control form-select border-0 border-bottom" id="country_id" name="country_id" name_table="{{__('Country')}}">
+                      <option value="">{{ __('Select one') }}</option>
+                      @if(count($countries) > 0)
+                      @foreach($countries as $key => $value)
+                      <option {{ $company->country_id == $key ? 'selected' : '' }} value="{{ $key }}">{{ $value }}</option>
+                      @endforeach
+                      @endif
+                    </select>
+                    {!! APFrmErrHelp::showErrors($errors, 'country_id') !!}
+                  </div>
+             
+                </div>
+              
+             
+            
+                <div class="form-group row">
+                  <div class="col-lg-4">
+                    <label for="city_id">Thành/phố</label>
+                  </div>
+                  <div class="col-lg-8">
+
+                    <select name ="city_id" id ="city_id" class ="form-control form-select border-0 border-bottom" >
+                      <option value="-1">Chọn</option>
+                      @foreach($city as $item)
+                          @if  ($cityCompany->city_id ==$item->city_id)
+                          <option selected value="{{$item->city_id}}">{{$item->city}}</option>
+                          @else 
+                          <option value="{{$item->city_id}}">{{$item->city}}</option>
+                          @endif
+                    
+                      @endforeach
+                    </select>
+                  </div>
+
+                </div>
+
+     
+                <div class="form-group row">
+                  <div class="col-lg-4">   
+                    <label for="Address">{{__('Address')}}</label>
+                    <em class="important">*</em>
+                  </div>
+                  <div class="col-lg-8">   
+                    <input type="text" class="form-control border-0 border-bottom" required id="location" placeholder="{{__('Address')}}" name_table="{{__('Address')}}" name="location" value="{{ isset($company->location) ? $company->location : old('location') }}">
+                  </div>
+                </div>
+             
+             
+                <div class="form-group row">
+                  <div class="col-lg-4">   
+                    <label for="Google_Map_Iframe">{{__('Google Map Iframe')}}</label>
+
+                  </div>
+
+                  <div class="col-lg-8">   
                 
+                    <textarea class="form-control border-0 border-bottom" id="map" name="map" name_table="{{__('Google Map Iframe')}}" rows="4">{{ isset($company->map) ? $company->map : old('map') }}</textarea>
+                  </div>
                   
-                
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="Address">{{__('Address')}}</label>
-                  <em class="important">*</em>
-                  <input type="text" class="form-control" required id="location" placeholder="{{__('Address')}}" name_table="{{__('Address')}}" name="location" value="{{ isset($company->location) ? $company->location : old('location') }}">
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="form-group">
-                  <label for="Google_Map_Iframe">{{__('Google Map Iframe')}}</label>
-                  <textarea class="form-control" id="map" name="map" name_table="{{__('Google Map Iframe')}}" rows="4">{{ isset($company->map) ? $company->map : old('map') }}</textarea>
-                </div>
-              </div>
-            </div>
+            
+            
             <button class="btn btn-secondary" id="placementContinue">Tiếp Tục</button>
           </div>
-          <div class="tab-pane fade" id="detail" role="tabpanel">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="no-offices">{{__('No of Office')}}</label>
-                  <em class="important">*</em>
-                  <select required class="form-control form-select" id="no_of_offices" name="no_of_offices" name_table="{{__('No of Office')}}">
-                    <option value="">{{ __('Select one') }}</option>
-                    @if(count(MiscHelper::getNumOffices()) > 0)
-                    @foreach(MiscHelper::getNumOffices() as $key => $value)
-                    <option {{ $company->no_of_offices == $key ? 'selected' : '' }} value="{{ $key }}">{{ $value }}</option>
-                    @endforeach
-                    @endif
-                  </select>
-                  {!! APFrmErrHelp::showErrors($errors, 'no_of_offices') !!}
-                </div>
+          <div class="tab-pane fade" id="detail" role="tabpanel">    
+            <div class="form-group row">
+              <div class="col-lg-4">
+                <label for="no-offices">{{__('No of Office')}}</label>
+                <em class="important">*</em>
               </div>
-              <div class="col-md-6">
-                <div class="form-group">
+              <div class="col-lg-8">
+                <select required class="form-control form-select border-0 border-bottom" id="no_of_offices" name="no_of_offices" name_table="{{__('No of Office')}}">
+                  <option value="">{{ __('Select one') }}</option>
+                  @if(count(MiscHelper::getNumOffices()) > 0)
+                  @foreach(MiscHelper::getNumOffices() as $key => $value)
+                  <option {{ $company->no_of_offices == $key ? 'selected' : '' }} value="{{ $key }}">{{ $value }}</option>
+                  @endforeach
+                  @endif
+                </select>
+                {!! APFrmErrHelp::showErrors($errors, 'no_of_offices') !!}
+              </div>
+              </div>  
+          
+
+              <div class="form-group row">
+                <div class="col-lg-4">
                   <label for="employee-number">{{__('No of Employees')}}</label>
                   <em class="important">*</em>
-                  <select required class="form-control form-select" id="no_of_employees" name="no_of_employees" name_table="{{__('No of Employees')}}">
+                </div>
+                <div class="col-lg-8">   
+                  <select required class="form-control form-select border-0 border-bottom" id="no_of_employees" name="no_of_employees" name_table="{{__('No of Employees')}}">
                     <option value="">{{ __('Select one') }}</option>
                     @if(count(MiscHelper::getNumEmployees()) > 0)
                     @foreach(MiscHelper::getNumEmployees() as $key => $value)
@@ -174,15 +216,109 @@
                   {!! APFrmErrHelp::showErrors($errors, 'no_of_employees') !!}
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="form-group">
+            
+            
+              <div class="form-group row">
+                <div class="col-lg-4">   
                   <label for="Established_In">{{__('Established In')}}</label>
                   <em class="important">*</em>
-                  <input type="text" class="form-control" id="established_in" name="established_in" name_table="{{__('Established In')}}" value="{{ isset($company->established_in) ? $company->established_in : old('established_in')}}" placeholder="{{__('Established In')}}">
+                </div>
+                <div class="col-lg-8">     
+                  <input type="text" class="form-control border-0 border-bottom" id="established_in" name="established_in" name_table="{{__('Established In')}}" value="{{ isset($company->established_in) ? $company->established_in : old('established_in')}}" placeholder="{{__('Established In')}}">
                 </div>
               </div>
-            </div>
+              
+           
             <button class="btn btn-secondary" id="detailContinue">Tiếp Tục</button>
+          </div>
+          <div class="tab-pane fade" id="social" role="tabpanel">
+            <div class="form-group row">
+                <div class="col-lg-4">
+                  <label for="Website_URL">Trang Web</label>
+                  <em class="important">*</em>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" class="form-control border-0 border-bottom" required id="website"  value="{{ isset($company->website) ? $company->website : old('website')}}" placeholder="Trang Web"
+                  name="website" name_table="website"
+                  >
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <div class="col-lg-4">
+                  <label for="Fax">{{__('Fax')}}</label>
+                </div>
+                <div class="col-lg-8">
+                
+                  <input type="text" class="form-control border-0 border-bottom" id="fax" placeholder="{{__('Fax')}}"  value="{{ isset($company->fax) ? $company->fax : old('fax')}}"
+                  name="fax" name_table="fax"
+                  >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-lg-4">
+                <label for="Phone_number">{{__('Mobile Number')}}</label>
+                <em class="important">*</em>
+                </div>
+                <div class="col-lg-8">
+                
+                <input type="text" class="form-control border-0 border-bottom" required id="phone"  value="{{ isset($company->phone) ? $company->phone : old('phone')}}" placeholder="{{__('Phone number')}}"
+                name="phone" name_table="phone"
+                >
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-4">
+                  <label for="Facebook">Facebook</label>
+                </div>
+                <div class="col-lg-8">
+
+                  <input type="text" class="form-control border-0 border-bottom" id="facebook"  value="{{ isset($company->facebook) ? $company->facebook : old('facebook')}}" placeholder="Facebook"
+                  name="facebook" name_table="facebook"
+                  >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-lg-4">
+                  <label for="Twitter">Twitter</label>
+                </div>
+                <div class="col-lg-8">
+
+                <input type="text" class="form-control border-0 border-bottom" id="twitter"  value="{{ isset($company->twitter) ? $company->twitter : old('twitter')}}" placeholder="Twitter"
+                name="twitter" name_table="twitter"
+                
+                >
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-4">
+                  <label for="LinkedIn">LinkedIn</label>
+                </div>
+                <div class="col-lg-8">
+
+                  <input type="text" class="form-control border-0 border-bottom" id="linkedin"  value="{{ isset($company->linkedin) ? $company->linkedin : old('linkedin')}}" placeholder="LinkedIn"
+                  name="linkedin" name_table="LinkedIn"
+                  >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-lg-4">
+                  <label for="Google_Plus">Google Plus</label>
+                </div>
+                <div class="col-lg-8">
+
+                  <input type="text" class="form-control border-0 border-bottom" id="google_plus" name="google_plus" value="{{ isset($company->google_plus) ? $company->google_plus : old('google_plus')}}" placeholder="Google Plus"
+                  name="google_plus" name_table="Google Plus"
+                  
+                  >
+                </div>
+            </div>
+
+           <button class="btn btn-secondary" id="socialContinue">Tiếp Tục</button>
           </div>
           <div class="tab-pane fade" id="review" role="tabpanel">
             <h4>{{__('Review the form')}} </h4>  
@@ -268,26 +404,35 @@
 
     $('#infoContinue').click(function(e) {
       e.preventDefault();
-      $('.progress-bar').css('width', '40%');
+      $('.progress-bar').css('width', '20%');
       $('.progress-bar').html('Step 2 of 5');
       $('#tab_company_info a[href="#ads"]').tab('show');
     });
 
     $('#adsContinue').click(function(e) {
       e.preventDefault();
-      $('.progress-bar').css('width', '60%');
+      $('.progress-bar').css('width', '40%');
       $('.progress-bar').html('Step 3 of 5');
       $('#tab_company_info a[href="#placementPanel"]').tab('show');
     });
 
     $('#placementContinue').click(function(e) {
       e.preventDefault();
-      $('.progress-bar').css('width', '80%');
+      $('.progress-bar').css('width', '60%');
       $('.progress-bar').html('Step 4 of 5');
       $('#tab_company_info a[href="#detail"]').tab('show');
     });
 
+  
     $('#detailContinue').click(function(e) {
+      e.preventDefault();
+      $('.progress-bar').css('width', '100%');
+      $('.progress-bar').html('Step 5 of 5');
+      $('#tab_company_info a[href="#social"]').tab('show');
+    });
+
+
+    $('#socialContinue').click(function(e) {
       e.preventDefault();
       $('.progress-bar').css('width', '100%');
       $('.progress-bar').html('Step 5 of 5');
@@ -302,13 +447,13 @@
             var targetTab = $($(this).attr("href"));
         
             // If the target tab-pane is the last one, update the table
-            if (targetTab.is('#review')) {
+            if (targetTab.is('#social')) {
                 updateTable();
             }
         });
 
 
-        $('#detailContinue ').on('click', function(e) {
+        $('#socialContinue').on('click', function(e) {
           updateTable();
         });
     });
@@ -320,13 +465,13 @@
          
           $('#dataTable tbody').empty()
           // Iterate through input fields and select elements in the first two tab-panes
-          $('#infoPanel, #ads, #placementPanel ,#detail').find('input, select ,textarea').each(function() {
+          $('#infoPanel, #ads, #placementPanel ,#detail , #social').find('input, select ,textarea').each(function() {
             var elementName = $(this).attr('name_table');
+    
             var elementValue,value_submit;
             var elementId = $(this).attr('id');
             value_submit =  $(this).val();
-           
-          
+ 
               if ($(this).is('select')) {
                 elementValue = $(this).find('option:selected').text();
               } else {
