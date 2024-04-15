@@ -444,14 +444,24 @@
                                                 <a href="{{ isset($company->google_plus) ? $company->google_plus : old('google_plus')}}">{{ isset($company->google_plus) ? $company->google_plus : old('google_plus')}}</a>
                                             </td>
                                         </tr>
+
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    <i class="bi bi-google"></i> Map
+                                            </td>
+                                            <td class="table_value">
+                                              <div class="map_wrapper">
+                                                @if(isset($company->map))
+                                                  {!!$company->map!!}
+
+                                                @endif
+                                              </div>
+                                            </td>
+                                        </tr>
                                         </tbody>
                                     </table>
-                                    @if(isset($company->map))
-                                        <h6>Map</h6>
-                                        <div class="gmap">
-                                            {!!$company->map!!}
-                                        </div>
-                                    @endif
+                                   
                                 </div>
                             </div>
                         </div>

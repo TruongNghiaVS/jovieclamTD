@@ -239,7 +239,7 @@
                 </div>
                 <div class="col-lg-8">
                   <input type="text" class="form-control border-0 border-bottom" required id="website"  value="{{ isset($company->website) ? $company->website : old('website')}}" placeholder="Trang Web"
-                  name="website" name_table="website"
+                  name="website" name_table="Website"
                   >
                 </div>
 
@@ -252,7 +252,7 @@
                 <div class="col-lg-8">
                 
                   <input type="text" class="form-control border-0 border-bottom" id="fax" placeholder="{{__('Fax')}}"  value="{{ isset($company->fax) ? $company->fax : old('fax')}}"
-                  name="fax" name_table="fax"
+                  name="fax" name_table="Fax"
                   >
                 </div>
             </div>
@@ -265,7 +265,7 @@
                 <div class="col-lg-8">
                 
                 <input type="text" class="form-control border-0 border-bottom" required id="phone"  value="{{ isset($company->phone) ? $company->phone : old('phone')}}" placeholder="{{__('Phone number')}}"
-                name="phone" name_table="phone"
+                name="phone" name_table="Số điện thoại"
                 >
                 </div>
             </div>
@@ -276,7 +276,7 @@
                 <div class="col-lg-8">
 
                   <input type="text" class="form-control border-0 border-bottom" id="facebook"  value="{{ isset($company->facebook) ? $company->facebook : old('facebook')}}" placeholder="Facebook"
-                  name="facebook" name_table="facebook"
+                  name="facebook" name_table="Facebook"
                   >
                 </div>
             </div>
@@ -288,7 +288,7 @@
                 <div class="col-lg-8">
 
                 <input type="text" class="form-control border-0 border-bottom" id="twitter"  value="{{ isset($company->twitter) ? $company->twitter : old('twitter')}}" placeholder="Twitter"
-                name="twitter" name_table="twitter"
+                name="twitter" name_table="Twitter"
                 
                 >
                 </div>
@@ -447,7 +447,8 @@
             var targetTab = $($(this).attr("href"));
         
             // If the target tab-pane is the last one, update the table
-            if (targetTab.is('#social')) {
+            if (targetTab.is('#review')) {
+                
                 updateTable();
             }
         });
@@ -506,7 +507,7 @@
         
         
         $("#submit_company_info").click(()=>{
-       
+          
           if(formData){
             $.ajaxSetup({
                 headers: {

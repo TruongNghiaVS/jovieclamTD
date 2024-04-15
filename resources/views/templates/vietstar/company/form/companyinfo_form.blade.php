@@ -278,10 +278,10 @@
             newRow += '</tr>';
             $('#dataTable tbody').append(newRow);
         }
-        console.log(formData);
-
-
+        
+        
         $("#submit_company_info").click(()=>{
+
 
           if(formData){
             $.ajaxSetup({
