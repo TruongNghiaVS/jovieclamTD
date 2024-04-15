@@ -36,6 +36,9 @@
   .user-account-section table .table_title, .user-account-section table .table_value {
     width: 50%;
   }
+  #changepassword .form-group{
+    width: 100% !important;
+  }
 
   #mobile-sidebar-main-nav {
     display: block;

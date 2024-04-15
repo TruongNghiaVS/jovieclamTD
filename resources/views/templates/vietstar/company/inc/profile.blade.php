@@ -362,48 +362,9 @@
                                                         </div>
                                                 </td>
                                             </tr>
-                                        </tbody>
-                                    </table>
-                                    @if(isset($company->map))
-                                        <h6>Map</h6>
-                                        <div class="gmap">
-                                            {!!$company->map!!}
-                                        </div>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <div class="tab-pane" id="contact_info_tab" role="tabpanel">
-                <div class="user-account-section rounded-0">
-                    <div class="formpanel mt0">
-                        <div class="section-head">
-                            <div class="section-head__figure">
-                                <div class="figure__image"><img src="https://icons.veryicon.com/png/o/system/alongthink/ico-user-info.png" alt=""></div>
-                                <div class="figure__caption">
 
-                                    <h5 class="">Thông tin liên hệ</h5>
-                                    <div class="status complete" bis_skin_checked="1">
-                                        <p>Hoàn thành</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="section-head__right-action" bis_skin_checked="1">
-                                <div class="right-action__tips" bis_skin_checked="1" data-toggle="modal" data-target="#company-contact-tip">
-                                    <i class="bi bi-lightbulb"></i>
-                                    <p>Tips</p>
-                                </div>
-                                <div class="right-action__link-edit"><a id="modalToggle" data-toggle="modal" data-target="#contact_info" href="#"><i class="bi bi-pen"></i>Chỉnh sửa</a></div>
-                                <div class="right-action__link-edit-mobile"><a id="modalToggle" data-toggle="modal" data-target="#contact_info" href="#"><i class="bi bi-pen"></i></a></div>
-                            </div>
-                        </div>
 
-                        <div class="section-body">
-                            <div class="table-responsive">
-                                <table class="table table-responsive table-user-information">
-                                    <tbody>
-                                        <tr>
+                                            <tr>
                                             <td class="table_title">
                                                 <strong>
                                                     <i class="fa fa-globe"></i> Trang Web
@@ -463,8 +424,6 @@
                                             </td>
                                         </tr>
 
-
-
                                         <tr>
                                             <td class="table_title">
                                                 <strong>
@@ -485,6 +444,135 @@
                                                 <a href="{{ isset($company->google_plus) ? $company->google_plus : old('google_plus')}}">{{ isset($company->google_plus) ? $company->google_plus : old('google_plus')}}</a>
                                             </td>
                                         </tr>
+                                        </tbody>
+                                    </table>
+                                    @if(isset($company->map))
+                                        <h6>Map</h6>
+                                        <div class="gmap">
+                                            {!!$company->map!!}
+                                        </div>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="tab-pane" id="contact_info_tab" role="tabpanel">
+                <div class="user-account-section rounded-0">
+                    <div class="formpanel mt0">
+                        <div class="section-head">
+                            <div class="section-head__figure">
+                                <div class="figure__image"><img src="https://icons.veryicon.com/png/o/system/alongthink/ico-user-info.png" alt=""></div>
+                                <div class="figure__caption">
+
+                                    <h5 class="">Thông tin liên hệ</h5>
+                                    <div class="status complete" bis_skin_checked="1">
+                                        <p>Hoàn thành</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-head__right-action" bis_skin_checked="1">
+                                <div class="right-action__tips" bis_skin_checked="1" data-toggle="modal" data-target="#company-contact-tip">
+                                    <i class="bi bi-lightbulb"></i>
+                                    <p>Tips</p>
+                                </div>
+                                <div class="right-action__link-edit"><a id="modalToggle" data-toggle="modal" data-target="#contact_info" href="#"><i class="bi bi-pen"></i>Chỉnh sửa</a></div>
+                                <div class="right-action__link-edit-mobile"><a id="modalToggle" data-toggle="modal" data-target="#contact_info" href="#"><i class="bi bi-pen"></i></a></div>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <div class="table-responsive">
+                                <table class="table table-responsive table-user-information">
+                                    <tbody>
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                     Họ và Tên
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                MR. CHIEN
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    Chức vụ
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                    Manager
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    Email Liên Hệ
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                <a href="mailto:povav27298@fesgrid.com">povav27298@fesgrid.com</a>
+                                            </td>
+                                        </tr>
+
+                                        
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    Thành Phố
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                Thành phố Hồ Chí Minh
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    Quận/Huyện
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                Quận 3
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    Địa chỉ
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                139I-J Lý Chính Thắng, Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh, Việt Nam
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    Số Điện Thoại
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                 <a href="tel:+842831726917">+8428317269171</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_title">
+                                                <strong>
+                                                    Fax
+                                                </strong>
+                                            </td>
+                                            <td class="table_value">
+                                                 <a href="tel:+842831726917">+8428317269171</a>
+                                            </td>
+                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                             </div>
