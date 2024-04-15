@@ -33,7 +33,9 @@
     overflow-x: auto  !important;
     white-space: nowrap !important;
   }
-
+  .user-account-section table .table_title, .user-account-section table .table_value {
+    width: 50%;
+  }
 
   #mobile-sidebar-main-nav {
     display: block;

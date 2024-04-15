@@ -7,7 +7,8 @@
 
         <div class="col-lg-8">  
 
-            {!! Form::password('password', array('class'=>'form-control border-0 border-bottom cursor-pointer', 'id'=>'pwdId')) !!}
+        {!! Form::password('password', array('class'=>'form-control border-0 border-bottom cursor-pointer', 'id'=>'pwdId',
+         'placeholder'=>'Nhập Mật Khẩu Mới')) !!}
             {!! APFrmErrHelp::showErrors($errors, 'password') !!}
             <div class="invalid-feedback">{{__('Password is required')}}</div>
         </div>
