@@ -12,6 +12,224 @@ function showPassword(id) {
     }
 }
 
+const provinces = {
+    "data": [
+      {
+        "_id": "60eaaa6f1173335842c3565c",
+        "name": "Hồ Chí Minh",
+        "slug": "ho-chi-minh",
+        "type": "thanh-pho",
+        "name_with_type": "Thành phố Hồ Chí Minh",
+        "code": "79",
+        "isDeleted": false
+      },
+      {
+        "_id": "60eaaa6f1173335842c3562b",
+        "name": "Hà Nội",
+        "slug": "ha-noi",
+        "type": "thanh-pho",
+        "name_with_type": "Thành phố Hà Nội",
+        "code": "01",
+        "isDeleted": false
+      }
+    ]
+  };
+
+
+  const districts = {
+    "data": [
+      {
+        "_id": "60eaaa6f1173335842c3536a",
+        "name": "Ba Đình",
+        "type": "quan",
+        "slug": "ba-dinh",
+        "name_with_type": "Quận Ba Đình",
+        "path": "Ba Đình, Hà Nội",
+        "path_with_type": "Quận Ba Đình, Thành phố Hà Nội",
+        "code": "001",
+        "parent_code": "01",
+        "isDeleted": false
+      },
+      {
+        "_id": "60eaaa6f1173335842c3536b",
+        "name": "Hoàn Kiếm",
+        "type": "quan",
+        "slug": "hoan-kiem",
+        "name_with_type": "Quận Hoàn Kiếm",
+        "path": "Hoàn Kiếm, Hà Nội",
+        "path_with_type": "Quận Hoàn Kiếm, Thành phố Hà Nội",
+        "code": "002",
+        "parent_code": "01",
+        "isDeleted": false
+      },
+      {
+        "_id": "60eaaa6f1173335842c3558f",
+        "name": "1",
+        "type": "quan",
+        "slug": "1",
+        "name_with_type": "Quận 1",
+        "path": "1, Hồ Chí Minh",
+        "path_with_type": "Quận 1, Thành phố Hồ Chí Minh",
+        "code": "760",
+        "parent_code": "79",
+        "isDeleted": false
+      },
+      {
+        "_id": "60eaaa6f1173335842c35590",
+        "name": "12",
+        "type": "quan",
+        "slug": "12",
+        "name_with_type": "Quận 12",
+        "path": "12, Hồ Chí Minh",
+        "path_with_type": "Quận 12, Thành phố Hồ Chí Minh",
+        "code": "761",
+        "parent_code": "79",
+        "isDeleted": false
+      }
+    ]
+  };
+
+  const wards = {
+    "data": [
+      {
+        "_id": "60eaaa6e1173335842c343cc",
+        "name": "Cống Vị",
+        "type": "phuong",
+        "slug": "cong-vi",
+        "name_with_type": "Phường Cống Vị",
+        "path": "Cống Vị, Ba Đình, Hà Nội",
+        "path_with_type": "Phường Cống Vị, Quận Ba Đình, Thành phố Hà Nội",
+        "code": "00007",
+        "parent_code": "001",
+        "isDeleted": false
+      },
+      {
+        "_id": "60eaaa6e1173335842c343d1",
+        "name": "Điện Biên",
+        "type": "phuong",
+        "slug": "dien-bien",
+        "name_with_type": "Phường Điện Biên",
+        "path": "Điện Biên, Ba Đình, Hà Nội",
+        "path_with_type": "Phường Điện Biên, Quận Ba Đình, Thành phố Hà Nội",
+        "code": "00019",
+        "parent_code": "001",
+        "isDeleted": false
+      },
+      {
+        "_id": "60eaaa721173335842c368b3",
+        "name": "Tân Định",
+        "type": "phuong",
+        "slug": "tan-dinh",
+        "name_with_type": "Phường Tân Định",
+        "path": "Tân Định, 1, Hồ Chí Minh",
+        "path_with_type": "Phường Tân Định, Quận 1, Thành phố Hồ Chí Minh",
+        "code": "26734",
+        "parent_code": "760",
+        "isDeleted": false
+      },
+      {
+        "_id": "60eaaa721173335842c368b5",
+        "name": "Bến Nghé",
+        "type": "phuong",
+        "slug": "ben-nghe",
+        "name_with_type": "Phường Bến Nghé",
+        "path": "Bến Nghé, 1, Hồ Chí Minh",
+        "path_with_type": "Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
+        "code": "26740",
+        "parent_code": "760",
+        "isDeleted": false
+      },
+      {
+        "_id": "60eaaa721173335842c368c6",
+        "name": "Đông Hưng Thuận",
+        "type": "phuong",
+        "slug": "dong-hung-thuan",
+        "name_with_type": "Phường Đông Hưng Thuận",
+        "path": "Đông Hưng Thuận, 12, Hồ Chí Minh",
+        "path_with_type": "Phường Đông Hưng Thuận, Quận 12, Thành phố Hồ Chí Minh",
+        "code": "26788",
+        "parent_code": "761",
+        "isDeleted": false
+      },
+      {
+        "_id": "60eaaa721173335842c368bf",
+        "name": "Hiệp Thành",
+        "type": "phuong",
+        "slug": "hiep-thanh",
+        "name_with_type": "Phường Hiệp Thành",
+        "path": "Hiệp Thành, 12, Hồ Chí Minh",
+        "path_with_type": "Phường Hiệp Thành, Quận 12, Thành phố Hồ Chí Minh",
+        "code": "26770",
+        "parent_code": "761",
+        "isDeleted": false
+      },
+      {
+        "_id": "60eaaa721173335842c368d3",
+        "name": "01",
+        "type": "phuong",
+        "slug": "01",
+        "name_with_type": "Phường 01",
+        "path": "01, Gò Vấp, Hồ Chí Minh",
+        "path_with_type": "Phường 01, Quận Gò Vấp, Thành phố Hồ Chí Minh",
+        "code": "26896",
+        "parent_code": "764",
+        "isDeleted": false
+      },
+      {
+        "_id": "60eaaa721173335842c368d7",
+        "name": "03",
+        "type": "phuong",
+        "slug": "03",
+        "name_with_type": "Phường 03",
+        "path": "03, Gò Vấp, Hồ Chí Minh",
+        "path_with_type": "Phường 03, Quận Gò Vấp, Thành phố Hồ Chí Minh",
+        "code": "26902",
+        "parent_code": "764",
+        "isDeleted": false
+      },
+      {
+      "_id": "60eaaa6e1173335842c343e1",
+      "name": "Chương Dương",
+      "type": "phuong",
+      "slug": "chuong-duong",
+      "name_with_type": "Phường Chương Dương",
+      "path": "Chương Dương, Hoàn Kiếm, Hà Nội",
+      "path_with_type": "Phường Chương Dương, Quận Hoàn Kiếm, Thành phố Hà Nội",
+      "code": "00067",
+      "parent_code": "002",
+      "isDeleted": false
+    },
+    
+    ]
+  };
+
+
+function populateDistricts(selectedCityCode, districtGroup) {
+    var districtSelect = districtGroup.find('.districtSelect');
+    districtSelect.empty().append('<option value="">Chọn Quận/Huyện</option>');
+    var selectedCityDistricts = districts.data.filter(function(district) {
+      return district.parent_code === selectedCityCode;
+    });
+    $.each(selectedCityDistricts, function(index, district) {
+      districtSelect.append($('<option></option>').attr('value', district.code).text(district.name_with_type));
+    });
+    districtGroup.show();
+  }
+
+  // Function to populate wards based on selected district
+  function populateWards(selectedDistrictCode, wardGroup) {
+    var wardSelect = wardGroup.find('.wardSelect');
+    wardSelect.empty().append('<option value="">Chọn Phường/Xã</option>');
+    var selectedDistrictWards = wards.data.filter(function(ward) {
+      return ward.parent_code === selectedDistrictCode;
+    });
+    $.each(selectedDistrictWards, function(index, ward) {
+      wardSelect.append($('<option></option>').attr('value', ward.code).text(ward.name_with_type));
+    });
+    wardGroup.show();
+  }
+
+
 $(document).ready(function () {
     if ($('.bs-picker').length) {
         $(".bs-picker").datetimepicker({

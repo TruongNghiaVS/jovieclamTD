@@ -51,6 +51,42 @@
 
               </div>
             
+
+              <div class="form-group row">
+                                <div class="col-lg-4"> 
+                                    <label for="citySelect">Chọn Thành Phố:</label>
+                                </div>
+                                <div class="col-lg-8"> 
+                                    <select class="form-control border-0 border-bottom citySelect" >
+                                    <option value="">Chọn Thành Phố</option>
+                                    <option value="79">Thành phố Hồ Chí Minh</option>
+                                    <option value="01">Thành phố Hà Nội</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row districtGroup"  style="display:none;">
+                                <div class="col-lg-4"> 
+                                    <label for="districtSelect">Chọn Quận/Huyện:</label>
+                                </div>
+
+                                <div class="col-lg-8"> 
+                                    <select class="form-control form-select border-0 border-bottom districtSelect" >
+                                    <option value="">Chọn Quận/Huyện</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row wardGroup"  style="display:none;">
+                                <div class="col-lg-4"> 
+                                    <label for="wardSelect">Chọn Phường/Xã:</label>
+                                </div>
+
+                                <div class="col-lg-8"> 
+                                    <select class="form-control form-select border-0 border-bottom wardSelect" >
+                                    <option value="">Chọn Phường/Xã</option>
+                                    </select>
+                                </div>
+                               
+                            </div>
             
               
             
@@ -63,7 +99,7 @@
                   <input type="text" class="form-control  border-0 border-bottom" id="location" name="location" value="139I-J Lý Chính Thắng, Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh, Việt Nam" placeholder="Địa Chỉ">
                 </div>
               </div>
-              
+
             <div class="col-sm-12 col-md-12 col-lg-12">
               <button class="btn btn-primary w-100" type="submit">{{__('Update')}}</button>
             </div>
@@ -77,6 +113,30 @@
 
 @push('scripts')
 <script type="text/javascript">
+  $(document).ready(function() {
+    $('#contact_info .citySelect').change(function() {
+      var selectedCityCode = $(this).val();
+      var districtGroup = $(this).closest('#contact_info form').find('.districtGroup');
+      var wardGroup = $(this).closest('#contact_info form').find('.wardGroup');
+     
+      if (selectedCityCode) {
+        populateDistricts(selectedCityCode, districtGroup);
+      } else {
+        districtGroup.hide();
+        wardGroup.hide();
+      }
+    });
+
+    $(document).on('change', '.districtSelect', function() {
+      var selectedDistrictCode = $(this).val();
+      var wardGroup = $(this).closest('form').find('.wardGroup');
+      if (selectedDistrictCode) {
+        populateWards(selectedDistrictCode, wardGroup);
+      } else {
+        wardGroup.hide();
+      }
+    });
+  });
    $(document).ready(function() {
     $('#contact_info_edit').submit(function(event) {
         event.preventDefault();
