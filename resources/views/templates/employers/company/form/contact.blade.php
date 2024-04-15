@@ -9,56 +9,65 @@
       </div>
       <div class="modal-body">
         <form id="contact_info_edit" class="needs-validation" novalidate>
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <div class="form-group">
-                <label for="Website_URL">Trang Web</label>
-                <em class="important">*</em>
-                <input type="text" class="form-control" required id="website" name="website" value="{{ isset($company->website) ? $company->website : old('website')}}" placeholder="Trang Web">
+           
+              <div class="form-group row">
+                <div class="col-lg-4">
+                  <label for="Website_URL">Họ và Tên</label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" class="form-control  border-0 border-bottom"  id="fullname" name="fullname" value="Mr.Chiến" placeholder="Họ và Tên">
+                </div>
               </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <div class="form-group">
-                <label for="Fax">{{__('Fax')}}</label>
-                <input type="text" class="form-control" id="fax" placeholder="{{__('Fax')}}" name="fax" value="{{ isset($company->fax) ? $company->fax : old('fax')}}">
+            
+            
+              <div class="form-group row">
+                <div class="col-lg-4">
+                  <label for="Fax">Chức Vụ</label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" class="form-control  border-0 border-bottom" id="position" placeholder="Chức Vụ" name="position" value="Manager">
+                </div>
               </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <div class="form-group">
-                <label for="Phone_number">{{__('Mobile Number')}}</label>
-                <em class="important">*</em>
-                <input type="text" class="form-control" required id="phone" name="phone" value="{{ isset($company->phone) ? $company->phone : old('phone')}}" placeholder="{{__('Mobile Number')}}">
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <div class="form-group">
-                <label for="Facebook">Facebook</label>
-                <input type="text" class="form-control" id="facebook" name="facebook" value="{{ isset($company->facebook) ? $company->facebook : old('facebook')}}" placeholder="Facebook">
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <div class="form-group">
-                <label for="Twitter">Twitter</label>
-                <input type="text" class="form-control" id="twitter" name="twitter" value="{{ isset($company->twitter) ? $company->twitter : old('twitter')}}" placeholder="Twitter">
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <div class="form-group">
-                <label for="LinkedIn">LinkedIn</label>
-                <input type="text" class="form-control" id="linkedin" name="linkedin" value="{{ isset($company->linkedin) ? $company->linkedin : old('linkedin')}}" placeholder="LinkedIn">
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <div class="form-group">
-                <label for="Google_Plus">Google Plus</label>
-                <input type="text" class="form-control" id="google_plus" name="google_plus" value="{{ isset($company->google_plus) ? $company->google_plus : old('google_plus')}}" placeholder="Google Plus">
-              </div>
-            </div>
+            
 
+              <div class="form-group row">
+                <div class="col-lg-4">
+
+                  <label for="email">Email</label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="email" class="form-control  border-0 border-bottom" id="email" name="email" value="	povav27298@fesgrid.com" placeholder="Email">
+                </div>
+  
+              </div>
+            
+              <div class="form-group row">
+                <div class="col-lg-4">
+                <label for="Phone_number">{{__('Mobile Number')}}</label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" class="form-control  border-0 border-bottom"  id="phone" name="phone" value="+8428317269171" placeholder="{{__('Mobile Number')}}">
+                </div>
+
+              </div>
+            
+            
+              
+            
+            
+              <div class="form-group row">
+                <div class="col-lg-4">
+                  <label for="Location">Địa Chỉ</label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" class="form-control  border-0 border-bottom" id="location" name="location" value="139I-J Lý Chính Thắng, Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh, Việt Nam" placeholder="Địa Chỉ">
+                </div>
+              </div>
+              
             <div class="col-sm-12 col-md-12 col-lg-12">
               <button class="btn btn-primary w-100" type="submit">{{__('Update')}}</button>
             </div>
-          </div>
+          
         </form>
       </div>
     </div>
