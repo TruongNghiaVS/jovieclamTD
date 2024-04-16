@@ -134,7 +134,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="text-white py-2 fs-18px"> <a href="" class="text-white py-2 fs-18px">Thiết Kế CV</a></div>
                                 <div class="text-white py-2 fs-18px"> <a href="/tin-tuc/bi-quyet-tim-viec" class="text-white py-2 fs-18px">Bí Quyết Tìm Việc</a></div>
-                                <div class="text-white py-2 fs-18px"> <a href="" class="text-white py-2 fs-18px">Kỹ Năng Phỏng Vấn</a></div>
+                                <div class="text-white py-2 fs-18px"> <a href="/tin-tuc/ky-nang-phong-van" class="text-white py-2 fs-18px">Kỹ Năng Phỏng Vấn</a></div>
                 </div>
              </div>
         </div>
