@@ -27,7 +27,7 @@
             height: 100%;
         }
 
-        #crop_img_modal h5 {
+        #crop_img_modal h5,#crop_cover_img_modal h5 {
             font-size: 18px;
             font-weight: 600;
         }
@@ -125,7 +125,12 @@
                     <div class="col-lg-6 d-flex justify-content-center flex-column align-items-center">
                             <h5 id="crop_cover_img_Label_review">Ảnh Đại Diện Hiển Thị</h5>
                           <div class="preview_avatar border mb-4">
-                              <img src="/assets/no-company.png" alt="">
+                           
+                            @if(isset($company->logo))
+                                <img src="/company_logos/{{ $company->logo }}" alt="">
+                            @else
+                                <img src="/assets/no-user.jpg" alt="">
+                            @endif
                           </div> 
                           <div class="d-flex justify-content-center mb-3">
                               <input type="button" class="btn m-1 btn-primary" id="btnCrop" value="Xong" />
@@ -165,8 +170,13 @@
                     <div class="col-lg-6 d-flex justify-content-center flex-column align-items-center">
                             <h5 id="crop_cover_img_modalLabel_review">Ảnh Bìa Hiển Thị</h5>
                           <div class="preview_cover border mb-4">
-                              <img src="/assets/no-cover.png" alt="">
-                          </div> 
+                            
+                            @if(isset($company->cover_logo))
+                                <img src="/company_logos/{{ $company->cover_logo }}" alt="">
+                            @else
+                                <img src="/assets/no-cover.png" alt="">
+                            @endif
+                        </div> 
                           <div class="d-flex justify-content-center mb-3">
                               <input type="button" class="btn m-1 btn-primary" id="btnCrop-Cover" value="Xong" />
                               <input type="button" class="btn m-1 btn-secondary" id="btnRestore-Cover" value="Bỏ Thay Đổi" />
@@ -273,6 +283,13 @@
                 alert('No file(s) selected.');
             }
         });
+
+        $('.btn-close-image-editor').click(function () {
+            // Reset cropper without saving the image
+            canvas.cropper('destroy');
+            $('.editorChooseImage').show();
+            $('.canvas-div').hide();
+        });
     }
 
 
@@ -364,6 +381,12 @@
             } else {
                 alert('No file(s) selected.');
             }
+        });
+        $('.btn-close-image-editor').click(function () {
+            // Reset cropper without saving the image
+            canvas.cropper('destroy');
+            $('.editorChooseImage').show();
+            $('.canvas-div').hide();
         });
     }
 </script>
