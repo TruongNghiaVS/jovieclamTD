@@ -2,7 +2,8 @@
 <div class="table-content">
     <div class="tool-table  p-3 mt-2 d-flex justify-content-between ">
             <div class="text-muted">
-                {{ __('Found') }} <span  class="font-weight-bold text-primary">{{ $userApply->count('id') }}</span> {{ __('Candidates') }}
+           
+                 <span id="info_table-applican-manager" class="font-weight-bold text-primary"></span> 
             </div>
             <div class="CV-filter-box d-flex justify-content-between">
                 <div class="custom-control custom-radio custom-control-inline mr-2">
@@ -239,8 +240,14 @@ $(document).ready(function() {
 		"dom": '<"dt-buttons"Bf><"clear">lirtp',
 		"paging": false,
 		"autoWidth": true,
-        bFilter: false, bInfo: false,
-        
+        'info': true,
+        bInfo: false,
+        bFilter: false,
+        "language": {
+            "info": "Hiển thị _TOTAL_ ứng viên",
+            "infoEmpty": "Hiển thị 0 ứng viên",
+            "infoFiltered": "(được lọc từ tổng số _MAX_ ứng viên)"
+        },
 		"buttons": [{
             extend: 'excelHtml5',
             text: '<i class="fa-solid fa-download  m-1 "></i> Xuất file</button>',
@@ -250,6 +257,11 @@ $(document).ready(function() {
                 columns: ":not(.not-export-column)"
             }
 		}],
+        "drawCallback": function(settings) {
+        // Update the custom info element with DataTable's info
+        var pageInfo = this.api().page.info();
+        $('#info_table-applican-manager').html('Hiển thị ' + pageInfo.recordsTotal + ' ứng viên');
+    }
         
 
 	});
