@@ -136,6 +136,9 @@
                               <input type="button" class="btn m-1 btn-primary" id="btnCrop" value="Xong" />
                               <input type="button" class="btn m-1 btn-secondary" id="btnRestore" value="Bỏ Thay Đổi" />
                           </div>
+                          <div class="d-flex justify-content-center mb-2">
+                            <button type="button" class="btn m-1" id="btnChangeImage">Đổi Hình</button>
+                          </div>
                             <a href="#" class="btn-close-image-editor mb-2"  title="Đóng trình chỉnh sửa (Không lưu thay đổi)" data-dismiss="modal">Đóng Lại (Không Lưu)</a>
                     </div>
                 </div>
@@ -180,6 +183,10 @@
                           <div class="d-flex justify-content-center mb-3">
                               <input type="button" class="btn m-1 btn-primary" id="btnCrop-Cover" value="Xong" />
                               <input type="button" class="btn m-1 btn-secondary" id="btnRestore-Cover" value="Bỏ Thay Đổi" />
+                          </div>
+
+                          <div class="d-flex justify-content-center mb-2">
+                            <button type="button" class="btn m-1" id="btnChangeImage-cover">Đổi Hình</button>
                           </div>
                             <a href="#" class="btn-close-image-editor mb-2"  title="Đóng trình chỉnh sửa (Không lưu thay đổi)" data-dismiss="modal">Đóng Lại (Không Lưu)</a>
                     </div>
@@ -290,6 +297,16 @@
             $('.editorChooseImage').show();
             $('.canvas-div').hide();
         });
+        $('#btnChangeImage').click(function () {
+            // Clear the file input to allow selecting a new image
+            $('#fileInput-for-crop-img').val('');
+            // Reset cropper without saving the image
+            canvas.cropper('destroy');
+            // Show the image selection section
+            $('.editorChooseImage').show();
+            // Hide the canvas
+            $('.canvas-div').hide();
+        });
     }
 
 
@@ -386,6 +403,17 @@
             // Reset cropper without saving the image
             canvas.cropper('destroy');
             $('.editorChooseImage').show();
+            $('.canvas-div').hide();
+        });
+
+        $('#btnChangeImage-cover').click(function () {
+            // Clear the file input to allow selecting a new image
+            $('#fileInput-for-crop-cover-img').val('');
+            // Reset cropper without saving the image
+            canvas.cropper('destroy');
+            // Show the image selection section
+            $('.editorChooseImage').show();
+            // Hide the canvas
             $('.canvas-div').hide();
         });
     }
