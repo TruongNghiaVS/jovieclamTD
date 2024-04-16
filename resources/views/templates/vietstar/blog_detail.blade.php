@@ -487,6 +487,11 @@
 
         }
 
+        
+        .article-content .mce-toc ul {
+           list-style-type: none;
+       }
+
         .article-content ul li {
             margin-bottom: 10px;
             font-size: 17px;
