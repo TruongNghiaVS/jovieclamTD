@@ -152,7 +152,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="expiry_date" class="font-weight-bold fs-18px">Hạn Nhận Hồ Sơ  <span class="required">*</span> </label>
+                                <label for="expiry_date" class="font-weight-bold fs-18px">Hạn Nhận Hồ Sơ </label>
                                 <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="Deadline" value="{{ $edit && isset($job) ? \Carbon\Carbon::parse($job->expiry_date)->format('d-m-Y') : \Carbon\Carbon::parse(old('expiry_date'))->format('d-m-Y') }}" required>
                             </div>
                         </div>
