@@ -304,7 +304,7 @@ function initdatepicker(){
         format:'dd-mm-yyyy',
         locale:'vi',
         language: 'vi',
-        
+        todayHighlight: true,
     });
 }
 

@@ -24,7 +24,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="expiry_date" class="font-weight-bold fs-18px">{{__('Deadline')}} <span class="required">*</span></label>
-                            <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="Deadline" value="{{ $edit && isset($job) ? \Carbon\Carbon::parse($job->expiry_date)->format('d-m-Y') : \Carbon\Carbon::parse(old('expiry_date'))->format('d-m-Y') }}">
+                            <input type="text" class="form-control datepicker" id="expiry_date" name="expiry_date" placeholder="Deadline" value="{{ $edit && isset($job) ? \Carbon\Carbon::parse($job->expiry_date)->format('d-m-Y') : \Carbon\Carbon::parse(old('expiry_date'))->format('d-m-Y') }}">
                         </div>
                     </div>
                 </div>
@@ -445,8 +445,10 @@
 
     $(document).ready(function() {
         $('#expiry_date').datepicker({
-            todayHighlight: true,
-            format: 'dd-mm-yyyy'
+            autoclose: true,
+            format:'dd-mm-yyyy',
+            locale:'vi',
+            language: 'vi',
         });
         $('#same_add_yes').click(function() {
             this.checked = true;

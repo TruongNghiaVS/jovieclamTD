@@ -222,7 +222,9 @@ $(document).on('change', '#same_add_yes', function () {
 $(document).ready(function () {
     $('#expiry_date').datepicker({
         todayHighlight: true,
-        format: 'dd-mm-yyyy'
+        format:'dd-mm-yyyy',
+        locale:'vi',
+        language: 'vi',
     });
    
 
