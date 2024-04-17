@@ -738,7 +738,9 @@ h2.title {
 .datepicker.datepicker-dropdown.dropdown-menu{
     z-index: 100 !important;
 }
-
+.form-group .form-control {
+    padding: 10px 20px !important;
+}
 .map_wrapper {
     max-width: 300px;
     max-height: 300px;
