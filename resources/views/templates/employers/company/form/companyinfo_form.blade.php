@@ -130,26 +130,41 @@
               
              
             
-                <div class="form-group row">
-                  <div class="col-lg-4">
-                    <label for="city_id">Thành/phố</label>
-                  </div>
-                  <div class="col-lg-8">
+                 <div class="form-group row">
+                                <div class="col-lg-4"> 
+                                    <label for="citySelect">Chọn Thành Phố:</label>
+                                </div>
+                                <div class="col-lg-8"> 
+                                    <select class="form-control border-0 border-bottom citySelect" >
+                                    <option value="">Chọn Thành Phố</option>
+                                    <option value="79">Thành phố Hồ Chí Minh</option>
+                                    <option value="01">Thành phố Hà Nội</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row districtGroup"  style="display:none;">
+                                <div class="col-lg-4"> 
+                                    <label for="districtSelect">Chọn Quận/Huyện:</label>
+                                </div>
 
-                    <select name ="city_id" id ="city_id" class ="form-control form-select border-0 border-bottom" >
-                      <option value="-1">Chọn</option>
-                      @foreach($city as $item)
-                          @if  ($cityCompany->city_id ==$item->city_id)
-                          <option selected value="{{$item->city_id}}">{{$item->city}}</option>
-                          @else 
-                          <option value="{{$item->city_id}}">{{$item->city}}</option>
-                          @endif
-                    
-                      @endforeach
-                    </select>
-                  </div>
+                                <div class="col-lg-8"> 
+                                    <select class="form-control form-select border-0 border-bottom districtSelect" >
+                                    <option value="">Chọn Quận/Huyện</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row wardGroup"  style="display:none;">
+                                <div class="col-lg-4"> 
+                                    <label for="wardSelect">Chọn Phường/Xã:</label>
+                                </div>
 
-                </div>
+                                <div class="col-lg-8"> 
+                                    <select class="form-control form-select border-0 border-bottom wardSelect" >
+                                    <option value="">Chọn Phường/Xã</option>
+                                    </select>
+                                </div>
+                               
+                            </div>
 
      
                 <div class="form-group row">
@@ -395,6 +410,41 @@
 
 @push('scripts')
 <script type="text/javascript">
+  // Main function to handle changes in city and district selects
+  $(document).ready(function() {
+    
+    $('.citySelect').change(function() {
+      var selectedCityCode = $(this).val();
+      var districtGroup = $(this).closest('#placementPanel').find('.districtGroup');
+      var wardGroup = $(this).closest('#placementPanel').find('.wardGroup');
+      
+      if (selectedCityCode) {
+        populateDistricts(selectedCityCode, districtGroup);
+      } else {
+        districtGroup.hide();
+        wardGroup.hide();
+        updateLocationField('', '', ''); // Clear location field
+       
+      }
+    });
+
+    $(document).on('change', '.districtSelect', function() {
+      var selectedDistrictCode = $(this).val();
+      var wardGroup = $(this).closest('#placementPanel').find('.wardGroup');
+      if (selectedDistrictCode) {
+        populateWards(selectedDistrictCode, wardGroup);
+      } else {
+        wardGroup.hide();
+        updateLocationField('', '', ''); // Clear location field
+       
+      }
+    });
+   
+  
+
+  });
+
+
   $(function() {
     $('#modalToggle').click(function() {
       $('#company_info').modal({

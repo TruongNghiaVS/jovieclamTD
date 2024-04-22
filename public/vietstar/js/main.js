@@ -203,8 +203,7 @@ const provinces = {
     ]
   };
 
-
-function populateDistricts(selectedCityCode, districtGroup) {
+  function populateDistricts(selectedCityCode, districtGroup) {
     var districtSelect = districtGroup.find('.districtSelect');
     districtSelect.empty().append('<option value="">Chọn Quận/Huyện</option>');
     var selectedCityDistricts = districts.data.filter(function(district) {
@@ -228,6 +227,9 @@ function populateDistricts(selectedCityCode, districtGroup) {
     });
     wardGroup.show();
   }
+
+
+  
 
 
 $(document).ready(function () {
