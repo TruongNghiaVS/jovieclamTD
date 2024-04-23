@@ -31,6 +31,8 @@
   }
   .nav.nav-tabs {
     overflow-x: auto  !important;
+    overflow-y: hidden  !important;
+
     white-space: nowrap !important;
   }
   .user-account-section table .table_title, .user-account-section table .table_value {

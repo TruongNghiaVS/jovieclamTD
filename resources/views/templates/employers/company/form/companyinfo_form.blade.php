@@ -1,5 +1,5 @@
 <div class="modal fade" id="company_info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+  <div class="modal-dialog  modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title text-primary" id="wizard-title">{{__('Company Information')}}</h5>
@@ -31,23 +31,23 @@
         <div class="tab-content mt-2">
           <div class="tab-pane fade show active" id="infoPanel" role="tabpanel">
                 <div class="form-group row">
-                  <div class="col-lg-2">
+                  <div class="col-lg-3">
                     <label for="name">{{__('Company Name')}}</label>
                     <em class="important">*</em>
 
                   </div>
 
-                  <div class="col-lg-8">
+                  <div class="col-lg-9">
                     <input type="text" class="form-control  border-0 border-bottom" required name="name" name_table="{{__('Company Name')}}" id="name" value="{{ isset($company->name) ? $company->name : old('name') }}" placeholder="{{__('Company Name')}}">
                   </div>
                 </div>
 
 
                 <div class="form-group row">
-                  <div class="col-lg-2">
+                  <div class="col-lg-3">
                     <label for="ceo">{{__('CEO Name')}}</label>
                   </div>
-                  <div class="col-lg-8">
+                  <div class="col-lg-9">
                     
                     <input type="text" class="form-control border-0 border-bottom" id="ceo" name="ceo" name_table="{{__('CEO Name')}}" value="{{ isset($company->ceo) ? $company->ceo : old('ceo') }}" placeholder="{{__('CEO Name')}}">
                   </div>
@@ -55,14 +55,14 @@
  
             
                 <div class="form-group row">
-                  <div class="col-lg-2">
+                  <div class="col-lg-3">
 
                     <label for="Industry">{{__('Industry')}}</label>
                     <em class="important">*</em>
                   </div>
 
 
-                  <div class="col-lg-8">
+                  <div class="col-lg-9">
                     
                     
                     <select required class="form-control form-select border-0 border-bottom" id="industry_id" name="industry_id" name_table="{{__('Industry')}}">
@@ -78,11 +78,11 @@
                 </div>
               
                 <div class="form-group row">
-                  <div class="col-lg-2">
+                  <div class="col-lg-3">
                     <label for="Ownership">{{__('Ownership')}}</label>
                   </div>
 
-                  <div class="col-lg-8">
+                  <div class="col-lg-9">
                     {!! Form::select('ownership_type_id', ['' => __('Select Ownership type')]+$ownershipTypes, null, array('class'=>'form-control form-select border-0 border-bottom', 'id'=>'ownership_type_id','name_table'=>__('Ownership')  )) !!}
                     {!! APFrmErrHelp::showErrors($errors, 'ownership_type_id') !!}
                   </div>
@@ -94,11 +94,11 @@
           <div class="tab-pane fade" id="ads" role="tabpanel">
             
               <div class="form-group row">
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                   <label for="Description">{{__('Description')}}</label>
                   <em class="important">*</em>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                   <textarea class="form-control border-0 border-bottom" id="description_text" required name="description"  name_table="Mô Tả" rows="4">{{ isset($company->description) ? $company->description : old('description') }}</textarea>
                 </div>
               </div>
@@ -109,11 +109,11 @@
             
               
                 <div class="form-group row">
-                  <div class="col-lg-2">
+                  <div class="col-lg-3">
                     <label for="Country">{{__('Country')}}</label>
                     <em class="important">*</em>
                   </div>
-                  <div class="col-lg-8">
+                  <div class="col-lg-9">
                     
                     <select required class="form-control form-select border-0 border-bottom" id="country_id" name="country_id" name_table="{{__('Country')}}">
                       <option value="">{{ __('Select one') }}</option>
@@ -131,10 +131,10 @@
              
             
                  <div class="form-group row">
-                                <div class="col-lg-2"> 
+                                <div class="col-lg-3"> 
                                     <label for="citySelect">Chọn Thành Phố:</label>
                                 </div>
-                                <div class="col-lg-8"> 
+                                <div class="col-lg-9"> 
                                     <select class="form-control border-0 border-bottom citySelect" >
                                     <option value="">Chọn Thành Phố</option>
                                     <option value="79">Thành phố Hồ Chí Minh</option>
@@ -143,22 +143,22 @@
                                 </div>
                             </div>
                             <div class="form-group row districtGroup"  style="display:none;">
-                                <div class="col-lg-2"> 
+                                <div class="col-lg-3"> 
                                     <label for="districtSelect">Chọn Quận/Huyện:</label>
                                 </div>
 
-                                <div class="col-lg-8"> 
+                                <div class="col-lg-9"> 
                                     <select class="form-control form-select border-0 border-bottom districtSelect" >
                                     <option value="">Chọn Quận/Huyện</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group row wardGroup"  style="display:none;">
-                                <div class="col-lg-2"> 
+                                <div class="col-lg-3"> 
                                     <label for="wardSelect">Chọn Phường/Xã:</label>
                                 </div>
 
-                                <div class="col-lg-8"> 
+                                <div class="col-lg-9"> 
                                     <select class="form-control form-select border-0 border-bottom wardSelect" >
                                     <option value="">Chọn Phường/Xã</option>
                                     </select>
@@ -168,23 +168,23 @@
 
      
                 <div class="form-group row">
-                  <div class="col-lg-2">   
+                  <div class="col-lg-3">   
                     <label for="Address">{{__('Address')}}</label>
                     <em class="important">*</em>
                   </div>
-                  <div class="col-lg-8">   
+                  <div class="col-lg-9">   
                     <input type="text" class="form-control border-0 border-bottom" required id="location" placeholder="{{__('Address')}}" name_table="{{__('Address')}}" name="location" value="{{ isset($company->location) ? $company->location : old('location') }}">
                   </div>
                 </div>
              
              
                 <div class="form-group row">
-                  <div class="col-lg-2">   
+                  <div class="col-lg-3">   
                     <label for="Google_Map_Iframe">{{__('Google Map Iframe')}}</label>
 
                   </div>
 
-                  <div class="col-lg-8">   
+                  <div class="col-lg-9">   
                 
                     <textarea class="form-control border-0 border-bottom" id="map" name="map" name_table="{{__('Google Map Iframe')}}" rows="4">{{ isset($company->map) ? $company->map : old('map') }}</textarea>
                   </div>
@@ -196,11 +196,11 @@
           </div>
           <div class="tab-pane fade" id="detail" role="tabpanel">    
             <div class="form-group row">
-              <div class="col-lg-2">
+              <div class="col-lg-3">
                 <label for="no-offices">{{__('No of Office')}}</label>
                 <em class="important">*</em>
               </div>
-              <div class="col-lg-8">
+              <div class="col-lg-9">
                 <select required class="form-control form-select border-0 border-bottom" id="no_of_offices" name="no_of_offices" name_table="{{__('No of Office')}}">
                   <option value="">{{ __('Select one') }}</option>
                   @if(count(MiscHelper::getNumOffices()) > 0)
@@ -215,11 +215,11 @@
           
 
               <div class="form-group row">
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                   <label for="employee-number">{{__('No of Employees')}}</label>
                   <em class="important">*</em>
                 </div>
-                <div class="col-lg-8">   
+                <div class="col-lg-9">   
                   <select required class="form-control form-select border-0 border-bottom" id="no_of_employees" name="no_of_employees" name_table="{{__('No of Employees')}}">
                     <option value="">{{ __('Select one') }}</option>
                     @if(count(MiscHelper::getNumEmployees()) > 0)
@@ -234,11 +234,11 @@
             
             
               <div class="form-group row">
-                <div class="col-lg-2">   
+                <div class="col-lg-3">   
                   <label for="Established_In">{{__('Established In')}}</label>
                   <em class="important">*</em>
                 </div>
-                <div class="col-lg-8">     
+                <div class="col-lg-9">     
                   <input type="text" class="form-control border-0 border-bottom" id="established_in" name="established_in" name_table="{{__('Established In')}}" value="{{ isset($company->established_in) ? $company->established_in : old('established_in')}}" placeholder="{{__('Established In')}}">
                 </div>
               </div>
@@ -248,11 +248,11 @@
           </div>
           <div class="tab-pane fade" id="social" role="tabpanel">
             <div class="form-group row">
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                   <label for="Website_URL">Trang Web</label>
                   <em class="important">*</em>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                   <input type="text" class="form-control border-0 border-bottom" required id="website"  value="{{ isset($company->website) ? $company->website : old('website')}}" placeholder="Trang Web"
                   name="website" name_table="Website"
                   >
@@ -261,10 +261,10 @@
             </div>
 
             <div class="form-group row">
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                   <label for="Fax">{{__('Fax')}}</label>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                 
                   <input type="text" class="form-control border-0 border-bottom" id="fax" placeholder="{{__('Fax')}}"  value="{{ isset($company->fax) ? $company->fax : old('fax')}}"
                   name="fax" name_table="Fax"
@@ -273,11 +273,11 @@
             </div>
 
             <div class="form-group row">
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                 <label for="Phone_number">{{__('Mobile Number')}}</label>
                 <em class="important">*</em>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                 
                 <input type="text" class="form-control border-0 border-bottom" required id="phone"  value="{{ isset($company->phone) ? $company->phone : old('phone')}}" placeholder="{{__('Phone number')}}"
                 name="phone" name_table="Số điện thoại"
@@ -285,10 +285,10 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                   <label for="Facebook">Facebook</label>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-9">
 
                   <input type="text" class="form-control border-0 border-bottom" id="facebook"  value="{{ isset($company->facebook) ? $company->facebook : old('facebook')}}" placeholder="Facebook"
                   name="facebook" name_table="Facebook"
@@ -297,10 +297,10 @@
             </div>
 
             <div class="form-group row">
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                   <label for="Twitter">Twitter</label>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-9">
 
                 <input type="text" class="form-control border-0 border-bottom" id="twitter"  value="{{ isset($company->twitter) ? $company->twitter : old('twitter')}}" placeholder="Twitter"
                 name="twitter" name_table="Twitter"
@@ -309,10 +309,10 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                   <label for="LinkedIn">LinkedIn</label>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-9">
 
                   <input type="text" class="form-control border-0 border-bottom" id="linkedin"  value="{{ isset($company->linkedin) ? $company->linkedin : old('linkedin')}}" placeholder="LinkedIn"
                   name="linkedin" name_table="LinkedIn"
@@ -321,10 +321,10 @@
             </div>
 
             <div class="form-group row">
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                   <label for="Google_Plus">Google Plus</label>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-9">
 
                   <input type="text" class="form-control border-0 border-bottom" id="google_plus" name="google_plus" value="{{ isset($company->google_plus) ? $company->google_plus : old('google_plus')}}" placeholder="Google Plus"
                   name="google_plus" name_table="Google Plus"
