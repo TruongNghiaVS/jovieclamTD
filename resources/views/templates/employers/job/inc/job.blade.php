@@ -98,6 +98,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 @include('templates.employers.includes.tinyMCEFront')
 <script type="text/javascript">
+   
 
 (function () {
         'use strict';
@@ -119,6 +120,7 @@
             });
     })();
     $(document).ready(function () {
+        
             // Show or hide the scroll-to-top button based on scroll position
             var isChecked = $('#same_add_yes').prop('checked');
             console.log(isChecked);
