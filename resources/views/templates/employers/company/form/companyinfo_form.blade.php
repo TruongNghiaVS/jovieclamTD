@@ -31,7 +31,7 @@
         <div class="tab-content mt-2">
           <div class="tab-pane fade show active" id="infoPanel" role="tabpanel">
                 <div class="form-group row">
-                  <div class="col-lg-4">
+                  <div class="col-lg-2">
                     <label for="name">{{__('Company Name')}}</label>
                     <em class="important">*</em>
 
@@ -44,7 +44,7 @@
 
 
                 <div class="form-group row">
-                  <div class="col-lg-4">
+                  <div class="col-lg-2">
                     <label for="ceo">{{__('CEO Name')}}</label>
                   </div>
                   <div class="col-lg-8">
@@ -55,7 +55,7 @@
  
             
                 <div class="form-group row">
-                  <div class="col-lg-4">
+                  <div class="col-lg-2">
 
                     <label for="Industry">{{__('Industry')}}</label>
                     <em class="important">*</em>
@@ -78,7 +78,7 @@
                 </div>
               
                 <div class="form-group row">
-                  <div class="col-lg-4">
+                  <div class="col-lg-2">
                     <label for="Ownership">{{__('Ownership')}}</label>
                   </div>
 
@@ -94,7 +94,7 @@
           <div class="tab-pane fade" id="ads" role="tabpanel">
             
               <div class="form-group row">
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                   <label for="Description">{{__('Description')}}</label>
                   <em class="important">*</em>
                 </div>
@@ -109,7 +109,7 @@
             
               
                 <div class="form-group row">
-                  <div class="col-lg-4">
+                  <div class="col-lg-2">
                     <label for="Country">{{__('Country')}}</label>
                     <em class="important">*</em>
                   </div>
@@ -131,7 +131,7 @@
              
             
                  <div class="form-group row">
-                                <div class="col-lg-4"> 
+                                <div class="col-lg-2"> 
                                     <label for="citySelect">Chọn Thành Phố:</label>
                                 </div>
                                 <div class="col-lg-8"> 
@@ -143,7 +143,7 @@
                                 </div>
                             </div>
                             <div class="form-group row districtGroup"  style="display:none;">
-                                <div class="col-lg-4"> 
+                                <div class="col-lg-2"> 
                                     <label for="districtSelect">Chọn Quận/Huyện:</label>
                                 </div>
 
@@ -154,7 +154,7 @@
                                 </div>
                             </div>
                             <div class="form-group row wardGroup"  style="display:none;">
-                                <div class="col-lg-4"> 
+                                <div class="col-lg-2"> 
                                     <label for="wardSelect">Chọn Phường/Xã:</label>
                                 </div>
 
@@ -168,7 +168,7 @@
 
      
                 <div class="form-group row">
-                  <div class="col-lg-4">   
+                  <div class="col-lg-2">   
                     <label for="Address">{{__('Address')}}</label>
                     <em class="important">*</em>
                   </div>
@@ -179,7 +179,7 @@
              
              
                 <div class="form-group row">
-                  <div class="col-lg-4">   
+                  <div class="col-lg-2">   
                     <label for="Google_Map_Iframe">{{__('Google Map Iframe')}}</label>
 
                   </div>
@@ -196,7 +196,7 @@
           </div>
           <div class="tab-pane fade" id="detail" role="tabpanel">    
             <div class="form-group row">
-              <div class="col-lg-4">
+              <div class="col-lg-2">
                 <label for="no-offices">{{__('No of Office')}}</label>
                 <em class="important">*</em>
               </div>
@@ -215,7 +215,7 @@
           
 
               <div class="form-group row">
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                   <label for="employee-number">{{__('No of Employees')}}</label>
                   <em class="important">*</em>
                 </div>
@@ -234,7 +234,7 @@
             
             
               <div class="form-group row">
-                <div class="col-lg-4">   
+                <div class="col-lg-2">   
                   <label for="Established_In">{{__('Established In')}}</label>
                   <em class="important">*</em>
                 </div>
@@ -248,7 +248,7 @@
           </div>
           <div class="tab-pane fade" id="social" role="tabpanel">
             <div class="form-group row">
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                   <label for="Website_URL">Trang Web</label>
                   <em class="important">*</em>
                 </div>
@@ -261,7 +261,7 @@
             </div>
 
             <div class="form-group row">
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                   <label for="Fax">{{__('Fax')}}</label>
                 </div>
                 <div class="col-lg-8">
@@ -273,7 +273,7 @@
             </div>
 
             <div class="form-group row">
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                 <label for="Phone_number">{{__('Mobile Number')}}</label>
                 <em class="important">*</em>
                 </div>
@@ -285,7 +285,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                   <label for="Facebook">Facebook</label>
                 </div>
                 <div class="col-lg-8">
@@ -297,7 +297,7 @@
             </div>
 
             <div class="form-group row">
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                   <label for="Twitter">Twitter</label>
                 </div>
                 <div class="col-lg-8">
@@ -309,7 +309,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                   <label for="LinkedIn">LinkedIn</label>
                 </div>
                 <div class="col-lg-8">
@@ -321,7 +321,7 @@
             </div>
 
             <div class="form-group row">
-                <div class="col-lg-4">
+                <div class="col-lg-2">
                   <label for="Google_Plus">Google Plus</label>
                 </div>
                 <div class="col-lg-8">

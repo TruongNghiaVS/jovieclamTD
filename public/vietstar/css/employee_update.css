@@ -741,6 +741,14 @@ h2.title {
 .form-group .form-control {
     padding: 10px 20px !important;
 }
+
+
+#infoPanel .form-group,
+#contact_info_edit .form-group
+{
+    margin-bottom: 15px !important;
+}
+
 .map_wrapper {
     max-width: 300px;
     max-height: 300px;
