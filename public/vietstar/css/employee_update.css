@@ -749,6 +749,10 @@ h2.title {
     margin-bottom: 15px !important;
 }
 
+
+#tab_company_info .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    color: var(--bs-primary);
+}
 .map_wrapper {
     max-width: 300px;
     max-height: 300px;
