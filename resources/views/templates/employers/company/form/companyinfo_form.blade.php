@@ -135,7 +135,7 @@
                                     <label for="citySelect">Chọn Thành Phố:</label>
                                 </div>
                                 <div class="col-lg-9"> 
-                                    <select class="form-control border-0 border-bottom citySelect" >
+                                    <select class="form-control border-0 border-bottom citySelect" name="province" name_table="Tỉnh / Thành Phố">
                                     <option value="">Chọn Thành Phố</option>
                                     <option value="79">Thành phố Hồ Chí Minh</option>
                                     <option value="01">Thành phố Hà Nội</option>
@@ -148,7 +148,7 @@
                                 </div>
 
                                 <div class="col-lg-9"> 
-                                    <select class="form-control form-select border-0 border-bottom districtSelect" >
+                                    <select class="form-control form-select border-0 border-bottom districtSelect" name="district" name_table="Quận / Huyện">
                                     <option value="">Chọn Quận/Huyện</option>
                                     </select>
                                 </div>
@@ -159,7 +159,7 @@
                                 </div>
 
                                 <div class="col-lg-9"> 
-                                    <select class="form-control form-select border-0 border-bottom wardSelect" >
+                                    <select class="form-control form-select border-0 border-bottom wardSelect" name="reward" name_table="Phường / Xã">
                                     <option value="">Chọn Phường/Xã</option>
                                     </select>
                                 </div>
