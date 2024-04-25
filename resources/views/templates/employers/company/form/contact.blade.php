@@ -57,7 +57,7 @@
                                     <label for="citySelect">Chọn Thành Phố:</label>
                                 </div>
                                 <div class="col-lg-9"> 
-                                    <select class="form-control border-0 border-bottom citySelect" >
+                                    <select class="form-control border-0 border-bottom citySelect" name="province">
                                     <option value="">Chọn Thành Phố</option>
                                     <option value="79">Thành phố Hồ Chí Minh</option>
                                     <option value="01">Thành phố Hà Nội</option>
@@ -70,18 +70,18 @@
                                 </div>
 
                                 <div class="col-lg-9"> 
-                                    <select class="form-control form-select border-0 border-bottom districtSelect" >
+                                    <select class="form-control form-select border-0 border-bottom districtSelect" name="district">
                                     <option value="">Chọn Quận/Huyện</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group row wardGroup"  style="display:none;">
+                            <div class="form-group row wardGroup"  style="display:none;" >
                                 <div class="col-lg-3"> 
                                     <label for="wardSelect">Chọn Phường/Xã:</label>
                                 </div>
 
                                 <div class="col-lg-9"> 
-                                    <select class="form-control form-select border-0 border-bottom wardSelect" >
+                                    <select class="form-control form-select border-0 border-bottom wardSelect" name="reward">
                                     <option value="">Chọn Phường/Xã</option>
                                     </select>
                                 </div>
@@ -167,7 +167,7 @@
                         $('#contact_info').modal("hide");
                         showModal_Success('Thông báo', `Cập nhật thông tin liên hệ thành công`, ``);
                         setTimeout(function(){
-                              window.location.reload();
+                            window.location.reload();
                         }, 1000);
                     }
                 },
