@@ -364,7 +364,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Cập Nhật Thông Tin Công Ty</h4>
+        <h4 class="modal-title text-primary">Cập Nhật Thông Tin Công Ty</h4>
       </div>
       <div class="modal-body">
         <p>Vui lòng cập nhật các thông tin của công ty để tăng độ tin cậy.</p>
@@ -384,7 +384,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Cập Nhật Thông Tin Liên Hệ</h4>
+        <h4 class="modal-title text-primary">Cập Nhật Thông Tin Liên Hệ</h4>
       </div>
       <div class="modal-body">
         <p>Vui lòng cập nhật các thông tin liên hệ của công ty để tăng độ tin cậy.</p>
