@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="form-group row justify-content-start  align-items-center">
-                        <label for="inputPassword" class="col-sm-3 col-form-label">Password</label>
+                        <label for="addfield" class="col-sm-3 col-form-label">Smart Fields</label>
                         <div class="col-sm-5">
                             <select name="addfield" class="border-0 border-bottom form-control" id="addfield">
                                 <option value="">Chọn</option>
