@@ -1,7 +1,7 @@
 <div class="modal fade" id="company_info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog  modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header justify-content-center">
         <h5 class="modal-title text-primary" id="wizard-title">{{__('Company Information')}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -362,8 +362,8 @@
 
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <div class="modal-header justify-content-center">
+       
         <h4 class="modal-title text-primary">Cập Nhật Thông Tin Công Ty</h4>
       </div>
       <div class="modal-body">
@@ -382,8 +382,8 @@
 
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <div class="modal-header justify-content-center">
+    
         <h4 class="modal-title text-primary">Cập Nhật Thông Tin Liên Hệ</h4>
       </div>
       <div class="modal-body">
