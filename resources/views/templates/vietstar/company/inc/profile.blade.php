@@ -145,7 +145,7 @@
                         <div class="formpanel mt0">
                             <div class="section-head">
                                 <div class="section-head__figure">
-                                    <div class="figure__image"><img src="https://icons.veryicon.com/png/o/system/alongthink/ico-user-info.png" alt=""></div>
+                                    <div class="figure__image"><img src="/assets/ico-user-info.png" alt=""></div>
                                     <div class="figure__caption">
 
                                         <h5 class="">{{__('Company Information')}}</h5>
@@ -472,7 +472,7 @@
                     <div class="formpanel mt0">
                         <div class="section-head">
                             <div class="section-head__figure">
-                                <div class="figure__image"><img src="https://icons.veryicon.com/png/o/system/alongthink/ico-user-info.png" alt=""></div>
+                                <div class="figure__image"><img src="/assets/ico-user-info.png" alt=""></div>
                                 <div class="figure__caption">
 
                                     <h5 class="">Thông tin liên hệ</h5>
