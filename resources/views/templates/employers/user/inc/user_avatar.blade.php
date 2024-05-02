@@ -46,7 +46,7 @@
                         </div>
                         <input type="file" name="image" id="userfileInput" style="display: none;">
 
-                        <a class="uploadImage_btn" href="javascript:void(0);" onclick="$('#fileInput').click()"><i class="bi bi-camera-fill"></i></a>
+                        <a class="uploadImage_btn" href="javascript:void(0);" onclick="$('#fileInput').click()"><i class="fa-solid fa-camera"></i></a>
                         {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                         {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                     </div>

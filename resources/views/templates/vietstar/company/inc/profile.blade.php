@@ -330,7 +330,7 @@
                                                         <a class="uploadImage_btn" href="javascript:void(0);" 
                                                 
                                                         onclick="AvatarImageCropper(`{{route('update.company.avatar')}}`, 1, 1);"
-                                                        ><i class="bi bi-camera-fill"></i></a>
+                                                        ><i class="fa-solid fa-camera"></i></a>
                                                         {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                                         {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                                     </div>
@@ -355,7 +355,7 @@
 
                                                                 <a class="uploadImage_btn" href="javascript:void(0);" 
                                                                 onclick="CoverImageCropper(`{{route('update.company.avatar')}}`, 16, 4 );"
-                                                                ><i class="bi bi-camera-fill"></i></a>
+                                                                ><i class="fa-solid fa-camera"></i></a>
                                                                 {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                                                 {!! APFrmErrHelp::showErrors($errors, 'image') !!}
                                                             </div>
