@@ -1,7 +1,7 @@
 
 <div class="section-head" bis_skin_checked="1">
         <div class="section-head__figure" bis_skin_checked="1">
-                <div class="figure__image" bis_skin_checked="1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/University_Diploma_or_Certificate_Flat_Icon_Vector.svg/1024px-University_Diploma_or_Certificate_Flat_Icon_Vector.svg.png" alt=""></div>
+                <div class="figure__image" bis_skin_checked="1"><img src="/assets/edu.png" alt=""></div>
                 <div class="figure__caption" bis_skin_checked="1">
                         <h5 class="" onclick="">{{__('Education')}}</h5>
                         <div class="status complete" bis_skin_checked="1">
