@@ -19,7 +19,7 @@
                         <div class="card-body">
                             <div class="posted-manager-header">
                                 <h1 class="title-manage">{{__('Company\'s Posted Jobs')}}</h1>
-                                <a href="{{route('post.job')}}" class="btn btn-primary text-white"><i class="bi bi-pen text-white"></i> Đăng tuyển</a>
+                                <a href="{{route('post.job')}}" class="btn btn-primary text-white"><i class="fa-solid fa-pen text-white"></i> Đăng tuyển</a>
                             </div>
                             <form action="{{ route('posted.jobs') }}" method="get" class="form-search pt-2">
                                 <div class="row filter-job">

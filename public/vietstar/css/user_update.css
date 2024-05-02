@@ -118,6 +118,8 @@
     display: flex;
     margin-right: 10px;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
 
 }
 

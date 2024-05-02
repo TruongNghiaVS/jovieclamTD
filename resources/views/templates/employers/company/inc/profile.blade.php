@@ -169,11 +169,11 @@
                 </div>
                 <div class="section-head__right-action" bis_skin_checked="1">
                     <div class="right-action__tips" bis_skin_checked="1" >
-                        <i class="bi bi-lightbulb"></i>
+                        <i class="fa-regular fa-lightbulb"></i>
                         <p>Tips</p>
                     </div>
-                    <div class="right-action__link-edit"><a data-toggle="modal" data-target="#user_info" href="#"><i class="bi bi-pen"></i>Chỉnh sửa</a></div>
-                    <div class="right-action__link-edit-mobile"><a data-toggle="modal" data-target="#user_info" href="#"><i class="bi bi-pen"></i></a></div>
+                    <div class="right-action__link-edit"><a data-toggle="modal" data-target="#user_info" href="#"><i class="fa-solid fa-pen"></i>Chỉnh sửa</a></div>
+                    <div class="right-action__link-edit-mobile"><a data-toggle="modal" data-target="#user_info" href="#"><i class="fa-solid fa-pen"></i></a></div>
                 </div>
             </div>
 
@@ -223,11 +223,11 @@
                 </div>
                 <div class="section-head__right-action" bis_skin_checked="1">
                     <div class="right-action__tips" bis_skin_checked="1" >
-                        <i class="bi bi-lightbulb"></i>
+                        <i class="fa-regular fa-lightbulb"></i>
                         <p>Tips</p>
                     </div>
-                    <div class="right-action__link-edit"><a id="modalToggle" data-toggle="modal" data-target="#company_info" href="#"><i class="bi bi-pen"></i>Chỉnh sửa</a></div>
-                    <div class="right-action__link-edit-mobile"><a id="modalToggle" data-toggle="modal" data-target="#company_info" href="#"><i class="bi bi-pen"></i></a></div>
+                    <div class="right-action__link-edit"><a id="modalToggle" data-toggle="modal" data-target="#company_info" href="#"><i class="fa-solid fa-pen"></i>Chỉnh sửa</a></div>
+                    <div class="right-action__link-edit-mobile"><a id="modalToggle" data-toggle="modal" data-target="#company_info" href="#"><i class="fa-solid fa-pen"></i></a></div>
                 </div>
             </div>
 
@@ -383,11 +383,11 @@
                 </div>
                 <div class="section-head__right-action" bis_skin_checked="1">
                     <div class="right-action__tips" bis_skin_checked="1">
-                        <i class="bi bi-lightbulb"></i>
+                        <i class="fa-regular fa-lightbulb"></i>
                         <p>Tips</p>
                     </div>
-                    <div class="right-action__link-edit"><a id="modalToggle" data-toggle="modal" data-target="#contact_info" href="#"><i class="bi bi-pen"></i>Chỉnh sửa</a></div>
-                    <div class="right-action__link-edit-mobile"><a id="modalToggle" data-toggle="modal" data-target="#contact_info" href="#"><i class="bi bi-pen"></i></a></div>
+                    <div class="right-action__link-edit"><a id="modalToggle" data-toggle="modal" data-target="#contact_info" href="#"><i class="fa-solid fa-pen"></i>Chỉnh sửa</a></div>
+                    <div class="right-action__link-edit-mobile"><a id="modalToggle" data-toggle="modal" data-target="#contact_info" href="#"><i class="fa-solid fa-pen"></i></a></div>
                 </div>
             </div>
 

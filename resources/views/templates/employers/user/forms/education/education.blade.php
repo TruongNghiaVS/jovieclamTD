@@ -11,11 +11,11 @@
         </div>
         <div class="section-head__right-action" bis_skin_checked="1">
                 <div class="right-action__tips" bis_skin_checked="1">
-                        <i class="bi bi-lightbulb"></i>
+                        <i class="fa-regular fa-lightbulb"></i>
                         <p>Tips</p>
                 </div>
-                <div class="right-action__link-edit" bis_skin_checked="1"><a a="" href="javascript:;" onclick="showProfileEducationModal();"><i class="bi bi-pen"></i>Thêm mới</a></div>
-                <div class="right-action__link-edit-mobile" bis_skin_checked="1"><a a="" href="javascript:;" onclick="showProfileEducationModal();"><i class="bi bi-pen"></i></a></div>
+                <div class="right-action__link-edit" bis_skin_checked="1"><a a="" href="javascript:;" onclick="showProfileEducationModal();"><i class="fa-solid fa-pen"></i>Thêm mới</a></div>
+                <div class="right-action__link-edit-mobile" bis_skin_checked="1"><a a="" href="javascript:;" onclick="showProfileEducationModal();"><i class="fa-solid fa-pen"></i></a></div>
         </div>
 </div>
 <div class="section-body"> 
