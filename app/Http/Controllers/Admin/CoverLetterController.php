@@ -143,7 +143,7 @@ class CoverLetterController extends Controller
                         ->addColumn('action', function ($cover_letter) {
                             return '
                             <div class="btn-group">
-                                <button class="btn blue dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Thao tác
+                                <button class="btn blue dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Thao Tác
                                     <i class="fa fa-angle-down"></i>
                                 </button>
                                 <ul class="dropdown-menu">

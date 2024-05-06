@@ -13,7 +13,7 @@
             <th class="font-weight-bold p-2">LOẠI</th>
             <th class="font-weight-bold p-2">TRẠNG THÁI</th>
             <th class="font-weight-bold p-2 text-center">NGƯỜI TẠO</th>
-            <th class="font-weight-bold p-2">THAO TÁC</th>
+            <th class="font-weight-bold p-2">Thao Tác</th>
         </tr>
     </thead>
     <tbody>

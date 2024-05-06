@@ -130,7 +130,7 @@ class PackageController extends Controller
                         ->addColumn('action', function ($packages) {
                             return '
 				<div class="btn-group">
-					<button class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Thao tác<i class="fa fa-angle-down"></i>
+					<button class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Thao Tác<i class="fa fa-angle-down"></i>
 					</button>
 					<ul class="dropdown-menu">
 						<li>

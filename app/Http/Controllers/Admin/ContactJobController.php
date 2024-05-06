@@ -133,7 +133,7 @@ class ContactJobController extends Controller
                         ->addColumn('action', function ($contact_job) {
                             return '
                             <div class="btn-group">
-                                <button class="btn blue dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Thao tác
+                                <button class="btn blue dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Thao Tác
                                     <i class="fa fa-angle-down"></i>
                                 </button>
                                 <ul class="dropdown-menu">

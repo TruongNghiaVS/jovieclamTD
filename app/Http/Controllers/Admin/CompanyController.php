@@ -646,7 +646,7 @@ class CompanyController extends Controller
 
 				<div class="btn-group">
 
-					<button class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Thao tác
+					<button class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Thao Tác
 
 						<i class="fa fa-angle-down"></i>
 

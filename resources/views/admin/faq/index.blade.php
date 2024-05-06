@@ -107,7 +107,7 @@
                 {data: 'lang', name: 'lang'},
                 {data: 'faq_question', name: 'faq_question'},
                 {data: 'faq_answer', name: 'faq_answer'},
-                {data: 'action', name: 'action', orderable: false, searchable: false, text: 'Thao tác'}
+                {data: 'action', name: 'action', orderable: false, searchable: false, text: 'Thao Tác'}
             ]
         });
         $('#faq-search-form').on('submit', function (e) {

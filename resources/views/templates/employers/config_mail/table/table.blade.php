@@ -9,7 +9,7 @@
 
             <th class="font-weight-bold p-2">TÊN ĐƠN VỊ/NGƯỜI GỬI VÀ TIÊU ĐỀ</th>
             <th class="font-weight-bold p-2 text-center">NÚT CALL TO ACTION </th>
-            <th class="font-weight-bold p-2">THAO TÁC</th>
+            <th class="font-weight-bold p-2">Thao Tác</th>
 
 
         </tr>
