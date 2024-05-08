@@ -100,7 +100,7 @@
                                 <strong>{{ $errors->first('g-recaptcha-response') }}</strong> </span> @endif
                         </div>
 
-                        <input type="submit" class="btn" value="{{__('Register')}}">
+                        <input type="submit" class="btn btn-primary" value="{{__('Register')}}">
 
                     </form>
 
